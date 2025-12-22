@@ -1,0 +1,13 @@
+<environmentvariabledefinition schemaname="revops_iscbjectowner">
+  <description default="User, Owner ISC-Object-Owner">
+    <label description="User, Owner ISC-Object-Owner" languagecode="1033" />
+  </description>
+  <displayname default="ISC Object owner">
+    <label description="ISC Object owner" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

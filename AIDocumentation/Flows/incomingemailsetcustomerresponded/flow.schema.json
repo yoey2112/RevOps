@@ -1,0 +1,170 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps-1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_44694"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Incoming_Email_received": {
+          "metadata": {
+            "operationMetadataId": "e4f55005-d9a5-4f55-acc3-0e6296498809"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps-1",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "email",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          },
+          "conditions": [
+            {
+              "expression": "@equals(triggerOutputs()?['body/DirectionCode'], false)"
+            },
+            {
+              "expression": "@equals(triggerOutputs()?['body/_regardingobjectid_value@Microsoft.Dynamics.CRM.lookuplogicalname'], 'incident')"
+            }
+          ]
+        }
+      },
+      "actions": {
+        "Get_a_row_by_ID": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "25c9a3d3-9432-4a94-8f2c-04a9c0a2f540"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps-1",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "incidents",
+              "recordId": "@triggerOutputs()?['body/_regardingobjectid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Case_Status": {
+          "actions": {
+            "Resolution_Date": {
+              "actions": {
+                "Update_Case_-_Reopen_Case": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "eabf5308-cdf4-403d-bd6c-7ed90135b88a"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps-1",
+                      "operationId": "UpdateOnlyRecord",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "incidents",
+                      "recordId": "@triggerOutputs()?['body/_regardingobjectid_value']",
+                      "item/statuscode": 234570003,
+                      "item/revops_followupcreatedon": "@triggerOutputs()?['body/createdon']",
+                      "item/revops_followupsent": false,
+                      "item/adx_resolutiondate": "@null",
+                      "item/statecode": 0,
+                      "item/revops_unresponsivecounter": 0
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {},
+              "expression": {
+                "equals": [
+                  "@greater(outputs('Get_a_row_by_ID')?['body/adx_resolutiondate'], addHours(utcNow(), -72))",
+                  true
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "f55f6219-291e-4b7c-a459-2cd22cf0447d"
+              },
+              "type": "If"
+            }
+          },
+          "runAfter": {
+            "Get_a_row_by_ID": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Update_Case_-_Set_Customer_Responded": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "eabf5308-cdf4-403d-bd6c-7ed90135b88a"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps-1",
+                    "operationId": "UpdateOnlyRecord",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "incidents",
+                    "recordId": "@triggerOutputs()?['body/_regardingobjectid_value']",
+                    "item/statuscode": 234570003,
+                    "item/revops_followupcreatedon": "@triggerOutputs()?['body/createdon']",
+                    "item/revops_followupsent": false,
+                    "item/adx_resolutiondate": "@null",
+                    "item/statecode": 0,
+                    "item/revops_unresponsivecounter": 0
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@outputs('Get_a_row_by_ID')?['body/statecode']",
+              1
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4566c820-d320-41b8-a586-dbeea607bc84"
+          },
+          "type": "If"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

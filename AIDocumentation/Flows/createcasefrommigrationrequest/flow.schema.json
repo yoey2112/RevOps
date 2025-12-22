@@ -1,0 +1,342 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps-1": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_5c996"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_ab8a2"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "Transfer_added": {
+          "type": "OpenApiConnectionWebhook",
+          "description": "revops_generalmigrationtype, revops_licensename",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "revops_transfer",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filterexpression": "revops_generalmigrationtype ne null"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "f09dc13f-1ab9-4958-b127-d4c0627675af"
+          }
+        }
+      },
+      "actions": {
+        "Get_Queue": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "queues",
+              "$filter": "name eq 'Technical Onboarding' and statecode eq 0",
+              "$top": 1
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "Initialize_variable_-_cumulus_account": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "392f6ecc-769f-419e-bb82-558cb93dfe6a"
+          }
+        },
+        "Update_Transfer": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "revops_transfers",
+              "recordId": "@triggerOutputs()?['body/revops_transferid']",
+              "item/revops_case@odata.bind": "/incidents(@{outputs('Create_Case')?['body/incidentid']})"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "UpdateOnlyRecord",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "Create_Case": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "bdbc98fc-f71f-43e7-8b62-dc28d13e3003"
+          }
+        },
+        "For_each_queue": {
+          "type": "Foreach",
+          "foreach": "@outputs('Get_Queue')?['body/value']",
+          "actions": {
+            "Set_variable_-_queue": {
+              "type": "SetVariable",
+              "inputs": {
+                "name": "queue",
+                "value": "@items('For_each_queue')?['queueid']"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_Queue": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Initialize_variable_-_queue": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "queue",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {}
+        },
+        "Initialize_variable_-_subject": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "subject",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_-_queue": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Get_Subject_-_Migration": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "subjects",
+              "$filter": "title eq 'Migration'",
+              "$top": 1
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "Initialize_variable_-_cumulus_account": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "79459298-785f-4b78-9271-3fc4f9f1430d"
+          }
+        },
+        "For_each_subject": {
+          "type": "Foreach",
+          "foreach": "@outputs('Get_Subject_-_Migration')?['body/value']",
+          "actions": {
+            "Set_variable_-_subject": {
+              "type": "SetVariable",
+              "inputs": {
+                "name": "subject",
+                "value": "@items('For_each_subject')?['subjectid']"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_Subject_-_Migration": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Get_Cumulus_Account": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "revops_cumulusorganizations",
+              "$select": "revops_cumulusaccount",
+              "$filter": "revops_cumulusorganizationid eq '@{triggerOutputs()?['body/_revops_cumulusorganization_value']}'"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Initialize_variable_-_cumulus_account": [
+              "Succeeded"
+            ]
+          }
+        },
+        "For_each_Cumulus_Account": {
+          "type": "Foreach",
+          "foreach": "@outputs('Get_Cumulus_Account')?['body/value']",
+          "actions": {
+            "Get_Account": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "revops_cumulusaccounts",
+                  "$select": "revops_account",
+                  "$filter": "revops_cumulusaccountid eq '@{variables('cumulus_account')}'"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "connectionName": "shared_commondataserviceforapps-1"
+                }
+              },
+              "runAfter": {
+                "Set_variable_-_cumulus_account": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "For_each_Account": {
+              "type": "Foreach",
+              "foreach": "@outputs('Get_Account')?['body/value']",
+              "actions": {
+                "Set_variable_-_account": {
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "account",
+                    "value": "@item()?['_revops_account_value']"
+                  }
+                }
+              },
+              "runAfter": {
+                "Get_Account": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "Set_variable_-_cumulus_account": {
+              "type": "SetVariable",
+              "inputs": {
+                "name": "cumulus_account",
+                "value": "@items('For_each_Cumulus_Account')?['_revops_cumulusaccount_value']"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_Cumulus_Account": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Initialize_variable_-_account": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "account",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_-_subject": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Initialize_variable_-_cumulus_account": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "cumulus_account",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_-_account": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Create_Case": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "incidents",
+              "item/title": "Migration Request - @{triggerOutputs()?['body/revops_migrationprimarydomain']}",
+              "item/casetypecode": 234570011,
+              "item/customerid_contact@odata.bind": "/contacts(@{triggerOutputs()?['body/_revops_contact_value']})",
+              "item/subjectid@odata.bind": "/subjects(@{variables('subject')})",
+              "item/revops_account@odata.bind": "/accounts(@{variables('account')})",
+              "item/primarycontactid@odata.bind": "/contacts(@{triggerOutputs()?['body/_revops_contact_value']})",
+              "item/revops_cumulusaccount@odata.bind": "/revops_cumulusaccounts(@{variables('cumulus_account')})",
+              "item/revops_cumulusorganization@odata.bind": "/revops_cumulusorganizations(@{triggerOutputs()?['body/_revops_cumulusorganization_value']})",
+              "item/caseorigincode": 3,
+              "item/revops_queue@odata.bind": "/queues(@{variables('queue')})"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "CreateRecord",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "For_each_queue": [
+              "Succeeded"
+            ],
+            "For_each_subject": [
+              "Succeeded"
+            ],
+            "For_each_Cumulus_Account": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "3cf987fb-0a39-4b06-a9ca-4951aee79cbf"
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

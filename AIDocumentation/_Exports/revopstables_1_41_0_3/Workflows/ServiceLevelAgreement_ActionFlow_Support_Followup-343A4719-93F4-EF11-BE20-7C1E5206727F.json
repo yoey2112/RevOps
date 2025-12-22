@@ -1,0 +1,163 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps-1": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_44694"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "[Do not delete or update] Invoked Through Execution Workflow Call": {
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "slakpiinstance",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "versionnumber,createdon"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "73d1b52c-991d-475f-8b01-eef20bc1d952"
+          }
+        }
+      },
+      "actions": {
+        "[Do not delete or update] Switch": {
+          "type": "Switch",
+          "expression": "@triggerOutputs()?['body/status']",
+          "default": {
+            "actions": {}
+          },
+          "cases": {
+            "[Do not delete] Is Near Non Compliance.": {
+              "actions": {
+                "Update_a_row": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "incidents",
+                      "recordId": "@triggerOutputs()?['body/_regarding_value']",
+                      "item/prioritycode": 2,
+                      "item/revops_followupslastatus": 2
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "operationId": "UpdateOnlyRecord",
+                      "connectionName": "shared_commondataserviceforapps-1"
+                    }
+                  },
+                  "metadata": {
+                    "operationMetadataId": "5d980468-1f30-48c2-ac22-de2183c61232"
+                  }
+                }
+              },
+              "case": 2
+            },
+            "[Do not delete] Is Succeeded.": {
+              "actions": {
+                "Update_a_row_2": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "incidents",
+                      "recordId": "@triggerOutputs()?['body/_regarding_value']",
+                      "item/prioritycode": 3,
+                      "item/revops_followupslastatus": 3
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "operationId": "UpdateOnlyRecord",
+                      "connectionName": "shared_commondataserviceforapps-1"
+                    }
+                  },
+                  "metadata": {
+                    "operationMetadataId": "9b61710f-ab9c-4936-9370-b0e37888fefb"
+                  }
+                }
+              },
+              "case": 4
+            },
+            "[Do not delete] Is Non-compliant.": {
+              "actions": {
+                "Update_a_row_3": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "incidents",
+                      "recordId": "@triggerOutputs()?['body/_regarding_value']",
+                      "item/prioritycode": 1,
+                      "item/revops_followupslastatus": 4
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "operationId": "UpdateOnlyRecord",
+                      "connectionName": "shared_commondataserviceforapps-1"
+                    }
+                  },
+                  "metadata": {
+                    "operationMetadataId": "11dbc5ca-ef31-4567-b95b-cd23303a0928"
+                  }
+                }
+              },
+              "case": 1
+            }
+          },
+          "runAfter": {
+            "Update_a_row_4": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "525ad200-8eea-4677-8523-4273d9c762f2"
+          }
+        },
+        "Update_a_row_4": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "incidents",
+              "recordId": "@triggerOutputs()?['body/_regarding_value']",
+              "item/followupby": "@triggerOutputs()?['body/computedfailuretime']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "UpdateOnlyRecord",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "d0360963-e27e-4511-ad74-878eff6a3f1d"
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

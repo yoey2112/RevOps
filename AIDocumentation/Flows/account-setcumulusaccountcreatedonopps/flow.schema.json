@@ -1,0 +1,111 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "impersonation": {},
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_a4f90"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_Relationship_Type_is_Customer": {
+          "metadata": {
+            "operationMetadataId": "7546c863-ead7-4b7a-a2cc-fd5ccf0304d1"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "account",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "customertypecode",
+              "subscriptionRequest/filterexpression": "customertypecode eq 3",
+              "subscriptionRequest/name": "2002e152-9539-ef11-a316-6045bdcd5dde"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "List_Opps": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "6d1654e7-6a0b-4ead-818e-120c9bdaa7d2"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords"
+            },
+            "parameters": {
+              "entityName": "opportunities",
+              "fetchXml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\">\n<entity name=\"opportunity\">\n<attribute name=\"name\"/>\n<attribute name=\"customerid\"/>\n<attribute name=\"estimatedvalue\"/>\n<attribute name=\"statuscode\"/>\n<attribute name=\"opportunityid\"/>\n<attribute name=\"revops_cumulusaccountcreated\"/>\n<order attribute=\"name\" descending=\"false\"/>\n<filter type=\"and\">\n<condition attribute=\"parentaccountid\" operator=\"eq\" uiname=\"@{triggerOutputs()?['body/name']}\" uitype=\"account\" value=\"@{triggerOutputs()?['body/accountid']}\"/>\n<condition attribute=\"revops_opportunitytype\" operator=\"eq\" value=\"283040001\"/>\n<condition attribute=\"statecode\" operator=\"eq\" value=\"0\"/>\n</filter>\n</entity>\n</fetch>"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Apply_to_each": {
+          "foreach": "@outputs('List_Opps')?['body/value']",
+          "actions": {
+            "Update_Opportunity": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "0bfb96fd-91d6-4275-ab8c-7419e0981248"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord"
+                },
+                "parameters": {
+                  "entityName": "opportunities",
+                  "recordId": "@items('Apply_to_each')?['opportunityid']",
+                  "item/revops_cumulusaccountcreated": true
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "List_Opps": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "39543ad2-b561-4e26-a86d-4884965138b3"
+          },
+          "type": "Foreach"
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

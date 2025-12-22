@@ -1,0 +1,12 @@
+<savingrule savingruleid="a9c72d6d-47bb-f011-bbd3-7ced8d061ad0">
+  <endedon>12/11/2025 2:56:02 PM</endedon>
+  <iscustomizable>1</iscustomizable>
+  <ruledata>{"time":{"valueInSeconds":900,"frequency":"run"},"money":{"rate":75}}</ruledata>
+  <startedon>11/6/2025 7:33:00 PM</startedon>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <timezoneruleversionnumber>0</timezoneruleversionnumber>
+  <workflowid>
+    <workflowid>c547a2b9-25bb-f011-bbd3-6045bdf9f19e</workflowid>
+  </workflowid>
+</savingrule>

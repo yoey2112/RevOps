@@ -1,0 +1,331 @@
+[
+    {
+        "LogicalName":  "revops_accountpotentialtechstack",
+        "DisplayName":  "Account Potential / Tech Stack",
+        "FolderName":  "Accountpotentialtechstack",
+        "Description":  "",
+        "ColumnCount":  35
+    },
+    {
+        "LogicalName":  "revops_accountproductsummary",
+        "DisplayName":  "Account Product Summary",
+        "FolderName":  "Accountproductsummary",
+        "Description":  "All product summaries from Cumulus accounts attached to the related (parent account in Dynamics)",
+        "ColumnCount":  36
+    },
+    {
+        "LogicalName":  "revops_accountreassignment",
+        "DisplayName":  "Account Reassignment",
+        "FolderName":  "Accountreassignment",
+        "Description":  "",
+        "ColumnCount":  22
+    },
+    {
+        "LogicalName":  "revops_accountsoftwaretool",
+        "DisplayName":  "Account Software Tool",
+        "FolderName":  "Accountsoftwaretool",
+        "Description":  "",
+        "ColumnCount":  16
+    },
+    {
+        "LogicalName":  "revops_accountsolutionsummary",
+        "DisplayName":  "Account Solution Summary",
+        "FolderName":  "Accountsolutionsummary",
+        "Description":  "",
+        "ColumnCount":  34
+    },
+    {
+        "LogicalName":  "revops_audienceimport",
+        "DisplayName":  "Audience import",
+        "FolderName":  "Audienceimport",
+        "Description":  "",
+        "ColumnCount":  22
+    },
+    {
+        "LogicalName":  "revops_businessreview",
+        "DisplayName":  "Business Review",
+        "FolderName":  "Businessreview",
+        "Description":  "For business reviews with your partner. Only to be used on the account record.",
+        "ColumnCount":  63
+    },
+    {
+        "LogicalName":  "revops_cadencecall",
+        "DisplayName":  "Cadence Call",
+        "FolderName":  "Cadencecall",
+        "Description":  "",
+        "ColumnCount":  63
+    },
+    {
+        "LogicalName":  "revops_changelog",
+        "DisplayName":  "Change Log",
+        "FolderName":  "Changelog",
+        "Description":  "",
+        "ColumnCount":  16
+    },
+    {
+        "LogicalName":  "revops_Churn",
+        "DisplayName":  "Churn",
+        "FolderName":  "Churn",
+        "Description":  "",
+        "ColumnCount":  31
+    },
+    {
+        "LogicalName":  "revops_competitortransferid",
+        "DisplayName":  "Competitor Transfer ID",
+        "FolderName":  "Competitortransferid",
+        "Description":  "",
+        "ColumnCount":  19
+    },
+    {
+        "LogicalName":  "revops_country",
+        "DisplayName":  "Country",
+        "FolderName":  "Country",
+        "Description":  "",
+        "ColumnCount":  20
+    },
+    {
+        "LogicalName":  "revops_cumulusaccount",
+        "DisplayName":  "Cumulus Account",
+        "FolderName":  "Cumulusaccount",
+        "Description":  "Cumulus account information is synced to this table.",
+        "ColumnCount":  66
+    },
+    {
+        "LogicalName":  "revops_cumulusorganization",
+        "DisplayName":  "Cumulus Organization",
+        "FolderName":  "Cumulusorganization",
+        "Description":  "Organizations from Cumulus. Clients under a partner",
+        "ColumnCount":  25
+    },
+    {
+        "LogicalName":  "revops_cumulussignup",
+        "DisplayName":  "Cumulus Sign-up",
+        "FolderName":  "Cumulussignup",
+        "Description":  "",
+        "ColumnCount":  64
+    },
+    {
+        "LogicalName":  "revops_cumulususer",
+        "DisplayName":  "Cumulus User",
+        "FolderName":  "Cumulususer",
+        "Description":  "",
+        "ColumnCount":  30
+    },
+    {
+        "LogicalName":  "revops_demo",
+        "DisplayName":  "Demo",
+        "FolderName":  "Demo",
+        "Description":  "",
+        "ColumnCount":  67
+    },
+    {
+        "LogicalName":  "revops_domain",
+        "DisplayName":  "Domain",
+        "FolderName":  "Domain",
+        "Description":  "",
+        "ColumnCount":  17
+    },
+    {
+        "LogicalName":  "revops_gicsmapping",
+        "DisplayName":  "GICS Mapping",
+        "FolderName":  "Gicsmapping",
+        "Description":  "",
+        "ColumnCount":  17
+    },
+    {
+        "LogicalName":  "revops_inpersonmeeting",
+        "DisplayName":  "In person meeting",
+        "FolderName":  "Inpersonmeeting",
+        "Description":  "",
+        "ColumnCount":  64
+    },
+    {
+        "LogicalName":  "revops_lateralmove",
+        "DisplayName":  "Lateral Movement",
+        "FolderName":  "Lateralmove",
+        "Description":  "",
+        "ColumnCount":  28
+    },
+    {
+        "LogicalName":  "revops_mwhaccount",
+        "DisplayName":  "MWH Account",
+        "FolderName":  "Mwhaccount",
+        "Description":  "",
+        "ColumnCount":  31
+    },
+    {
+        "LogicalName":  "revops_onboardingcall",
+        "DisplayName":  "Onboarding Call",
+        "FolderName":  "Onboardingcall",
+        "Description":  "",
+        "ColumnCount":  71
+    },
+    {
+        "LogicalName":  "revops_opportunitiessnapshots",
+        "DisplayName":  "Opportunities Snapshot",
+        "FolderName":  "Opportunitiessnapshots",
+        "Description":  "Daily Snapshots of the opportunities",
+        "ColumnCount":  27
+    },
+    {
+        "LogicalName":  "revops_opportunitysolution",
+        "DisplayName":  "Related Solution",
+        "FolderName":  "Opportunitysolution",
+        "Description":  "",
+        "ColumnCount":  26
+    },
+    {
+        "LogicalName":  "revops_partnerinvestment",
+        "DisplayName":  "Partner Investment",
+        "FolderName":  "Partnerinvestment",
+        "Description":  "",
+        "ColumnCount":  21
+    },
+    {
+        "LogicalName":  "revops_platformsettings",
+        "DisplayName":  "Platform Settings",
+        "FolderName":  "Platformsettings",
+        "Description":  "",
+        "ColumnCount":  24
+    },
+    {
+        "LogicalName":  "revops_practice",
+        "DisplayName":  "Practice",
+        "FolderName":  "Practice",
+        "Description":  "Categorization for Solutions. Used to maintain Product Structure and bucketize Solutions available in our Marketplace.",
+        "ColumnCount":  16
+    },
+    {
+        "LogicalName":  "revops_pricingrequest",
+        "DisplayName":  "Pricing Request",
+        "FolderName":  "Pricingrequest",
+        "Description":  "",
+        "ColumnCount":  46
+    },
+    {
+        "LogicalName":  "revops_productsummary",
+        "DisplayName":  "Product Summary",
+        "FolderName":  "Productsummary",
+        "Description":  "",
+        "ColumnCount":  38
+    },
+    {
+        "LogicalName":  "revops_psaintegration",
+        "DisplayName":  "PSA Integration",
+        "FolderName":  "Psaintegration",
+        "Description":  "",
+        "ColumnCount":  20
+    },
+    {
+        "LogicalName":  "revops_relatedsolutionssnapshots",
+        "DisplayName":  "Related Solutions Snapshot",
+        "FolderName":  "Relatedsolutionssnapshots",
+        "Description":  "Daily Snapshots or related solutions and MRR to Opportunities",
+        "ColumnCount":  22
+    },
+    {
+        "LogicalName":  "revops_service",
+        "DisplayName":  "Supported Service",
+        "FolderName":  "Service",
+        "Description":  "",
+        "ColumnCount":  15
+    },
+    {
+        "LogicalName":  "revops_sherwebopportunitybpf",
+        "DisplayName":  "Sherweb Opportunity BPF",
+        "FolderName":  "Sherwebopportunitybpf",
+        "Description":  "Base entity for process Sherweb Opportunity BPF",
+        "ColumnCount":  22
+    },
+    {
+        "LogicalName":  "revops_sherwebsalesbpf",
+        "DisplayName":  "Sherweb Sales BPF",
+        "FolderName":  "Sherwebsalesbpf",
+        "Description":  "Base entity for process Sherweb Sales BPF",
+        "ColumnCount":  23
+    },
+    {
+        "LogicalName":  "revops_smeengagement",
+        "DisplayName":  "SME Engagement",
+        "FolderName":  "Smeengagement",
+        "Description":  "",
+        "ColumnCount":  28
+    },
+    {
+        "LogicalName":  "revops_Solution",
+        "DisplayName":  "Solution",
+        "FolderName":  "Solution",
+        "Description":  "",
+        "ColumnCount":  26
+    },
+    {
+        "LogicalName":  "revops_solutioncategory",
+        "DisplayName":  "Solution Category",
+        "FolderName":  "Solutioncategory",
+        "Description":  "",
+        "ColumnCount":  18
+    },
+    {
+        "LogicalName":  "revops_solutiondetails",
+        "DisplayName":  "Solution Details",
+        "FolderName":  "Solutiondetails",
+        "Description":  "",
+        "ColumnCount":  19
+    },
+    {
+        "LogicalName":  "revops_solutionprovider",
+        "DisplayName":  "Solution Provider",
+        "FolderName":  "Solutionprovider",
+        "Description":  "",
+        "ColumnCount":  17
+    },
+    {
+        "LogicalName":  "revops_solutionsummary",
+        "DisplayName":  "Solution Summary",
+        "FolderName":  "Solutionsummary",
+        "Description":  "",
+        "ColumnCount":  39
+    },
+    {
+        "LogicalName":  "revops_stateorprovince",
+        "DisplayName":  "State or Province",
+        "FolderName":  "Stateorprovince",
+        "Description":  "",
+        "ColumnCount":  22
+    },
+    {
+        "LogicalName":  "revops_subsolution",
+        "DisplayName":  "Sub-Solution",
+        "FolderName":  "Subsolution",
+        "Description":  "",
+        "ColumnCount":  17
+    },
+    {
+        "LogicalName":  "revops_techstacksnapshots",
+        "DisplayName":  "Tech Stack Snapshot",
+        "FolderName":  "Techstacksnapshots",
+        "Description":  "",
+        "ColumnCount":  29
+    },
+    {
+        "LogicalName":  "revops_territoryregion",
+        "DisplayName":  "Territory Region",
+        "FolderName":  "Territoryregion",
+        "Description":  "",
+        "ColumnCount":  18
+    },
+    {
+        "LogicalName":  "revops_transfer",
+        "DisplayName":  "Transfer",
+        "FolderName":  "Transfer",
+        "Description":  "Technical Onboarding transfers table (P2P, etc)",
+        "ColumnCount":  64
+    },
+    {
+        "LogicalName":  "revops_utmlink",
+        "DisplayName":  "UTM Link",
+        "FolderName":  "Utmlink",
+        "Description":  "",
+        "ColumnCount":  23
+    }
+]

@@ -1,0 +1,13 @@
+<environmentvariabledefinition schemaname="revops_subjectcsp">
+  <description default="CSP Selection GUID from Subject Table">
+    <label description="CSP Selection GUID from Subject Table" languagecode="1033" />
+  </description>
+  <displayname default="Subject - CSP">
+    <label description="Subject - CSP" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.40.7.1</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

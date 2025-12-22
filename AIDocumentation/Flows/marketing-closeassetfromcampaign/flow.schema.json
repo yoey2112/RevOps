@@ -1,0 +1,582 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_c5511"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedoffice365_cf262"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted_-_StatusCode_in_Campaign": {
+          "metadata": {
+            "operationMetadataId": "88365ceb-12b7-4820-86b5-4514903bb159"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "campaign",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "statuscode,modifiedonbehalfby",
+              "subscriptionRequest/filterexpression": "statuscode eq 3 or statuscode eq 4\n"
+            },
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            }
+          }
+        }
+      },
+      "actions": {
+        "List_rows_-_Events_completed": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "40e14d3b-a86a-4a59-8405-2c30f5c60b35"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "msevtmgt_events",
+              "$filter": "_revops_parentcampaignid_value eq @{triggerOutputs()?['body/campaignid']}"
+            },
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            }
+          }
+        },
+        "Apply_to_each_-_event": {
+          "foreach": "@outputs('List_rows_-_Events_completed')?['body/value']",
+          "actions": {
+            "Urow_-_Events": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "73524ed5-aad9-44be-9c45-f44c2bcf753f"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "msevtmgt_events",
+                  "recordId": "@items('Apply_to_each_-_event')?['msevtmgt_eventid']",
+                  "item/statecode": 1,
+                  "item/statuscode": 2
+                },
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateOnlyRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                }
+              }
+            },
+            "Append_to_array_variable_-_array_event": {
+              "runAfter": {
+                "Urow_-_Events": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "a80012a0-aaa3-445c-9e71-0a8aec757d68"
+              },
+              "type": "AppendToArrayVariable",
+              "inputs": {
+                "name": "arrayEvent",
+                "value": "@outputs('Urow_-_Events')?['body/msevtmgt_name']"
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_variable_-_email": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "95b0e53a-1633-4dba-80ed-e8076f63d208"
+          },
+          "type": "Foreach"
+        },
+        "List_rows_-_Emails_completed": {
+          "runAfter": {
+            "Apply_to_each_-_event": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "229fbf39-0fd9-4f23-8704-08ab9d7d9f39"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "msdynmkt_emails",
+              "$filter": "_revops_parentcampaignid_value eq @{triggerOutputs()?['body/campaignid']}"
+            },
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            }
+          }
+        },
+        "Apply_to_each_-_email": {
+          "foreach": "@outputs('List_rows_-_Emails_completed')?['body/value']",
+          "actions": {
+            "Urow_-_Email": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "9c13bd55-3652-4972-ad49-2fbaab991ee1"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "msdynmkt_emails",
+                  "recordId": "@items('Apply_to_each_-_email')?['msdynmkt_emailid']",
+                  "item/statuscode": 100,
+                  "item/statecode": 1
+                },
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateOnlyRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                }
+              }
+            },
+            "Append_to_array_variable_-_array_email": {
+              "runAfter": {
+                "Urow_-_Email": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "a611b815-d871-4fc7-8e3a-a10aa12acce4"
+              },
+              "type": "AppendToArrayVariable",
+              "inputs": {
+                "name": "arrayEmail",
+                "value": "@outputs('Urow_-_Email')?['body/msdynmkt_name']"
+              }
+            }
+          },
+          "runAfter": {
+            "List_rows_-_Emails_completed": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e794b43c-5b14-465b-8db9-26b09cd68f83"
+          },
+          "type": "Foreach"
+        },
+        "List_rows_-_Forms_completed": {
+          "runAfter": {
+            "Apply_to_each_-_email": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "8400fbc2-8a10-49f5-ba0f-0b599bfabbf9"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "msdynmkt_marketingforms",
+              "$filter": "_revops_parentcampaignid_value eq @{triggerOutputs()?['body/campaignid']}"
+            },
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            }
+          }
+        },
+        "Apply_to_each_-_form": {
+          "foreach": "@outputs('List_rows_-_Forms_completed')?['body/value']",
+          "actions": {
+            "Urow_-_Form": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "e046e235-ae71-4519-883f-1655051e3d5c"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "msdynmkt_marketingforms",
+                  "recordId": "@items('Apply_to_each_-_form')?['msdynmkt_marketingformid']",
+                  "item/statecode": 1,
+                  "item/statuscode": 100
+                },
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateOnlyRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                }
+              }
+            },
+            "Append_to_array_variable_-_array_form": {
+              "runAfter": {
+                "Urow_-_Form": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "d1895000-3e40-41a5-9a7b-b5f5ab0af480"
+              },
+              "type": "AppendToArrayVariable",
+              "inputs": {
+                "name": "ArrayForm",
+                "value": "@outputs('Urow_-_Form')?['body/msdynmkt_name']"
+              }
+            }
+          },
+          "runAfter": {
+            "List_rows_-_Forms_completed": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ac20ab7b-f86a-4343-b42c-6d23cfebd11a"
+          },
+          "type": "Foreach"
+        },
+        "Condition_-_if_completed": {
+          "actions": {
+            "List_rows_-_journey_completed": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "d35797cf-fe9b-47e8-be3c-f744b5231846"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "msdynmkt_journeys",
+                  "$filter": "_revops_parentcampaignid_value eq @{triggerOutputs()?['body/campaignid']}"
+                },
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                }
+              }
+            },
+            "Apply_to_each_-_journey": {
+              "foreach": "@outputs('List_rows_-_journey_completed')?['body/value']",
+              "actions": {
+                "Urow_-_Journeys_completed": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "b5b8b8b7-b6fd-49da-894d-b267a76b06f1"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "msdynmkt_journeys",
+                      "recordId": "@items('Apply_to_each_-_journey')?['msdynmkt_journeyid']",
+                      "item/statecode": 6
+                    },
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "UpdateOnlyRecord",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    }
+                  }
+                },
+                "Append_to_array_variable_-_array_journey_completed": {
+                  "runAfter": {
+                    "Urow_-_Journeys_completed": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "69332032-784d-465f-abb5-e75429256d4b"
+                  },
+                  "type": "AppendToArrayVariable",
+                  "inputs": {
+                    "name": "arrayJourney",
+                    "value": "@outputs('Urow_-_Journeys_completed')?['body/msdynmkt_name']"
+                  }
+                }
+              },
+              "runAfter": {
+                "List_rows_-_journey_completed": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "5495a358-22c7-41c5-bbc1-72125d59e7e1"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "Apply_to_each_-_form": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "List_rows_-_journey_cancelled": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "3450dbde-a785-4fb1-84e5-04b1753ce016"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "entityName": "msdynmkt_journeys",
+                    "$filter": "_revops_parentcampaignid_value eq @{triggerOutputs()?['body/campaignid']}"
+                  },
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "ListRecords",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  }
+                }
+              },
+              "Apply_to_each_-_journey_1": {
+                "foreach": "@outputs('List_rows_-_journey_cancelled')?['body/value']",
+                "actions": {
+                  "Urow_-_Journeys_stopped": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "95f12b76-7b9f-41c1-933c-3daac31bed89"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "parameters": {
+                        "entityName": "msdynmkt_journeys",
+                        "recordId": "@items('Apply_to_each_-_journey_1')?['msdynmkt_journeyid']",
+                        "item/statecode": 2
+                      },
+                      "host": {
+                        "connectionName": "shared_commondataserviceforapps",
+                        "operationId": "UpdateOnlyRecord",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                      }
+                    }
+                  },
+                  "Append_to_array_variable_-_array_journey_stopped": {
+                    "runAfter": {
+                      "Urow_-_Journeys_stopped": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "f21da95c-4995-4190-ad40-188ae9b3d892"
+                    },
+                    "type": "AppendToArrayVariable",
+                    "inputs": {
+                      "name": "arrayJourney",
+                      "value": "@outputs('Urow_-_Journeys_stopped')?['body/msdynmkt_name']"
+                    }
+                  }
+                },
+                "runAfter": {
+                  "List_rows_-_journey_cancelled": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "824d97fb-3383-40cd-8a44-71f07ddf97b3"
+                },
+                "type": "Foreach"
+              }
+            }
+          },
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@item()?['statuscode']",
+                  3
+                ]
+              }
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "517b6ee5-cc05-4e30-996d-fc5aee66387e"
+          },
+          "type": "If"
+        },
+        "Initialize_variable_-_journey": {
+          "runAfter": {
+            "List_rows_-_Events_completed": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "37db09e6-a279-45a1-b95d-b44bdb1f41d7"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "arrayJourney",
+                "type": "array",
+                "value": []
+              }
+            ]
+          }
+        },
+        "Initialize_variable_-_event": {
+          "runAfter": {
+            "Initialize_variable_-_journey": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "3880bfd1-e7b4-4ed5-8bd0-5681de158e62"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "arrayEvent",
+                "type": "array",
+                "value": []
+              }
+            ]
+          }
+        },
+        "Initialize_variable_-_form": {
+          "runAfter": {
+            "Initialize_variable_-_event": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "55d32f80-04a2-48a9-bc19-db8fc94c0d13"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ArrayForm",
+                "type": "array",
+                "value": []
+              }
+            ]
+          }
+        },
+        "Initialize_variable_-_email": {
+          "runAfter": {
+            "Initialize_variable_-_form": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c39c9d81-44a2-466a-9c6c-628fbdaa542b"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "arrayEmail",
+                "type": "array",
+                "value": []
+              }
+            ]
+          }
+        },
+        "Get_a_row_by_ID_-_modified_by_checkup": {
+          "runAfter": {
+            "Condition_-_if_completed": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a4a2234f-1d9f-4a34-867f-a8b984ec398f"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "systemusers",
+              "recordId": "@triggerOutputs()?['body/_modifiedby_value']"
+            },
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            }
+          }
+        },
+        "Get_a_row_by_ID_-_campaign_owner_checkup": {
+          "runAfter": {
+            "Get_a_row_by_ID_-_modified_by_checkup": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f3d88b77-74b8-4ee3-8e39-160153383007"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "systemusers",
+              "recordId": "@triggerOutputs()?['body/_revops_campaignowner_value']"
+            },
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            }
+          }
+        },
+        "Send_an_email_from_a_shared_mailbox_(V2)": {
+          "runAfter": {
+            "Get_a_row_by_ID_-_campaign_owner_checkup": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a1ffea66-586e-4889-974c-77eb10b01621"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365",
+              "operationId": "SharedMailboxSendEmailV2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "emailMessage/MailboxAddress": "revops-noreply@sherweb.com",
+              "emailMessage/To": "@outputs('Get_a_row_by_ID_-_campaign_owner_checkup')?['body/internalemailaddress']",
+              "emailMessage/Subject": "{closing asset for Campaign you just closed}",
+              "emailMessage/Body": "<p class=\"editor-paragraph\">Hi!<br><br>This campaign called: @{triggerOutputs()?['body/name']} has been closed. The following asset below has also been closed.<br><br>Journeys:@{variables('arrayJourney')}<br>Event:@{variables('arrayEvent')}<br>Forms:@{variables('ArrayForm')}<br>Email: @{variables('arrayEmail')}<br><br>Thank you,</p>",
+              "emailMessage/Importance": "Normal"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

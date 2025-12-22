@@ -1,0 +1,107 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_c5511"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "type": "Request",
+          "kind": "Button",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          }
+        }
+      },
+      "actions": {
+        "List_rows": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "accounts",
+              "$select": "revops_tier",
+              "$filter": "revops_tier ne null and revops_fiscalyeartiersnapshot eq null"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "73504c11-fad2-471f-94b9-51770222c03f"
+          }
+        },
+        "For_each": {
+          "type": "Foreach",
+          "foreach": "@outputs('List_rows')?['body/value']",
+          "actions": {
+            "Update_a_row": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "accounts",
+                  "recordId": "@items('For_each')?['accountid']",
+                  "item/revops_fiscalyeartiersnapshot": "@outputs('Compose')"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "UpdateOnlyRecord",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
+              "runAfter": {
+                "Compose": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "Compose": {
+              "type": "Compose",
+              "inputs": "@if(equals(items('for_each')?['revops_tier'], 'Tier 6'), 234570005,\r\n  if(equals(items('for_each')?['revops_tier'], 'Tier 5'), 234570004,\r\n    if(equals(items('for_each')?['revops_tier'], 'Tier 4'), 234570003,\r\n      if(equals(items('for_each')?['revops_tier'], 'Tier 3'), 234570002,\r\n        if(equals(items('for_each')?['revops_tier'], 'Tier 2'), 234570001,\r\n          if(equals(items('for_each')?['revops_tier'], 'Tier 1'), 234570000, 0))))))"
+            }
+          },
+          "runAfter": {
+            "List_rows": [
+              "Succeeded"
+            ]
+          },
+          "runtimeConfiguration": {
+            "concurrency": {
+              "repetitions": 20
+            }
+          }
+        }
+      },
+      "outputs": {},
+      "description": "This flow will set the Point in Time value of the tier based on the start of the fiscal year"
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,797 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_bccd6"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_calendlyv2-1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcalendlyv2_a12c7"
+        },
+        "api": {
+          "name": "shared_calendlyv2"
+        }
+      },
+      "shared_commondataserviceforapps-1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_bccd6"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_meeting_is_booked": {
+          "metadata": {
+            "operationMetadataId": "31faad49-5224-4699-8611-6e5743d4da07"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_calendlyv2-1",
+              "operationId": "CreateWebhookSubscription",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_calendlyv2"
+            },
+            "parameters": {
+              "body/events": [
+                "invitee.created"
+              ]
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Find_lead_by_email": {
+          "runAfter": {
+            "Was_first_name_and_last_name_provided": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "86d9c207-11cd-4df5-9c5d-363c5def0129"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "leads",
+              "$select": "emailaddress1,leadid,revops_calendlyslug,msdyncrm_teleprospectaccepted,description",
+              "$filter": "emailaddress1 eq '@{triggerOutputs()?['body/payload/email']}' and revops_calendlyslug eq '@{outputs('Get_Event_Type')?['body/resource/slug']}'",
+              "$top": 1
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Does_owner_exist": {
+          "actions": {
+            "Set_Owner_ID": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "fa8d6675-aad1-4d7d-96af-145674d892ff"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "Owner ID",
+                "value": "@{first(outputs('Find_Owner_by_email')?['body/value'])['@odata.id']}"
+              }
+            },
+            "For_each_user_url": {
+              "foreach": "@outputs('Find_Owner_by_email')?['body/value']",
+              "actions": {
+                "Condition_-_user_has_URL": {
+                  "actions": {},
+                  "runAfter": {},
+                  "else": {
+                    "actions": {
+                      "Update_a_row_-_User": {
+                        "runAfter": {},
+                        "metadata": {
+                          "operationMetadataId": "038d758b-7cf6-4c75-b8cb-007a6a5f4173"
+                        },
+                        "type": "OpenApiConnection",
+                        "inputs": {
+                          "host": {
+                            "connectionName": "shared_commondataserviceforapps",
+                            "operationId": "UpdateRecord",
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                          },
+                          "parameters": {
+                            "entityName": "systemusers",
+                            "recordId": "@outputs('Find_Owner_by_email')?['body/value'][0]?['systemuserid']",
+                            "item/revops_schedulingurl": "@{body('Parse_JSON_API_Cal')?['resource'][0]?['scheduling_url']}"
+                          },
+                          "authentication": "@parameters('$authentication')"
+                        }
+                      }
+                    }
+                  },
+                  "expression": {
+                    "and": [
+                      {
+                        "not": {
+                          "equals": [
+                            "@item()?['revops_schedulingurl']",
+                            ""
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "fa38578e-c0ba-4901-90aa-b47ebbc4b924"
+                  },
+                  "type": "If"
+                }
+              },
+              "runAfter": {
+                "Set_Owner_ID": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "8a572f6f-313f-48d0-a8c5-6b9cd506e1bf"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "Find_Owner_by_email": [
+              "Succeeded"
+            ]
+          },
+          "expression": {
+            "greater": [
+              "@length(outputs('Find_Owner_by_email')?['body/value'])",
+              0
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ef410de2-73e5-480b-b2ee-9fb1a00e06f8"
+          },
+          "type": "If"
+        },
+        "Initialize_Lead_ID": {
+          "runAfter": {
+            "Initialize_Owner_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b403a422-07ce-412b-9d2c-0b1dd06d13e5"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Lead ID",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_Invitee_First_Name": {
+          "runAfter": {
+            "Initialize_Lead_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "93b0c819-7a7c-4f93-ad3d-2ce6e886f612"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Invitee First Name",
+                "type": "string",
+                "value": "@triggerOutputs()?['body/payload/first_name']"
+              }
+            ]
+          }
+        },
+        "Initialize_Invitee_Last_Name": {
+          "runAfter": {
+            "Initialize_Invitee_First_Name": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "42acba80-4ee1-412f-8c31-d047e79aea18"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Invitee Last Name",
+                "type": "string",
+                "value": "@triggerOutputs()?['body/payload/last_name']"
+              }
+            ]
+          }
+        },
+        "Was_first_name_and_last_name_provided": {
+          "actions": {},
+          "runAfter": {
+            "For_each_API": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Set_Invitee_First_Name": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "b78f8b45-8653-44d2-8635-c13b483a108c"
+                },
+                "type": "SetVariable",
+                "inputs": {
+                  "name": "Invitee First Name",
+                  "value": "@{split(triggerOutputs()?['body/payload/name'], ' ')[0]}"
+                }
+              },
+              "Was_last_name_provided": {
+                "actions": {
+                  "Set_Invitee_Last_Name": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "370f9a62-7323-4df5-a04f-7c5aec3a7a77"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "Invitee Last Name",
+                      "value": "@{last(split(triggerOutputs()?['body/payload/name'], ' '))}"
+                    }
+                  }
+                },
+                "runAfter": {
+                  "Set_Invitee_First_Name": [
+                    "Succeeded"
+                  ]
+                },
+                "else": {
+                  "actions": {
+                    "Last_Name_Not_Provided": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "05c2610f-489b-404b-8995-dd8bbb94ff4e"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "Invitee Last Name",
+                        "value": "NotProvided"
+                      }
+                    }
+                  }
+                },
+                "expression": {
+                  "greater": [
+                    "@length(split(triggerOutputs()?['body/payload/name'], ' '))",
+                    1
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "05d0f0dd-16e6-469e-b27a-5ca81002e70d"
+                },
+                "type": "If"
+              }
+            }
+          },
+          "expression": {
+            "and": [
+              {
+                "not": {
+                  "equals": [
+                    "@variables('Invitee First Name')",
+                    ""
+                  ]
+                }
+              },
+              {
+                "not": {
+                  "equals": [
+                    "@variables('Invitee Last Name')",
+                    ""
+                  ]
+                }
+              }
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "adb0f07a-8297-425f-861f-2160c6295010"
+          },
+          "type": "If"
+        },
+        "Initialize_Owner_ID": {
+          "runAfter": {
+            "Initialize_Answers": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c1e2ab59-db8f-4232-a120-0536c3418efc"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Owner ID",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Find_Owner_by_email": {
+          "runAfter": {
+            "Find_lead_by_email": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1c681042-8fee-4303-8d2c-60541305bcef"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "systemusers",
+              "$select": "domainname,systemuserid,revops_schedulingurl",
+              "$filter": "domainname eq '@{first(triggerOutputs()?['body/payload/scheduled_event/event_memberships'])['user_email']}'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Create_Appointment": {
+          "runAfter": {
+            "Lead_update_or_create": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "0e11e463-1f06-4227-b591-74c0f0db6f03"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "CreateRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "appointments",
+              "item/scheduledend": "@triggerOutputs()?['body/payload/scheduled_event/end_time']",
+              "item/scheduledstart": "@triggerOutputs()?['body/payload/scheduled_event/start_time']",
+              "item/subject": "@triggerOutputs()?['body/payload/scheduled_event/name']",
+              "item/description": "@{variables('Answers')}",
+              "item/ownerid_appointment@odata.bind": "@variables('Owner ID')",
+              "item/regardingobjectid_lead_appointment@odata.bind": "@variables('Lead ID')",
+              "item/activityid": "@split(triggerOutputs()?['body/payload/uri'], '/')[sub(length(split(triggerOutputs()?['body/payload/uri'], '/')), 1)]",
+              "item/revops_calendlyslug": "@variables('Calendly slug')",
+              "item/revops_utmcampaign": "@triggerOutputs()?['body/payload/tracking/utm_campaign']",
+              "item/revops_utmmedium": "@triggerOutputs()?['body/payload/tracking/utm_medium']",
+              "item/revops_utmsource": "@triggerOutputs()?['body/payload/tracking/utm_source']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Initialize_Answers": {
+          "runAfter": {
+            "Initialize_Calendly_Slug": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c598ae64-d812-41f3-a585-6966973d606a"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Answers",
+                "type": "array"
+              }
+            ]
+          }
+        },
+        "Initialize_Calendly_Slug": {
+          "runAfter": {
+            "Is_Managed_or_secret_Calendly_event": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "63a0b5dc-b5e6-400a-9e4c-50a0541e020a"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Calendly slug",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Apply_to_each_(answers)": {
+          "foreach": "@triggerOutputs()?['body/payload/questions_and_answers']",
+          "actions": {
+            "Append_to_array_variable": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "4f3d1e2b-f11a-4606-b735-b55947aff80e"
+              },
+              "type": "AppendToArrayVariable",
+              "inputs": {
+                "name": "Answers",
+                "value": "@concat(items('Apply_to_each_(answers)')?['question'], '\\n', items('Apply_to_each_(answers)')?['answer'], '\\n\\n')"
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_Invitee_Last_Name": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "253acd49-a737-43fb-975b-c8bcdcc0d2e7"
+          },
+          "type": "Foreach"
+        },
+        "For_each_API": {
+          "foreach": "@triggerOutputs()?['body/payload/scheduled_event/event_memberships']",
+          "actions": {
+            "API_Cal": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "82c55969-7361-4a5c-904a-c814dc55af6c"
+              },
+              "type": "Http",
+              "inputs": {
+                "method": "GET",
+                "uri": "@item()?['user']",
+                "headers": {
+                  "Authorization": "Bearer eyJraWQiOiIxY2UxZTEzNjE3ZGNmNzY2YjNjZWJjY2Y4ZGM1YmFmYThhNjVlNjg0MDIzZjdjMzJiZTgzNDliMjM4MDEzNWI0IiwidHlwIjoiUEFUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJodHRwczovL2F1dGguY2FsZW5kbHkuY29tIiwiaWF0IjoxNzA5MTMyODE0LCJqdGkiOiIzNDlkMDFkMi05ZGYwLTQwZmQtYTk5Ni1hZmM4NzFjZTRhOTEiLCJ1c2VyX3V1aWQiOiJiMWVkYzk1Ny0yZTFlLTRlZTctYWI2NS05YmJhZDhkNjBkMDIifQ.Awc1jUeSRqXGuUwNSFFWiLyMy57UkZyJUfjDa5-duO5xI5K4jBgURn_JAgGMzLFKZ4XYmnvCUJFAF4PQbf_slA",
+                  "Content-Type": "application/json"
+                }
+              }
+            },
+            "Parse_JSON_API_Cal": {
+              "runAfter": {
+                "API_Cal": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "3264571e-af36-435f-9edd-696fd9d72ea7"
+              },
+              "type": "ParseJson",
+              "inputs": {
+                "content": "@body('API_Cal')",
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource": {
+                      "type": "object",
+                      "properties": {
+                        "avatar_url": {},
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "current_organization": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "resource_type": {
+                          "type": "string"
+                        },
+                        "scheduling_url": {
+                          "type": "string"
+                        },
+                        "slug": {
+                          "type": "string"
+                        },
+                        "timezone": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "uri": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "Set_variable": {
+              "runAfter": {
+                "Parse_JSON_API_Cal": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "0a80b943-c604-4631-aa1b-deea315b672e"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "Calendly slug",
+                "value": "@body('Parse_JSON_API_Cal')?['resource']?['slug']"
+              }
+            }
+          },
+          "runAfter": {
+            "Apply_to_each_(answers)": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a4ff8793-d189-4ff5-a924-fef90905e327"
+          },
+          "type": "Foreach"
+        },
+        "Get_Event_Type": {
+          "runAfter": {
+            "Set_variable_event_type": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "26080fb5-0582-42c3-8671-547ef218b0ba"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_calendlyv2-1",
+              "operationId": "GetEventType",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_calendlyv2"
+            },
+            "parameters": {
+              "uuid": "@last(split(variables('Event type'),'/'))"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Compose_event_type": {
+          "runAfter": {
+            "Initialize_event_type": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "36835104-1bab-4c6c-ab8d-6d0ba313b6c9"
+          },
+          "type": "Compose",
+          "inputs": "@last(split(variables('Event type'),'/'))"
+        },
+        "Initialize_event_type": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "7fe516b3-5f83-44ec-bd9d-33e35fb8cefd"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Event type",
+                "type": "string",
+                "value": "@triggerOutputs()?['body/payload/scheduled_event/event_type']"
+              }
+            ]
+          }
+        },
+        "Set_variable_event_type": {
+          "runAfter": {
+            "Compose_event_type": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "74e6355e-48c3-48a3-9951-4fdbe84dd0ff"
+          },
+          "type": "SetVariable",
+          "inputs": {
+            "name": "Event type",
+            "value": "@{outputs('Compose_event_type')}"
+          }
+        },
+        "Lead_update_or_create": {
+          "actions": {
+            "Set_existing_lead_ID": {
+              "runAfter": {
+                "Update_sales_ready": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "18871725-6209-4da1-82a5-6cfec251cedf"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "Lead ID",
+                "value": "@{first(outputs('Find_lead_by_email')?['body/value'])['@odata.id']}"
+              }
+            },
+            "Update_sales_ready": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "bac52ec1-115c-44ca-bc20-d598baea7efa"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps-1",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "leads",
+                  "recordId": "@outputs('Find_lead_by_email')?['body/value'][0]?['leadid']",
+                  "item/description": "@{outputs('Find_lead_by_email')?['body/value'][0]?['description']} @{variables('Answers')}",
+                  "item/leadsourcecode": 234570002,
+                  "item/revops_contactsales": true
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Does_owner_exist": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Create_lead": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "042112fd-2308-4f6f-a3bc-07114de1ad9c"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "CreateRecord",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "leads",
+                    "item/emailaddress1": "@triggerOutputs()?['body/payload/email']",
+                    "item/subject": "@{triggerOutputs()?['body/payload/scheduled_event/name']} with @{triggerOutputs()?['body/payload/name']}",
+                    "item/description": "@variables('Answers')",
+                    "item/firstname": "@variables('Invitee First Name')",
+                    "item/lastname": "@variables('Invitee Last Name')",
+                    "item/revops_calendlyslug": "@variables('Calendly slug')",
+                    "item/revops_contactsales": true,
+                    "item/ownerid@odata.bind": "@variables('Owner ID')"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Set_new_lead_ID": {
+                "runAfter": {
+                  "Create_lead": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "f6c47b59-21e0-439b-b7b5-29bee0132f18"
+                },
+                "type": "SetVariable",
+                "inputs": {
+                  "name": "Lead ID",
+                  "value": "@outputs('Create_lead')?['body/@odata']?['id']"
+                }
+              }
+            }
+          },
+          "expression": {
+            "or": [
+              {
+                "or": [
+                  {
+                    "greater": [
+                      "@length(outputs('Find_lead_by_email')?['body/value'])",
+                      0
+                    ]
+                  },
+                  {
+                    "equals": [
+                      "@outputs('Find_lead_by_email')?['body/value'][0]?['revops_calendlyslug']",
+                      "@variables('Calendly slug')"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6bd05c56-ed53-4106-a3a7-b9c78bf5b99a"
+          },
+          "type": "If"
+        },
+        "Is_Managed_or_secret_Calendly_event": {
+          "actions": {},
+          "runAfter": {
+            "Get_Event_Type": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Terminate_not_secret_or_managed": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "357b5022-3e41-42fe-a688-e9c4a7962af6"
+                },
+                "type": "Terminate",
+                "inputs": {
+                  "runStatus": "Cancelled"
+                }
+              }
+            }
+          },
+          "expression": {
+            "or": [
+              {
+                "equals": [
+                  "@outputs('Get_Event_Type')?['body/resource/admin_managed']",
+                  true
+                ]
+              },
+              {
+                "equals": [
+                  "@outputs('Get_Event_Type')?['body/resource/secret']",
+                  true
+                ]
+              }
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9365c081-db9f-4b3e-b8d4-f3c5331bd64c"
+          },
+          "type": "If"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": "05a0501e52ab4124a71f1099be5ca0c4"
+  },
+  "schemaVersion": "1.0.0.0"
+}

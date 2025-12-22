@@ -1,0 +1,178 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_bccd6"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "Phone_call_for_lead_is_added": {
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "phonecall",
+              "subscriptionRequest/scope": 4
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "conditions": [
+            {
+              "expression": "@equals(triggerOutputs()?['body/_regardingobjectid_type'], 'leads')"
+            }
+          ],
+          "metadata": {
+            "operationMetadataId": "840ec618-d336-4bbf-b492-27434959930a"
+          }
+        }
+      },
+      "actions": {
+        "Has_gt_1_activity": {
+          "type": "If",
+          "expression": {
+            "greater": [
+              "@length(body('list_activities')?['value'])",
+              1
+            ]
+          },
+          "actions": {
+            "cancel_flow": {
+              "type": "Terminate",
+              "inputs": {
+                "runStatus": "Cancelled"
+              },
+              "metadata": {
+                "operationMetadataId": "978ac473-9e83-4221-849f-2965956aff03"
+              }
+            }
+          },
+          "else": {
+            "actions": {
+              "sql_date_empty": {
+                "type": "If",
+                "expression": {
+                  "equals": [
+                    "@outputs('get_lead_row')?['body/revops_sqldate']",
+                    null
+                  ]
+                },
+                "actions": {
+                  "update_lead_sql_date": {
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "parameters": {
+                        "entityName": "leads",
+                        "recordId": "@outputs('get_lead_row')?['body/leadid']",
+                        "item/revops_sqldate": "@utcNow()",
+                        "item/statuscode": 234570008
+                      },
+                      "host": {
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                        "operationId": "UpdateOnlyRecord",
+                        "connectionName": "shared_commondataserviceforapps"
+                      }
+                    },
+                    "metadata": {
+                      "operationMetadataId": "d49f76ca-2fe7-47e4-9e87-2d92085e5dce"
+                    }
+                  }
+                },
+                "else": {
+                  "actions": {
+                    "cancel_flow_2": {
+                      "type": "Terminate",
+                      "inputs": {
+                        "runStatus": "Cancelled"
+                      },
+                      "metadata": {
+                        "operationMetadataId": "23e919e5-0652-44b0-8763-71c0137fafb2"
+                      }
+                    }
+                  }
+                },
+                "runAfter": {
+                  "get_lead_row": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "9a35198d-15e7-4176-a4d3-ba7970bf7ad6"
+                }
+              },
+              "get_lead_row": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "entityName": "leads",
+                    "recordId": "@triggerOutputs()?['body/_regardingobjectid_value']"
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                    "operationId": "GetItem",
+                    "connectionName": "shared_commondataserviceforapps"
+                  }
+                },
+                "metadata": {
+                  "operationMetadataId": "909d2a7f-285b-4024-a3c9-0f01f3124601"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "list_activities": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b313713e-eb65-4049-aafa-003ec9440afe"
+          }
+        },
+        "list_activities": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "activitypointers",
+              "$filter": "_regardingobjectid_value eq @{triggerOutputs()?['body/_regardingobjectid_value']}",
+              "$orderby": "createdon asc"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "8d2890b9-27f2-4f5d-b9fa-1c269a6fee67"
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,37 @@
+<appaction uniquename="revops__ResolveCases!18f94ff8a59445f9a7b7b007e20e4fd2!msdyn_CustomerServiceWorkspace!incident!1">
+  <appmoduleid>
+    <uniquename>msdyn_CustomerServiceWorkspace</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Resolve Cases">
+    <label description="Resolve Cases" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>incident</logicalname>
+  </contextentity>
+  <contextvalue>incident</contextvalue>
+  <fonticon>$clientsvg:PageCompleted</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>1</location>
+  <name>ResolveCases!18f94ff8a59445f9a7b7b007e20e4fd2</name>
+  <onclickeventjavascriptfunctionname>sendSelectedCasesToFlow</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":12},{"type":24}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>51902728-34a9-f011-bbd2-7ced8d061554</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <sequence>1000177759.2500000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilityformulacomponentlibraryid>
+    <name>revops_customerserviceworkspacedefaultcommandlibrary_0e9dc</name>
+  </visibilityformulacomponentlibraryid>
+  <visibilityformulacomponentname>9aef4749c17e411eac6fec8f440f3c65</visibilityformulacomponentname>
+  <visibilityformulafunctionname>Visible</visibilityformulafunctionname>
+  <visibilitytype>1</visibilitytype>
+</appaction>

@@ -1,0 +1,250 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_c5511"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_microsoftforms": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedmicrosoftforms_65062"
+        },
+        "api": {
+          "name": "shared_microsoftforms"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "Helpdesk-BC Queue (revops_helpdeskbcqueue)": {
+          "defaultValue": "73716471-61f0-ef11-be20-7ced8d063295",
+          "type": "String",
+          "metadata": {
+            "schemaName": "revops_helpdeskbcqueue"
+          }
+        }
+      },
+      "triggers": {
+        "When_a_new_response_is_submitted": {
+          "splitOn": "@triggerOutputs()?['body/value']",
+          "metadata": {
+            "operationMetadataId": "2dea1306-c0b9-4c8c-a560-43c1b29bb763"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_microsoftforms",
+              "operationId": "CreateFormWebhook",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_microsoftforms"
+            },
+            "parameters": {
+              "form_id": "WbJEd__xJkS4aXpOcLKBBhnleXQnS1xInH1QcRbCgTdUMDhMVVJCOVlKVlpLS0MzUFgxNDVNTlRWNS4u"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Create_a_case": {
+          "runAfter": {
+            "Parse_JSON": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7d25fb8a-35c7-4c6c-ab46-633acf7cabba"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "CreateRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "incidents",
+              "item/title": "Sherweb UK Manual Account Creation for @{outputs('Get_response_details')?['body/reb85bf6dd42841ca84656f3c7d7c39c7']}",
+              "item/casetypecode": 234570010,
+              "item/customerid_contact@odata.bind": "/contacts(6724a0db-45bb-f011-bbd2-0022483bf4c5)",
+              "item/statuscode": 1,
+              "item/primarycontactid@odata.bind": "/contacts(6724a0db-45bb-f011-bbd2-0022483bf4c5)",
+              "item/caseorigincode": 234570002,
+              "item/revops_queue@odata.bind": "/queues(@{parameters('Helpdesk-BC Queue (revops_helpdeskbcqueue)')})"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_response_details": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "a031e691-7c18-4fcf-b1c2-3345938c2360"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_microsoftforms",
+              "operationId": "GetFormResponseById",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_microsoftforms"
+            },
+            "parameters": {
+              "form_id": "WbJEd__xJkS4aXpOcLKBBhnleXQnS1xInH1QcRbCgTdUMDhMVVJCOVlKVlpLS0MzUFgxNDVNTlRWNS4u",
+              "response_id": "@triggerOutputs()?['body/resourceData/responseId']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Parse_JSON": {
+          "runAfter": {
+            "Get_response_details": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c490f99d-ff5c-4764-8faf-31f033c4d1a2"
+          },
+          "type": "ParseJson",
+          "inputs": {
+            "content": "@triggerBody()",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "responder": {
+                  "type": "string"
+                },
+                "submitDate": {
+                  "type": "string"
+                },
+                "Name of the BDM": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "Company Trading Name:": {
+                  "type": "string"
+                },
+                "Business Address": {
+                  "type": "string"
+                },
+                "Country": {
+                  "type": "string"
+                },
+                "County": {
+                  "type": "string"
+                },
+                "City": {
+                  "type": "string"
+                },
+                "Postal Code": {
+                  "type": "string"
+                },
+                "VAT Number": {
+                  "type": "string"
+                },
+                "r1a637c87bcb14b0fb9aee4aa9a60a73e": {
+                  "type": "string"
+                },
+                "Do you have a Microsoft Partner Network ID (MPN ID)?": {
+                  "type": "string"
+                },
+                "Microsoft Partner Network ID (MPN ID)": {
+                  "type": "string"
+                },
+                "ACCOUNT OWNER - First Name": {
+                  "type": "string"
+                },
+                "ACCOUNT OWNER - Last Name": {
+                  "type": "string"
+                },
+                "ACCOUNT OWNER - Email Address": {
+                  "type": "string"
+                },
+                "ACCOUNT OWNER - Phone Number (Work, Mobile and/or Other)": {
+                  "type": "string"
+                },
+                "Add additional user?": {
+                  "type": "string"
+                },
+                "Additional User - First Name": {
+                  "type": "string"
+                },
+                "Additional User - Last Name": {
+                  "type": "string"
+                },
+                "Additional User - Email Address": {
+                  "type": "string"
+                },
+                "Additional User - Phone Number (Work, Mobile and/or Other)": {
+                  "type": "string"
+                },
+                "Role of additional user": {
+                  "type": "string"
+                },
+                "Company Legal Name (if different from above)": {
+                  "type": "string"
+                },
+                "Company Registration Number": {
+                  "type": "string"
+                },
+                "Company Registration Date:": {
+                  "type": "string"
+                },
+                "Website URL": {
+                  "type": "string"
+                },
+                "Last audited accounts year end": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "add_a_note": {
+          "runAfter": {
+            "Create_a_case": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "2c084b5d-a98d-4464-b156-c777119a5690"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "CreateRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "annotations",
+              "item/subject": "Account information",
+              "item/notetext": "@concat(\r\n'<div style=\"font-family:Segoe UI, Arial; font-size:13px; color:#333;\">',\r\n'<p><span style=\"color:#0078D4; font-weight:bold;\">Key Internal Contact:</span> <span style=\"font-weight:bold;\">', outputs('Get_response_details')?['body/r414f0287d421405eb91facc83d49aaf0'], '</span></p>',\r\n\r\n'<hr style=\"border:1px solid #ddd; margin:10px 0;\">',\r\n\r\n'<h3 style=\"margin-bottom:4px;\">Company Information</h3>',\r\n'<p>',\r\n'<strong>Company Trading Name:</strong> ', outputs('Get_response_details')?['body/reb85bf6dd42841ca84656f3c7d7c39c7'], '<br>',\r\n'<strong>Company Legal Name (if different from above):</strong> ', outputs('Get_response_details')?['body/r7bc3d5ea66254f96aac97e9b69dffa14'], '<br>',\r\n'<strong>Registration Number:</strong> ', outputs('Get_response_details')?['body/r0ed0fcf353774682ba09f1c95b06aeac'], '<br>',\r\n\r\n'<strong>Preferred Billing Date:</strong> ', outputs('Get_response_details')?['body/ra3659553756d401da0c897bb1763bd63'], '<br>',\r\n\r\n'<strong>Registration Date:</strong> ', outputs('Get_response_details')?['body/r932ed11d1ac647f292f819755dc4fe27'], '<br>',\r\n'<strong>Last audited accounts year end:</strong> ', outputs('Get_response_details')?['body/rac46fd3f688b4d8aba65910dc7ddb032'], '<br>',\r\n'<strong>Website URL:</strong> ', outputs('Get_response_details')?['body/r67d9dc2ea99747e5bc0bace70892d822'],\r\n'</p>',\r\n\r\n'<h3 style=\"margin-bottom:4px;\">Address</h3>',\r\n'<p>',\r\n'<strong>Business Address:</strong> ', outputs('Get_response_details')?['body/rcb26c082aa8f4bc99c897ab52082d595'], '<br>',\r\n'<strong>County:</strong> ', outputs('Get_response_details')?['body/r20ea17d8b38a47f28a3eeca78da16814'], '<br>',\r\n'<strong>Country:</strong> ', outputs('Get_response_details')?['body/rb1cc829f10d24e169a9c00e42a083df9'], '<br>',\r\n'<strong>City:</strong> ', outputs('Get_response_details')?['body/rdbeabfb2ff3b46b78e9971f20e1b05b1'], '<br>',\r\n'<strong>Postal Code:</strong> ', outputs('Get_response_details')?['body/r0afad64f56d4463aba38a08f84f6c449'],\r\n'</p>',\r\n\r\n'<h3 style=\"margin-bottom:4px;\">Partner Details</h3>',\r\n'<p>',\r\n'<strong>VAT Number:</strong> ', outputs('Get_response_details')?['body/rf18adfe2eb1044c0a01d14cbb8ac3137'], '<br>',\r\n'<strong>Microsoft Partner Network ID (MPN ID):</strong> ', outputs('Get_response_details')?['body/rc1ef708aa9744f5386283441a9ec8fa8'],\r\n'</p>',\r\n\r\n'<h3 style=\"margin-bottom:4px;\">Account Owner</h3>',\r\n'<p>',\r\n'<strong>First Name:</strong> ', outputs('Get_response_details')?['body/r4be7ebabdf2441ae9856f1ab05090736'], '<br>',\r\n'<strong>Last Name:</strong> ', outputs('Get_response_details')?['body/rcc09055dc3034069b2caf6a3c9a610be'], '<br>',\r\n'<strong>Email Address:</strong> ', outputs('Get_response_details')?['body/rd0c1ce6d61704a2a9c61289dd51116e8'], '<br>',\r\n'<strong>Phone Number (Work, Mobile and/or Other):</strong> ', outputs('Get_response_details')?['body/r12045d8018b5449dbd6e0666439d5556'],\r\n'</p>',\r\n\r\n'<h3 style=\"margin-bottom:4px;\">Additional User</h3>',\r\n'<p>',\r\n'<strong>First Name:</strong> ', outputs('Get_response_details')?['body/r6deef05ea6ca4c8a885d45647bb9ebca'], '<br>',\r\n'<strong>Last Name:</strong> ', outputs('Get_response_details')?['body/r7fde409be5a0464a87cc82ce01437b46'], '<br>',\r\n'<strong>Email Address:</strong> ', outputs('Get_response_details')?['body/r05a6cb74064b4cfc9ec7dfb4fd1a1fc8'], '<br>',\r\n'<strong>Phone Number (Work, Mobile and/or Other):</strong> ', outputs('Get_response_details')?['body/r28fe66636e6946bc835131a349718ac0'], '<br>',\r\n'<strong>Role of additional user:</strong> ', outputs('Get_response_details')?['body/r1e67556840154a1aa159cc4e69471557'],\r\n'</p>',\r\n\r\n'</div>'\r\n)",
+              "item/objectid_incident@odata.bind": "incidents(@{outputs('Create_a_case')?['body/incidentid']})\n"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

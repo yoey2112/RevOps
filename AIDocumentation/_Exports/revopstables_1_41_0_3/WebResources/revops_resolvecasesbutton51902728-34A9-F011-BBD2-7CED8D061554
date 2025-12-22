@@ -1,0 +1,49 @@
+function sendSelectedCasesToFlow(selectedControl, selectedItems) {
+    console.log("Button clicked, starting function");
+
+    try {
+        var selectedRows = [];
+
+        if (selectedItems && selectedItems.getLength && selectedItems.getLength() > 0) {
+            selectedRows = selectedItems;
+        } else if (selectedControl && selectedControl.getGrid) {
+            selectedRows = selectedControl.getGrid().getSelectedRows();
+        }
+
+        console.log("Selected rows count:", selectedRows.getLength());
+
+        if (selectedRows.getLength() === 0) {
+            Xrm.Navigation.openAlertDialog({ text: "Please select at least one case." });
+            return;
+        }
+
+        var caseIds = [];
+        selectedRows.forEach(function (row) {
+            var id = row.getData().getEntity().getId().replace("{", "").replace("}", "");
+            caseIds.push(id);
+        });
+
+        console.log("Case IDs to send:", caseIds);
+
+        var flowUrl = "https://b7cf3a9aa8e0e08f8e31b55071da7d.f3.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/85ac0a7359fa4d05b987deadf51cdf30/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=3wM616Q5D-y7v-5uOt1ms4_TLfasQj9jSOD_dtzAYU4";
+
+        var req = new XMLHttpRequest();
+        req.open("POST", flowUrl, true);
+        req.setRequestHeader("Content-Type", "application/json");
+        req.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                console.log("Flow response:", this.status, this.responseText);
+                if (this.status === 200 || this.status === 202) {
+                    Xrm.Navigation.openAlertDialog({ text: "Cases sent to flow successfully." });
+                } else {
+                    Xrm.Navigation.openAlertDialog({ text: "Failed to send cases to flow. Status: " + this.status });
+                }
+            }
+        };
+
+        req.send(JSON.stringify({ caseIds: caseIds }));
+    } catch (e) {
+        console.error("Error in sendSelectedCasesToFlow:", e);
+        Xrm.Navigation.openAlertDialog({ text: "Error: " + e.message });
+    }
+}

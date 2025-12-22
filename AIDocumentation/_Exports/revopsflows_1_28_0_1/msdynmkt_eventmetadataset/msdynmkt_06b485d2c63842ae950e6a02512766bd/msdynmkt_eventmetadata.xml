@@ -1,0 +1,11 @@
+<msdynmkt_eventmetadata msdynmkt_uniquename="msdynmkt_06b485d2c63842ae950e6a02512766bd">
+  <iscustomizable>1</iscustomizable>
+  <msdynmkt_customapiid>
+    <uniquename>msdynmkt_06b485d2c63842ae950e6a02512766bd</uniquename>
+  </msdynmkt_customapiid>
+  <msdynmkt_eventjson>{"name":"Sherweb - Website Form Submitted [lead]","eventProperties":[{"displayName":"PageURL","type":"string","logicalentityname":"","logicalentitysetname":""}],"description":"Website form is submitted.","addCustomerDataProperty":true,"supportedTargetEntities":"lead","customEventVersion":"2.0.0.0"}</msdynmkt_eventjson>
+  <msdynmkt_name>Sherweb - Website Form Submitted [lead]</msdynmkt_name>
+  <msdynmkt_state>534120002</msdynmkt_state>
+  <msdynmkt_supportedtargetentities>lead</msdynmkt_supportedtargetentities>
+  <timezoneruleversionnumber>4</timezoneruleversionnumber>
+</msdynmkt_eventmetadata>

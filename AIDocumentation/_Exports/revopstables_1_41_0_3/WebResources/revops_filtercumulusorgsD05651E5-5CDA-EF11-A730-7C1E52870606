@@ -1,0 +1,36 @@
+var filterOrganizationsHandler = null;
+
+function onCumulusAccountChange(executionContext) {
+    var formContext = executionContext.getFormContext();
+    var cumulusAccountLookup = formContext.getAttribute("revops_cumulusaccount").getValue();
+    var organizationControl = formContext.getControl("revops_cumulusorganization");
+
+    if (!organizationControl) return;
+
+    if (filterOrganizationsHandler) {
+        organizationControl.removePreSearch(filterOrganizationsHandler);
+        filterOrganizationsHandler = null;
+    }
+
+    if (cumulusAccountLookup && cumulusAccountLookup.length > 0) {
+        var cumulusAccountId = cumulusAccountLookup[0].id;
+        filterOrganizationsHandler = function () {
+            setCumulusOrganizationFilter(formContext, cumulusAccountId);
+        };
+        organizationControl.addPreSearch(filterOrganizationsHandler);
+    } else {
+        formContext.getAttribute("revops_cumulusorganization").setValue(null);
+        organizationControl.addCustomFilter("<filter type='and'></filter>", "revops_cumulusorganization");
+    }
+}
+
+function setCumulusOrganizationFilter(formContext, cumulusAccountId) {
+    var filterXml =
+        `<filter type="and">
+            <condition attribute="revops_cumulusaccount" operator="eq" value="${cumulusAccountId}" />
+        </filter>`;
+    var organizationControl = formContext.getControl("revops_cumulusorganization");
+    if (organizationControl) {
+        organizationControl.addCustomFilter(filterXml, "revops_cumulusorganization");
+    }
+}

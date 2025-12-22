@@ -1,0 +1,12 @@
+<settingdefinition uniquename="msdynce_enableenhanceemailtemplateeditor">
+  <datatype>2</datatype>
+  <defaultvalue>true</defaultvalue>
+  <iscustomizable>1</iscustomizable>
+  <ishidden>0</ishidden>
+  <isoverridable>1</isoverridable>
+  <isplatform>0</isplatform>
+  <overridablelevel>0</overridablelevel>
+  <releaselevel>0</releaselevel>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</settingdefinition>

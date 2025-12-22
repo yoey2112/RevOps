@@ -1,0 +1,159 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_61b07"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_azuread": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedazuread_d9589"
+        },
+        "api": {
+          "name": "shared_azuread"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "ISC Object owner (revops_iscbjectowner)": {
+          "defaultValue": "2aefc302-dbb3-ee11-a569-000d3a09cde5",
+          "type": "String",
+          "metadata": {
+            "schemaName": "revops_iscbjectowner",
+            "description": "User, Owner ISC-Object-Owner"
+          }
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "b445c2fc-2346-46e2-a24b-bc71251e3f17"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "revops_smeengagement",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Get_User_ID": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "de7bf611-f02b-47c3-a260-144590ca2fd2"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "systemusers",
+              "recordId": "@triggerOutputs()?['body/_ownerid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Check_group_membership_(V2)": {
+          "runAfter": {
+            "Get_User_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "31eb3a99-0e7f-4ed3-859f-d9452ecadde9"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_azuread",
+              "operationId": "CheckMemberGroupsV2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuread"
+            },
+            "parameters": {
+              "id": "@outputs('Get_User_ID')?['body/azureactivedirectoryobjectid']",
+              "body/groupIds": [
+                "193042b9-fb60-4cf7-82a0-419d7b6b5356",
+                "fa7aae58-cdf3-4915-8d57-cc144790eca5"
+              ]
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Condition": {
+          "actions": {},
+          "runAfter": {
+            "Check_group_membership_(V2)": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Set_Object_Owner_to_Owner": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "0195034d-d77e-42f7-a852-2fd27bd0d660"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "UpdateOnlyRecord",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "revops_smeengagements",
+                    "recordId": "@triggerOutputs()?['body/revops_smeengagementid']",
+                    "item/ownerid@odata.bind": "/systemusers(@{parameters('ISC Object owner (revops_iscbjectowner)')})"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@length(body('Check_group_membership_(V2)')?['value'])",
+              ""
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "659f570f-7b6c-44a6-860f-f0fbeab8a3e0"
+          },
+          "type": "If"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

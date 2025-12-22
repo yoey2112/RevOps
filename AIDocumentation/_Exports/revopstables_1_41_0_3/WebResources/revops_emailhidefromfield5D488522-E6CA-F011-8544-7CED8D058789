@@ -1,0 +1,28 @@
+function toggleFromVisibility(executionContext) {
+    var formContext = executionContext.getFormContext();
+    var fromControl = formContext.getControl("from");
+
+    if (!fromControl) {
+        console.warn("toggleFromVisibility: 'from' control not found on the form.");
+        return;
+    }
+
+    var stateAttr = formContext.getAttribute("statecode");
+    if (!stateAttr) {
+        console.warn("toggleFromVisibility: 'statecode' attribute not found.");
+        return;
+    }
+
+    var state = stateAttr.getValue(); // 0 = Open, 1 = Completed, 2 = Canceled (for email)
+    console.log("toggleFromVisibility: statecode = " + state);
+
+    // Hide FROM for any Open email (draft / pending send / still composing)
+    if (state === 0) {
+        fromControl.setVisible(false);
+        console.log("toggleFromVisibility: Hiding FROM (email is Open/draft).");
+    } else {
+        // Show FROM for Completed or Canceled emails (read-only history)
+        fromControl.setVisible(true);
+        console.log("toggleFromVisibility: Showing FROM (email is not Open).");
+    }
+}

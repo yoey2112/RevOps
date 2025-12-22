@@ -1,0 +1,71 @@
+# Prompt to convert json flow definition to draw.io:
+ 
+```
+Generate a draw.io from abc.json with these shape mappings:
+
+Auto-layout.
+
+InitializeVariable → Process box
+OpenApiConnection (API calls) → Process box
+If conditions → Decision diamond
+Foreach loops → Process box with container?
+Manual trigger → Start/End terminator
+Scope → Process box with distinct styling
+
+Include descriptions and parameters and show runAfter dependencies.
+
+For actions with complex conditional field update logic (check for if() expressions in field values):
+- Add a note/annotation shape (yellow, note style) adjacent to the action box
+- Summarize the key conditional patterns in the note
+- Connect the note to the action with a dashed line
+- Reference full documentation for complete field-by-field logic
+
+Format requirements for LucidChart compatibility:
+
+- Include XML declaration: <?xml version="1.0" encoding="UTF-8"?>
+- Use numeric IDs for all cells (e.g., id="2", id="3") instead of descriptive names
+- Set proper parent attributes: parent="1" for shapes, parent="0" for root
+- Use standard mxGraph structure with proper <mxfile>, <diagram>, <mxGraphModel>, and <root> nesting
+- Define edges with edge="1" and vertices with vertex="1" attributes
+- All geometry should use <mxGeometry ... as="geometry" /> format
+- Edge definitions should reference source/target cell IDs
+- Use consistent color coding: 
+  - Triggers: green (#d5e8d4)
+  - Process boxes: blue (#dae8fc)
+  - Variables: yellow (#fff2cc)
+  - Decisions: orange (#ffe6cc)
+  - Annotations: yellow note (#fff2cc)
+  - Terminate: red/green based on outcome
+```
+ 
+ 
+# Prompt to generate text summary of flow:
+```
+Generate a text summary as markdown document of the purpose of the flow and the steps.
+
+For each action that updates records (OpenApiConnection with UpdateRecord/CreateRecord operations):
+- Analyze the input parameters for conditional expressions using if(), empty(), equals(), or(), and(), not() functions
+- Identify which fields are conditionally updated vs always updated
+- Document the conditional logic patterns for each field type
+- Group fields by update behavior (conditional vs always)
+- Provide example IF/THEN/ELSE pseudo-code for complex conditions
+- Include specific format requirements (e.g., lookup bindings, concatenation rules)
+- Note any field transformations (e.g., removing special characters, data type conversions)
+
+For If conditions and loops:
+- Clearly document the condition expressions
+- Show what happens in both true/false branches
+- Identify any nested conditions and their relationships
+
+For Scope actions:
+- Document the purpose of the scope
+- List all nested actions within the scope
+- Show how nested actions relate to each other (runAfter dependencies)
+
+Format the documentation with:
+- Clear section hierarchy
+- Code blocks for complex expressions
+- Tables for field mappings where appropriate
+- Bullet lists for related items
+- Emphasis on conditional logic that preserves existing data
+```

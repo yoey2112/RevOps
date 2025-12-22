@@ -1,0 +1,13 @@
+<environmentvariabledefinition schemaname="revops_subjectcspgodaddy">
+  <description default="subject GUID for CSP GoDaddy">
+    <label description="subject GUID for CSP GoDaddy" languagecode="1033" />
+  </description>
+  <displayname default="Subject - CSP GoDaddy">
+    <label description="Subject - CSP GoDaddy" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.40.7.1</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

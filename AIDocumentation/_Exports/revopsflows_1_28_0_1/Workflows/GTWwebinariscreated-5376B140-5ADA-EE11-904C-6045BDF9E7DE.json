@@ -1,0 +1,109 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_84bd5"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_gotowebinar": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedgotowebinar_43523"
+        },
+        "api": {
+          "name": "shared_gotowebinar"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_webinar_is_created": {
+          "recurrence": {
+            "interval": 1,
+            "frequency": "Minute"
+          },
+          "splitOn": "@triggerOutputs()?['body']",
+          "metadata": {
+            "operationMetadataId": "9ceabbea-8208-4e0b-86a4-5d5a7f14037e"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_gotowebinar",
+              "operationId": "OnNewWebinar",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_gotowebinar"
+            },
+            "parameters": {},
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Apply_to_each": {
+          "foreach": "@triggerOutputs()?['body/times']",
+          "actions": {
+            "Create_Event_in_Dynamics": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "04ea9c30-56f7-4258-be1e-00c2aff83bbc"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_1",
+                  "operationId": "CreateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "msevtmgt_events",
+                  "item/msevtmgt_eventenddate": "@items('Apply_to_each')?['endTime']",
+                  "item/msevtmgt_name": "@triggerOutputs()?['body/subject']",
+                  "item/msevtmgt_eventstartdate": "@items('Apply_to_each')?['startTime']",
+                  "item/msevtmgt_eventtimezone": 35,
+                  "item/msevtmgt_eventformat": 100000001,
+                  "item/msevtmgt_sourcesystem": 100000002,
+                  "item/msevtmgt_streamingenabled": false,
+                  "item/msevtmgt_creationsource": 100000001,
+                  "item/msevtmgt_customeventurl": false,
+                  "item/msevtmgt_description": "@triggerOutputs()?['body/description']",
+                  "item/msevtmgt_eventtimezonename": "@triggerOutputs()?['body/timeZone']",
+                  "item/msevtmgt_eventtype": 100000005,
+                  "item/msevtmgt_publiceventurl": "@triggerOutputs()?['body/registrationUrl']",
+                  "item/revops_organizerkey": "@triggerOutputs()?['body/organizerKey']",
+                  "item/msevtmgt_publishstatus": 100000000,
+                  "item/msevtmgt_webinarid": "@triggerOutputs()?['body/webinarID']",
+                  "item/revops_webinarkey": "@triggerOutputs()?['body/webinarKey']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "604596ff-fbe5-479c-982c-8f5108b305ce"
+          },
+          "type": "Foreach"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

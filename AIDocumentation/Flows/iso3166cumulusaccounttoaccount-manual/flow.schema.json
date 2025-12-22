@@ -1,0 +1,553 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps-1": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_0a1fe"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "type": "Request",
+          "kind": "Button",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "8c6fbde2-07d7-47e9-8068-a94a38094caa"
+          }
+        }
+      },
+      "actions": {
+        "varCountryCache": {
+          "type": "InitializeVariable",
+          "description": "Cache country GUID lookups by ISO alpha-2 code",
+          "inputs": {
+            "variables": [
+              {
+                "name": "varCountryCache",
+                "type": "object",
+                "value": {}
+              }
+            ]
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "44f54bb7-d73e-4328-a9d4-57b362494b70"
+          }
+        },
+        "varSubdivisionCache": {
+          "type": "InitializeVariable",
+          "description": "Cache subdivision GUID lookups by composite key",
+          "inputs": {
+            "variables": [
+              {
+                "name": "varSubdivisionCache",
+                "type": "object",
+                "value": {}
+              }
+            ]
+          },
+          "runAfter": {
+            "varCountryCache": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e5a84f42-0bf9-4a43-8d37-c3220280804f"
+          }
+        },
+        "List_Accounts_with_Cumulus_Accounts": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "accounts",
+              "$select": "accountid, name, revops_country, revops_stateorprovince",
+              "$filter": "revops_cumulusaccount_account_account/any()"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps-1"
+            }
+          },
+          "runAfter": {
+            "varSubdivisionCache": [
+              "Succeeded"
+            ]
+          },
+          "runtimeConfiguration": {
+            "paginationPolicy": {
+              "minimumItemCount": 100000
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "9a317716-3a98-4287-b564-45aa2c5bcace"
+          }
+        },
+        "For_each_Account": {
+          "type": "Foreach",
+          "foreach": "@outputs('List_Accounts_with_Cumulus_Accounts')?['body/value']",
+          "actions": {
+            "Get_Highest_MRR_Cumulus_Account": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "revops_cumulusaccounts",
+                  "$select": "revops_cumulusaccountid, revops_name, revops_iso3166alpha2countrycode, revops_iso3166_2subdivisioncode, revops_mrr",
+                  "$filter": "_revops_account_value eq '@{items('For_each_Account')?['accountid']}'",
+                  "$orderby": "revops_mrr desc",
+                  "$top": 1
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "connectionName": "shared_commondataserviceforapps-1"
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "50e36dc1-240f-4beb-b74d-d7b12a3fe1b6"
+              }
+            },
+            "Condition_-_Cumulus_Account_Found": {
+              "type": "If",
+              "expression": {
+                "and": [
+                  {
+                    "greater": [
+                      "@length(outputs('Get_Highest_MRR_Cumulus_Account')?['body/value'])",
+                      0
+                    ]
+                  }
+                ]
+              },
+              "actions": {
+                "Compose_-_Cumulus_Data": {
+                  "type": "Compose",
+                  "inputs": {
+                    "CountryAlpha2": "@first(outputs('Get_Highest_MRR_Cumulus_Account')?['body/value'])?['revops_iso3166alpha2countrycode']",
+                    "SubdivisionCode": "@first(outputs('Get_Highest_MRR_Cumulus_Account')?['body/value'])?['revops_iso3166_2subdivisioncode']"
+                  },
+                  "metadata": {
+                    "operationMetadataId": "509b552f-495d-4ed1-b965-77aea68c9db9"
+                  }
+                },
+                "Condition_-_Country_Cached": {
+                  "type": "If",
+                  "expression": {
+                    "and": [
+                      {
+                        "not": {
+                          "equals": [
+                            "@outputs('Compose_-_Cumulus_Data')?['CountryAlpha2']",
+                            "@null"
+                          ]
+                        }
+                      },
+                      {
+                        "not": {
+                          "equals": [
+                            "@outputs('Compose_-_Cumulus_Data')?['CountryAlpha2']",
+                            "''"
+                          ]
+                        }
+                      },
+                      {
+                        "equals": [
+                          "@contains(variables('varCountryCache'), outputs('Compose_-_Cumulus_Data')?['CountryAlpha2'])",
+                          "@true"
+                        ]
+                      }
+                    ]
+                  },
+                  "actions": {
+                    "Compose_-_Get_Cached_Country": {
+                      "type": "Compose",
+                      "inputs": {
+                        "CountryGUID": "@{variables('varCountryCache')?[outputs('Compose_-_Cumulus_Data')?['CountryAlpha2']]?['guid']}",
+                        "CountryName": "@{variables('varCountryCache')?[outputs('Compose_-_Cumulus_Data')?['CountryAlpha2']]?['name']}"
+                      },
+                      "metadata": {
+                        "operationMetadataId": "22152bf4-c0ee-44ba-bb3b-07aa137eb999"
+                      }
+                    },
+                    "Update_Country_-_Cached": {
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "parameters": {
+                          "entityName": "accounts",
+                          "recordId": "@items('For_each_Account')?['accountid']",
+                          "item/address1_country": "@coalesce(outputs('Compose_-_Get_Cached_Country')?['CountryName'], null)",
+                          "item/revops_country@odata.bind": "@if(not(empty(outputs('Compose_-_Get_Cached_Country')?['CountryGUID'])), concat('/revops_countries(', outputs('Compose_-_Get_Cached_Country')?['CountryGUID'], ')'), null)",
+                          "item/revops_iso3166alpha2countrycode": "@outputs('Compose_-_Cumulus_Data')?['CountryAlpha2']",
+                          "item/revops_iso3166_2subdivisioncode": "@outputs('Compose_-_Cumulus_Data')?['SubdivisionCode']"
+                        },
+                        "host": {
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                          "operationId": "UpdateOnlyRecord",
+                          "connectionName": "shared_commondataserviceforapps-1"
+                        }
+                      },
+                      "runAfter": {
+                        "Compose_-_Get_Cached_Country": [
+                          "Succeeded"
+                        ]
+                      }
+                    }
+                  },
+                  "else": {
+                    "actions": {
+                      "Get_Country": {
+                        "type": "OpenApiConnection",
+                        "inputs": {
+                          "parameters": {
+                            "entityName": "revops_countries",
+                            "$select": "revops_countryid, revops_name",
+                            "$filter": "revops_isocountrycode eq '@{outputs('Compose_-_Cumulus_Data')?['CountryAlpha2']}'",
+                            "$top": 1
+                          },
+                          "host": {
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                            "operationId": "ListRecords",
+                            "connectionName": "shared_commondataserviceforapps-1"
+                          }
+                        },
+                        "metadata": {
+                          "operationMetadataId": "856efe67-afb5-46c9-83c5-1c1d20ab8569"
+                        }
+                      },
+                      "Condition_-_Country_Found": {
+                        "type": "If",
+                        "expression": {
+                          "and": [
+                            {
+                              "greater": [
+                                "@length(outputs('Get_Country')?['body/value'])",
+                                0
+                              ]
+                            }
+                          ]
+                        },
+                        "actions": {
+                          "Compose_-_Updated_Country_Cache": {
+                            "type": "Compose",
+                            "inputs": "@addProperty(variables('varCountryCache'), outputs('Compose_-_Cumulus_Data')?['CountryAlpha2'], json(concat('{\"guid\":\"', first(outputs('Get_Country')?['body/value'])?['revops_countryid'], '\",\"name\":\"', first(outputs('Get_Country')?['body/value'])?['revops_name'], '\"}')))",
+                            "metadata": {
+                              "operationMetadataId": "343cdaaf-1987-4ba2-bdc7-cc7f50c5d607"
+                            }
+                          },
+                          "Set_Variable_-_Cache_Country": {
+                            "type": "SetVariable",
+                            "inputs": {
+                              "name": "varCountryCache",
+                              "value": "@outputs('Compose_-_Updated_Country_Cache')"
+                            },
+                            "runAfter": {
+                              "Compose_-_Updated_Country_Cache": [
+                                "Succeeded"
+                              ]
+                            }
+                          },
+                          "Update_Country_-_New": {
+                            "type": "OpenApiConnection",
+                            "inputs": {
+                              "parameters": {
+                                "entityName": "accounts",
+                                "recordId": "@items('For_each_Account')?['accountid']",
+                                "item/address1_country": "@if(greater(length(outputs('Get_Country')?['body/value']), 0), first(outputs('Get_Country')?['body/value'])?['revops_name'], null)",
+                                "item/revops_country@odata.bind": "@if(greater(length(outputs('Get_Country')?['body/value']), 0), concat('/revops_countries(', first(outputs('Get_Country')?['body/value'])?['revops_countryid'], ')'), null)",
+                                "item/revops_iso3166alpha2countrycode": "@outputs('Compose_-_Cumulus_Data')?['CountryAlpha2']",
+                                "item/revops_iso3166_2subdivisioncode": "@outputs('Compose_-_Cumulus_Data')?['SubdivisionCode']"
+                              },
+                              "host": {
+                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                "operationId": "UpdateOnlyRecord",
+                                "connectionName": "shared_commondataserviceforapps-1"
+                              }
+                            },
+                            "runAfter": {
+                              "Set_Variable_-_Cache_Country": [
+                                "Succeeded"
+                              ]
+                            }
+                          }
+                        },
+                        "else": {
+                          "actions": {}
+                        },
+                        "runAfter": {
+                          "Get_Country": [
+                            "Succeeded"
+                          ]
+                        },
+                        "metadata": {
+                          "operationMetadataId": "9ea3ebfc-cf0d-4bee-915d-7fcd2564b242"
+                        }
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Compose_-_Cumulus_Data": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "0f6e7ef7-3db0-471a-8afe-c5852f282dc6"
+                  }
+                },
+                "Condition_-_Has_Subdivision_Data": {
+                  "type": "If",
+                  "expression": {
+                    "and": [
+                      {
+                        "not": {
+                          "equals": [
+                            "@outputs('Compose_-_Cumulus_Data')?['SubdivisionCode']",
+                            "@null"
+                          ]
+                        }
+                      },
+                      {
+                        "not": {
+                          "equals": [
+                            "@outputs('Compose_-_Cumulus_Data')?['SubdivisionCode']",
+                            "@''"
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "actions": {
+                    "Condition_-_Subdivision_Cached": {
+                      "type": "If",
+                      "expression": {
+                        "and": [
+                          {
+                            "equals": [
+                              "@contains(variables('varSubdivisionCache'), concat(outputs('Compose_-_Cumulus_Data')?['CountryAlpha2'], '_', outputs('Compose_-_Cumulus_Data')?['SubdivisionCode']))",
+                              "@true"
+                            ]
+                          }
+                        ]
+                      },
+                      "actions": {
+                        "Update_Subdivision_-_Cached": {
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "parameters": {
+                              "entityName": "accounts",
+                              "recordId": "@items('For_each_Account')?['accountid']",
+                              "item/address1_stateorprovince": "@variables('varSubdivisionCache')?[concat(outputs('Compose_-_Cumulus_Data')?['CountryAlpha2'], '_', outputs('Compose_-_Cumulus_Data')?['SubdivisionCode'])]?['SubdivisionName']",
+                              "item/revops_iso3166alpha2countrycode": "@outputs('Compose_-_Cumulus_Data')?['CountryAlpha2']",
+                              "item/revops_iso3166_2subdivisioncode": "@outputs('Compose_-_Cumulus_Data')?['SubdivisionCode']",
+                              "item/revops_stateorprovince@odata.bind": "/revops_stateorprovinces(@{outputs('Compose_-_Get_Cached_Subdivision')?['SubdivisionGUID']})"
+                            },
+                            "host": {
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                              "operationId": "UpdateOnlyRecord",
+                              "connectionName": "shared_commondataserviceforapps-1"
+                            }
+                          },
+                          "runAfter": {
+                            "Compose_-_Get_Cached_Subdivision": [
+                              "Succeeded"
+                            ]
+                          }
+                        },
+                        "Compose_-_Get_Cached_Subdivision": {
+                          "type": "Compose",
+                          "inputs": "@variables('varSubdivisionCache')?[concat(outputs('Compose_-_Cumulus_Data')?['CountryAlpha2'], '_', outputs('Compose_-_Cumulus_Data')?['SubdivisionCode'])]"
+                        }
+                      },
+                      "else": {
+                        "actions": {
+                          "Get_Subdivision": {
+                            "type": "OpenApiConnection",
+                            "inputs": {
+                              "parameters": {
+                                "entityName": "revops_stateorprovinces",
+                                "$select": "revops_stateorprovinceid, revops_name",
+                                "$filter": "revops_iso3166country eq '@{outputs('Compose_-_Cumulus_Data')?['CountryAlpha2']}' and revops_iso3166_2 eq '@{outputs('Compose_-_Cumulus_Data')?['SubdivisionCode']}'",
+                                "$top": 1
+                              },
+                              "host": {
+                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                "operationId": "ListRecords",
+                                "connectionName": "shared_commondataserviceforapps-1"
+                              }
+                            }
+                          },
+                          "Condition_-_Subdivision_Found": {
+                            "type": "If",
+                            "expression": {
+                              "and": [
+                                {
+                                  "greater": [
+                                    "@length(outputs('Get_Subdivision')?['body/value'])",
+                                    0
+                                  ]
+                                }
+                              ]
+                            },
+                            "actions": {
+                              "Compose_-_Store_Subdivision_Data": {
+                                "type": "Compose",
+                                "inputs": {
+                                  "SubdivisionGUID": "@{first(outputs('Get_Subdivision')?['body/value'])?['revops_stateorprovinceid']}",
+                                  "SubdivisionName": "@{first(outputs('Get_Subdivision')?['body/value'])?['revops_name']}"
+                                }
+                              },
+                              "Compose_-_Updated_Subdivision_Cache": {
+                                "type": "Compose",
+                                "inputs": "@addProperty(variables('varSubdivisionCache'), concat(outputs('Compose_-_Cumulus_Data')?['CountryAlpha2'], '_', outputs('Compose_-_Cumulus_Data')?['SubdivisionCode']), outputs('Compose_-_Store_Subdivision_Data'))",
+                                "runAfter": {
+                                  "Compose_-_Store_Subdivision_Data": [
+                                    "Succeeded"
+                                  ]
+                                }
+                              },
+                              "Set_Variable_-_Cache_Subdivision": {
+                                "type": "SetVariable",
+                                "inputs": {
+                                  "name": "varSubdivisionCache",
+                                  "value": "@outputs('Compose_-_Updated_Subdivision_Cache')"
+                                },
+                                "runAfter": {
+                                  "Compose_-_Updated_Subdivision_Cache": [
+                                    "Succeeded"
+                                  ]
+                                }
+                              },
+                              "Update_Subdivision_-_New": {
+                                "type": "OpenApiConnection",
+                                "inputs": {
+                                  "parameters": {
+                                    "entityName": "accounts",
+                                    "recordId": "@items('For_each_Account')?['accountid']",
+                                    "item/address1_stateorprovince": "@if(greater(length(outputs('Get_Subdivision')?['body/value']), 0), first(outputs('Get_Subdivision')?['body/value'])?['revops_name'], null)",
+                                    "item/revops_iso3166alpha2countrycode": "@outputs('Compose_-_Cumulus_Data')?['CountryAlpha2']",
+                                    "item/revops_iso3166_2subdivisioncode": "@outputs('Compose_-_Cumulus_Data')?['SubdivisionCode']",
+                                    "item/revops_stateorprovince@odata.bind": "@if(greater(length(outputs('Get_Subdivision')?['body/value']), 0), concat('/revops_stateorprovinces(', first(outputs('Get_Subdivision')?['body/value'])?['revops_stateorprovinceid'], ')'), null)"
+                                  },
+                                  "host": {
+                                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                                    "operationId": "UpdateOnlyRecord",
+                                    "connectionName": "shared_commondataserviceforapps-1"
+                                  }
+                                },
+                                "runAfter": {
+                                  "Set_Variable_-_Cache_Subdivision": [
+                                    "Succeeded"
+                                  ]
+                                }
+                              }
+                            },
+                            "else": {
+                              "actions": {}
+                            },
+                            "runAfter": {
+                              "Get_Subdivision": [
+                                "Succeeded"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "else": {
+                    "actions": {}
+                  },
+                  "runAfter": {
+                    "Condition_-_Country_Cached": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "56d08c3f-3abb-4b0f-8852-ec22db2afc0f"
+                  }
+                },
+                "Update_Account_-_ISO_Codes": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "accounts",
+                      "recordId": "@items('For_each_Account')?['accountid']",
+                      "item/revops_iso3166alpha2countrycode": "@outputs('Compose_-_Cumulus_Data')?['CountryAlpha2']",
+                      "item/revops_iso3166_2subdivisioncode": "@outputs('Compose_-_Cumulus_Data')?['SubdivisionCode']"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "operationId": "UpdateOnlyRecord",
+                      "connectionName": "shared_commondataserviceforapps-1"
+                    }
+                  },
+                  "runAfter": {
+                    "Condition_-_Has_Subdivision_Data": [
+                      "Succeeded"
+                    ]
+                  }
+                }
+              },
+              "else": {
+                "actions": {}
+              },
+              "runAfter": {
+                "Get_Highest_MRR_Cumulus_Account": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "2e4a4399-9494-44a3-bd03-14e9cdef2549"
+              }
+            }
+          },
+          "runAfter": {
+            "List_Accounts_with_Cumulus_Accounts": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c6fad56b-52f4-41cb-852a-640f96a2f99c"
+          }
+        },
+        "Terminate": {
+          "type": "Terminate",
+          "inputs": {
+            "runStatus": "Succeeded"
+          },
+          "runAfter": {
+            "For_each_Account": [
+              "Succeeded"
+            ]
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

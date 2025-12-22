@@ -1,0 +1,290 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_61b07"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_servicebus_2": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedservicebus_1091a"
+        },
+        "api": {
+          "name": "shared_servicebus"
+        }
+      },
+      "shared_servicebus_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedservicebus_b5c89"
+        },
+        "api": {
+          "name": "shared_servicebus"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "07b1b623-8ae8-4009-8982-08b8467a1956"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "revops_accountreassignment",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "List_Cumulus_Accounts": {
+          "runAfter": {
+            "Condition": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b4f27752-02da-4850-8aa2-0996a7288c67"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "revops_cumulusaccounts",
+              "$filter": "_revops_account_value eq @{triggerOutputs()?['body/_revops_account_value']}"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Check_Environment": {
+          "actions": {
+            "For_each_-_Production": {
+              "foreach": "@outputs('List_Cumulus_Accounts')?['body/value']",
+              "actions": {
+                "Send_message_to_test.xtkl.crm.daemon_-_Production": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "ea66944e-c0e2-4dd1-8b1a-2b5f33a137c4"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_servicebus_2",
+                      "operationId": "SendMessage",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_servicebus"
+                    },
+                    "parameters": {
+                      "entityName": "xtkl.messaging.facade",
+                      "message/ContentData": "{\n  \"ClientId\": \"@{items('For_each_-_Production')?['revops_clientid']}\", \n  \"AccountManagerId\": \"@{variables('Account Manager ID')}\"\n}",
+                      "message/ContentType": "application/json",
+                      "message/Properties": {
+                        "MT-MessageType": "urn:message:Xtkl.Messaging.Facade.AzureServiceBus.Daemon.Contracts:AccountManagerAssignedToClient"
+                      },
+                      "systemProperties": "None"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "48b64a90-83fd-4232-b955-3dcd853dc93a"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "Current_Environment": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "For_each_-_Staging": {
+                "foreach": "@outputs('List_Cumulus_Accounts')?['body/value']",
+                "actions": {
+                  "Send_message_to_test.xtkl.crm.daemon_-_Staging": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "ea66944e-c0e2-4dd1-8b1a-2b5f33a137c4"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_servicebus_1",
+                        "operationId": "SendMessage",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_servicebus"
+                      },
+                      "parameters": {
+                        "entityName": "xtkl.messaging.facade",
+                        "message/ContentData": "{\n  \"ClientId\": \"@{items('For_each_-_Staging')?['revops_clientid']}\", \n  \"AccountManagerId\": \"@{variables('Account Manager ID')}\"\n}",
+                        "message/ContentType": "application/json",
+                        "message/Properties": {
+                          "MT-MessageType": "urn:message:Xtkl.Messaging.Facade.AzureServiceBus.Daemon.Contracts:AccountManagerAssignedToClient"
+                        },
+                        "systemProperties": "None"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  }
+                },
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "48b64a90-83fd-4232-b955-3dcd853dc93a"
+                },
+                "type": "Foreach"
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@variables('Current Environment')",
+              "prod"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "925e02d8-0222-48fc-afdc-58fbee950583"
+          },
+          "type": "If"
+        },
+        "Current_Environment": {
+          "runAfter": {
+            "List_Cumulus_Accounts": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1c79f286-3655-4583-917e-774280b749bb"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Current Environment",
+                "type": "string",
+                "value": "@{split(split(split(outputs('List_Cumulus_Accounts')?['body']['@odata.context'], 'https://')[1], '.crm')[0], '-')[1]}"
+              }
+            ]
+          }
+        },
+        "AccountManagerId": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "1df0c6b5-d501-41b1-87af-8d879449f8b6"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Account Manager ID",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Condition": {
+          "actions": {
+            "Set_Account_Manager_ID_-_Team": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "48db0d1b-6a29-4d6c-9a49-fc7fd5c0a56f"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "Account Manager ID",
+                "value": "@triggerOutputs()?['body/_revops_toteam_value']"
+              }
+            }
+          },
+          "runAfter": {
+            "AccountManagerId": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "List_Users": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "2409d7e0-0c56-40fb-9bc5-278b671dccae"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "ListRecords",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "systemusers",
+                    "$filter": "systemuserid eq @{triggerOutputs()?['body/_revops_to_value']}"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Set_Account_Manager_ID_-_User": {
+                "runAfter": {
+                  "List_Users": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "61d15f1b-1701-4263-9bdf-0494f2ed0f70"
+                },
+                "type": "SetVariable",
+                "inputs": {
+                  "name": "Account Manager ID",
+                  "value": "@{outputs('List_Users')?['body/value'][0]?['systemuserid']}"
+                }
+              }
+            }
+          },
+          "expression": {
+            "greater": [
+              "@length(coalesce(triggerBody()?['_revops_toteam_value'], ''))",
+              1
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d3090cfa-4a67-46a0-ac1b-798ed55288c2"
+          },
+          "type": "If"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

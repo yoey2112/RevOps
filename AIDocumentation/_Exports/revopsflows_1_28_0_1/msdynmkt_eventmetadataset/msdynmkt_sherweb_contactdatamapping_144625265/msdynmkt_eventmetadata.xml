@@ -1,0 +1,11 @@
+<msdynmkt_eventmetadata msdynmkt_uniquename="msdynmkt_sherweb_contactdatamapping_144625265">
+  <iscustomizable>1</iscustomizable>
+  <msdynmkt_customapiid>
+    <uniquename>msdynmkt_sherweb_contactdatamapping_144625265</uniquename>
+  </msdynmkt_customapiid>
+  <msdynmkt_eventjson>{"name":"Sherweb - contact data mapping","eventProperties":[{"displayName":"Attribute1","type":"string","logicalentityname":"","logicalentitysetname":""},{"displayName":"Attribute2","type":"string","logicalentityname":"","logicalentitysetname":""}],"description":"Trigger for contact journey to allow power automate to change attributes on contact or lead. ","addCustomerDataProperty":true,"supportedTargetEntities":"contact","customEventVersion":"2.0.0.0","iconPath":"icon/msdynmkt_customeventdraft.svg"}</msdynmkt_eventjson>
+  <msdynmkt_name>Sherweb - contact data mapping</msdynmkt_name>
+  <msdynmkt_state>534120004</msdynmkt_state>
+  <msdynmkt_supportedtargetentities>contact</msdynmkt_supportedtargetentities>
+  <timezoneruleversionnumber>4</timezoneruleversionnumber>
+</msdynmkt_eventmetadata>

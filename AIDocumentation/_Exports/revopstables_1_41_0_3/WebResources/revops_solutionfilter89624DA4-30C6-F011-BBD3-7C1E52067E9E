@@ -1,0 +1,297 @@
+var RevOps = RevOps || {};
+RevOps.SolutionFilter = (function () {
+    "use strict";
+
+    var FIELDS = {
+        practice: "revops_practice",                 // Lookup to Practice on TechStack
+        solutionCategory: "revops_solutioncategory", // Lookup to Solution Category
+        solution: "revops_solution"                  // Lookup to Solution
+    };
+
+    // Current filters to be applied on lookups
+    var currentSolutionFilterXml = null;
+    var currentCategoryFilterXml = null;
+
+    function log(msg, obj) {
+        if (obj !== undefined) {
+            console.log("[RevOps] " + msg, obj);
+        } else {
+            console.log("[RevOps] " + msg);
+        }
+    }
+
+    // === Make specific fields required ===
+    function setRequiredFields(formContext) {
+        var requiredFields = [
+            "revops_interest",
+            "revops_estimatedmrr",
+            "revops_noseatsendpoints"
+        ];
+
+        requiredFields.forEach(function (fieldName) {
+            var attr = formContext.getAttribute(fieldName);
+            if (attr) {
+                attr.setRequiredLevel("required");
+                log("Field set to required: " + fieldName);
+            } else {
+                log("Field not found on form (cannot set required): " + fieldName);
+            }
+        });
+    }
+
+    function onLoad(executionContext) {
+        var formContext = executionContext.getFormContext();
+        log("OnLoad fired");
+
+        // Make fields required
+        setRequiredFields(formContext);
+
+        // --- Solution lookup (filtered by Solution Category via N:N) ---
+        var solutionCtrl = formContext.getControl(FIELDS.solution);
+        if (solutionCtrl) {
+            log("Wiring PreSearch for Solution");
+            solutionCtrl.addPreSearch(function () {
+                log("Solution PreSearch fired");
+                addSolutionFilter(formContext);
+            });
+        } else {
+            log("Solution control NOT found");
+        }
+
+        // --- Solution Category lookup (filtered by Practice via 1:N) ---
+        var categoryCtrl = formContext.getControl(FIELDS.solutionCategory);
+        if (categoryCtrl) {
+            log("Wiring PreSearch for Solution Category");
+            categoryCtrl.addPreSearch(function () {
+                log("Solution Category PreSearch fired");
+                addSolutionCategoryFilter(formContext);
+            });
+        } else {
+            log("Solution Category control NOT found");
+        }
+
+        // --- Practice OnChange (affects Category + Solution) ---
+        var practiceAttr = formContext.getAttribute(FIELDS.practice);
+        if (practiceAttr) {
+            log("Wiring OnChange for Practice");
+            practiceAttr.addOnChange(function () {
+                log("Practice OnChange fired");
+                onPracticeChange(formContext);
+            });
+        } else {
+            log("Practice attribute NOT found");
+        }
+
+        // --- Solution Category OnChange (affects Solution) ---
+        var categoryAttr = formContext.getAttribute(FIELDS.solutionCategory);
+        if (categoryAttr) {
+            log("Wiring OnChange for Solution Category");
+            categoryAttr.addOnChange(function () {
+                log("Solution Category OnChange fired");
+                onSolutionCategoryChange(formContext);
+            });
+        } else {
+            log("Solution Category attribute NOT found");
+        }
+
+        // Initial filters if anything is pre-populated
+        updateCategoryFilter(formContext);  // 1:N Practice → Category
+        updateSolutionFilter(formContext);  // N:N Category → Solution
+    }
+
+    // =========================================================
+    //  Practice → Solution Category (1:N)
+    // =========================================================
+
+    function onPracticeChange(formContext) {
+        log("onPracticeChange: clearing Category + Solution");
+        var categoryAttr = formContext.getAttribute(FIELDS.solutionCategory);
+        var solutionAttr = formContext.getAttribute(FIELDS.solution);
+
+        if (categoryAttr) categoryAttr.setValue(null);
+        if (solutionAttr) solutionAttr.setValue(null);
+
+        updateCategoryFilter(formContext);
+        currentSolutionFilterXml = null; // Reset solution filter
+    }
+
+    function updateCategoryFilter(formContext) {
+        log("updateCategoryFilter (1:N) called");
+        var practiceAttr = formContext.getAttribute(FIELDS.practice);
+        if (!practiceAttr) {
+            log("Practice attribute missing in updateCategoryFilter");
+            return;
+        }
+
+        var practiceValue = practiceAttr.getValue();
+
+        // No Practice selected → show all categories
+        if (!practiceValue || practiceValue.length === 0) {
+            log("No practice selected – using pass-through category filter");
+            currentCategoryFilterXml =
+                "<filter type='and'>" +
+                "  <condition attribute='revops_solutioncategoryid' operator='not-null' />" +
+                "</filter>";
+            return;
+        }
+
+        var practiceId = practiceValue[0].id.replace(/[{}]/g, "");
+        log("Selected Practice ID: " + practiceId);
+
+        // 1:N: Solution Category has a lookup to Practice
+        // Adjust 'revops_practice' if your lookup field on Solution Category is named differently
+        currentCategoryFilterXml =
+            "<filter type='and'>" +
+            "  <condition attribute='revops_practice' operator='eq' value='" + practiceId + "' />" +
+            "</filter>";
+
+        log("Built Category filter XML (1:N):", currentCategoryFilterXml);
+    }
+
+    function addSolutionCategoryFilter(formContext) {
+        var categoryCtrl = formContext.getControl(FIELDS.solutionCategory);
+        if (!categoryCtrl) {
+            log("Category control missing in addSolutionCategoryFilter");
+            return;
+        }
+
+        if (!currentCategoryFilterXml) {
+            log("currentCategoryFilterXml is null – using default");
+            currentCategoryFilterXml =
+                "<filter type='and'>" +
+                "  <condition attribute='revops_solutioncategoryid' operator='not-null' />" +
+                "</filter>";
+        }
+
+        log("Applying Category filter:", currentCategoryFilterXml);
+        // Logical name of Solution Category table
+        categoryCtrl.addCustomFilter(currentCategoryFilterXml, "revops_solutioncategory");
+    }
+
+    // =========================================================
+    //  Solution Category → Solution (N:N)
+    // =========================================================
+
+    function onSolutionCategoryChange(formContext) {
+        log("onSolutionCategoryChange: clearing Solution");
+        var solutionAttr = formContext.getAttribute(FIELDS.solution);
+        if (solutionAttr) solutionAttr.setValue(null);
+
+        updateSolutionFilter(formContext);
+    }
+
+    function updateSolutionFilter(formContext) {
+        log("updateSolutionFilter (N:N) called");
+        var categoryAttr = formContext.getAttribute(FIELDS.solutionCategory);
+        if (!categoryAttr) {
+            log("SolutionCategory attribute missing in updateSolutionFilter");
+            return;
+        }
+
+        var categoryValue = categoryAttr.getValue();
+
+        // No category selected → allow all solutions
+        if (!categoryValue || categoryValue.length === 0) {
+            log("No category selected – using pass-through solution filter");
+            currentSolutionFilterXml =
+                "<filter type='and'>" +
+                "  <condition attribute='revops_solutionid' operator='not-null' />" +
+                "</filter>";
+            return;
+        }
+
+        var categoryId = categoryValue[0].id.replace(/[{}]/g, "");
+        log("Selected Category ID: " + categoryId);
+
+        // 🔑 Intersect entity logical name for Solution ↔ SolutionCategory
+        // Confirm in the N:N relationship designer if needed
+        var intersectEntity = "revops_solution_revops_solutioncategory";
+
+        // 🔑 Column names on that intersect table (not _..._value)
+        // Confirm in the Columns of the intersect table if different
+        var solutionLookupAttr = "revops_solutionid";
+        var categoryLookupAttr = "revops_solutioncategoryid";
+
+        var query = "?$select=" + solutionLookupAttr +
+                    "&$filter=" + solutionLookupAttr + " ne null and " +
+                                 categoryLookupAttr + " eq " + categoryId;
+
+        log("Calling WebApi for Category ↔ Solution", intersectEntity + query);
+
+        Xrm.WebApi.retrieveMultipleRecords(intersectEntity, query).then(
+            function (result) {
+                log("WebApi Category ↔ Solution result", result.entities);
+
+                if (!result.entities || result.entities.length === 0) {
+                    log("No solutions linked to this category");
+                    currentSolutionFilterXml =
+                        "<filter type='and'>" +
+                        "  <condition attribute='revops_solutionid' operator='eq' " +
+                        "     value='00000000-0000-0000-0000-000000000000' />" +
+                        "</filter>";
+                    return;
+                }
+
+                var valuesXml = "";
+                result.entities.forEach(function (row, index) {
+                    var solId = row[solutionLookupAttr];
+                    log("Row " + index + " solution raw:", solId);
+                    if (solId) {
+                        solId = solId.replace(/[{}]/g, "");
+                        valuesXml += "<value>" + solId + "</value>";
+                    }
+                });
+
+                if (!valuesXml) {
+                    log("No valid solution IDs built from intersect");
+                    currentSolutionFilterXml =
+                        "<filter type='and'>" +
+                        "  <condition attribute='revops_solutionid' operator='eq' " +
+                        "     value='00000000-0000-0000-0000-000000000000' />" +
+                        "</filter>";
+                    return;
+                }
+
+                currentSolutionFilterXml =
+                    "<filter type='and'>" +
+                    "  <condition attribute='revops_solutionid' operator='in'>" +
+                    valuesXml +
+                    "  </condition>" +
+                    "</filter>";
+
+                log("Built Solution filter XML:", currentSolutionFilterXml);
+            },
+            function (error) {
+                log("Error building Solution filter from N:N (Category): " + error.message);
+                currentSolutionFilterXml =
+                    "<filter type='and'>" +
+                    "  <condition attribute='revops_solutionid' operator='not-null' />" +
+                    "</filter>";
+            }
+        );
+    }
+
+    function addSolutionFilter(formContext) {
+        var solutionCtrl = formContext.getControl(FIELDS.solution);
+        if (!solutionCtrl) {
+            log("Solution control missing in addSolutionFilter");
+            return;
+        }
+
+        if (!currentSolutionFilterXml) {
+            log("currentSolutionFilterXml is null – using default");
+            currentSolutionFilterXml =
+                "<filter type='and'>" +
+                "  <condition attribute='revops_solutionid' operator='not-null' />" +
+                "</filter>";
+        }
+
+        log("Applying Solution filter:", currentSolutionFilterXml);
+        // Logical name of Solution table
+        solutionCtrl.addCustomFilter(currentSolutionFilterXml, "revops_solution");
+    }
+
+    return {
+        OnLoad: onLoad
+    };
+})();

@@ -1,0 +1,13 @@
+<environmentvariabledefinition schemaname="revops_queuecloudsupport">
+  <description default="environment variable for the queue - cloud support">
+    <label description="environment variable for the queue - cloud support" languagecode="1033" />
+  </description>
+  <displayname default="Queue - Cloud Support">
+    <label description="Queue - Cloud Support" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

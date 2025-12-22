@@ -1,0 +1,189 @@
+// file: revops_/js/email-default-sender-scrubber.js
+(function (ns) {
+  // ===== CONFIG =====
+  var CASE_QUEUE_ATTRIBUTE = "queue";                 // incident -> queue (nav)
+  var CASE_QUEUE_VALUE_RAW = "_queue_value";          // incident raw lookup backing field
+  var QUEUE_DEFAULT_SENDING_EMAIL_ATTR = "revops_defaultsendingemail"; // queue -> queue (basic) lookup
+  var INCIDENT_ENTITY = "incident";
+  var QUEUE_ENTITY = "queue";
+
+  // Tunables
+  var BASE_DELAY_MS = 2000;        // initial wait before scrubbing
+  var POLL_INTERVAL_MS = 300;      // polling interval while waiting for To to settle
+  var MAX_POLLS = 12;              // 12 * 300ms ≈ 3.6s extra max wait
+  // ===== Private state =====
+  var _targetQueueId = null;   // guid (lowercase, no braces)
+  var _targetEmail = null;     // queue.name (expected email address)
+  var _pendingTimer = null;
+
+  // ===== Helpers =====
+  function getFormContextSafe(executionContext) {
+    if (executionContext && typeof executionContext.getFormContext === "function") return executionContext.getFormContext();
+    if (typeof Xrm !== "undefined" && Xrm.Page && Xrm.Page.ui) return Xrm.Page; // legacy fallback
+    throw new Error("No form context; ensure 'Pass execution context as first parameter' is checked.");
+  }
+  function getAttr(ctx, name){ return ctx.getAttribute ? ctx.getAttribute(name) : null; }
+  function getList(ctx, name){ var a=getAttr(ctx,name); return a ? (a.getValue()||[]) : []; }
+  function setList(ctx, name, val){ var a=getAttr(ctx,name); if (a) a.setValue(val); }
+  function getRegarding(ctx){ var a=getAttr(ctx,"regardingobjectid"); return a ? a.getValue() : null; }
+  function normEmail(s){ if(!s) return ""; var m=s.match(/<([^>]+)>/); var core=(m&&m[1])?m[1]:s; return core.trim().toLowerCase(); }
+  function cleanId(id){ return ((id||"")+"").replace(/[{}]/g,"").toLowerCase(); }
+  function debounce(fn, ctx, delay){
+    if (_pendingTimer) clearTimeout(_pendingTimer);
+    _pendingTimer = setTimeout(function(){ _pendingTimer=null; fn(ctx); }, delay || BASE_DELAY_MS);
+  }
+
+  // Wait until the "to" partylist is populated AND stable for two consecutive reads
+  function waitForToStable(ctx){
+    return new Promise(function(resolve){
+      var tries = 0, prevKey = null, stableCount = 0;
+      var timer = setInterval(function(){
+        tries++;
+        var a = getAttr(ctx, "to");
+        var v = a ? a.getValue() : null;
+        var key = v && v.length ? JSON.stringify(v.map(function(p){
+          return {
+            id: cleanId(p && p.id),
+            et: p && p.entityType,
+            n:  (p && p.name) || "",
+            au: (p && (p.addressused || p.address || p.emailaddress || "")) || ""
+          };
+        })) : "";
+
+        if (key && key === prevKey) {
+          stableCount++;
+        } else {
+          stableCount = 0;
+        }
+        prevKey = key;
+
+        // settle if we have at least something AND two consecutive identical reads (or we ran out of time)
+        if ((key && stableCount >= 1) || tries >= MAX_POLLS) {
+          clearInterval(timer);
+          resolve();
+        }
+      }, POLL_INTERVAL_MS);
+    });
+  }
+
+  // ===== Data =====
+  function retrieveIncidentQueue(incidentId){
+    var query = [
+      "?$select=", CASE_QUEUE_VALUE_RAW,
+      "&$expand=", CASE_QUEUE_ATTRIBUTE,
+      "($select=queueid,name,", QUEUE_DEFAULT_SENDING_EMAIL_ATTR, "($select=queueid,name))"
+    ].join("");
+    return Xrm.WebApi.retrieveRecord(INCIDENT_ENTITY, incidentId, query).then(function(inc){
+      var rawId = cleanId(inc[CASE_QUEUE_VALUE_RAW]);
+      var qnav = inc[CASE_QUEUE_ATTRIBUTE];
+      if (qnav && qnav.queueid) {
+        return {
+          queueId: cleanId(qnav.queueid),
+          queueName: qnav.name || "",
+          ds: (qnav[QUEUE_DEFAULT_SENDING_EMAIL_ATTR] && qnav[QUEUE_DEFAULT_SENDING_EMAIL_ATTR].queueid)
+              ? { id: cleanId(qnav[QUEUE_DEFAULT_SENDING_EMAIL_ATTR].queueid),
+                  name: qnav[QUEUE_DEFAULT_SENDING_EMAIL_ATTR].name || "" }
+              : null
+        };
+      }
+      return rawId ? { queueId: rawId, queueName: "", ds: null } : null;
+    });
+  }
+
+  function retrieveQueueWithDS(queueId){
+    var query = "?$select=queueid,name&$expand="+QUEUE_DEFAULT_SENDING_EMAIL_ATTR+"($select=queueid,name)";
+    return Xrm.WebApi.retrieveRecord(QUEUE_ENTITY, queueId, query).then(function(q){
+      var nav = q[QUEUE_DEFAULT_SENDING_EMAIL_ATTR];
+      return {
+        queueId: cleanId(q.queueid),
+        queueName: q.name || "",
+        ds: (nav && nav.queueid) ? { id: cleanId(nav.queueid), name: nav.name || "" } : null
+      };
+    });
+  }
+
+  // ===== Target resolution =====
+  function resolveTargetFromRegarding(ctx){
+    var rg = getRegarding(ctx);
+    if (!rg || !rg[0] || rg[0].entityType !== INCIDENT_ENTITY) { _targetQueueId=null; _targetEmail=null; return Promise.resolve(); }
+    var incidentId = cleanId(rg[0].id);
+    if (!incidentId) { _targetQueueId=null; _targetEmail=null; return Promise.resolve(); }
+
+    return retrieveIncidentQueue(incidentId)
+      .then(function(info){
+        if (!info || !info.queueId) { _targetQueueId=null; _targetEmail=null; return; }
+        if (info.ds){ _targetQueueId = info.ds.id || null; _targetEmail = info.ds.name || null; return; }
+        return retrieveQueueWithDS(info.queueId).then(function(qinfo){
+          if (qinfo && qinfo.ds){ _targetQueueId = qinfo.ds.id || null; _targetEmail = qinfo.ds.name || null; }
+          else { _targetQueueId=null; _targetEmail=null; }
+        });
+      })
+      .catch(function(){ _targetQueueId=null; _targetEmail=null; });
+  }
+
+  function collectTargetEmails(ctx){
+    var set = new Set();
+    if (_targetEmail){ var e = normEmail(_targetEmail); if (e) set.add(e); }
+    // Fallback: also remove the current From address if present
+    getList(ctx,"from").forEach(function(p){
+      var guess = normEmail((p && (p.addressused || p.address || p.emailaddress || p.name)) || "");
+      if (guess && guess.indexOf("@")>0) set.add(guess);
+    });
+    return set;
+  }
+
+  // ===== Scrub logic =====
+  function scrubTo(ctx){
+    var toList = getList(ctx,"to");
+    if (!toList.length) return;
+
+    var targetEmails = collectTargetEmails(ctx);
+    var targetId = _targetQueueId || "";
+
+    var filtered = toList.filter(function(p){
+      var pid = cleanId(p && p.id);
+      var pEmail = normEmail((p && (p.addressused || p.address || p.emailaddress || p.name)) || "");
+      var matchById = (p && p.entityType === QUEUE_ENTITY) && targetId && pid === targetId;
+      var matchByEmail = pEmail && targetEmails.has(pEmail);
+      return !(matchById || matchByEmail);
+    });
+
+    if (filtered.length !== toList.length){
+      setList(ctx, "to", filtered);
+      try {
+        ctx.ui.setFormNotification("Removed default sending email from To.", "INFO", "revops_to_scrubbed");
+        setTimeout(function(){ try{ ctx.ui.clearFormNotification("revops_to_scrubbed"); }catch(e){} }, 2500);
+      } catch(e){}
+    }
+  }
+
+  // ===== Orchestrators =====
+  function waitAndScrub(ctx){
+    // Wait base delay, then wait for To to stabilize, then scrub
+    setTimeout(function(){
+      waitForToStable(ctx).then(function(){ scrubTo(ctx); });
+    }, BASE_DELAY_MS);
+  }
+
+  // ===== Events =====
+  ns.onLoad = function(executionContext){
+    var ctx = getFormContextSafe(executionContext);
+    resolveTargetFromRegarding(ctx).then(function(){ waitAndScrub(ctx); });
+
+    var toAttr = getAttr(ctx,"to"); if (toAttr) toAttr.addOnChange(ns.onToChange);
+    var rgAttr = getAttr(ctx,"regardingobjectid"); if (rgAttr) rgAttr.addOnChange(ns.onRegardingChange);
+    var fromAttr = getAttr(ctx,"from"); if (fromAttr) fromAttr.addOnChange(ns.onFromChange);
+  };
+  ns.onToChange = function(executionContext){
+    var ctx = getFormContextSafe(executionContext);
+    debounce(waitAndScrub, ctx, 1200); // quicker on To edits but still allows CRM to settle
+  };
+  ns.onFromChange = function(executionContext){
+    var ctx = getFormContextSafe(executionContext);
+    debounce(waitAndScrub, ctx, 1200);
+  };
+  ns.onRegardingChange = function(executionContext){
+    var ctx = getFormContextSafe(executionContext);
+    resolveTargetFromRegarding(ctx).then(function(){ debounce(waitAndScrub, ctx, 1500); });
+  };
+})(window.RevOpsEmailScrubber = window.RevOpsEmailScrubber || {});

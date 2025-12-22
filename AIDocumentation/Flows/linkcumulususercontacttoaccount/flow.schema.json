@@ -1,0 +1,162 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "impersonation": {},
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_61b07"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "cecf26b8-93e0-40b6-a67b-16c9ede494db"
+          },
+          "type": "Request",
+          "kind": "Button",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          }
+        }
+      },
+      "actions": {
+        "List_Cumulus_Users": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "21c62441-392e-4dc9-8b28-44e1e162ccfb"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "revops_cumulususers",
+              "fetchXml": "<fetch version=\"1.0\" mapping=\"logical\" savedqueryid=\"c8af3de2-dac8-407a-bdbd-2d9130e58c63\" no-lock=\"false\" distinct=\"true\">\n<entity name=\"revops_cumulususer\">\n<attribute name=\"statecode\"/>\n<attribute name=\"revops_cumulususerid\"/>\n<attribute name=\"revops_name\"/>\n<attribute name=\"createdon\"/>\n<order attribute=\"revops_name\" descending=\"false\"/>\n<attribute name=\"revops_email\"/>\n<attribute name=\"revops_cumulusaccount\"/>\n<attribute name=\"revops_account\"/>\n<attribute name=\"revops_contact\"/>\n<link-entity name=\"contact\" alias=\"ad\" link-type=\"inner\" from=\"contactid\" to=\"revops_contact\">\n<filter type=\"and\">\n<condition attribute=\"parentcustomerid\" operator=\"null\"/>\n</filter>\n</link-entity>\n</entity>\n</fetch>"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Apply_to_each": {
+          "foreach": "@outputs('List_Cumulus_Users')?['body/value']",
+          "actions": {
+            "Get_Cumulus_Account": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "58cbd666-98ea-414c-a4cc-eccf3646e322"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "revops_cumulusaccounts",
+                  "recordId": "@items('Apply_to_each')?['_revops_cumulusaccount_value']"
+                },
+                "authentication": {
+                  "type": "Raw",
+                  "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                }
+              }
+            },
+            "Link_Contact_to_Account": {
+              "runAfter": {
+                "Get_Contact": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "025b0b59-6101-4626-8e8a-cb8bbbb55c89"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "AssociateEntities",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "accounts",
+                  "recordId": "@outputs('Get_Cumulus_Account')?['body/_revops_account_value']",
+                  "associationEntityRelationship": "contact_customer_accounts",
+                  "item/@odata.id": "@outputs('Get_Contact')?['body/@odata.id']"
+                },
+                "authentication": {
+                  "type": "Raw",
+                  "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                }
+              }
+            },
+            "Get_Contact": {
+              "runAfter": {
+                "Get_Cumulus_Account": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "a48891d4-19a5-41a1-9580-1fae50570974"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "contacts",
+                  "recordId": "@items('Apply_to_each')?['_revops_contact_value']"
+                },
+                "authentication": {
+                  "type": "Raw",
+                  "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "List_Cumulus_Users": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "102cf420-513e-4cda-8cd8-e105ed8aab87"
+          },
+          "type": "Foreach"
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

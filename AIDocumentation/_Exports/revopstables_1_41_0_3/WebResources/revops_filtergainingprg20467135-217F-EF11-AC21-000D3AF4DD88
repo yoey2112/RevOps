@@ -1,0 +1,19 @@
+function filterGainingOrg(executionContext) {
+    var formContext = executionContext.getFormContext();
+    var lookupGAccount = formContext.getAttribute("revops_gainingaccount").getValue();
+
+    // Ensure a value has been selected in the losing account lookup
+    if (lookupGAccount != null && lookupGAccount.length > 0) {
+        // Extract GUID and remove curly braces if present
+        var lookupGAccountId = lookupGAccount[0].id.replace('{', '').replace('}', ''); 
+        
+        // Get the losing organization lookup control
+        var lookupGOrg = formContext.getControl("revops_gainingorg");
+        
+        // Apply the filter to the losing organization lookup
+        lookupGOrg.addPreSearch(function () {
+            var filter = "<filter type='and'><condition attribute='revops_cumulusaccount' operator='eq' value='" + lookupGAccountId + "' /></filter>";
+            lookupGOrg.addCustomFilter(filter);
+        });
+    }
+}

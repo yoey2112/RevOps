@@ -1,0 +1,108 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_61b07"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "cb8c2320-c7ff-45c5-93cb-1f6589f3b85c"
+          },
+          "type": "Request",
+          "kind": "Button",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          }
+        }
+      },
+      "actions": {
+        "List_Accounts": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "62dce98e-9a43-49d4-a7c5-58169399649c"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "accounts",
+              "fetchXml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"true\" savedqueryid=\"65ffaf9a-e8c5-432d-860b-32f841b00d87\" no-lock=\"false\">\n<entity name=\"account\">\n<attribute name=\"entityimage_url\"/>\n<attribute name=\"name\"/>\n<attribute name=\"telephone1\"/>\n<attribute name=\"address1_city\"/>\n<attribute name=\"primarycontactid\"/>\n<filter type=\"and\">\n<condition attribute=\"customertypecode\" operator=\"ne\" value=\"11\"/>\n<condition attribute=\"name\" operator=\"null\"/>\n</filter>\n<link-entity alias=\"accountprimarycontactidcontactcontactid\" name=\"contact\" from=\"contactid\" to=\"primarycontactid\" link-type=\"outer\" visible=\"false\">\n<attribute name=\"emailaddress1\"/>\n</link-entity>\n<attribute name=\"statecode\"/>\n<attribute name=\"accountid\"/>\n<attribute name=\"ownerid\"/>\n<attribute name=\"revops_monthlyrecurringrevenue\"/>\n<attribute name=\"territoryid\"/>\n<attribute name=\"customertypecode\"/>\n<attribute name=\"revops_channel\"/>\n<attribute name=\"revops_domain\"/>\n</entity>\n</fetch>"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Apply_to_each": {
+          "foreach": "@outputs('List_Accounts')?['body/value']",
+          "actions": {
+            "Update_Account_Name": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "22748fd6-bd7a-445f-8fd1-170c83f591fd"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "accounts",
+                  "recordId": "@items('Apply_to_each')?['accountid']",
+                  "item/name": "@items('Apply_to_each')?['revops_domain']"
+                },
+                "authentication": {
+                  "type": "Raw",
+                  "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "List_Accounts": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "53d937f7-cd4c-42ec-92ec-a2412508ac10"
+          },
+          "type": "Foreach"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

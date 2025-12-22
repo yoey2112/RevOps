@@ -1,0 +1,319 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_86fd5"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedoffice365_e85d3"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_an_email_is_set_to_\"Notify_case_owner_=_true\"": {
+          "metadata": {
+            "operationMetadataId": "497ae84c-26bb-4485-9093-2e74a012edf1"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "email",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "activityid,revops_notifycaseowner\n",
+              "subscriptionRequest/filterexpression": "revops_notifycaseowner eq true\n",
+              "subscriptionRequest/name": "eeb603b3-bc47-f011-877a-7c1e52409afe"
+            },
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Get_Related_Case": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "6aa80190-e555-494f-9fea-34cc63b65e3b"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "incidents",
+              "recordId": "@triggerOutputs()?['body/_regardingobjectid_value']"
+            },
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_Owning_User": {
+          "runAfter": {
+            "Get_Related_Case": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a6055e2e-fc0c-46f9-b0c3-ec2b8216e530"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "systemusers",
+              "recordId": "@outputs('Get_Related_Case')?['body/_owninguser_value']"
+            },
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Send_an_email_from_a_shared_mailbox_(V2)": {
+          "runAfter": {
+            "Compose_-_Application_ID": [
+              "Succeeded"
+            ],
+            "Compose_-_Environment_URL": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1fceb191-b1aa-428f-ab3a-6d5197efb32c"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365",
+              "operationId": "SharedMailboxSendEmailV2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "emailMessage/MailboxAddress": "revops-noreply@sherweb.com",
+              "emailMessage/To": "@outputs('Get_Owning_User')?['body/internalemailaddress']",
+              "emailMessage/Subject": "[@{outputs('Get_Related_Case')?['body/ticketnumber']}] Customer reply for case: \"@{outputs('Get_Related_Case')?['body/title']}\"",
+              "emailMessage/Body": "<p>Hi,</p>\n\n<p>A customer replied to a case you own in Dynamics.</p>\n\n<p>\n🔗 <a href=\"@{outputs('Compose_-_Environment_URL')}main.aspx?appid=@{outputs('Compose_-_Application_ID')}&amp;pagetype=entityrecord&amp;etn=email&amp;id=@{triggerOutputs()?['body/activityid']}\">View Email</a>\n<br>\n🔗 <a href=\"@{outputs('Compose_-_Environment_URL')}main.aspx?appid=@{outputs('Compose_-_Application_ID')}&amp;pagetype=entityrecord&amp;etn=incident&amp;id=@{triggerOutputs()?['body/_regardingobjectid_value']}\">View Case</a>\n</p>\n\n<hr>\n\n<p><strong>Customer Reply:</strong></p>\n@{triggerOutputs()?['body/description']}\n\n<hr>\n",
+              "emailMessage/Importance": "Normal"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Update_email": {
+          "runAfter": {
+            "Delay_2_seconds": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "85bac740-bcc6-409f-ac9a-3082a6595e01"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "emails",
+              "recordId": "@triggerOutputs()?['body/activityid']",
+              "item/revops_notifycaseowner": false
+            },
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "UpdateOnlyRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Delay_2_seconds": {
+          "runAfter": {
+            "Send_an_email_from_a_shared_mailbox_(V2)": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "03369030-1123-46cc-b8d8-946fec2c9b3b"
+          },
+          "type": "Wait",
+          "inputs": {
+            "interval": {
+              "count": 2,
+              "unit": "Second"
+            }
+          }
+        },
+        "Get_Environment_URL": {
+          "runAfter": {
+            "Compose_-_Definition": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "2fc7a95a-913c-48af-8d03-5ecbd1681cae"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "environmentvariablevalues",
+              "$filter": "_environmentvariabledefinitionid_value eq '@{outputs('Compose_-_Definition')}'\n"
+            },
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "List_Environment_URL_Definition": {
+          "runAfter": {
+            "Get_Owning_User": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "fe47227e-cad8-4b84-bcbf-b7419a5d5d99"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "environmentvariabledefinitions",
+              "$filter": "schemaname eq 'revops_baseurl'\n"
+            },
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Compose_-_Definition": {
+          "runAfter": {
+            "List_Environment_URL_Definition": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "91c67666-3d20-4bd2-8f3f-e5b31b149998"
+          },
+          "type": "Compose",
+          "inputs": "@first(outputs('List_Environment_URL_Definition')?['body']?['value'])?['environmentvariabledefinitionid']\r\n"
+        },
+        "Compose_-_Environment_URL": {
+          "runAfter": {
+            "Get_Environment_URL": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "175d2ab4-5c89-454d-8072-e3eb8c8f5325"
+          },
+          "type": "Compose",
+          "inputs": "@coalesce(\r\n  first(outputs('Get_Environment_URL')?['body']?['value'])?['value'],\r\n  first(outputs('Get_Environment_URL')?['body']?['value'])?['defaultvalue']\r\n)\r\n"
+        },
+        "List_AppID_Definition": {
+          "runAfter": {
+            "Get_Owning_User": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "de00bc33-219c-4cb8-a56e-0e9c98b4825d"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "environmentvariabledefinitions",
+              "$filter": "schemaname eq 'revops_appid_csworkspace'\n"
+            },
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Compose_-_AppID_Definition": {
+          "runAfter": {
+            "List_AppID_Definition": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b5afb34f-6e41-4087-ad56-bb242191d476"
+          },
+          "type": "Compose",
+          "inputs": "@first(outputs('List_AppID_Definition')?['body']?['value'])?['environmentvariabledefinitionid']\r\n"
+        },
+        "Get_App_ID": {
+          "runAfter": {
+            "Compose_-_AppID_Definition": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ef74fb5b-1571-4179-8cc3-b5a76c426296"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "environmentvariablevalues",
+              "$filter": "_environmentvariabledefinitionid_value eq '@{outputs('Compose_-_AppID_Definition')}'\n"
+            },
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Compose_-_Application_ID": {
+          "runAfter": {
+            "Get_App_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "8c526fcd-a9ad-457a-ad7d-468350d9bf70"
+          },
+          "type": "Compose",
+          "inputs": "@coalesce(\r\n  first(outputs('Get_App_ID')?['body']?['value'])?['value'],\r\n  first(outputs('Get_App_ID')?['body']?['value'])?['defaultvalue']\r\n)\r\n"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

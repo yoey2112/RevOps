@@ -1,0 +1,11 @@
+<msdynmkt_eventmetadata msdynmkt_uniquename="msdynmkt_sherweb_honeypotdisqualify_173952830">
+  <iscustomizable>1</iscustomizable>
+  <msdynmkt_customapiid>
+    <uniquename>msdynmkt_sherweb_honeypotdisqualify_173952830</uniquename>
+  </msdynmkt_customapiid>
+  <msdynmkt_eventjson>{"name":"Sherweb - Honeypot disqualify","eventProperties":[{"displayName":"Honeypot","type":"string","logicalentityname":"","logicalentitysetname":""}],"description":"Honeypot field to disqualify bots on lead forms","addCustomerDataProperty":true,"supportedTargetEntities":"lead","customEventVersion":"2.0.0.0"}</msdynmkt_eventjson>
+  <msdynmkt_name>Sherweb - Honeypot disqualify</msdynmkt_name>
+  <msdynmkt_state>534120004</msdynmkt_state>
+  <msdynmkt_supportedtargetentities>lead</msdynmkt_supportedtargetentities>
+  <timezoneruleversionnumber>4</timezoneruleversionnumber>
+</msdynmkt_eventmetadata>

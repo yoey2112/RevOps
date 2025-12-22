@@ -1,0 +1,15 @@
+<customapi uniquename="msdynmkt_sherweb_contactdatamapping_144625265">
+  <allowedcustomprocessingsteptype>1</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Trigger for contact journey to allow power automate to change attributes on contact or lead. ">
+    <label description="Trigger for contact journey to allow power automate to change attributes on contact or lead. " languagecode="1033" />
+  </description>
+  <displayname default="Sherweb - contact data mapping">
+    <label description="Sherweb - contact data mapping" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Sherweb - contact data mapping</name>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>
