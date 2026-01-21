@@ -1,0 +1,112 @@
+relationships:
+  -
+    schemaname: msdynmkt_fragment_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: msdynmkt_fragment
+  -
+    schemaname: msdynmkt_fragment_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdynmkt_fragment
+  -
+    schemaname: msdynmkt_fragment_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdynmkt_fragment
+  -
+    schemaname: msdynmkt_fragment_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: msdynmkt_fragment
+  -
+    schemaname: msdynmkt_fragment_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: msdynmkt_fragment
+  -
+    schemaname: msdynmkt_fragment_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: msdynmkt_fragment
+  -
+    schemaname: msdynmkt_fragment_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: msdynmkt_fragment
+  -
+    schemaname: msdynmkt_fragment_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: msdynmkt_fragment
+  -
+    schemaname: msdynmkt_fragment_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: msdynmkt_fragment
+  -
+    schemaname: lk_msdynmkt_fragment_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_fragment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_fragment_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_fragment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_fragment_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_fragment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_fragment_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_fragment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_msdynmkt_fragment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_fragment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_msdynmkt_fragment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_fragment
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_msdynmkt_fragment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_fragment
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_msdynmkt_fragment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_fragment
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: ImageDescriptor_msdynmkt_fragment_msdynmkt_thumbnailimage
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_fragment
+    referencedtablelogicalname: imagedescriptor
+  -
+    schemaname: ImageDescriptor_msdynmkt_fragment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_fragment
+    referencedtablelogicalname: imagedescriptor
+  -
+    schemaname: msdynmkt_msdynmkt_tag_msdynmkt_fragment
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msdynmkt_tag
+    referencedtablelogicalname: msdynmkt_fragment
+  -
+    schemaname: msdynmkt_emailtemplate_fragment
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msdynmkt_fragment
+    referencedtablelogicalname: msdynmkt_emailtemplate
+  -
+    schemaname: msdynmkt_email_fragment
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msdynmkt_fragment
+    referencedtablelogicalname: msdynmkt_email
+

@@ -1,0 +1,5 @@
+displayname: Account Tier Override Security
+description: 'Tier override fields are read only except for Sherweb - Sales Manager security role'
+webresourceid: '571c6b58-875e-f011-877a-7c1e5206727f'
+name: revops_accounttieroverridesecurity
+

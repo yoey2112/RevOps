@@ -1,0 +1,167 @@
+relationships:
+  -
+    schemaname: List_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: list
+  -
+    schemaname: List_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: list
+  -
+    schemaname: List_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: list
+  -
+    schemaname: List_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: list
+  -
+    schemaname: list_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: list
+  -
+    schemaname: userentityinstancedata_list
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: list
+  -
+    schemaname: List_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: list
+  -
+    schemaname: List_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: list
+  -
+    schemaname: list_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: list
+  -
+    schemaname: list_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: list
+  -
+    schemaname: list_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: list
+  -
+    schemaname: List_Annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: list
+  -
+    schemaname: List_BulkOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperation
+    referencedtablelogicalname: list
+  -
+    schemaname: list_listoperation_ListId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: listoperation
+    referencedtablelogicalname: list
+  -
+    schemaname: msdyncrm_list_msdyncrm_listform
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyncrm_listform
+    referencedtablelogicalname: list
+  -
+    schemaname: list_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: list
+  -
+    schemaname: lk_list_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: list
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_list_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: list
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_list_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: list
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_list_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: list
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_list
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: list
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_list
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: list
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_lists
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: list
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_list
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: list
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: processstage_lists
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: list
+    referencedtablelogicalname: processstage
+  -
+    schemaname: transactioncurrency_list
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: list
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: ImageDescriptor_List
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: list
+    referencedtablelogicalname: imagedescriptor
+  -
+    schemaname: campaignactivitylist_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: campaignactivity
+    referencedtablelogicalname: list
+  -
+    schemaname: campaignlist_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: list
+  -
+    schemaname: listcontact_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: list
+    referencedtablelogicalname: contact
+  -
+    schemaname: listlead_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: list
+    referencedtablelogicalname: lead
+  -
+    schemaname: listaccount_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: list
+    referencedtablelogicalname: account
+  -
+    schemaname: adx_website_list
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: adx_website
+    referencedtablelogicalname: list
+

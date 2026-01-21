@@ -1,0 +1,39 @@
+views:
+  -
+    name: Notes Associated View
+    querytype: 2
+    savedqueryid: '00000000-0000-0000-00aa-000010002000'
+  -
+    name: Portal Search
+    querytype: -1
+    savedqueryid: '8b6f5125-4603-e711-80de-00155db595d7'
+  -
+    name: Notes Mobile Client Draft View
+    querytype: 32768
+    savedqueryid: '8b9324d1-9882-4d4a-9806-1c7423c3d59b'
+  -
+    name: Notes
+    description: Notes attached to records I have downloaded
+    querytype: 8192
+    savedqueryid: '5f1f9bea-c2e3-41c9-97e1-1e32396b4e36'
+  -
+    name: Notes Advanced Find View
+    querytype: 1
+    savedqueryid: 'dddff6ae-2f52-4640-b2bb-2ba59da0777c'
+  -
+    name: Attachment View with Workflow
+    querytype: 2048
+    savedqueryid: 'c592dde6-243d-4e2b-94fe-38c4572035b6'
+  -
+    name: Notes Lookup View
+    querytype: 64
+    savedqueryid: '30a66576-2399-4630-852c-472579c0f42f'
+  -
+    name: Quick Find Annotations
+    querytype: 4
+    savedqueryid: 'd55e2282-dd0c-4aad-a0d3-89c3013f222a'
+  -
+    name: All Notes
+    querytype: -1
+    savedqueryid: '8a9a0d47-51ac-454e-98c4-b3cf4ef50f2b'
+

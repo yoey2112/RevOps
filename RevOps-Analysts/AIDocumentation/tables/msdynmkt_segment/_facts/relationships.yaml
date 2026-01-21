@@ -1,0 +1,122 @@
+relationships:
+  -
+    schemaname: msdynmkt_segment_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: msdynmkt_segment
+  -
+    schemaname: msdynmkt_segment_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdynmkt_segment
+  -
+    schemaname: msdynmkt_segment_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdynmkt_segment
+  -
+    schemaname: msdynmkt_segment_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: msdynmkt_segment
+  -
+    schemaname: msdynmkt_segment_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: msdynmkt_segment
+  -
+    schemaname: msdynmkt_segment_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: msdynmkt_segment
+  -
+    schemaname: msdynmkt_segment_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: msdynmkt_segment
+  -
+    schemaname: msdynmkt_segment_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: msdynmkt_segment
+  -
+    schemaname: msdynmkt_segment_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: msdynmkt_segment
+  -
+    schemaname: msdynmkt_segmentusage_msdynmkt_segment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_segmentusage
+    referencedtablelogicalname: msdynmkt_segment
+  -
+    schemaname: msdynmkt_segmentusage_msdynmkt_segment_dependententityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_segmentusage
+    referencedtablelogicalname: msdynmkt_segment
+  -
+    schemaname: msdynmkt_msdynmkt_segment_msdynmkt_teamsengagement_audiencesegment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_teamsengagement
+    referencedtablelogicalname: msdynmkt_segment
+  -
+    schemaname: msdynmkt_segment_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: msdynmkt_segment
+  -
+    schemaname: lk_msdynmkt_segment_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_segment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_segment_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_segment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_segment_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_segment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_segment_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_segment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_msdynmkt_segment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_segment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_msdynmkt_segment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_segment
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_msdynmkt_segment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_segment
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_msdynmkt_segment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_segment
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: msdynmkt_segment_datalakefolder
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_segment
+    referencedtablelogicalname: datalakefolder
+  -
+    schemaname: lk_msdynmkt_segment_msdynmkt_lastusedinjourneyby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_segment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_msdynmkt_segment_parentcampaignid_campaig
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_segment
+    referencedtablelogicalname: campaign
+

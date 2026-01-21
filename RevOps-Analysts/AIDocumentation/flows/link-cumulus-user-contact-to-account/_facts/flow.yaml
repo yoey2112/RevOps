@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '05e173a0-6274-ef11-ac20-000d3af47275'
+name: Link Cumulus User Contact to Account
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

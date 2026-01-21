@@ -1,0 +1,827 @@
+relationships:
+  -
+    schemaname: email_actioncard
+    relationshiptype: OneToMany
+    referencingtablelogicalname: actioncard
+    referencedtablelogicalname: email
+  -
+    schemaname: email_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: email
+  -
+    schemaname: Email_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: email
+  -
+    schemaname: Email_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: email
+  -
+    schemaname: Email_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: email
+  -
+    schemaname: Email_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: email
+  -
+    schemaname: Email_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: email
+  -
+    schemaname: slakpiinstance_email
+    relationshiptype: OneToMany
+    referencingtablelogicalname: slakpiinstance
+    referencedtablelogicalname: email
+  -
+    schemaname: Email_Annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: email
+  -
+    schemaname: email_activity_mime_attachment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitymimeattachment
+    referencedtablelogicalname: email
+  -
+    schemaname: email_email_parentactivityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: email
+  -
+    schemaname: email_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: email
+  -
+    schemaname: userentityinstancedata_email
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: email
+  -
+    schemaname: Email_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: email
+  -
+    schemaname: email_email_hash
+    relationshiptype: OneToMany
+    referencingtablelogicalname: emailhash
+    referencedtablelogicalname: email
+  -
+    schemaname: email_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: email
+  -
+    schemaname: email_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: email
+  -
+    schemaname: Email_QueueItem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queueitem
+    referencedtablelogicalname: email
+  -
+    schemaname: email_email_CorrelatedActivityId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: email
+  -
+    schemaname: email_FileAttachments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fileattachment
+    referencedtablelogicalname: email
+  -
+    schemaname: email_campaignresponse
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: email
+  -
+    schemaname: email_activitymonitor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitymonitor
+    referencedtablelogicalname: email
+  -
+    schemaname: msdyn_email_msdyn_originatingqueue_email
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_originatingqueue
+    referencedtablelogicalname: email
+  -
+    schemaname: msdyn_readtracker_poly_email
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_readtracker
+    referencedtablelogicalname: email
+  -
+    schemaname: msdyn_msdyn_salescopilotinsight_email_msdyn_activityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salescopilotinsight
+    referencedtablelogicalname: email
+  -
+    schemaname: msdyn_msdyn_conversationactionitem_email_msdyn_CreatedActivity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_conversationactionitem
+    referencedtablelogicalname: email
+  -
+    schemaname: msdyn_email_email_msdyn_emailsentiment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_emailsentiment
+    referencedtablelogicalname: email
+  -
+    schemaname: email_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: email
+  -
+    schemaname: msdyn_email_msdyn_autocaseclosureagentactivity_activityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_autocaseclosureagentactivity
+    referencedtablelogicalname: email
+  -
+    schemaname: msdyn_email_msdyn_autocaseclosureagentactivity_autocaseclosureagentgeneratedemailid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_autocaseclosureagentactivity
+    referencedtablelogicalname: email
+  -
+    schemaname: email_msdynmkt_contactpointconsent4_messageid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_contactpointconsent4
+    referencedtablelogicalname: email
+  -
+    schemaname: KnowledgeBaseRecord_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: knowledgebaserecord
+  -
+    schemaname: lk_email_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: Account_Email_SendersAccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: account
+  -
+    schemaname: Email_EmailTemplate
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: template
+  -
+    schemaname: Queue_Email_EmailSender
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: queue
+  -
+    schemaname: Contact_Email_EmailSender
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: contact
+  -
+    schemaname: Account_Email_EmailSender
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: account
+  -
+    schemaname: TransactionCurrency_Email
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: Contact_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: contact
+  -
+    schemaname: user_email
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: SystemUser_Email_EmailSender
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: AsyncOperation_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: asyncoperation
+  -
+    schemaname: lk_email_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: KnowledgeArticle_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: email_sendermailboxid_mailbox
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: mailbox
+  -
+    schemaname: activity_pointer_email
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: lk_email_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_email
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: team
+  -
+    schemaname: manualsla_email
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: sla
+  -
+    schemaname: business_unit_email_activities
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: Account_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: account
+  -
+    schemaname: email_email_parentactivityid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: email
+  -
+    schemaname: processstage_emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: processstage
+  -
+    schemaname: sla_email
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: sla
+  -
+    schemaname: lk_email_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: owner_emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: owner
+  -
+    schemaname: email_email_CorrelatedActivityId
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: email
+  -
+    schemaname: mailbox_email_ReceivingMailboxId
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: mailbox
+  -
+    schemaname: email_acceptingentity_queue
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: queue
+  -
+    schemaname: email_acceptingentity_systemuser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: FileAttachment_Email_DescriptionBlobId
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: fileattachment
+  -
+    schemaname: adx_invitation_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_invitation
+  -
+    schemaname: mspp_adplacement_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: mspp_adplacement
+  -
+    schemaname: mspp_pollplacement_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: mspp_pollplacement
+  -
+    schemaname: mspp_publishingstatetransitionrule_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: mspp_publishingstatetransitionrule
+  -
+    schemaname: mspp_redirect_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: mspp_redirect
+  -
+    schemaname: mspp_shortcut_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: mspp_shortcut
+  -
+    schemaname: mspp_website_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: mspp_website
+  -
+    schemaname: Lead_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_Email_EmailSender
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: lead
+  -
+    schemaname: bookableresourcebooking_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: bookableresourcebooking
+  -
+    schemaname: bookableresourcebookingheader_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: bookableresourcebookingheader
+  -
+    schemaname: BulkOperation_Email
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: bulkoperation
+  -
+    schemaname: Campaign_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: campaign
+  -
+    schemaname: CampaignActivity_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: campaignactivity
+  -
+    schemaname: Contract_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: contract
+  -
+    schemaname: entitlement_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: entitlement
+  -
+    schemaname: entitlementtemplate_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: entitlementtemplate
+  -
+    schemaname: Incident_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: incident
+  -
+    schemaname: site_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: site
+  -
+    schemaname: Equipment_Email_EmailSender
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: equipment
+  -
+    schemaname: service_emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: service
+  -
+    schemaname: msdyn_customerasset_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_customerasset
+  -
+    schemaname: msdyn_playbookinstance_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_playbookinstance
+  -
+    schemaname: Invoice_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: invoice
+  -
+    schemaname: Opportunity_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Quote_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: quote
+  -
+    schemaname: SalesOrder_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: salesorder
+  -
+    schemaname: msdyn_postalbum_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_postalbum
+  -
+    schemaname: msdyn_swarm_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_swarm
+  -
+    schemaname: msdyn_salessuggestion_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_salessuggestion
+  -
+    schemaname: msdyn_bookingalertstatus_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_bookingalertstatus
+  -
+    schemaname: msdyn_bookingrule_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_bookingrule
+  -
+    schemaname: msdyn_resourceterritory_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_resourceterritory
+  -
+    schemaname: msdyn_systemuserschedulersetting_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_systemuserschedulersetting
+  -
+    schemaname: msdyn_timegroup_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_timegroup
+  -
+    schemaname: msdyn_timegroupdetail_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_timegroupdetail
+  -
+    schemaname: msevtmgt_checkin_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_checkin
+  -
+    schemaname: msevtmgt_event_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_event
+  -
+    schemaname: msevtmgt_eventpurchase_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_eventpurchase
+  -
+    schemaname: msevtmgt_eventpurchaseattendee_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_eventpurchaseattendee
+  -
+    schemaname: msevtmgt_eventpurchasepass_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_eventpurchasepass
+  -
+    schemaname: msevtmgt_eventregistration_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_eventregistration
+  -
+    schemaname: msevtmgt_hotel_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_hotel
+  -
+    schemaname: msevtmgt_hotelroomallocation_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_hotelroomallocation
+  -
+    schemaname: msevtmgt_hotelroomreservation_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_hotelroomreservation
+  -
+    schemaname: msevtmgt_layout_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_layout
+  -
+    schemaname: msevtmgt_room_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_room
+  -
+    schemaname: msevtmgt_session_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_sessionregistration_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_sessionregistration
+  -
+    schemaname: msevtmgt_sessiontrack_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_sessiontrack
+  -
+    schemaname: msevtmgt_speaker_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_speaker
+  -
+    schemaname: msevtmgt_speakerengagement_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_speakerengagement
+  -
+    schemaname: msevtmgt_sponsorablearticle_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_sponsorablearticle
+  -
+    schemaname: msevtmgt_sponsorship_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_sponsorship
+  -
+    schemaname: msevtmgt_venue_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_venue
+  -
+    schemaname: msevtmgt_webinarconfiguration_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_webinarconfiguration
+  -
+    schemaname: msevtmgt_webinarprovider_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_webinarprovider
+  -
+    schemaname: msdyncrm_contentsettings_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_contentsettings
+  -
+    schemaname: msdyncrm_customerjourney_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_customerjourney
+  -
+    schemaname: msdyncrm_marketingdynamiccontentmetadata_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_marketingdynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemaildynamiccontentmetadata_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_marketingemaildynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemailtestsend_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_marketingemailtestsend
+  -
+    schemaname: msdyncrm_uicconfig_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_uicconfig
+  -
+    schemaname: msdyncrm_leadscoremodel_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_leadscoremodel
+  -
+    schemaname: msdyncrm_linkedinaccount_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_linkedinaccount
+  -
+    schemaname: msdyncrm_linkedinactivity_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_linkedinactivity
+  -
+    schemaname: msdyncrm_linkedinfieldmapping_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_linkedinfieldmapping
+  -
+    schemaname: msdyncrm_linkedinform_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_linkedinform
+  -
+    schemaname: msdyncrm_linkedinformanswer_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_linkedinformanswer
+  -
+    schemaname: msdyncrm_linkedinformquestion_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_linkedinformquestion
+  -
+    schemaname: msdyncrm_linkedinformsubmission_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_linkedinformsubmission
+  -
+    schemaname: msdyncrm_linkedinleadmatchingstrategy_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_linkedinleadmatchingstrategy
+  -
+    schemaname: msdyncrm_linkedinuserprofile_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_linkedinuserprofile
+  -
+    schemaname: msdyncrm_migration_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyncrm_migration
+  -
+    schemaname: sensitivitylabel_email_SensitivityLabelId
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: sensitivitylabel
+  -
+    schemaname: adx_webpage_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_webpage
+  -
+    schemaname: adx_website_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_website
+  -
+    schemaname: adx_ad_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_ad
+  -
+    schemaname: adx_adplacement_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_adplacement
+  -
+    schemaname: adx_poll_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_poll
+  -
+    schemaname: adx_polloption_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_polloption
+  -
+    schemaname: adx_pollplacement_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_pollplacement
+  -
+    schemaname: adx_pollsubmission_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_pollsubmission
+  -
+    schemaname: adx_publishingstatetransitionrule_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_publishingstatetransitionrule
+  -
+    schemaname: adx_redirect_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_redirect
+  -
+    schemaname: adx_shortcut_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_shortcut
+  -
+    schemaname: adx_communityforumaccesspermission_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_communityforumaccesspermission
+  -
+    schemaname: adx_communityforumalert_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_communityforumalert
+  -
+    schemaname: adx_casedeflection_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_casedeflection
+  -
+    schemaname: adx_contentaccesslevel_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: adx_contentaccesslevel
+  -
+    schemaname: revops_audienceimport_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: revops_audienceimport
+  -
+    schemaname: msdyn_paymentterm_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_paymentterm
+  -
+    schemaname: msdyn_purchaseorder_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_purchaseorder
+  -
+    schemaname: msdyn_purchaseorderproduct_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_purchaseorderproduct
+  -
+    schemaname: msdyn_purchaseorderreceipt_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_purchaseorderreceipt
+  -
+    schemaname: msdyn_purchaseorderreceiptproduct_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_purchaseorderreceiptproduct
+  -
+    schemaname: msdyn_shipvia_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_shipvia
+  -
+    schemaname: msdyn_warehouse_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_warehouse
+  -
+    schemaname: msdyn_projectteam_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_projectteam
+  -
+    schemaname: msdyn_processnotes_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_processnotes
+  -
+    schemaname: revops_smeengagement_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: revops_smeengagement
+  -
+    schemaname: msdyn_project_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msdyn_project
+  -
+    schemaname: revops_mwhaccount_Emails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: email
+    referencedtablelogicalname: revops_mwhaccount
+

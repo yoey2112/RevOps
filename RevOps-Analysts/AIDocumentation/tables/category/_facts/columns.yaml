@@ -1,0 +1,242 @@
+columns:
+  -
+    RequiredLevel: ''
+    AttributeType: Uniqueidentifier
+    LogicalName: categoryid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: categorynumber
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: createdby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: createdon
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: createdonbehalfby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdonbehalfbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdonbehalfbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Memo
+    LogicalName: description
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Decimal
+    LogicalName: exchangerate
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: importsequencenumber
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: modifiedby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: modifiedon
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: modifiedonbehalfby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedonbehalfbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedonbehalfbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: overriddencreatedon
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Owner
+    LogicalName: ownerid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: owneridname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: EntityName
+    LogicalName: owneridtype
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: owningbusinessunit
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: owningbusinessunitname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: owningteam
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: owninguser
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: parentcategoryid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: parentcategoryidname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_frenchtitle
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: BigInt
+    LogicalName: revops_freshdeskcategoryid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Boolean
+    LogicalName: revops_isinternal
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: revops_isinternalname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Boolean
+    LogicalName: revops_istoplevelcategory
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: revops_istoplevelcategoryname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: sequencenumber
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: title
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: transactioncurrencyid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: transactioncurrencyidname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: BigInt
+    LogicalName: versionnumber
+    DisplayName: ''
+    Description: ''
+

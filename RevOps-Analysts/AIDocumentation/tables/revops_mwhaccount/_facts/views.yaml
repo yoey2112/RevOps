@@ -1,0 +1,31 @@
+views:
+  -
+    name: My MWH Accounts
+    description: Active MWH Accounts owned by me
+    querytype: 8192
+    savedqueryid: '814bc2c4-80be-f011-bbd3-7c1e52067e9e'
+  -
+    name: MWH Account Associated View
+    querytype: 2
+    savedqueryid: 'af9710ed-691a-4576-859b-a2ef0bc32fc9'
+  -
+    name: Inactive MWH Accounts
+    querytype: -1
+    savedqueryid: 'a71553da-c27b-496d-aa18-aaf339a46f9f'
+  -
+    name: MWH Account Lookup View
+    querytype: 64
+    savedqueryid: 'c39c3ad7-abe6-439b-a8e1-b196bc1a5014'
+  -
+    name: Quick Find Active MWH Accounts
+    querytype: 4
+    savedqueryid: 'de2270a7-e54d-4082-80a5-c5c1ef402af9'
+  -
+    name: Active MWH Accounts
+    querytype: -1
+    savedqueryid: '08cd906e-3ad2-4002-901e-d480e23c142b'
+  -
+    name: MWH Account Advanced Find View
+    querytype: 1
+    savedqueryid: 'ed78bf14-343a-4c49-8f0e-e765557afe69'
+

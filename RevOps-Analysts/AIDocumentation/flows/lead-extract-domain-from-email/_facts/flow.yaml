@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '4b2cd07d-1f9a-ee11-be37-000d3af4f266'
+name: 'Lead - Extract Domain from email'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

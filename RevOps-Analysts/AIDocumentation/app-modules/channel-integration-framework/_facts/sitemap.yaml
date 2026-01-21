@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 4
+    uniquename: msdyn_ChannelIntegrationFrameworkApp
+    appmoduleid: 'da8a8afe-1b20-ef11-840b-6045bd5ea018'
+    name: Channel Integration Framework
+

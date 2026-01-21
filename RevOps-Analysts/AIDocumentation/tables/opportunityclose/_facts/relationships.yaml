@@ -1,0 +1,262 @@
+relationships:
+  -
+    schemaname: opportunityclose_activity_parties
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: opportunityclose
+    relationshiptype: OneToMany
+  -
+    schemaname: CampaignResponse_OpportunityCloses
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: opportunityclose
+    relationshiptype: OneToMany
+  -
+    schemaname: OpportunityClose_SyncErrors
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: opportunityclose
+    relationshiptype: OneToMany
+  -
+    schemaname: OpportunityClose_AsyncOperations
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: opportunityclose
+    relationshiptype: OneToMany
+  -
+    schemaname: opportunityclose_MailboxTrackingFolders
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: opportunityclose
+    relationshiptype: OneToMany
+  -
+    schemaname: userentityinstancedata_opportunityclose
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: opportunityclose
+    relationshiptype: OneToMany
+  -
+    schemaname: OpportunityClose_BulkDeleteFailures
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: opportunityclose
+    relationshiptype: OneToMany
+  -
+    schemaname: opportunityclose_PrincipalObjectAttributeAccesses
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: opportunityclose
+    relationshiptype: OneToMany
+  -
+    schemaname: OpportunityClose_Annotation
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: opportunityclose
+    relationshiptype: OneToMany
+  -
+    schemaname: opportunityclose_DeletedItemReferences
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: opportunityclose
+    relationshiptype: OneToMany
+  -
+    schemaname: interactionforemail_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: interactionforemail
+    relationshiptype: ManyToOne
+  -
+    schemaname: knowledgebaserecord_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: knowledgebaserecord
+    relationshiptype: ManyToOne
+  -
+    schemaname: account_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: account
+    relationshiptype: ManyToOne
+  -
+    schemaname: lk_opportunityclose_createdby
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: systemuser
+    relationshiptype: ManyToOne
+  -
+    schemaname: opportunityclose_mailbox_sendermailboxid
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: mailbox
+    relationshiptype: ManyToOne
+  -
+    schemaname: transactioncurrency_opportunityclose
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: transactioncurrency
+    relationshiptype: ManyToOne
+  -
+    schemaname: opportunityclose_owner_ownerid
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: owner
+    relationshiptype: ManyToOne
+  -
+    schemaname: user_opportunityclose
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: systemuser
+    relationshiptype: ManyToOne
+  -
+    schemaname: opportunityclose_sla_slaid
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: sla
+    relationshiptype: ManyToOne
+  -
+    schemaname: business_unit_opportunity_close_activities
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: businessunit
+    relationshiptype: ManyToOne
+  -
+    schemaname: knowledgearticle_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: knowledgearticle
+    relationshiptype: ManyToOne
+  -
+    schemaname: adx_invitation_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: adx_invitation
+    relationshiptype: ManyToOne
+  -
+    schemaname: mspp_adplacement_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: mspp_adplacement
+    relationshiptype: ManyToOne
+  -
+    schemaname: mspp_pollplacement_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: mspp_pollplacement
+    relationshiptype: ManyToOne
+  -
+    schemaname: mspp_publishingstatetransitionrule_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: mspp_publishingstatetransitionrule
+    relationshiptype: ManyToOne
+  -
+    schemaname: mspp_redirect_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: mspp_redirect
+    relationshiptype: ManyToOne
+  -
+    schemaname: mspp_shortcut_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: mspp_shortcut
+    relationshiptype: ManyToOne
+  -
+    schemaname: mspp_website_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: mspp_website
+    relationshiptype: ManyToOne
+  -
+    schemaname: lead_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: lead
+    relationshiptype: ManyToOne
+  -
+    schemaname: bookableresourcebooking_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: bookableresourcebooking
+    relationshiptype: ManyToOne
+  -
+    schemaname: bookableresourcebookingheader_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: bookableresourcebookingheader
+    relationshiptype: ManyToOne
+  -
+    schemaname: bulkoperation_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: bulkoperation
+    relationshiptype: ManyToOne
+  -
+    schemaname: campaign_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: campaign
+    relationshiptype: ManyToOne
+  -
+    schemaname: campaignactivity_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: campaignactivity
+    relationshiptype: ManyToOne
+  -
+    schemaname: entitlement_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: entitlement
+    relationshiptype: ManyToOne
+  -
+    schemaname: entitlementtemplate_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: entitlementtemplate
+    relationshiptype: ManyToOne
+  -
+    schemaname: incident_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: incident
+    relationshiptype: ManyToOne
+  -
+    schemaname: site_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: site
+    relationshiptype: ManyToOne
+  -
+    schemaname: msdyn_customerasset_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: msdyn_customerasset
+    relationshiptype: ManyToOne
+  -
+    schemaname: msdyn_playbookinstance_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: msdyn_playbookinstance
+    relationshiptype: ManyToOne
+  -
+    schemaname: opportunity_OpportunityCloses
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: opportunity
+    relationshiptype: ManyToOne
+  -
+    schemaname: lk_opportunityclose_modifiedonbehalfby
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: systemuser
+    relationshiptype: ManyToOne
+  -
+    schemaname: lk_opportunityclose_createdonbehalfby
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: systemuser
+    relationshiptype: ManyToOne
+  -
+    schemaname: lk_opportunityclose_modifiedby
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: systemuser
+    relationshiptype: ManyToOne
+  -
+    schemaname: team_opportunityclose
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: team
+    relationshiptype: ManyToOne
+  -
+    schemaname: opportunityclose_sla_slainvokedid
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: sla
+    relationshiptype: ManyToOne
+  -
+    schemaname: activity_pointer_opportunity_close
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: activitypointer
+    relationshiptype: ManyToOne
+  -
+    schemaname: Opportunity_OpportunityClose
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: opportunity
+    relationshiptype: ManyToOne
+  -
+    schemaname: competitor_opportunity_activities
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: competitor
+    relationshiptype: ManyToOne
+  -
+    schemaname: lk_externalparty_opportunityclose_createdby
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: externalparty
+    relationshiptype: ManyToOne
+  -
+    schemaname: lk_externalparty_opportunityclose_modifiedby
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: externalparty
+    relationshiptype: ManyToOne
+  -
+    schemaname: service_opportunityclose
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: service
+    relationshiptype: ManyToOne
+

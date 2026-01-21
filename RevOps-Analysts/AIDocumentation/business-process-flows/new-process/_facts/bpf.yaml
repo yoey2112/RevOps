@@ -1,0 +1,6 @@
+workflowid: 'ab81c1af-1a45-48d9-8133-3edc033dbeef'
+primaryentity: knowledgearticle
+description: This is the default process flow for working New KnowledgeArticle.
+uniquename: newprocess
+name: New Process
+

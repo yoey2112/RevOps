@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: 'dd389c85-6d9c-ef11-8a6a-000d3af4dd88'
+name: P2P Transfer Notifications
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

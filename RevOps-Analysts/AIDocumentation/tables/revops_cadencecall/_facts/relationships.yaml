@@ -1,0 +1,682 @@
+relationships:
+  -
+    schemaname: revops_cadencecall_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: CampaignResponse_revops_cadencecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_ActionCards
+    relationshiptype: OneToMany
+    referencingtablelogicalname: actioncard
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_QueueItems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queueitem
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_Annotations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_Feedback
+    relationshiptype: OneToMany
+    referencingtablelogicalname: feedback
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_cadencecall_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: msdyn_bookingalertstatus_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_bookingalertstatus
+  -
+    schemaname: msdyn_bookingrule_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_bookingrule
+  -
+    schemaname: msdyn_resourceterritory_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_resourceterritory
+  -
+    schemaname: msdyn_systemuserschedulersetting_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_systemuserschedulersetting
+  -
+    schemaname: msdyn_timegroup_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_timegroup
+  -
+    schemaname: msdyn_timegroupdetail_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_timegroupdetail
+  -
+    schemaname: interactionforemail_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: interactionforemail
+  -
+    schemaname: revops_audienceimport_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: revops_audienceimport
+  -
+    schemaname: adx_webpage_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_webpage
+  -
+    schemaname: adx_website_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_website
+  -
+    schemaname: msevtmgt_checkin_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_checkin
+  -
+    schemaname: msevtmgt_event_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_event
+  -
+    schemaname: msevtmgt_eventpurchase_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_eventpurchase
+  -
+    schemaname: msevtmgt_eventpurchaseattendee_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_eventpurchaseattendee
+  -
+    schemaname: msevtmgt_eventpurchasepass_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_eventpurchasepass
+  -
+    schemaname: msevtmgt_eventregistration_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_eventregistration
+  -
+    schemaname: msevtmgt_hotel_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_hotel
+  -
+    schemaname: msevtmgt_hotelroomallocation_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_hotelroomallocation
+  -
+    schemaname: msevtmgt_hotelroomreservation_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_hotelroomreservation
+  -
+    schemaname: msevtmgt_layout_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_layout
+  -
+    schemaname: msevtmgt_room_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_room
+  -
+    schemaname: msevtmgt_session_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_sessionregistration_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_sessionregistration
+  -
+    schemaname: msevtmgt_sessiontrack_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_sessiontrack
+  -
+    schemaname: msevtmgt_speaker_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_speaker
+  -
+    schemaname: msevtmgt_speakerengagement_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_speakerengagement
+  -
+    schemaname: msevtmgt_sponsorablearticle_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_sponsorablearticle
+  -
+    schemaname: msevtmgt_sponsorship_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_sponsorship
+  -
+    schemaname: msevtmgt_venue_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_venue
+  -
+    schemaname: msevtmgt_webinarconfiguration_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_webinarconfiguration
+  -
+    schemaname: msevtmgt_webinarprovider_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_webinarprovider
+  -
+    schemaname: msdyncrm_contentsettings_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_contentsettings
+  -
+    schemaname: msdyncrm_customerjourney_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_customerjourney
+  -
+    schemaname: msdyncrm_marketingdynamiccontentmetadata_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_marketingdynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemaildynamiccontentmetadata_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_marketingemaildynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemailtestsend_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_marketingemailtestsend
+  -
+    schemaname: msdyncrm_uicconfig_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_uicconfig
+  -
+    schemaname: msdyncrm_leadscoremodel_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_leadscoremodel
+  -
+    schemaname: msdyncrm_migration_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_migration
+  -
+    schemaname: knowledgebaserecord_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: knowledgebaserecord
+  -
+    schemaname: account_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_cadencecall_systemuser_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: contact_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: contact
+  -
+    schemaname: revops_cadencecall_mailbox_sendermailboxid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: mailbox
+  -
+    schemaname: revops_cadencecall_transactioncurrency_transactioncurrencyid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_cadencecall_owner_ownerid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: owner
+  -
+    schemaname: revops_cadencecall_systemuser_owninguser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_cadencecall_sla_slaid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: sla
+  -
+    schemaname: revops_cadencecall_businessunit_owningbusinessunit
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: knowledgearticle_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: adx_ad_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_ad
+  -
+    schemaname: adx_adplacement_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_adplacement
+  -
+    schemaname: adx_poll_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_poll
+  -
+    schemaname: adx_polloption_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_polloption
+  -
+    schemaname: adx_pollplacement_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_pollplacement
+  -
+    schemaname: adx_pollsubmission_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_pollsubmission
+  -
+    schemaname: adx_publishingstatetransitionrule_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_publishingstatetransitionrule
+  -
+    schemaname: adx_redirect_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_redirect
+  -
+    schemaname: adx_shortcut_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_shortcut
+  -
+    schemaname: adx_communityforumaccesspermission_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_communityforumaccesspermission
+  -
+    schemaname: adx_communityforumalert_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_communityforumalert
+  -
+    schemaname: adx_casedeflection_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_casedeflection
+  -
+    schemaname: adx_contentaccesslevel_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_contentaccesslevel
+  -
+    schemaname: adx_invitation_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: adx_invitation
+  -
+    schemaname: mspp_adplacement_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: mspp_adplacement
+  -
+    schemaname: mspp_pollplacement_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: mspp_pollplacement
+  -
+    schemaname: mspp_publishingstatetransitionrule_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: mspp_publishingstatetransitionrule
+  -
+    schemaname: mspp_redirect_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: mspp_redirect
+  -
+    schemaname: mspp_shortcut_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: mspp_shortcut
+  -
+    schemaname: mspp_website_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: mspp_website
+  -
+    schemaname: lead_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: lead
+  -
+    schemaname: bookableresourcebooking_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: bookableresourcebooking
+  -
+    schemaname: bookableresourcebookingheader_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: bookableresourcebookingheader
+  -
+    schemaname: bulkoperation_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: bulkoperation
+  -
+    schemaname: campaign_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaignactivity_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: campaignactivity
+  -
+    schemaname: contract_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: contract
+  -
+    schemaname: entitlement_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: entitlement
+  -
+    schemaname: entitlementtemplate_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: entitlementtemplate
+  -
+    schemaname: incident_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: incident
+  -
+    schemaname: site_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: site
+  -
+    schemaname: revops_cadencecall_service_serviceid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: service
+  -
+    schemaname: msdyn_customerasset_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_customerasset
+  -
+    schemaname: msdyn_playbookinstance_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_playbookinstance
+  -
+    schemaname: invoice_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: invoice
+  -
+    schemaname: opportunity_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: quote_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: quote
+  -
+    schemaname: salesorder_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: salesorder
+  -
+    schemaname: msdyn_postalbum_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_postalbum
+  -
+    schemaname: msdyn_swarm_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_swarm
+  -
+    schemaname: msdyn_salessuggestion_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_salessuggestion
+  -
+    schemaname: msdyncrm_linkedinaccount_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_linkedinaccount
+  -
+    schemaname: msdyncrm_linkedinactivity_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_linkedinactivity
+  -
+    schemaname: msdyncrm_linkedinfieldmapping_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_linkedinfieldmapping
+  -
+    schemaname: msdyncrm_linkedinform_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_linkedinform
+  -
+    schemaname: msdyncrm_linkedinformanswer_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_linkedinformanswer
+  -
+    schemaname: msdyncrm_linkedinformquestion_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_linkedinformquestion
+  -
+    schemaname: msdyncrm_linkedinformsubmission_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_linkedinformsubmission
+  -
+    schemaname: msdyncrm_linkedinleadmatchingstrategy_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_linkedinleadmatchingstrategy
+  -
+    schemaname: msdyncrm_linkedinuserprofile_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyncrm_linkedinuserprofile
+  -
+    schemaname: revops_cadencecall_systemuser_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_cadencecall_systemuser_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_cadencecall_systemuser_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_cadencecall_team_owningteam
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: team
+  -
+    schemaname: revops_cadencecall_sla_slainvokedid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: sla
+  -
+    schemaname: activity_pointer_revops_cadencecall
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: msdyn_paymentterm_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_paymentterm
+  -
+    schemaname: msdyn_purchaseorder_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_purchaseorder
+  -
+    schemaname: msdyn_purchaseorderproduct_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_purchaseorderproduct
+  -
+    schemaname: msdyn_purchaseorderreceipt_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_purchaseorderreceipt
+  -
+    schemaname: msdyn_purchaseorderreceiptproduct_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_purchaseorderreceiptproduct
+  -
+    schemaname: msdyn_shipvia_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_shipvia
+  -
+    schemaname: msdyn_warehouse_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_warehouse
+  -
+    schemaname: msdyn_projectteam_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_projectteam
+  -
+    schemaname: msdyn_processnotes_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_processnotes
+  -
+    schemaname: revops_smeengagement_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: revops_smeengagement
+  -
+    schemaname: msdyn_project_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msdyn_project
+  -
+    schemaname: revops_mwhaccount_revops_cadencecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: revops_mwhaccount
+

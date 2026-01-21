@@ -1,0 +1,6 @@
+workflowid: 'bcd43793-5686-4fd4-b3b4-c0c26d6f7e40'
+primaryentity: knowledgearticle
+description: This is the default process flow for working Expired KnowledgeArticle.
+uniquename: expiredprocess
+name: Expired Process
+

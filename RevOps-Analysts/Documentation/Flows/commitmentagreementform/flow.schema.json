@@ -1,0 +1,172 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_microsoftforms": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedmicrosoftforms_1f44a"
+        },
+        "api": {
+          "name": "shared_microsoftforms"
+        }
+      },
+      "shared_teams_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedteams_3c027"
+        },
+        "api": {
+          "name": "shared_teams"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedoffice365_e85d3"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_new_response_is_submitted": {
+          "metadata": {
+            "operationMetadataId": "f8b6ea70-f57b-4735-bf07-b28bdbd7230c",
+            "flowSystemMetadata": {
+              "swaggerOperationId": "CreateFormWebhook"
+            }
+          },
+          "type": "ApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connection": {
+                "name": "@parameters('$connections')['shared_microsoftforms']['connectionId']"
+              }
+            },
+            "body": {
+              "eventType": "responseAdded",
+              "notificationUrl": "@{listCallbackUrl()}",
+              "source": "ms-connector"
+            },
+            "path": "/formapi/api/forms/@{encodeURIComponent('WbJEd__xJkS4aXpOcLKBBt7Fe8lGMLNFoEOF-TYveERUQklZVk9ESUhLOUZEVDBaVUIzQk1SSDg2TS4u')}/webhooks",
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Apply_to_each": {
+          "foreach": "@triggerBody()?['value']",
+          "actions": {
+            "Get_response_details": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "ecb7f3b5-814e-402d-82b4-00b8ea1dec9b",
+                "flowSystemMetadata": {
+                  "swaggerOperationId": "GetFormResponseById"
+                }
+              },
+              "type": "ApiConnection",
+              "inputs": {
+                "host": {
+                  "connection": {
+                    "name": "@parameters('$connections')['shared_microsoftforms']['connectionId']"
+                  }
+                },
+                "method": "get",
+                "path": "/formapi/api/forms('@{encodeURIComponent('WbJEd__xJkS4aXpOcLKBBoyjKnrnyrNIhdtaK2vA5OtUQklZVk9ESUhLOUZEVDBaVUIzQk1SSDg2TSQlQCN0PWcu')}')/responses",
+                "queries": {
+                  "response_id": "@items('Apply_to_each')?['resourceData']?['responseId']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Post_message_in_a_chat_or_channel": {
+              "runAfter": {
+                "Send_an_email_from_a_shared_mailbox_(V2)": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "08d9cf50-7547-4328-9987-504e4c6838a1",
+                "flowSystemMetadata": {
+                  "swaggerOperationId": "PostMessageToConversation"
+                }
+              },
+              "type": "ApiConnection",
+              "inputs": {
+                "host": {
+                  "connection": {
+                    "name": "@parameters('$connections')['shared_teams_1']['connectionId']"
+                  }
+                },
+                "method": "post",
+                "body": {
+                  "recipient": {
+                    "groupId": "8ee0c481-e84a-4c31-a125-2f71875a7125",
+                    "channelId": "19:f51a1c5884ed439299ea5a3319f0194f@thread.skype"
+                  },
+                  "messageBody": "<p><strong>New ACPC Partner Commit Agreement Request<br>\n<br>\nRequestor: </strong><strong>@{body('Get_response_details')?['responder']}</strong><strong><br>\n<br>\n<br>\nRespondent User Details<br>\n<br>\nLanguage: </strong><strong>@{body('Get_response_details')?['r0fb3e6a15a8644f2a186b25a32d58fe9']}</strong><strong><br>\n<br>\nFull Name: </strong><strong>@{body('Get_response_details')?['rac72c0831b274d329316ed43845fc930']}</strong><strong><br>\n<br>\nEmail: </strong><strong>@{body('Get_response_details')?['r1322146f0cbf4d7fbb58938745eeb31e']}</strong><strong><br>\n<br>\n<br>\nOther Details<br>\n<br>\nCumulus URL: </strong><strong>@{body('Get_response_details')?['rc40e450eff374eb8bc6d78c74bd6834e']}</strong><strong></strong></p>"
+                },
+                "path": "/beta/teams/conversation/message/poster/@{encodeURIComponent('Flow bot')}/location/@{encodeURIComponent('Channel')}",
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Send_an_email_from_a_shared_mailbox_(V2)": {
+              "runAfter": {
+                "Get_response_details": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "b08fb88d-1794-411b-8fd5-a0e97ab125ee",
+                "flowSystemMetadata": {
+                  "swaggerOperationId": "SharedMailboxSendEmailV2"
+                }
+              },
+              "type": "ApiConnection",
+              "inputs": {
+                "host": {
+                  "connection": {
+                    "name": "@parameters('$connections')['shared_office365']['connectionId']"
+                  }
+                },
+                "method": "post",
+                "body": {
+                  "MailboxAddress": "revops-noreply@sherweb.com",
+                  "To": "salesopsrequest@sherweb.com",
+                  "Subject": "ACPC Partner Commit Agreement Request",
+                  "Body": "<p>New ACPC Partner Commit Agreement Request<br>\n<br>\nRequestor: @{body('Get_response_details')?['responder']}<br>\n<br>\n<br>\nRespondent User Details<br>\n<br>\nLanguage: @{body('Get_response_details')?['r0fb3e6a15a8644f2a186b25a32d58fe9']}<br>\n<br>\nFull Name: @{body('Get_response_details')?['rac72c0831b274d329316ed43845fc930']}<br>\n<br>\nEmail: @{body('Get_response_details')?['r1322146f0cbf4d7fbb58938745eeb31e']}<br>\n<br>\n<br>\nOther Details<br>\n<br>\nCumulus URL: @{body('Get_response_details')?['rc40e450eff374eb8bc6d78c74bd6834e']}</p>",
+                  "Importance": "Normal"
+                },
+                "path": "/v2/SharedMailbox/Mail",
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "0a35e782-4d95-469d-ad4b-df2104017f2d"
+          },
+          "type": "Foreach"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

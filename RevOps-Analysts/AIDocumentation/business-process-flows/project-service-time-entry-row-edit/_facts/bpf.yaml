@@ -1,0 +1,6 @@
+workflowid: 'e58348c0-61ee-41a0-8120-9c4929e12fa3'
+primaryentity: msdyn_timeentry
+description: null
+uniquename: msdyn_timeentryrowedit
+name: 'Project Service - Time Entry Row Edit'
+

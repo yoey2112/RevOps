@@ -1,0 +1,77 @@
+relationships:
+  -
+    schemaname: revops_psaintegration_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_psaintegration
+  -
+    schemaname: revops_psaintegration_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_psaintegration
+  -
+    schemaname: revops_psaintegration_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_psaintegration
+  -
+    schemaname: revops_psaintegration_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_psaintegration
+  -
+    schemaname: revops_psaintegration_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_psaintegration
+  -
+    schemaname: revops_psaintegration_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_psaintegration
+  -
+    schemaname: revops_psaintegration_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_psaintegration
+  -
+    schemaname: revops_psaintegration_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_psaintegration
+  -
+    schemaname: revops_psaintegration_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_psaintegration
+  -
+    schemaname: revops_psaintegration_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_psaintegration
+  -
+    schemaname: lk_revops_psaintegration_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_psaintegration
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_psaintegration_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_psaintegration
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_psaintegration_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_psaintegration
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_psaintegration_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_psaintegration
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_psaintegration
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_psaintegration
+    referencedtablelogicalname: organization
+

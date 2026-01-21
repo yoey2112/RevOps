@@ -1,0 +1,722 @@
+relationships:
+  -
+    schemaname: task_PostRegardings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postregarding
+    referencedtablelogicalname: task
+  -
+    schemaname: task_PostFollows
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postfollow
+    referencedtablelogicalname: task
+  -
+    schemaname: task_PostRoles
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postrole
+    referencedtablelogicalname: task
+  -
+    schemaname: Task_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: task
+  -
+    schemaname: Task_QueueItem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queueitem
+    referencedtablelogicalname: task
+  -
+    schemaname: Task_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: task
+  -
+    schemaname: userentityinstancedata_task
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: task
+  -
+    schemaname: task_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: task
+  -
+    schemaname: Task_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: task
+  -
+    schemaname: task_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: task
+  -
+    schemaname: Task_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: task
+  -
+    schemaname: Task_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: task
+  -
+    schemaname: task_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: task
+  -
+    schemaname: task_actioncard
+    relationshiptype: OneToMany
+    referencingtablelogicalname: actioncard
+    referencedtablelogicalname: task
+  -
+    schemaname: slakpiinstance_task
+    relationshiptype: OneToMany
+    referencingtablelogicalname: slakpiinstance
+    referencedtablelogicalname: task
+  -
+    schemaname: Task_Annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: task
+  -
+    schemaname: task_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: task
+  -
+    schemaname: Task_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: task
+  -
+    schemaname: task_activitymonitor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitymonitor
+    referencedtablelogicalname: task
+  -
+    schemaname: msdyn_readtracker_poly_task
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_readtracker
+    referencedtablelogicalname: task
+  -
+    schemaname: msdyn_msdyn_ocliveworkitem_task_msdyn_routableobjectid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: task
+  -
+    schemaname: msdyn_msdyn_salescopilotinsight_task_msdyn_activityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salescopilotinsight
+    referencedtablelogicalname: task
+  -
+    schemaname: msdyn_msdyn_conversationactionitem_task_msdyn_CreatedActivity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_conversationactionitem
+    referencedtablelogicalname: task
+  -
+    schemaname: task_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: task
+  -
+    schemaname: KnowledgeBaseRecord_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: knowledgebaserecord
+  -
+    schemaname: business_unit_task_activities
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: TransactionCurrency_Task
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: lk_task_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_task
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: KnowledgeArticle_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: team_task
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: team
+  -
+    schemaname: lk_task_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: activity_pointer_task
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: Account_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: account
+  -
+    schemaname: Contact_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: contact
+  -
+    schemaname: lk_task_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: processstage_tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: processstage
+  -
+    schemaname: sla_task
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: sla
+  -
+    schemaname: manualsla_task
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: sla
+  -
+    schemaname: lk_task_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: owner_tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: owner
+  -
+    schemaname: adx_invitation_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_invitation
+  -
+    schemaname: mspp_adplacement_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: mspp_adplacement
+  -
+    schemaname: mspp_pollplacement_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: mspp_pollplacement
+  -
+    schemaname: mspp_publishingstatetransitionrule_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: mspp_publishingstatetransitionrule
+  -
+    schemaname: mspp_redirect_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: mspp_redirect
+  -
+    schemaname: mspp_shortcut_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: mspp_shortcut
+  -
+    schemaname: mspp_website_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: mspp_website
+  -
+    schemaname: Lead_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: lead
+  -
+    schemaname: bookableresourcebooking_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: bookableresourcebooking
+  -
+    schemaname: bookableresourcebookingheader_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: bookableresourcebookingheader
+  -
+    schemaname: bulkoperation_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: bulkoperation
+  -
+    schemaname: Campaign_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: campaign
+  -
+    schemaname: CampaignActivity_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: campaignactivity
+  -
+    schemaname: Contract_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: contract
+  -
+    schemaname: entitlement_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: entitlement
+  -
+    schemaname: entitlementtemplate_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: entitlementtemplate
+  -
+    schemaname: Incident_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: incident
+  -
+    schemaname: site_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: site
+  -
+    schemaname: service_tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: service
+  -
+    schemaname: msdyn_customerasset_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_customerasset
+  -
+    schemaname: msdyn_playbookinstance_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_playbookinstance
+  -
+    schemaname: Invoice_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: invoice
+  -
+    schemaname: Opportunity_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Quote_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: quote
+  -
+    schemaname: SalesOrder_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: salesorder
+  -
+    schemaname: msdyn_postalbum_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_postalbum
+  -
+    schemaname: msdyn_swarm_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_swarm
+  -
+    schemaname: msdyn_salessuggestion_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_salessuggestion
+  -
+    schemaname: msdyn_bookingalertstatus_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_bookingalertstatus
+  -
+    schemaname: msdyn_bookingrule_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_bookingrule
+  -
+    schemaname: msdyn_resourceterritory_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_resourceterritory
+  -
+    schemaname: msdyn_systemuserschedulersetting_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_systemuserschedulersetting
+  -
+    schemaname: msdyn_timegroup_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_timegroup
+  -
+    schemaname: msdyn_timegroupdetail_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_timegroupdetail
+  -
+    schemaname: msevtmgt_checkin_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_checkin
+  -
+    schemaname: msevtmgt_event_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_event
+  -
+    schemaname: msevtmgt_eventpurchase_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_eventpurchase
+  -
+    schemaname: msevtmgt_eventpurchaseattendee_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_eventpurchaseattendee
+  -
+    schemaname: msevtmgt_eventpurchasepass_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_eventpurchasepass
+  -
+    schemaname: msevtmgt_eventregistration_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_eventregistration
+  -
+    schemaname: msevtmgt_hotel_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_hotel
+  -
+    schemaname: msevtmgt_hotelroomallocation_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_hotelroomallocation
+  -
+    schemaname: msevtmgt_hotelroomreservation_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_hotelroomreservation
+  -
+    schemaname: msevtmgt_layout_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_layout
+  -
+    schemaname: msevtmgt_room_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_room
+  -
+    schemaname: msevtmgt_session_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_sessionregistration_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_sessionregistration
+  -
+    schemaname: msevtmgt_sessiontrack_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_sessiontrack
+  -
+    schemaname: msevtmgt_speaker_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_speaker
+  -
+    schemaname: msevtmgt_speakerengagement_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_speakerengagement
+  -
+    schemaname: msevtmgt_sponsorablearticle_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_sponsorablearticle
+  -
+    schemaname: msevtmgt_sponsorship_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_sponsorship
+  -
+    schemaname: msevtmgt_venue_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_venue
+  -
+    schemaname: msevtmgt_webinarconfiguration_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_webinarconfiguration
+  -
+    schemaname: msevtmgt_webinarprovider_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_webinarprovider
+  -
+    schemaname: msdyncrm_contentsettings_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_contentsettings
+  -
+    schemaname: msdyncrm_customerjourney_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_customerjourney
+  -
+    schemaname: msdyncrm_marketingdynamiccontentmetadata_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_marketingdynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemaildynamiccontentmetadata_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_marketingemaildynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemailtestsend_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_marketingemailtestsend
+  -
+    schemaname: msdyncrm_uicconfig_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_uicconfig
+  -
+    schemaname: msdyncrm_msdyncrm_customerjourneyiteration_task
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_customerjourneyiteration
+  -
+    schemaname: msdyncrm_leadscoremodel_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_leadscoremodel
+  -
+    schemaname: msdyncrm_linkedinaccount_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_linkedinaccount
+  -
+    schemaname: msdyncrm_linkedinactivity_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_linkedinactivity
+  -
+    schemaname: msdyncrm_linkedinfieldmapping_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_linkedinfieldmapping
+  -
+    schemaname: msdyncrm_linkedinform_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_linkedinform
+  -
+    schemaname: msdyncrm_linkedinformanswer_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_linkedinformanswer
+  -
+    schemaname: msdyncrm_linkedinformquestion_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_linkedinformquestion
+  -
+    schemaname: msdyncrm_linkedinformsubmission_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_linkedinformsubmission
+  -
+    schemaname: msdyncrm_linkedinleadmatchingstrategy_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_linkedinleadmatchingstrategy
+  -
+    schemaname: msdyncrm_linkedinuserprofile_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_linkedinuserprofile
+  -
+    schemaname: msdyncrm_migration_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyncrm_migration
+  -
+    schemaname: msdynmkt_task_JourneyId_msdynmkt_journey
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: adx_webpage_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_webpage
+  -
+    schemaname: adx_website_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_website
+  -
+    schemaname: adx_ad_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_ad
+  -
+    schemaname: adx_adplacement_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_adplacement
+  -
+    schemaname: adx_poll_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_poll
+  -
+    schemaname: adx_polloption_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_polloption
+  -
+    schemaname: adx_pollplacement_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_pollplacement
+  -
+    schemaname: adx_pollsubmission_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_pollsubmission
+  -
+    schemaname: adx_publishingstatetransitionrule_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_publishingstatetransitionrule
+  -
+    schemaname: adx_redirect_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_redirect
+  -
+    schemaname: adx_shortcut_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_shortcut
+  -
+    schemaname: adx_communityforumaccesspermission_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_communityforumaccesspermission
+  -
+    schemaname: adx_communityforumalert_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_communityforumalert
+  -
+    schemaname: adx_casedeflection_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_casedeflection
+  -
+    schemaname: adx_contentaccesslevel_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: adx_contentaccesslevel
+  -
+    schemaname: revops_audienceimport_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: revops_audienceimport
+  -
+    schemaname: msdyn_paymentterm_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_paymentterm
+  -
+    schemaname: msdyn_purchaseorder_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_purchaseorder
+  -
+    schemaname: msdyn_purchaseorderproduct_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_purchaseorderproduct
+  -
+    schemaname: msdyn_purchaseorderreceipt_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_purchaseorderreceipt
+  -
+    schemaname: msdyn_purchaseorderreceiptproduct_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_purchaseorderreceiptproduct
+  -
+    schemaname: msdyn_shipvia_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_shipvia
+  -
+    schemaname: msdyn_warehouse_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_warehouse
+  -
+    schemaname: msdyn_projectteam_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_projectteam
+  -
+    schemaname: msdyn_processnotes_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_processnotes
+  -
+    schemaname: revops_smeengagement_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: revops_smeengagement
+  -
+    schemaname: msdyn_project_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdyn_project
+  -
+    schemaname: revops_mwhaccount_Tasks
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: task
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: task_subscription_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: subscription
+    referencedtablelogicalname: task
+

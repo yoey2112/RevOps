@@ -1,0 +1,6 @@
+schema_version: 1
+pluginassemblyid: 'db443b24-e527-4701-9122-fe3e1e993779'
+name: RevOps.Plugins.EmailWorkflowMarker
+version: '1.0.0.0'
+publickeytoken: '7d35e700d390c80a'
+

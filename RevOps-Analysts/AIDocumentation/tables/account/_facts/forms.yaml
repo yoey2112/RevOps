@@ -1,0 +1,4988 @@
+forms:
+  -
+    name: Customer profile cases
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Customer Account Cases
+        name: Customer_Account_Cases
+        tab: SUMMARY_TAB
+        visible: true
+    fields:
+      -
+        section: Customer_Account_Cases
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Shows cases related to the customer (account)
+    tabs:
+      -
+        label: Summary
+        name: SUMMARY_TAB
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Main
+  -
+    name: Account form for Customer Card
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: New Section
+        name: tab_2_section_1
+        tab: tab_2
+        visible: true
+      -
+        label: New Section
+        name: tab_2_section_3
+        tab: tab_2
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_name
+        field: name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Account form for Customer Card.
+    tabs:
+      -
+        label: New Tab
+        name: tab_2
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Main
+  -
+    name: Account Profile
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: New Section
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: Account Potential / Tech Stack
+        name: tab_1_section_3
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_businessmodel
+        field: revops_businessmodel
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_privateequityowned
+        field: revops_privateequityowned
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_nocustomers
+        field: revops_nocustomers
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_noemployees
+        field: revops_noemployees
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_noendpoints
+        field: revops_noendpoints
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_rmm
+        field: revops_rmm
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_psa
+        field: revops_psa
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_itdocumentation
+        field: revops_itdocumentation
+    description: null
+    tabs:
+      -
+        label: New Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 10
+    type_name: Quick View
+  -
+    name: Account Hierarchy Tile Form
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Information
+        name: account tile
+        tab: hierarchy
+        visible: true
+    fields:
+      -
+        section: account tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: account tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: account tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: openrevenue
+        field: openrevenue
+      -
+        section: account tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: opendeals
+        field: opendeals
+    description: This is the account hierarchy definition.
+    tabs:
+      -
+        label: Hierarchy
+        name: hierarchy
+        visible: true
+        expanded: true
+    field_count: 4
+    type_name: Quick View
+  -
+    name: Social Profiles
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: RELATED SOCIAL PROFILES
+        name: SOCIALPROFILES
+        tab: general
+        visible: true
+    fields:
+    description: A form that displays social profiles of account.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Quick View
+  -
+    name: Account Card form
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: ''
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: ''
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: ''
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: address1_city
+        field: address1_city
+      -
+        section: CardFooter
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+      -
+        section: CardFooter
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: emailaddress1
+        field: emailaddress1
+    description: Default Account card form.
+    tabs:
+      -
+        label: Account Card
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Card
+  -
+    name: Cases For Customer
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: section
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+    fields:
+    description: Cases for Omnichannel Session Overview Customers
+    tabs:
+      -
+        label: Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Quick View
+  -
+    name: In Context Form
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: Key details
+        name: Summary_keydetails
+        tab: Summary
+        visible: true
+      -
+        label: Contacts
+        name: Summary_contacts
+        tab: Summary
+        visible: true
+      -
+        label: Recent opportunities
+        name: Summary_recentopportunities
+        tab: Summary
+        visible: true
+      -
+        label: Collaboration
+        name: Summary_collaboration
+        tab: Summary
+        visible: true
+      -
+        label: Notes
+        name: Summary_notes
+        tab: Summary
+        visible: true
+      -
+        label: Tasks
+        name: Summary_tasks
+        tab: Summary
+        visible: true
+      -
+        label: section
+        name: Activity_column_2_section_1
+        tab: Activity
+        visible: true
+    fields:
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: websiteurl
+        field: websiteurl
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Summary_contacts
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_name
+        field: name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_name
+        field: name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_address1_city
+        field: address1_city
+    description: Updated default Account form.
+    tabs:
+      -
+        label: Summary
+        name: Summary
+        visible: true
+        expanded: true
+      -
+        label: Activity
+        name: Activity
+        visible: true
+        expanded: false
+    field_count: 7
+    type_name: Main
+  -
+    name: Portal Account
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ACCOUNT INFORMATION
+        name: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: ADDRESS
+        name: ADDRESS
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: ''
+        name: MapSection
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: SOCIAL PANE
+        name: SOCIAL_PANE_TAB
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Section
+        name: SUMMARY_TAB_section_6
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: COMPANY PROFILE
+        name: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: Description
+        name: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: MARKETING
+        name: MARKETING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: CONTACT PREFERENCES
+        name: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: BILLING
+        name: BILLING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: SHIPPING
+        name: SHIPPING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: CHILD ACCOUNTS
+        name: ChildAccounts
+        tab: DETAILS_TAB
+        visible: true
+    fields:
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: fax
+        field: fax
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: websiteurl
+        field: websiteurl
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: parentaccountid
+        field: parentaccountid
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: tickersymbol
+        field: tickersymbol
+      -
+        section: ADDRESS
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: address1_composite
+        field: address1_composite
+      -
+        section: SUMMARY_TAB_section_6
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: SUMMARY_TAB_section_6
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: contactquickform
+        field: primarycontactid
+      -
+        section: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: industrycode
+        field: industrycode
+      -
+        section: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: sic
+        field: sic
+      -
+        section: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: ownershipcode
+        field: ownershipcode
+      -
+        section: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: originatingleadid
+        field: originatingleadid
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: lastusedincampaign
+        field: lastusedincampaign
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotsendmm
+        field: donotsendmm
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: preferredcontactmethodcode
+        field: preferredcontactmethodcode
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotemail
+        field: donotemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotbulkemail
+        field: donotbulkemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotphone
+        field: donotphone
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotfax
+        field: donotfax
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotpostalmail
+        field: donotpostalmail
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: creditlimit
+        field: creditlimit
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: creditonhold
+        field: creditonhold
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: paymenttermscode
+        field: paymenttermscode
+      -
+        section: SHIPPING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: address1_shippingmethodcode
+        field: address1_shippingmethodcode
+      -
+        section: SHIPPING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: address1_freighttermscode
+        field: address1_freighttermscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revenue
+        field: revenue
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_numberofemployees
+        field: numberofemployees
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: A form for this entity.
+    tabs:
+      -
+        label: Summary
+        name: SUMMARY_TAB
+        visible: true
+        expanded: true
+      -
+        label: Details
+        name: DETAILS_TAB
+        visible: true
+        expanded: true
+    field_count: 31
+    type_name: Main
+  -
+    name: Account form for Conversation Customer Card
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: New Section
+        name: tab_2_section_1
+        tab: tab_2
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_name
+        field: name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Account form for Conversation Customer Card.
+    tabs:
+      -
+        label: New Tab
+        name: tab_2
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Main
+  -
+    name: 'TimelineWallControl - Account- Main'
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: SOCIAL PANE
+        name: SOCIAL_PANE_TAB
+        tab: SUMMARY_TAB
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Form to display timeline for account
+    tabs:
+      -
+        label: Summary
+        name: SUMMARY_TAB
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Main
+  -
+    name: 'Account - Case Form'
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: New Section
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_tier
+        field: revops_tier
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_monthlyrecurringrevenue
+        field: revops_monthlyrecurringrevenue
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: address1_country
+        field: address1_country
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: address1_stateorprovince
+        field: address1_stateorprovince
+    description: null
+    tabs:
+      -
+        label: New Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 5
+    type_name: Quick View
+  -
+    name: 'Account - Test'
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ACCOUNT INFORMATION
+        name: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: ACCOUNT CLASSIFICATION
+        name: SUMMARY_TAB_section_9
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: ADDRESS
+        name: ADDRESS
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Address
+        name: SUMMARY_TAB_ADDRESSINPUT_SECTION
+        tab: SUMMARY_TAB
+        visible: false
+      -
+        label: ''
+        name: MapSection
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: SOCIAL PANE
+        name: SOCIAL_PANE_TAB
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Assistant
+        name: Summary_section_6
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Activity Dates
+        name: SUMMARY_TAB_section_69
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Section
+        name: SUMMARY_TAB_section_6
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Description
+        name: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: '6sense'
+        name: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: DATA ENRICHMENT
+        name: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: MARKETING
+        name: MARKETING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: CONTACT PREFERENCES
+        name: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: ACCOUNT PROFILE
+        name: SUMMARY_TAB_section_10
+        tab: tab_9
+        visible: true
+      -
+        label: New Section
+        name: tab_8_section_3
+        tab: tab_8
+        visible: true
+      -
+        label: New Section
+        name: tab_8_section_3
+        tab: tab_8
+        visible: true
+      -
+        label: Accounts
+        name: tab_7_section_1
+        tab: CUMULUS
+        visible: true
+      -
+        label: Revenue by Solution
+        name: tab_7_section_3
+        tab: CUMULUS
+        visible: true
+      -
+        label: Revenue by Product
+        name: CUMULUS_section_4
+        tab: CUMULUS
+        visible: true
+      -
+        label: Opportunities
+        name: tab_10_section_3
+        tab: tab_10
+        visible: true
+      -
+        label: Leads
+        name: Leads
+        tab: tab_10
+        visible: true
+      -
+        label: Churn
+        name: tab_10_section_4
+        tab: tab_10
+        visible: true
+      -
+        label: General
+        name: urstab_section_general
+        tab: urstab
+        visible: true
+      -
+        label: Section
+        name: tab_3_section_2
+        tab: urstab
+        visible: true
+      -
+        label: Section
+        name: tab_3_section_3
+        tab: urstab
+        visible: true
+      -
+        label: Insights
+        name: insights_section
+        tab: insights
+        visible: true
+      -
+        label: Assets and Locations
+        name: AssetsAndLocationsSection
+        tab: AssetsAndLocationsTab
+        visible: true
+      -
+        label: New Section
+        name: tab_11_section_1
+        tab: tab_11
+        visible: true
+    fields:
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: true
+        visible: true
+        control_id: revops_domain
+        field: revops_domain
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: websiteurl
+        field: websiteurl
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: parentaccountid
+        field: parentaccountid
+      -
+        section: SUMMARY_TAB_section_9
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_tiermanualoverride
+        field: revops_tiermanualoverride
+      -
+        section: SUMMARY_TAB_section_9
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_tieroverride
+        field: revops_tieroverride
+      -
+        section: SUMMARY_TAB_section_9
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_tieroverridevalue
+        field: revops_tieroverridevalue
+      -
+        section: SUMMARY_TAB_section_9
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_channel
+        field: revops_channel
+      -
+        section: SUMMARY_TAB_section_9
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: customertypecode
+        field: customertypecode
+      -
+        section: ADDRESS
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: address1_composite
+        field: address1_composite
+      -
+        section: ADDRESS
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_stateorprovince
+        field: revops_stateorprovince
+      -
+        section: ADDRESS
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_iso3166_2subdivisioncode
+        field: revops_iso3166_2subdivisioncode
+      -
+        section: ADDRESS
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_country
+        field: revops_country
+      -
+        section: ADDRESS
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_iso3166alpha2countrycode
+        field: revops_iso3166alpha2countrycode
+      -
+        section: ADDRESS
+        tab: SUMMARY_TAB
+        disabled: true
+        visible: true
+        control_id: territoryid
+        field: territoryid
+      -
+        section: SUMMARY_TAB_ADDRESSINPUT_SECTION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: address1_line1
+        field: address1_line1
+      -
+        section: SUMMARY_TAB_section_69
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_lastactivitydate
+        field: revops_lastactivitydate
+      -
+        section: SUMMARY_TAB_section_69
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_nextactivitydue
+        field: revops_nextactivitydue
+      -
+        section: SUMMARY_TAB_section_6
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: SUMMARY_TAB_section_6
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: contactquickform
+        field: primarycontactid
+      -
+        section: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_sixsensesegmentnames
+        field: revops_sixsensesegmentnames
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_enricheddescription
+        field: revops_enricheddescription
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_logo
+        field: revops_logo
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_companylinkedinhandle
+        field: revops_companylinkedinhandle
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_estimatedannualrevenue
+        field: revops_estimatedannualrevenue
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revenue
+        field: revenue
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_employeesrange
+        field: revops_employeesrange
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_noemployees
+        field: revops_noemployees
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_foundedyear
+        field: revops_foundedyear
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_gicscode
+        field: revops_gicscode
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_sector
+        field: revops_sector
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_enrichedindustry
+        field: revops_enrichedindustry
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_industrygroup
+        field: revops_industrygroup
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_subindustry
+        field: revops_subindustry
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_clearbitenrichedat
+        field: revops_clearbitenrichedat
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_clearbitindexedat
+        field: revops_clearbitindexedat
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_clearbitstatus
+        field: revops_clearbitstatus
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_clearbitenrichmentdetail
+        field: revops_clearbitenrichmentdetail
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: originatingleadid
+        field: originatingleadid
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: lastusedincampaign
+        field: lastusedincampaign
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotsendmm
+        field: donotsendmm
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: preferredcontactmethodcode
+        field: preferredcontactmethodcode
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotemail
+        field: donotemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: followemail
+        field: followemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotbulkemail
+        field: donotbulkemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotphone
+        field: donotphone
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotfax
+        field: donotfax
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotpostalmail
+        field: donotpostalmail
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_businessmodel
+        field: revops_businessmodel
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_privateequityowned
+        field: revops_privateequityowned
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_noemployees
+        field: revops_noemployees
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_noendpoints
+        field: revops_noendpoints
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_nocustomers
+        field: revops_nocustomers
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_psa
+        field: revops_psa
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_rmm
+        field: revops_rmm
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_itdocumentation
+        field: revops_itdocumentation
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_country
+        field: revops_country
+      -
+        section: tab_8_section_3
+        tab: tab_8
+        disabled: false
+        visible: true
+        control_id: revops_techstackmrrwinnable
+        field: revops_techstackmrrwinnable
+      -
+        section: tab_8_section_3
+        tab: tab_8
+        disabled: false
+        visible: true
+        control_id: revops_techstackmrrtotal
+        field: revops_techstackmrrtotal
+      -
+        section: urstab_section_general
+        tab: urstab
+        disabled: false
+        visible: true
+        control_id: address1_latitude
+        field: address1_latitude
+      -
+        section: urstab_section_general
+        tab: urstab
+        disabled: false
+        visible: true
+        control_id: address1_longitude
+        field: address1_longitude
+      -
+        section: insights_section
+        tab: insights
+        disabled: false
+        visible: true
+        control_id: AccountInsightsCtrl
+        field: msdyncrm_insights_placeholder
+      -
+        section: AssetsAndLocationsSection
+        tab: AssetsAndLocationsTab
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revops_tier
+        field: revops_tier
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revops_noemployees
+        field: revops_noemployees
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revops_monthlyrecurringrevenue
+        field: revops_monthlyrecurringrevenue
+    description: Account form with Relationship Health component
+    tabs:
+      -
+        label: Summary
+        name: SUMMARY_TAB
+        visible: true
+        expanded: true
+      -
+        label: Details
+        name: DETAILS_TAB
+        visible: true
+        expanded: true
+      -
+        label: Account Profile
+        name: tab_9
+        visible: true
+        expanded: true
+      -
+        label: Tech Stack
+        name: tab_8
+        visible: true
+        expanded: true
+      -
+        label: Cumulus
+        name: CUMULUS
+        visible: true
+        expanded: true
+      -
+        label: 'Leads, Opps & Churn'
+        name: tab_10
+        visible: true
+        expanded: true
+      -
+        label: Scheduling
+        name: urstab
+        visible: true
+        expanded: false
+      -
+        label: Insights
+        name: insights
+        visible: true
+        expanded: true
+      -
+        label: Assets and Locations
+        name: AssetsAndLocationsTab
+        visible: false
+        expanded: true
+      -
+        label: Account Health
+        name: tab_11
+        visible: true
+        expanded: true
+    field_count: 70
+    type_name: Main
+  -
+    name: 'Quick View - SME Engagement'
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Account Information
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_tier
+        field: revops_tier
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_monthlyrecurringrevenue
+        field: revops_monthlyrecurringrevenue
+    description: null
+    tabs:
+      -
+        label: New Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 3
+    type_name: Quick View
+  -
+    name: 'Quick View - Project'
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Account Information
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: null
+    tabs:
+      -
+        label: New Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Quick View
+  -
+    name: App for Outlook Account Card
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: section
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: emailaddress1
+        field: emailaddress1
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+    description: App for Outlook Account Card
+    tabs:
+      -
+        label: Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 3
+    type_name: Quick View
+  -
+    name: Portal Account for Interactive experience
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: ACCOUNT INFORMATION
+        name: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: TIMELINE
+        name: Timeline
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: RELATED
+        name: ref_pan_SUMMARY_TAB_section_6
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: COMPANY PROFILE
+        name: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: DESCRIPTION
+        name: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: MARKETING
+        name: MARKETING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: CONTACT PREFERENCES
+        name: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: BILLING
+        name: BILLING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: SHIPPING
+        name: SHIPPING
+        tab: DETAILS_TAB
+        visible: true
+    fields:
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: contactquickform
+        field: primarycontactid
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: fax
+        field: fax
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: websiteurl
+        field: websiteurl
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: parentaccountid
+        field: parentaccountid
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: address1_composite
+        field: address1_composite
+      -
+        section: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: industrycode
+        field: industrycode
+      -
+        section: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: sic
+        field: sic
+      -
+        section: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: ownershipcode
+        field: ownershipcode
+      -
+        section: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: originatingleadid
+        field: originatingleadid
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: lastusedincampaign
+        field: lastusedincampaign
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotsendmm
+        field: donotsendmm
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: preferredcontactmethodcode
+        field: preferredcontactmethodcode
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotemail
+        field: donotemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotbulkemail
+        field: donotbulkemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotphone
+        field: donotphone
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotfax
+        field: donotfax
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotpostalmail
+        field: donotpostalmail
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: creditlimit
+        field: creditlimit
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: creditonhold
+        field: creditonhold
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: paymenttermscode
+        field: paymenttermscode
+      -
+        section: SHIPPING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: address1_shippingmethodcode
+        field: address1_shippingmethodcode
+      -
+        section: SHIPPING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: address1_freighttermscode
+        field: address1_freighttermscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revenue
+        field: revenue
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_numberofemployees
+        field: numberofemployees
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Default Interactive experience Portal Account form.
+    tabs:
+      -
+        label: Summary
+        name: SUMMARY_TAB
+        visible: true
+        expanded: true
+      -
+        label: Details
+        name: DETAILS_TAB
+        visible: true
+        expanded: true
+    field_count: 30
+    type_name: Main
+  -
+    name: Account Reference Panel
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: ACCOUNT DETAILS
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: OTHER DETAILS
+        name: tab_1_section_2
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revenue
+        field: revenue
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: numberofemployees
+        field: numberofemployees
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: address1_line1
+        field: address1_line1
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: address1_line2
+        field: address1_line2
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: address1_city
+        field: address1_city
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: address1_postalcode
+        field: address1_postalcode
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: tab_1_section_2
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: tab_1_section_2
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: emailaddress1
+        field: emailaddress1
+      -
+        section: tab_1_section_2
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+    description: A form that displays Reference Panel of Account.
+    tabs:
+      -
+        label: ''
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 11
+    type_name: Quick View
+  -
+    name: Account for Multisession experience
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ACCOUNT INFORMATION
+        name: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: TIMELINE
+        name: Timeline
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Related Cases
+        name: SUMMARY_TAB_section_4
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: COMPANY PROFILE
+        name: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: DESCRIPTION
+        name: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: MARKETING
+        name: MARKETING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: CONTACT PREFERENCES
+        name: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: BILLING
+        name: BILLING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: SHIPPING
+        name: SHIPPING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: Accounts
+        name: tab_3_section_1
+        tab: CUMULUS_TAB
+        visible: true
+    fields:
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: contactquickform
+        field: primarycontactid
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: fax
+        field: fax
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: websiteurl
+        field: websiteurl
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: parentaccountid
+        field: parentaccountid
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: address1_composite
+        field: address1_composite
+      -
+        section: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: industrycode
+        field: industrycode
+      -
+        section: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: sic
+        field: sic
+      -
+        section: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: ownershipcode
+        field: ownershipcode
+      -
+        section: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: originatingleadid
+        field: originatingleadid
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: lastusedincampaign
+        field: lastusedincampaign
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotsendmm
+        field: donotsendmm
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: preferredcontactmethodcode
+        field: preferredcontactmethodcode
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotemail
+        field: donotemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: followemail
+        field: followemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotbulkemail
+        field: donotbulkemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotphone
+        field: donotphone
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotfax
+        field: donotfax
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotpostalmail
+        field: donotpostalmail
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: creditlimit
+        field: creditlimit
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: creditonhold
+        field: creditonhold
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: paymenttermscode
+        field: paymenttermscode
+      -
+        section: SHIPPING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: address1_shippingmethodcode
+        field: address1_shippingmethodcode
+      -
+        section: SHIPPING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: address1_freighttermscode
+        field: address1_freighttermscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revops_monthlyrecurringrevenue
+        field: revops_monthlyrecurringrevenue
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revops_tier
+        field: revops_tier
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_numberofemployees
+        field: numberofemployees
+    description: Default Multisession experience Account form.
+    tabs:
+      -
+        label: Summary
+        name: SUMMARY_TAB
+        visible: true
+        expanded: true
+      -
+        label: Details
+        name: DETAILS_TAB
+        visible: true
+        expanded: true
+      -
+        label: Cumulus
+        name: CUMULUS_TAB
+        visible: true
+        expanded: true
+    field_count: 32
+    type_name: Main
+  -
+    name: Recent Cases and Entitlements
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: ''
+        name: Cases
+        tab: general
+        visible: true
+      -
+        label: ''
+        name: Entitlements
+        tab: general
+        visible: true
+    fields:
+    description: A form that displays the recent cases and entitlements.
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Quick View
+  -
+    name: Account for Interactive experience
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ACCOUNT INFORMATION
+        name: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: TIMELINE
+        name: Timeline
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: RELATED
+        name: ref_pan_SUMMARY_TAB_section_6
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: COMPANY PROFILE
+        name: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: DESCRIPTION
+        name: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: MARKETING
+        name: MARKETING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: CONTACT PREFERENCES
+        name: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: BILLING
+        name: BILLING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: SHIPPING
+        name: SHIPPING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: Accounts
+        name: tab_4_section_1
+        tab: CUMULUS_TAB
+        visible: true
+      -
+        label: Customer Assets Associated View
+        name: Devices_Tab_Section_1
+        tab: Devices_Tab
+        visible: true
+    fields:
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: contactquickform
+        field: primarycontactid
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: fax
+        field: fax
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: websiteurl
+        field: websiteurl
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: parentaccountid
+        field: parentaccountid
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: address1_composite
+        field: address1_composite
+      -
+        section: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: industrycode
+        field: industrycode
+      -
+        section: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: sic
+        field: sic
+      -
+        section: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: ownershipcode
+        field: ownershipcode
+      -
+        section: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: originatingleadid
+        field: originatingleadid
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: lastusedincampaign
+        field: lastusedincampaign
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotsendmm
+        field: donotsendmm
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: preferredcontactmethodcode
+        field: preferredcontactmethodcode
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotemail
+        field: donotemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: followemail
+        field: followemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotbulkemail
+        field: donotbulkemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotphone
+        field: donotphone
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotfax
+        field: donotfax
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotpostalmail
+        field: donotpostalmail
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: creditlimit
+        field: creditlimit
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: creditonhold
+        field: creditonhold
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: paymenttermscode
+        field: paymenttermscode
+      -
+        section: SHIPPING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: address1_shippingmethodcode
+        field: address1_shippingmethodcode
+      -
+        section: SHIPPING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: address1_freighttermscode
+        field: address1_freighttermscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revenue
+        field: revenue
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_numberofemployees
+        field: numberofemployees
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Default Interactive experience Account form.
+    tabs:
+      -
+        label: Summary
+        name: SUMMARY_TAB
+        visible: true
+        expanded: true
+      -
+        label: Details
+        name: DETAILS_TAB
+        visible: true
+        expanded: true
+      -
+        label: Cumulus
+        name: CUMULUS_TAB
+        visible: true
+        expanded: true
+      -
+        label: Customer Assets
+        name: Devices_Tab
+        visible: false
+        expanded: true
+    field_count: 31
+    type_name: Main
+  -
+    name: Accounts Dashboard
+    is_active: true
+    type: 10
+    sections:
+      -
+        label: ''
+        name: VisualFilters
+        tab: ''
+        visible: true
+      -
+        label: ''
+        name: Streams
+        tab: StreamsContainer
+        visible: true
+    fields:
+    description: Shows an overview of data related to accounts.
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+      -
+        label: ''
+        name: StreamsContainer
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Type 10
+  -
+    name: Insights
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: Insights
+        name: insights_section
+        tab: insights
+        visible: true
+      -
+        label: Insights filter
+        name: Insights_InsightsFilter
+        tab: Insights
+        visible: true
+      -
+        label: Interactions timeline
+        name: Insights_TimelineWidgetControlSection
+        tab: Insights
+        visible: true
+      -
+        label: Widget row
+        name: Insights_InteractionsBreakdown
+        tab: Insights
+        visible: true
+      -
+        label: Insights filter
+        name: EmailInteractions_InsightsFilter
+        tab: EmailInteractions
+        visible: true
+      -
+        label: Email clicked list
+        name: EmailInteractions_EmailClickedList
+        tab: EmailInteractions
+        visible: true
+      -
+        label: Email sent list
+        name: EmailInteractions_EmailSentList
+        tab: EmailInteractions
+        visible: true
+      -
+        label: Email forwarded list
+        name: EmailInteractions_EmailForwardedList
+        tab: EmailInteractions
+        visible: true
+      -
+        label: Email feedback loop list
+        name: EmailInteractions_EmailFeedbackLoopList
+        tab: EmailInteractions
+        visible: true
+      -
+        label: Email opened list
+        name: EmailInteractions_EmailOpenedList
+        tab: EmailInteractions
+        visible: true
+      -
+        label: Email delivered list
+        name: EmailInteractions_EmailDeliveredList
+        tab: EmailInteractions
+        visible: true
+      -
+        label: Email soft bounced list
+        name: EmailInteractions_EmailSoftBouncedList
+        tab: EmailInteractions
+        visible: true
+      -
+        label: Email hard bounced list
+        name: EmailInteractions_EmailHardBouncedList
+        tab: EmailInteractions
+        visible: true
+      -
+        label: Email blocked list
+        name: EmailInteractions_EmailBlockedList
+        tab: EmailInteractions
+        visible: true
+      -
+        label: Email subscription submit list
+        name: EmailInteractions_EmailSubscriptionSubmitList
+        tab: EmailInteractions
+        visible: true
+      -
+        label: Blocked contact activity
+        name: EmailInteractions_ActivityBlockedList
+        tab: EmailInteractions
+        visible: true
+      -
+        label: Insights Filter
+        name: WebInteractions_InsightsFilter
+        tab: WebInteractions
+        visible: true
+      -
+        label: Website visited list
+        name: WebInteractions_WebsiteVisitedList
+        tab: WebInteractions
+        visible: true
+      -
+        label: Website clicked list
+        name: WebInteractions_WebsiteClickedList
+        tab: WebInteractions
+        visible: true
+      -
+        label: Redirect link clicked list
+        name: WebInteractions_RedirectLinkClickedList
+        tab: WebInteractions
+        visible: true
+      -
+        label: Insights filter
+        name: EventInteractions_InsightsFilter
+        tab: EventInteractions
+        visible: true
+      -
+        label: Interactions timeline
+        name: EventInteractions_TimelineWidgetControlSection
+        tab: EventInteractions
+        visible: true
+      -
+        label: 'Event check-in list'
+        name: EventInteractions_AccountEventCheckInList
+        tab: EventInteractions
+        visible: true
+      -
+        label: Event registration list
+        name: EventInteractions_AccountEventRegistrationList
+        tab: EventInteractions
+        visible: true
+      -
+        label: Event registration canceled list
+        name: EventInteractions_AccountEventRegistrationCanceledList
+        tab: EventInteractions
+        visible: true
+      -
+        label: Form submitted list
+        name: MarketingFormInteractions_InsightsFilter
+        tab: MarketingFormInteractions
+        visible: true
+      -
+        label: Form Submitted List
+        name: MarketingFormInteractions_AccountFormSubmittedList
+        tab: MarketingFormInteractions
+        visible: true
+      -
+        label: Form visited list
+        name: MarketingFormInteractions_AccountFormVisitedList
+        tab: MarketingFormInteractions
+        visible: true
+    fields:
+      -
+        section: insights_section
+        tab: insights
+        disabled: false
+        visible: true
+        control_id: AccountInsightsCtrl
+        field: msdyncrm_insights_placeholder
+      -
+        section: Insights_InsightsFilter
+        tab: Insights
+        disabled: false
+        visible: true
+        control_id: InsightsFilter
+        field: msdyncrm_insights_placeholder
+      -
+        section: Insights_TimelineWidgetControlSection
+        tab: Insights
+        disabled: false
+        visible: true
+        control_id: InteractionsTimeline
+        field: msdyncrm_insights_placeholder
+      -
+        section: Insights_InteractionsBreakdown
+        tab: Insights
+        disabled: false
+        visible: true
+        control_id: InteractionsBreakdown
+        field: msdyncrm_insights_placeholder
+      -
+        section: EmailInteractions_InsightsFilter
+        tab: EmailInteractions
+        disabled: false
+        visible: true
+        control_id: InsightsFilter
+        field: msdyncrm_insights_placeholder
+      -
+        section: EmailInteractions_EmailClickedList
+        tab: EmailInteractions
+        disabled: false
+        visible: true
+        control_id: EmailClickedList
+        field: msdyncrm_insights_placeholder
+      -
+        section: EmailInteractions_EmailSentList
+        tab: EmailInteractions
+        disabled: false
+        visible: true
+        control_id: EmailSentList
+        field: msdyncrm_insights_placeholder
+      -
+        section: EmailInteractions_EmailForwardedList
+        tab: EmailInteractions
+        disabled: false
+        visible: true
+        control_id: EmailForwardedList
+        field: msdyncrm_insights_placeholder
+      -
+        section: EmailInteractions_EmailFeedbackLoopList
+        tab: EmailInteractions
+        disabled: false
+        visible: true
+        control_id: EmailFeedbackLoopList
+        field: msdyncrm_insights_placeholder
+      -
+        section: EmailInteractions_EmailOpenedList
+        tab: EmailInteractions
+        disabled: false
+        visible: true
+        control_id: EmailOpenedList
+        field: msdyncrm_insights_placeholder
+      -
+        section: EmailInteractions_EmailDeliveredList
+        tab: EmailInteractions
+        disabled: false
+        visible: true
+        control_id: EmailDeliveredList
+        field: msdyncrm_insights_placeholder
+      -
+        section: EmailInteractions_EmailSoftBouncedList
+        tab: EmailInteractions
+        disabled: false
+        visible: true
+        control_id: EmailSoftBouncedList
+        field: msdyncrm_insights_placeholder
+      -
+        section: EmailInteractions_EmailHardBouncedList
+        tab: EmailInteractions
+        disabled: false
+        visible: true
+        control_id: EmailHardBouncedList
+        field: msdyncrm_insights_placeholder
+      -
+        section: EmailInteractions_EmailBlockedList
+        tab: EmailInteractions
+        disabled: false
+        visible: true
+        control_id: EmailBlockedList
+        field: msdyncrm_insights_placeholder
+      -
+        section: EmailInteractions_EmailSubscriptionSubmitList
+        tab: EmailInteractions
+        disabled: false
+        visible: true
+        control_id: EmailSubscriptionSubmitList
+        field: msdyncrm_insights_placeholder
+      -
+        section: EmailInteractions_ActivityBlockedList
+        tab: EmailInteractions
+        disabled: false
+        visible: true
+        control_id: ActivityBlockedList
+        field: msdyncrm_insights_placeholder
+      -
+        section: WebInteractions_InsightsFilter
+        tab: WebInteractions
+        disabled: false
+        visible: true
+        control_id: InsightsFilter
+        field: msdyncrm_insights_placeholder
+      -
+        section: WebInteractions_WebsiteVisitedList
+        tab: WebInteractions
+        disabled: false
+        visible: true
+        control_id: WebsiteVisitedList
+        field: msdyncrm_insights_placeholder
+      -
+        section: WebInteractions_WebsiteClickedList
+        tab: WebInteractions
+        disabled: false
+        visible: true
+        control_id: WebsiteClickedList
+        field: msdyncrm_insights_placeholder
+      -
+        section: WebInteractions_RedirectLinkClickedList
+        tab: WebInteractions
+        disabled: false
+        visible: true
+        control_id: RedirectLinkClickedList
+        field: msdyncrm_insights_placeholder
+      -
+        section: EventInteractions_InsightsFilter
+        tab: EventInteractions
+        disabled: false
+        visible: true
+        control_id: InsightsFilter
+        field: msdyncrm_insights_placeholder
+      -
+        section: EventInteractions_TimelineWidgetControlSection
+        tab: EventInteractions
+        disabled: false
+        visible: true
+        control_id: AccountInteractionsTimelineLeadEvent
+        field: msdyncrm_insights_placeholder
+      -
+        section: EventInteractions_AccountEventCheckInList
+        tab: EventInteractions
+        disabled: false
+        visible: true
+        control_id: AccountEventCheckInList
+        field: msdyncrm_insights_placeholder
+      -
+        section: EventInteractions_AccountEventRegistrationList
+        tab: EventInteractions
+        disabled: false
+        visible: true
+        control_id: AccountEventRegistrationList
+        field: msdyncrm_insights_placeholder
+      -
+        section: EventInteractions_AccountEventRegistrationCanceledList
+        tab: EventInteractions
+        disabled: false
+        visible: true
+        control_id: AccountEventRegistrationCanceledListAccount
+        field: msdyncrm_insights_placeholder
+      -
+        section: MarketingFormInteractions_InsightsFilter
+        tab: MarketingFormInteractions
+        disabled: false
+        visible: true
+        control_id: InsightsFilter
+        field: msdyncrm_insights_placeholder
+      -
+        section: MarketingFormInteractions_AccountFormSubmittedList
+        tab: MarketingFormInteractions
+        disabled: false
+        visible: true
+        control_id: FormSubmittedList
+        field: msdyncrm_insights_placeholder
+      -
+        section: MarketingFormInteractions_AccountFormVisitedList
+        tab: MarketingFormInteractions
+        disabled: false
+        visible: true
+        control_id: FormVisitedList
+        field: msdyncrm_insights_placeholder
+    description: null
+    tabs:
+      -
+        label: Insights
+        name: insights
+        visible: true
+        expanded: true
+      -
+        label: Insights
+        name: Insights
+        visible: false
+        expanded: true
+      -
+        label: Email interactions
+        name: EmailInteractions
+        visible: false
+        expanded: true
+      -
+        label: Web interactions
+        name: WebInteractions
+        visible: false
+        expanded: true
+      -
+        label: Event interactions
+        name: EventInteractions
+        visible: false
+        expanded: true
+      -
+        label: Marketing form interactions
+        name: MarketingFormInteractions
+        visible: false
+        expanded: true
+    field_count: 28
+    type_name: Main
+  -
+    name: account card
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: CUSTOMER DETAILS
+        name: information
+        tab: general
+        visible: true
+      -
+        label: RECENT CASES
+        name: Cases
+        tab: general
+        visible: true
+      -
+        label: Entitlement
+        name: Entitlements
+        tab: general
+        visible: true
+    fields:
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: emailaddress1
+        field: emailaddress1
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+    description: A form that displays the account card.
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+    field_count: 3
+    type_name: Quick View
+  -
+    name: Sales Insights
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ACCOUNT INFORMATION
+        name: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: ADDRESS
+        name: ADDRESS
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: ''
+        name: MapSection
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Sequence steps pane
+        name: Summary_CadenceWidget
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: SOCIAL PANE
+        name: SOCIAL_PANE_TAB
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Assistant
+        name: Summary_section_6
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Section
+        name: SUMMARY_TAB_section_6
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Section
+        name: Activity Analysis_section_2
+        tab: RELATIONSHIP_ANALYTICS_TAB
+        visible: true
+      -
+        label: Section
+        name: RAV2_section_1
+        tab: RAV2
+        visible: true
+      -
+        label: COMPANY PROFILE
+        name: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: Description
+        name: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: MARKETING
+        name: MARKETING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: CONTACT PREFERENCES
+        name: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: BILLING
+        name: BILLING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: SHIPPING
+        name: SHIPPING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: CHILD ACCOUNTS
+        name: ChildAccounts
+        tab: DETAILS_TAB
+        visible: true
+    fields:
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: fax
+        field: fax
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: websiteurl
+        field: websiteurl
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: parentaccountid
+        field: parentaccountid
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: tickersymbol
+        field: tickersymbol
+      -
+        section: ADDRESS
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: address1_composite
+        field: address1_composite
+      -
+        section: SUMMARY_TAB_section_6
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: SUMMARY_TAB_section_6
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: contactquickform
+        field: primarycontactid
+      -
+        section: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: industrycode
+        field: industrycode
+      -
+        section: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: sic
+        field: sic
+      -
+        section: COMPANY_PROFILE
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: ownershipcode
+        field: ownershipcode
+      -
+        section: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: originatingleadid
+        field: originatingleadid
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: lastusedincampaign
+        field: lastusedincampaign
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotsendmm
+        field: donotsendmm
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: preferredcontactmethodcode
+        field: preferredcontactmethodcode
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotemail
+        field: donotemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: followemail
+        field: followemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotbulkemail
+        field: donotbulkemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotphone
+        field: donotphone
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotfax
+        field: donotfax
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotpostalmail
+        field: donotpostalmail
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: creditlimit
+        field: creditlimit
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: creditonhold
+        field: creditonhold
+      -
+        section: BILLING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: paymenttermscode
+        field: paymenttermscode
+      -
+        section: SHIPPING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: address1_shippingmethodcode
+        field: address1_shippingmethodcode
+      -
+        section: SHIPPING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: address1_freighttermscode
+        field: address1_freighttermscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revenue
+        field: revenue
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_numberofemployees
+        field: numberofemployees
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Updated default Account form.
+    tabs:
+      -
+        label: Summary
+        name: SUMMARY_TAB
+        visible: true
+        expanded: true
+      -
+        label: Relationship Analytics
+        name: RELATIONSHIP_ANALYTICS_TAB
+        visible: false
+        expanded: false
+      -
+        label: Relationship Analytics
+        name: RAV2
+        visible: false
+        expanded: true
+      -
+        label: Details
+        name: DETAILS_TAB
+        visible: true
+        expanded: true
+    field_count: 33
+    type_name: Main
+  -
+    name: Information
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: Section
+        name: tab_recordwall_section_1
+        tab: tab_recordwall
+        visible: true
+      -
+        label: Account Information
+        name: account information
+        tab: general
+        visible: true
+      -
+        label: Address
+        name: address
+        tab: general
+        visible: true
+      -
+        label: Shipping Information
+        name: shipping information
+        tab: general
+        visible: true
+      -
+        label: Description
+        name: description
+        tab: general
+        visible: true
+      -
+        label: Professional Information
+        name: professional information
+        tab: details
+        visible: true
+      -
+        label: Description
+        name: description
+        tab: details
+        visible: true
+      -
+        label: Billing Information
+        name: billing information
+        tab: details
+        visible: true
+      -
+        label: Contacts
+        name: contacts
+        tab: contacts
+        visible: true
+      -
+        label: Activities
+        name: activities
+        tab: notes and activities
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: notes and activities
+        visible: true
+      -
+        label: Internal Information
+        name: internal information
+        tab: administration
+        visible: true
+      -
+        label: Contact Methods
+        name: contact methods
+        tab: administration
+        visible: true
+      -
+        label: Marketing Information
+        name: marketing information
+        tab: administration
+        visible: true
+      -
+        label: Service Preferences
+        name: service preferences
+        tab: administration
+        visible: true
+    fields:
+      -
+        section: account information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: account information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+      -
+        section: account information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: account information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: telephone2
+        field: telephone2
+      -
+        section: account information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: accountnumber
+        field: accountnumber
+      -
+        section: account information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: fax
+        field: fax
+      -
+        section: account information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: parentaccountid
+        field: parentaccountid
+      -
+        section: account information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: websiteurl
+        field: websiteurl
+      -
+        section: account information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: emailaddress1
+        field: emailaddress1
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_addresstypecode
+        field: address1_addresstypecode
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_city
+        field: address1_city
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_name
+        field: address1_name
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_stateorprovince
+        field: address1_stateorprovince
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_line1
+        field: address1_line1
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_postalcode
+        field: address1_postalcode
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_line2
+        field: address1_line2
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_country
+        field: address1_country
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_line3
+        field: address1_line3
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_telephone1
+        field: address1_telephone1
+      -
+        section: shipping information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_shippingmethodcode
+        field: address1_shippingmethodcode
+      -
+        section: shipping information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_freighttermscode
+        field: address1_freighttermscode
+      -
+        section: description
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: professional information
+        tab: details
+        disabled: false
+        visible: true
+        control_id: industrycode
+        field: industrycode
+      -
+        section: professional information
+        tab: details
+        disabled: false
+        visible: true
+        control_id: revenue
+        field: revenue
+      -
+        section: professional information
+        tab: details
+        disabled: false
+        visible: true
+        control_id: ownershipcode
+        field: ownershipcode
+      -
+        section: professional information
+        tab: details
+        disabled: false
+        visible: true
+        control_id: numberofemployees
+        field: numberofemployees
+      -
+        section: professional information
+        tab: details
+        disabled: false
+        visible: true
+        control_id: tickersymbol
+        field: tickersymbol
+      -
+        section: professional information
+        tab: details
+        disabled: false
+        visible: true
+        control_id: sic
+        field: sic
+      -
+        section: description
+        tab: details
+        disabled: false
+        visible: true
+        control_id: territoryid
+        field: territoryid
+      -
+        section: description
+        tab: details
+        disabled: false
+        visible: true
+        control_id: customertypecode
+        field: customertypecode
+      -
+        section: description
+        tab: details
+        disabled: false
+        visible: true
+        control_id: accountcategorycode
+        field: accountcategorycode
+      -
+        section: billing information
+        tab: details
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: billing information
+        tab: details
+        disabled: false
+        visible: true
+        control_id: paymenttermscode
+        field: paymenttermscode
+      -
+        section: billing information
+        tab: details
+        disabled: false
+        visible: true
+        control_id: creditlimit
+        field: creditlimit
+      -
+        section: billing information
+        tab: details
+        disabled: false
+        visible: true
+        control_id: creditonhold
+        field: creditonhold
+      -
+        section: billing information
+        tab: details
+        disabled: false
+        visible: true
+        control_id: defaultpricelevelid
+        field: defaultpricelevelid
+      -
+        section: internal information
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: contact methods
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: preferredcontactmethodcode
+        field: preferredcontactmethodcode
+      -
+        section: contact methods
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: followemail
+        field: followemail
+      -
+        section: contact methods
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: donotbulkemail
+        field: donotbulkemail
+      -
+        section: contact methods
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: donotemail
+        field: donotemail
+      -
+        section: contact methods
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: donotfax
+        field: donotfax
+      -
+        section: contact methods
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: donotphone
+        field: donotphone
+      -
+        section: contact methods
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: donotpostalmail
+        field: donotpostalmail
+      -
+        section: marketing information
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: originatingleadid
+        field: originatingleadid
+      -
+        section: marketing information
+        tab: administration
+        disabled: true
+        visible: true
+        control_id: lastusedincampaign
+        field: lastusedincampaign
+      -
+        section: marketing information
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: donotsendmm
+        field: donotsendmm
+      -
+        section: service preferences
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: preferredappointmentdaycode
+        field: preferredappointmentdaycode
+      -
+        section: service preferences
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: preferredappointmenttimecode
+        field: preferredappointmenttimecode
+      -
+        section: service preferences
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: preferredsystemuserid
+        field: preferredsystemuserid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_primarycontactid
+        field: primarycontactid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_preferredcontactmethodcode
+        field: preferredcontactmethodcode
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_creditlimit
+        field: creditlimit
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_revenue
+        field: revenue
+    description: A form for this entity.
+    tabs:
+      -
+        label: What's New
+        name: tab_recordwall
+        visible: true
+        expanded: false
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Details
+        name: details
+        visible: true
+        expanded: true
+      -
+        label: Contacts
+        name: contacts
+        visible: true
+        expanded: true
+      -
+        label: 'Notes & Activities'
+        name: notes and activities
+        visible: true
+        expanded: false
+      -
+        label: Preferences
+        name: administration
+        visible: true
+        expanded: true
+    field_count: 55
+    type_name: Main
+  -
+    name: Customer profile
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: section
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: address1_city
+        field: address1_city
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+    description: Customer profile for customer 360
+    tabs:
+      -
+        label: Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 3
+    type_name: Quick View
+  -
+    name: App for Outlook Account Quick View
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: section
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+    fields:
+    description: App for Outlook Account Quick View
+    tabs:
+      -
+        label: Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Quick View
+  -
+    name: Account Quick Create
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: Details
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: Description
+        name: tab_1_column_2_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: Address
+        name: tab_1_column_3_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: customertypecode
+        field: customertypecode
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_domain
+        field: revops_domain
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revenue
+        field: revenue
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: numberofemployees
+        field: numberofemployees
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: address1_line1
+        field: address1_line1
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: address1_city
+        field: address1_city
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: address1_stateorprovince
+        field: address1_stateorprovince
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: address1_country
+        field: address1_country
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: address1_postalcode
+        field: address1_postalcode
+    description: Default quick create form for Account
+    tabs:
+      -
+        label: Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 13
+    type_name: Quick Create
+  -
+    name: Account
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ACCOUNT INFORMATION
+        name: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: ACCOUNT CLASSIFICATION
+        name: SUMMARY_TAB_section_9
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: ADDRESS
+        name: ADDRESS
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Address
+        name: SUMMARY_TAB_ADDRESSINPUT_SECTION
+        tab: SUMMARY_TAB
+        visible: false
+      -
+        label: ''
+        name: MapSection
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: SOCIAL PANE
+        name: SOCIAL_PANE_TAB
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Assistant
+        name: Summary_section_6
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Activity Dates
+        name: SUMMARY_TAB_section_69
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Section
+        name: SUMMARY_TAB_section_6
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Section
+        name: tab_3_section_1
+        tab: Pricing
+        visible: true
+      -
+        label: ACCOUNT PROFILE
+        name: SUMMARY_TAB_section_10
+        tab: tab_9
+        visible: true
+      -
+        label: 'Business Metrics & Size'
+        name: tab_9_section_5
+        tab: tab_9
+        visible: true
+      -
+        label: New Section
+        name: tab_9_section_4
+        tab: tab_9
+        visible: true
+      -
+        label: New Section
+        name: tab_9_section_3
+        tab: tab_9
+        visible: true
+      -
+        label: New Section
+        name: tab_8_section_3
+        tab: tab_8
+        visible: true
+      -
+        label: New Section
+        name: tab_8_section_3
+        tab: tab_8
+        visible: true
+      -
+        label: Accounts
+        name: tab_7_section_1
+        tab: CUMULUS
+        visible: true
+      -
+        label: Revenue by Solution
+        name: tab_7_section_3
+        tab: CUMULUS
+        visible: true
+      -
+        label: Revenue by Product
+        name: CUMULUS_section_4
+        tab: CUMULUS
+        visible: true
+      -
+        label: New Section
+        name: tab_11_section_1
+        tab: tab_11
+        visible: true
+      -
+        label: Child Accounts
+        name: tab_11_section_3
+        tab: tab_11
+        visible: true
+      -
+        label: Opportunities
+        name: tab_10_section_3
+        tab: tab_10
+        visible: true
+      -
+        label: Leads
+        name: Leads
+        tab: tab_10
+        visible: true
+      -
+        label: Churn
+        name: tab_10_section_4
+        tab: tab_10
+        visible: true
+      -
+        label: Description
+        name: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: '6sense'
+        name: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: MWH
+        name: DETAILS_TAB_section_7
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: DATA ENRICHMENT
+        name: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: MARKETING
+        name: MARKETING
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: CONTACT PREFERENCES
+        name: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: General
+        name: urstab_section_general
+        tab: urstab
+        visible: true
+      -
+        label: Section
+        name: tab_3_section_2
+        tab: urstab
+        visible: true
+      -
+        label: Section
+        name: tab_3_section_3
+        tab: urstab
+        visible: true
+      -
+        label: Insights
+        name: insights_section
+        tab: insights
+        visible: true
+      -
+        label: Assets and Locations
+        name: AssetsAndLocationsSection
+        tab: AssetsAndLocationsTab
+        visible: true
+    fields:
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: true
+        visible: true
+        control_id: revops_domain
+        field: revops_domain
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: telephone1
+        field: telephone1
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: websiteurl
+        field: websiteurl
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: parentaccountid
+        field: parentaccountid
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: customertypecode
+        field: customertypecode
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: defaultpricelevelid
+        field: defaultpricelevelid
+      -
+        section: ACCOUNT_INFORMATION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: SUMMARY_TAB_section_9
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_tiermanualoverride
+        field: revops_tiermanualoverride
+      -
+        section: SUMMARY_TAB_section_9
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_tieroverride
+        field: revops_tieroverride
+      -
+        section: SUMMARY_TAB_section_9
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_tieroverridevalue
+        field: revops_tieroverridevalue
+      -
+        section: SUMMARY_TAB_section_9
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_channel
+        field: revops_channel
+      -
+        section: SUMMARY_TAB_section_9
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: customertypecode
+        field: customertypecode
+      -
+        section: ADDRESS
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: address1_composite
+        field: address1_composite
+      -
+        section: ADDRESS
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_stateorprovince
+        field: revops_stateorprovince
+      -
+        section: ADDRESS
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_iso3166_2subdivisioncode
+        field: revops_iso3166_2subdivisioncode
+      -
+        section: ADDRESS
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_country
+        field: revops_country
+      -
+        section: ADDRESS
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_iso3166alpha2countrycode
+        field: revops_iso3166alpha2countrycode
+      -
+        section: ADDRESS
+        tab: SUMMARY_TAB
+        disabled: true
+        visible: true
+        control_id: territoryid
+        field: territoryid
+      -
+        section: SUMMARY_TAB_ADDRESSINPUT_SECTION
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: address1_line1
+        field: address1_line1
+      -
+        section: SUMMARY_TAB_section_69
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_lastactivitydate
+        field: revops_lastactivitydate
+      -
+        section: SUMMARY_TAB_section_69
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_nextactivitydue
+        field: revops_nextactivitydue
+      -
+        section: SUMMARY_TAB_section_6
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: SUMMARY_TAB_section_6
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: contactquickform
+        field: primarycontactid
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_businessmodel
+        field: revops_businessmodel
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_psa
+        field: revops_psa
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_country
+        field: revops_country
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_privateequityowned
+        field: revops_privateequityowned
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_rmm
+        field: revops_rmm
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_itdocumentation
+        field: revops_itdocumentation
+      -
+        section: SUMMARY_TAB_section_10
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_foundedyear
+        field: revops_foundedyear
+      -
+        section: tab_9_section_5
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_nocustomers
+        field: revops_nocustomers
+      -
+        section: tab_9_section_5
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_noendpoints
+        field: revops_noendpoints
+      -
+        section: tab_9_section_5
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_averageclientsize
+        field: revops_averageclientsize
+      -
+        section: tab_9_section_5
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_noemployees
+        field: revops_noemployees
+      -
+        section: tab_9_section_5
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_totalannualrevenue
+        field: revops_totalannualrevenue
+      -
+        section: tab_9_section_5
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_recurringannualrevenuepercentage
+        field: revops_recurringannualrevenuepercentage
+      -
+        section: tab_9_section_4
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_whysherweb
+        field: revops_whysherweb
+      -
+        section: tab_9_section_4
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_strategicobjectives
+        field: revops_strategicobjectives
+      -
+        section: tab_9_section_4
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_sourceheardsherweb
+        field: revops_sourceheardsherweb
+      -
+        section: tab_9_section_4
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_biggestchallenges
+        field: revops_biggestchallenges
+      -
+        section: tab_9_section_4
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_sourceheardsherweb_other
+        field: revops_sourceheardsherweb_other
+      -
+        section: tab_9_section_4
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_expertisespecializations
+        field: revops_expertisespecializations
+      -
+        section: tab_9_section_4
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_verticalspecialization
+        field: revops_verticalspecialization
+      -
+        section: tab_9_section_4
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_expertisespecializations_other
+        field: revops_expertisespecializations_other
+      -
+        section: tab_9_section_4
+        tab: tab_9
+        disabled: false
+        visible: true
+        control_id: revops_verticalspecialization_other
+        field: revops_verticalspecialization_other
+      -
+        section: tab_8_section_3
+        tab: tab_8
+        disabled: false
+        visible: true
+        control_id: revops_techstackmrrwinnable
+        field: revops_techstackmrrwinnable
+      -
+        section: tab_8_section_3
+        tab: tab_8
+        disabled: false
+        visible: true
+        control_id: revops_techstackmrrtotal
+        field: revops_techstackmrrtotal
+      -
+        section: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: DETAILS_TAB_section_6
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_sixsensesegmentnames
+        field: revops_sixsensesegmentnames
+      -
+        section: DETAILS_TAB_section_7
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_mwhaccount
+        field: revops_mwhaccount
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_enricheddescription
+        field: revops_enricheddescription
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_logo
+        field: revops_logo
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_companylinkedinhandle
+        field: revops_companylinkedinhandle
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_estimatedannualrevenue
+        field: revops_estimatedannualrevenue
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revenue
+        field: revenue
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_employeesrange
+        field: revops_employeesrange
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_noemployees
+        field: revops_noemployees
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_foundedyear
+        field: revops_foundedyear
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_gicscode
+        field: revops_gicscode
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_sector
+        field: revops_sector
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_enrichedindustry
+        field: revops_enrichedindustry
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_industrygroup
+        field: revops_industrygroup
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_subindustry
+        field: revops_subindustry
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_clearbitenrichedat
+        field: revops_clearbitenrichedat
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_clearbitindexedat
+        field: revops_clearbitindexedat
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: revops_clearbitstatus
+        field: revops_clearbitstatus
+      -
+        section: DATA ENRICHMENT
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_clearbitenrichmentdetail
+        field: revops_clearbitenrichmentdetail
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: originatingleadid
+        field: originatingleadid
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: true
+        visible: true
+        control_id: lastusedincampaign
+        field: lastusedincampaign
+      -
+        section: MARKETING
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotsendmm
+        field: donotsendmm
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: preferredcontactmethodcode
+        field: preferredcontactmethodcode
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotemail
+        field: donotemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: followemail
+        field: followemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotbulkemail
+        field: donotbulkemail
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotphone
+        field: donotphone
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotfax
+        field: donotfax
+      -
+        section: CONTACT_PREFERENCES
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: donotpostalmail
+        field: donotpostalmail
+      -
+        section: urstab_section_general
+        tab: urstab
+        disabled: false
+        visible: true
+        control_id: address1_latitude
+        field: address1_latitude
+      -
+        section: urstab_section_general
+        tab: urstab
+        disabled: false
+        visible: true
+        control_id: address1_longitude
+        field: address1_longitude
+      -
+        section: insights_section
+        tab: insights
+        disabled: false
+        visible: true
+        control_id: AccountInsightsCtrl
+        field: msdyncrm_insights_placeholder
+      -
+        section: AssetsAndLocationsSection
+        tab: AssetsAndLocationsTab
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revops_tier
+        field: revops_tier
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revops_noemployees
+        field: revops_noemployees
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revops_monthlyrecurringrevenue
+        field: revops_monthlyrecurringrevenue
+    description: Updated default Account form.
+    tabs:
+      -
+        label: Summary
+        name: SUMMARY_TAB
+        visible: true
+        expanded: true
+      -
+        label: Project Price Lists
+        name: Pricing
+        visible: false
+        expanded: true
+      -
+        label: Account Profile
+        name: tab_9
+        visible: true
+        expanded: true
+      -
+        label: Tech Stack
+        name: tab_8
+        visible: true
+        expanded: true
+      -
+        label: Cumulus
+        name: CUMULUS
+        visible: true
+        expanded: true
+      -
+        label: MWH Accounts
+        name: tab_11
+        visible: true
+        expanded: true
+      -
+        label: 'Leads, Opps & Churn'
+        name: tab_10
+        visible: true
+        expanded: true
+      -
+        label: Details
+        name: DETAILS_TAB
+        visible: true
+        expanded: true
+      -
+        label: Scheduling
+        name: urstab
+        visible: true
+        expanded: false
+      -
+        label: Insights
+        name: insights
+        visible: true
+        expanded: true
+      -
+        label: Assets and Locations
+        name: AssetsAndLocationsTab
+        visible: false
+        expanded: true
+    field_count: 87
+    type_name: Main
+

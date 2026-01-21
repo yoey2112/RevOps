@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '7dac8344-11ac-ef11-a72d-6045bdf9b92b'
+name: P2P Automation
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

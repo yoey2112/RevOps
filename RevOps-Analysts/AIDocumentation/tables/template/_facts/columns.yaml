@@ -1,0 +1,422 @@
+columns:
+  -
+    RequiredLevel: ''
+    AttributeType: Memo
+    LogicalName: body
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Picklist
+    LogicalName: componentstate
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: createdby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: createdon
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: createdonbehalfby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdonbehalfbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdonbehalfbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Memo
+    LogicalName: description
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Memo
+    LogicalName: enhancededitorhtml
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: entityimage
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: BigInt
+    LogicalName: entityimage_timestamp
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: entityimage_url
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Uniqueidentifier
+    LogicalName: entityimageid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: generationtypecode
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: importsequencenumber
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Picklist
+    LogicalName: includetemplateforcopilotrecommendation
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: includetemplateforcopilotrecommendationname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: introducedversion
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: ManagedProperty
+    LogicalName: iscustomizable
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Boolean
+    LogicalName: isenhancededitorenabled
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: isenhancededitorenabledname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Boolean
+    LogicalName: ismanaged
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: ismanagedname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Boolean
+    LogicalName: ispersonal
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: ispersonalname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Boolean
+    LogicalName: isrecommended
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: isrecommendedname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: languagecode
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: mimetype
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: modifiedby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: modifiedon
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: modifiedonbehalfby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedonbehalfbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedonbehalfbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Memo
+    LogicalName: msdyn_lineofbusiness
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: msdyn_lineofbusinessmultiselect
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: msdyn_lineofbusinessmultiselectname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: opencount
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: openrate
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: overwritetime
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Owner
+    LogicalName: ownerid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: owneridname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: EntityName
+    LogicalName: owneridtype
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: owneridyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: owningbusinessunit
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: owningbusinessunitname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: owningteam
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: owninguser
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Memo
+    LogicalName: presentationxml
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: replycount
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: replyrate
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Picklist
+    LogicalName: revops_category
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: revops_categoryname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Memo
+    LogicalName: safehtml
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Uniqueidentifier
+    LogicalName: solutionid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Memo
+    LogicalName: subject
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Memo
+    LogicalName: subjectpresentationxml
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Memo
+    LogicalName: subjectsafehtml
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Uniqueidentifier
+    LogicalName: supportingsolutionid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Uniqueidentifier
+    LogicalName: templateid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Uniqueidentifier
+    LogicalName: templateidunique
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: EntityName
+    LogicalName: templatetypecode
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: templatetypecodename
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: title
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: usedcount
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: BigInt
+    LogicalName: versionnumber
+    DisplayName: ''
+    Description: ''
+

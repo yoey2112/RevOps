@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="../RevOps.EmailPlugins/RevOps.EmailPlugins/RevOps.EmailPlugins.csproj" Id="d754f90c-3dd5-4985-94e0-284c8703cbc9" />
+  <Project Path="../RevOps.Plugins.CaseCustomerRespondedSetter/RevOps.Plugins.CaseCustomerRespondedSetter.csproj" Id="8985165b-0bfb-4c13-a497-3d5ef5eb9c0b" />
+  <Project Path="../RevOps.Plugins.CaseInteractionStamper/RevOps.Plugins.CaseInteractionStamper.csproj" Id="59229d21-0ec9-441e-a020-3f9438b1c8aa" />
+  <Project Path="../RevOps.Plugins.CaseOwnerStamper/RevOps.Plugins.CaseOwnerStamper.csproj" Id="2016f5db-466d-4a18-9b02-dce7b24bc9ce" />
+  <Project Path="../RevOps.Plugins.EmailWorkflowMarker/RevOps.Plugins.EmailWorkflowMarker.csproj" Id="2c50cc90-fe12-4045-b7e0-55884ba75108" />
+  <Project Path="../RevOps.SolutionPlugins/RevOps.SolutionPlugins.csproj" Id="7e6f105f-74ec-40b4-b586-2cf741e074ef" />
+</Solution>

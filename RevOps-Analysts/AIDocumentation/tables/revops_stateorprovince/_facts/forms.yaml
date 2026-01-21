@@ -1,0 +1,133 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: A card form for this entity.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 3
+    type_name: Card
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_country
+        field: revops_country
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_code
+        field: revops_code
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_id
+        field: revops_id
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 4
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: GENERAL
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Quick View
+

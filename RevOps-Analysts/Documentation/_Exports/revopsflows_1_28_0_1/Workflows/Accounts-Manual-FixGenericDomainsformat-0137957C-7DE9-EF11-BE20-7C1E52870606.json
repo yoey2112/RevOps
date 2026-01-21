@@ -1,0 +1,258 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_86fd5"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "a8360e2d-ec17-4e3d-a3f3-a2a9eb058350"
+          },
+          "type": "Request",
+          "kind": "Button",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          }
+        }
+      },
+      "actions": {
+        "List_Generic_Domains": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "a33ff2f5-6f2e-4559-9c69-965e6933b503"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "revops_domains",
+              "$filter": "revops_type eq 234570000"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Apply_to_each_domain": {
+          "foreach": "@outputs('List_Generic_Domains')?['body/value']",
+          "actions": {
+            "Compose": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "b9b4455d-f10e-4985-9c63-a5019ad03a4f"
+              },
+              "type": "Compose",
+              "inputs": "@item()?['revops_Domain']"
+            },
+            "Append_to_domainlist": {
+              "runAfter": {
+                "Compose": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "fb650afa-7845-45f3-be26-cc2d75f630f2"
+              },
+              "type": "AppendToStringVariable",
+              "inputs": {
+                "name": "domainlist",
+                "value": "revops_domain eq '@{items('Apply_to_each_domain')?['revops_domain']}' or "
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_domainlist": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "8b4b457d-f2f9-4bf2-b900-dcd18bd9bd3f"
+          },
+          "type": "Foreach"
+        },
+        "Initialize_domainlist": {
+          "runAfter": {
+            "List_Generic_Domains": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "be8fe855-3fb2-4765-b7cd-5639c4a2ad18"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "domainlist",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Compose_OData_filter_for_Accounts": {
+          "runAfter": {
+            "Apply_to_each_domain": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "433cd946-17eb-41d8-93ce-877cad822084"
+          },
+          "type": "Compose",
+          "inputs": "@substring(variables('domainList'), 0, sub(length(variables('domainList')), 4))"
+        },
+        "List_accounts": {
+          "runAfter": {
+            "Compose_OData_filter_for_Accounts": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b3144ea5-a487-4abd-9f6f-6e529fac1610"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "accounts",
+              "$select": "revops_domain, emailaddress1, accountid",
+              "$filter": "@outputs('Compose_OData_filter_for_Accounts')"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Apply_to_each": {
+          "foreach": "@outputs('List_accounts')?['body/value']",
+          "actions": {
+            "Compose_email_prefix": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "d28b5948-b99a-4c70-85e4-f16a119e4be7"
+              },
+              "type": "Compose",
+              "inputs": "@split(items('Apply_to_Each')?['emailaddress1'], '@')[0]"
+            },
+            "Condition": {
+              "actions": {},
+              "runAfter": {
+                "Compose_more_debugging": [
+                  "Succeeded"
+                ]
+              },
+              "else": {
+                "actions": {
+                  "Update_a_row": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "32d08d9e-2751-4af8-bb69-fbe3b0cd5701"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_commondataserviceforapps",
+                        "operationId": "UpdateOnlyRecord",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                      },
+                      "parameters": {
+                        "entityName": "accounts",
+                        "recordId": "@items('Apply_to_each')?['accountid']",
+                        "item/revops_domain": "@concat(outputs('Compose_email_prefix'), '.', items('Apply_to_each')?['revops_domain'])"
+                      },
+                      "authentication": {
+                        "type": "Raw",
+                        "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                      }
+                    }
+                  }
+                }
+              },
+              "expression": {
+                "equals": [
+                  "@not(equals(\r\n   toLower(split(trim(items('Apply_to_each')?['revops_domain']), '.')[0]), \r\n   toLower(trim(outputs('Compose_email_prefix')))\r\n))",
+                  false
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "0216bcd4-7802-4bad-b04f-21563b0eb122"
+              },
+              "type": "If"
+            },
+            "Compose_debugging": {
+              "runAfter": {
+                "Compose_email_prefix": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "e920dc75-aa3f-4da3-83ea-208870fb2498"
+              },
+              "type": "Compose",
+              "inputs": "@concat(\r\n   '\"revops_domain\": \"', items('Apply_to_each')?['revops_domain'], \r\n   '\" | \"Email Prefix\": \"', outputs('Compose_email_prefix'), '\"'\r\n)"
+            },
+            "Compose_more_debugging": {
+              "runAfter": {
+                "Compose_debugging": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "2fe105b7-2877-4ce4-9916-27a353e0d388"
+              },
+              "type": "Compose",
+              "inputs": "@concat(\r\n   'revops_domain First Part: \"', \r\n   toLower(split(trim(items('Apply_to_each')?['revops_domain']), '.')[0]), \r\n   '\" | Email Prefix: \"', \r\n   toLower(trim(outputs('Compose_email_prefix'))), '\"'\r\n)"
+            }
+          },
+          "runAfter": {
+            "List_accounts": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ca5bc4c2-3968-4817-8f02-3cb6ab6cd3b0"
+          },
+          "type": "Foreach"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

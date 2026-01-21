@@ -1,0 +1,46 @@
+TITLE
+=====
+RevOps - Workstreams Component Index
+
+PURPOSE
+-------
+Quick reference index of all Workstreams components in this folder.
+
+COMPONENTS
+----------
+- billing-outbound : Workstream: Billing Outbound
+- billing-voice-english : Workstream: Billing Voice - English
+- billing-voice-french : Workstream: Billing Voice - French
+- c2-overflow : Workstream: C2 Overflow
+- default-group-voicemail-workstream : Workstream: Default Group Voicemail Workstream
+- default-individual-voicemail-workstream : Workstream: Default Individual Voicemail Workstream
+- live-chat-workstream : Workstream: Live chat workstream
+- microsoft-teams-workstream : Workstream: Microsoft Teams workstream
+- mwh-cloud : Workstream: MWH Cloud
+- mwh-csp : Workstream: MWH CSP
+- mwh-csp-outbound : Workstream: MWH CSP Outbound
+- mwh-main-ivr : Workstream: MWH Main IVR
+- mwh-security : Workstream: MWH Security
+- phone-call-workstream : Workstream: Phone call workstream
+- redirect-to-main-ivr : Workstream: Redirect to Main IVR
+- sales-outbound : Workstream: Sales Outbound
+- sales-voice-english : Workstream: Sales Voice - English
+- sales-voice-french : Workstream: Sales Voice - French
+- support-and-sales-chat-eng : Workstream: Support and Sales Chat -ENG
+- support-and-sales-chat-fr : Workstream: Support and Sales Chat -FR
+- support-outbound : Workstream: Support Outbound
+- support-outbound-2 : Workstream: Support Outbound 2
+- support-outbound-3 : Workstream: Support Outbound 3
+- support-voice-eng : Workstream: Support Voice - ENG
+- support-voice-fr : Workstream: Support Voice - FR
+- uk-to-m365 : Workstream: UK to M365
+- voicemails : Workstream: Voicemails
+
+HOW TO USE
+----------
+Each component has its own subfolder containing:
+- README.md and README.txt for overview
+- _facts/*.yaml for structured metadata
+- Additional documentation files as needed
+
+For detailed information about a specific component, navigate to its subfolder.

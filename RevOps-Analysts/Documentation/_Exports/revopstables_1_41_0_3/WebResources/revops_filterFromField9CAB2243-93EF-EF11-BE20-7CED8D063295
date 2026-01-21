@@ -1,0 +1,20 @@
+function filterFromField(executionContext) {
+    var formContext = executionContext.getFormContext();
+
+    setTimeout(function () {
+        var fromControl = formContext.getControl("from");
+        if (fromControl) {
+            fromControl.setEntityTypes(["queue"]);
+
+            fromControl.addPreSearch(function () {
+                var filterXml =
+                    "<filter type='and'>" +
+                        "<condition attribute='revops_emailqueue' operator='eq' value='1' />" +
+                    "</filter>";
+                fromControl.addCustomFilter(filterXml, "queue");
+            });
+        } else {
+            console.warn("From control not found on the form.");
+        }
+    }, 500);
+}

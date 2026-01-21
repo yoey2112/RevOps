@@ -1,0 +1,44 @@
+views:
+  -
+    name: My Cumulus Accounts
+    description: Active Cumulus Accounts owned by me
+    querytype: 8192
+    savedqueryid: '9d898243-961e-ef11-840b-000d3af43335'
+  -
+    name: Lateral Move Lookup
+    querytype: -1
+    savedqueryid: 'ef39b58a-e47f-ef11-ac21-000d3af4dd88'
+  -
+    name: Inactive Cumulus Accounts
+    querytype: -1
+    savedqueryid: '25c92939-5393-4d5e-907b-4430cd8c5b5f'
+  -
+    name: 'Cumulus Accounts - Accounts Form'
+    querytype: -1
+    savedqueryid: '0ef1d963-bb3f-ef11-a316-6045bdcd5e88'
+  -
+    name: RevOps Monitoring
+    description: Used for RevOps Monitoring
+    querytype: -1
+    savedqueryid: '895b888d-5a40-ef11-a316-6045bdcd5e88'
+  -
+    name: Quick Find Active Cumulus Accounts
+    querytype: 4
+    savedqueryid: '7606ad95-368f-4649-bca8-9509865fd9b1'
+  -
+    name: Cumulus Account Lookup View
+    querytype: 64
+    savedqueryid: 'aa895c3d-b3ca-4f30-babd-ada73680831d'
+  -
+    name: Active Cumulus Accounts
+    querytype: -1
+    savedqueryid: 'f43ca832-7fac-4d40-8127-b9f6a4ae93a3'
+  -
+    name: Cumulus Account Associated View
+    querytype: 2
+    savedqueryid: 'b1599695-90a1-4cbd-a020-c4edac9dbb81'
+  -
+    name: Cumulus Account Advanced Find View
+    querytype: 1
+    savedqueryid: 'bede1d25-5b15-4f55-9517-cea83b347ee6'
+

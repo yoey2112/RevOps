@@ -1,0 +1,236 @@
+columns:
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: createdby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: createdon
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: createdonbehalfby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdonbehalfbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdonbehalfbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: importsequencenumber
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: modifiedby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: modifiedon
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: modifiedonbehalfby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedonbehalfbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedonbehalfbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: overriddencreatedon
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: partitionid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_accountid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: revops_commitmentenddate
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_currentpricediscount
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_currentproviderid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Decimal
+    LogicalName: revops_estmrr
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Boolean
+    LogicalName: revops_isanopportunity
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: revops_isanopportunityname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_modifiedbyid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: revops_modifiedonsnapshots
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: revops_noseatsendpoints
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Memo
+    LogicalName: revops_notes
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_opportunityid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_organizationid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_productid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: revops_snapshotdate
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_snapshotid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_solutionid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_techstackid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Uniqueidentifier
+    LogicalName: revops_techstacksnapshotsid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_why
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: ttlinseconds
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: BigInt
+    LogicalName: versionnumber
+    DisplayName: ''
+    Description: ''
+

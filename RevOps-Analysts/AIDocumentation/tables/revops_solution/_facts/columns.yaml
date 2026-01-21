@@ -1,0 +1,290 @@
+columns:
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: createdby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: createdon
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: createdonbehalfby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdonbehalfbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdonbehalfbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: importsequencenumber
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: modifiedby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: modifiedon
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: modifiedonbehalfby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedonbehalfbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedonbehalfbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: organizationid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: organizationidname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: overriddencreatedon
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: revops_externalid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_formname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Picklist
+    LogicalName: revops_marketingbudget
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: revops_marketingbudgetname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_name
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: revops_practice
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_practicename
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Picklist
+    LogicalName: revops_productmix
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: revops_productmixname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: revops_projectmanager
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_projectmanagername
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_projectmanageryominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Memo
+    LogicalName: revops_solutioncategories
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: revops_solutioncategory
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_solutioncategoryname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Uniqueidentifier
+    LogicalName: revops_solutionid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Picklist
+    LogicalName: revops_stage
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: revops_stagename
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Boolean
+    LogicalName: revops_supportedbysherweb
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: revops_supportedbysherwebname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: revops_vendor
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_vendorname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_vendoryominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: State
+    LogicalName: statecode
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: statecodename
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Status
+    LogicalName: statuscode
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: statuscodename
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: timezoneruleversionnumber
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: utcconversiontimezonecode
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: BigInt
+    LogicalName: versionnumber
+    DisplayName: ''
+    Description: ''
+

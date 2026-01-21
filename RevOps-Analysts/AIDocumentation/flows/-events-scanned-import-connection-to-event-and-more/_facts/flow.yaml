@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '77b3076c-1200-f011-bae3-7c1e52409afe'
+name: '[Events] - Scanned Import connection to event and more'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

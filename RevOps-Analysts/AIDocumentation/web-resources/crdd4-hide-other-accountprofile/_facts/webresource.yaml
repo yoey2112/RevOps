@@ -1,0 +1,5 @@
+displayname: Hide other from multi choice field
+description: 'this javascript hides the column called *_other under account profile, such as vertical specializations, expertise or goal specializations and how they heard about sherweb.'
+webresourceid: 'b411b74f-dd88-f011-b4cc-6045bdfa0630'
+name: crdd4_hide_other_accountprofile
+

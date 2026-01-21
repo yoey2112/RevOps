@@ -1,0 +1,232 @@
+relationships:
+  -
+    schemaname: incidentresolution_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: incidentresolution
+  -
+    schemaname: CampaignResponse_IncidentResolutions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: incidentresolution
+  -
+    schemaname: IncidentResolution_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: incidentresolution
+  -
+    schemaname: IncidentResolution_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: incidentresolution
+  -
+    schemaname: incidentresolution_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: incidentresolution
+  -
+    schemaname: userentityinstancedata_incidentresolution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: incidentresolution
+  -
+    schemaname: IncidentResolution_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: incidentresolution
+  -
+    schemaname: incidentresolution_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: incidentresolution
+  -
+    schemaname: IncidentResolution_Annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: incidentresolution
+  -
+    schemaname: incidentresolution_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: incidentresolution
+  -
+    schemaname: interactionforemail_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: interactionforemail
+  -
+    schemaname: knowledgebaserecord_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: knowledgebaserecord
+  -
+    schemaname: account_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: account
+  -
+    schemaname: lk_incidentresolution_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: incidentresolution_mailbox_sendermailboxid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: mailbox
+  -
+    schemaname: incidentresolution_transactioncurrency_transactioncurrencyid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: incidentresolution_owner_ownerid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: owner
+  -
+    schemaname: user_incidentresolution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: incidentresolution_sla_slaid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: sla
+  -
+    schemaname: business_unit_incident_resolution_activities
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: knowledgearticle_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: adx_invitation_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: adx_invitation
+  -
+    schemaname: mspp_adplacement_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: mspp_adplacement
+  -
+    schemaname: mspp_pollplacement_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: mspp_pollplacement
+  -
+    schemaname: mspp_publishingstatetransitionrule_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: mspp_publishingstatetransitionrule
+  -
+    schemaname: mspp_redirect_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: mspp_redirect
+  -
+    schemaname: mspp_shortcut_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: mspp_shortcut
+  -
+    schemaname: mspp_website_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: mspp_website
+  -
+    schemaname: lead_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: lead
+  -
+    schemaname: bookableresourcebooking_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: bookableresourcebooking
+  -
+    schemaname: bookableresourcebookingheader_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: bookableresourcebookingheader
+  -
+    schemaname: bulkoperation_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: bulkoperation
+  -
+    schemaname: campaign_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaignactivity_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: campaignactivity
+  -
+    schemaname: entitlement_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: entitlement
+  -
+    schemaname: entitlementtemplate_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: entitlementtemplate
+  -
+    schemaname: lk_incidentresolution_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_incidentresolution_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_incidentresolution_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_incidentresolution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: team
+  -
+    schemaname: incidentresolution_sla_slainvokedid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: sla
+  -
+    schemaname: activity_pointer_incident_resolution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: lk_externalparty_incidentresolution_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: externalparty
+  -
+    schemaname: lk_externalparty_incidentresolution_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: externalparty
+  -
+    schemaname: Incident_IncidentResolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: incident
+  -
+    schemaname: service_incidentresolutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: service
+

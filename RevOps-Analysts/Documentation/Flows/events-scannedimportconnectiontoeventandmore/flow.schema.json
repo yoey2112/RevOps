@@ -1,0 +1,1653 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_sharepointonline-1": {
+        "api": {
+          "name": "shared_sharepointonline"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedsharepointonline_eb1fe"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_excelonlinebusiness-1": {
+        "api": {
+          "name": "shared_excelonlinebusiness"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedexcelonlinebusiness_cc555"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_b4c20"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_teams_1": {
+        "api": {
+          "name": "shared_teams"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedteams_2425c"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "When_a_file_is_created_(properties_only)": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "dataset": "https://sherwebcorp.sharepoint.com/sites/Marketing",
+              "table": "7a9895e4-de3a-42f9-88b3-f737d235302f",
+              "folderPath": "/Documents partages/Event/Lead Import/Trade Show Imports"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+              "operationId": "GetOnNewFileItems",
+              "connectionName": "shared_sharepointonline-1"
+            }
+          },
+          "recurrence": {
+            "interval": 1,
+            "frequency": "Minute"
+          },
+          "splitOn": "@triggerOutputs()?['body/value']",
+          "metadata": {
+            "operationMetadataId": "0f0f2ccb-be45-46de-849a-be4c11c7ec8b"
+          }
+        }
+      },
+      "actions": {
+        "List_rows_present_in_a_table": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "source": "sites/sherwebcorp.sharepoint.com,5ffbf0c3-d831-4a79-b5ab-b67e522be593,763313aa-6569-40c1-b0bd-f799b0be3177",
+              "drive": "b!w_D7XzHYeUq1q7Z-Uivlk6oTM3ZpZcFAsL33mbC-MXfklZh6Ot75Qoiz9zfSNTAv",
+              "file": "@triggerOutputs()?['body/{Identifier}']",
+              "table": "Table1"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_excelonlinebusiness",
+              "operationId": "GetItems",
+              "connectionName": "shared_excelonlinebusiness-1"
+            }
+          },
+          "runAfter": {},
+          "runtimeConfiguration": {
+            "paginationPolicy": {
+              "minimumItemCount": 1000
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "07e325d8-d49a-43f8-9497-91af79adb2ea",
+            "tableId": "Table1"
+          }
+        },
+        "Filter_array": {
+          "type": "Query",
+          "inputs": {
+            "from": "@outputs('List_rows_present_in_a_table')?['body/value']",
+            "where": "@or(\r\n  equals(item()?['First Name'], ''),\r\n  equals(item()?['Last Name'], ''),\r\n  equals(item()?['Email'], ''),\r\n  equals(item()?['EventID'], ''),\r\n  empty(item()?['Level of Interest'])\r\n)"
+          },
+          "runAfter": {
+            "List_rows_present_in_a_table": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6d833beb-4261-47d3-a23b-9cd9a6b9563b"
+          }
+        },
+        "Condition_-_if_Missing_Data": {
+          "type": "If",
+          "expression": {
+            "equals": [
+              "@length(body('Filter_array'))",
+              0
+            ]
+          },
+          "actions": {
+            "Apply_to_each": {
+              "type": "Foreach",
+              "foreach": "@body('List_rows_present_in_a_table')?['value']",
+              "actions": {
+                "Compose_-_Row_Values": {
+                  "type": "Compose",
+                  "inputs": {
+                    "FirstName": "@{items('Apply_to_each')?['First Name']}",
+                    "LastName": "@{items('Apply_to_each')?['Last Name']}",
+                    "JobTitle": "@{items('Apply_to_each')?['Job Title']}",
+                    "Company": "@{items('Apply_to_each')?['Company']}",
+                    "Email": "@{items('Apply_to_each')?['Email']}",
+                    "LevelOfInterest": "@{items('Apply_to_each')?['Level of Interest']}",
+                    "ProductOfInterest": "@{items('Apply_to_each')?['Product of Interest']}",
+                    "Notes": "@{items('Apply_to_each')?['Notes']}",
+                    "EventID": "@{items('Apply_to_each')?['EventID']}",
+                    "PhoneNumber": "@{items('Apply_to_each')?['Phone Number']}",
+                    "PostalCode": "@{items('Apply_to_each')?['ZIP/Postal Code']}",
+                    "StateProvince": "@{items('Apply_to_each')?['State/Province']}",
+                    "Country": "@{items('Apply_to_each')?['Country']}",
+                    "TargetOwner": "@{items('Apply_to_each')?['Target Owner']}"
+                  },
+                  "metadata": {
+                    "operationMetadataId": "32322fc2-1623-4f4e-a7e1-e7134395767e"
+                  }
+                },
+                "List_rows_-_Events": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "msevtmgt_events",
+                      "$filter": "msevtmgt_eventid eq '@{body('Parse_JSON_-_Excel_Row_Values')?['EventID']}'"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "operationId": "ListRecords",
+                      "connectionName": "shared_commondataserviceforapps"
+                    }
+                  },
+                  "runAfter": {
+                    "Parse_JSON_-_Excel_Row_Values": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "06d2f6d9-5f3c-477c-ab8b-5e074ac366cc"
+                  }
+                },
+                "Parse_JSON_-_Excel_Row_Values": {
+                  "type": "ParseJson",
+                  "inputs": {
+                    "content": "@outputs('Compose_-_Row_Values')",
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "FirstName": {
+                          "type": "string"
+                        },
+                        "LastName": {
+                          "type": "string"
+                        },
+                        "JobTitle": {
+                          "type": "string"
+                        },
+                        "Company": {
+                          "type": "string"
+                        },
+                        "Email": {
+                          "type": "string"
+                        },
+                        "LevelOfInterest": {
+                          "type": "string"
+                        },
+                        "ProductOfInterest": {
+                          "type": "string"
+                        },
+                        "Notes": {
+                          "type": "string"
+                        },
+                        "EventID": {
+                          "type": "string"
+                        },
+                        "PhoneNumber": {
+                          "type": "string"
+                        },
+                        "PostalCode": {
+                          "type": "string"
+                        },
+                        "StateProvince": {
+                          "type": "string"
+                        },
+                        "Country": {
+                          "type": "string"
+                        },
+                        "TargetOwner": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Compose_-_Row_Values": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "87d69962-965c-49ac-aee0-88841503c332"
+                  }
+                },
+                "Condition_-_Does_event_Exist": {
+                  "type": "If",
+                  "expression": {
+                    "and": [
+                      {
+                        "equals": [
+                          "@length(outputs('List_rows_-_Events')?['body/value'])",
+                          0
+                        ]
+                      }
+                    ]
+                  },
+                  "actions": {
+                    "Append_to_var_InvalidEventIDs": {
+                      "type": "AppendToArrayVariable",
+                      "inputs": {
+                        "name": "var_InvalidEventIDs",
+                        "value": "@json(\r\n    concat(\r\n        '{',\r\n            '\"FirstName\": \"', body('Parse_JSON_-_Excel_Row_Values')?['FirstName'], '\",',\r\n            '\"LastName\": \"', body('Parse_JSON_-_Excel_Row_Values')?['LastName'], '\",',\r\n            '\"EventID\": \"', body('Parse_JSON_-_Excel_Row_Values')?['EventID'], '\"',\r\n        '}'\r\n    )\r\n)\r\n"
+                      },
+                      "metadata": {
+                        "operationMetadataId": "57aded53-a350-4263-988e-b663e2099ded"
+                      }
+                    }
+                  },
+                  "else": {
+                    "actions": {
+                      "Valid_Event_ID": {
+                        "type": "Compose",
+                        "inputs": "Event ID found: No action required.",
+                        "metadata": {
+                          "operationMetadataId": "0189fb09-a1b2-47b2-93ff-618a9e3c4486"
+                        }
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "List_rows_-_Events": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "fe06d4f3-1355-45aa-88e0-46ca98ba2aee"
+                  }
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "ea814954-33fc-40c9-abf2-fff827fb57e8"
+              }
+            },
+            "Condition_-_Invalid_Event_IDs": {
+              "type": "If",
+              "expression": {
+                "and": [
+                  {
+                    "greater": [
+                      "@length(variables('var_InvalidEventIDs'))",
+                      0
+                    ]
+                  }
+                ]
+              },
+              "actions": {
+                "Post_card_in_a_chat_or_channel_-_Invalid_Event_ID": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "poster": "Flow bot",
+                      "location": "Chat with Flow bot",
+                      "body/recipient": "@triggerBody()?['Author/Email']",
+                      "body/messageBody": "{\n    \"$schema\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n    \"type\": \"AdaptiveCard\",\n    \"version\": \"1.4\",\n    \"body\": [\n        {\n            \"type\": \"TextBlock\",\n            \"size\": \"Medium\",\n            \"weight\": \"Bolder\",\n            \"text\": \"🚨 Error 418: Event ID is Imaginary 🎭\"\n        },\n        {\n            \"type\": \"TextBlock\",\n            \"text\": \"The following Event IDs in your file do not match any records in our system. Please verify that you're using a valid Event ID and try again.\",\n            \"wrap\": true\n        },\n        {\n            \"type\": \"FactSet\",\n            \"facts\": [\n                {\n                    \"title\": \"File Name:\",\n                    \"value\": \"@{triggerBody()?['{Name}']}\"\n                },\n                {\n                    \"title\": \"Uploaded By:\",\n                    \"value\": \"@{triggerBody()?['Author/Email']}\"\n                }\n            ]\n        },\n        {\n            \"type\": \"TextBlock\",\n            \"text\": \"**Invalid Event IDs:**\",\n            \"weight\": \"Bolder\",\n            \"spacing\": \"Medium\"\n        },\n        {\n            \"type\": \"TextBlock\",\n            \"text\": \"@{join(variables('var_InvalidEventIDs'), ', ')}\",\n            \"wrap\": true,\n            \"color\": \"Attention\"\n        },\n        {\n            \"type\": \"TextBlock\",\n            \"text\": \"⚠ **Action Required:** Please ensure that the Event ID(s) are correct and re-upload the file.\\n\\n🎭 **Are you sure these events exist?** We don’t accept imaginary events!\\n\\n🚀 Once uploaded, the automation will process your file automatically.\",\n            \"wrap\": true,\n            \"weight\": \"Bolder\"\n        },\n        {\n            \"type\": \"ActionSet\",\n            \"actions\": [\n                {\n                    \"type\": \"Action.OpenUrl\",\n                    \"title\": \"📂 Open Upload Folder\",\n                    \"url\": \"https://sherwebcorp.sharepoint.com/sites/Marketing/Documents%20partages/Event/Lead%20Import/Scanned%20Leads/\"\n                }\n            ]\n        }\n    ]\n}\n"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams",
+                      "operationId": "PostCardToConversation",
+                      "connectionName": "shared_teams_1"
+                    }
+                  },
+                  "metadata": {
+                    "operationMetadataId": "db30c3c9-f06a-42c7-b7cc-cb6132493401"
+                  }
+                },
+                "Terminate_-_Invalid_Event_ID": {
+                  "type": "Terminate",
+                  "inputs": {
+                    "runStatus": "Failed",
+                    "runError": {
+                      "code": "Error Code: 418 - Event ID is imaginary 🎭",
+                      "message": "\"The Event ID you provided does not exist. Did you just make it up? Try again with a real one!\""
+                    }
+                  },
+                  "runAfter": {
+                    "Post_card_in_a_chat_or_channel_-_Invalid_Event_ID": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "cfe32168-c19e-4ba3-8024-3e910a216739"
+                  }
+                }
+              },
+              "else": {
+                "actions": {
+                  "No_Invalid_Event_IDs": {
+                    "type": "Compose",
+                    "inputs": "All event IDs validated successfully.",
+                    "metadata": {
+                      "operationMetadataId": "1814e60c-1e43-4914-b5e0-b348703e6acc"
+                    }
+                  }
+                }
+              },
+              "runAfter": {
+                "Apply_to_each": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "d2e6f5d8-ad92-40ce-8e16-47aefb8ba166"
+              }
+            }
+          },
+          "else": {
+            "actions": {
+              "Post_card_in_a_chat_or_channel_-_Missing_Data": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "poster": "Flow bot",
+                    "location": "Chat with Flow bot",
+                    "body/recipient": "@triggerBody()?['Author/Email']",
+                    "body/messageBody": "{\n    \"$schema\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n    \"type\": \"AdaptiveCard\",\n    \"version\": \"1.4\",\n    \"body\": [\n        {\n            \"type\": \"TextBlock\",\n            \"size\": \"Medium\",\n            \"weight\": \"Bolder\",\n            \"text\": \"🚨 Error 416: Data Not Found, Maybe Stolen by Gremlins 👾\"\n        },\n        {\n            \"type\": \"TextBlock\",\n            \"text\": \"Some required fields are missing in your uploaded file. Please review the missing data below and re-upload the corrected file.\",\n            \"wrap\": true\n        },\n        {\n            \"type\": \"FactSet\",\n            \"facts\": [\n                {\n                    \"title\": \"File Name:\",\n                    \"value\": \"@{triggerBody()?['{Name}']}\"\n                },\n                {\n                    \"title\": \"Uploaded By:\",\n                    \"value\": \"@{triggerBody()?['Author/Email']}\"\n                }\n            ]\n        },\n        {\n            \"type\": \"TextBlock\",\n            \"text\": \"The following rows have missing data:\",\n            \"weight\": \"Bolder\",\n            \"spacing\": \"Medium\"\n        },\n        {\n            \"type\": \"TextBlock\",\n            \"text\": \"@{outputs('Compose_EscapedMissingDataList')}\",\n            \"wrap\": true,\n            \"color\": \"Attention\"\n        },\n        {\n            \"type\": \"TextBlock\",\n            \"text\": \"⚠ **Action Required:** Please update your source file with the missing details and re-upload it to the designated folder.\\n\\n👾 **Beware of data-hungry Gremlins!** Fill in all required fields before they do!\\n\\n🚀 Once uploaded, the automation will process your file automatically.\",\n            \"wrap\": true,\n            \"weight\": \"Bolder\"\n        },\n        {\n            \"type\": \"ActionSet\",\n            \"actions\": [\n                {\n                    \"type\": \"Action.OpenUrl\",\n                    \"title\": \"📂 Open Upload Folder\",\n                    \"url\": \"https://sherwebcorp.sharepoint.com/sites/Marketing/Documents%20partages/Event/Lead%20Import/Scanned%20Leads/\"\n                }\n            ]\n        }\n    ]\n}\n"
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams",
+                    "operationId": "PostCardToConversation",
+                    "connectionName": "shared_teams_1"
+                  }
+                },
+                "runAfter": {
+                  "Compose_EscapedMissingDataList": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "3aded7a1-2b84-4142-82bd-27568eb8083a"
+                }
+              },
+              "Select": {
+                "type": "Select",
+                "inputs": {
+                  "from": "@body('Filter_array')",
+                  "select": {
+                    "FirstName": "@{item()?['First Name']}",
+                    "LastName": "@{item()?['Last Name']}",
+                    "Email": "@{item()?['Email']}",
+                    "EventID": "@{item()?['EventID']}",
+                    "LevelOfInterest": "@{item()?['Level of Interest']}"
+                  }
+                },
+                "metadata": {
+                  "operationMetadataId": "df718bca-3d99-4cd7-8bba-99000b5fde30"
+                }
+              },
+              "Compose_-_List_for_Teams_Notification": {
+                "type": "Compose",
+                "inputs": "@join(body('Select'), decodeUriComponent('%0A'))",
+                "runAfter": {
+                  "Select": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "59c1c276-d776-4ab3-872c-6778c07d817d"
+                }
+              },
+              "Terminate_-_Missing_Data": {
+                "type": "Terminate",
+                "inputs": {
+                  "runStatus": "Failed",
+                  "runError": {
+                    "code": "416 - Data Not Found, Maybe Stolen by Gremlins 👾",
+                    "message": "\"Some required fields are missing. Please fill them in before Gremlins do it for you!\""
+                  }
+                },
+                "runAfter": {
+                  "Post_card_in_a_chat_or_channel_-_Missing_Data": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "256a5663-243c-4e3a-9a57-11ee8801d8a7"
+                }
+              },
+              "Compose_EscapedMissingDataList": {
+                "type": "Compose",
+                "inputs": "@replace(outputs('Compose_-_List_for_Teams_Notification'), '\"', '\\\"')",
+                "runAfter": {
+                  "Compose_-_List_for_Teams_Notification": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "0fdc7103-d62f-493a-8447-3a5797feab49"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_variable_-_var_RegistrationsCompleted": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "8e3cdc5a-4c51-4d35-b110-4f329a5ea09f"
+          }
+        },
+        "Initialize_variable_-_ContactID": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "var_ContactID",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_-_var_accountid": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f83d4710-c923-4dac-b9c2-5b744e385792"
+          }
+        },
+        "Initialize_variable_-_DomainName": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "var_DomainName",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_-_ownerid": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "beaa2268-9bae-458c-ac0f-4909918190d5"
+          }
+        },
+        "Initialize_variable_-_Invalid_Event_IDs": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "var_InvalidEventIDs",
+                "type": "array"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_-_DomainName": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "61d56e52-7565-4f24-9acd-bd97bae0c415"
+          }
+        },
+        "Apply_to_each_Row_from_source_file": {
+          "type": "Foreach",
+          "foreach": "@outputs('List_rows_present_in_a_table')?['body/value']",
+          "actions": {
+            "List_rows_-_Contacts": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "contacts",
+                  "fetchXml": "<fetch top=\"1\">\n  <entity name=\"contact\">\n    <attribute name=\"contactid\" />\n    <attribute name=\"emailaddress1\" />\n    <attribute name=\"firstname\" />\n    <attribute name=\"lastname\" />\n    <attribute name=\"jobtitle\" />\n    <attribute name=\"parentcustomerid\" />\n    <attribute name=\"modifiedon\" />\n    <attribute name=\"createdon\" />\n    <order attribute=\"modifiedon\" descending=\"true\" />\n    <order attribute=\"createdon\" descending=\"true\" />\n\n    <!-- Exclude inactive contacts -->\n    <filter type=\"and\">\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\" />\n      \n      <!-- Ensure email is not empty -->\n      <condition attribute=\"emailaddress1\" operator=\"not-null\" />\n\n      <!-- Match email to the current row being processed -->\n      <condition attribute=\"emailaddress1\" operator=\"eq\" value=\"@{body('Parse_JSON_-_Excel_Output')?['Email']}\" />\n\n      <!-- Exclude contacts with placeholder/test emails -->\n      <condition attribute=\"emailaddress1\" operator=\"not-like\" value=\"%test%\" />\n      <condition attribute=\"emailaddress1\" operator=\"not-like\" value=\"%invalid%\" />\n      <condition attribute=\"emailaddress1\" operator=\"not-like\" value=\"%example%\" />\n    </filter>\n  </entity>\n</fetch>\n"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
+              "runAfter": {
+                "Get_event": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "3ee9ff7d-cb64-41ac-8613-09f9fd5f8075"
+              }
+            },
+            "Parse_JSON_-_Excel_Output": {
+              "type": "ParseJson",
+              "inputs": {
+                "content": "@outputs('Compose_-_JSON_Item')",
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "FirstName": {
+                      "type": "string"
+                    },
+                    "LastName": {
+                      "type": "string"
+                    },
+                    "JobTitle": {
+                      "type": "string"
+                    },
+                    "Company": {
+                      "type": "string"
+                    },
+                    "Email": {
+                      "type": "string"
+                    },
+                    "LevelOfInterest": {
+                      "type": "string"
+                    },
+                    "ProductOfInterest": {
+                      "type": "string"
+                    },
+                    "Notes": {
+                      "type": "string"
+                    },
+                    "EventID": {
+                      "type": "string"
+                    },
+                    "PhoneNumber": {
+                      "type": "string"
+                    },
+                    "PostalCode": {
+                      "type": "string"
+                    },
+                    "StateProvince": {
+                      "type": "string"
+                    },
+                    "Country": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "runAfter": {
+                "Compose_-_Level_of_Interest": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "2d27af05-e9ff-4aa5-8a3e-91c5e72b0b71"
+              }
+            },
+            "Condition_-_If_no_contact_found": {
+              "type": "If",
+              "expression": {
+                "and": [
+                  {
+                    "equals": [
+                      "@length(outputs('List_rows_-_Contacts')?['body/value'])",
+                      0
+                    ]
+                  }
+                ]
+              },
+              "actions": {
+                "Create_Contact": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "contacts",
+                      "item/emailaddress1": "@items('Apply_to_each_Row_from_source_file')?['Email']",
+                      "item/lastname": "@items('Apply_to_each_Row_from_source_file')?['Last Name']",
+                      "item/address1_postalcode": "@items('Apply_to_each_Row_from_source_file')?['ZIP/Postal Code']",
+                      "item/telephone1": "@items('Apply_to_each_Row_from_source_file')?['Phone Number']",
+                      "item/description": "@items('Apply_to_each_Row_from_source_file')?['Notes']",
+                      "item/firstname": "@items('Apply_to_each_Row_from_source_file')?['First Name']",
+                      "item/jobtitle": "@items('Apply_to_each_Row_from_source_file')?['Job Title']",
+                      "item/address1_country": "@items('Apply_to_each_Row_from_source_file')?['Country']",
+                      "item/address1_stateorprovince": "@items('Apply_to_each_Row_from_source_file')?['State/Province']",
+                      "item/msevtmgt_originatingeventid@odata.bind": "@concat('/msevtmgt_events(', items('Apply_to_each_Row_from_source_file')?['EventID'], ')')"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "operationId": "CreateRecord",
+                      "connectionName": "shared_commondataserviceforapps"
+                    }
+                  },
+                  "runAfter": {
+                    "Increment_variable_-_var_ContactsCreated": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "49f64c63-4285-4a23-ae11-fe72a0915c53"
+                  }
+                },
+                "Increment_variable_-_var_ContactsCreated": {
+                  "type": "IncrementVariable",
+                  "inputs": {
+                    "name": "var_ContactsCreated",
+                    "value": 1
+                  },
+                  "metadata": {
+                    "operationMetadataId": "b37ecd8f-62fb-4f34-8d38-dc058c0e7d9a"
+                  }
+                },
+                "Set_Created_Contact": {
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "var_ContactID",
+                    "value": "@outputs('Create_Contact')?['body/contactid']"
+                  },
+                  "runAfter": {
+                    "Create_Contact": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "a9cb6a2e-ed6b-4bcd-94a6-72c1009c28af"
+                  }
+                }
+              },
+              "else": {
+                "actions": {
+                  "Set_Top1_Contact_Found": {
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "var_ContactID",
+                      "value": "@first(outputs('List_rows_-_Contacts')?['body/value'])?['contactid']"
+                    },
+                    "runAfter": {
+                      "Increment_variable_-_var_ContactsFound": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "549ca7ca-338b-4dfe-8eab-13dcb4ba468f"
+                    }
+                  },
+                  "Increment_variable_-_var_ContactsFound": {
+                    "type": "IncrementVariable",
+                    "inputs": {
+                      "name": "var_ContactsFound",
+                      "value": 1
+                    },
+                    "metadata": {
+                      "operationMetadataId": "95eb3eab-8535-4e4b-823d-1e3b138312b0"
+                    }
+                  }
+                }
+              },
+              "runAfter": {
+                "List_rows_-_Contacts": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "43acfe9d-0529-4659-a6fe-98f047935fe1"
+              }
+            },
+            "Compose_-_Event_Registration_ID": {
+              "type": "Compose",
+              "inputs": "@guid()",
+              "runAfter": {
+                "target_owner_eq_blank": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "d02c98b9-1cad-40bd-b23d-40158f7c7d9b"
+              }
+            },
+            "Create_Event_Registration": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "msevtmgt_eventregistrations",
+                  "item/msevtmgt_ContactId@odata.bind": "@concat('/contacts(', variables('var_ContactID'), ')')",
+                  "item/msevtmgt_EventId@odata.bind": "@concat('/msevtmgt_events(', items('Apply_to_each_Row_from_source_file')?['EventID'], ')')",
+                  "item/msevtmgt_name": "@outputs('Compose_-_Event_Registration_ID')"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "CreateRecord",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
+              "runAfter": {
+                "Compose_-_Event_Registration_ID": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "9a37edc0-b5d2-40e3-a720-939f2c0f32e1"
+              }
+            },
+            "Increment_variable_-_var_RegistrationsCompleted": {
+              "type": "IncrementVariable",
+              "inputs": {
+                "name": "var_RegistrationsCompleted",
+                "value": 1
+              },
+              "runAfter": {
+                "Create_Check-in": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "9b35c562-e291-418c-b2e6-04e56ce761d1"
+              }
+            },
+            "Compose_-_JSON_Item": {
+              "type": "Compose",
+              "inputs": "@items('Apply_to_each_Row_from_source_file')",
+              "metadata": {
+                "operationMetadataId": "e115369b-d88b-45e2-92ab-7caf23dcd607"
+              }
+            },
+            "Compose_-_Level_of_Interest": {
+              "type": "Compose",
+              "inputs": "@if(\r\n  equals(toLower(coalesce(items('Apply_to_each_Row_from_source_file')?['Level of Interest'], '')), 'cold'),\r\n  234570000,\r\n  if(\r\n    equals(toLower(coalesce(items('Apply_to_each_Row_from_source_file')?['Level of Interest'], '')), 'warm'),\r\n    234570001,\r\n    if(\r\n      equals(toLower(coalesce(items('Apply_to_each_Row_from_source_file')?['Level of Interest'], '')), 'hot'),\r\n      234570002,\r\n      null\r\n    )\r\n  )\r\n)",
+              "runAfter": {
+                "Compose_-_JSON_Item": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "a08c8ba1-d050-49e1-8044-c76182dc48fb"
+              }
+            },
+            "Create_Check-in": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "msevtmgt_checkins",
+                  "item/msevtmgt_checkintype": 100000001,
+                  "item/msevtmgt_RegistrationId@odata.bind": "/msevtmgt_eventregistrations(@{outputs('Create_Event_Registration')?['body/msevtmgt_eventregistrationid']})",
+                  "item/msevtmgt_Contact@odata.bind": "/contacts(@{variables('var_ContactID')})",
+                  "item/msevtmgt_checkintime": "@utcNow()",
+                  "item/msevtmgt_checkouttime": "@utcNow()",
+                  "item/msevtmgt_Event@odata.bind": "/msevtmgt_events(@{outputs('Create_Event_Registration')?['body/_msevtmgt_eventid_value']})",
+                  "item/revops_levelofinterest": "@outputs('Compose_-_Level_of_Interest')",
+                  "item/msevtmgt_name": "check-in for '@{outputs('Create_Event_Registration')?['body/_msevtmgt_contactid_value']}'",
+                  "item/revops_attendancetype": "@outputs('Compose_attendance_type')"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "CreateRecord",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
+              "runAfter": {
+                "Compose_attendance_type": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "0c912ed9-88bd-4a71-bbe8-ceb4784bcf9e"
+              }
+            },
+            "Get_event": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "msevtmgt_events",
+                  "recordId": "@body('Parse_JSON_-_Excel_Output')?['EventID']"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
+              "runAfter": {
+                "Compose_lead_rating_on_update": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "6aa4109e-2de1-495c-ac17-9d39757812db"
+              }
+            },
+            "target_owner_eq_blank": {
+              "type": "If",
+              "expression": {
+                "equals": [
+                  "@items('Apply_to_each_Row_from_source_file')?['Target Owner']",
+                  ""
+                ]
+              },
+              "actions": {},
+              "else": {
+                "actions": {
+                  "Update_a_row_-_lead1": {
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "parameters": {
+                        "entityName": "leads",
+                        "recordId": "@variables('var_leadID')",
+                        "item/ownerid@odata.bind": "/systemusers(@{variables('var_OwnerID')})"
+                      },
+                      "host": {
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                        "operationId": "UpdateOnlyRecord",
+                        "connectionName": "shared_commondataserviceforapps"
+                      }
+                    },
+                    "runAfter": {
+                      "Set_variable_-_ownerid": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "3f3aad0a-920b-4c84-a79a-cee129c336cb"
+                    }
+                  },
+                  "List_rows_-_users1": {
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "parameters": {
+                        "entityName": "systemusers",
+                        "$filter": "fullname eq '@{items('Apply_to_each_Row_from_source_file')?['Target Owner']}'"
+                      },
+                      "host": {
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                        "operationId": "ListRecords",
+                        "connectionName": "shared_commondataserviceforapps"
+                      }
+                    },
+                    "metadata": {
+                      "operationMetadataId": "344ec75d-b109-4cae-8b51-49a89eea8c63"
+                    }
+                  },
+                  "Set_variable_-_ownerid": {
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "var_OwnerID",
+                      "value": "@first(outputs('List_rows_-_users1')?['body/value'])?['systemuserid']"
+                    },
+                    "runAfter": {
+                      "List_rows_-_users1": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "2ffd4e08-1dda-4e89-b477-a8c90a0eb275"
+                    }
+                  }
+                }
+              },
+              "runAfter": {
+                "Condition_-_If_no_lead_found": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "ec5bb0ed-77b6-448e-950e-4434397fffb2"
+              }
+            },
+            "Compose_-_StatusReason": {
+              "type": "Compose",
+              "inputs": "@if(\r\n  equals(toLower(string(coalesce(items('Apply_to_each_Row_from_source_file')?['LevelOfInterest'], ''))), 'cold'),\r\n  null,\r\n  823270000\r\n)\r\n",
+              "runAfter": {
+                "Parse_JSON_-_Excel_Output": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "895aebfe-4cd0-436d-a0e3-caff25024d50"
+              }
+            },
+            "Compose_Sales_Ready": {
+              "type": "Compose",
+              "inputs": "@if(\r\n  equals(toLower(string(coalesce(items('Apply_to_each_Row_from_source_file')?['LevelOfInterest'], ''))), 'cold'),\r\n  null,\r\n  true\r\n)\r\n",
+              "runAfter": {
+                "Compose_-_StatusReason": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "97434f27-9b37-471d-8071-345870131463"
+              }
+            },
+            "Compose_lead_rating_on_create": {
+              "type": "Compose",
+              "inputs": "@if(\r\n  equals(toLower(coalesce(items('Apply_to_each_Row_from_source_file')?['Level of Interest'], '')), 'cold'),\r\n  3,\r\n  if(\r\n    equals(toLower(coalesce(items('Apply_to_each_Row_from_source_file')?['Level of Interest'], '')), 'warm'),\r\n    2,\r\n    if(\r\n      equals(toLower(coalesce(items('Apply_to_each_Row_from_source_file')?['Level of Interest'], '')), 'hot'),\r\n      1,\r\n      null\r\n    )\r\n  )\r\n)",
+              "runAfter": {
+                "Compose_Sales_Ready": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "6fb82e8d-2cb2-4e12-ab8a-d6a69c7167dc"
+              }
+            },
+            "List_rows_-_leads": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "leads",
+                  "$filter": "emailaddress1 eq '@{body('Parse_JSON_-_Excel_Output')?['Email']}'",
+                  "$orderby": "modifiedon desc\n",
+                  "$top": 1
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
+              "runAfter": {
+                "Condition_-_If_no_contact_found": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "4ab36200-c653-4a42-971e-add9161a552d"
+              }
+            },
+            "Compose_attendance_type": {
+              "type": "Compose",
+              "inputs": "@if(\r\n  equals(toLower(coalesce(items('Apply_to_each_Row_from_source_file')?['Attendance type'], '')), 'attended'),\r\n  234570000,\r\n  if(\r\n    equals(toLower(coalesce(items('Apply_to_each_Row_from_source_file')?['Attendance type'], '')), 'visited booth'),\r\n    234570001,\r\n    null\r\n  )\r\n)",
+              "runAfter": {
+                "Create_Event_Registration": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "a5b193ca-acdf-4b61-bc1a-d9a9685b1767"
+              }
+            },
+            "Compose_lead_rating_on_update": {
+              "type": "Compose",
+              "inputs": "@if(\r\n  equals(toLower(coalesce(items('Apply_to_each_Row_from_source_file')?['Level of Interest'], '')), 'cold'),\r\n  null,\r\n  if(\r\n    equals(toLower(coalesce(items('Apply_to_each_Row_from_source_file')?['Level of Interest'], '')), 'warm'),\r\n    2,\r\n    if(\r\n      equals(toLower(coalesce(items('Apply_to_each_Row_from_source_file')?['Level of Interest'], '')), 'hot'),\r\n      1,\r\n      null\r\n    )\r\n  )\r\n)",
+              "runAfter": {
+                "Compose_lead_rating_on_create": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "1c10a32c-3259-4572-a662-c8acffe5ab53"
+              }
+            },
+            "Condition_-_If_no_lead_found": {
+              "type": "If",
+              "expression": {
+                "or": [
+                  {
+                    "equals": [
+                      "@length(outputs('List_rows_-_leads')?['body/value'])",
+                      0
+                    ]
+                  },
+                  {
+                    "not": {
+                      "equals": [
+                        "@outputs('List_rows_-_leads')?['body/value'][0]?['statecode']",
+                        0
+                      ]
+                    }
+                  }
+                ]
+              },
+              "actions": {
+                "Create_lead": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "leads",
+                      "item/emailaddress1": "@items('Apply_to_each_Row_from_source_file')?['Email']",
+                      "item/subject": " @{outputs('Get_event')?['body/msevtmgt_name']} - @{items('Apply_to_each_Row_from_source_file')?['First Name']} @{items('Apply_to_each_Row_from_source_file')?['Last Name']}",
+                      "item/companyname": "@items('Apply_to_each_Row_from_source_file')?['Company']",
+                      "item/address1_country": "@items('Apply_to_each_Row_from_source_file')?['Country']",
+                      "item/description": "@items('Apply_to_each_Row_from_source_file')?['Notes']",
+                      "item/firstname": "@items('Apply_to_each_Row_from_source_file')?['First Name']",
+                      "item/jobtitle": "@items('Apply_to_each_Row_from_source_file')?['Job Title']",
+                      "item/lastname": "@items('Apply_to_each_Row_from_source_file')?['Last Name']",
+                      "item/leadsourcecode": 7,
+                      "item/parentcontactid@odata.bind": "/contacts(@{variables('var_ContactID')})",
+                      "item/telephone1": "@items('Apply_to_each_Row_from_source_file')?['Phone Number']",
+                      "item/address1_stateorprovince": "@items('Apply_to_each_Row_from_source_file')?['State/Province']",
+                      "item/address1_postalcode": "@items('Apply_to_each_Row_from_source_file')?['ZIP/Postal Code']",
+                      "item/msevtmgt_originatingeventid@odata.bind": "@concat('/msevtmgt_events(', items('Apply_to_each_Row_from_source_file')?['EventID'], ')')",
+                      "item/leadqualitycode": "@outputs('Compose_lead_rating_on_create')"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "operationId": "CreateRecord",
+                      "connectionName": "shared_commondataserviceforapps"
+                    }
+                  },
+                  "runAfter": {
+                    "Increment_variable_-_var_leadsCreated": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "49f64c63-4285-4a23-ae11-fe72a0915c53"
+                  }
+                },
+                "Increment_variable_-_var_leadsCreated": {
+                  "type": "IncrementVariable",
+                  "inputs": {
+                    "name": "var_leadsCreated",
+                    "value": 1
+                  },
+                  "metadata": {
+                    "operationMetadataId": "b37ecd8f-62fb-4f34-8d38-dc058c0e7d9a"
+                  }
+                },
+                "Set_Created_lead": {
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "var_leadID",
+                    "value": "@outputs('Create_lead')?['body/leadid']"
+                  },
+                  "runAfter": {
+                    "Create_lead": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "a9cb6a2e-ed6b-4bcd-94a6-72c1009c28af"
+                  }
+                }
+              },
+              "else": {
+                "actions": {
+                  "Set_Top1_lead_Found": {
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "var_leadID",
+                      "value": "@first(outputs('List_rows_-_leads')?['body/value'])?['leadid']"
+                    },
+                    "runAfter": {
+                      "Increment_variable_-_var_leadFound": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "549ca7ca-338b-4dfe-8eab-13dcb4ba468f"
+                    }
+                  },
+                  "Increment_variable_-_var_leadFound": {
+                    "type": "IncrementVariable",
+                    "inputs": {
+                      "name": "var_leadsFound",
+                      "value": 1
+                    },
+                    "runAfter": {
+                      "Condition": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "95eb3eab-8535-4e4b-823d-1e3b138312b0"
+                    }
+                  },
+                  "Condition": {
+                    "type": "If",
+                    "expression": {
+                      "and": [
+                        {
+                          "equals": [
+                            "@outputs('Compose_-_Level_of_Interest')",
+                            234570000
+                          ]
+                        }
+                      ]
+                    },
+                    "actions": {
+                      "Update_a_row_-_lead_1": {
+                        "type": "OpenApiConnection",
+                        "inputs": {
+                          "parameters": {
+                            "entityName": "leads",
+                            "recordId": "@first(body('List_rows_-_leads')?['value'])?['leadid']",
+                            "item/description": "@{items('Apply_to_each_Row_from_source_file')?['Notes']} - @{first(body('List_rows_-_leads')?['value'])?['description']} ",
+                            "item/leadsourcecode": 7,
+                            "item/subject": "@{outputs('Get_event')?['body/msevtmgt_name']} - @{items('Apply_to_each_Row_from_source_file')?['First Name']} @{items('Apply_to_each_Row_from_source_file')?['Last Name']}"
+                          },
+                          "host": {
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                            "operationId": "UpdateOnlyRecord",
+                            "connectionName": "shared_commondataserviceforapps"
+                          }
+                        },
+                        "metadata": {
+                          "operationMetadataId": "800dbe92-a25d-4456-9c40-d64b5af557a3"
+                        }
+                      }
+                    },
+                    "else": {
+                      "actions": {
+                        "Update_a_row_-_lead": {
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "parameters": {
+                              "entityName": "leads",
+                              "recordId": "@first(body('List_rows_-_leads')?['value'])?['leadid']",
+                              "item/leadsourcecode": 7,
+                              "item/subject": "@{outputs('Get_event')?['body/msevtmgt_name']} - @{items('Apply_to_each_Row_from_source_file')?['First Name']} @{items('Apply_to_each_Row_from_source_file')?['Last Name']}",
+                              "item/leadqualitycode": "@outputs('Compose_lead_rating_on_update')"
+                            },
+                            "host": {
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                              "operationId": "UpdateOnlyRecord",
+                              "connectionName": "shared_commondataserviceforapps"
+                            }
+                          },
+                          "metadata": {
+                            "operationMetadataId": "800dbe92-a25d-4456-9c40-d64b5af557a3"
+                          }
+                        }
+                      }
+                    },
+                    "metadata": {
+                      "operationMetadataId": "880c8b7c-d505-4a44-abe8-1d74233f917c"
+                    }
+                  }
+                }
+              },
+              "runAfter": {
+                "List_rows_-_leads": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "43acfe9d-0529-4659-a6fe-98f047935fe1"
+              }
+            }
+          },
+          "runAfter": {
+            "Condition_-_InvalidTargetOwner": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7281a404-3950-4fcd-a9fe-981521d2d9af"
+          }
+        },
+        "Initialize_variable_-_var_ContactsCreated_": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "var_ContactsCreated",
+                "type": "integer"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_-_InvalidTargetOwner": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1e27a659-5465-431b-a0b8-eb62bbc495e8"
+          }
+        },
+        "Initialize_variable_-_var_ContactsFound": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "var_ContactsFound",
+                "type": "integer"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_-_var_ContactsCreated_": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "55ef1832-daeb-482f-89ab-f1888c6bc814"
+          }
+        },
+        "Initialize_variable_-_var_RegistrationsCompleted": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "var_RegistrationsCompleted",
+                "type": "integer"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_-_var_leadsFound": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "68e1dbfc-ae86-4e53-8ba9-122c2ae9cd3c"
+          }
+        },
+        "Post_card_in_a_chat_or_channel_-_Summary": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "poster": "Flow bot",
+              "location": "Chat with Flow bot",
+              "body/recipient": "@triggerBody()?['Author/Email']",
+              "body/messageBody": "{\n    \"$schema\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n    \"type\": \"AdaptiveCard\",\n    \"version\": \"1.4\",\n    \"body\": [\n        {\n            \"type\": \"TextBlock\",\n            \"size\": \"Medium\",\n            \"weight\": \"Bolder\",\n            \"text\": \"✅ Event Processing Recap\"\n        },\n        {\n            \"type\": \"TextBlock\",\n            \"text\": \"Your file has been successfully processed. Below is a summary of the key metrics:\",\n            \"wrap\": true\n        },\n        {\n            \"type\": \"FactSet\",\n            \"facts\": [\n                {\n                    \"title\": \"📂 File Name:\",\n                    \"value\": \"@{triggerBody()?['{Name}']}\"\n                },\n                {\n                    \"title\": \"👤 Uploaded By:\",\n                    \"value\": \"@{triggerBody()?['Author/Email']}\"\n                },\n                {\n                    \"title\": \"✅ Leads Created:\",\n                    \"value\": \"@{variables('var_leadsCreated')}\"\n                },\n                {\n                    \"title\": \"🔍 Leads Found:\",\n                    \"value\": \"@{variables('var_leadsFound')}\"\n                },\n                {\n                    \"title\": \"✅ Contacts Created:\",\n                    \"value\": \"@{variables('var_ContactsCreated')}\"\n                },\n                {\n                    \"title\": \"🔍 Contacts Found:\",\n                    \"value\": \"@{variables('var_ContactsFound')}\"\n                },\n                {\n                    \"title\": \"🎟 Event Registrations Completed:\",\n                    \"value\": \"@{variables('var_RegistrationsCompleted')}\"\n                },\n                {\n                    \"title\": \"📍 Check-Ins Completed:\",\n                    \"value\": \"@{variables('var_RegistrationsCompleted')}\" \n                }\n            ]\n        },\n        {\n            \"type\": \"TextBlock\",\n            \"text\": \"If anything seems off, please review the file and re-upload it. \",\n            \"wrap\": true,\n            \"weight\": \"Bolder\",\n            \"color\": \"Attention\"\n        },\n        {\n            \"type\": \"ActionSet\",\n            \"actions\": [\n                {\n                    \"type\": \"Action.OpenUrl\",\n                    \"title\": \"📂 Open Upload Folder\",\n                    \"url\": \"https://sherwebcorp.sharepoint.com/sites/Marketing/Documents%20partages/Event/Lead%20Import/Scanned%20Leads/\"\n                }\n            ]\n        }\n    ]\n}\n"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams",
+              "operationId": "PostCardToConversation",
+              "connectionName": "shared_teams_1"
+            }
+          },
+          "runAfter": {
+            "Apply_to_each_Row_from_source_file": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "0f19e577-fe41-44b7-9517-327542696197"
+          }
+        },
+        "Initialize_variable_-_var_leadsFound": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "var_leadsFound",
+                "type": "integer"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_-_var_leadsCreated": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "55ef1832-daeb-482f-89ab-f1888c6bc814"
+          }
+        },
+        "Initialize_variable_-_var_leadsCreated": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "var_leadsCreated",
+                "type": "integer"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_-_var_ContactsFound": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1e27a659-5465-431b-a0b8-eb62bbc495e8"
+          }
+        },
+        "Initialize_variable_-_leadID": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "var_leadID",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_-_ContactID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f83d4710-c923-4dac-b9c2-5b744e385792"
+          }
+        },
+        "Initialize_variable_-_var_accountid": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "var_accountid",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "Filter_array": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "2309dadd-6452-44c6-b839-c53fda1d39cd"
+          }
+        },
+        "Initialize_variable_-_InvalidTargetOwner": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "var_InvalidTargetOwner",
+                "type": "array"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_-_Invalid_Event_IDs": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "61d56e52-7565-4f24-9acd-bd97bae0c415"
+          }
+        },
+        "Apply_to_each_-_check_target_owner": {
+          "type": "Foreach",
+          "foreach": "@body('List_rows_present_in_a_table')?['value']",
+          "actions": {
+            "Compose_-_Row_Values_2": {
+              "type": "Compose",
+              "inputs": {
+                "FirstName": "@{items('Apply_to_each_-_check_target_owner')?['First Name']}",
+                "LastName": "@{items('Apply_to_each_-_check_target_owner')?['Last Name']}",
+                "JobTitle": "@{items('Apply_to_each_-_check_target_owner')?['Job Title']}",
+                "Company": "@{items('Apply_to_each_-_check_target_owner')?['Company']}",
+                "Email": "@{items('Apply_to_each_-_check_target_owner')?['Email']}",
+                "LevelOfInterest": "@{items('Apply_to_each_-_check_target_owner')?['Level of Interest']}",
+                "ProductOfInterest": "@{items('Apply_to_each_-_check_target_owner')?['Product of Interest']}",
+                "Notes": "@{items('Apply_to_each_-_check_target_owner')?['Notes']}",
+                "EventID": "@{items('Apply_to_each_-_check_target_owner')?['EventID']}",
+                "PhoneNumber": "@{items('Apply_to_each_-_check_target_owner')?['Phone Number']}",
+                "PostalCode": "@{items('Apply_to_each_-_check_target_owner')?['ZIP/Postal Code']}",
+                "StateProvince": "@{items('Apply_to_each_-_check_target_owner')?['State/Province']}",
+                "Country": "@{items('Apply_to_each_-_check_target_owner')?['Country']}",
+                "TargetOwner": "@{items('Apply_to_each_-_check_target_owner')?['Target Owner']}"
+              },
+              "metadata": {
+                "operationMetadataId": "32322fc2-1623-4f4e-a7e1-e7134395767e"
+              }
+            },
+            "Parse_JSON_-_Excel_Row_Values_2": {
+              "type": "ParseJson",
+              "inputs": {
+                "content": "@outputs('Compose_-_Row_Values_2')",
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "FirstName": {
+                      "type": "string"
+                    },
+                    "LastName": {
+                      "type": "string"
+                    },
+                    "JobTitle": {
+                      "type": "string"
+                    },
+                    "Company": {
+                      "type": "string"
+                    },
+                    "Email": {
+                      "type": "string"
+                    },
+                    "LevelOfInterest": {
+                      "type": "string"
+                    },
+                    "ProductOfInterest": {
+                      "type": "string"
+                    },
+                    "Notes": {
+                      "type": "string"
+                    },
+                    "EventID": {
+                      "type": "string"
+                    },
+                    "PhoneNumber": {
+                      "type": "string"
+                    },
+                    "PostalCode": {
+                      "type": "string"
+                    },
+                    "StateProvince": {
+                      "type": "string"
+                    },
+                    "Country": {
+                      "type": "string"
+                    },
+                    "TargetOwner": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "runAfter": {
+                "Compose_-_Row_Values_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "87d69962-965c-49ac-aee0-88841503c332"
+              }
+            },
+            "Condition_-_target_owner_is_empty": {
+              "type": "If",
+              "expression": {
+                "and": [
+                  {
+                    "equals": [
+                      "@items('Apply_to_each_-_check_target_owner')?['Target Owner']",
+                      ""
+                    ]
+                  }
+                ]
+              },
+              "actions": {},
+              "else": {
+                "actions": {
+                  "List_rows_-_users": {
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "parameters": {
+                        "entityName": "systemusers",
+                        "$filter": "fullname eq '@{items('Apply_to_each_-_check_target_owner')?['Target Owner']}'"
+                      },
+                      "host": {
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                        "operationId": "ListRecords",
+                        "connectionName": "shared_commondataserviceforapps"
+                      }
+                    },
+                    "metadata": {
+                      "operationMetadataId": "70eae143-efaa-47b2-bcf1-168806e3e907"
+                    }
+                  },
+                  "Condition_-_typo_in_name_2": {
+                    "type": "If",
+                    "expression": {
+                      "and": [
+                        {
+                          "equals": [
+                            "@length(outputs('List_rows_-_users')?['body/value'])",
+                            0
+                          ]
+                        }
+                      ]
+                    },
+                    "actions": {
+                      "Append_to_var_InvalidTargetOwner": {
+                        "type": "AppendToArrayVariable",
+                        "inputs": {
+                          "name": "var_InvalidTargetOwner",
+                          "value": "@concat(\r\n  body('Parse_JSON_-_Excel_Row_Values_2')?['TargetOwner']\r\n  )\r\n"
+                        },
+                        "metadata": {
+                          "operationMetadataId": "57aded53-a350-4263-988e-b663e2099ded"
+                        }
+                      }
+                    },
+                    "else": {
+                      "actions": {
+                        "Valid_Target_Owner": {
+                          "type": "Compose",
+                          "inputs": "system user found: No action required.",
+                          "metadata": {
+                            "operationMetadataId": "0189fb09-a1b2-47b2-93ff-618a9e3c4486"
+                          }
+                        }
+                      }
+                    },
+                    "runAfter": {
+                      "List_rows_-_users": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "c8285778-cae0-4915-9002-a2a94dc0c0a3"
+                    }
+                  }
+                }
+              },
+              "runAfter": {
+                "Parse_JSON_-_Excel_Row_Values_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "7b1b39d4-3e5c-40c8-860c-94753da6e600"
+              }
+            }
+          },
+          "runAfter": {
+            "Condition_-_if_Missing_Data": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ea814954-33fc-40c9-abf2-fff827fb57e8"
+          }
+        },
+        "Condition_-_InvalidTargetOwner": {
+          "type": "If",
+          "expression": {
+            "and": [
+              {
+                "greater": [
+                  "@length(variables('var_InvalidTargetOwner'))",
+                  0
+                ]
+              }
+            ]
+          },
+          "actions": {
+            "Terminate_-_Invalid_target_owner": {
+              "type": "Terminate",
+              "inputs": {
+                "runStatus": "Failed",
+                "runError": {
+                  "code": "Error Code: 418 - Target Owner is imaginary 🎭",
+                  "message": "\"The target owner you provided does not exist. Did you just make it up? Try again with a real one!\""
+                }
+              },
+              "runAfter": {
+                "Post_card_in_a_chat_or_channel_-_InvalidTargetOwner": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "cfe32168-c19e-4ba3-8024-3e910a216739"
+              }
+            },
+            "Compose_JoinedInvalidTargetOwner": {
+              "type": "Compose",
+              "inputs": "@join(variables('var_InvalidTargetOwner'), ', ')",
+              "metadata": {
+                "operationMetadataId": "cf0fa819-b74a-45de-a969-5ee28b862ee7"
+              }
+            },
+            "Post_card_in_a_chat_or_channel_-_InvalidTargetOwner": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "poster": "Flow bot",
+                  "location": "Chat with Flow bot",
+                  "body/recipient": "@triggerBody()?['Author/Email']",
+                  "body/messageBody": "{\n    \"$schema\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n    \"type\": \"AdaptiveCard\",\n    \"version\": \"1.4\",\n    \"body\": [\n        {\n            \"type\": \"TextBlock\",\n            \"size\": \"Medium\",\n            \"weight\": \"Bolder\",\n            \"text\": \"🚨 Error 418: Target Owner name is Imaginary 🎭\"\n        },\n        {\n            \"type\": \"TextBlock\",\n            \"text\": \"The following Target Owner in your file do not match any records in our system. Please verify that you're using a valid Dynamics 365 full name and try again.\",\n            \"wrap\": true\n        },\n        {\n            \"type\": \"FactSet\",\n            \"facts\": [\n                {\n                    \"title\": \"File Name:\",\n                    \"value\": \"@{triggerBody()?['{Name}']}\"\n                },\n                {\n                    \"title\": \"Uploaded By:\",\n                    \"value\": \"@{triggerBody()?['Author/Email']}\"\n                }\n            ]\n        },\n        {\n            \"type\": \"TextBlock\",\n            \"text\": \"**Invalid Target Owner(s):**\",\n            \"weight\": \"Bolder\",\n            \"spacing\": \"Medium\"\n        },\n        {\n            \"type\": \"TextBlock\",\n            \"text\": \"@{outputs('Compose_JoinedInvalidTargetOwner')}\",\n            \"wrap\": true,\n            \"color\": \"Attention\"\n        },\n        {\n            \"type\": \"TextBlock\",\n            \"text\": \"⚠ **Action Required:** Please ensure that the Target Owner(s) are correct and re-upload the file.\\n\\n🎭 **Are you sure these full names exist?** We don’t accept imaginary names!\\n\\n🚀 Once uploaded, the automation will process your file automatically.\",\n            \"wrap\": true,\n            \"weight\": \"Bolder\"\n        },\n        {\n            \"type\": \"ActionSet\",\n            \"actions\": [\n                {\n                    \"type\": \"Action.OpenUrl\",\n                    \"title\": \"📂 Open Upload Folder\",\n                    \"url\": \"https://sherwebcorp.sharepoint.com/sites/Marketing/Documents%20partages/Event/Lead%20Import/Scanned%20Leads/\"\n                }\n            ]\n        }\n    ]\n}\n"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams",
+                  "operationId": "PostCardToConversation",
+                  "connectionName": "shared_teams_1"
+                }
+              },
+              "runAfter": {
+                "Compose_JoinedInvalidTargetOwner": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "db30c3c9-f06a-42c7-b7cc-cb6132493401"
+              }
+            }
+          },
+          "else": {
+            "actions": {
+              "No_Invalid_Target_Owner": {
+                "type": "Compose",
+                "inputs": "All target owners validated successfully.",
+                "metadata": {
+                  "operationMetadataId": "1814e60c-1e43-4914-b5e0-b348703e6acc"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "Apply_to_each_-_check_target_owner": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d2e6f5d8-ad92-40ce-8e16-47aefb8ba166"
+          }
+        },
+        "Initialize_variable_-_ownerid": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "var_OwnerID",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_-_leadID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d97dd2ab-acce-41e5-915c-c109342c6a0a"
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,31 @@
+views:
+  -
+    name: Partner Investments
+    description: All active Partner Investments
+    querytype: 8192
+    savedqueryid: '3ebbad23-c51e-ef11-840b-000d3af430c4'
+  -
+    name: Partner Investment Associated View
+    querytype: 2
+    savedqueryid: 'b821fe44-7773-4e7b-ad25-0de72fea7d2e'
+  -
+    name: Active Partner Investments
+    querytype: -1
+    savedqueryid: 'e9317d95-2400-4601-8410-223301f65e4f'
+  -
+    name: Partner Investment Lookup View
+    querytype: 64
+    savedqueryid: 'cce0539e-ae12-4dcf-abd3-43c80c9099b2'
+  -
+    name: Inactive Partner Investments
+    querytype: -1
+    savedqueryid: 'a3ec5113-8ee7-4da8-84bc-81a528772864'
+  -
+    name: Partner Investment Advanced Find View
+    querytype: 1
+    savedqueryid: '032d4d9b-cb33-41d7-a887-f4437f51d9b4'
+  -
+    name: Quick Find Active Partner Investments
+    querytype: 4
+    savedqueryid: 'cd6dfd56-e54c-45d5-82b9-fbb5151fc229'
+

@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '90a1ff34-7b95-f011-b4cc-6045bdfa0630'
+name: 'zremove[JourneyManual] DCIJ - Website contact form submitted'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

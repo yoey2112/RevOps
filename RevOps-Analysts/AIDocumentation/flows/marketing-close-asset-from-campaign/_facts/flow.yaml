@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '91fb6fe3-6b78-f011-b4cc-7ced8d063295'
+name: 'marketing - close asset from campaign'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

@@ -1,0 +1,6 @@
+types:
+  -
+    plugintypeid: '17d60798-c8eb-48ee-83ba-24f6c97dfa5e'
+    typename: RevOps.Plugins.CaseInteractionStamper.CaseInteractionStamper
+    name: RevOps.Plugins.CaseInteractionStamper.CaseInteractionStamper
+

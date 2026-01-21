@@ -1,0 +1,35 @@
+views:
+  -
+    name: Closed Business Reviews
+    querytype: -1
+    savedqueryid: 'da50d54b-3807-4a42-bec0-04219604e4b3'
+  -
+    name: Business Review Lookup View
+    querytype: 64
+    savedqueryid: '389ef516-27ab-4440-bb59-0700d1aa83c7'
+  -
+    name: All Business Reviews
+    querytype: -1
+    savedqueryid: '6b5c2586-4135-43b1-988b-11be2c26acc0'
+  -
+    name: Business Review Advanced Find View
+    querytype: 1
+    savedqueryid: '8d1dbc17-9c44-421e-b557-28d956a84eae'
+  -
+    name: My Open Business Reviews
+    querytype: -1
+    savedqueryid: '0575e8ff-39ee-4a5b-ab82-59927554a587'
+  -
+    name: My Business Reviews
+    description: Active Business Reviews owned by me
+    querytype: 8192
+    savedqueryid: '47b0f333-e372-f011-bec2-7c1e52409afe'
+  -
+    name: Business Review Associated View
+    querytype: 2
+    savedqueryid: 'cc339bd9-96f6-423d-b9b1-c4293f461bf6'
+  -
+    name: Quick Find Active Business Reviews
+    querytype: 4
+    savedqueryid: '96c54c03-9a39-4aeb-b630-ddb206a14871'
+

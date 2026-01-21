@@ -1,0 +1,35 @@
+views:
+  -
+    name: Quick Find Active Cadence Calls
+    querytype: 4
+    savedqueryid: '3a1a6911-a3aa-49e8-a991-18286f51ad8d'
+  -
+    name: Closed Cadence Calls
+    querytype: -1
+    savedqueryid: 'c1d60277-5dd2-43e1-8b8a-4f261ffad3e8'
+  -
+    name: Cadence Call Associated View
+    querytype: 2
+    savedqueryid: '6eca93f0-37bf-46f0-8493-5ff4390a7be1'
+  -
+    name: Cadence Call Lookup View
+    querytype: 64
+    savedqueryid: '840c4054-b727-4758-8c9a-6685311723a1'
+  -
+    name: My Cadence Calls
+    description: Active Cadence Calls owned by me
+    querytype: 8192
+    savedqueryid: '018a8d0e-4684-f011-b4cb-7c1e5206727f'
+  -
+    name: All Cadence Calls
+    querytype: -1
+    savedqueryid: '8153fc02-e703-479f-8515-85c0e095b94b'
+  -
+    name: Cadence Call Advanced Find View
+    querytype: 1
+    savedqueryid: '067ed757-57f1-4134-96de-cd09094a5a6a'
+  -
+    name: My Open Cadence Calls
+    querytype: -1
+    savedqueryid: '0a0e8aa1-de67-4ea5-adb7-f551e7e392e0'
+

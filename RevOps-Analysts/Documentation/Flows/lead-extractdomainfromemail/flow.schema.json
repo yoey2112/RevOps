@@ -1,0 +1,138 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_84bd5"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "ff5d8911-9e7a-4d7a-bda4-0d9d8dcf12d3"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "lead",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "emailaddress1"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Condition": {
+          "actions": {
+            "Split_Email": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "d169257e-0aea-4488-af70-0557d3544e97"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "email",
+                "value": "@split(triggerOutputs()?['body/emailaddress1'], '@')"
+              }
+            },
+            "Get_Domain": {
+              "runAfter": {
+                "Split_Email": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "472e896c-a3cd-45ff-a7ac-b269031adc56"
+              },
+              "type": "Compose",
+              "inputs": "@last(variables('email'))"
+            },
+            "Update_a_row": {
+              "runAfter": {
+                "Get_Domain": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "aaf9c71f-b6d9-4b5d-be6e-09d2bb51da4d"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_1",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "leads",
+                  "recordId": "@triggerOutputs()?['body/leadid']",
+                  "item/revops_domain": "@outputs('Get_Domain')"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_variable": [
+              "Succeeded"
+            ]
+          },
+          "expression": {
+            "not": {
+              "equals": [
+                "@triggerOutputs()?['body/emailaddress1']",
+                "@null"
+              ]
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "3e228e07-0294-4f16-ab38-e5821c43c00b"
+          },
+          "type": "If"
+        },
+        "Initialize_variable": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "b94e8266-4dc9-47f2-bf01-12dd434d0b3f"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "email",
+                "type": "array"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

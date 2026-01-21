@@ -1,0 +1,5 @@
+displayname: 'Email -  Hide From field on compose'
+description: Hides the From field on email compose
+webresourceid: '5d488522-e6ca-f011-8544-7ced8d058789'
+name: revops_emailhidefromfield
+

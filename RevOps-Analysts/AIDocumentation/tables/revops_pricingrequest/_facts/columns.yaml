@@ -1,0 +1,446 @@
+columns:
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: createdby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: createdon
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: createdonbehalfby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdonbehalfbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: createdonbehalfbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Decimal
+    LogicalName: exchangerate
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: importsequencenumber
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: modifiedby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: modifiedon
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: modifiedonbehalfby
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedonbehalfbyname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: modifiedonbehalfbyyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: DateTime
+    LogicalName: overriddencreatedon
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Owner
+    LogicalName: ownerid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: owneridname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: EntityName
+    LogicalName: owneridtype
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: owneridyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: owningbusinessunit
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: owningbusinessunitname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: owningteam
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: owninguser
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: revops_account
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_accountname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_accountyominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Memo
+    LogicalName: revops_additionalcomments
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Picklist
+    LogicalName: revops_approvalstatus
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: revops_approvalstatusname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: revops_approver
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_approvername
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_approveryominame
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Boolean
+    LogicalName: revops_converttosalesgoodwillcredit
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: revops_converttosalesgoodwillcreditname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Boolean
+    LogicalName: revops_cumulusaccountcreated
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: revops_cumulusaccountcreatedname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_currentprices
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Picklist
+    LogicalName: revops_currentsherwebpartnercustomer
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: revops_currentsherwebpartnercustomername
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_currentsolutionprovider
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: revops_dealseatcount
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: revops_discount
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Memo
+    LogicalName: revops_futurepotential
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Money
+    LogicalName: revops_monthlyrecurringrevenue
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Money
+    LogicalName: revops_monthlyrecurringrevenue_base
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_name
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Money
+    LogicalName: revops_netamountrequested
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Money
+    LogicalName: revops_netamountrequested_base
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Memo
+    LogicalName: revops_notes
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Uniqueidentifier
+    LogicalName: revops_pricingrequestid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Picklist
+    LogicalName: revops_pricingrequesttype
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: revops_pricingrequesttypename
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: revops_product
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_productname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Picklist
+    LogicalName: revops_reason
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: revops_reasonname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Money
+    LogicalName: revops_revenuevalue
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Money
+    LogicalName: revops_revenuevalue_base
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_seatplanbreakdown
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: revops_solution
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_solutionname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: revops_strategicpartner
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: revops_ticketnumber
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: State
+    LogicalName: statecode
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: statecodename
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Status
+    LogicalName: statuscode
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Virtual
+    LogicalName: statuscodename
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: timezoneruleversionnumber
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Lookup
+    LogicalName: transactioncurrencyid
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: String
+    LogicalName: transactioncurrencyidname
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: Integer
+    LogicalName: utcconversiontimezonecode
+    DisplayName: ''
+    Description: ''
+  -
+    RequiredLevel: ''
+    AttributeType: BigInt
+    LogicalName: versionnumber
+    DisplayName: ''
+    Description: ''
+

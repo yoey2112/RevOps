@@ -1,0 +1,31 @@
+views:
+  -
+    name: My Cumulus Users
+    description: Active Cumulus Users owned by me
+    querytype: 8192
+    savedqueryid: '688b631b-b31e-ef11-840b-000d3af430c4'
+  -
+    name: Active Cumulus Users
+    querytype: -1
+    savedqueryid: 'c8af3de2-dac8-407a-bdbd-2d9130e58c63'
+  -
+    name: Cumulus User Lookup View
+    querytype: 64
+    savedqueryid: 'b232d384-0f2c-49c6-9609-57072c05e4b7'
+  -
+    name: Inactive Cumulus Users
+    querytype: -1
+    savedqueryid: '82220a8c-ca62-4c45-82e1-6e63a057ab09'
+  -
+    name: Cumulus User Associated View
+    querytype: 2
+    savedqueryid: 'b4010d33-7478-40d7-8204-91a39a85565a'
+  -
+    name: Quick Find Active Cumulus Users
+    querytype: 4
+    savedqueryid: '480b135c-df29-466b-aa56-d555dad899bf'
+  -
+    name: Cumulus User Advanced Find View
+    querytype: 1
+    savedqueryid: '8d926266-7e89-4790-a662-e216f2779c4f'
+

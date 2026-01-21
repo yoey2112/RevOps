@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '82f50409-87c4-ee11-9079-000d3a09cf8e'
+name: 'Opportunity - Create Opportunities from Account Potential'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

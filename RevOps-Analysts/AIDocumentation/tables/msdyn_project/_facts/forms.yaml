@@ -1,0 +1,1172 @@
+forms:
+  -
+    name: 'Import From Project '
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Create project to import
+        name: ImportFromProjectTabSection
+        tab: ImportFromProjectTab
+        visible: true
+      -
+        label: Hidden fields
+        name: ImportFromProjectTabHiddenSection
+        tab: ImportFromProjectTab
+        visible: false
+    fields:
+      -
+        section: ImportFromProjectTabSection
+        tab: ImportFromProjectTab
+        disabled: false
+        visible: true
+        control_id: msdyn_workhourtemplate
+        field: msdyn_workhourtemplate
+      -
+        section: ImportFromProjectTabSection
+        tab: ImportFromProjectTab
+        disabled: false
+        visible: true
+        control_id: msdyn_projectmanager
+        field: msdyn_projectmanager
+      -
+        section: ImportFromProjectTabSection
+        tab: ImportFromProjectTab
+        disabled: false
+        visible: true
+        control_id: msdyn_schedulemode
+        field: msdyn_schedulemode
+      -
+        section: ImportFromProjectTabSection
+        tab: ImportFromProjectTab
+        disabled: false
+        visible: true
+        control_id: msdyn_projectimportstagingid
+        field: msdyn_projectimportstagingid
+      -
+        section: ImportFromProjectTabSection
+        tab: ImportFromProjectTab
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: ImportFromProjectTabHiddenSection
+        tab: ImportFromProjectTab
+        disabled: false
+        visible: true
+        control_id: msdyn_subject
+        field: msdyn_subject
+      -
+        section: ImportFromProjectTabHiddenSection
+        tab: ImportFromProjectTab
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+    description: Import From Project Desktop Client
+    tabs:
+      -
+        label: Import From Project Desktop Client
+        name: ImportFromProjectTab
+        visible: true
+        expanded: true
+    field_count: 7
+    type_name: Main
+  -
+    name: Create Project
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: section
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: section
+        name: tab_1_column_2_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: section
+        name: tab_1_column_3_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_subject
+        field: msdyn_subject
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_description
+        field: msdyn_description
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_projectmanager
+        field: msdyn_projectmanager
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_workhourtemplate
+        field: msdyn_workhourtemplate
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_contractorganizationalunitid
+        field: msdyn_contractorganizationalunitid
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_scheduledstart
+        field: msdyn_scheduledstart
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_finish
+        field: msdyn_finish
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_effort
+        field: msdyn_effort
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_plannedlaborcost
+        field: msdyn_plannedlaborcost
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_plannedexpensecost
+        field: msdyn_plannedexpensecost
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: true
+        visible: true
+        control_id: msdyn_totalplannedcost
+        field: msdyn_totalplannedcost
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_schedulemode
+        field: msdyn_schedulemode
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_scheduler
+        field: msdyn_scheduler
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: true
+        visible: true
+        control_id: msdyn_salesorderid
+        field: msdyn_salesorderid
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_allowpercentcompleteupdate
+        field: msdyn_allowpercentcompleteupdate
+    description: null
+    tabs:
+      -
+        label: Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 17
+    type_name: Quick Create
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        visible: true
+      -
+        label: Cost Budget
+        name: BudgetChartSection
+        tab: Summary
+        visible: true
+      -
+        label: Sales Budget
+        name: SalesBudgetChartSection
+        tab: Summary
+        visible: true
+      -
+        label: Status
+        name: Summary_section_4
+        tab: Summary
+        visible: true
+      -
+        label: Budget
+        name: BudgetParametersSection
+        tab: Summary
+        visible: true
+      -
+        label: Estimates
+        name: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: Summary
+        visible: true
+      -
+        label: Calendar
+        name: Summary_section_calendar
+        tab: Summary
+        visible: true
+      -
+        label: Cost Budget Tracking
+        name: BudgetTrackingChartSection
+        tab: Summary
+        visible: true
+      -
+        label: Sales Budget Tracking
+        name: SalesBudgetTrackingChartSection
+        tab: Summary
+        visible: true
+      -
+        label: Section
+        name: Summary_section_5
+        tab: Summary
+        visible: false
+      -
+        label: Reports
+        name: ReportSection
+        tab: Summary
+        visible: false
+      -
+        label: Actuals
+        name: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_5'
+        tab: Summary
+        visible: true
+      -
+        label: Timeline
+        name: Timeline
+        tab: Summary
+        visible: true
+      -
+        label: Section
+        name: Project Tasks
+        tab: PexWebTab
+        visible: true
+      -
+        label: TEAM MEMBERS
+        name: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_3'
+        tab: Team
+        visible: true
+      -
+        label: Assignments
+        name: Assignments_Section
+        tab: Assignments_Tab
+        visible: true
+      -
+        label: Reconciliation
+        name: Reconciliation_Section
+        tab: Reconciliation_Tab
+        visible: true
+      -
+        label: Time Phased Estimates
+        name: Estimates_Section
+        tab: Estimates_Tab
+        visible: true
+      -
+        label: Project Budget Time Phased Header Section
+        name: ProjectBudgetTimePhasedHeaderSection
+        tab: Project_BudgetTimePhased_Tab
+        visible: true
+      -
+        label: 'Project Budget Lines - Draft or Rejected'
+        name: ProjectBudgetTimePhasedDraftRejectedSection
+        tab: Project_BudgetTimePhased_Tab
+        visible: true
+      -
+        label: 'Project Budget Lines - InReview and Revised'
+        name: ProjectBudgetTimePhasedInReviewRevisedSection
+        tab: Project_BudgetTimePhased_Tab
+        visible: true
+      -
+        label: 'Project Budget Lines - Approved'
+        name: ProjectBudgetTimePhasedApprovedSection
+        tab: Project_BudgetTimePhased_Tab
+        visible: true
+      -
+        label: Project Budget Header Section
+        name: ProjectBudgetHeaderSection
+        tab: Project_Budget_Tab
+        visible: true
+      -
+        label: 'Project Budget Lines - Draft or Rejected'
+        name: ProjectBudgetDraftRejectedSection
+        tab: Project_Budget_Tab
+        visible: true
+      -
+        label: 'Project Budget Lines - InReview and Revised'
+        name: ProjectBudgetInReviewRevisedSection
+        tab: Project_Budget_Tab
+        visible: true
+      -
+        label: 'Project Budget Lines - Approved'
+        name: ProjectBudgetApprovedSection
+        tab: Project_Budget_Tab
+        visible: true
+      -
+        label: Tracking
+        name: Tracking_Section
+        tab: Tracking_Tab
+        visible: true
+      -
+        label: Sales
+        name: Sales
+        tab: Sales
+        visible: true
+      -
+        label: Project Level Associations
+        name: QuoteDetailProjectLevelAssociationsSection
+        tab: QuoteDetailTaskBillingSetupTab
+        visible: true
+      -
+        label: Task Associations
+        name: QuoteDetailTaskAssociationsSection
+        tab: QuoteDetailTaskBillingSetupTab
+        visible: true
+      -
+        label: Section
+        name: tab_17_section_1
+        tab: CombinedEstimatesTab
+        visible: true
+      -
+        label: Project Level Associations
+        name: OrderDetailProjectLevelAssociationsSection
+        tab: OrderDetailTaskBillingSetupTab
+        visible: true
+      -
+        label: Task Associations
+        name: OrderDetailTaskAssociationsSection
+        tab: OrderDetailTaskBillingSetupTab
+        visible: true
+      -
+        label: Section
+        name: RisksSection
+        tab: RisksTab
+        visible: true
+      -
+        label: Calendar
+        name: Calendar_section_calendar
+        tab: Calendar_Tab
+        visible: true
+      -
+        label: Project Budget Match Priorities Section
+        name: ProjectBudgetMatchPrioritiesSection
+        tab: Project_Budget_Match_Priorities_Tab
+        visible: true
+    fields:
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_subject
+        field: msdyn_subject
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_description
+        field: msdyn_description
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_customer
+        field: msdyn_customer
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_contractorganizationalunitid
+        field: msdyn_contractorganizationalunitid
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: msdyn_scheduler
+        field: msdyn_scheduler
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_allowpercentcompleteupdate
+        field: msdyn_allowpercentcompleteupdate
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_projectmanager
+        field: msdyn_projectmanager
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Summary_section_4
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_overallprojectstatus
+        field: msdyn_overallprojectstatus
+      -
+        section: Summary_section_4
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_comments
+        field: msdyn_comments
+      -
+        section: Summary_section_4
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: msdyn_statusupdatedon
+        field: msdyn_statusupdatedon
+      -
+        section: Summary_section_4
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: msdyn_scheduleperformance
+        field: msdyn_scheduleperformance
+      -
+        section: Summary_section_4
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_costperformence
+        field: msdyn_costperformence
+      -
+        section: Summary_section_4
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: BudgetParametersSection
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_budgetignoredateduringmatching
+        field: msdyn_budgetignoredateduringmatching
+      -
+        section: BudgetParametersSection
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_extendbudgetstartbyyears
+        field: msdyn_extendbudgetstartbyyears
+      -
+        section: BudgetParametersSection
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_extendbudgetendbyyears
+        field: msdyn_extendbudgetendbyyears
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_scheduledstart
+        field: msdyn_scheduledstart
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_tzascheduledstart
+        field: msdyn_tzascheduledstart
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_finish
+        field: msdyn_finish
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_tzafinish
+        field: msdyn_tzafinish
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_effort
+        field: msdyn_effort
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_plannedlaborcost
+        field: msdyn_plannedlaborcost
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_plannedexpensecost
+        field: msdyn_plannedexpensecost
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_plannedmaterialcost
+        field: msdyn_plannedmaterialcost
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: msdyn_totalplannedcost
+        field: msdyn_totalplannedcost
+      -
+        section: Summary_section_calendar
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_schedulemode
+        field: msdyn_schedulemode
+      -
+        section: Summary_section_calendar
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_workhourtemplate
+        field: msdyn_workhourtemplate
+      -
+        section: Summary_section_calendar
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_hoursperday
+        field: msdyn_hoursperday
+      -
+        section: Summary_section_calendar
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_hoursperweek
+        field: msdyn_hoursperweek
+      -
+        section: Summary_section_calendar
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_dayspermonth
+        field: msdyn_dayspermonth
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_5'
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: msdyn_taskearlieststart
+        field: msdyn_taskearlieststart
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_5'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_actualstart
+        field: msdyn_actualstart
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_5'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_actualend
+        field: msdyn_actualend
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_5'
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: msdyn_actuallaborcost
+        field: msdyn_actuallaborcost
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_5'
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: msdyn_actualexpensecost
+        field: msdyn_actualexpensecost
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_5'
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: msdyn_actualmaterialcost
+        field: msdyn_actualmaterialcost
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_5'
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: msdyn_totalactualcost
+        field: msdyn_totalactualcost
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_5'
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: msdyn_effortcompleted
+        field: msdyn_effortcompleted
+      -
+        section: ProjectBudgetTimePhasedHeaderSection
+        tab: Project_BudgetTimePhased_Tab
+        disabled: false
+        visible: true
+        control_id: msdyn_budget
+        field: msdyn_budget
+      -
+        section: ProjectBudgetTimePhasedHeaderSection
+        tab: Project_BudgetTimePhased_Tab
+        disabled: false
+        visible: true
+        control_id: msdyn_budget
+        field: msdyn_budget
+      -
+        section: ProjectBudgetHeaderSection
+        tab: Project_Budget_Tab
+        disabled: false
+        visible: true
+        control_id: msdyn_budget
+        field: msdyn_budget
+      -
+        section: ProjectBudgetHeaderSection
+        tab: Project_Budget_Tab
+        disabled: false
+        visible: true
+        control_id: msdyn_budget
+        field: msdyn_budget
+      -
+        section: Calendar_section_calendar
+        tab: Calendar_Tab
+        disabled: false
+        visible: true
+        control_id: msdyn_calendarid
+        field: msdyn_calendarid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: msdyn_finish
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msdyn_plannedlaborcost
+        field: msdyn_plannedlaborcost
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msdyn_costconsumption
+        field: msdyn_costconsumption
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msdyn_progress
+        field: msdyn_progress
+    description: A form for this entity.
+    tabs:
+      -
+        label: Summary
+        name: Summary
+        visible: true
+        expanded: true
+      -
+        label: Tasks
+        name: PexWebTab
+        visible: true
+        expanded: true
+      -
+        label: Team
+        name: Team
+        visible: true
+        expanded: true
+      -
+        label: Resource Assignments
+        name: Assignments_Tab
+        visible: true
+        expanded: false
+      -
+        label: Resource Reconciliation
+        name: Reconciliation_Tab
+        visible: true
+        expanded: false
+      -
+        label: Time Phased Estimates
+        name: Estimates_Tab
+        visible: true
+        expanded: false
+      -
+        label: Budget Time Phased
+        name: Project_BudgetTimePhased_Tab
+        visible: false
+        expanded: true
+      -
+        label: Budget
+        name: Project_Budget_Tab
+        visible: false
+        expanded: true
+      -
+        label: Tracking
+        name: Tracking_Tab
+        visible: true
+        expanded: false
+      -
+        label: Sales
+        name: Sales
+        visible: true
+        expanded: false
+      -
+        label: Task Billing Setup
+        name: QuoteDetailTaskBillingSetupTab
+        visible: false
+        expanded: true
+      -
+        label: Estimates
+        name: CombinedEstimatesTab
+        visible: true
+        expanded: true
+      -
+        label: Task Billing Setup
+        name: OrderDetailTaskBillingSetupTab
+        visible: false
+        expanded: true
+      -
+        label: Risks
+        name: RisksTab
+        visible: false
+        expanded: true
+      -
+        label: Calendar
+        name: Calendar_Tab
+        visible: true
+        expanded: true
+      -
+        label: Budget Match Priorities
+        name: Project_Budget_Match_Priorities_Tab
+        visible: false
+        expanded: true
+    field_count: 49
+    type_name: Main
+  -
+    name: Project
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        visible: true
+      -
+        label: Contact Information
+        name: Summary_section_6
+        tab: Summary
+        visible: true
+      -
+        label: Timeline
+        name: Timeline
+        tab: Summary
+        visible: true
+      -
+        label: Status
+        name: Summary_section_4
+        tab: Summary
+        visible: false
+      -
+        label: Calendar
+        name: Summary_section_calendar
+        tab: Summary
+        visible: false
+      -
+        label: Section
+        name: Project Tasks
+        tab: PexWebTab
+        visible: true
+      -
+        label: Estimates
+        name: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: tab_4
+        visible: true
+      -
+        label: Actuals
+        name: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_5'
+        tab: tab_4
+        visible: true
+      -
+        label: Calendar
+        name: Calendar_section_calendar
+        tab: Calendar_Tab
+        visible: false
+    fields:
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_subject
+        field: msdyn_subject
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_description
+        field: msdyn_description
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_opportunity
+        field: revops_opportunity
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_solution
+        field: revops_solution
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_cumulusorganization
+        field: revops_cumulusorganization
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_cumulusaccount
+        field: revops_cumulusaccount
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_account
+        field: revops_account
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_cumulusaccount
+        field: revops_cumulusaccount
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_customer
+        field: msdyn_customer
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_contractorganizationalunitid
+        field: msdyn_contractorganizationalunitid
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: msdyn_scheduler
+        field: msdyn_scheduler
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_allowpercentcompleteupdate
+        field: msdyn_allowpercentcompleteupdate
+      -
+        section: '{31843965-2614-4dec-b525-872d76e16b92}'
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Summary_section_6
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_customerlanguage
+        field: revops_customerlanguage
+      -
+        section: Summary_section_6
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_customertimezone
+        field: revops_customertimezone
+      -
+        section: Summary_section_6
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_contact
+        field: revops_contact
+      -
+        section: Summary_section_6
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1761837647210
+        field: revops_account
+      -
+        section: Summary_section_4
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: msdyn_scheduleperformance
+        field: msdyn_scheduleperformance
+      -
+        section: Summary_section_4
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: Summary_section_calendar
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_schedulemode
+        field: msdyn_schedulemode
+      -
+        section: Summary_section_calendar
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_workhourtemplate
+        field: msdyn_workhourtemplate
+      -
+        section: Summary_section_calendar
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_hoursperday
+        field: msdyn_hoursperday
+      -
+        section: Summary_section_calendar
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_hoursperweek
+        field: msdyn_hoursperweek
+      -
+        section: Summary_section_calendar
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_dayspermonth
+        field: msdyn_dayspermonth
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: tab_4
+        disabled: false
+        visible: true
+        control_id: msdyn_scheduledstart
+        field: msdyn_scheduledstart
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: tab_4
+        disabled: false
+        visible: true
+        control_id: msdyn_tzascheduledstart
+        field: msdyn_tzascheduledstart
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: tab_4
+        disabled: false
+        visible: true
+        control_id: msdyn_finish
+        field: msdyn_finish
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: tab_4
+        disabled: false
+        visible: true
+        control_id: msdyn_tzafinish
+        field: msdyn_tzafinish
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_4'
+        tab: tab_4
+        disabled: false
+        visible: true
+        control_id: msdyn_effort
+        field: msdyn_effort
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_5'
+        tab: tab_4
+        disabled: true
+        visible: true
+        control_id: msdyn_taskearlieststart
+        field: msdyn_taskearlieststart
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_5'
+        tab: tab_4
+        disabled: false
+        visible: true
+        control_id: msdyn_actualstart
+        field: msdyn_actualstart
+      -
+        section: '{ac4158d2-008d-4b6d-8e11-58c9ab47b14b}_section_5'
+        tab: tab_4
+        disabled: false
+        visible: true
+        control_id: msdyn_actualend
+        field: msdyn_actualend
+      -
+        section: Calendar_section_calendar
+        tab: Calendar_Tab
+        disabled: false
+        visible: true
+        control_id: msdyn_calendarid
+        field: msdyn_calendarid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: msdyn_finish
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statecode
+        field: statecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msdyn_projectmanager
+        field: msdyn_projectmanager
+    description: A form for this entity.
+    tabs:
+      -
+        label: Summary
+        name: Summary
+        visible: true
+        expanded: true
+      -
+        label: Tasks
+        name: PexWebTab
+        visible: true
+        expanded: true
+      -
+        label: Estimates/Actuals
+        name: tab_4
+        visible: true
+        expanded: true
+      -
+        label: Calendar
+        name: Calendar_Tab
+        visible: false
+        expanded: false
+    field_count: 37
+    type_name: Main
+

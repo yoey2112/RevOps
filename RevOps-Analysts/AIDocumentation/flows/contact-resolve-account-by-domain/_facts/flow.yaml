@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '1d01247d-8de8-ef11-be21-000d3a09d51b'
+name: 'Contact - Resolve Account by Domain'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

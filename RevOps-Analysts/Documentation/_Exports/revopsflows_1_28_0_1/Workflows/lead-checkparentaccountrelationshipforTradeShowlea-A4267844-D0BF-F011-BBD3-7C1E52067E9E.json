@@ -1,0 +1,171 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_bccd6"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "lead",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "leadsourcecode",
+              "subscriptionRequest/filterexpression": "leadsourcecode eq 7 and revops_accountrelationshiptype eq null"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "29524801-98e1-4c36-8588-c2d0a3ea7b99"
+          }
+        }
+      },
+      "actions": {
+        "Delay_CHANGE_TOMINUTES": {
+          "type": "Wait",
+          "inputs": {
+            "interval": {
+              "count": 5,
+              "unit": "Second"
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "cec8df57-a473-4f65-bb8d-d664d309a856"
+          }
+        },
+        "Condition_-_HasAccount": {
+          "type": "If",
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@empty(triggerOutputs()?['body/_parentaccountid_value'])",
+                  false
+                ]
+              }
+            ]
+          },
+          "actions": {
+            "Get_a_row_by_ID_-_Account": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "accounts",
+                  "recordId": "@triggerOutputs()?['body/_parentaccountid_value']"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "313d20f0-cc78-4968-95b6-82f768e58ec6"
+              }
+            },
+            "Condition_-_ActiveAccount": {
+              "type": "If",
+              "expression": {
+                "equals": [
+                  "",
+                  ""
+                ]
+              },
+              "actions": {
+                "Update_a_row_-_AccountRelationshipType": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "leads",
+                      "recordId": "@triggerOutputs()?['body/leadid']",
+                      "item/revops_accountrelationshiptype": "@outputs('Get_a_row_by_ID_-_Account')?['body/customertypecode@OData.Community.Display.V1.FormattedValue']\r\n"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "operationId": "UpdateOnlyRecord",
+                      "connectionName": "shared_commondataserviceforapps"
+                    }
+                  },
+                  "metadata": {
+                    "operationMetadataId": "f26ec6a3-d8a9-43c1-97f5-663abed32212"
+                  }
+                }
+              },
+              "else": {
+                "actions": {}
+              },
+              "runAfter": {
+                "Get_a_row_by_ID_-_Account": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "7a7951ac-1bc5-4407-986c-296140077fce"
+              }
+            }
+          },
+          "else": {
+            "actions": {
+              "Update_a_row_-_LeadProspect": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "entityName": "leads",
+                    "recordId": "@triggerOutputs()?['body/leadid']",
+                    "item/revops_accountrelationshiptype": "Prospect"
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                    "operationId": "UpdateOnlyRecord",
+                    "connectionName": "shared_commondataserviceforapps"
+                  }
+                },
+                "metadata": {
+                  "operationMetadataId": "ed236d82-4a48-46b0-b61f-3ad495b54a16"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "Delay_CHANGE_TOMINUTES": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "00585238-f3f6-413e-a875-8c8327d4e355"
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

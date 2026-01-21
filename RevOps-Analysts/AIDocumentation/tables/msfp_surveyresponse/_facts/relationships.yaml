@@ -1,0 +1,712 @@
+relationships:
+  -
+    schemaname: msfp_surveyresponse_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: CampaignResponse_msfp_surveyresponses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_surveyresponse_ActionCards
+    relationshiptype: OneToMany
+    referencingtablelogicalname: actioncard
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_surveyresponse_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_surveyresponse_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_surveyresponse_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_surveyresponse_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_surveyresponse_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_surveyresponse_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_surveyresponse_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_surveyresponse_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_surveyresponse_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_surveyresponse_QueueItems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queueitem
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_surveyresponse_Annotations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_surveyresponse_Feedback
+    relationshiptype: OneToMany
+    referencingtablelogicalname: feedback
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_msfp_surveyresponse_msfp_alert_surveyresponse
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_alert
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_msfp_surveyresponse_msfp_questionresponse_surveyresponseid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_questionresponse
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_surveyresponse_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_msfp_surveyresponse_msfp_surveyresponse_parent_survey_response_new
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_msfp_surveyresponse_msfp_surveyresponse_parentsurveyresponse
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: interactionforemail_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: interactionforemail
+  -
+    schemaname: knowledgebaserecord_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: knowledgebaserecord
+  -
+    schemaname: account_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: account
+  -
+    schemaname: msfp_surveyresponse_systemuser_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: contact_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: contact
+  -
+    schemaname: msfp_surveyresponse_mailbox_sendermailboxid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: mailbox
+  -
+    schemaname: msfp_surveyresponse_transactioncurrency_transactioncurrencyid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msfp_surveyresponse_owner_ownerid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: owner
+  -
+    schemaname: msfp_surveyresponse_systemuser_owninguser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: msfp_surveyresponse_sla_slaid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: sla
+  -
+    schemaname: msfp_surveyresponse_businessunit_owningbusinessunit
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: knowledgearticle_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: adx_invitation_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_invitation
+  -
+    schemaname: mspp_adplacement_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: mspp_adplacement
+  -
+    schemaname: mspp_pollplacement_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: mspp_pollplacement
+  -
+    schemaname: mspp_publishingstatetransitionrule_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: mspp_publishingstatetransitionrule
+  -
+    schemaname: mspp_redirect_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: mspp_redirect
+  -
+    schemaname: mspp_shortcut_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: mspp_shortcut
+  -
+    schemaname: mspp_website_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: mspp_website
+  -
+    schemaname: lead_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: lead
+  -
+    schemaname: bookableresourcebooking_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: bookableresourcebooking
+  -
+    schemaname: bookableresourcebookingheader_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: bookableresourcebookingheader
+  -
+    schemaname: bulkoperation_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: bulkoperation
+  -
+    schemaname: campaign_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaignactivity_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: campaignactivity
+  -
+    schemaname: contract_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: contract
+  -
+    schemaname: entitlement_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: entitlement
+  -
+    schemaname: entitlementtemplate_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: entitlementtemplate
+  -
+    schemaname: incident_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: incident
+  -
+    schemaname: site_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: site
+  -
+    schemaname: msfp_surveyresponse_service_serviceid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: service
+  -
+    schemaname: msdyn_customerasset_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_customerasset
+  -
+    schemaname: msdyn_playbookinstance_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_playbookinstance
+  -
+    schemaname: invoice_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: invoice
+  -
+    schemaname: opportunity_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: quote_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: quote
+  -
+    schemaname: salesorder_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: salesorder
+  -
+    schemaname: msdyn_postalbum_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_postalbum
+  -
+    schemaname: msfp_surveyresponse_systemuser_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: msfp_surveyresponse_systemuser_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: msfp_surveyresponse_systemuser_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: msfp_surveyresponse_team_owningteam
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: team
+  -
+    schemaname: msfp_surveyresponse_sla_slainvokedid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: sla
+  -
+    schemaname: activity_pointer_msfp_surveyresponse
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: msdyn_swarm_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_swarm
+  -
+    schemaname: msdyn_salessuggestion_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_salessuggestion
+  -
+    schemaname: msdyn_bookingalertstatus_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_bookingalertstatus
+  -
+    schemaname: msdyn_bookingrule_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_bookingrule
+  -
+    schemaname: msdyn_resourceterritory_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_resourceterritory
+  -
+    schemaname: msdyn_systemuserschedulersetting_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_systemuserschedulersetting
+  -
+    schemaname: msdyn_timegroup_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_timegroup
+  -
+    schemaname: msdyn_timegroupdetail_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_timegroupdetail
+  -
+    schemaname: msevtmgt_checkin_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_checkin
+  -
+    schemaname: msevtmgt_event_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_event
+  -
+    schemaname: msevtmgt_eventpurchase_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_eventpurchase
+  -
+    schemaname: msevtmgt_eventpurchaseattendee_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_eventpurchaseattendee
+  -
+    schemaname: msevtmgt_eventpurchasepass_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_eventpurchasepass
+  -
+    schemaname: msevtmgt_eventregistration_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_eventregistration
+  -
+    schemaname: msevtmgt_hotel_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_hotel
+  -
+    schemaname: msevtmgt_hotelroomallocation_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_hotelroomallocation
+  -
+    schemaname: msevtmgt_hotelroomreservation_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_hotelroomreservation
+  -
+    schemaname: msevtmgt_layout_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_layout
+  -
+    schemaname: msevtmgt_room_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_room
+  -
+    schemaname: msevtmgt_session_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_sessionregistration_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_sessionregistration
+  -
+    schemaname: msevtmgt_sessiontrack_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_sessiontrack
+  -
+    schemaname: msevtmgt_speaker_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_speaker
+  -
+    schemaname: msevtmgt_speakerengagement_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_speakerengagement
+  -
+    schemaname: msevtmgt_sponsorablearticle_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_sponsorablearticle
+  -
+    schemaname: msevtmgt_sponsorship_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_sponsorship
+  -
+    schemaname: msevtmgt_venue_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_venue
+  -
+    schemaname: msevtmgt_webinarconfiguration_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_webinarconfiguration
+  -
+    schemaname: msevtmgt_webinarprovider_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_webinarprovider
+  -
+    schemaname: msdyncrm_contentsettings_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_contentsettings
+  -
+    schemaname: msdyncrm_customerjourney_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_customerjourney
+  -
+    schemaname: msdyncrm_marketingdynamiccontentmetadata_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_marketingdynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemaildynamiccontentmetadata_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_marketingemaildynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemailtestsend_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_marketingemailtestsend
+  -
+    schemaname: msdyncrm_uicconfig_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_uicconfig
+  -
+    schemaname: msdyncrm_leadscoremodel_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_leadscoremodel
+  -
+    schemaname: msdyncrm_linkedinaccount_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_linkedinaccount
+  -
+    schemaname: msdyncrm_linkedinactivity_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_linkedinactivity
+  -
+    schemaname: msdyncrm_linkedinfieldmapping_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_linkedinfieldmapping
+  -
+    schemaname: msdyncrm_linkedinform_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_linkedinform
+  -
+    schemaname: msdyncrm_linkedinformanswer_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_linkedinformanswer
+  -
+    schemaname: msdyncrm_linkedinformquestion_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_linkedinformquestion
+  -
+    schemaname: msdyncrm_linkedinformsubmission_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_linkedinformsubmission
+  -
+    schemaname: msdyncrm_linkedinleadmatchingstrategy_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_linkedinleadmatchingstrategy
+  -
+    schemaname: msdyncrm_linkedinuserprofile_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_linkedinuserprofile
+  -
+    schemaname: msdyncrm_migration_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyncrm_migration
+  -
+    schemaname: adx_webpage_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_webpage
+  -
+    schemaname: adx_website_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_website
+  -
+    schemaname: adx_ad_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_ad
+  -
+    schemaname: adx_adplacement_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_adplacement
+  -
+    schemaname: adx_poll_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_poll
+  -
+    schemaname: adx_polloption_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_polloption
+  -
+    schemaname: adx_pollplacement_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_pollplacement
+  -
+    schemaname: adx_pollsubmission_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_pollsubmission
+  -
+    schemaname: adx_publishingstatetransitionrule_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_publishingstatetransitionrule
+  -
+    schemaname: adx_redirect_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_redirect
+  -
+    schemaname: adx_shortcut_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_shortcut
+  -
+    schemaname: adx_communityforumaccesspermission_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_communityforumaccesspermission
+  -
+    schemaname: adx_communityforumalert_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_communityforumalert
+  -
+    schemaname: adx_casedeflection_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_casedeflection
+  -
+    schemaname: adx_contentaccesslevel_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: adx_contentaccesslevel
+  -
+    schemaname: revops_audienceimport_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: revops_audienceimport
+  -
+    schemaname: msdyn_paymentterm_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_paymentterm
+  -
+    schemaname: msdyn_purchaseorder_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_purchaseorder
+  -
+    schemaname: msdyn_purchaseorderproduct_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_purchaseorderproduct
+  -
+    schemaname: msdyn_purchaseorderreceipt_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_purchaseorderreceipt
+  -
+    schemaname: msdyn_purchaseorderreceiptproduct_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_purchaseorderreceiptproduct
+  -
+    schemaname: msdyn_shipvia_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_shipvia
+  -
+    schemaname: msdyn_warehouse_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_warehouse
+  -
+    schemaname: msdyn_projectteam_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_projectteam
+  -
+    schemaname: msdyn_processnotes_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_processnotes
+  -
+    schemaname: revops_smeengagement_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: revops_smeengagement
+  -
+    schemaname: msfp_msfp_survey_msfp_surveyresponse_surveyid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msfp_survey
+  -
+    schemaname: msfp_msfp_surveyinvite_msfp_surveyresponse_surveyinviteid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msfp_surveyinvite
+  -
+    schemaname: msfp_msfp_surveyresponse_msfp_surveyresponse_parent_survey_response_new
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msfp_msfp_surveyresponse_msfp_surveyresponse_parentsurveyresponse
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msdyn_project_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msdyn_project
+  -
+    schemaname: revops_mwhaccount_msfp_surveyresponses
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: revops_mwhaccount
+

@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: 'c6ee8cbc-1919-ef11-840a-7c1e520637cd'
+name: 'Cumulus Account Manager - User Created Or Updated'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

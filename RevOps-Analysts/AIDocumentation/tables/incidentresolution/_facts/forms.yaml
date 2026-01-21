@@ -1,0 +1,188 @@
+forms:
+  -
+    name: Case resolution card form
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: Color Strip
+        name: Color Strip
+        tab: ''
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: ''
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: ''
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdby
+        field: createdby
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: resolutiontypecode
+        field: resolutiontypecode
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+    description: Card form for case resolution
+    tabs:
+      -
+        label: Card
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 5
+    type_name: Card
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Information
+        name: information
+        tab: general
+        visible: true
+    fields:
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: resolutiontypecode
+        field: resolutiontypecode
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_resolutiontype
+        field: revops_resolutiontype
+    description: A form for this entity.
+    tabs:
+      -
+        label: Resolution
+        name: general
+        visible: true
+        expanded: true
+    field_count: 3
+    type_name: Main
+  -
+    name: Case Resolution Quick Create Form
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: Information
+        name: information
+        tab: general
+        visible: true
+    fields:
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: resolutiontypecode
+        field: resolutiontypecode
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+    description: A Quick Create Form for Incident Resolution entity.
+    tabs:
+      -
+        label: Resolution
+        name: general
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick Create
+  -
+    name: Resolve Case Quick Form
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Information
+        name: information
+        tab: general
+        visible: true
+    fields:
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: resolutiontypecode
+        field: resolutiontypecode
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_resolutiontype
+        field: revops_resolutiontype
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+    description: This is the form that is displayed for the Resolve Quick Form.
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+    field_count: 3
+    type_name: Quick View
+

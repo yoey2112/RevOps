@@ -1,0 +1,77 @@
+relationships:
+  -
+    schemaname: category_parent_category
+    relationshiptype: OneToMany
+    referencingtablelogicalname: category
+    referencedtablelogicalname: category
+  -
+    schemaname: Category_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: category
+  -
+    schemaname: category_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: category
+  -
+    schemaname: category_SharePointDocumentLocations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointdocumentlocation
+    referencedtablelogicalname: category
+  -
+    schemaname: category_SharePointDocuments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointdocument
+    referencedtablelogicalname: category
+  -
+    schemaname: revops_knowledgearticle_category_category
+    relationshiptype: OneToMany
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: category
+  -
+    schemaname: category_parent_category
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: category
+    referencedtablelogicalname: category
+  -
+    schemaname: lk_category_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: category
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: transactioncurrency_category
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: category
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: lk_category_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: category
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_category_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: category
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_category_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: category
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: owner_categories
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: category
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_category
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: category
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: knowledgearticle_category
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: category
+

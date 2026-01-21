@@ -1,0 +1,19 @@
+views:
+  -
+    name: Incident Resolution View
+    querytype: -1
+    savedqueryid: 'fc67ece9-79de-4c47-a479-674592872715'
+  -
+    name: Case Resolution Advanced Find View
+    querytype: 1
+    savedqueryid: '0255fba3-8e5b-4000-8609-7c3f31388cde'
+  -
+    name: Quick Find Incident Resolutions
+    querytype: 4
+    savedqueryid: 'e5748a89-be5c-4784-8a77-bc30fbea5ffb'
+  -
+    name: My Recent Case Resolution Activities
+    description: Recent case resolution activities associated with resolved cases that I have downloaded
+    querytype: 8192
+    savedqueryid: 'c1bfc7af-2d10-44bd-9573-bf4126213db1'
+

@@ -1,0 +1,31 @@
+views:
+  -
+    name: State or Provinces
+    description: All active State or Provinces
+    querytype: 8192
+    savedqueryid: '50161ac4-8c1e-ef11-840b-000d3af43335'
+  -
+    name: State or Province Advanced Find View
+    querytype: 1
+    savedqueryid: '923413d3-1b79-4542-8090-319b6acf5e08'
+  -
+    name: State or Province Associated View
+    querytype: 2
+    savedqueryid: 'a35c8d7d-66fe-421a-b404-67d42829fc9e'
+  -
+    name: State or Province Lookup View
+    querytype: 64
+    savedqueryid: 'bf1f4f53-45c7-432b-ae5a-9920df9e3eab'
+  -
+    name: Inactive State or Provinces
+    querytype: -1
+    savedqueryid: '93f6b81e-0bd0-49a1-9f07-e92b082a65ca'
+  -
+    name: Quick Find Active State or Provinces
+    querytype: 4
+    savedqueryid: '67d4347e-9d0f-4cb9-9a69-eb1f5d9525ee'
+  -
+    name: Active State or Provinces
+    querytype: -1
+    savedqueryid: 'ba36c0d7-2ef7-4c2a-a497-f8344b54fe75'
+

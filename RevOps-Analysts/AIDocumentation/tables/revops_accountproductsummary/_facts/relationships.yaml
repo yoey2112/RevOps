@@ -1,0 +1,87 @@
+relationships:
+  -
+    schemaname: revops_accountproductsummary_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_accountproductsummary
+  -
+    schemaname: revops_accountproductsummary_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_accountproductsummary
+  -
+    schemaname: revops_accountproductsummary_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_accountproductsummary
+  -
+    schemaname: revops_accountproductsummary_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_accountproductsummary
+  -
+    schemaname: revops_accountproductsummary_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_accountproductsummary
+  -
+    schemaname: revops_accountproductsummary_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_accountproductsummary
+  -
+    schemaname: revops_accountproductsummary_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_accountproductsummary
+  -
+    schemaname: revops_accountproductsummary_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_accountproductsummary
+  -
+    schemaname: lk_revops_accountproductsummary_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountproductsummary
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_accountproductsummary_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountproductsummary
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_accountproductsummary_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountproductsummary
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_accountproductsummary_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountproductsummary
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_accountproductsummary
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountproductsummary
+    referencedtablelogicalname: organization
+  -
+    schemaname: TransactionCurrency_revops_accountproductsummary
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountproductsummary
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_accountproductsummary_accountid_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountproductsummary
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_accountproductsummary_productid_product
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountproductsummary
+    referencedtablelogicalname: product
+  -
+    schemaname: revops_accountproductsummary_solutionid_revops_solution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountproductsummary
+    referencedtablelogicalname: revops_solution
+

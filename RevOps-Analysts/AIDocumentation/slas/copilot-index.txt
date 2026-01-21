@@ -1,0 +1,22 @@
+TITLE
+=====
+RevOps - Slas Component Index
+
+PURPOSE
+-------
+Quick reference index of all Slas components in this folder.
+
+COMPONENTS
+----------
+- 6-tier-slo-for-cases : SLA: 6 Tier SLO for cases
+- case : SLA: Case
+- sla-for-cases : SLA: SLA for Cases
+
+HOW TO USE
+----------
+Each component has its own subfolder containing:
+- README.md and README.txt for overview
+- _facts/*.yaml for structured metadata
+- Additional documentation files as needed
+
+For detailed information about a specific component, navigate to its subfolder.

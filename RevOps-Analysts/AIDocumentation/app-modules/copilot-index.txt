@@ -1,0 +1,41 @@
+TITLE
+=====
+RevOps - App Modules Component Index
+
+PURPOSE
+-------
+Quick reference index of all App Modules components in this folder.
+
+COMPONENTS
+----------
+- channel-integration-framework : App Module: Channel Integration Framework
+- copilot-service-admin-center : App Module: Copilot Service admin center
+- customer-insights-journeys : App Module: Customer Insights - Journeys
+- customer-service-hub : App Module: Customer Service Hub
+- customer-service-team-member : App Module: Customer Service Team Member
+- customer-service-workspace : App Module: Customer Service workspace
+- dataverse-accelerator-app : App Module: Dataverse Accelerator App
+- dynamics-365-app-for-outlook : App Module: Dynamics 365 App for Outlook
+- omnichannel-admin-center : App Module: Omnichannel admin center
+- omnichannel-administration : App Module: Omnichannel Administration
+- omnichannel-for-customer-service : App Module: Omnichannel for Customer Service
+- portal-management : App Module: Portal Management
+- power-pages-management : App Module: Power Pages Management
+- power-platform-environment-settings : App Module: Power Platform Environment Settings
+- project : App Module: Project
+- project-operations : App Module: Project Operations
+- project-operations-team-member : App Module: Project Operations Team Member
+- resource-scheduling : App Module: Resource Scheduling
+- sales-hub : App Module: Sales Hub
+- sales-team-member : App Module: Sales Team Member
+- solution-health-hub : App Module: Solution Health Hub
+- teams-virtual-events : App Module: Teams Virtual Events
+
+HOW TO USE
+----------
+Each component has its own subfolder containing:
+- README.md and README.txt for overview
+- _facts/*.yaml for structured metadata
+- Additional documentation files as needed
+
+For detailed information about a specific component, navigate to its subfolder.

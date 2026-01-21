@@ -1,0 +1,122 @@
+privileges:
+  -
+    privilege_name: prvWriteLead
+    privilegeid: 'cb4b339f-2b45-447e-bdd3-0bf4bbebc294'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToLead
+    privilegeid: '5e8d193d-184d-44be-92d8-0f3845d7a9eb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadAccount
+    privilegeid: '886b280c-6396-4d56-a0a3-2c1b0a50ceb0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToAccount
+    privilegeid: '3d6e93a2-b58e-4a4a-b642-374e4a25a6bd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteAccount
+    privilegeid: '7863e80f-0ab2-4d67-a641-37d9f342c7e3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSharePointData
+    privilegeid: 'fecbd29c-df64-4ede-a611-47226b402c22'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendAccount
+    privilegeid: '4e163b38-ea45-49ae-b3da-4c9dc1c77d8d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSdkMessage
+    privilegeid: '94c3ac2c-eb23-41cb-a903-4e2e49e910b4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadContact
+    privilegeid: 'ba09ec92-12c4-4312-ba16-5715c2cbd6da'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendLead
+    privilegeid: '387d6489-cfcc-47d7-98af-5b7946d7691d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateAccount
+    privilegeid: 'd26fe964-230b-42dd-ad93-5cc879de411e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToContact
+    privilegeid: '158327b5-f4c1-448e-93d1-5f135126665b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteSharePointData
+    privilegeid: 'cfdd12cf-090b-4599-8302-771962d2350a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendContact
+    privilegeid: '2b16ba12-6ab4-4ad2-b7c0-8641d2d6dff2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSdkMessageProcessingStepImage
+    privilegeid: '122e085f-8c52-47e8-8415-875dee1c961e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadLead
+    privilegeid: 'a8ecac53-09e8-4a13-b598-8d8c87bc3d33'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSdkMessageProcessingStep
+    privilegeid: 'db10a828-ec49-4035-8b7e-c58efaf169ec'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadPluginAssembly
+    privilegeid: 'f5b50296-a212-488a-be92-cbcca8971717'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateSharePointData
+    privilegeid: '5eb85025-363b-46ea-a77e-ce24159cd231'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadPluginType
+    privilegeid: '9365005c-4703-473b-8d3c-d073cfd8670c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSharePointDocument
+    privilegeid: 'd71fc8d0-99bc-430e-abd7-d95c64f11e9c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateLead
+    privilegeid: 'a41f965b-2619-4c73-8625-da31945cccc7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteContact
+    privilegeid: '65c22075-4e09-4f39-baec-e4bc3a950686'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateContact
+    privilegeid: 'a8bff87f-0df0-41d4-babd-f093faf1e32c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+

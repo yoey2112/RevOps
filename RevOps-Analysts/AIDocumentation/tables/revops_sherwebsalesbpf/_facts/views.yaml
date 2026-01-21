@@ -1,0 +1,43 @@
+views:
+  -
+    name: Inactive Sherweb Sales BPF
+    querytype: -1
+    savedqueryid: 'b878659f-23a2-4651-bb60-048b936c889e'
+  -
+    name: Inactive Sherweb Sales BPF on my Leads
+    querytype: -1
+    savedqueryid: 'b1ec49ff-dfea-48e5-8397-2233d2a45f52'
+  -
+    name: All Sherweb Sales BPF
+    querytype: -1
+    savedqueryid: '9823fc13-a0c5-4237-b6f9-2a35ed2ed191'
+  -
+    name: Sherweb Sales BPF
+    description: All active Sherweb Sales BPF
+    querytype: 8192
+    savedqueryid: 'a490a5ac-641f-ef11-840a-6045bdf98885'
+  -
+    name: Quick Find Active Sherweb Sales BPF
+    querytype: 4
+    savedqueryid: '62ff9692-d513-499d-a6c6-66685cd40011'
+  -
+    name: Sherweb Sales BPF Advanced Find View
+    querytype: 1
+    savedqueryid: '4da3c95a-99a1-42f0-8d48-a80a9f1aaec6'
+  -
+    name: Sherweb Sales BPF Lookup View
+    querytype: 64
+    savedqueryid: '65a3025f-0e86-477d-a019-aa50cbedcc63'
+  -
+    name: Sherweb Sales BPF Associated View
+    querytype: 2
+    savedqueryid: '196ee995-cdef-43e2-a1a8-aea1f6dda7d6'
+  -
+    name: Active Sherweb Sales BPF on my Leads
+    querytype: -1
+    savedqueryid: '96c6d649-5537-466d-8b67-d22f9a473442'
+  -
+    name: Active Sherweb Sales BPF
+    querytype: -1
+    savedqueryid: 'e8a8888a-2a91-4aff-aea9-d875bd499b7f'
+

@@ -1,0 +1,304 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_36ab4"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_commondataserviceforapps-1": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_c5511"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_office365": {
+        "api": {
+          "name": "shared_office365"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedoffice365_cf262"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "Recurrence": {
+          "type": "Recurrence",
+          "recurrence": {
+            "frequency": "Week",
+            "interval": 1,
+            "timeZone": "Eastern Standard Time",
+            "schedule": {
+              "weekDays": [
+                "Monday"
+              ],
+              "hours": [
+                "9"
+              ]
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "bf205851-d805-4d4b-855a-28a6e997fea3"
+          }
+        }
+      },
+      "actions": {
+        "GetCampaignOwner": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "campaigns",
+              "$filter": "not (statuscode eq 3 or statuscode eq 4 or statuscode eq 5)"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Initialize_variable_CampaignNoOwner": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "401301ba-e63d-4326-9239-4dc357ebedb2"
+          }
+        },
+        "For_each": {
+          "type": "Foreach",
+          "foreach": "@outputs('GetCampaignOwner')?['body/value']",
+          "actions": {
+            "Condition_-_if_null": {
+              "type": "If",
+              "expression": {
+                "and": [
+                  {
+                    "equals": [
+                      "@items('For_each')?['_revops_campaignowner_value@Microsoft.Dynamics.CRM.lookuplogicalname']",
+                      "@null"
+                    ]
+                  }
+                ]
+              },
+              "actions": {
+                "Append_to_array_variable_CampaignNoOwner": {
+                  "type": "AppendToArrayVariable",
+                  "inputs": {
+                    "name": "CampaignNoOwner",
+                    "value": {
+                      "Campaign Name": "@{items('For_each')?['name']}",
+                      "Campaign link": "@{outputs('Compose_URL')}"
+                    }
+                  },
+                  "metadata": {
+                    "operationMetadataId": "7267a9b1-95e3-4ff8-b291-7185ad95cec9"
+                  }
+                }
+              },
+              "else": {
+                "actions": {
+                  "check_owner_name": {
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "parameters": {
+                        "entityName": "systemusers",
+                        "recordId": "@items('For_each')?['_revops_campaignowner_value']"
+                      },
+                      "host": {
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                        "operationId": "GetItem",
+                        "connectionName": "shared_commondataserviceforapps-1"
+                      }
+                    },
+                    "metadata": {
+                      "operationMetadataId": "6f038315-e8e7-49f2-85dc-7e27585d1faa"
+                    }
+                  },
+                  "Condition_-_if_user_disabled": {
+                    "type": "If",
+                    "expression": {
+                      "or": [
+                        {
+                          "equals": [
+                            "@outputs('check_owner_name')?['body/isdisabled']",
+                            "@true"
+                          ]
+                        }
+                      ]
+                    },
+                    "actions": {
+                      "Append_to_array_variable_CampaignNoValidOwner": {
+                        "type": "AppendToArrayVariable",
+                        "inputs": {
+                          "name": "CampaignNoValidOwner",
+                          "value": {
+                            "Campaign Name": "@{items('For_each')?['name']}",
+                            "campaign owner ID": "@{items('For_each')?['_revops_campaignowner_value']}",
+                            "Campaign name owner": "@{outputs('check_owner_name')?['body/fullname']}",
+                            "Campaign link": "@{outputs('Compose_URL')}"
+                          }
+                        },
+                        "metadata": {
+                          "operationMetadataId": "a33a8d6d-d293-4d98-9a92-36e4f5baba11"
+                        }
+                      }
+                    },
+                    "else": {
+                      "actions": {}
+                    },
+                    "runAfter": {
+                      "check_owner_name": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "badf9959-3da7-4cc1-9371-5780067a8955"
+                    }
+                  }
+                }
+              },
+              "runAfter": {
+                "Compose_URL": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "7ca31eda-a3c2-4843-8fcf-829e6b6f24e6"
+              }
+            },
+            "Compose_URL": {
+              "type": "Compose",
+              "inputs": "https://sherweb-prod.crm3.dynamics.com/main.aspx?appid=51dc05e6-7a23-ef11-840a-0022483e8dfe&pagetype=entityrecord&etn=campaign&id=@{items('For_each')?['campaignid']}\n",
+              "metadata": {
+                "operationMetadataId": "011a4029-ca62-46e0-9c7a-2dd360b9659a"
+              }
+            }
+          },
+          "runAfter": {
+            "GetCampaignOwner": [
+              "SUCCEEDED"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9bb9dced-82c7-4070-9890-a663e0ddbae2"
+          }
+        },
+        "Initialize_variable_CampaignNoValidOwner": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "CampaignNoValidOwner",
+                "type": "array",
+                "value": []
+              }
+            ]
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "86940e81-a03b-41df-b844-19d3c5558ba7"
+          }
+        },
+        "Create_HTML_table_CampaignNoValidOwner": {
+          "type": "Table",
+          "inputs": {
+            "from": "@variables('CampaignNoValidOwner')",
+            "format": "HTML"
+          },
+          "runAfter": {
+            "For_each": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "65a1cdbe-2a40-443a-b2e0-1b2fc7042a71"
+          }
+        },
+        "Initialize_variable_CampaignNoOwner": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "CampaignNoOwner",
+                "type": "array",
+                "value": []
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_CampaignNoValidOwner": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ef7261d9-4cc2-4d6b-a420-f9fcabd2927f"
+          }
+        },
+        "Create_HTML_table_CampaignNoOwner": {
+          "type": "Table",
+          "inputs": {
+            "from": "@variables('CampaignNoOwner')",
+            "format": "HTML"
+          },
+          "runAfter": {
+            "Create_HTML_table_CampaignNoValidOwner": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "0ae6e6e7-9151-45ab-90f1-dc12951cca43"
+          }
+        },
+        "Send_an_email_from_a_shared_mailbox_(V2)": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "emailMessage/MailboxAddress": "revops-noreply@sherweb.com",
+              "emailMessage/To": "npeddakotla@sherweb.com;jadams@sherweb.com;vgenest@sherweb.com",
+              "emailMessage/Subject": "[Campaign Owner] - missing or inactive owner for Campaign",
+              "emailMessage/Body": "<p class=\"editor-paragraph\">Hi!<br><br>You're receiving this email because the campaign following is having a problem as the owner of the campaign is no longer employed:<br>@{body('Create_HTML_table_CampaignNoValidOwner')}<br><br>Campaign without owner:<br>@{body('Create_HTML_table_CampaignNoOwner')}<br><br>Thank you for your attention!<br><br>P.S. this email's going to be sent every week, to ensure that you have the accurate information on the state of your campaign!</p>",
+              "emailMessage/Importance": "Normal"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365",
+              "operationId": "SharedMailboxSendEmailV2",
+              "connectionName": "shared_office365"
+            }
+          },
+          "runAfter": {
+            "Create_HTML_table_CampaignNoOwner": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f747de57-9938-4bd2-a88f-84ed3f5b9463"
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

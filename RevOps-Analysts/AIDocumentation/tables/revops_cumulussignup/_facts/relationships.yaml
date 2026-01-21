@@ -1,0 +1,687 @@
+relationships:
+  -
+    schemaname: revops_cumulussignup_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: CampaignResponse_revops_cumulussignups
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_ActionCards
+    relationshiptype: OneToMany
+    referencingtablelogicalname: actioncard
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_QueueItems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queueitem
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_Annotations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_Feedback
+    relationshiptype: OneToMany
+    referencingtablelogicalname: feedback
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: revops_cumulussignup_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: msdyn_bookingalertstatus_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_bookingalertstatus
+  -
+    schemaname: msdyn_bookingrule_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_bookingrule
+  -
+    schemaname: msdyn_resourceterritory_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_resourceterritory
+  -
+    schemaname: msdyn_systemuserschedulersetting_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_systemuserschedulersetting
+  -
+    schemaname: msdyn_timegroup_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_timegroup
+  -
+    schemaname: msdyn_timegroupdetail_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_timegroupdetail
+  -
+    schemaname: interactionforemail_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: interactionforemail
+  -
+    schemaname: msevtmgt_checkin_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_checkin
+  -
+    schemaname: msevtmgt_event_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_event
+  -
+    schemaname: msevtmgt_eventpurchase_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_eventpurchase
+  -
+    schemaname: msevtmgt_eventpurchaseattendee_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_eventpurchaseattendee
+  -
+    schemaname: msevtmgt_eventpurchasepass_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_eventpurchasepass
+  -
+    schemaname: msevtmgt_eventregistration_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_eventregistration
+  -
+    schemaname: msevtmgt_hotel_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_hotel
+  -
+    schemaname: msevtmgt_hotelroomallocation_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_hotelroomallocation
+  -
+    schemaname: msevtmgt_hotelroomreservation_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_hotelroomreservation
+  -
+    schemaname: msevtmgt_layout_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_layout
+  -
+    schemaname: msevtmgt_room_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_room
+  -
+    schemaname: msevtmgt_session_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_sessionregistration_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_sessionregistration
+  -
+    schemaname: msevtmgt_sessiontrack_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_sessiontrack
+  -
+    schemaname: msevtmgt_speaker_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_speaker
+  -
+    schemaname: msevtmgt_speakerengagement_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_speakerengagement
+  -
+    schemaname: msevtmgt_sponsorablearticle_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_sponsorablearticle
+  -
+    schemaname: msevtmgt_sponsorship_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_sponsorship
+  -
+    schemaname: msevtmgt_venue_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_venue
+  -
+    schemaname: msevtmgt_webinarconfiguration_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_webinarconfiguration
+  -
+    schemaname: msevtmgt_webinarprovider_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_webinarprovider
+  -
+    schemaname: msdyncrm_contentsettings_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_contentsettings
+  -
+    schemaname: msdyncrm_customerjourney_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_customerjourney
+  -
+    schemaname: msdyncrm_marketingdynamiccontentmetadata_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_marketingdynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemaildynamiccontentmetadata_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_marketingemaildynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemailtestsend_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_marketingemailtestsend
+  -
+    schemaname: msdyncrm_uicconfig_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_uicconfig
+  -
+    schemaname: msdyncrm_leadscoremodel_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_leadscoremodel
+  -
+    schemaname: msdyncrm_migration_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_migration
+  -
+    schemaname: knowledgebaserecord_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: knowledgebaserecord
+  -
+    schemaname: account_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_cumulussignup_systemuser_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: contact_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: contact
+  -
+    schemaname: revops_cumulussignup_mailbox_sendermailboxid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: mailbox
+  -
+    schemaname: revops_cumulussignup_transactioncurrency_transactioncurrencyid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_cumulussignup_owner_ownerid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: owner
+  -
+    schemaname: revops_cumulussignup_systemuser_owninguser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_cumulussignup_sla_slaid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: sla
+  -
+    schemaname: revops_cumulussignup_businessunit_owningbusinessunit
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: knowledgearticle_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: adx_invitation_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_invitation
+  -
+    schemaname: mspp_adplacement_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: mspp_adplacement
+  -
+    schemaname: mspp_pollplacement_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: mspp_pollplacement
+  -
+    schemaname: mspp_publishingstatetransitionrule_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: mspp_publishingstatetransitionrule
+  -
+    schemaname: mspp_redirect_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: mspp_redirect
+  -
+    schemaname: mspp_shortcut_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: mspp_shortcut
+  -
+    schemaname: mspp_website_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: mspp_website
+  -
+    schemaname: lead_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: lead
+  -
+    schemaname: bookableresourcebooking_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: bookableresourcebooking
+  -
+    schemaname: bookableresourcebookingheader_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: bookableresourcebookingheader
+  -
+    schemaname: bulkoperation_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: bulkoperation
+  -
+    schemaname: campaign_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaignactivity_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: campaignactivity
+  -
+    schemaname: contract_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: contract
+  -
+    schemaname: entitlement_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: entitlement
+  -
+    schemaname: entitlementtemplate_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: entitlementtemplate
+  -
+    schemaname: incident_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: incident
+  -
+    schemaname: site_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: site
+  -
+    schemaname: revops_cumulussignup_service_serviceid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: service
+  -
+    schemaname: msdyn_customerasset_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_customerasset
+  -
+    schemaname: msdyn_playbookinstance_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_playbookinstance
+  -
+    schemaname: invoice_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: invoice
+  -
+    schemaname: opportunity_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: quote_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: quote
+  -
+    schemaname: salesorder_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: salesorder
+  -
+    schemaname: msdyn_postalbum_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_postalbum
+  -
+    schemaname: msdyn_swarm_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_swarm
+  -
+    schemaname: msdyn_salessuggestion_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_salessuggestion
+  -
+    schemaname: msdyncrm_linkedinaccount_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_linkedinaccount
+  -
+    schemaname: msdyncrm_linkedinactivity_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_linkedinactivity
+  -
+    schemaname: msdyncrm_linkedinfieldmapping_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_linkedinfieldmapping
+  -
+    schemaname: msdyncrm_linkedinform_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_linkedinform
+  -
+    schemaname: msdyncrm_linkedinformanswer_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_linkedinformanswer
+  -
+    schemaname: msdyncrm_linkedinformquestion_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_linkedinformquestion
+  -
+    schemaname: msdyncrm_linkedinformsubmission_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_linkedinformsubmission
+  -
+    schemaname: msdyncrm_linkedinleadmatchingstrategy_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_linkedinleadmatchingstrategy
+  -
+    schemaname: msdyncrm_linkedinuserprofile_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyncrm_linkedinuserprofile
+  -
+    schemaname: revops_cumulussignup_systemuser_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_cumulussignup_systemuser_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_cumulussignup_systemuser_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_cumulussignup_team_owningteam
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: team
+  -
+    schemaname: revops_cumulussignup_sla_slainvokedid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: sla
+  -
+    schemaname: activity_pointer_revops_cumulussignup
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: adx_webpage_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_webpage
+  -
+    schemaname: adx_website_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_website
+  -
+    schemaname: adx_ad_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_ad
+  -
+    schemaname: adx_adplacement_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_adplacement
+  -
+    schemaname: adx_poll_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_poll
+  -
+    schemaname: adx_polloption_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_polloption
+  -
+    schemaname: adx_pollplacement_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_pollplacement
+  -
+    schemaname: adx_pollsubmission_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_pollsubmission
+  -
+    schemaname: adx_publishingstatetransitionrule_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_publishingstatetransitionrule
+  -
+    schemaname: adx_redirect_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_redirect
+  -
+    schemaname: adx_shortcut_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_shortcut
+  -
+    schemaname: adx_communityforumaccesspermission_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_communityforumaccesspermission
+  -
+    schemaname: adx_communityforumalert_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_communityforumalert
+  -
+    schemaname: adx_casedeflection_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_casedeflection
+  -
+    schemaname: adx_contentaccesslevel_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: adx_contentaccesslevel
+  -
+    schemaname: revops_audienceimport_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: revops_audienceimport
+  -
+    schemaname: msdyn_paymentterm_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_paymentterm
+  -
+    schemaname: msdyn_purchaseorder_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_purchaseorder
+  -
+    schemaname: msdyn_purchaseorderproduct_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_purchaseorderproduct
+  -
+    schemaname: msdyn_purchaseorderreceipt_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_purchaseorderreceipt
+  -
+    schemaname: msdyn_purchaseorderreceiptproduct_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_purchaseorderreceiptproduct
+  -
+    schemaname: msdyn_shipvia_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_shipvia
+  -
+    schemaname: msdyn_warehouse_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_warehouse
+  -
+    schemaname: msdyn_projectteam_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_projectteam
+  -
+    schemaname: msdyn_processnotes_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_processnotes
+  -
+    schemaname: revops_smeengagement_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: revops_smeengagement
+  -
+    schemaname: revops_cumulussignup_cumulusaccount_revops_cumulusaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: msdyn_project_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msdyn_project
+  -
+    schemaname: revops_mwhaccount_revops_cumulussignups
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: revops_mwhaccount
+

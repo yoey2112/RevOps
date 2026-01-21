@@ -1,0 +1,272 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_bccd6"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "splitOn": "@triggerBody()['rows']",
+          "metadata": {
+            "operationMetadataId": "d52c9d10-2c2c-4450-82c4-9dad6b804924"
+          },
+          "type": "Request",
+          "kind": "ApiConnection",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "rows": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "entity": {
+                        "type": "object",
+                        "properties": {
+                          "contactid": {
+                            "title": "Contact",
+                            "type": "string",
+                            "format": "guid"
+                          }
+                        },
+                        "required": [
+                          "contactid"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "entity"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "rows"
+              ]
+            },
+            "host": {
+              "connection": {
+                "name": "@parameters('$connections')['shared_commondataserviceforapps']['connectionId']"
+              }
+            },
+            "operationId": "RecordSelected",
+            "parameters": {
+              "entityName": "contacts"
+            }
+          },
+          "conditions": [
+            {
+              "expression": "@and(   not(empty(triggerOutputs()?['body/revops_domain'])),   not(empty(triggerOutputs()?['body/emailaddress1'])),   empty(triggerOutputs()?['body/_parentcustomerid_value']) )"
+            }
+          ]
+        }
+      },
+      "actions": {
+        "Number_of_Accounts": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "8dc58c34-2c98-4e3b-948a-08c00c539683"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Number_of_Records",
+                "type": "integer"
+              }
+            ]
+          }
+        },
+        "Associate_Lead_to_Account": {
+          "actions": {
+            "Update_Contact_with_Account": {
+              "foreach": "@outputs('List_Accounts')?['body/value']",
+              "actions": {
+                "Update_Contact": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "147d30b7-d22d-4054-aff4-d9a21a4db742"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "UpdateRecord",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "contacts",
+                      "recordId": "@triggerBody()?['entity']?['contactid']",
+                      "item/parentcustomerid_account@odata.bind": "/accounts(@{items('Update_Contact_with_Account')?['accountid']})"
+                    },
+                    "authentication": {
+                      "type": "Raw",
+                      "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                    }
+                  }
+                }
+              },
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "efebeffd-8e44-451d-bf03-2339cdc40c3e"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "Set_Number_Of_Accounts": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Add_Note_on_Contact": {
+                "runAfter": {
+                  "Compose": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "facdd58e-ce35-4ce9-b0b1-f0e0299ebd96"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "CreateRecord",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "annotations",
+                    "item/subject": "Multiple Accounts Found",
+                    "item/notetext": "Multiple accounts are related to this domain. Please manually select the correct account.\n\n@{outputs('Compose')}@{body('Create_HTML_table')}",
+                    "item/objectid_contact@odata.bind": "/contacts(@{triggerBody()?['entity']?['contactid']})"
+                  },
+                  "authentication": {
+                    "type": "Raw",
+                    "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                  }
+                }
+              },
+              "Create_HTML_table": {
+                "runAfter": {
+                  "Select_Data": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "8bf75f7d-eaa2-493e-91ff-6f95a92de05a"
+                },
+                "type": "Table",
+                "inputs": {
+                  "from": "@body('Select_Data')",
+                  "format": "HTML"
+                }
+              },
+              "Select_Data": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "1776a940-4d84-4eed-92f2-b83fa43ff1b2"
+                },
+                "type": "Select",
+                "inputs": {
+                  "from": "@outputs('List_Accounts')?['body/value']",
+                  "select": {
+                    "Name": "@item()['name']",
+                    "Domain": "@item()?['revops_domain']"
+                  }
+                }
+              },
+              "Compose": {
+                "runAfter": {
+                  "Create_HTML_table": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "9d9cc09f-5935-42a8-b46a-aebbef55e7a2"
+                },
+                "type": "Compose",
+                "inputs": "<style>\ntable {\n  border: 1px solid #1C6EA4;\n  background-color: #EEEEEE;\n  width: 100%;\n  text-align: left;\n  border-collapse: collapse;\n}\ntable td, table th {\n  border: 1px solid #AAAAAA;\n  padding: 3px 2px;\n}\ntable tbody td {\n  font-size: 13px;\n}\ntable thead {\n  background: #1C6EA4;\n  border-bottom: 2px solid #444444;\n}\ntable thead th {\n  font-size: 15px;\n  font-weight: bold;\n  color: #FFFFFF;\n  border-left: 2px solid #D0E4F5;\n}\ntable thead th:first-child {\n  border-left: none;\n}\n</style>"
+              }
+            }
+          },
+          "expression": {
+            "lessOrEquals": [
+              "@variables('Number_of_Records')",
+              1
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "64cef15a-3549-4138-a9a4-c3b1d50e2bea"
+          },
+          "type": "If"
+        },
+        "Set_Number_Of_Accounts": {
+          "runAfter": {
+            "List_Accounts": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "06568460-62a7-45a0-8b7e-1c5601707823"
+          },
+          "type": "SetVariable",
+          "inputs": {
+            "name": "Number_of_Records",
+            "value": "@length(outputs('List_Accounts')?['body/value'])"
+          }
+        },
+        "List_Accounts": {
+          "runAfter": {
+            "Number_of_Accounts": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ae8f898d-105f-4336-b03e-1257ae764828"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "accounts",
+              "fetchXml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\">\n  <entity name=\"account\">\n    <attribute name=\"name\" />\n    <attribute name=\"accountid\" />\n    <attribute name=\"ownerid\" />\n    <attribute name=\"revops_domain\" />\n    <attribute name=\"revops_bookvalue\" />\n    <order attribute=\"name\" descending=\"false\" />\n    <filter type=\"and\">\n      <condition attribute=\"revops_domain\" operator=\"eq\" value=\"\" />\n      <condition attribute=\"statecode\" operator=\"eq\" value=\"0\" />\n        </filter>\n  </entity>\n</fetch>"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

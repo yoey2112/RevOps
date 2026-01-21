@@ -1,0 +1,39 @@
+views:
+  -
+    name: My Journeys
+    description: Active Journeys owned by me
+    querytype: 8192
+    savedqueryid: '58fd2611-e675-ea11-a81e-000d3ac3608b'
+  -
+    name: All Journeys
+    querytype: -1
+    savedqueryid: '542bdb28-2fba-4925-b9ae-1940ca1acdf6'
+  -
+    name: Stopped Journeys
+    querytype: -1
+    savedqueryid: 'd36277cf-6510-4587-8fc1-468dc2629381'
+  -
+    name: Draft Journeys
+    querytype: -1
+    savedqueryid: 'bc7f3e0b-1eb9-4402-9cd0-6e71cec0598d'
+  -
+    name: Journey Associated View
+    querytype: 2
+    savedqueryid: '45c8ac90-b612-4a53-b729-8a4ef3fca66d'
+  -
+    name: Quick Find Active Journeys
+    querytype: 4
+    savedqueryid: '172e949f-2586-408c-a153-8aae2adc665a'
+  -
+    name: Live Journeys
+    querytype: -1
+    savedqueryid: '46fbf6b9-4fc6-490b-b99b-97f13aa5f23b'
+  -
+    name: Journey Lookup View
+    querytype: 64
+    savedqueryid: '2899ca72-2cde-4890-a230-a8a0ab86fcbc'
+  -
+    name: Journey Advanced Find View
+    querytype: 1
+    savedqueryid: '716fa562-5d0c-49fa-bbf0-e39faf308cc5'
+

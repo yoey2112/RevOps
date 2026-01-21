@@ -1,0 +1,422 @@
+relationships:
+  -
+    schemaname: Campaign_ActivityPointers
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_adx_portalcomments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_portalcomment
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_adx_inviteredemptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_inviteredemption
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_chats
+    relationshiptype: OneToMany
+    referencingtablelogicalname: chat
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_MailboxTrackingFolder
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: campaign
+  -
+    schemaname: userentityinstancedata_campaign
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_Appointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_Emails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_Faxes
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fax
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_Letters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: letter
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_Phonecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_Tasks
+    relationshiptype: OneToMany
+    referencingtablelogicalname: task
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_RecurringAppointmentMasters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: recurringappointmentmaster
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_SocialActivities
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialactivity
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_Annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_CampaignActivities
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignactivity
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_CampaignResponses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_leads
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_IncidentResolutions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_OpportunityCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_OrderCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: orderclose
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_QuoteCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quoteclose
+    referencedtablelogicalname: campaign
+  -
+    schemaname: Campaign_ServiceAppointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: serviceappointment
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_opportunities
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_orders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: salesorder
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_quotes
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quote
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_msfp_alerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_alert
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_msfp_surveyinvites
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyinvite
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_msfp_surveyresponses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_msdyn_copilottranscripts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_copilottranscript
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_msdyn_ocliveworkitems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_msdyn_ocsessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocsession
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_msdyn_bookingalerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_bookingalert
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_msdyn_ocvoicemails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocvoicemail
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_li_inmails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_inmail
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_li_messages
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_message
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_li_pointdrivepresentationvieweds
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_pointdrivepresentationviewed
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_FileAttachments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fileattachment
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_revops_demos
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_demo
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_revops_onboardingcalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_revops_cumulussignups
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_adx_alertsubscriptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_alertsubscription
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_msdyn_comments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_comment
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_revops_businessreviews
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_businessreview
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_revops_cadencecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_revops_inpersonmeetings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_inpersonmeeting
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaign_msdyn_approvals
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_approval
+    referencedtablelogicalname: campaign
+  -
+    schemaname: revops_msdynmkt_email_parentcampaignid_campaign
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: campaign
+  -
+    schemaname: revops_msdynmkt_eventmetadata_parentcampaignid_c
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_eventmetadata
+    referencedtablelogicalname: campaign
+  -
+    schemaname: revops_msdynmkt_journey_parentcampaignid_campaig
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_journey
+    referencedtablelogicalname: campaign
+  -
+    schemaname: revops_msdynmkt_marketingform_parentcampaignid_c
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: campaign
+  -
+    schemaname: revops_msdynmkt_segment_parentcampaignid_campaig
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_segment
+    referencedtablelogicalname: campaign
+  -
+    schemaname: revops_msevtmgt_event_parentcampaignid_campaign
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_event
+    referencedtablelogicalname: campaign
+  -
+    schemaname: revops_utmlink_parentcampaignid_campaign
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_utmlink
+    referencedtablelogicalname: campaign
+  -
+    schemaname: lk_campaign_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_campaign_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_campaign_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_campaign_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: SystemUser_Campaigns
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_Campaigns
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_campaigns
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: owner
+  -
+    schemaname: BusinessUnit_Campaigns
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: processstage_campaigns
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: processstage
+  -
+    schemaname: transactioncurrency_campaign
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: lk_campaign_entityimage
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: imagedescriptor
+  -
+    schemaname: PriceList_Campaigns
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: pricelevel
+  -
+    schemaname: FileAttachment_Campaign_revops_campaignbrief
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: fileattachment
+  -
+    schemaname: revops_campaign_campaignowner_systemuser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_solution_campaign
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: campaigncampaign_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaignproduct_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: product
+  -
+    schemaname: campaignlist_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: list
+  -
+    schemaname: campaignsalesliterature_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: salesliterature
+

@@ -1,0 +1,31 @@
+views:
+  -
+    name: Tech Stack Snapshots
+    description: All active Tech Stack Snapshots
+    querytype: 8192
+    savedqueryid: '3a84f82e-d866-ef11-a670-000d3af43335'
+  -
+    name: Tech Stack Snapshot Advanced Find View
+    querytype: 1
+    savedqueryid: '0b559f33-268e-46a6-9e5b-12caafb13428'
+  -
+    name: All Tech Stack Snapshots
+    querytype: -1
+    savedqueryid: '1ff71075-4df1-41ae-8a30-1930d2c6bc58'
+  -
+    name: Tech Stack Snapshots Copilot View
+    querytype: 1048576
+    savedqueryid: '0f3715b3-7081-d067-8894-29d96f77f191'
+  -
+    name: Tech Stack Snapshot Associated View
+    querytype: 2
+    savedqueryid: '8ac4c085-2462-41af-890c-7b9f05329b02'
+  -
+    name: Tech Stack Snapshot Lookup View
+    querytype: 64
+    savedqueryid: '3727012c-5fc4-42f8-b780-a3b03bfacf46'
+  -
+    name: Quick Find Active Tech Stack Snapshots
+    querytype: 4
+    savedqueryid: '69d25674-d191-4fdd-82da-e4263722ec42'
+

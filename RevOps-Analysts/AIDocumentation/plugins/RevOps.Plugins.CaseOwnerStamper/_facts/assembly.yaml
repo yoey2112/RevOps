@@ -1,0 +1,6 @@
+schema_version: 1
+pluginassemblyid: '2b6e064b-56da-4614-9a02-9596ee147cf0'
+name: RevOps.Plugins.CaseOwnerStamper
+version: '1.0.0.0'
+publickeytoken: '7d35e700d390c80a'
+

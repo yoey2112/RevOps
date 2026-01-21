@@ -1,0 +1,6 @@
+workflowid: '0ffbcde4-61c1-4355-aa89-aa1d7b2b8792'
+primaryentity: incident
+description: This is the default process flow for working on a case.
+uniquename: phonetocaseprocess
+name: Phone to Case Process
+

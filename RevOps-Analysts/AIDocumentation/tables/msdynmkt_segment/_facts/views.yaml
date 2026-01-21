@@ -1,0 +1,31 @@
+views:
+  -
+    name: msdynmkt_segments
+    description: All active msdynmkt_segments
+    querytype: 8192
+    savedqueryid: '7e19a7b0-ebad-4c4a-8f46-2aab86695452'
+  -
+    name: msdynmkt_segment Lookup View
+    querytype: 64
+    savedqueryid: 'b7cfb776-f480-4b0e-b3b3-38c07e7fdbaa'
+  -
+    name: Inactive msdynmkt_segments
+    querytype: -1
+    savedqueryid: 'a6e0cb07-f2f4-468d-b9c2-7915b09537fe'
+  -
+    name: Quick Find Active msdynmkt_segments
+    querytype: 4
+    savedqueryid: 'b63ccf89-bbfe-401b-a6d8-835374389301'
+  -
+    name: Active msdynmkt_segments
+    querytype: -1
+    savedqueryid: '4022e781-0054-4e2b-be38-8eabff912442'
+  -
+    name: msdynmkt_segment Advanced Find View
+    querytype: 1
+    savedqueryid: 'a0a78846-5b41-4885-aee8-bf7c04c58524'
+  -
+    name: msdynmkt_segment Associated View
+    querytype: 2
+    savedqueryid: 'a7de326a-c936-4b5e-b368-cc2eb0ffbfbb'
+

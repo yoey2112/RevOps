@@ -1,0 +1,26 @@
+TITLE
+=====
+RevOps - Plugins Component Index
+
+PURPOSE
+-------
+Quick reference index of all Plugins components in this folder.
+
+COMPONENTS
+----------
+- RevOps.EmailPlugins : Plugin Assembly: RevOps.EmailPlugins
+- RevOps.Plugins.CaseCustomerRespondedSetter : Plugin Assembly: RevOps.Plugins.CaseCustomerRespondedSetter
+- RevOps.Plugins.CaseInteractionStamper : Plugin Assembly: RevOps.Plugins.CaseInteractionStamper
+- RevOps.Plugins.CaseOwnerStamper : Plugin Assembly: RevOps.Plugins.CaseOwnerStamper
+- RevOps.Plugins.EmailWorkflowMarker : Plugin Assembly: RevOps.Plugins.EmailWorkflowMarker
+- RevOps.SolutionPlugins : Plugin Assembly: RevOps.SolutionPlugins
+- sherweb.plugin : Plugin Assembly: sherweb.plugin
+
+HOW TO USE
+----------
+Each component has its own subfolder containing:
+- README.md and README.txt for overview
+- _facts/*.yaml for structured metadata
+- Additional documentation files as needed
+
+For detailed information about a specific component, navigate to its subfolder.

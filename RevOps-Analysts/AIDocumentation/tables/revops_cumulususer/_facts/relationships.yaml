@@ -1,0 +1,102 @@
+relationships:
+  -
+    schemaname: revops_cumulususer_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_cumulususer
+  -
+    schemaname: revops_cumulususer_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_cumulususer
+  -
+    schemaname: revops_cumulususer_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_cumulususer
+  -
+    schemaname: revops_cumulususer_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_cumulususer
+  -
+    schemaname: revops_cumulususer_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_cumulususer
+  -
+    schemaname: revops_cumulususer_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_cumulususer
+  -
+    schemaname: revops_cumulususer_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_cumulususer
+  -
+    schemaname: revops_cumulususer_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_cumulususer
+  -
+    schemaname: revops_incident_cumulususer_revops_cumulususer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: revops_cumulususer
+  -
+    schemaname: lk_revops_cumulususer_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulususer
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_cumulususer_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulususer
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_cumulususer_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulususer
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_cumulususer_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulususer
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_revops_cumulususer
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulususer
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_revops_cumulususer
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulususer
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_revops_cumulususer
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulususer
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_revops_cumulususer
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulususer
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: revops_cumulususer_account_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulususer
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_cumulususer_contact_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulususer
+    referencedtablelogicalname: contact
+  -
+    schemaname: revops_cumulususer_cumulusaccount_revops_cumulusaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulususer
+    referencedtablelogicalname: revops_cumulusaccount
+

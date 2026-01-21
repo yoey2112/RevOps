@@ -1,0 +1,87 @@
+relationships:
+  -
+    schemaname: revops_sherwebsalesbpf_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_sherwebsalesbpf
+  -
+    schemaname: revops_sherwebsalesbpf_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_sherwebsalesbpf
+  -
+    schemaname: revops_sherwebsalesbpf_WorkflowLogs
+    relationshiptype: OneToMany
+    referencingtablelogicalname: workflowlog
+    referencedtablelogicalname: revops_sherwebsalesbpf
+  -
+    schemaname: revops_sherwebsalesbpf_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_sherwebsalesbpf
+  -
+    schemaname: revops_sherwebsalesbpf_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_sherwebsalesbpf
+  -
+    schemaname: revops_sherwebsalesbpf_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_sherwebsalesbpf
+  -
+    schemaname: revops_sherwebsalesbpf_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_sherwebsalesbpf
+  -
+    schemaname: revops_sherwebsalesbpf_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_sherwebsalesbpf
+  -
+    schemaname: lk_revops_sherwebsalesbpf_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_sherwebsalesbpf
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_sherwebsalesbpf_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_sherwebsalesbpf
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_sherwebsalesbpf_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_sherwebsalesbpf
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_sherwebsalesbpf_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_sherwebsalesbpf
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_sherwebsalesbpf
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_sherwebsalesbpf
+    referencedtablelogicalname: organization
+  -
+    schemaname: lk_revops_sherwebsalesbpf_activestageid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_sherwebsalesbpf
+    referencedtablelogicalname: processstage
+  -
+    schemaname: lk_revops_sherwebsalesbpf_processid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_sherwebsalesbpf
+    referencedtablelogicalname: workflow
+  -
+    schemaname: bpf_lead_revops_sherwebsalesbpf
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_sherwebsalesbpf
+    referencedtablelogicalname: lead
+  -
+    schemaname: bpf_opportunity_revops_sherwebsalesbpf
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_sherwebsalesbpf
+    referencedtablelogicalname: opportunity
+

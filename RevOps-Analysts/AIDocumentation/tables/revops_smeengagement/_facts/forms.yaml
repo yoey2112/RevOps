@@ -1,0 +1,370 @@
+forms:
+  -
+    name: 'Quick Create - SME Engagement'
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: New Section
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: New Section
+        name: tab_1_column_2_section_1
+        tab: tab_1
+        visible: false
+      -
+        label: New Section
+        name: tab_1_column_3_section_1
+        tab: tab_1
+        visible: false
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_type
+        field: revops_type
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_solution
+        field: revops_solution
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_cumulusaccount
+        field: revops_cumulusaccount
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_requestoverview
+        field: revops_requestoverview
+    description: null
+    tabs:
+      -
+        label: New Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 5
+    type_name: Quick Create
+  -
+    name: SME Engagement
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: General
+        tab: General
+        visible: true
+      -
+        label: New Section
+        name: tab_2_section_3
+        tab: tab_2
+        visible: true
+    fields:
+      -
+        section: General
+        tab: General
+        disabled: true
+        visible: true
+        control_id: revops_engagementid
+        field: revops_engagementid
+      -
+        section: General
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: General
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_type
+        field: revops_type
+      -
+        section: General
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_solution
+        field: revops_solution
+      -
+        section: General
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_account
+        field: revops_account
+      -
+        section: General
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_requestoverview
+        field: revops_requestoverview
+      -
+        section: General
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_cumulusaccount
+        field: revops_cumulusaccount
+      -
+        section: General
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_notes
+        field: revops_notes
+      -
+        section: General
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_opportunity
+        field: revops_opportunity
+      -
+        section: General
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_lead
+        field: revops_lead
+      -
+        section: General
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_case
+        field: revops_case
+      -
+        section: General
+        tab: General
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1759325026409
+        field: revops_account
+      -
+        section: General
+        tab: General
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1759325097841
+        field: revops_opportunity
+      -
+        section: General
+        tab: General
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1759334429210
+        field: revops_lead
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: General
+        visible: true
+        expanded: true
+      -
+        label: Documents
+        name: tab_2
+        visible: true
+        expanded: true
+    field_count: 16
+    type_name: Main
+  -
+    name: Test Dashboard
+    is_active: true
+    type: 10
+    sections:
+      -
+        label: Section
+        name: VisualFilters
+        tab: ''
+        visible: true
+      -
+        label: Section
+        name: Streams
+        tab: StreamsContainer
+        visible: true
+    fields:
+    description: null
+    tabs:
+      -
+        label: Visual Filters
+        name: ''
+        visible: true
+        expanded: true
+      -
+        label: Streams
+        name: StreamsContainer
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Type 10
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: GENERAL
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick View
+  -
+    name: Information
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: A card form for this entity.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 4
+    type_name: Card
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Main
+

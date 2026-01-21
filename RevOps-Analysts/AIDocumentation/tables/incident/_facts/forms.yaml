@@ -1,0 +1,6472 @@
+forms:
+  -
+    name: Enhanced quick case form
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: CASE DETAILS
+        name: Details
+        tab: general
+        visible: true
+      -
+        label: New Section
+        name: tab_8_section_1
+        tab: notes
+        visible: true
+      -
+        label: New Section
+        name: tab_9_section_1
+        tab: attachment
+        visible: true
+    fields:
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: productid
+        field: productid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: productserialnumber
+        field: productserialnumber
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: tab_8_section_1
+        tab: notes
+        disabled: false
+        visible: true
+        control_id: msdyn_precreatenotesid
+        field: msdyn_precreatenotesid
+      -
+        section: tab_9_section_1
+        tab: attachment
+        disabled: false
+        visible: true
+        control_id: msdyn_precreateattachmentsid
+        field: msdyn_precreateattachmentsid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_createdon
+        field: createdon
+    description: Enhanced quick case form.
+    tabs:
+      -
+        label: Details
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Case Notes
+        name: notes
+        visible: true
+        expanded: true
+      -
+        label: Attachments
+        name: attachment
+        visible: true
+        expanded: true
+    field_count: 15
+    type_name: Main
+  -
+    name: Enhanced full case form
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: SLA Timer
+        name: slaTimer
+        tab: general
+        visible: true
+      -
+        label: Basic details
+        name: Details
+        tab: general
+        visible: true
+      -
+        label: Queue item details
+        name: queueitemdetails
+        tab: general
+        visible: true
+      -
+        label: Case associations
+        name: caseassociation
+        tab: general
+        visible: true
+      -
+        label: New Section
+        name: general_section_10
+        tab: general
+        visible: true
+      -
+        label: Copilot Summary Section
+        name: copilot_summary_section
+        tab: general
+        visible: false
+      -
+        label: Attachments
+        name: attachment
+        tab: general
+        visible: true
+      -
+        label: Description
+        name: description
+        tab: general
+        visible: true
+      -
+        label: Timeline_Section
+        name: Timeline
+        tab: general
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: general
+        visible: true
+      -
+        label: ''
+        name: attachmentSection
+        tab: Tab_Attachment
+        visible: true
+    fields:
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: casetypecodecreate
+        field: casetypecode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: productid
+        field: productid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: productserialnumber
+        field: productserialnumber
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: entitlementid
+        field: entitlementid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: isescalated
+        field: isescalated
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: escalatedon
+        field: escalatedon
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: parentcaseid
+        field: parentcaseid
+      -
+        section: queueitemdetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdyn_queueitemdetailscontrol
+        field: productserialnumber
+      -
+        section: copilot_summary_section
+        tab: general
+        disabled: false
+        visible: true
+        control_id: traversedpath
+        field: traversedpath
+      -
+        section: attachment
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdyn_precreateattachmentsid
+        field: msdyn_precreateattachmentsid
+      -
+        section: description
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: notes
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdyn_precreatenotesid
+        field: msdyn_precreatenotesid
+      -
+        section: attachmentSection
+        tab: Tab_Attachment
+        disabled: false
+        visible: true
+        control_id: msdyn_precreateattachmentsid
+        field: msdyn_precreateattachmentsid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ticketnumber
+        field: ticketnumber
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Enhanced full case form
+    tabs:
+      -
+        label: Details
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Attachments
+        name: Tab_Attachment
+        visible: true
+        expanded: true
+    field_count: 25
+    type_name: Main
+  -
+    name: Cases created by me
+    is_active: true
+    type: 10
+    sections:
+      -
+        label: Section
+        name: VisualFilters
+        tab: ''
+        visible: true
+      -
+        label: Section
+        name: Streams
+        tab: StreamsContainer
+        visible: true
+    fields:
+    description: 'Dashboard showing all cases created by me, including active and closed.'
+    tabs:
+      -
+        label: Visual Filters
+        name: ''
+        visible: true
+        expanded: true
+      -
+        label: Streams
+        name: StreamsContainer
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Type 10
+  -
+    name: Case form for swarming
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: Case details
+        name: casedetails
+        tab: general
+        visible: true
+      -
+        label: Section
+        name: general_section_3
+        tab: general
+        visible: true
+    fields:
+      -
+        section: casedetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: customerpane_qfc
+        field: customerid
+      -
+        section: casedetails
+        tab: general
+        disabled: true
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: casedetails
+        tab: general
+        disabled: true
+        visible: true
+        control_id: ticketnumber
+        field: ticketnumber
+      -
+        section: casedetails
+        tab: general
+        disabled: true
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: casedetails
+        tab: general
+        disabled: true
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: casedetails
+        tab: general
+        disabled: true
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: casedetails
+        tab: general
+        disabled: true
+        visible: true
+        control_id: statecode
+        field: statecode
+      -
+        section: casedetails
+        tab: general
+        disabled: true
+        visible: true
+        control_id: productid
+        field: productid
+      -
+        section: casedetails
+        tab: general
+        disabled: true
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_createdon
+        field: createdon
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: 'Case form for swarming. '
+    tabs:
+      -
+        label: Summary
+        name: general
+        visible: true
+        expanded: true
+    field_count: 13
+    type_name: Main
+  -
+    name: 'Create Case - CS'
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Overview
+        name: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        visible: true
+      -
+        label: New Section
+        name: null_section_3
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_queue
+        field: revops_queue
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_service
+        field: revops_service
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: null_section_3
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: null_section_3
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: footer_statecode
+        field: statecode
+    description: Create case form used on the helpdesk portal.
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 11
+    type_name: Main
+  -
+    name: Case Quick Create for Multisession
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: Case Details
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: Description
+        name: tab_1_column_2_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: section
+        name: tab_1_column_3_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: parentcaseid
+        field: parentcaseid
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+    description: null
+    tabs:
+      -
+        label: Case
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 9
+    type_name: Quick Create
+  -
+    name: Case for Interactive experience
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: GENERAL INFORMATION
+        name: General Info
+        tab: Summary
+        visible: true
+      -
+        label: Section
+        name: SLAKPI_Timer_Section
+        tab: Summary
+        visible: true
+      -
+        label: Case Details
+        name: Case Details Summary
+        tab: Summary
+        visible: true
+      -
+        label: Copilot Summary Section
+        name: copilot_summary_section
+        tab: Summary
+        visible: false
+      -
+        label: TIMELINE
+        name: Timeline
+        tab: Summary
+        visible: true
+      -
+        label: RELATED
+        name: ref_pan_Related
+        tab: Summary
+        visible: true
+      -
+        label: CASE DETAILS
+        name: Case Details
+        tab: Details
+        visible: true
+      -
+        label: DESCRIPTION
+        name: ''
+        tab: Details
+        visible: true
+      -
+        label: ADDITIONAL DETAILS
+        name: Additional Details
+        tab: Details
+        visible: true
+      -
+        label: APPLICABLE SLA
+        name: Applicable SLA(STANDARD)
+        tab: Details
+        visible: true
+      -
+        label: SOCIAL DETAILS
+        name: Social Response
+        tab: Details
+        visible: true
+      -
+        label: ''
+        name: MergedCases
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: Associated swarms
+        name: SwarmSection
+        tab: CASERELATIONSHIP_TAB
+        visible: false
+      -
+        label: ''
+        name: ChildCases
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: ''
+        name: KnowledgeArticles
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: ''
+        name: Solutions
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: SLA KPI INSTANCES
+        name: SLAKPIInstances
+        tab: ' Enhanced_SLA_Details_Tab'
+        visible: true
+      -
+        label: Device Readings
+        name: DeviceInsightsSection
+        tab: DeviceInsightsTab
+        visible: true
+      -
+        label: Section
+        name: DeviceSection
+        tab: DeviceTab
+        visible: true
+    fields:
+      -
+        section: General Info
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: customerpane_qfc
+        field: customerid
+      -
+        section: SLAKPI_Timer_Section
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: FirstResponseByKPI
+        field: firstresponsebykpiid
+      -
+        section: SLAKPI_Timer_Section
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: ResolveByKPI
+        field: resolvebykpiid
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: ticketnumber
+        field: ticketnumber
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: productid
+        field: productid
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: entitlementid
+        field: entitlementid
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_iotalert
+        field: msdyn_iotalert
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: copilot_summary_section
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: traversedpath
+        field: traversedpath
+      -
+        section: ref_pan_Related
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: case_qfc
+        field: customerid
+      -
+        section: ref_pan_Related
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: similarCaseRecordcontrol_id
+        field: title
+      -
+        section: Case Details
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Case Details
+        tab: Details
+        disabled: true
+        visible: true
+        control_id: ticketnumber
+        field: ticketnumber
+      -
+        section: Case Details
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: Case Details
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: Case Details
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: Case Details
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: Case Details
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: productid
+        field: productid
+      -
+        section: Case Details
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: entitlementid
+        field: entitlementid
+      -
+        section: Case Details
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: msdyn_iotalert
+        field: msdyn_iotalert
+      -
+        section: ''
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Additional Details
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: Additional Details
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: parentcaseid
+        field: parentcaseid
+      -
+        section: Additional Details
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: isescalated
+        field: isescalated
+      -
+        section: Additional Details
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: escalatedon
+        field: escalatedon
+      -
+        section: Additional Details
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: followupby
+        field: followupby
+      -
+        section: Additional Details
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: firstresponsesent
+        field: firstresponsesent
+      -
+        section: Applicable SLA(STANDARD)
+        tab: Details
+        disabled: true
+        visible: true
+        control_id: responseby
+        field: responseby
+      -
+        section: Applicable SLA(STANDARD)
+        tab: Details
+        disabled: true
+        visible: true
+        control_id: resolveby
+        field: resolveby
+      -
+        section: Social Response
+        tab: Details
+        disabled: true
+        visible: true
+        control_id: socialprofileid
+        field: socialprofileid
+      -
+        section: Social Response
+        tab: Details
+        disabled: true
+        visible: true
+        control_id: messagetypecode
+        field: messagetypecode
+      -
+        section: Social Response
+        tab: Details
+        disabled: true
+        visible: true
+        control_id: influencescore
+        field: influencescore
+      -
+        section: Social Response
+        tab: Details
+        disabled: true
+        visible: true
+        control_id: sentimentvalue
+        field: sentimentvalue
+      -
+        section: Social Response
+        tab: Details
+        disabled: true
+        visible: true
+        control_id: blockedprofile
+        field: blockedprofile
+      -
+        section: DeviceInsightsSection
+        tab: DeviceInsightsTab
+        disabled: false
+        visible: true
+        control_id: msdyn_iotalert
+        field: msdyn_iotalert
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_createdon
+        field: createdon
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Default Interactive experience Case form.
+    tabs:
+      -
+        label: Summary
+        name: Summary
+        visible: true
+        expanded: true
+      -
+        label: Details
+        name: Details
+        visible: true
+        expanded: false
+      -
+        label: Case Relationships
+        name: CASERELATIONSHIP_TAB
+        visible: true
+        expanded: true
+      -
+        label: SLA
+        name: ' Enhanced_SLA_Details_Tab'
+        visible: true
+        expanded: false
+      -
+        label: Device Readings
+        name: DeviceInsightsTab
+        visible: false
+        expanded: true
+      -
+        label: Customer Assets
+        name: DeviceTab
+        visible: false
+        expanded: true
+    field_count: 43
+    type_name: Main
+  -
+    name: Issue snapshot
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: ''
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: statecode
+        field: statecode
+    description: Issue snapshot for customer summary
+    tabs:
+      -
+        label: ''
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 3
+    type_name: Quick View
+  -
+    name: Case
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: TABS CONTROL
+        name: TabsControl
+        tab: general
+        visible: true
+      -
+        label: Route Case
+        name: Route Case
+        tab: general
+        visible: false
+      -
+        label: Description
+        name: case_description
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: Details
+        tab: general
+        visible: true
+      -
+        label: Customer Details
+        name: customer_ details
+        tab: general
+        visible: true
+      -
+        label: Solution Details
+        name: solution_details
+        tab: general
+        visible: true
+      -
+        label: Escalation Details
+        name: escalation_details
+        tab: general
+        visible: true
+      -
+        label: Level 3 Escalation
+        name: level_3_escalation
+        tab: general
+        visible: true
+      -
+        label: Migration Details
+        name: migration_details
+        tab: general
+        visible: true
+      -
+        label: Transfer Details
+        name: transfer_details
+        tab: general
+        visible: true
+      -
+        label: CloudPBX Onboarding
+        name: cloudpbx_onboarding
+        tab: general
+        visible: true
+      -
+        label: Additional Details
+        name: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        visible: true
+      -
+        label: New Section
+        name: ADDITIONALDETAILS_TAB_section_3
+        tab: ADDITIONALDETAILS_TAB
+        visible: true
+      -
+        label: Attachments
+        name: _section_648
+        tab: ADDITIONALDETAILS_TAB
+        visible: true
+      -
+        label: New Section
+        name: tab_5_section_11
+        tab: tab_5
+        visible: true
+      -
+        label: ''
+        name: Solutions
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: RESEARCH
+        name: Research
+        tab: CASERELATIONSHIP_TAB
+        visible: false
+      -
+        label: ''
+        name: MergedCases
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: Case Metrics
+        name: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        visible: true
+      -
+        label: SLOs
+        name: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        visible: true
+    fields:
+      -
+        section: Route Case
+        tab: general
+        disabled: true
+        visible: true
+        control_id: routecase
+        field: routecase
+      -
+        section: case_description
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: case_description
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_customerescalationreason
+        field: revops_customerescalationreason
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_queue
+        field: revops_queue
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: parentcaseid
+        field: parentcaseid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: Details
+        tab: general
+        disabled: true
+        visible: true
+        control_id: ticketnumber
+        field: ticketnumber
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_service
+        field: revops_service
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_subsolution
+        field: revops_subsolution
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_amount
+        field: revops_amount
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_cumulusaccount
+        field: revops_cumulusaccount
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_cumulusorganization
+        field: revops_cumulusorganization
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_nocservices
+        field: revops_nocservices
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1737572643562
+        field: revops_cumulusaccount
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1757957823708
+        field: revops_cumulusorganization
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1744131482030
+        field: revops_account
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: customerpane_qfc
+        field: primarycontactid
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_domain
+        field: revops_domain
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_datalocation
+        field: revops_datalocation
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_subscriptionid
+        field: revops_subscriptionid
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_hostedexchangeplatform
+        field: revops_hostedexchangeplatform
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_m365tenantname
+        field: revops_m365tenantname
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_nerdioaccount
+        field: revops_nerdioaccount
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_veeamusername
+        field: revops_veeamusername
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_pleskserver
+        field: revops_pleskserver
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: isescalated
+        field: isescalated
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_escalationtype
+        field: revops_escalationtype
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_internalescalationprovider
+        field: revops_internalescalationprovider
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_internalescalationurl
+        field: revops_internalescalationurl
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_3rdpartyescalationsupplier
+        field: revops_3rdpartyescalationsupplier
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_3rdpartyescalationticket
+        field: revops_3rdpartyescalationticket
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_escalationreductionopportunity
+        field: revops_escalationreductionopportunity
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_l3actiontaken
+        field: revops_l3actiontaken
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_doesakbexistforthisissue
+        field: revops_doesakbexistforthisissue
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_kburl
+        field: revops_kburl
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_shouldtherebeakb
+        field: revops_shouldtherebeakb
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_shoulditbeupdated
+        field: revops_shoulditbeupdated
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_migrationmethod
+        field: revops_migrationmethod
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_migrationsource
+        field: revops_migrationsource
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_migrationdestination
+        field: revops_migrationdestination
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_servicestomigrate
+        field: revops_servicestomigrate
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_firstcallrequiredinfocompleted
+        field: revops_firstcallrequiredinfocompleted
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_cutoverdatetime
+        field: revops_cutoverdatetime
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_s1transferstatus
+        field: revops_s1transferstatus
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_endpointtomigrate
+        field: revops_endpointtomigrate
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_sitestomigrate
+        field: revops_sitestomigrate
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_p2ptype
+        field: revops_p2ptype
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_oforganizations
+        field: revops_oforganizations
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_losingprovider
+        field: revops_losingprovider
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_datep2prequestsubmittedtolosingcsp
+        field: revops_datep2prequestsubmittedtolosingcsp
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_ordervalidation
+        field: revops_ordervalidation
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_kickoffcall
+        field: revops_kickoffcall
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_termsandconditions
+        field: revops_termsandconditions
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_onboardingform
+        field: revops_onboardingform
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_portinformlnp
+        field: revops_portinformlnp
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_phonenumbersported
+        field: revops_phonenumbersported
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_ipphonesshipped
+        field: revops_ipphonesshipped
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_pbxconfiguration
+        field: revops_pbxconfiguration
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_currentphoneinvoice
+        field: revops_currentphoneinvoice
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_recurringfees
+        field: revops_recurringfees
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_shippingfees
+        field: revops_shippingfees
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_setupfees
+        field: revops_setupfees
+      -
+        section: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_l3reviewby
+        field: revops_l3reviewby
+      -
+        section: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_outofscope
+        field: revops_outofscope
+      -
+        section: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: true
+        visible: true
+        control_id: revops_previousqueue
+        field: revops_previousqueue
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: true
+        visible: true
+        control_id: revops_queuemodifiedon
+        field: revops_queuemodifiedon
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: createdby
+        field: createdby
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: true
+        visible: true
+        control_id: revops_reassignedby
+        field: revops_reassignedby
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: true
+        visible: true
+        control_id: revops_lastinteraction
+        field: revops_lastinteraction
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: true
+        visible: true
+        control_id: revops_lastinteractiondate
+        field: revops_lastinteractiondate
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: true
+        visible: true
+        control_id: revops_lastemaildirection
+        field: revops_lastemaildirection
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: responseby
+        field: responseby
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: firstresponsesent
+        field: firstresponsesent
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: followuptaskcreated
+        field: followuptaskcreated
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: followupby
+        field: followupby
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupcreatedon
+        field: revops_followupcreatedon
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupsent
+        field: revops_followupsent
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: resolveby
+        field: resolveby
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: adx_resolutiondate
+        field: adx_resolutiondate
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: escalatedon
+        field: escalatedon
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: firstresponsebykpiid
+        field: firstresponsebykpiid
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: firstresponseslastatus
+        field: firstresponseslastatus
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupbykpi
+        field: revops_followupbykpi
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupslastatus
+        field: revops_followupslastatus
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: resolvebykpiid
+        field: resolvebykpiid
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: resolvebyslastatus
+        field: resolvebyslastatus
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revops_queue
+        field: revops_queue
+    description: Updated default Case form for Customer Service
+    tabs:
+      -
+        label: Summary
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Additional Details
+        name: ADDITIONALDETAILS_TAB
+        visible: true
+        expanded: false
+      -
+        label: Case History Details
+        name: tab_5
+        visible: true
+        expanded: false
+      -
+        label: Case Relationships
+        name: CASERELATIONSHIP_TAB
+        visible: true
+        expanded: false
+      -
+        label: Case Metrics
+        name: CASEMETRICS_TAB
+        visible: true
+        expanded: true
+    field_count: 101
+    type_name: Main
+  -
+    name: 'Web - Case'
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Overview
+        name: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: ticketnumber
+        field: ticketnumber
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: footer_statecode
+        field: statecode
+    description: null
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 7
+    type_name: Main
+  -
+    name: Case Reference Panel
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: CASE DETAILS
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: DESCRIPTION
+        name: tab_1_section_2
+        tab: tab_1
+        visible: true
+      -
+        label: OTHER DETAILS
+        name: tab_1_section_3
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ticketnumber
+        field: ticketnumber
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: tab_1_section_2
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: tab_1_section_3
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: tab_1_section_3
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: A form that displays Reference Panel of Case.
+    tabs:
+      -
+        label: ''
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 10
+    type_name: Quick View
+  -
+    name: Case for Customer Card
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: New Section
+        name: general_section_6
+        tab: general
+        visible: true
+    fields:
+      -
+        section: general_section_6
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ticketnumber
+        field: title
+    description: Case for Customer Card
+    tabs:
+      -
+        label: Case card
+        name: general
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Main
+  -
+    name: 'Case - Create P2P'
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: New Section
+        name: general_section_12
+        tab: general
+        visible: true
+      -
+        label: New Section
+        name: general_section_4
+        tab: general
+        visible: false
+    fields:
+      -
+        section: general_section_12
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: general_section_12
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: general_section_12
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_cumulusaccount
+        field: revops_cumulusaccount
+      -
+        section: general_section_12
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_opportunity
+        field: revops_opportunity
+      -
+        section: general_section_12
+        tab: general
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: general_section_12
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_losingcompetitor
+        field: revops_losingcompetitor
+      -
+        section: general_section_12
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_transferworkload
+        field: revops_transferworkload
+      -
+        section: general_section_12
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdyn_precreateattachmentsid
+        field: msdyn_precreateattachmentsid
+      -
+        section: general_section_4
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_competitorregion
+        field: revops_competitorregion
+      -
+        section: general_section_4
+        tab: general
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: general_section_4
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_transferorgs
+        field: revops_transferorgs
+      -
+        section: general_section_4
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_oforganizations
+        field: revops_oforganizations
+      -
+        section: general_section_4
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: general_section_4
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_service
+        field: revops_service
+      -
+        section: general_section_4
+        tab: general
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: general_section_4
+        tab: general
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: general_section_4
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_account
+        field: revops_account
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revops_queue
+        field: revops_queue
+    description: Updated default Create Case form for P2P Transfers
+    tabs:
+      -
+        label: Summary
+        name: general
+        visible: true
+        expanded: true
+    field_count: 20
+    type_name: Main
+  -
+    name: 'Create Case - CS - Escalate a Case'
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Overview
+        name: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        visible: true
+      -
+        label: New Section
+        name: null_section_3
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_queue
+        field: revops_queue
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_service
+        field: revops_service
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_customerescalationreason
+        field: revops_customerescalationreason
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: parentcaseid
+        field: parentcaseid
+      -
+        section: null_section_3
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: null_section_3
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: null_section_3
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_urgency
+        field: revops_urgency
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: footer_statecode
+        field: statecode
+    description: 'Create case form used on the helpdesk portal - solely for Complaining about a Case'
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 14
+    type_name: Main
+  -
+    name: Technical Onboarding
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Description
+        name: case_description
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: Details
+        tab: general
+        visible: true
+      -
+        label: Solution Details
+        name: solution_details
+        tab: general
+        visible: true
+      -
+        label: Level 3 Escalation
+        name: level_3_escalation
+        tab: general
+        visible: true
+      -
+        label: Escalation Details
+        name: escalation_details
+        tab: general
+        visible: true
+      -
+        label: Transfer Details
+        name: transfer_details
+        tab: general
+        visible: true
+      -
+        label: CloudPBX Onboarding
+        name: cloudpbx_onboarding
+        tab: general
+        visible: true
+      -
+        label: Migration Details
+        name: migration_details
+        tab: general
+        visible: true
+      -
+        label: Route Case
+        name: Route Case
+        tab: general
+        visible: false
+      -
+        label: New Section
+        name: general_section_14
+        tab: general
+        visible: true
+      -
+        label: Customer Details
+        name: customer_ details
+        tab: general
+        visible: true
+      -
+        label: Additional Details
+        name: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        visible: true
+      -
+        label: Attachments
+        name: _section_947
+        tab: ADDITIONALDETAILS_TAB
+        visible: true
+      -
+        label: New Section
+        name: tab_5_section_1
+        tab: tab_5
+        visible: true
+      -
+        label: ''
+        name: Solutions
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: RESEARCH
+        name: Research
+        tab: CASERELATIONSHIP_TAB
+        visible: false
+      -
+        label: ''
+        name: MergedCases
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: Case Metrics
+        name: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        visible: true
+      -
+        label: SLOs
+        name: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        visible: true
+      -
+        label: New Section
+        name: tab_6_section_1
+        tab: tab_6
+        visible: true
+      -
+        label: Migration Request
+        name: tab_7_section_1
+        tab: MIGRATIONDETAILS_TAB
+        visible: true
+    fields:
+      -
+        section: case_description
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: case_description
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_customerescalationreason
+        field: revops_customerescalationreason
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_queue
+        field: revops_queue
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: parentcaseid
+        field: parentcaseid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: Details
+        tab: general
+        disabled: true
+        visible: true
+        control_id: ticketnumber
+        field: ticketnumber
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_service
+        field: revops_service
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_subsolution
+        field: revops_subsolution
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_amount
+        field: revops_amount
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_domain
+        field: revops_domain
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_datalocation
+        field: revops_datalocation
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_subscriptionid
+        field: revops_subscriptionid
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_hostedexchangeplatform
+        field: revops_hostedexchangeplatform
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_m365tenantname
+        field: revops_m365tenantname
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_nerdioaccount
+        field: revops_nerdioaccount
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_veeamusername
+        field: revops_veeamusername
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_pleskserver
+        field: revops_pleskserver
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_escalationreductionopportunity
+        field: revops_escalationreductionopportunity
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_l3actiontaken
+        field: revops_l3actiontaken
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_doesakbexistforthisissue
+        field: revops_doesakbexistforthisissue
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_kburl
+        field: revops_kburl
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_shouldtherebeakb
+        field: revops_shouldtherebeakb
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_shoulditbeupdated
+        field: revops_shoulditbeupdated
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: isescalated
+        field: isescalated
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_escalationtype
+        field: revops_escalationtype
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_internalescalationprovider
+        field: revops_internalescalationprovider
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_internalescalationurl
+        field: revops_internalescalationurl
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_3rdpartyescalationsupplier
+        field: revops_3rdpartyescalationsupplier
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_3rdpartyescalationticket
+        field: revops_3rdpartyescalationticket
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_s1transferstatus
+        field: revops_s1transferstatus
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_endpointtomigrate
+        field: revops_endpointtomigrate
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_sitestomigrate
+        field: revops_sitestomigrate
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_p2ptype
+        field: revops_p2ptype
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_oforganizations
+        field: revops_oforganizations
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_transferworkload
+        field: revops_transferworkload
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_losingcompetitor
+        field: revops_losingcompetitor
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_datep2prequestsubmittedtolosingcsp
+        field: revops_datep2prequestsubmittedtolosingcsp
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_ordervalidation
+        field: revops_ordervalidation
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_kickoffcall
+        field: revops_kickoffcall
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_termsandconditions
+        field: revops_termsandconditions
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_onboardingform
+        field: revops_onboardingform
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_portinformlnp
+        field: revops_portinformlnp
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_phonenumbersported
+        field: revops_phonenumbersported
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_ipphonesshipped
+        field: revops_ipphonesshipped
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_pbxconfiguration
+        field: revops_pbxconfiguration
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_currentphoneinvoice
+        field: revops_currentphoneinvoice
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_recurringfees
+        field: revops_recurringfees
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_shippingfees
+        field: revops_shippingfees
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_setupfees
+        field: revops_setupfees
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_migrationmethod
+        field: revops_migrationmethod
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_migrationsource
+        field: revops_migrationsource
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_migrationdestination
+        field: revops_migrationdestination
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_servicestomigrate
+        field: revops_servicestomigrate
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_firstcallrequiredinfocompleted
+        field: revops_firstcallrequiredinfocompleted
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_cutoverdatetime
+        field: revops_cutoverdatetime
+      -
+        section: Route Case
+        tab: general
+        disabled: true
+        visible: true
+        control_id: routecase
+        field: routecase
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_cumulusaccount
+        field: revops_cumulusaccount
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_cumulusorganization
+        field: revops_cumulusorganization
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_nocservices
+        field: revops_nocservices
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1737572643562
+        field: revops_cumulusaccount
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1744131482030
+        field: revops_account
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: customerpane_qfc
+        field: primarycontactid
+      -
+        section: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_l3reviewby
+        field: revops_l3reviewby
+      -
+        section: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_outofscope
+        field: revops_outofscope
+      -
+        section: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: createdby
+        field: createdby
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: revops_previousqueue
+        field: revops_previousqueue
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: revops_queuemodifiedon
+        field: revops_queuemodifiedon
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: responseby
+        field: responseby
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: firstresponsesent
+        field: firstresponsesent
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: followuptaskcreated
+        field: followuptaskcreated
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: followupby
+        field: followupby
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupcreatedon
+        field: revops_followupcreatedon
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupsent
+        field: revops_followupsent
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: resolveby
+        field: resolveby
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: adx_resolutiondate
+        field: adx_resolutiondate
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: escalatedon
+        field: escalatedon
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: firstresponsebykpiid
+        field: firstresponsebykpiid
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: firstresponseslastatus
+        field: firstresponseslastatus
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupbykpi
+        field: revops_followupbykpi
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupslastatus
+        field: revops_followupslastatus
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: resolvebykpiid
+        field: resolvebykpiid
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: resolvebyslastatus
+        field: resolvebyslastatus
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revops_queue
+        field: revops_queue
+    description: Updated default Case form for Technical Onboarding
+    tabs:
+      -
+        label: Summary
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Additional Details
+        name: ADDITIONALDETAILS_TAB
+        visible: true
+        expanded: false
+      -
+        label: Case History Details
+        name: tab_5
+        visible: true
+        expanded: false
+      -
+        label: Case Relationships
+        name: CASERELATIONSHIP_TAB
+        visible: true
+        expanded: false
+      -
+        label: Case Metrics
+        name: CASEMETRICS_TAB
+        visible: true
+        expanded: true
+      -
+        label: P2P Transfers
+        name: tab_6
+        visible: true
+        expanded: true
+      -
+        label: 'Migration & License Adjustment Details'
+        name: MIGRATIONDETAILS_TAB
+        visible: true
+        expanded: true
+    field_count: 97
+    type_name: Main
+  -
+    name: MWH Case
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: TABS CONTROL
+        name: TabsControl
+        tab: general
+        visible: true
+      -
+        label: Route Case
+        name: Route Case
+        tab: general
+        visible: false
+      -
+        label: Description
+        name: case_description
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: Details
+        tab: general
+        visible: true
+      -
+        label: Customer Details
+        name: customer_ details
+        tab: general
+        visible: true
+      -
+        label: Solution Details
+        name: solution_details
+        tab: general
+        visible: true
+      -
+        label: Escalation Details
+        name: escalation_details
+        tab: general
+        visible: true
+      -
+        label: Level 3 Escalation
+        name: level_3_escalation
+        tab: general
+        visible: true
+      -
+        label: Migration Details
+        name: migration_details
+        tab: general
+        visible: true
+      -
+        label: Transfer Details
+        name: transfer_details
+        tab: general
+        visible: true
+      -
+        label: CloudPBX Onboarding
+        name: cloudpbx_onboarding
+        tab: general
+        visible: true
+      -
+        label: Additional Details
+        name: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        visible: true
+      -
+        label: New Section
+        name: ADDITIONALDETAILS_TAB_section_3
+        tab: ADDITIONALDETAILS_TAB
+        visible: true
+      -
+        label: Attachments
+        name: _section_648
+        tab: ADDITIONALDETAILS_TAB
+        visible: true
+      -
+        label: New Section
+        name: tab_5_section_11
+        tab: tab_5
+        visible: true
+      -
+        label: ''
+        name: Solutions
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: RESEARCH
+        name: Research
+        tab: CASERELATIONSHIP_TAB
+        visible: false
+      -
+        label: ''
+        name: MergedCases
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: Case Metrics
+        name: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        visible: true
+      -
+        label: SLOs
+        name: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        visible: true
+    fields:
+      -
+        section: Route Case
+        tab: general
+        disabled: true
+        visible: true
+        control_id: routecase
+        field: routecase
+      -
+        section: case_description
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_queue
+        field: revops_queue
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: parentcaseid
+        field: parentcaseid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: Details
+        tab: general
+        disabled: true
+        visible: true
+        control_id: ticketnumber
+        field: ticketnumber
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_service
+        field: revops_service
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_subsolution
+        field: revops_subsolution
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_amount
+        field: revops_amount
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_mwhaccount
+        field: revops_mwhaccount
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_nocservices
+        field: revops_nocservices
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1737572643562
+        field: revops_cumulusaccount
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1757957823708
+        field: revops_cumulusorganization
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1744131482030
+        field: revops_account
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: customerpane_qfc
+        field: primarycontactid
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_domain
+        field: revops_domain
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_datalocation
+        field: revops_datalocation
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_subscriptionid
+        field: revops_subscriptionid
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_hostedexchangeplatform
+        field: revops_hostedexchangeplatform
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_m365tenantname
+        field: revops_m365tenantname
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_nerdioaccount
+        field: revops_nerdioaccount
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_veeamusername
+        field: revops_veeamusername
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_pleskserver
+        field: revops_pleskserver
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: isescalated
+        field: isescalated
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_escalationtype
+        field: revops_escalationtype
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_internalescalationprovider
+        field: revops_internalescalationprovider
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_internalescalationurl
+        field: revops_internalescalationurl
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_3rdpartyescalationsupplier
+        field: revops_3rdpartyescalationsupplier
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_3rdpartyescalationticket
+        field: revops_3rdpartyescalationticket
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_escalationreductionopportunity
+        field: revops_escalationreductionopportunity
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_l3actiontaken
+        field: revops_l3actiontaken
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_doesakbexistforthisissue
+        field: revops_doesakbexistforthisissue
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_kburl
+        field: revops_kburl
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_shouldtherebeakb
+        field: revops_shouldtherebeakb
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_shoulditbeupdated
+        field: revops_shoulditbeupdated
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_migrationmethod
+        field: revops_migrationmethod
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_migrationsource
+        field: revops_migrationsource
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_migrationdestination
+        field: revops_migrationdestination
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_servicestomigrate
+        field: revops_servicestomigrate
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_firstcallrequiredinfocompleted
+        field: revops_firstcallrequiredinfocompleted
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_cutoverdatetime
+        field: revops_cutoverdatetime
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_s1transferstatus
+        field: revops_s1transferstatus
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_endpointtomigrate
+        field: revops_endpointtomigrate
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_sitestomigrate
+        field: revops_sitestomigrate
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_p2ptype
+        field: revops_p2ptype
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_oforganizations
+        field: revops_oforganizations
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_losingprovider
+        field: revops_losingprovider
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_datep2prequestsubmittedtolosingcsp
+        field: revops_datep2prequestsubmittedtolosingcsp
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_ordervalidation
+        field: revops_ordervalidation
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_kickoffcall
+        field: revops_kickoffcall
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_termsandconditions
+        field: revops_termsandconditions
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_onboardingform
+        field: revops_onboardingform
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_portinformlnp
+        field: revops_portinformlnp
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_phonenumbersported
+        field: revops_phonenumbersported
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_ipphonesshipped
+        field: revops_ipphonesshipped
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_pbxconfiguration
+        field: revops_pbxconfiguration
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_currentphoneinvoice
+        field: revops_currentphoneinvoice
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_recurringfees
+        field: revops_recurringfees
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_shippingfees
+        field: revops_shippingfees
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_setupfees
+        field: revops_setupfees
+      -
+        section: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_l3reviewby
+        field: revops_l3reviewby
+      -
+        section: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_outofscope
+        field: revops_outofscope
+      -
+        section: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: true
+        visible: true
+        control_id: revops_previousqueue
+        field: revops_previousqueue
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: true
+        visible: true
+        control_id: revops_queuemodifiedon
+        field: revops_queuemodifiedon
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: createdby
+        field: createdby
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: true
+        visible: true
+        control_id: revops_reassignedby
+        field: revops_reassignedby
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: true
+        visible: true
+        control_id: revops_lastinteraction
+        field: revops_lastinteraction
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: true
+        visible: true
+        control_id: revops_lastinteractiondate
+        field: revops_lastinteractiondate
+      -
+        section: tab_5_section_11
+        tab: tab_5
+        disabled: true
+        visible: true
+        control_id: revops_lastemaildirection
+        field: revops_lastemaildirection
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: responseby
+        field: responseby
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: firstresponsesent
+        field: firstresponsesent
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: followuptaskcreated
+        field: followuptaskcreated
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: followupby
+        field: followupby
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupcreatedon
+        field: revops_followupcreatedon
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupsent
+        field: revops_followupsent
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: resolveby
+        field: resolveby
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: adx_resolutiondate
+        field: adx_resolutiondate
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: escalatedon
+        field: escalatedon
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: firstresponsebykpiid
+        field: firstresponsebykpiid
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: firstresponseslastatus
+        field: firstresponseslastatus
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupbykpi
+        field: revops_followupbykpi
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupslastatus
+        field: revops_followupslastatus
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: resolvebykpiid
+        field: resolvebykpiid
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: resolvebyslastatus
+        field: resolvebyslastatus
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revops_queue
+        field: revops_queue
+    description: Updated default Case form for Customer Service
+    tabs:
+      -
+        label: Summary
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Additional Details
+        name: ADDITIONALDETAILS_TAB
+        visible: true
+        expanded: false
+      -
+        label: Case History Details
+        name: tab_5
+        visible: true
+        expanded: false
+      -
+        label: Case Relationships
+        name: CASERELATIONSHIP_TAB
+        visible: true
+        expanded: false
+      -
+        label: Case Metrics
+        name: CASEMETRICS_TAB
+        visible: true
+        expanded: true
+    field_count: 99
+    type_name: Main
+  -
+    name: Test Case
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Description
+        name: case_description
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: Details
+        tab: general
+        visible: true
+      -
+        label: Solution Details
+        name: solution_details
+        tab: general
+        visible: true
+      -
+        label: Level 3 Escalation
+        name: level_3_escalation
+        tab: general
+        visible: true
+      -
+        label: Escalation Details
+        name: escalation_details
+        tab: general
+        visible: true
+      -
+        label: Transfer Details
+        name: transfer_details
+        tab: general
+        visible: true
+      -
+        label: CloudPBX Onboarding
+        name: cloudpbx_onboarding
+        tab: general
+        visible: true
+      -
+        label: Migration Details
+        name: migration_details
+        tab: general
+        visible: true
+      -
+        label: Route Case
+        name: Route Case
+        tab: general
+        visible: false
+      -
+        label: New Section
+        name: general_section_14
+        tab: general
+        visible: true
+      -
+        label: Customer Details
+        name: customer_ details
+        tab: general
+        visible: true
+      -
+        label: Additional Details
+        name: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        visible: true
+      -
+        label: Attachments
+        name: _section_947
+        tab: ADDITIONALDETAILS_TAB
+        visible: true
+      -
+        label: New Section
+        name: tab_5_section_1
+        tab: tab_5
+        visible: true
+      -
+        label: ''
+        name: Solutions
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: RESEARCH
+        name: Research
+        tab: CASERELATIONSHIP_TAB
+        visible: false
+      -
+        label: ''
+        name: MergedCases
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: Case Metrics
+        name: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        visible: true
+      -
+        label: SLOs
+        name: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        visible: true
+      -
+        label: New Section
+        name: tab_6_section_1
+        tab: tab_6
+        visible: true
+    fields:
+      -
+        section: case_description
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_queue
+        field: revops_queue
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: parentcaseid
+        field: parentcaseid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: Details
+        tab: general
+        disabled: true
+        visible: true
+        control_id: ticketnumber
+        field: ticketnumber
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_service
+        field: revops_service
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_subsolution
+        field: revops_subsolution
+      -
+        section: Details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_amount
+        field: revops_amount
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_domain
+        field: revops_domain
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_datalocation
+        field: revops_datalocation
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_subscriptionid
+        field: revops_subscriptionid
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_hostedexchangeplatform
+        field: revops_hostedexchangeplatform
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_m365tenantname
+        field: revops_m365tenantname
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_nerdioaccount
+        field: revops_nerdioaccount
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_veeamusername
+        field: revops_veeamusername
+      -
+        section: solution_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_pleskserver
+        field: revops_pleskserver
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_escalationreductionopportunity
+        field: revops_escalationreductionopportunity
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_l3actiontaken
+        field: revops_l3actiontaken
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_doesakbexistforthisissue
+        field: revops_doesakbexistforthisissue
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_kburl
+        field: revops_kburl
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_shouldtherebeakb
+        field: revops_shouldtherebeakb
+      -
+        section: level_3_escalation
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_shoulditbeupdated
+        field: revops_shoulditbeupdated
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: isescalated
+        field: isescalated
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_escalationtype
+        field: revops_escalationtype
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_internalescalationprovider
+        field: revops_internalescalationprovider
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_internalescalationurl
+        field: revops_internalescalationurl
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_3rdpartyescalationsupplier
+        field: revops_3rdpartyescalationsupplier
+      -
+        section: escalation_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_3rdpartyescalationticket
+        field: revops_3rdpartyescalationticket
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_s1transferstatus
+        field: revops_s1transferstatus
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_endpointtomigrate
+        field: revops_endpointtomigrate
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_sitestomigrate
+        field: revops_sitestomigrate
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_p2ptype
+        field: revops_p2ptype
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_oforganizations
+        field: revops_oforganizations
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_losingprovider
+        field: revops_losingprovider
+      -
+        section: transfer_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_datep2prequestsubmittedtolosingcsp
+        field: revops_datep2prequestsubmittedtolosingcsp
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_ordervalidation
+        field: revops_ordervalidation
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_kickoffcall
+        field: revops_kickoffcall
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_termsandconditions
+        field: revops_termsandconditions
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_onboardingform
+        field: revops_onboardingform
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_portinformlnp
+        field: revops_portinformlnp
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_phonenumbersported
+        field: revops_phonenumbersported
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_ipphonesshipped
+        field: revops_ipphonesshipped
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_pbxconfiguration
+        field: revops_pbxconfiguration
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_currentphoneinvoice
+        field: revops_currentphoneinvoice
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_recurringfees
+        field: revops_recurringfees
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_shippingfees
+        field: revops_shippingfees
+      -
+        section: cloudpbx_onboarding
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_setupfees
+        field: revops_setupfees
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_migrationmethod
+        field: revops_migrationmethod
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_migrationsource
+        field: revops_migrationsource
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_migrationdestination
+        field: revops_migrationdestination
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_servicestomigrate
+        field: revops_servicestomigrate
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_firstcallrequiredinfocompleted
+        field: revops_firstcallrequiredinfocompleted
+      -
+        section: migration_details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_cutoverdatetime
+        field: revops_cutoverdatetime
+      -
+        section: Route Case
+        tab: general
+        disabled: true
+        visible: true
+        control_id: routecase
+        field: routecase
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_cumulusaccount
+        field: revops_cumulusaccount
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_cumulusorganization
+        field: revops_cumulusorganization
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_nocservices
+        field: revops_nocservices
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1737572643562
+        field: revops_cumulusaccount
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1744131482030
+        field: revops_account
+      -
+        section: customer_ details
+        tab: general
+        disabled: false
+        visible: true
+        control_id: customerpane_qfc
+        field: primarycontactid
+      -
+        section: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_l3reviewby
+        field: revops_l3reviewby
+      -
+        section: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_outofscope
+        field: revops_outofscope
+      -
+        section: ADDITIONALDETAILS_TAB_section_5
+        tab: ADDITIONALDETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: createdby
+        field: createdby
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: revops_previousqueue
+        field: revops_previousqueue
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: revops_queuemodifiedon
+        field: revops_queuemodifiedon
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: responseby
+        field: responseby
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: firstresponsesent
+        field: firstresponsesent
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: followuptaskcreated
+        field: followuptaskcreated
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: followupby
+        field: followupby
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupcreatedon
+        field: revops_followupcreatedon
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupsent
+        field: revops_followupsent
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: resolveby
+        field: resolveby
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: adx_resolutiondate
+        field: adx_resolutiondate
+      -
+        section: tab_5_section_1
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: escalatedon
+        field: escalatedon
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: firstresponsebykpiid
+        field: firstresponsebykpiid
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: firstresponseslastatus
+        field: firstresponseslastatus
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupbykpi
+        field: revops_followupbykpi
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: revops_followupslastatus
+        field: revops_followupslastatus
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: resolvebykpiid
+        field: resolvebykpiid
+      -
+        section: tab_5_section_2
+        tab: CASEMETRICS_TAB
+        disabled: false
+        visible: true
+        control_id: resolvebyslastatus
+        field: resolvebyslastatus
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revops_queue
+        field: revops_queue
+    description: Updated default Case form for Customer Service
+    tabs:
+      -
+        label: Summary
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Additional Details
+        name: ADDITIONALDETAILS_TAB
+        visible: true
+        expanded: false
+      -
+        label: Case History Details
+        name: tab_5
+        visible: true
+        expanded: false
+      -
+        label: Case Relationships
+        name: CASERELATIONSHIP_TAB
+        visible: true
+        expanded: false
+      -
+        label: Case Metrics
+        name: CASEMETRICS_TAB
+        visible: true
+        expanded: true
+      -
+        label: P2P Transfers
+        name: tab_6
+        visible: true
+        expanded: true
+    field_count: 95
+    type_name: Main
+  -
+    name: 'TimelineWallControl - Case- Main'
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: SOCIAL PANE
+        name: SOCIAL_PANE_TAB
+        tab: SUMMARY_TAB
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Form to display timeline for case
+    tabs:
+      -
+        label: Summary
+        name: SUMMARY_TAB
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Main
+  -
+    name: Case Quick Create
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: Case Details
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: Routing
+        name: tab_1_column_2_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: Description
+        name: tab_1_column_3_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_cumulusorganization
+        field: revops_cumulusorganization
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_cumulusaccount
+        field: revops_cumulusaccount
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_service
+        field: revops_service
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_subsolution
+        field: revops_subsolution
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_queue
+        field: revops_queue
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+    description: Default quick create form for Case
+    tabs:
+      -
+        label: Case
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 14
+    type_name: Quick Create
+  -
+    name: Cases Dashboard
+    is_active: true
+    type: 10
+    sections:
+      -
+        label: ''
+        name: VisualFilters
+        tab: ''
+        visible: true
+      -
+        label: ''
+        name: Streams
+        tab: StreamsContainer
+        visible: true
+    fields:
+    description: Shows an overview of data related to cases.
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+      -
+        label: ''
+        name: StreamsContainer
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Type 10
+  -
+    name: Case Form Team Member
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Section
+        name: tab_3_section_1
+        tab: general
+        visible: true
+      -
+        label: TABS CONTROL
+        name: TabsControl
+        tab: general
+        visible: true
+    fields:
+      -
+        section: tab_3_section_1
+        tab: general
+        disabled: true
+        visible: true
+        control_id: ticketnumber
+        field: ticketnumber
+      -
+        section: tab_3_section_1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: tab_3_section_1
+        tab: general
+        disabled: true
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: tab_3_section_1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: tab_3_section_1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: productid
+        field: productid
+      -
+        section: tab_3_section_1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_createdon
+        field: createdon
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statecode
+    description: Default case form for Team Member users
+    tabs:
+      -
+        label: Summary
+        name: general
+        visible: true
+        expanded: true
+    field_count: 8
+    type_name: Main
+  -
+    name: Web Form
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Overview
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: contractid
+        field: contractid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: contractdetailid
+        field: contractdetailid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: footer_statecode
+        field: statecode
+    description: null
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 8
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Section
+        name: tab_recordwall_section_1
+        tab: tab_recordwall
+        visible: true
+      -
+        label: Overview
+        name: overview
+        tab: general
+        visible: true
+      -
+        label: Assignment Information
+        name: assignment information
+        tab: general
+        visible: true
+      -
+        label: Contract and Product Information
+        name: contract and product information
+        tab: general
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: notesandkb
+        visible: true
+      -
+        label: KB ARTICLES
+        name: kb article
+        tab: notesandkb
+        visible: true
+    fields:
+      -
+        section: overview
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: overview
+        tab: general
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: overview
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: overview
+        tab: general
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: overview
+        tab: general
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: overview
+        tab: general
+        disabled: false
+        visible: true
+        control_id: customersatisfactioncode
+        field: customersatisfactioncode
+      -
+        section: assignment information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: assignment information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: assignment information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: followupby
+        field: followupby
+      -
+        section: assignment information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: contract and product information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: contractid
+        field: contractid
+      -
+        section: contract and product information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: productid
+        field: productid
+      -
+        section: contract and product information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: contractdetailid
+        field: contractdetailid
+      -
+        section: contract and product information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: productserialnumber
+        field: productserialnumber
+      -
+        section: contract and product information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: contractservicelevelcode
+        field: contractservicelevelcode
+      -
+        section: kb article
+        tab: notesandkb
+        disabled: false
+        visible: true
+        control_id: kbarticleid
+        field: kbarticleid
+    description: A form for this entity.
+    tabs:
+      -
+        label: What's New
+        name: tab_recordwall
+        visible: true
+        expanded: false
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Notes and Article
+        name: notesandkb
+        visible: true
+        expanded: false
+    field_count: 16
+    type_name: Main
+  -
+    name: App for Outlook Case Quick Create
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: Case Details
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: Routing
+        name: tab_1_column_2_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: Description
+        name: tab_1_column_3_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: true
+        visible: true
+        control_id: parentcaseid
+        field: parentcaseid
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: productid
+        field: productid
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: entitlementid
+        field: entitlementid
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: true
+        visible: true
+        control_id: responseby
+        field: responseby
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: true
+        visible: true
+        control_id: resolveby
+        field: resolveby
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+    description: Default Quick Create form for Case in Dynamics 365 App for Outlook
+    tabs:
+      -
+        label: Case
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 13
+    type_name: Quick Create
+  -
+    name: Case Card Form Team Member
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: Color Strip
+        name: Color Strip
+        tab: ''
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: ''
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: ''
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ticketnumber
+        field: ticketnumber
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: CardFooter
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: statecode
+        field: statecode
+      -
+        section: CardFooter
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+    description: Default case card form for Team Member users
+    tabs:
+      -
+        label: Card
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Card
+  -
+    name: Case for meeting side panel
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: Case info
+        name: Summary_keydetails
+        tab: Summary
+        visible: true
+      -
+        label: Timeline notes
+        name: Summary_notes
+        tab: Summary
+        visible: true
+      -
+        label: Tasks
+        name: Summary_tasks
+        tab: Summary
+        visible: true
+      -
+        label: APPLICABLE SLA
+        name: Applicable SLA(STANDARD)
+        tab: Summary
+        visible: false
+      -
+        label: section
+        name: Summary_column_2_section_1
+        tab: Summary
+        visible: true
+      -
+        label: section
+        name: Summary_column_3_section_1
+        tab: Summary
+        visible: true
+      -
+        label: RESEARCH
+        name: Research
+        tab: CASERELATIONSHIP_TAB
+        visible: false
+      -
+        label: section
+        name: CASERELATIONSHIP_TAB_column_5_section_1
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: section
+        name: CASERELATIONSHIP_TAB_column_6_section_1
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: section
+        name: KBARTICLE_TAB_column_7_section_1
+        tab: KBARTICLE_TAB
+        visible: true
+      -
+        label: CONTRACT
+        name: contract and product information
+        tab: KBARTICLE_TAB
+        visible: true
+    fields:
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: productid
+        field: productid
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Applicable SLA(STANDARD)
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: responseby
+        field: responseby
+      -
+        section: Applicable SLA(STANDARD)
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: resolveby
+        field: resolveby
+      -
+        section: contract and product information
+        tab: KBARTICLE_TAB
+        disabled: false
+        visible: true
+        control_id: contractid
+        field: contractid
+      -
+        section: contract and product information
+        tab: KBARTICLE_TAB
+        disabled: false
+        visible: true
+        control_id: contractdetailid
+        field: contractdetailid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_title
+        field: title
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_title
+        field: title
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statecode
+        field: statecode
+    description: null
+    tabs:
+      -
+        label: Summary
+        name: Summary
+        visible: true
+        expanded: true
+      -
+        label: Case Relationships
+        name: CASERELATIONSHIP_TAB
+        visible: false
+        expanded: true
+      -
+        label: Articles and Contract Information
+        name: KBARTICLE_TAB
+        visible: false
+        expanded: true
+    field_count: 15
+    type_name: Main
+  -
+    name: Case Card
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: ColorStrip
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: productid
+        field: productid
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: Default case card
+    tabs:
+      -
+        label: Case card
+        name: general
+        visible: true
+        expanded: true
+    field_count: 11
+    type_name: Card
+  -
+    name: Case for Multisession experience
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Due and Overdue Activities
+        name: dueActivitySection
+        tab: Summary
+        visible: true
+      -
+        label: CASE DETAILS
+        name: Case Details Summary
+        tab: Summary
+        visible: true
+      -
+        label: Copilot Summary Section
+        name: copilot_summary_section
+        tab: Summary
+        visible: false
+      -
+        label: TABS CONTROL
+        name: TabsControl
+        tab: Summary
+        visible: true
+      -
+        label: Additional Case Details
+        name: Case Details
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: Applicable SLA
+        name: Applicable SLA(STANDARD)
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: Queue item details
+        name: queueitemdetails
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: Associated Knowledge Articles
+        name: KnowledgeArticles
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: Associated swarms
+        name: SwarmSection
+        tab: CASERELATIONSHIP_TAB
+        visible: false
+      -
+        label: Associated Similar Cases
+        name: RelatedCases
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: Child Cases
+        name: ChildCases
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: Merged Cases
+        name: MergedCases
+        tab: CASERELATIONSHIP_TAB
+        visible: true
+      -
+        label: New Section
+        name: attachmentSection
+        tab: Tab_Attachment
+        visible: true
+    fields:
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: productid
+        field: productid
+      -
+        section: Case Details Summary
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: copilot_summary_section
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: traversedpath
+        field: traversedpath
+      -
+        section: Case Details
+        tab: CASERELATIONSHIP_TAB
+        disabled: false
+        visible: true
+        control_id: parentcaseid
+        field: parentcaseid
+      -
+        section: Case Details
+        tab: CASERELATIONSHIP_TAB
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: Case Details
+        tab: CASERELATIONSHIP_TAB
+        disabled: false
+        visible: true
+        control_id: entitlementid
+        field: entitlementid
+      -
+        section: Case Details
+        tab: CASERELATIONSHIP_TAB
+        disabled: false
+        visible: true
+        control_id: isescalated
+        field: isescalated
+      -
+        section: Case Details
+        tab: CASERELATIONSHIP_TAB
+        disabled: false
+        visible: true
+        control_id: escalatedon
+        field: escalatedon
+      -
+        section: Applicable SLA(STANDARD)
+        tab: CASERELATIONSHIP_TAB
+        disabled: false
+        visible: true
+        control_id: firstresponsesent
+        field: firstresponsesent
+      -
+        section: Applicable SLA(STANDARD)
+        tab: CASERELATIONSHIP_TAB
+        disabled: false
+        visible: true
+        control_id: followupby
+        field: followupby
+      -
+        section: Applicable SLA(STANDARD)
+        tab: CASERELATIONSHIP_TAB
+        disabled: false
+        visible: true
+        control_id: responseby
+        field: responseby
+      -
+        section: Applicable SLA(STANDARD)
+        tab: CASERELATIONSHIP_TAB
+        disabled: false
+        visible: true
+        control_id: resolveby
+        field: resolveby
+      -
+        section: queueitemdetails
+        tab: CASERELATIONSHIP_TAB
+        disabled: false
+        visible: true
+        control_id: productserialnumber
+        field: productserialnumber
+      -
+        section: attachmentSection
+        tab: Tab_Attachment
+        disabled: false
+        visible: true
+        control_id: msdyn_precreateattachmentsid
+        field: msdyn_precreateattachmentsid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ticketnumber
+        field: ticketnumber
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_caseorigincode
+        field: caseorigincode
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_createdon
+        field: createdon
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Case form for Multisession experience
+    tabs:
+      -
+        label: Summary
+        name: Summary
+        visible: true
+        expanded: true
+      -
+        label: Details
+        name: CASERELATIONSHIP_TAB
+        visible: true
+        expanded: true
+      -
+        label: Attachments
+        name: Tab_Attachment
+        visible: true
+        expanded: true
+    field_count: 23
+    type_name: Main
+  -
+    name: 'Web - Edit Case'
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Overview
+        name: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        visible: true
+      -
+        label: Description
+        name: null_section_5
+        tab: ''
+        visible: true
+      -
+        label: ''
+        name: '{06a2992a-9cc9-41a5-8f37-d2b2214fdde1}_section_2'
+        tab: ''
+        visible: false
+      -
+        label: New Section
+        name: null_section_4
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ticketnumber
+        field: ticketnumber
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: null_section_5
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: '{06a2992a-9cc9-41a5-8f37-d2b2214fdde1}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: footer_statecode
+        field: statecode
+    description: null
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 10
+    type_name: Main
+  -
+    name: 'Create Case - Support'
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Overview
+        name: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        visible: true
+      -
+        label: New Section
+        name: null_section_3
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_queue
+        field: revops_queue
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: casetypecode
+        field: casetypecode
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_service
+        field: revops_service
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: primarycontactid
+        field: primarycontactid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: caseorigincode
+        field: caseorigincode
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: '{51999b68-4b4c-439b-bb51-1b49edae03a9}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_urgency
+        field: revops_urgency
+      -
+        section: null_section_3
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: null_section_3
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: footer_statecode
+        field: statecode
+    description: 'Purpose: This form is intended for customers to submit their customer support case details that include title, customer (user name pulled from the login details if there), contact details, case type (whether it is a question, problem or request), and the case details. The purpose is to document and track customer support requests efficiently. \n\n \n\nFORM: Customer Support Case \n\nFIELDS: \n\n1. Case Title  \n\n   - Format: Brief, descriptive title (5-10 words) \n\n   - Example: "Network Connectivity Issues in East Region" \n\n   - Context: Should summarize the primary issue concisely \n\n \n\n2. Customer  \n\n   - Format: Name of the customer (pulled from login).  \n\n   - Example: Jack Daniel \n\n   - Context: The user entity experiencing the issue \n\n \n\n3. Contact  \n\n   - Format: Email of primary contact person (pulled from login)  \n\n   - Example: "janesmith@microsoft.com" \n\n   - Context: The email of individual who reported or should be contacted about this case \n\n \n\n4. Case Type  \n\n   - Format: Selection from predefined categories \n\n   - Valid Values: ["Question, problem, request"] \n\n   - Context: Categorizes the nature of the support request \n\n \n\n5. Title  \n\n   - Format: One-line summary (10-15 words) \n\n   - Example: "Unable to access admin dashboard after recent system update" \n\n   - Context: More specific than title, focuses on the exact issue \n\n \n\n6. Description  \n\n   - Format: Detailed explanation (50-200 words) \n\n   - Example: "After the v3.2 update on March 20, users with admin privileges report receiving 403 errors when attempting to access the administration dashboard. This affects approximately 15 users across 3 departments. The error began appearing immediately after the update was deployed. Standard user accounts are unaffected." \n\n   - Context: Should include when the issue started, who is affected, what exactly happens, and any relevant technical details '
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 12
+    type_name: Main
+

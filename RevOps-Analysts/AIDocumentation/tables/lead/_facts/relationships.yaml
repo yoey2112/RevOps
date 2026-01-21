@@ -1,0 +1,782 @@
+relationships:
+  -
+    schemaname: Lead_ActivityPointers
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_adx_portalcomments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_portalcomment
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_adx_inviteredemptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_inviteredemption
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_chats
+    relationshiptype: OneToMany
+    referencingtablelogicalname: chat
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_SharepointDocumentLocation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointdocumentlocation
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_SharepointDocument
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointdocument
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_MailboxTrackingFolder
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: lead
+  -
+    schemaname: userentityinstancedata_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_Appointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_Emails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_Faxes
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fax
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_Letters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: letter
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_Phonecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_Tasks
+    relationshiptype: OneToMany
+    referencingtablelogicalname: task
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_RecurringAppointmentMasters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: recurringappointmentmaster
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_SocialActivities
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialactivity
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_Annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_actioncard
+    relationshiptype: OneToMany
+    referencingtablelogicalname: actioncard
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_Email_EmailSender
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_addresses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: leadaddress
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_PostFollows
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postfollow
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_master_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_PostRegardings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postregarding
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_PostRoles
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postrole
+    referencedtablelogicalname: lead
+  -
+    schemaname: slakpiinstance_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: slakpiinstance
+    referencedtablelogicalname: lead
+  -
+    schemaname: account_originating_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: lead
+  -
+    schemaname: contact_originating_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_BulkOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperation
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_CampaignResponses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: lead
+  -
+    schemaname: CreatedLead_BulkOperationLogs
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperationlog
+    referencedtablelogicalname: lead
+  -
+    schemaname: SourceLead_BulkOperationLogs
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperationlog
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_IncidentResolutions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: lead
+  -
+    schemaname: Lead_ServiceAppointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: serviceappointment
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_OpportunityCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_OrderCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: orderclose
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_QuoteCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quoteclose
+    referencedtablelogicalname: lead
+  -
+    schemaname: opportunity_originating_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: lead
+  -
+    schemaname: lk_leadtoopportunitysalesprocess_leadid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: leadtoopportunitysalesprocess
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_playbookinstance_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_playbookinstance
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_msdyn_taggedrecord_lead_msdyn_dynamicsrecordid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_taggedrecord
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_lead_msdyn_leadkpiitem_leadid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_leadkpiitem
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_lead_msdyn_mostcontacted_regardingObjectId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_mostcontacted
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_lead_msdyn_mostcontactedby_regardingObjectId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_mostcontactedby
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_lead_dailyleadkpiitem_entityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_dailyleadkpiitem
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_lead_msdyn_timespent_leadlookup
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_timespent
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_Posts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: post
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_msfp_alerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_alert
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_msfp_surveyinvites
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyinvite
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_msfp_surveyresponses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_msdyn_copilottranscripts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_copilottranscript
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_msdyn_ocliveworkitems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_msdyn_ocsessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocsession
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_sequencetarget_lead_msdyn_target
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_sequencetarget
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_salesroutingdiagnostic_lead_msdyn_target
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesroutingdiagnostic
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_sabackupdiagnostic_lead_msdyn_target
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_sabackupdiagnostic
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_lead_msdyn_salesroutingrun_targetobject
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesroutingrun
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_lead_msdyn_duplicatedetectionpluginrun_baserecordid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_duplicatedetectionpluginrun
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_lead_msdyn_duplicateleadmapping
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_duplicateleadmapping
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_lead_msdyn_duplicateleadmapping_BaseLeadRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_duplicateleadmapping
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_linkeditemvalidity_polymorphic_leadid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_linkedentityattributevalidity
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_msdyn_bookingalerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_bookingalert
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyncrm_lead_msdyncrm_geopin
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyncrm_geopin
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyncrm_lead_marketingformsubmission_matched
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyncrm_marketingformsubmission
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyncrm_lead_msdyncrm_leadscore
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyncrm_leadscore
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyncrm_lead_msdyncrm_leadtoopportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyncrm_leadtoopportunity
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyncrm_lead_msdyncrm_leadscore_v2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyncrm_leadscore_v2
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyncrm_lead_msdyncrm_linkedinformsubmission_Lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyncrm_linkedinformsubmission
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_msdyn_ocvoicemails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocvoicemail
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_li_inmails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_inmail
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_li_messages
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_message
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_li_pointdrivepresentationvieweds
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_pointdrivepresentationviewed
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_msdyn_salescopilotinsight_lead_msdyn_targetentityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salescopilotinsight
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_revops_demos
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_demo
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_revops_onboardingcalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdynmkt_createdentitylink_targetlead_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_createdentitylink
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_revops_cumulussignups
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_activitymapping_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_activitymapping
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_leadagentresult_leadid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_leadagentresult
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_leademailextension_leadid_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_leademailextension
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_adx_alertsubscriptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_alertsubscription
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_salesagentrun_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesagentrun
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_salesagenthandover_regardingId_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesagenthandover
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_engageandreadinessagentresult_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_engageandreadinessagentresult
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_engagereadinessagentresult_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_engagereadinessagentresult
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_summarysynthesizerinput_referenceobjectid_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_summarysynthesizerinput
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_summarysynthesizeroutput_ReferenceObjectId_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_summarysynthesizeroutput
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_triggersalesagent_regardingid_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_triggersalesagent
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_msdyn_comments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_comment
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_synthesizeroutput_ReferenceObjectId_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_synthesizeroutput
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_revops_businessreviews
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_businessreview
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_revops_cadencecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_revops_inpersonmeetings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_inpersonmeeting
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_msdyn_approvals
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_approval
+    referencedtablelogicalname: lead
+  -
+    schemaname: bpf_lead_revops_sherwebsalesbpf
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_sherwebsalesbpf
+    referencedtablelogicalname: lead
+  -
+    schemaname: revops_msdynmkt_marketingformsubmission_leadformsubmissionid_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: lead
+  -
+    schemaname: revops_smeengagement_lead_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_smeengagement
+    referencedtablelogicalname: lead
+  -
+    schemaname: msdyn_dcaengageagentresult_regarding_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_dcaengageagentresult
+    referencedtablelogicalname: lead
+  -
+    schemaname: revops_lead_checkinlead_msevtmgt_checkin
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_checkin
+    referencedtablelogicalname: lead
+  -
+    schemaname: lk_leadbase_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_lead_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_leadbase_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_lead_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lead_owning_user
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lead_owning_team
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_leads
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_leads
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: processstage_lead
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: processstage
+  -
+    schemaname: transactioncurrency_lead
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: lk_lead_entityimage
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: imagedescriptor
+  -
+    schemaname: lead_customer_accounts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: account
+  -
+    schemaname: lead_customer_contacts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: contact
+  -
+    schemaname: sla_lead
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: sla
+  -
+    schemaname: lead_master_lead
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: lead
+  -
+    schemaname: lead_parent_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: account
+  -
+    schemaname: lead_parent_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: contact
+  -
+    schemaname: manualsla_lead
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: sla
+  -
+    schemaname: CampaignResponse_Lead
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: campaignresponse
+  -
+    schemaname: campaign_leads
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: campaign
+  -
+    schemaname: OriginatingCase_Lead
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: incident
+  -
+    schemaname: lead_qualifying_opportunity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_msdyn_leadkpiitem_lead_leadkpiid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msdyn_leadkpiitem
+  -
+    schemaname: msdyn_msdyn_predictivescore_lead
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msdyn_predictivescore
+  -
+    schemaname: msdyn_msdyn_segment_lead
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msdyn_segment
+  -
+    schemaname: msevtmgt_event_lead_originatingeventid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msevtmgt_event
+  -
+    schemaname: msdyncrm_msdyncrm_customerjourney_lead_customerjourneyid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msdyncrm_customerjourney
+  -
+    schemaname: msdyncrm_msdyncrm_marketingform_lead_marketingformid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msdyncrm_marketingform
+  -
+    schemaname: msdyncrm_msdyncrm_marketingemail_lead_emailid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msdyncrm_marketingemail
+  -
+    schemaname: msdyncrm_msdyncrm_marketingpage_lead_marketingpageid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msdyncrm_marketingpage
+  -
+    schemaname: msdyncrm_msdyncrm_linkedincampaign_lead_LinkedInCampaign
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msdyncrm_linkedincampaign
+  -
+    schemaname: msdyncrm_msdyncrm_linkedinform_lead_sourceform
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msdyncrm_linkedinform
+  -
+    schemaname: msdynmkt_msdynmkt_email_lead_emailid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: msdynmkt_msdynmkt_journey_lead_customerjourneyid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_msdynmkt_marketingform_lead_marketingformid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msdynmkt_marketingform
+  -
+    schemaname: revops_lead_country_revops_country
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_lead_lastinteractingsdrname_systemuser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_lead_sdrassigned_systemuser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_lead_StateorProvince_revops_stateorprovince
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: revops_solution_solution_Lead
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_territory_territory_lead
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: territory
+  -
+    schemaname: accountleads_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: lead
+  -
+    schemaname: contactleads_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: lead
+  -
+    schemaname: listlead_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: list
+    referencedtablelogicalname: lead
+  -
+    schemaname: BulkOperation_Leads
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: bulkoperation
+    referencedtablelogicalname: lead
+  -
+    schemaname: CampaignActivity_Leads
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: campaignactivity
+    referencedtablelogicalname: lead
+  -
+    schemaname: leadproduct_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: product
+  -
+    schemaname: leadcompetitors_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: competitor
+

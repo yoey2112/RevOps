@@ -1,0 +1,178 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: GENERAL
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Quick View
+  -
+    name: Information
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: A card form for this entity.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 3
+    type_name: Card
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: From
+        name: From
+        tab: ''
+        visible: true
+      -
+        label: To
+        name: To
+        tab: ''
+        visible: true
+      -
+        label: Other Details
+        name: null_section_4
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: From
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_from
+        field: revops_from
+      -
+        section: From
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_fromteam
+        field: revops_fromteam
+      -
+        section: From
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_fromname1
+        field: revops_fromname1
+      -
+        section: To
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_to
+        field: revops_to
+      -
+        section: To
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_toteam
+        field: revops_toteam
+      -
+        section: To
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_toname1
+        field: revops_toname1
+      -
+        section: null_section_4
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: null_section_4
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: null_section_4
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_name
+        field: revops_name
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 9
+    type_name: Main
+

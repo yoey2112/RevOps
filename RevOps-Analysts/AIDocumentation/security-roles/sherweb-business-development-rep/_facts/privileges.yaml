@@ -1,0 +1,5042 @@
+privileges:
+  -
+    privilege_name: prvAppendToSite
+    privilegeid: 'b7a1f52a-b8a9-11d8-84ab-0007e9e100cc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSite
+    privilegeid: '98b5ccb2-b8a9-11d8-84ab-0007e9e100cc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateWorkflowSession
+    privilegeid: 'e55f57a8-2df4-11df-a824-001cc4661706'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadWorkflowSession
+    privilegeid: 'e55f57a9-2df4-11df-a824-001cc4661706'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteWorkflowSession
+    privilegeid: 'e55f57aa-2df4-11df-a824-001cc4661706'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteWorkflowSession
+    privilegeid: 'e55f57ab-2df4-11df-a824-001cc4661706'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendWorkflowSession
+    privilegeid: 'e55f57ac-2df4-11df-a824-001cc4661706'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToWorkflowSession
+    privilegeid: 'e55f57ad-2df4-11df-a824-001cc4661706'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareWorkflowSession
+    privilegeid: 'e55f57ae-2df4-11df-a824-001cc4661706'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignWorkflowSession
+    privilegeid: 'e55f57af-2df4-11df-a824-001cc4661706'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadrevops_solutionsummary
+    privilegeid: '07a81bb6-6128-402e-955a-00662c515e60'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_ConversationSystemTag
+    privilegeid: 'ed288b0f-fd33-447f-b7ef-009a39731016'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteAppUserSetting
+    privilegeid: 'e7ee3563-de1d-4d39-9a89-00c392f5f9d9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdyn_ConversationParticipantInsights
+    privilegeid: '694b582c-c35e-47b3-8a00-01139ae6ed3c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendmsdyn_ConversationActionItem
+    privilegeid: '8d340a82-c1fd-4729-ad4c-013d520daf36'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadCampaign
+    privilegeid: 'a083d738-777b-4f53-b863-018489f30d46'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToCustomerOpportunityRole
+    privilegeid: '368aff3b-95b1-45c1-bf73-01a7becdedc5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadOptionSet
+    privilegeid: 'e3f45b8e-4872-4bb5-8b84-01ee8f9c9da1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteDynamicPropertyInstance
+    privilegeid: '09967ce4-42d6-4c53-86eb-029ae5cf671f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTorevops_pricingrequest
+    privilegeid: '28d62968-bbc1-48f5-a3f5-02bac78a5ce8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadTransactionCurrency
+    privilegeid: 'a84b6eb5-87ec-4574-b8c5-02c880ae3472'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareWorkflow
+    privilegeid: '501786bc-f127-4c56-a4dc-02cc0325117d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignImportMap
+    privilegeid: '5a8c2794-7863-4a83-81d1-02e2f8e09d44'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadrevops_opportunitysolution
+    privilegeid: '5edd859b-1ce1-45bc-8adb-03796f10dd96'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadBookableResourceGroup
+    privilegeid: 'd0d6ea1c-cdaf-4673-8424-0418c5421234'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToBookableResource
+    privilegeid: '4e62b5c7-6dc4-44f4-80d1-04a936bfee04'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvDeletemsdyn_SciCustomHighlight
+    privilegeid: '5b7fe0ef-e510-4f01-b4ef-04a9ace18516'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignmsdyn_sequencetargetstep
+    privilegeid: '1eeba22a-b88f-43cc-91e9-054c25710c50'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadCustomerRelationship
+    privilegeid: 'e75b7037-291c-4ab4-848a-05a78a557fae'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_changelog
+    privilegeid: '15b46b69-e741-4de3-a884-05e0422b1842'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriterevops_opportunitysolution
+    privilegeid: 'e1adb771-a8b3-4bff-8635-05e7168dc69c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_sequencetarget
+    privilegeid: 'e166b7a1-72c1-4c49-b429-061370efecb7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvBulkEdit
+    privilegeid: '04bc1454-e9a4-4db8-8499-064e9452176e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_ConversationQuestion
+    privilegeid: '8f680a0e-edb8-46be-87d6-06d903a8a236'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_vivacustomerlist
+    privilegeid: 'ba63f0a4-3d36-4963-986b-073e62f0e13f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendFeedback
+    privilegeid: 'd1380e7d-8743-4467-9f00-0794932cd65b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareUserForm
+    privilegeid: '2d69e8c1-5b8d-49b7-8b3c-07b016d02a4b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_taggedrecord
+    privilegeid: '6d259ebf-58dc-4903-b08a-07e100323f7d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_sequencetarget
+    privilegeid: '022134b1-6429-4afa-bb84-080269ed8c6b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvWriteSocialProfile
+    privilegeid: '859a99c3-2966-47b4-aeb9-0895c0e2532d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadImport
+    privilegeid: 'a7afcf54-754a-4b0b-9329-08cf54e36244'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToKnowledgeArticle
+    privilegeid: 'a883efd1-dc97-441e-8a6d-08d642277793'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTorevops_partnerinvestment
+    privilegeid: '993fb15b-d675-4a4a-a671-08f03ba1edfd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToContract
+    privilegeid: '164e417a-54a6-4180-b772-08f221e751c8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendmsdyn_flowcardtype
+    privilegeid: '95b2d56e-faa5-48c0-8132-0913759247af'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTorevops_sherwebsalesbpf
+    privilegeid: 'c83bbc78-edec-455d-8ece-091b263668ba'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToList
+    privilegeid: '1492d666-bbb8-42ef-8307-094e66297052'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvAppendmsdyn_ConversationQuestion
+    privilegeid: '9e7b1cdf-cbd6-4f51-871a-096a0cf74c65'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadQuote
+    privilegeid: '00a8d04e-ede7-4884-ae18-09c6e55344ca'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteExpiredProcess
+    privilegeid: 'ce682f49-179c-4c73-8470-09c9655fd242'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_ConversationComment
+    privilegeid: 'd75bf529-e0b4-4c33-b7cd-09da3a2de084'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_sequence
+    privilegeid: '1fc160a7-9635-4f90-a870-0a173143d520'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadrevops_solutiondetails
+    privilegeid: 'e7b76924-413b-44ca-8ca4-0a3e1e2d7e3f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendExpiredProcess
+    privilegeid: '8717a6f9-6ac2-4503-a347-0b0309f02b60'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_ConversationComment
+    privilegeid: '91d706fa-d20f-4bb2-87ad-0b230c0bae2c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareCallbackRegistration
+    privilegeid: '61fb722e-7473-4e97-a455-0bd66e5e3028'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadSalesLiterature
+    privilegeid: '9dd55b66-8ade-4326-bf0f-0bde6a9e4964'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteLead
+    privilegeid: 'cb4b339f-2b45-447e-bdd3-0bf4bbebc294'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_productsummary
+    privilegeid: '032c4ffc-cb06-4fe9-baef-0c00d6c74438'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_actioncardrolesetting
+    privilegeid: 'a93408fd-2a93-4ed3-b6ef-0c62bc499f1c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareIncident
+    privilegeid: '287e74d0-926a-4922-b732-0ce03c26471b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteNote
+    privilegeid: '395587e4-e212-43ef-a85e-0f0fd53b35e3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_ConversationParticipantSentiment
+    privilegeid: '71a6c644-5d5c-4092-9cd4-0f2c256309aa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToLead
+    privilegeid: '5e8d193d-184d-44be-92d8-0f3845d7a9eb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendCustomerRelationship
+    privilegeid: '1390883c-8774-4b02-bd50-0f5454668200'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToSharePointDocumentLocation
+    privilegeid: '9c24b468-d34b-4775-8cea-0f686dbe254f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_ConversationActionItem
+    privilegeid: 'ebf80278-0422-4649-be8c-0f9444d830e1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyn_ConversationAggregatedInsights
+    privilegeid: 'de92dba3-05e7-466c-9f1f-0fb9309bb4cf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadrevops_partnerinvestment
+    privilegeid: 'afa6c2f2-9f11-440d-886b-1070dcb524fa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_ConversationQuestion
+    privilegeid: '51baabcc-6a26-4fc6-b62c-10bd7f64a38a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsdyn_sciusersettings
+    privilegeid: '5ff6c03f-a5a5-4d01-a2fb-10d43b8e0d62'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignNote
+    privilegeid: '2f29007f-7948-446b-a294-10d9f722cab3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignUserQuery
+    privilegeid: 'd2a1330e-6eef-4c7a-8074-11636d728915'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareSLA
+    privilegeid: 'f3dea36a-1c40-4901-94e2-119491ad7563'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadTerritory
+    privilegeid: 'd2409739-f135-422e-966d-129351aa0ce7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_flowcardtype
+    privilegeid: '10acafcf-6be6-4692-978e-12a91cba7fd0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_ConversationAggregatedInsights
+    privilegeid: 'b9d4d363-4607-4ad8-938f-137e62b741b8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleterevops_sherwebsalesbpf
+    privilegeid: '175899b9-348d-4a29-8f6d-13f5d26e1061'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_kbattachment
+    privilegeid: '6097e86d-e6f3-4ae4-bd4c-1448b76d2436'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleterevops_opportunitysolution
+    privilegeid: '772d2dc8-b489-4dfe-9b57-1472f02b8a3d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToSLA
+    privilegeid: 'efb9cb61-11ab-49cc-a783-14ce53bef3a7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendrevops_accountsoftwaretool
+    privilegeid: '3c8d3830-e643-4572-ac04-14d7eb4ebe27'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_ConversationSentiment
+    privilegeid: '340dc4f6-9f37-4ad8-acb0-1506f2541a10'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadOwnCalendar
+    privilegeid: '499485bc-a445-423b-b5f6-1519042ebf33'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadEntitlementTemplate
+    privilegeid: '80a84d6e-86e2-4932-99eb-152b9f3bd473'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToEmailServerProfile
+    privilegeid: '35566b4f-c72f-44c9-acdf-159ca7edfb96'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletelistoperation
+    privilegeid: 'b995d36f-e0af-4a1f-9617-165ab80d317d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteList
+    privilegeid: '2967396e-ab97-4e10-9584-16839eb2a7f0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvReadExchangeSyncIdMapping
+    privilegeid: '7fc3fe04-cb8e-4723-85c2-169db5555885'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteUserForm
+    privilegeid: '748b62ae-b314-4c89-b417-16b85873697b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToOpportunity
+    privilegeid: 'dae65da8-e481-410d-bfcc-16c37f894604'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendRatingValue
+    privilegeid: '1f216275-f8a8-47a3-b66c-16f16abe197a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvWritePhoneToCaseProcess
+    privilegeid: 'b1577431-19c2-4de3-8c97-179d623f4713'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadOrganization
+    privilegeid: 'dbd3ad17-b6bd-46c8-8db7-179fec82c937'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadCharacteristic
+    privilegeid: '7dd0009a-3575-4754-ae70-17b923349fdf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateInvoice
+    privilegeid: '0b005177-7e27-4f91-909e-17cff6476023'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_ocrecording
+    privilegeid: 'bb912c32-32ab-4a77-a3f3-181d23e257ef'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTorevops_country
+    privilegeid: '981acd57-b584-4439-b305-183238c33049'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateQuote
+    privilegeid: '477dfd23-a640-4ebd-981a-183737963d7f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_extendedusersetting
+    privilegeid: '0e9d3bcd-5819-4999-bf2e-1906b1001925'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_sikeyvalueconfig
+    privilegeid: '48b394e9-4bfa-4a99-98fe-191772a91f78'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_taggedrecord
+    privilegeid: 'e5e3d8a8-97ec-458d-9e57-193c13d6c29c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateReport
+    privilegeid: 'f8f5bc13-9976-4acd-bd45-195cb314194e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendrevops_opportunitysolution
+    privilegeid: '29492f93-a3a2-41fd-88ab-1a1eb03d649b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendDynamicPropertyOptionSetItem
+    privilegeid: 'c1ee5abc-d2ac-4700-8ae4-1ab3c86c8fda'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_salesocmessage
+    privilegeid: 'f2a611aa-d2b5-4407-ad88-1addb22c3c58'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyn_ocrecording
+    privilegeid: 'b3db6913-3b1a-40b8-8133-1b7fd5d54651'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareCustomerOpportunityRole
+    privilegeid: '959bd4b6-0ab9-43e3-8829-1b8605729bef'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_Solution
+    privilegeid: 'a0541ec8-eb47-44a9-89aa-1bee57bad6ee'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTorevops_Churn
+    privilegeid: 'd1544711-9f37-4d6a-8224-1bf4e79b9b9e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadMailboxTrackingFolder
+    privilegeid: 'a94bfd59-b8e3-4b38-8102-1c424e1deea8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToKnowledgeBaseRecord
+    privilegeid: 'ceef36e2-2450-4857-86b1-1c51bb111a1b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateTranslationProcess
+    privilegeid: 'c357a7cd-14f8-45cf-a30b-1c6fea7b575b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatePostFollow
+    privilegeid: '2208583e-626b-11e0-834f-1cc1de634cfe'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadPostFollow
+    privilegeid: '2208583f-626b-11e0-834f-1cc1de634cfe'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletePostFollow
+    privilegeid: '22085841-626b-11e0-834f-1cc1de634cfe'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsdyn_wallsavedqueryusersettings
+    privilegeid: '1bbdcb2b-da0f-4323-ba8e-1ce1fa49161b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendBookableResourceBookingHeader
+    privilegeid: '76756580-7f10-42b5-b439-1d7458b12a82'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendToWorkflow
+    privilegeid: '6f54cea3-5b92-4507-952c-1e2430b7b1f9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignOpportunity
+    privilegeid: '8a4862a1-c88a-4be9-9a60-1e6d9258fa52'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendrevops_solutionprovider
+    privilegeid: 'af77e9b7-a3af-4ca1-92fd-1ef6859d912e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadMailbox
+    privilegeid: '8e17de3a-5a69-479c-9535-1f7be75b2987'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadTraceLog
+    privilegeid: '6ea323ab-2e1e-414e-88f5-1f975b3069fd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareBookingStatus
+    privilegeid: '3dc57cea-597e-42de-9675-1febe33461c9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdyn_ConversationSystemTag
+    privilegeid: 'aa098c83-cef9-4dd7-81ff-20012ae6fc1c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendActionCard
+    privilegeid: 'fd2b78c3-b7ca-46e2-8d36-200866fa9a24'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendSLAKPIInstance
+    privilegeid: '96a5b102-5364-441c-b019-202150defb5f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateEmailSignature
+    privilegeid: 'b9569c7d-5953-403a-9a9f-20253b293d3e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadLanguageLocale
+    privilegeid: '1d6907a1-94ac-4e0a-8c11-20320555f5cd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendPostFollow
+    privilegeid: '02206a87-51a5-4811-aaca-203cfc5f15b3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvSharemsdyn_vivausersetting
+    privilegeid: '3d87b05d-a5cf-4d2b-985b-208449f89dac'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadAsyncOperation
+    privilegeid: 'e84acc8f-0c61-43e3-a716-20964a483bdf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendCategory
+    privilegeid: '9796aaac-74c1-49f0-ad64-20f9c648e278'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignSLA
+    privilegeid: '14763ebb-b31c-475d-b841-210b301ecdf8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateOpportunity
+    privilegeid: '6b882c27-9ed7-467f-be0f-213a605e0a13'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdyn_PostAlbum
+    privilegeid: '2da769c1-473d-40eb-bf93-2171682bd931'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_timespent
+    privilegeid: '2ddb6934-c519-498e-8e1f-21a78d6b75cf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_ConversationComment
+    privilegeid: 'b8de541a-4d91-4200-a0ec-21b543cd6446'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareMailMergeTemplate
+    privilegeid: '297d73ae-8278-4d60-b3b3-227950b2e6c6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToImportFile
+    privilegeid: '2bbccee3-eea8-418d-8543-22cd66554dd7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendNewProcess
+    privilegeid: '827f8d27-a8eb-42ad-9686-22f37670d74c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteEmailTemplate
+    privilegeid: 'ffe4299b-7978-4b50-a724-2317db0d3949'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleterevops_Churn
+    privilegeid: '27eaa61a-a2c3-43e0-acf3-233afc2944c6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadrevops_cumulusaccount
+    privilegeid: 'e6836500-6717-4750-8e80-2350a8668456'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdyn_ConversationSentiment
+    privilegeid: 'a4f0a496-5184-4602-97ee-238299d6b33f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadEntitlement
+    privilegeid: '0925bd85-61f1-485c-b34f-240504216bd1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadExternalParty
+    privilegeid: 'cace0fa5-eeb7-4843-8151-2412872eb160'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_customerinsightsinfo
+    privilegeid: 'cf346843-ac2d-4dda-80be-24698cc02a4a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_wallsavedqueryusersettings
+    privilegeid: 'ebd969f1-c17c-4740-aa57-247844de3104'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyn_entityrankingrule
+    privilegeid: 'c2431a79-0338-4c3c-8547-24860731db5c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteLeadToOpportunitySalesProcess
+    privilegeid: 'ad33cab4-f2b3-497a-ba8d-24b0650424f2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateUserSettings
+    privilegeid: 'e3af716c-2b32-4e53-9554-24c36aa0a3ad'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvShareBookableResourceBookingHeader
+    privilegeid: '349c2b7f-46b5-44a3-a057-24d6f71e707b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdyn_SciCustomEmailHighlight
+    privilegeid: 'bdbdf2ef-5be1-4f4a-99b9-25b4cc643f9b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendmsdyn_sciusersettings
+    privilegeid: 'ccc5ae0a-e24d-45bf-8a77-266ee6538e51'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadrevops_cumulususer
+    privilegeid: '57f70d9c-0600-42f6-a265-26987253951b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_vivaorgsetting
+    privilegeid: '6974f281-50f3-4848-bc7f-26b590c41ccd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatePhoneToCaseProcess
+    privilegeid: '8a0098db-2e35-423d-a15d-271d7fe0f020'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_leadscore_v2
+    privilegeid: '9449966c-c422-43f6-8089-278f594592b0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTorevops_accountproductsummary
+    privilegeid: '5223f751-f2ce-421e-978f-279d07d12f63'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_website
+    privilegeid: '30d14fdb-1ec3-45df-97bb-27ae8ceb56ee'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTorevops_stateorprovince
+    privilegeid: 'd7506a92-81d2-4765-b031-27cac7a3ab0d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendConstraint
+    privilegeid: '37f0513b-51d5-4935-8a62-27e7931ad91b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_sequence
+    privilegeid: 'fab27e26-f731-464f-9db4-284603be6e08'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsdyn_ConversationQuestion
+    privilegeid: '676e4ca4-3447-4be9-9c22-28550ea8f0cb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadBookableResourceCategoryAssn
+    privilegeid: '105defd5-53ff-4bcf-9489-289d67bb3ee6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteImportFile
+    privilegeid: 'ff22fd34-e58b-455f-988b-2909c28e7e18'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteSharePointDocumentLocation
+    privilegeid: '65d13d58-c084-49c6-838d-292605744d7a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendCustomerOpportunityRole
+    privilegeid: '071ed935-f58c-46ce-8ca8-292e8dec16ab'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreaterevops_sherwebopportunitybpf
+    privilegeid: 'f8d14f30-108b-4dfe-9c72-29756fa10d0e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_dailyleadkpiitem
+    privilegeid: '80487d94-9cf3-4eee-92ef-298299a14998'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_crmconnection
+    privilegeid: 'c50dbbf6-fd69-4405-b106-29a698864443'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsdyn_orgchartnode
+    privilegeid: '5bca768d-cfe5-4d1f-bd86-2a2599dd82c0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateImportFile
+    privilegeid: '8e345875-f67b-40f7-9aa6-2a35de1bf224'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToCampaign
+    privilegeid: '1d75aed6-94cd-4e3b-b9ae-2a62f2c37190'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAssignImportFile
+    privilegeid: 'bf70dc31-6132-4ac0-8c9d-2a741657c6f0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateUserEntityUISettings
+    privilegeid: '8d2aa266-8fee-43a4-85e7-2aa1aaab5259'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadUserEntityUISettings
+    privilegeid: '8d2aa266-8fee-43a4-85e7-2aa1aaab525a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteUserEntityUISettings
+    privilegeid: '8d2aa266-8fee-43a4-85e7-2aa1aaab525b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteUserEntityUISettings
+    privilegeid: '8d2aa266-8fee-43a4-85e7-2aa1aaab525c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareUserEntityUISettings
+    privilegeid: '8d2aa266-8fee-43a4-85e7-2aa1aaab525d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreaterevops_Churn
+    privilegeid: '3bcf63da-b92a-4161-9334-2acdbe13b7cc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToActionCard
+    privilegeid: 'c547e5b2-8966-4103-a4ff-2ad149340b9c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToCharacteristic
+    privilegeid: 'd8cffb11-95b5-4f47-9841-2ad99ed92285'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvCreateSyncError
+    privilegeid: '9d98d6ca-ccb9-4200-a6a2-2b102fc40803'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvSharemsdyn_sequence
+    privilegeid: '577d95d3-be72-4157-a6af-2b1911ecd669'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsdyn_ConversationActionItem
+    privilegeid: '646716cc-c2b2-46ea-b1b1-2b7c86f3af7b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriterevops_Churn
+    privilegeid: '1e2fe834-b1e8-4fd4-a3c0-2bc3b3637cc7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToBookableResourceBookingHeader
+    privilegeid: 'fc81c47e-5158-454f-bb01-2bc5f0fcb432'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendLanguageLocale
+    privilegeid: '79519cf2-bd9d-41c7-9c6a-2bc88388ec58'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadAccount
+    privilegeid: '886b280c-6396-4d56-a0a3-2c1b0a50ceb0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriterevops_accountpotentialtechstack
+    privilegeid: '033f206b-fd78-41e5-88b5-2c71d0e7f10a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToBookableResourceBooking
+    privilegeid: 'd25c95e5-3e8b-4a92-8104-2c8e1440cadb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadmsdyn_wkwcolleaguesforcompany
+    privilegeid: 'ab6b3f93-5a3a-4f09-8025-2cdbbd6381cb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendlistoperation
+    privilegeid: '436722e5-6b89-4d37-a5ef-2cf5b7524646'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvDeletemsdyn_taggedrecord
+    privilegeid: '4570d336-8b1a-45c2-bb22-2cf711b6fae4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadlistoperation
+    privilegeid: '9d9ee2d6-04b9-4cc7-92da-2d0e350dcf23'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_orgchartnode
+    privilegeid: '2fa2a413-a57f-40ef-bb8b-2d9b540ce8c8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToUserSettings
+    privilegeid: '600da2b2-8fcb-437f-8632-2dac9b5f64e8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvSharemsdyn_ocrecording
+    privilegeid: 'f70ff28e-8d67-4035-bbce-2de6e5c7b0d7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_ConversationSignal
+    privilegeid: '35d23f2a-cea3-4e56-9d46-2e8f39e374e6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateSharePointDocumentLocation
+    privilegeid: 'adf73427-a7e1-439e-b123-2e9bf47397af'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdyn_sequencetargetstep
+    privilegeid: 'e22714f3-94e9-4fd5-b21e-2ed752e024e7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendmsdyn_entityrankingrule
+    privilegeid: '7098214b-c9b8-44a9-8227-302b4b583cc8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignUserForm
+    privilegeid: 'cd6a8c1e-857d-461e-ad0b-303d5324582d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_mostcontacted
+    privilegeid: '80e02758-bbde-443b-a56d-3042d7896d2b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToRatingValue
+    privilegeid: 'f68e5b29-227e-4236-9a27-30a0693c8623'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvCreateContract
+    privilegeid: '789b28f6-e8e6-4827-a7e9-30d69d8d4929'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadmsdynmkt_pushnotification
+    privilegeid: '161ce553-9092-404b-ab47-30e492eabc59'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_transcript
+    privilegeid: '6290ac37-783a-4ced-948b-3126d40394b4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareActivity
+    privilegeid: 'b5f2ee06-d359-4495-bbda-312aae1c6b1e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_ConversationSentiment
+    privilegeid: 'f6f22249-d4b1-4831-b75a-315b88a149d7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadAppConfigMaster
+    privilegeid: 'f8c8035b-a434-4b1a-a0ce-316825dbf32c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToReport
+    privilegeid: '871b9012-a118-4d40-89d6-32564ae9efb6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendResourceBookingDetail
+    privilegeid: 'e36189a4-24b9-4236-9248-32ddb8f48fa5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadmsdyn_crmconnection
+    privilegeid: 'abd201ca-eb4e-406b-b4ec-33288b76b0b8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_PostAlbum
+    privilegeid: '69f02901-ee12-4bd4-bbb2-333db54870b1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendmsdyn_ConversationParticipantSentiment
+    privilegeid: '3772d50b-6eb6-4bcb-8bf0-335d8d1a7bca'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadPartnerApplication
+    privilegeid: '994f71f4-4172-4ad4-a0db-33832e065878'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateUserQueryVisualizations
+    privilegeid: '183ee0bd-3d03-498f-839b-338eb3ca2cc8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadExpiredProcess
+    privilegeid: '960359b4-988b-4869-8efb-33a9fbb2626c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateAppUserSetting
+    privilegeid: '41f957c1-0078-4479-9702-33bdda15445e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_ConversationSubject
+    privilegeid: '15978d10-ff33-4557-b8a3-33cd62e91555'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadOrder
+    privilegeid: '6f81b089-36d1-476e-8519-33df34aefe11'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadUserQuery
+    privilegeid: 'f3b782a2-e6d5-4b86-9b7d-33f627fe5c5d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendmsdyn_actioncardregarding
+    privilegeid: 'bd604e16-9730-4a8e-8550-3455dc8e6be4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_vivaentitysetting
+    privilegeid: 'd1d4a2b3-4107-45bf-a835-34d1d382a8e7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToSocialProfile
+    privilegeid: '23c1ea81-3af2-49f8-a6a2-34daa820d5c9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_duplicateleadmapping
+    privilegeid: 'c5f5be4c-aa3f-445f-9c22-3505338650f7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_ConversationQuestion
+    privilegeid: '6d8e2012-5a8d-40ed-96c1-3509fb2447c8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTorevops_productsummary
+    privilegeid: 'cacf199f-8216-44c2-bb85-352a8f6c2a5e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignWorkflow
+    privilegeid: 'd0cd3ea7-83cd-4769-9ef7-35398d2e1243'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadActionCard
+    privilegeid: '41bc4dd7-920d-48a5-81ad-356d3c935b71'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignmsdyn_ConversationActionItem
+    privilegeid: 'f136b374-0c77-4cb5-9be6-35a7349a2dcb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_ConversationSummarySuggestion
+    privilegeid: 'd48f0016-ebb4-488c-a905-35fcccc56e8c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareImportFile
+    privilegeid: 'b9bcae9f-c539-4739-b894-363796cdfceb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvAssignCallbackRegistration
+    privilegeid: '2bb224a0-1b8b-4142-8ccc-36559582f6c3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadDynamicPropertyOptionSetItem
+    privilegeid: '588b98ef-2e47-4487-affc-3663b758578f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteUserSettings
+    privilegeid: '00bcb198-f3d8-4451-98a1-36642a084b8f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAssignmsdyn_ConversationComment
+    privilegeid: '943045b9-4fb6-4641-9309-36b1ad59d361'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_ConversationSegmentSentiment
+    privilegeid: '7acd090b-c2f8-4270-a6d5-36bef84cf81e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareKnowledgeArticle
+    privilegeid: '6ea333fc-aef1-4551-83ca-36caa2e417c8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadNewsArticle
+    privilegeid: '6cbb06b6-2651-4fe5-afad-36e1967e70ef'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendCampaign
+    privilegeid: '424922cf-2af8-4207-80f1-36e32d5161f9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvWriteDynamicPropertyInstance
+    privilegeid: 'eb9e7c35-b242-45e7-b9dc-3705f31b6607'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_crmconnection
+    privilegeid: 'd8eaa44d-3518-4f41-ba38-3727329b0ebe'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToAccount
+    privilegeid: '3d6e93a2-b58e-4a4a-b642-374e4a25a6bd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteAccount
+    privilegeid: '7863e80f-0ab2-4d67-a641-37d9f342c7e3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_ConversationSummarySuggestion
+    privilegeid: '856d58de-53cf-4192-9cc4-38897c53cb96'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendmsdyn_ConversationAggregatedInsights
+    privilegeid: '24d3c0c5-130e-4a63-85f6-3897708b72a2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadAttribute
+    privilegeid: 'b8caea5d-f379-4295-aa59-38adeb73e853'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToIncident
+    privilegeid: '0546c535-a7ea-4e79-9047-395bf1d240ff'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadLeadToOpportunitySalesProcess
+    privilegeid: '38e9a48c-d229-40a1-ad88-39bbe5ba2f62'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToUser
+    privilegeid: '3399e6d2-dd3c-4a14-8433-39c1eca27aaa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteMailbox
+    privilegeid: '1d79f9f9-4a93-4cf7-ade4-39fbe10b1494'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadQueue
+    privilegeid: 'b140e729-dfeb-4ba1-a33f-39ff830bac90'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToSyncError
+    privilegeid: 'b116f33e-73f0-440b-9b85-3a00691bd5e1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteExchangeSyncIdMapping
+    privilegeid: 'e29b3809-3bf1-4d65-9971-3a16eb651fea'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToOpportunitySalesProcess
+    privilegeid: '38ece0c7-81be-4f53-8d40-3a54b9bd391c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvUseTabletApp
+    privilegeid: '06dd57d4-75b4-40c0-b6e1-3a7c2c06cd10'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_flowcardtype
+    privilegeid: '1eccd84e-c10a-4141-9120-3a89f0bb6fa7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadTranslationProcess
+    privilegeid: '5d37521f-30e0-4a18-9d3d-3a92364f733e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToSharePointData
+    privilegeid: '9f51151b-b52c-4f2b-a21b-3b104360d87e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteActionCardUserSettings
+    privilegeid: 'ae687a83-1c33-4b50-a567-3b29bdab0735'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_ConversationAggregatedInsights
+    privilegeid: 'a37ad06c-5432-4544-9586-3b3e01c02321'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateUserApplicationMetadata
+    privilegeid: '406180bb-7b7d-43b5-9d32-3b8633e365f7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendDynamicPropertyAssociation
+    privilegeid: '7f15318d-2da5-4dcc-bdb1-3b873e262b22'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_ChannelInstance
+    privilegeid: '82dd90f0-3d4e-4f4f-bece-3bee5a4311f8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvWritemsdyn_recording
+    privilegeid: '90c67f29-15e3-4e5d-92eb-3c3c4ce4f38a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendToChannelPropertyGroup
+    privilegeid: '966ddd2c-d1f8-4076-b0a2-3c4e68935654'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_ConversationSummarySuggestion
+    privilegeid: 'ba2ff310-fafe-443e-a918-3c9aa46900e7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriterevops_partnerinvestment
+    privilegeid: '475503a5-8fd7-454b-acd7-3c9d9ddc51d5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToBookableResourceCategoryAssn
+    privilegeid: '18735527-a96a-4b00-9bce-3d492291faf5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvWriteKnowledgeArticleViews
+    privilegeid: 'af98a558-3005-4715-a261-3d5a1358d40d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdyn_SCIConversation
+    privilegeid: 'fe70252a-e237-486d-b347-3d5e554296e4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadrevops_utmlink
+    privilegeid: 'ab880274-2994-4281-aaab-3d73d9c7bf65'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendBookableResourceCharacteristic
+    privilegeid: '59f5ff62-4311-41e9-aec6-3e2c32cb4b75'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendToCompetitor
+    privilegeid: '5b0a8dab-0659-4ce1-8442-3e5d078242fd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendConvertRule
+    privilegeid: 'de2b8ae5-988c-428e-8017-3ed4a6678db2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_ConversationSystemTag
+    privilegeid: '21a673f2-8621-4451-a2d9-3ef188345939'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsdyn_transcript
+    privilegeid: '07ca0f96-911e-4268-b87a-3f651164b202'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvSharemsdyn_ConversationSubject
+    privilegeid: '9de6ed03-b8c9-4732-96fc-3f953cb923cb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_PostAlbum
+    privilegeid: '7c646ebc-57a8-46fd-bd2b-3faf250967e3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritelistoperation
+    privilegeid: '5f99648e-a89d-47b4-b929-3fe148491e1d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvWritemsdyn_flowcardtype
+    privilegeid: '2e240770-8100-43a3-9177-3feb143fee4a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToPhoneToCaseProcess
+    privilegeid: '03b68294-c916-4c52-a30f-40067140d4d0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadDuplicateRule
+    privilegeid: '7d6d18a7-304d-454b-ab2f-403f03d98797'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdyn_ConversationQuestion
+    privilegeid: '5c14daad-aff5-4599-8283-40504c039c5d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteReport
+    privilegeid: '158b7eea-002d-4653-9936-4091dea1fe6e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteBookableResourceBookingExchangeSyncIdMapping
+    privilegeid: 'dc460794-a353-40d3-b515-40c88ebb3db5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignmsdyn_kbattachment
+    privilegeid: '14e06b32-fdc8-4832-821d-40d75b0825bd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_contactsuggestionrule
+    privilegeid: 'e9bb9e26-81fc-4da6-938f-40dddaee8b45'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignSharePointDocumentLocation
+    privilegeid: '0c2bc1af-0af7-4c66-a58d-40f445a9b304'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToContractTemplate
+    privilegeid: '38eddfd6-705c-4cb1-a569-412909eaa576'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignSyncError
+    privilegeid: '5b2071e6-6164-4a51-b9e4-4382352dd8f3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_salesaccelerationsettings
+    privilegeid: 'd090beca-b83a-4aa9-bf57-43f7b5e83041'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteQuote
+    privilegeid: '356f5577-c5c3-44c4-93d9-442b282fa8df'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendBookingStatus
+    privilegeid: '00163c86-2cca-4cec-88f0-448b37f65769'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAssignSLAKPIInstance
+    privilegeid: '82169890-53a4-43ba-bd9a-448f2bea7d61'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToImport
+    privilegeid: '0b43ff39-e162-4a0c-9192-449982cb5830'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendUser
+    privilegeid: '84d66926-87d4-4489-b21a-451b01ec0c41'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendPost
+    privilegeid: '50182aee-1b0a-44db-88fd-45214ab70fa5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateCompetitor
+    privilegeid: '8cb63518-5632-4448-9da5-453c0e096170'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteOpportunity
+    privilegeid: 'eeeb5856-3f80-4886-8ae2-456ad9141244'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdyn_ConversationParticipantSentiment
+    privilegeid: '364d9ed3-5902-465c-a3d9-45b6ca762ecd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyn_ConversationSubject
+    privilegeid: 'f71736f3-9012-4fd8-a808-467c60f167dd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTerritory
+    privilegeid: '6b2c2c22-e876-4fee-b885-46dda9ab5234'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_sequencetargetstep
+    privilegeid: '5f6acb94-f6d2-48db-af0f-46e73ae30ab0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadSharePointData
+    privilegeid: 'fecbd29c-df64-4ede-a611-47226b402c22'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendrevops_partnerinvestment
+    privilegeid: '3aca0c21-df6e-4ae5-90e4-47452cb5f615'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendKnowledgeBaseRecord
+    privilegeid: '7d490780-e927-41ca-a80c-47d9499082d8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_recording
+    privilegeid: '5168715f-351b-4ed5-90b7-47e7703aad49'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadTeam
+    privilegeid: '663d1920-56e1-4166-89f0-47f3330923a8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_PostAlbum
+    privilegeid: 'c5f9e1f5-0285-4c00-9c73-481aa40f6b7a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_sciusersettings
+    privilegeid: '28d6f15a-9000-40bb-8487-48536e624be9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadIncident
+    privilegeid: 'c2aff40c-6e68-4437-a631-488a354a1860'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_salestag
+    privilegeid: 'cd3b3bf5-e277-41be-918e-488bc708f8bc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendmsdyncrm_leadscore_v2
+    privilegeid: '4d3dbb95-49d7-4a21-862c-48e67980ea34'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareBookableResourceBooking
+    privilegeid: '9e617444-cf68-4225-8764-491f6b456316'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_ConversationSignal
+    privilegeid: 'e721198c-d247-4e81-a9b9-4938bcef9204'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_recording
+    privilegeid: 'be27affb-414d-40b9-9387-49662cc5538e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignmsdyn_duplicateleadmapping
+    privilegeid: 'ecab8559-8495-466c-aa28-4a1410e8b49b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_orgchartnode
+    privilegeid: '78152478-dc8a-43d5-b4e0-4a996715865d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_ConversationSummarySuggestion
+    privilegeid: '062fceae-0bb7-4ade-9485-4aa0e043f32e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyn_vivausersetting
+    privilegeid: '0906f18a-5707-40a8-9008-4b12754cf73e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_SCIConversation
+    privilegeid: '82e2f766-f32a-4521-858b-4b24934b6c5b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteActionCard
+    privilegeid: '6c56b4fc-84df-47af-8b13-4b3b25370458'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_wkwconfig
+    privilegeid: 'e6be3f50-5419-4d92-b4f7-4b3e1aec3a61'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToEquipment
+    privilegeid: 'dea50329-23c7-43d5-a6d0-4b66fe48fced'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_ConversationParticipantInsights
+    privilegeid: '7b177c01-c16b-4245-8641-4c3104a97d8c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendEntitlement
+    privilegeid: '4236af0c-9aaf-491a-8768-4c46b465d39b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendAccount
+    privilegeid: '4e163b38-ea45-49ae-b3da-4c9dc1c77d8d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadDynamicPropertyInstance
+    privilegeid: 'fc9c9e61-95e3-4cb3-9b46-4d810156f9e4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateImportMap
+    privilegeid: '99d3d16f-587e-4007-91e1-4d873e1c7262'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvShareRoutingRule
+    privilegeid: '230ae2d3-9963-4784-b652-4ddb7d7af4ea'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadSdkMessage
+    privilegeid: '94c3ac2c-eb23-41cb-a903-4e2e49e910b4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendConnection
+    privilegeid: '2c220358-df94-468c-b6e6-4e499f9c0186'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadChannelPropertyGroup
+    privilegeid: '662dd77e-9859-4bfc-bddb-4e7eb3f147b2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_sequence
+    privilegeid: 'c3393d76-5d08-436b-874f-4ea258010dca'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvWriteCallbackRegistration
+    privilegeid: '676b743f-4320-4e4b-8f24-4eaba069e406'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadrevops_stateorprovince
+    privilegeid: '7f4b6b23-cda3-46a3-953c-4ee23dce3a9b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadBusinessUnit
+    privilegeid: '487cdbaf-59f9-4db3-b648-4eed351ff00b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_salesocsmstemplate
+    privilegeid: 'a7c5147d-2bf8-4699-b806-4f4f3c98822b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvDeletemsdyn_salesocsmstemplate
+    privilegeid: 'b6b0b366-3a23-44d3-8762-4f5d32901f1c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvWriteInvoice
+    privilegeid: '31ab0ac9-7a6c-4a9e-b982-5065863f142e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvCreaterevops_accountpotentialtechstack
+    privilegeid: '2ce130d9-45d3-498e-a646-50c7363daa2d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareInvoice
+    privilegeid: '12289bc7-b3ff-4846-8fb6-50cec63f5b7b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_salesinsightssettings
+    privilegeid: 'a3867b6e-6497-49a4-afbd-5146cb9b7367'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignConvertRule
+    privilegeid: 'ad795fbc-6118-495a-96b6-514ff58ccff9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadSavedQueryVisualizations
+    privilegeid: '575b9a8f-46da-4fb5-b014-51a689b003f0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToQueue
+    privilegeid: '041fdb4c-bbb8-4792-90db-51c19d067ca2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvUseInternetMarketing
+    privilegeid: '3d1ddb18-3709-4a30-93de-51c95c28d00c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadChannelAccessProfile
+    privilegeid: '723e2853-fe3f-4fb7-8d36-52c985cf62dc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendTorevops_solutioncategory
+    privilegeid: '1695cdea-7fcf-4049-bf9c-52d6eb6692dc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToKnowledgeArticleViews
+    privilegeid: '02357cff-42f7-430e-8bad-534ea3ee9a1e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteKnowledgeArticle
+    privilegeid: 'be55bd8e-4f83-41aa-8d80-539aba73f404'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadUserSettings
+    privilegeid: '8437fa7c-3681-4fc7-bfd8-53a23fdecd65'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_sequencetemplate
+    privilegeid: 'b7598fb9-4fc6-42d3-91d9-54274f85ce2d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvAssignmsdyn_recording
+    privilegeid: '82c2b934-87c8-4dcc-afd7-54b764aae7d6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateCustomerOpportunityRole
+    privilegeid: 'eef13216-2158-4da0-84fb-54ecb2b40b7b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToImportMap
+    privilegeid: 'a35ef949-9464-45fb-9aca-552ad1b82318'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAssignImport
+    privilegeid: 'dff030bf-d8d5-45c8-a013-55e7e51a35c7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyn_sequencetarget
+    privilegeid: '988d13f7-91c2-489f-b026-56168ad15105'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvSharemsdyn_kbattachment
+    privilegeid: 'b9ff5a8b-8237-46a8-8d9e-5624a8ffad80'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteUserApplicationMetadata
+    privilegeid: '9b86901b-8671-456f-a142-566cded69529'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteOwnCalendar
+    privilegeid: 'd0a7b73e-425c-472e-9da0-56ec580c65a9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvMailMerge
+    privilegeid: '9293eeb5-1efa-48c2-ae83-56fb180539ee'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadContact
+    privilegeid: 'ba09ec92-12c4-4312-ba16-5715c2cbd6da'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_predictivescore
+    privilegeid: 'c67707b9-1f50-41c4-97de-572e4167e233'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_ConversationActionItem
+    privilegeid: '99102dac-2993-4600-8215-5744bd9989f9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateCallbackRegistration
+    privilegeid: 'c0ddad3a-665d-467d-9650-575e91af01ec'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareOpportunity
+    privilegeid: '240edd9b-83e1-46b4-aa25-576ad3c75186'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_activityanalysisconfig
+    privilegeid: '5df30b87-11dc-4add-9910-58c973378983'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdyn_ConversationSegmentSentiment
+    privilegeid: 'c1ea37e4-ac0b-4eea-a829-58db1632d21f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendtoCategory
+    privilegeid: 'bf2705af-206b-4331-8590-58dee57cbf32'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToEntitlementTemplate
+    privilegeid: 'b96e9f2c-5f80-44db-8491-58f591134795'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignConnection
+    privilegeid: 'be208969-4ef2-4522-840f-5904f39f97ab'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadLicense
+    privilegeid: 'b93e1fc6-e58c-4f0f-b0c8-59161edf0455'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_transcript
+    privilegeid: '87eb0951-227c-467e-bec4-59474663c23c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_extendedusersetting
+    privilegeid: 'ccb42c81-5057-4614-abf8-5a80b43bc3cd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_ConversationParticipantInsights
+    privilegeid: '2ed01514-a1d6-4a6a-aa3f-5b733bf61c93'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendLead
+    privilegeid: '387d6489-cfcc-47d7-98af-5b7946d7691d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadWebResource
+    privilegeid: '4156db68-93e2-4a83-8cbb-5bb344ebaf47'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadBookingStatus
+    privilegeid: 'aa4281c6-730c-487d-9afd-5bdea7379480'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_PostRuleConfig
+    privilegeid: '249cbf91-2ef9-4ed9-8011-5be05dc5cd22'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_marketingform
+    privilegeid: '1dd52dd6-e7ed-4a5e-bb7f-5beec74325a2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_sequencetarget
+    privilegeid: '302bfc00-9eee-4520-a500-5c041d4ed4ba'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvDeleteMailboxTrackingFolder
+    privilegeid: '100ca18b-c84b-45bc-9530-5c14564175de'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_ConversationActionItem
+    privilegeid: 'ec188bcd-85ad-4a52-9647-5c6dedca43ec'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateAccount
+    privilegeid: 'd26fe964-230b-42dd-ad93-5cc879de411e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToBookableResourceGroup
+    privilegeid: 'cec137b8-1c6c-4fcb-9e4a-5cf05d0e50ad'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadmsdyn_leadhygienesetting
+    privilegeid: '499d85b4-f839-4aee-9709-5cf76b019b68'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendrevops_Churn
+    privilegeid: 'ad3adb55-2d7a-49ac-8723-5d19a8ced7e6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendIncident
+    privilegeid: '694cfd50-f68a-4d3b-a4a1-5d4a47104359'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendToCalendar
+    privilegeid: '3f2072aa-57a6-4bda-810a-5d567f4d4e12'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_vivacustomerlist
+    privilegeid: '86b5301e-623b-4fed-a362-5da865a550bc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareReport
+    privilegeid: '9dd87a06-3e84-4b6e-b69e-5dd931aa8a0f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteUserSettings
+    privilegeid: '588725dd-c878-41c5-a4c3-5efc93cd3ffd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendToContact
+    privilegeid: '158327b5-f4c1-448e-93d1-5f135126665b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_ChannelDefinition
+    privilegeid: '2e9a59a0-5553-4ed1-b735-5f5370dd2ff5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvCreateExpiredProcess
+    privilegeid: 'f72a2520-5065-414e-8341-5f5e2abf0a20'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadPhoneToCaseProcess
+    privilegeid: 'ea704b38-d4ad-46fc-940c-5f5eeb8a6b4a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_Event
+    privilegeid: '8fc335ff-2e1e-469f-8c98-5fc89db020fb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTorevops_solutionprovider
+    privilegeid: '8b2ca27c-35a9-4f3b-b053-60c435e14ba2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_wallsavedqueryusersettings
+    privilegeid: '04631b92-c35e-488c-890e-60c84f6f71b6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_leadkpiitem
+    privilegeid: '253e38c5-133c-4819-9808-61dbc3ab7128'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteOpportunitySalesProcess
+    privilegeid: 'f529cc0c-8957-490a-a530-62023e4b674f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_dailyopportunitykpiitem
+    privilegeid: '03122005-f9b0-4535-9204-62147dcf4dfe'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_activityanalysiscleanupstate
+    privilegeid: '1adfba19-a1fe-4fc6-b7c5-6230560fe699'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignOrder
+    privilegeid: 'f9388c46-82ac-455c-8fcf-628351169404'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignMailMergeTemplate
+    privilegeid: '94080062-e5be-4a4e-ad41-6295a881fe9d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadArticle
+    privilegeid: '437c1f0e-7d06-42fb-94b9-631805033daa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateLeadToOpportunitySalesProcess
+    privilegeid: 'c4af35cb-6207-4722-bea2-633e6cf248db'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_vivausersetting
+    privilegeid: '503296f4-bc5d-4ee5-b63c-63c1e3a391fd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadKnowledgeArticle
+    privilegeid: '67000c2a-56c5-4af6-8b52-63dc7d2d3201'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendBookableResourceCategory
+    privilegeid: 'd02439de-f047-4ff8-b16e-6475d7e5b4b0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadAttributeMap
+    privilegeid: '0a40e638-2d3a-4d44-be3a-64f601f76734'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_taggedrecord
+    privilegeid: '33f3f2da-b489-4df7-b658-653fbf924c7b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendImport
+    privilegeid: 'cdf7e78f-3bc5-44a0-acbf-65d4e34b07d7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateUserForm
+    privilegeid: '16948710-d204-4d55-8ce0-66d84cd375ff'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteOwnCalendar
+    privilegeid: '2c6d0819-62da-4a2d-8dd7-66da14677252'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_ConversationAggregatedInsights
+    privilegeid: '67161935-bab9-40b1-9a42-672fc96892d2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendAppUserSetting
+    privilegeid: 'c5c49fb3-5c92-4acd-ae8b-6741b525e37f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvFlow
+    privilegeid: '9b71eaaa-6b6a-4c96-aefe-675ba31a88f3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadEntity
+    privilegeid: 'a3311f47-2134-44ee-a258-6774018d4bc3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_ConsumingApplication
+    privilegeid: 'eeb81ca6-2300-4bb7-a187-677f5f87fd7f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendNote
+    privilegeid: '5c270b76-3087-4f97-bbce-678ecc588fba'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAssignmsdyn_ConversationTag
+    privilegeid: '9f7b07cb-c33e-4da3-8649-68751d09560a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvPrint
+    privilegeid: '4db9faae-7b17-4bad-a284-68d4c3831c13'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_SCIConversation
+    privilegeid: '83574d07-b5bc-4656-82b6-692cea4a99a3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTorevops_opportunitysolution
+    privilegeid: '494fc396-ebbc-406d-b081-6989e4b37f37'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareNote
+    privilegeid: '5906d1c0-a3e9-4cb4-bc7d-6a122da12092'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadRatingModel
+    privilegeid: '8d782d6d-5734-4c4c-be9d-6a528f2f3ac2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareCharacteristic
+    privilegeid: '677ceca1-bde9-4814-aa01-6a78d140f21a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToProduct
+    privilegeid: 'cc345e3d-927f-4aa2-9be5-6a79e2db3577'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareUserQuery
+    privilegeid: '0437ca80-43df-4fdb-acc5-6b5b24618586'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendProduct
+    privilegeid: 'd589f1a0-e1e1-4585-86c4-6b6dc33e8f65'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_opportunitykpiitem
+    privilegeid: '87c4a626-f948-466a-8c3b-6ca7b96d690c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_PostConfig
+    privilegeid: '6f29f679-4da0-48c0-ad70-6cbb2d65e6aa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadContractTemplate
+    privilegeid: 'e438bae3-55ff-472c-8ea2-6ce5c7348141'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareSharePointSite
+    privilegeid: '1a17ed0e-4434-4b98-bb1e-6d1df6952720'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadAzureServiceConnection
+    privilegeid: 'def4b3dd-32ab-47a8-bc81-6d2a17d62fe4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_orgchartnode
+    privilegeid: 'b7d836f9-6715-44ac-b275-6e464a661f70'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareConvertRule
+    privilegeid: '93bf0eb7-f6ee-400b-989d-6e879ff3e5da'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadDynamicPropertyAssociation
+    privilegeid: '2c4ab619-a4dc-47f8-a54f-6eb983c0d11c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadKnowledgeArticleViews
+    privilegeid: '9fad3544-f5e9-4704-a092-6f59880636f1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_SciCustomEmailHighlight
+    privilegeid: '017766ab-d793-44fb-a1b8-6f809b7cbe41'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadOpportunitySalesProcess
+    privilegeid: '7f8f42f4-a6f6-4646-8e29-6fb72ad9b2b4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignrevops_opportunitysolution
+    privilegeid: '0a8be4d7-6029-4c3c-b40f-6fd8c91fd600'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadBookableResourceCategory
+    privilegeid: '1b65204f-f92f-4bea-bdfb-6fe5a578daaf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareContract
+    privilegeid: 'af754edd-7d79-42ef-b31f-7008662f301b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendrevops_country
+    privilegeid: '4b312797-b831-4b7a-8519-70ebde0c9cb6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_ConversationSignal
+    privilegeid: '7b17306b-87ba-4e92-95db-70f88cabf560'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_ConversationSegmentSentiment
+    privilegeid: '61b64d42-60f5-4011-ae3c-7136fe4d373a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToNewProcess
+    privilegeid: '020e22bb-288a-4aea-9d76-7147afc074ed'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdyn_ConversationSentiment
+    privilegeid: '457e238d-1a4d-4afc-88f1-7217ef98f8ff'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadrevops_cumulusorganization
+    privilegeid: '8a73e22b-49c0-4344-9542-7252d6ee9b12'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteMailMergeTemplate
+    privilegeid: '2e3a99ab-ec46-4a22-8dac-726e58a1d0f4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendmsdyn_ConversationSystemTag
+    privilegeid: '7760a065-f170-43a1-bfbc-7285322437cc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDocumentGeneration
+    privilegeid: 'e7dd3e1d-f4f3-49b8-ad29-72b45106d3b4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSharePointDocumentLocation
+    privilegeid: '0be92b57-e93b-418e-b60d-73812c930f9b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_icebreakersconfig
+    privilegeid: '2d834532-0c7b-4573-b508-73922d84efa1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_sequencetargetstep
+    privilegeid: '58f10f15-428d-4bed-89e9-7403659acac3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvDeletemsdyn_vivausersetting
+    privilegeid: '0376f167-df70-4948-be33-74038cbb43d6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_dailycontactkpiitem
+    privilegeid: 'd14ce42c-58bc-4f24-b6ee-74c81aee18e3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareEmailTemplate
+    privilegeid: 'df6a99af-703c-47cb-80c6-74eb519ad453'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvDeleteImport
+    privilegeid: '32cc1dcc-a43b-4af0-a898-750ab80552f9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToSharePointDocument
+    privilegeid: 'c5ee87c0-6ecb-4306-86e2-7539d5f29c43'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteTranslationProcess
+    privilegeid: '7e4dd811-3503-4f82-90d2-754edcfa8894'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_ConversationSubject
+    privilegeid: '2e1b3411-aa8f-40ea-8f8f-7551beb31ec0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignRoutingRule
+    privilegeid: '10ecd243-3efc-4b76-be1f-75f66ee6cf3a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_wallsavedqueryusersettings
+    privilegeid: '4bdb1393-99ce-4d49-9d6a-761afb0f7292'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteSharePointData
+    privilegeid: 'cfdd12cf-090b-4599-8302-771962d2350a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadWebWizard
+    privilegeid: 'd55d6eb9-d1e7-4ee9-a492-775015cf2f1f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignEntitlement
+    privilegeid: '4e6a93ff-0661-4712-9994-7756062778d8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_salesocsmstemplate
+    privilegeid: '73c18e7f-0cbd-4365-900f-77ce83c7f445'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvCreatemsdyn_ConversationSignal
+    privilegeid: 'f80d0a58-3854-42d9-8f2f-77e5ff65496c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadrevops_accountsolutionsummary
+    privilegeid: '2bf40303-8163-4d96-ad43-78ccff67363c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_sequencetemplate
+    privilegeid: 'bdc31715-ced2-4ba6-9277-78de41799272'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvWritemsdyn_ConversationActionItem
+    privilegeid: 'b441f537-10fc-43fa-b5be-78f3cbae2ecf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWebMailMerge
+    privilegeid: '50d9fdd3-8cc6-4774-a661-79822061bfef'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdyn_salesocmessage
+    privilegeid: '46bc93dc-e477-4753-aa43-7a3f19168d75'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadDelveActionHub
+    privilegeid: '99448463-ab71-4401-b6ad-7a41729fb6a0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadDynamicProperty
+    privilegeid: '7e23ccca-565f-47ac-be97-7a659d520fb0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteActivity
+    privilegeid: 'bb4457f2-9b45-4482-a95a-7adef25f388a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendPhoneToCaseProcess
+    privilegeid: '4eca6968-c70e-4670-bedf-7af7590f7c02'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadEquipment
+    privilegeid: 'b41900ab-96e1-45d5-86f5-7b10dfc9e366'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdyn_sequencetarget
+    privilegeid: 'f80107d6-2325-46cd-9bde-7be5dd698d7c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadmsdyn_predictivemodelscore
+    privilegeid: '1eddd878-d42d-43a0-8243-7c509ef1552f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_ConversationSignal
+    privilegeid: 'ea403b62-c5e6-469c-9624-7cab0183dfd0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadBookableResourceBookingHeader
+    privilegeid: '7c0a3643-11d8-45fa-9d69-7ccf7c1107dd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_sciusersettings
+    privilegeid: '71d982c0-c65f-434b-8550-7d4d0d34b647'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteUserQuery
+    privilegeid: 'f4875cdf-c281-484b-bb7d-7e2abffcf3c9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateActivity
+    privilegeid: '091df793-fe5e-44d4-b4ca-7e3f580c4664'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateCustomerRelationship
+    privilegeid: '19851d34-4e73-4843-bc05-7e52fc490071'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsdyn_ConversationParticipantInsights
+    privilegeid: '31215002-ab85-4b84-8e3e-7e7cb90f3b29'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadActionCardUserSettings
+    privilegeid: 'dd8a5b5b-a545-42bd-80ba-7f98908e868a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToTransactionCurrency
+    privilegeid: '516ae7ed-8ea7-4f6c-8b32-801bd09a4aaa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateKnowledgeArticleViews
+    privilegeid: '5602f325-c97c-4210-940b-8059c6bea5ce'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdyn_ConversationSummarySuggestion
+    privilegeid: 'ed70fbc2-b87f-45fc-9d06-805e897e90f0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteReport
+    privilegeid: '9ec19565-92ce-4376-ab8b-8071172f5f86'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendmsdyn_kbattachment
+    privilegeid: '6b754ba2-a0e6-4f78-9266-8085bd39fad7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareActionCardUserSettings
+    privilegeid: 'd03a6970-3124-4e8a-93b2-80939939e871'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatePost
+    privilegeid: '8d518c07-bd0d-4274-ba75-809a7b24b37e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_liveworkitemevent
+    privilegeid: 'c23047b7-86ca-40a8-a163-80bcd94609df'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadGoalRollupQuery
+    privilegeid: '17f045d9-6163-42ba-8cc2-813204b24390'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_ConversationParticipantInsights
+    privilegeid: '87f40cfa-4185-4fc7-8d3a-81350b8122e3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareImportMap
+    privilegeid: 'eb21c061-efcb-4334-b70d-8147d1bafcb1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSLAKPIInstance
+    privilegeid: '0cc19b7e-5aa8-4a21-854d-8160fd04f723'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_ConversationSummarySuggestion
+    privilegeid: '8ac8a55f-ec4c-4353-a532-81888cdbba3d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvSharemsdyn_ConversationTag
+    privilegeid: '5bc2dee2-e24d-4a22-8c3e-821e4bca1844'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendContract
+    privilegeid: '36a31103-a2dd-4fea-98c9-824124e7ccde'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvWritemsdyn_crmconnection
+    privilegeid: '9a5dbccc-7eb1-4e71-88d5-829a40e70795'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsdyn_ocrecording
+    privilegeid: 'eb2929ef-310a-4cec-beea-829e46cd6444'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_SCIConversation
+    privilegeid: '094529a6-d25c-43f8-9ec4-82e713fac9af'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadAuthorizationServer
+    privilegeid: '7f040f52-da1d-4b9e-9d02-83b190a540af'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_ConversationSentiment
+    privilegeid: '898cd557-c144-4211-9dd8-83bc90dd090d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadActivity
+    privilegeid: '650c14fe-3521-45fe-a000-84138688e45d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_ConversationSegmentSentiment
+    privilegeid: 'e1c62f13-25ea-42f3-aa41-84528558ebdb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareDynamicPropertyInstance
+    privilegeid: 'bffc7d85-996c-4fea-9c49-84b54ae2a584'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToAsyncOperation
+    privilegeid: 'a7c82854-36ce-4616-b7c2-84ec619d3378'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadSuggestionCardTemplate
+    privilegeid: '4b16e431-c4dc-4684-99c8-85728dac9800'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_SciCustomHighlight
+    privilegeid: 'db7cdc99-2453-4fd7-9c8c-85984bf708c1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadSettingDefinition
+    privilegeid: 'c6c42bfe-9340-40aa-a360-85d265593aee'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteCustomerRelationship
+    privilegeid: 'd1a8ff91-4529-49a9-b2d8-86051440fe39'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendContact
+    privilegeid: '2b16ba12-6ab4-4ad2-b7c0-8641d2d6dff2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToLanguageLocale
+    privilegeid: '284a1958-8e3b-4664-b149-8666ddbf864f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_platformsettings
+    privilegeid: '1b06f75e-2830-40db-8a45-86a46ca06615'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToInvoice
+    privilegeid: '6cf5ebf1-a6da-4522-b51d-86f54ad13fa3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadSdkMessageProcessingStepImage
+    privilegeid: '122e085f-8c52-47e8-8415-875dee1c961e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadEmailSignature
+    privilegeid: '13b9fa9e-9337-4d2c-9ee2-877b8979efe1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendrevops_productsummary
+    privilegeid: '3e401e85-ae31-4d95-9b11-87c90918d0fa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteExchangeSyncIdMapping
+    privilegeid: '267fcb01-6985-4bd2-9f56-87cf42d03eb5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadApplicationFile
+    privilegeid: 'fafe8899-7c51-42c2-a8cb-8827eee87deb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_ConversationQuestion
+    privilegeid: '429f1431-49e8-4d5a-9dfd-883c72566299'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadBookableResourceCharacteristic
+    privilegeid: 'a7571b55-ca80-4b35-bcd3-885ea45f0b3c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_country
+    privilegeid: '3862cb11-0dbe-447a-b6ee-8861266e9a10'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatelistoperation
+    privilegeid: '6c6a436f-cbe3-4420-9cfa-8914881ecf29'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteEmailSignature
+    privilegeid: '190c08fd-57cd-424c-b428-895d744e40f9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyn_ConversationActionItem
+    privilegeid: '2b881a14-0589-4edc-b724-896b38b9f63e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadProfileRule
+    privilegeid: 'a643d6fe-3212-4813-90cb-89ea1c2b6d40'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadSystemForm
+    privilegeid: 'b9c59cef-f5d1-46b4-8c3b-8a38906c8c0e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToSalesLiterature
+    privilegeid: '0039d6aa-0500-44c9-a99c-8a7bc1bdb36b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteSyncError
+    privilegeid: '640bf6af-bd3d-4fdc-9d00-8ac479269a50'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateActionCard
+    privilegeid: '32f6e3f6-7ef5-4916-8fbb-8b95bc6da9d8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateMailboxTrackingFolder
+    privilegeid: 'd7bfdb15-565e-4f6b-9c01-8c6587bd792d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadappnotification
+    privilegeid: '6e47ddad-b430-4e2c-b1c8-8cb8d41d358f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendToRatingModel
+    privilegeid: '030aa359-7442-4b66-9e11-8ccc67da3d48'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendOpportunity
+    privilegeid: 'a2420282-24de-424b-8997-8d316091e310'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatePersonalDocumentTemplate
+    privilegeid: 'c894d1c6-b460-48ee-92de-8d330694c6f3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadLead
+    privilegeid: 'a8ecac53-09e8-4a13-b598-8d8c87bc3d33'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadRoutingRule
+    privilegeid: '151d85cf-dc0f-441c-9b81-8e413964138f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadPersonalDocumentTemplate
+    privilegeid: 'ad489559-2a17-4c34-8bff-8eda48d3bf3d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyn_kbattachment
+    privilegeid: '7fa26432-b2b1-4626-9882-8ef0d4b43e4c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadQuery
+    privilegeid: '902d70d3-2ff8-4d93-92f9-8efdcf889af8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_salestag
+    privilegeid: '0362aa16-51a5-40f9-8706-8f0e876792c6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendToDynamicPropertyInstance
+    privilegeid: 'b72e8386-30ad-4a6f-ad5b-8f23fb26ae50'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendConnectionRole
+    privilegeid: '85b52f8f-38b1-443f-aa30-8f40b2293df6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_actioncardregarding
+    privilegeid: '0e6c55f6-7426-4862-85e9-9071221f9cc0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendmsdyn_vivacustomerlist
+    privilegeid: 'c7d59611-b57e-4cfd-94de-908652335337'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendmsdyn_salesinsightssettings
+    privilegeid: 'cf980534-ac77-4d76-90c0-90df63845de8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_vivausersetting
+    privilegeid: 'fa68303f-c921-48cc-9e15-90eafc3d82e9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteContract
+    privilegeid: '7b269b20-f381-41b2-96fb-912786fc398f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletePersonalDocumentTemplate
+    privilegeid: '581255a8-80b3-4b58-82cd-9161339ec2aa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTorevops_accountsoftwaretool
+    privilegeid: '7a234f0b-111c-4448-b6cd-91979249b7c0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareQuote
+    privilegeid: 'fa072959-ec94-4631-b419-91ebd45562d3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToSubject
+    privilegeid: '63a357a1-d923-467d-828e-9204e3e30f95'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignEmailSignature
+    privilegeid: 'ad190388-c732-4d70-9660-9214a146d0b4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAssignInvoice
+    privilegeid: '17a4e6ce-9815-404a-86f5-925c2ce4ae49'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_salesinsightssettings
+    privilegeid: '46c0ce2a-a33a-4b8e-b855-934f4e5ef831'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdynmkt_sms
+    privilegeid: '4da3e450-7b9a-47bc-9887-9390d0670b14'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteWorkflow
+    privilegeid: 'ed7e875d-9536-4d2c-a2f3-939a9d84f72c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendBookableResourceGroup
+    privilegeid: '0c76e171-1132-4077-8f04-93c999625559'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvDeleteImportMap
+    privilegeid: 'd51453cc-2b4b-476f-b9c5-93ca79ec1ba6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvSharemsdyn_transcript
+    privilegeid: '58376237-32bd-45e6-a875-93f1f9f6cd02'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsdyn_salesocmessage
+    privilegeid: 'b3f5a6e3-a557-49e4-b1aa-940c1d360cf3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendDynamicPropertyInstance
+    privilegeid: '2c21cd08-1ce8-4cf9-a336-94323133fe76'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareBookableResourceGroup
+    privilegeid: '14e6c22b-a006-401a-8581-9465dee36d53'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignlistoperation
+    privilegeid: 'bdd6ecc6-649e-4708-857d-949a49db1aaa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToConnectionRole
+    privilegeid: '6a97393c-2af0-45dc-ba0a-949f2f96e94e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToDynamicProperty
+    privilegeid: '9f7ef658-5d37-465c-89af-94abeb48f4c0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadFeedback
+    privilegeid: 'c7840e54-d49a-40c5-94d5-94eaa1575085'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendSyncError
+    privilegeid: 'b0347755-0419-4c09-b524-94ffad1503d1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadEntityKey
+    privilegeid: '1ae48019-2ad5-4a28-8482-9542ae96c4e7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_workqueueusersetting
+    privilegeid: '11c7d750-c89b-4623-91d6-9595179ecf74'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTorevops_psaintegration
+    privilegeid: '74a46fe6-c3b1-47e0-8083-960d32565b5e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_salesinsightssettings
+    privilegeid: '2a04346e-c082-4e36-8b0f-961c147a25f1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_transcript
+    privilegeid: 'd584b12b-9566-404f-9122-96239bc8842e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendPersonalDocumentTemplate
+    privilegeid: 'ac19cdee-732e-4f25-95ea-962d43cd2a11'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToMailMergeTemplate
+    privilegeid: '947f72b5-8e18-47b4-acaa-9638ccc5ea3c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_mostcontactedby
+    privilegeid: '036d9f06-04b3-4653-a6b5-963f2656e9ae'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteWorkflow
+    privilegeid: '5f19703e-0b4a-451e-91e8-968929927820'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyn_ConversationSegmentSentiment
+    privilegeid: 'ff2fdc36-18b9-4793-a062-969b5947b50d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteExpiredProcess
+    privilegeid: '8b504481-7cc1-43d6-8d80-96a9a50140e3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignQuote
+    privilegeid: '01f1fc93-b5b0-4c43-8196-96ab0d0113e6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyn_vivacustomerlist
+    privilegeid: 'b4cdcea1-df4e-4e9d-986c-970fb0f43b15'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteEmailSignature
+    privilegeid: 'faf8da77-8d5f-407f-8c9d-9733396341f4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendSharePointData
+    privilegeid: '2e774df5-2d24-4c8b-b9bb-973d5ef46f3e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWorkflowExecution
+    privilegeid: 'b56c6b1d-efb6-49c3-a18c-97a8b59e10bf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendReport
+    privilegeid: 'a622e2fd-45f2-4f8b-8b8a-97d91df22d66'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteUserQuery
+    privilegeid: '9f128840-94d4-4b7d-a592-98365e3f4987'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendrevops_Solution
+    privilegeid: 'a7a1ac76-78c2-4064-9e59-983e7ec06932'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdyn_recording
+    privilegeid: '8333ee80-59f0-4ca0-abb1-984b467d13bd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadUserForm
+    privilegeid: 'f13b70c2-70a3-4f3b-bb50-986b475c003e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToOrder
+    privilegeid: '45b189d7-adb7-474b-857b-98783812f7f6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendTomsdyn_ConversationTag
+    privilegeid: '83b57ec8-f446-4426-a3bc-9980ce778e33'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadImportFile
+    privilegeid: 'fe46d775-ca5c-4a09-af93-99a133455306'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadrevops_practice
+    privilegeid: '4a353121-5a39-46bd-9e01-99e03fa052e1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadInteractionForEmail
+    privilegeid: 'b790e09c-5657-4431-9254-99e5cad7bae6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteEmailTemplate
+    privilegeid: 'f2cc25b1-bfcc-4f7c-a6c3-9a5fc386391a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadSyncError
+    privilegeid: 'baefbf07-795a-4dbe-a327-9a9d4a3472fd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadImportMap
+    privilegeid: '81d17fee-35ff-43a6-8c0a-9b1d2c1eabbf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadRelationshipRole
+    privilegeid: '3c223cbd-7309-4a1a-901e-9ba78bc41ec8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadAppUserSetting
+    privilegeid: '1ece2106-d3f9-4186-bdc9-9bbd6ef53f8e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdyn_ConversationAggregatedInsights
+    privilegeid: 'f05e8fe0-8d1f-4068-b8ff-9bc7df6bde88'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendrevops_accountpotentialtechstack
+    privilegeid: '3194eec8-1857-419a-9930-9bd9888f17a8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_sciusersettings
+    privilegeid: 'e14afb1c-e18d-4e91-893e-9bfbac479fd9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsdyn_ConversationTag
+    privilegeid: 'fb58cea6-5965-45d2-bcb7-9c1cd65d8ade'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_kbattachment
+    privilegeid: '16879bc7-b703-489d-80e3-9c2690781207'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriterevops_sherwebsalesbpf
+    privilegeid: '76d0e54f-2b63-4c15-b4e0-9c2fd4e282fb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadOpportunity
+    privilegeid: 'f7767f74-628d-48b3-a79f-9c6e24fedb69'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvOneDrive
+    privilegeid: '676ba2b0-c2dc-4d6d-8821-9cb8faed7538'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendSalesLiterature
+    privilegeid: 'cab32fe6-2a53-4a29-bf47-9d2b7ca4356c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadConnection
+    privilegeid: '919f6df3-97bf-4897-82f1-9d67749eab3a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_sequencetargetstep
+    privilegeid: 'f43e05e6-614a-4c4d-9668-9d79201e0232'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAllowQuickCampaign
+    privilegeid: '5677ecb3-a34d-4ac5-99ce-9e2dbf2b3246'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_solutioncategory
+    privilegeid: 'e9db4c2f-4fda-461a-a3da-9e56d350c95f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_ChannelInstance
+    privilegeid: '81e68865-3562-4f94-9d2b-9e66d40d42fa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadConvertRule
+    privilegeid: 'a51aa4b3-b0c3-4b81-a290-9ed4b0db8fb1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadHierarchyRule
+    privilegeid: 'e3fed6f2-35c3-47a9-9273-9ee58e83489f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_ConversationSystemTag
+    privilegeid: '2ec14751-562c-40c9-a4cd-a00e64c1f497'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadrevops_solutionprovider
+    privilegeid: 'f770b480-2f31-408f-ae1f-a03e3c2c46f6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignLead
+    privilegeid: '7755e1bc-6f11-465e-8ed0-a1616c5d32c4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareKnowledgeArticleViews
+    privilegeid: '6b2b4e95-c285-4828-a020-a16cdf3aa874'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvActivateSynchronousWorkflow
+    privilegeid: 'dd55297d-5aaa-4645-8ef5-a2348eab3460'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendInvoice
+    privilegeid: 'a3360786-e99f-4ee9-965c-a24ed6bd9be7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadOfficeGraphDocument
+    privilegeid: '39016011-ae1a-41d1-9a22-a2611ad16702'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadGoal
+    privilegeid: '55295613-92ec-435e-bcc4-a265b031cfd4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_ocrecording
+    privilegeid: '421913de-99f2-437b-a072-a3c4c4a62c77'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadRelationship
+    privilegeid: 'aa38bf03-556f-418e-ae55-a3e8fbbc0f2d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_duplicateleadmapping
+    privilegeid: 'bd345a2d-f82b-4758-960b-a3f4e1808eaf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignSharePointDocument
+    privilegeid: 'b9de5dae-1cd1-40d7-bbe9-a4ee427c0945'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToEntitlement
+    privilegeid: '9ea7d660-0ee7-4fe7-aac4-a51664832f0f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadWizardPage
+    privilegeid: '024ca4ff-65bd-4381-84a5-a531285e9ce1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadWorkflow
+    privilegeid: '9d5e4741-3403-42d2-90b4-a561b3f94f52'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToFeedback
+    privilegeid: '4fa7bc12-856a-437c-8fed-a563940a2f36'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendBookableResourceCategoryAssn
+    privilegeid: 'd3c0e690-43ad-45c2-bf83-a564284a127d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvShareImport
+    privilegeid: '38378a04-2ee9-470c-aa7e-a57ab8de288c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvDeletemsdyn_ConversationSummarySuggestion
+    privilegeid: '7dd6ab94-1c3d-4bd3-9367-a58b8634f2ae'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendEntitlementTemplate
+    privilegeid: 'd61833ab-93bc-4ebb-8dba-a5d259624473'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignReport
+    privilegeid: '7304bdbe-c652-454d-ae19-a5d6070d34ab'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_wallsavedqueryusersettings
+    privilegeid: 'd356c1c9-8d66-45b9-b434-a6d1bd9c6188'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_ConversationSubject
+    privilegeid: '0fbe6059-3afc-406b-8744-a6e4a7bffe74'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteUserForm
+    privilegeid: '37f82ce8-a228-4de2-8b89-a7165fad6b96'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendCalendar
+    privilegeid: 'aaad8c54-0b28-4b86-a0f3-a72e89ee9bef'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendrevops_platformsettings
+    privilegeid: '2be0b761-a1cc-4a7a-bdfb-a7725db6206b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignDynamicPropertyInstance
+    privilegeid: '3ce2f66e-20b8-404d-9a6e-a780c5761c86'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteCustomerRelationship
+    privilegeid: '9008f389-74fc-4b64-b4a4-a7abdc2ac28f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateOrder
+    privilegeid: '83f518e2-f311-4bb4-894f-a7ee55e558a7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyn_actioncardregarding
+    privilegeid: 'b12b2d43-46d5-4359-a0d2-a845e77f9691'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignrevops_Churn
+    privilegeid: '582dde9f-45aa-4a02-bf8b-a945dcc3b520'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendmsdyn_ConversationSentiment
+    privilegeid: '040f230a-30d6-4c73-abaf-a9ccda62decc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendrevops_sherwebopportunitybpf
+    privilegeid: 'c0471f94-ab96-46ac-a69e-aa370ed73fae'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTranslationProcess
+    privilegeid: 'b753b2d9-eccb-42e2-b8a0-aa59ec2caecd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToPersonalDocumentTemplate
+    privilegeid: '7fd3184d-648c-4204-a81a-ab254f37c1f1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_dailyaccountkpiitem
+    privilegeid: '58477456-00f2-461a-8f6e-ab2a437639ed'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_salesocmessage
+    privilegeid: '2fc555e7-7f71-4f1b-bd2e-ab3d836b25a8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvSharemsdyn_sequencetarget
+    privilegeid: 'df23274b-5ecf-4d48-a400-ab417bcdc595'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendrevops_psaintegration
+    privilegeid: 'd5b2379b-1acd-4d11-b877-ab7556cda160'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_ConversationSegmentSentiment
+    privilegeid: '85e84ca3-ea13-435e-baca-abc45bfcae02'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadrevops_accountproductsummary
+    privilegeid: 'aaf57932-d164-42bc-b69e-abe306956470'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadDocumentTemplate
+    privilegeid: '0c28ee64-2aba-4fd6-ae26-abeb29e7a299'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToDynamicPropertyAssociation
+    privilegeid: 'e367d930-3c8e-404d-af1e-abfa82fa4876'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_actioncardrolesetting
+    privilegeid: 'cfb1fd78-3243-4b80-897f-ac1e24855e80'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_sequencetargetstep
+    privilegeid: '2b3a4420-83c4-4eb5-adce-ac453e6654a1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadPosition
+    privilegeid: 'a95f4a7f-3576-4344-a857-ac4f9655d0fe'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_sequencetargetstep
+    privilegeid: '0be997ba-ed8d-442c-996c-ac5ea2466175'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvCreatemsdyn_flowcardtype
+    privilegeid: 'f0f7081d-0315-4a14-ae16-ac698c77f376'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendmsdyn_ConversationParticipantInsights
+    privilegeid: '7a9c6049-9d03-43fb-8ceb-ac716205dcd1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreaterevops_sherwebsalesbpf
+    privilegeid: 'e814bd34-15bb-4ae4-a75e-ac8986d5ee6d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_psaintegration
+    privilegeid: 'cdb24dcd-6f66-4c69-924a-ac8a2917468a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendQuote
+    privilegeid: '3027b0b3-192e-432d-851b-acc5dc8eb953'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadmsdyn_contactkpiitem
+    privilegeid: '3b29200d-1290-4a5d-9d8d-acca5b1698c2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_crmconnection
+    privilegeid: 'f838774b-49dd-4d34-b026-ad4c54d0d574'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendMailboxTrackingFolder
+    privilegeid: 'a01125c9-7710-4fd1-9975-ad6aa7480364'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAddressBook
+    privilegeid: '98626ba2-d256-40ba-9729-ada88acc9d10'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteOrder
+    privilegeid: '13121f22-3211-44d5-ab17-adcf699cf0eb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvDeleteImportFile
+    privilegeid: 'bdd834d8-8b0b-430c-a1d8-add2fcebd854'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToCustomerRelationship
+    privilegeid: '5b6c67ed-7b05-4545-9a6d-adf07fdde7a1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_ConversationSegmentSentiment
+    privilegeid: 'e2014276-67cf-437b-8f53-adfc0701d1fb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadEmailServerProfile
+    privilegeid: 'edebe6f6-cf2e-4520-b635-ae0615d41e34'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_ConversationTag
+    privilegeid: '4786d09d-bf25-40f8-9b4d-ae913843d574'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_sequence
+    privilegeid: 'd5bade37-9a2b-4d8b-8228-aea964d8821b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsdyn_ConversationSignal
+    privilegeid: '2f40f0b7-af10-416c-93d8-aeb4ac760590'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_ConversationSystemTag
+    privilegeid: 'ebb348c1-7394-4365-8465-aed81fc43b8e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignmsdyn_ConversationParticipantSentiment
+    privilegeid: '048cfba3-0867-4604-9ce8-aef244e9359a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToTraceLog
+    privilegeid: '4bc3f2c8-b4c5-47be-99d8-af008b6a7dac'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_ConversationParticipantInsights
+    privilegeid: '3e8e1f5a-df95-48e6-9734-af84afdd9dd6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_taggedrecord
+    privilegeid: '643a50b7-47b5-4cf1-a7fa-afa029aeb76b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_sequencestat
+    privilegeid: 'ea0284a5-b28a-4edf-b6aa-b0026fab1b3f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvCreatemsdyn_entityrankingrule
+    privilegeid: '85fee7e3-8fb8-4af6-b433-b0099a82db2e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToRoutingRule
+    privilegeid: '5fe45578-07bd-49ae-9d4c-b0599fa8e4e9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendLeadToOpportunitySalesProcess
+    privilegeid: 'cb5d2a31-149e-4b62-8891-b05f6231234d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadNewProcess
+    privilegeid: 'd3b01df7-2dc9-4845-af0e-b07cb2483bb6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_orgchartnode
+    privilegeid: 'fd3020e2-2718-4fe8-86d2-b0d23e9f2335'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_orgchartnode
+    privilegeid: 'b8ad05f4-a305-4555-b13c-b19ed4503448'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadMobileOfflineProfile
+    privilegeid: '362a4756-c89a-4252-9313-b1a8cc7ab171'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareRatingModel
+    privilegeid: '38f60c6a-03a2-43d2-9402-b1b3d947f626'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignList
+    privilegeid: '53e41d96-89ce-4413-bef3-b1f79870bae1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_SciCustomHighlight
+    privilegeid: '58bc21d9-707e-4ff5-8a2a-b200251a7ac4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendmsdyn_sequencetarget
+    privilegeid: 'ba119a40-9e31-4abc-b675-b20e612a7cb1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvWriteArticle
+    privilegeid: '4e90f305-3eec-4c50-ac7c-b2868e6e9d7f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_marketingemail
+    privilegeid: '2c04d45e-e0fc-4171-9b76-b39dd6bedacd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdyn_SCIConversation
+    privilegeid: '75746c9f-d631-437d-a27f-b3a6fa7c736d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendKnowledgeArticle
+    privilegeid: '1b9d9823-d381-46ac-928e-b3b97a0995ef'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdyn_ConversationSegmentSentiment
+    privilegeid: 'fcb0a557-87fd-4ca8-b875-b3faee1c93d4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_wallsavedquery
+    privilegeid: 'f91261a9-026e-483a-a4ae-b421f13251e1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToConvertRule
+    privilegeid: '59f49e9a-a621-4836-8a35-b44f1f7122fb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteImport
+    privilegeid: '83b7c89b-b58c-455d-b140-b4d469811f9f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadSystemApplicationMetadata
+    privilegeid: 'e53901c9-75d2-47dc-89b4-b54749fc2ccb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateWorkflow
+    privilegeid: '356f7a5a-5f9b-4a55-8398-b5732f6a08e5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadrevops_sherwebsalesbpf
+    privilegeid: 'eb7e2cf4-1a4d-47a9-ba56-b5abd7790456'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteOrder
+    privilegeid: 'ceb5cfae-f745-4a60-8023-b5b203c72e34'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_recording
+    privilegeid: '24f33bf1-c0f5-463e-b603-b5eddbf1feac'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_duplicateleadmapping
+    privilegeid: '05c57e02-13fe-4c3f-881e-b5f74392d6c2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendrevops_sherwebsalesbpf
+    privilegeid: '751edcc4-0737-40fa-9c63-b6076aaa081a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteImportMap
+    privilegeid: '8ccefd04-e6be-4231-b527-b613549bbd3d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendmsdyn_SCIConversation
+    privilegeid: 'bb0581f5-8327-4e35-abd1-b68f36b255c3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadEnvironmentVariableDefinition
+    privilegeid: 'fcb8f6da-62bf-4525-a724-b697781d8436'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendKnowledgeArticleViews
+    privilegeid: 'dfeedaaa-7d57-45ee-9b54-b6a5f0597977'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdyn_sequencetarget
+    privilegeid: '7093cbbc-5a0c-446f-9f13-b72ff284e7b6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadContract
+    privilegeid: '8022a167-ea97-4c91-a41c-b77c083f7113'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadCategory
+    privilegeid: '63536bfd-7241-4e79-8a84-b785ef62e038'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendSharePointDocument
+    privilegeid: '9fa384c8-4d07-4a78-8de5-b7fb213a3835'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_vivacustomerlist
+    privilegeid: 'ec94aef2-da0e-4cf0-b138-b8243492e6d7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadEntityDataProvider
+    privilegeid: 'de0cb8f9-2088-42be-be6a-b82de15d9938'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateSocialProfile
+    privilegeid: 'd7189248-4087-451b-9caa-b832895b00c4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadList
+    privilegeid: 'a9d76f12-3be0-4616-b831-b84a514a4462'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdyn_transcript
+    privilegeid: '28c5081d-03bd-424f-89dc-b890ea2e01e4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteQuote
+    privilegeid: 'dcc1d522-dfd6-46fc-bc6c-b90a097ba309'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_vivausersetting
+    privilegeid: '7cb3a08a-e98e-4420-b76e-b96ebdee8a31'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadCustomization
+    privilegeid: '7bb3b531-ac45-4977-89c8-b99768e55ab8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdyn_ConversationSubject
+    privilegeid: 'bdd04ec0-2f75-47bb-92f7-ba2c9ea7505f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareBookableResourceCharacteristic
+    privilegeid: '2c29ac18-0d64-478c-a616-bb3023cbdf67'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateNewProcess
+    privilegeid: 'd94d458b-9ddb-4798-ac18-bb41aa326306'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdyn_crmconnection
+    privilegeid: '798be837-9d0d-4de3-a75f-bbe91fc03b77'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritePersonalDocumentTemplate
+    privilegeid: 'c04a356a-12dd-4c92-9b3d-bc00a5b559e0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteConnection
+    privilegeid: '1e589ebe-aad1-44b5-813e-bc2574f8d365'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdyn_ConversationSignal
+    privilegeid: '5ef940e1-89dc-4b70-a408-bc8fcc7723e8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_ConversationTag
+    privilegeid: 'ed5bad80-bd39-493e-baf9-bcb3595075a7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_duplicateleadmapping
+    privilegeid: '88308e3e-b1a8-4750-89fc-bcd97ce2f8e2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToNote
+    privilegeid: 'eca34a9e-f50d-487e-ab69-bd06ba6ee1a1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadCustomerOpportunityRole
+    privilegeid: 'db84e2ea-44fe-44ff-b01c-bd1b3d3d07ae'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToTranslationProcess
+    privilegeid: '849dbedd-5ce2-49a4-af04-bd27d95aaa03'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToSLAKPIInstance
+    privilegeid: '2bf2b3c3-fd63-4ffa-970b-bd9888de6079'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_ConversationSystemTag
+    privilegeid: 'd751caa2-288a-45c0-83f3-be2ac1a4a96c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendDynamicProperty
+    privilegeid: '6bdd8417-7936-42b6-9e80-be4a52d94fef'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendMailMergeTemplate
+    privilegeid: '422187bb-aaa0-4539-b8a5-be9d68291776'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignPersonalDocumentTemplate
+    privilegeid: '05960a0a-038a-4022-a776-bec8aefd1757'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleterevops_sherwebopportunitybpf
+    privilegeid: 'c0340447-8d60-4a21-926c-bf75be5eec59'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_ConversationComment
+    privilegeid: '0bb34be6-fa5b-4bdc-994f-bf979b614613'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareBookableResource
+    privilegeid: 'a65bf562-9fa0-4e3a-8e79-bf9d9d96c5a2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareLead
+    privilegeid: '9805ebd7-4a57-4558-a7ef-c0ba93d28c68'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTorevops_practice
+    privilegeid: '75980ee4-e80f-465d-af15-c0e97956a188'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_recording
+    privilegeid: 'efbeeccf-f99a-4ded-a69c-c169acf89f2f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadrevops_accountpotentialtechstack
+    privilegeid: '93141b95-2b52-421b-90ff-c19b22a68a58'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendRatingModel
+    privilegeid: '3e29c222-64f9-42f1-a231-c243d10c7a96'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendCharacteristic
+    privilegeid: 'f1c9d6ec-3378-478b-8e8f-c27efbafbbb0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadMailMergeTemplate
+    privilegeid: '933babb9-6e0b-4b63-8196-c2acc272dc7f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToArticleTemplate
+    privilegeid: '4eaa39e7-b495-415a-8f7d-c2e8dbd6c346'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadProduct
+    privilegeid: '60d420ca-7a88-4c0d-8286-c425b527fa98'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadPost
+    privilegeid: '9d00a0f3-870b-46f8-a4b7-c43186c21b2d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteCallbackRegistration
+    privilegeid: 'cfe37943-92a3-43db-9be1-c46d7cf47ec8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_ConversationParticipantSentiment
+    privilegeid: '9dad2174-9021-4643-93e7-c4e4984bb591'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_ConversationAggregatedInsights
+    privilegeid: '0d8dbe89-c94a-4e59-809d-c551da0449d8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadSdkMessageProcessingStep
+    privilegeid: 'db10a828-ec49-4035-8b7e-c58efaf169ec'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvUseOfficeApps
+    privilegeid: '31053c34-0b1f-4eb5-a15a-c5bbf4c79ca1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadUserApplicationMetadata
+    privilegeid: '8305acc7-7f19-4e7e-8846-c5c6332b230c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendService
+    privilegeid: '6df05f16-c7cd-4c24-a306-c5d43311d189'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleterevops_accountpotentialtechstack
+    privilegeid: 'fdf329c6-d010-4885-8ca0-c60f6c63c6f3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareList
+    privilegeid: 'e836a377-47b7-4bc8-8952-c61445f34cd9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvReadmsdyn_transcript
+    privilegeid: 'a96b39f2-42dc-4c87-95ab-c6d2eaeec0ef'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAssignEmailTemplate
+    privilegeid: '17b31e5e-bc94-4967-b83f-c7049eb483da'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvWriteNote
+    privilegeid: 'ed854f7d-286d-4c8b-a716-c70a0106d5a5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToBookingStatus
+    privilegeid: 'd883935a-0826-4278-8bdc-c7346ed75287'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvConfigureInternetMarketing
+    privilegeid: '0452a809-ceaf-4ae9-aab5-c74d42bb5773'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvCreateOwnCalendar
+    privilegeid: '2d1c11da-219e-4a6a-a8ec-c75fdb6aa6ed'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTraceLog
+    privilegeid: '66d74708-436a-43a9-933a-c762279063a1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToBookableResourceCategory
+    privilegeid: '961ca2f5-9a3a-4f08-b4c7-c77a617f3fd3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvCreatemsdyn_taggedrecord
+    privilegeid: 'ad8514a1-1e10-4c81-b9b3-c880df10832b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteConnection
+    privilegeid: '3dabaae2-a83f-42ab-b314-c92439b8b6f4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateNote
+    privilegeid: 'dd78a732-386c-442a-be37-c9353c34c997'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_duplicateleadmapping
+    privilegeid: '7a22e105-e787-407b-b5c4-c9a007222829'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSyncToOutlook
+    privilegeid: 'daaab59c-0d93-492e-b25e-c9a2e19497ed'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTorevops_sherwebopportunitybpf
+    privilegeid: '918b0925-8fc6-4ab0-9679-ca977dd69ea9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareAccount
+    privilegeid: '39b15dfd-09ba-4f30-a390-cac64b635850'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_ConversationSentiment
+    privilegeid: '871bd5fa-9ba9-4ce8-bd39-cb06430c2c45'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsdyn_ConversationSubject
+    privilegeid: 'f90ed57b-87fb-475c-9e42-cb2b393ca931'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_PostAlbum
+    privilegeid: '2e8cd03d-78f3-4da7-bb96-cb4e57246b5e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendCompetitor
+    privilegeid: '055485b1-edac-4e48-a646-cb831562c9fd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadArticleTemplate
+    privilegeid: 'a794cf4a-169a-44d7-8c90-cbc5d97a1cdf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadPluginAssembly
+    privilegeid: 'f5b50296-a212-488a-be92-cbcca8971717'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignAsyncOperation
+    privilegeid: '003d8a0f-c230-411c-a993-cc0a8aeaac96'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadSocialProfile
+    privilegeid: 'd854952c-89df-431d-8a5c-cc0b653fd395'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadACIViewMapper
+    privilegeid: '98026fed-09f2-4669-8c74-cc792ae52396'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareRatingValue
+    privilegeid: '5eded19a-5376-4f3f-8073-cc87a27aeeb2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignKnowledgeArticleViews
+    privilegeid: '03b58133-04b9-47fe-a2db-cc8ecc309b7d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriterevops_sherwebopportunitybpf
+    privilegeid: 'd6193622-9386-48ee-b046-cc9550b74465'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareUserQueryVisualizations
+    privilegeid: '6fb5ff08-c339-47ca-b027-cc9feb6151dc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareCustomerRelationship
+    privilegeid: 'b4c58955-80fe-4f48-8578-cce42d94fe0f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareSocialProfile
+    privilegeid: '7a9ea0ea-23df-4ef1-a5a2-cd295e7a6397'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_actioncardrolesetting
+    privilegeid: 'f7673f98-6107-43b5-bf84-cd38fbf40a26'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_salesinsightssettings
+    privilegeid: '73d4a59c-4b27-40d9-9ddd-cd4d4ae1619b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadComplexControl
+    privilegeid: 'a4736385-9763-4a64-a44b-cd5933edc631'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteAsyncOperation
+    privilegeid: '4440769e-8d79-41fc-ae45-cd65480ffdba'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_ConversationComment
+    privilegeid: 'fd8dce58-c87f-4dc7-9ebd-cd8611bce7c8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignKnowledgeArticle
+    privilegeid: '7a166c85-8bbb-4e37-aded-cdaaeb700128'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteUserQueryVisualizations
+    privilegeid: 'c3c3314f-077b-4d49-9519-cdb6ca7be092'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendWorkflow
+    privilegeid: '71b53683-e781-471f-b9c4-cdcaf62a0cc5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateUserQuery
+    privilegeid: '6ec3c27f-73fd-40a2-8e42-cdd129a59845'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareSharePointDocumentLocation
+    privilegeid: '272aa047-34f9-4eb8-b006-ce01acce46c9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteCustomerOpportunityRole
+    privilegeid: '2cee7919-ede9-410b-b75f-ce166849d752'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateSharePointData
+    privilegeid: '5eb85025-363b-46ea-a77e-ce24159cd231'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadCallbackRegistration
+    privilegeid: '8d05a59d-96e7-4cfe-8810-ce3643bf7cfd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTransactionCurrency
+    privilegeid: '9cdb8389-b874-4d9a-af5c-ce83cb44b838'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_sequencetargetstep
+    privilegeid: 'bccbe51f-a240-404e-83f0-cf529a86df7b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendActivity
+    privilegeid: '78777c10-09ab-4326-b4c8-cf5729702937'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendToPost
+    privilegeid: 'f6f1932d-5a75-4d83-91d2-cfb6e2fe3f35'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_SCIConversation
+    privilegeid: 'a289d1d4-453e-43d6-b4b3-d00af394eef9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadPluginType
+    privilegeid: '9365005c-4703-473b-8d3c-d073cfd8670c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToActivity
+    privilegeid: '6ec8e901-d770-44c0-8f12-d07425f638bd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvCreateTraceLog
+    privilegeid: '4c469bb2-f911-4099-a85f-d0976514a57a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateOpportunitySalesProcess
+    privilegeid: 'feba14f6-989e-4c69-8b3f-d0f9c3202b2e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendrevops_pricingrequest
+    privilegeid: 'e08b9f4e-92fa-48c3-a0c4-d1a883cc31bb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToService
+    privilegeid: '39bdc280-2f57-4387-9f7a-d1d05527a705'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendOrder
+    privilegeid: '1dcf75fe-3540-4f93-84bb-d1e8eec6c8d9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvDeletemsdyn_ConversationComment
+    privilegeid: '8ec94291-8040-4cec-99e3-d1e9025127fe'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareOrder
+    privilegeid: '7bb2363e-aeae-44c9-adc9-d1f13fc355c1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_vivausersetting
+    privilegeid: '9af5b4f5-b217-4068-9aa8-d1f66642abba'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateExchangeSyncIdMapping
+    privilegeid: '0a348445-968d-4e2f-8ea1-d24a5ccdbc41'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignmsdyn_sequence
+    privilegeid: 'e06a9088-67d3-4ef1-aa94-d2aa4a6528f1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadEntityMap
+    privilegeid: '2d331a5b-4d6c-42be-bf0a-d2c0facd97c8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendMailbox
+    privilegeid: '1518e693-c382-43e8-97ca-d2dfe03427e3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignmsdyn_sciusersettings
+    privilegeid: 'e7e0508f-0675-4900-97d3-d351928567f3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriterevops_pricingrequest
+    privilegeid: '4b22a04b-ae5e-45de-b4d5-d3a7893a7e4b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendmsdyn_salesocmessage
+    privilegeid: '7dfecc89-1575-4ef9-9aa5-d42195fc8b70'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToDynamicPropertyOptionSetItem
+    privilegeid: 'ca402223-01c4-41a7-99e4-d4579fda0daa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToExpiredProcess
+    privilegeid: '2354b41c-bbad-4fd0-a4fe-d4c558b9da61'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadCompetitor
+    privilegeid: '36abb6e0-e112-4e60-a5db-d550f9672176'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSubject
+    privilegeid: 'd5d40a46-b459-438b-941e-d55691bf0827'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendBookableResource
+    privilegeid: '87e7b7d4-fcc1-49b6-bcac-d56ef3e2a28b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendToSettingDefinition
+    privilegeid: '2151842d-213b-4eec-a070-d582299c9c15'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToBookableResourceCharacteristic
+    privilegeid: '87d9f80b-08d0-4cb7-8e07-d6b16eed9ff1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvDeletemsdyn_sequence
+    privilegeid: '3d7a3ea4-4e50-4aad-aee7-d76428acb98c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteNewProcess
+    privilegeid: '6403e8ce-d57b-4fc4-bd38-d779ca6e575e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_ChannelInstanceAccount
+    privilegeid: '0de81c53-a2bb-4ab7-b332-d7f75c876bc0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvDeleteList
+    privilegeid: '10c05a11-2835-4707-ac3f-d88268ee44e1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadrevops_accountsoftwaretool
+    privilegeid: '1fa059ca-18f7-4887-92fa-d8c6151f9216'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTorevops_Solution
+    privilegeid: 'e87451d8-20ba-4221-b16c-d8feb68bab94'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_teamsdialeradminsettings
+    privilegeid: '8475c2c4-1253-4c80-90e3-d90f9e3d7277'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSharePointDocument
+    privilegeid: 'd71fc8d0-99bc-430e-abd7-d95c64f11e9c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteSharePointDocument
+    privilegeid: '98dc7568-ba71-416a-96d1-d9a497303691'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteNewProcess
+    privilegeid: 'a752dba1-5e52-4605-97b8-da0c91285fe5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteCustomerOpportunityRole
+    privilegeid: '9aa38629-d3ec-42eb-bef9-da2fc7cceda7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateLead
+    privilegeid: 'a41f965b-2619-4c73-8625-da31945cccc7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateSharePointDocument
+    privilegeid: 'c19dfd3e-fdda-4944-a121-db5476a9f8a9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_salestag
+    privilegeid: 'a9c4e7a7-4df6-4d3b-8497-db6670b5ee41'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendTomsdyn_ConversationParticipantSentiment
+    privilegeid: '4de48a43-4c23-4eaf-b160-dc47d7f4cf3b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendOpportunitySalesProcess
+    privilegeid: 'ad8859b4-44f5-4b23-a278-dc872a9d7b90'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadBookableResourceBooking
+    privilegeid: '4e70a188-1a22-4edb-a324-dc94b8f6be54'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_ocrecording
+    privilegeid: '6856ba99-1573-4479-84cb-dcb80aa554e5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendrevops_practice
+    privilegeid: 'bf0ecdda-832e-4725-8967-dd17a0d279f5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadUser
+    privilegeid: '76faad15-bc44-4f4d-84dc-dd1e1dda74d9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_sciusersettings
+    privilegeid: '670e62d7-53fc-4818-b463-dd3a8925fee6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendArticle
+    privilegeid: 'f7466aa7-6d39-400d-89c9-ddb6a25cbea8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignContract
+    privilegeid: '0dddb95f-986b-48c2-9ed5-de5f9a4a0344'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteTranslationProcess
+    privilegeid: '97534312-6c3b-42ef-a7a1-deb9008cb26e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_accountkpiitem
+    privilegeid: '0d037563-b39c-4bad-bfc2-df4d4440a716'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdyn_vivausersetting
+    privilegeid: '8510d984-c6c3-4196-aa1e-dfa2a35461da'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendEmailTemplate
+    privilegeid: '57444774-b24c-4684-a514-dfcab252c331'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvCreateMailMergeTemplate
+    privilegeid: '88ec96ce-3a2b-4822-9375-e016a4127fc2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadConnectionRole
+    privilegeid: '59916a03-13b2-4d03-9493-e030fb5b18de'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateList
+    privilegeid: '42b303e4-b680-4c22-86b8-e139fdc09e55'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_sequence
+    privilegeid: '462f247c-4c54-4bb4-93b4-e16a7b4b800c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_wkwcolleaguesforcontact
+    privilegeid: 'a485999d-fb1b-4bfe-b0dc-e1d3b589d194'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_salesocmessage
+    privilegeid: '708b78bf-ce0d-4cc3-8c12-e245d850cfd7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadInvoice
+    privilegeid: '824b86c8-7851-4abe-9d99-e281e8f1d504'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_salesocsmstemplate
+    privilegeid: 'e89db3d1-4cb3-45e6-ae4f-e2a363208203'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendImportFile
+    privilegeid: 'f8e6d056-0fc6-4562-9293-e2acea5e2fb4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendRoutingRule
+    privilegeid: '13d88c80-0fe7-49e9-9f0a-e32a1586aacd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendList
+    privilegeid: '06a4cea4-e379-4ca0-860d-e443ed5b6261'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvReadrevops_Churn
+    privilegeid: 'd5d7133a-8b60-476c-858e-e45e63cc80cf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_entityrankingrule
+    privilegeid: '453d9b51-495e-40c7-86a1-e49a6b5ed8bc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteContact
+    privilegeid: '65c22075-4e09-4f39-baec-e4bc3a950686'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdyn_ConversationSystemTag
+    privilegeid: '96e3e8ea-5ee3-4741-81bd-e53c52080e95'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateUserEntityInstanceData
+    privilegeid: 'bb2d4dcb-ac8c-4d1a-a85b-e5b8d3fb968c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadUserEntityInstanceData
+    privilegeid: 'bb2d4dcb-bc8c-4d1a-a85b-e5b8d3fb968c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteUserEntityInstanceData
+    privilegeid: 'bb2d4dcb-cc8c-4d1a-a85b-e5b8d3fb968c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteUserEntityInstanceData
+    privilegeid: 'bb2d4dcb-dc8c-4d1a-a85b-e5b8d3fb968c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareUserEntityInstanceData
+    privilegeid: 'bb2d4dcb-ec8c-4d1a-a85b-e5b8d3fb968c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignUserEntityInstanceData
+    privilegeid: 'bb2d4dcb-fc8c-4d1a-a85b-e5b8d3fb968c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteUserApplicationMetadata
+    privilegeid: 'b824f468-a275-4f44-9bb3-e5d53bf53c29'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignCustomerOpportunityRole
+    privilegeid: '803be1e5-48cb-44f6-ac25-e64c7f1e9e36'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvSharemsdyn_ConversationParticipantSentiment
+    privilegeid: 'cdd03482-7838-4b91-90e0-e67a8b5480ce'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_actioncardregarding
+    privilegeid: '517976e2-31af-4aa4-ace4-e68e23364fe5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateActionCardUserSettings
+    privilegeid: '3d2350ad-2e90-43fc-bc79-e6c1286b2c7d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendrevops_stateorprovince
+    privilegeid: '736d3733-3cf5-4d98-bb2f-e71e0c5c3058'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_recording
+    privilegeid: '309c0234-35f6-4bd3-96d0-e72588a17b4e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreaterevops_opportunitysolution
+    privilegeid: '5c1b253b-5872-4abd-9d4f-e728ce349ba0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_ConversationSubject
+    privilegeid: '08f72d41-cc56-4390-857a-e7775960a8ac'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteMailMergeTemplate
+    privilegeid: '5978156a-b329-434d-94cf-e77ab08356d1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyn_ConversationSummarySuggestion
+    privilegeid: 'c935ebce-3894-469d-8a10-e78b54fd4647'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadRole
+    privilegeid: '222a920a-2778-4564-85cb-e78dde8e4276'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvDeletemsdyn_ConversationAggregatedInsights
+    privilegeid: 'c2be89a9-b528-4668-8664-e85659750d8a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreaterevops_partnerinvestment
+    privilegeid: 'ed1f482b-b91e-4463-9d74-e8c2aaa9e2f1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateBookableResourceBookingExchangeSyncIdMapping
+    privilegeid: 'f504827a-1227-4c60-abb7-e8edded1ac52'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadService
+    privilegeid: 'ca4a3b9f-6887-4b5d-90f4-e918ed17e175'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadAppModule
+    privilegeid: 'cad9c968-cb81-444d-873a-e91b88f345eb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_SCIConversation
+    privilegeid: '131a2b83-6756-4239-a98c-e94a1d56fc0a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsdyn_vivacustomerlist
+    privilegeid: '318ef721-5b73-4f99-a3bb-e9dfc8d5f6f8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadSharePointSite
+    privilegeid: '93cafd0d-dbe1-4cb9-bb7b-e9f3a0c0464a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToSharePointSite
+    privilegeid: 'fac6ea8e-de45-41d0-a4e5-ea080a21f844'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareBookableResourceCategory
+    privilegeid: '4492f4e2-d8b9-4d9a-b931-ea64f31d2af8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_ocrecording
+    privilegeid: 'c4c5dbc8-fa48-4c40-a79c-eb2cc39a6590'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendSocialProfile
+    privilegeid: 'a343b99a-160e-4f00-9f75-ebebde049b00'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareEntitlement
+    privilegeid: '4188c471-5513-4f60-a69b-ec41608f8969'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateConnection
+    privilegeid: '7c48a95b-d237-4852-93fb-ec420b2ec17f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteSyncError
+    privilegeid: 'ee53fa18-8841-4c1c-9279-ec84a430fb46'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyn_ConversationComment
+    privilegeid: '7de13216-4bec-4648-96df-ec88ba7fd77e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteInvoice
+    privilegeid: '3e14a3c0-f07d-49a8-8691-eca43f2dd173'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyn_wallsavedqueryusersettings
+    privilegeid: '1c741f3b-0b6a-4038-9d64-ecd749b18621'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyncrm_leadscore_v2
+    privilegeid: '6d90a2bf-e018-4d68-853a-ecf206509ffd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreaterevops_pricingrequest
+    privilegeid: 'f6d471f2-945a-4191-927a-eda276b706e5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvSharelistoperation
+    privilegeid: '79f693e0-b9a8-4b2c-a363-edad61342525'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvWriteMailboxTrackingFolder
+    privilegeid: 'f7d1d51b-34f0-4f88-bf52-edb02a7a5add'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignSharePointSite
+    privilegeid: 'a55f7336-b1a7-4c4a-b0e6-ee0225e0fdf6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadUserQueryVisualizations
+    privilegeid: 'd68cb29d-2243-41d1-b5a8-ee24dc885140'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadRecommendedDocument
+    privilegeid: '6520650d-06b1-4923-99df-eead894e8895'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTorevops_platformsettings
+    privilegeid: 'd0a8bebd-094e-466e-a896-eec0f8ebab47'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_pricingrequest
+    privilegeid: '0ecfb2b9-fae1-43ac-92a5-eee74e87cd1e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendSharePointDocumentLocation
+    privilegeid: 'df5728a1-5711-42f3-a53a-ef67a78a8edb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadEmailTemplate
+    privilegeid: '6c619dca-e165-4baa-ba16-ef6f820a0e01'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_ConversationSignal
+    privilegeid: '2cdae515-a548-4f40-817b-ef84b7cede11'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadMetric
+    privilegeid: 'bc212780-e5e5-4251-92fe-ef8b0aab36e6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_ConversationSentiment
+    privilegeid: 'e1ac3532-a665-468d-ba0a-f0297a171e12'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadBookableResource
+    privilegeid: '8bd28a3b-2f8f-4c94-a48a-f05aa6b71343'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateContact
+    privilegeid: 'a8bff87f-0df0-41d4-babd-f093faf1e32c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_duplicateleadmapping
+    privilegeid: '59d22c4f-a7ca-48a9-9f66-f120b7cfc979'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteOpportunitySalesProcess
+    privilegeid: 'bd085606-55bf-4e83-8ab2-f13b5211ebda'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdynmkt_email
+    privilegeid: '72ce5351-4599-44e0-a974-f1d469c8dd2e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToConnection
+    privilegeid: '06e60cde-b77f-45f7-b4db-f21bc40c91d1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_actioncardrolesetting
+    privilegeid: '3270b8d2-a546-4d40-8689-f27fdf08bc31'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsdyn_ConversationTag
+    privilegeid: '305ea985-0d76-4898-9d2d-f285666cd0f0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendToTerritory
+    privilegeid: 'b9bb73f7-c659-4c9d-944a-f2af1784d56a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareContact
+    privilegeid: 'ae756940-61ff-4bd3-bfbb-f2b0d542c608'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareBookableResourceCategoryAssn
+    privilegeid: '35b0e00b-0bd5-4fe8-8abf-f36036bb6458'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToQuote
+    privilegeid: '41035df9-7ad8-4af1-8e78-f44672ff1adb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendToLeadToOpportunitySalesProcess
+    privilegeid: 'e4bd120a-6f5e-40db-98f2-f487c473db90'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSearchAvailability
+    privilegeid: 'f1249a6e-33e2-45fe-903b-f4c50810ee58'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignUserQueryVisualizations
+    privilegeid: '96567926-a9d7-42f8-9aee-f4e325d1a143'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateEmailTemplate
+    privilegeid: '921dac3c-3dc0-4f66-83c1-f4e6ea427a45'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteSocialProfile
+    privilegeid: 'f882cf1d-53e5-4151-8913-f4e8f31c8a33'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsdyn_transcript
+    privilegeid: '6c64ad8f-8745-488a-9680-f54db606cb3a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_sciusersettings
+    privilegeid: 'f35c9eeb-8636-4b65-8d8c-f5e4ab1f3091'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignmsdyn_ocrecording
+    privilegeid: 'f4043f11-7218-41a1-aadf-f5e69a3ff76f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsdyn_extendedusersetting
+    privilegeid: 'e8897cd6-08db-4f8c-939c-f613ca0d3eda'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadSLA
+    privilegeid: '9a06070d-af1d-4971-90c9-f64487eeeaac'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_entityrankingrule
+    privilegeid: '924df309-fcf9-448d-887b-f64644af3683'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTolistoperation
+    privilegeid: '5db06693-c10b-44b7-9dd8-f6599dd966a6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvShareSyncError
+    privilegeid: '2ae1b920-e994-4fef-bf90-f6fe8204f3f3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendrevops_solutioncategory
+    privilegeid: '70d01364-e4fe-4609-a60e-f7205f2dc112'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyn_ConversationParticipantInsights
+    privilegeid: '53894ecf-1781-4583-b3b2-f7558f71557b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadNote
+    privilegeid: '3260ad79-203d-41fd-bf2c-f853a5d93483'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateImport
+    privilegeid: '9fefd2f4-7169-44af-8709-f86ee83ec4be'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletePhoneToCaseProcess
+    privilegeid: 'cd385521-d77a-4d6a-ac26-f89d45002dc2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_ConversationTag
+    privilegeid: 'eb59fa84-4f87-488e-89a9-f8dd21cd1773'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvReadmsdyn_ConversationQuestion
+    privilegeid: '20b03245-8496-4fa2-8731-f90758a460ac'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareSLAKPIInstance
+    privilegeid: '7b76dae5-c35b-4205-94bc-f9160996f729'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_SciCustomEmailHighlight
+    privilegeid: 'b489c828-3a96-40b6-87d7-f91f6083c1d7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTorevops_accountpotentialtechstack
+    privilegeid: '2fdb0849-9068-4232-ab8c-f994526f59f9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteLeadToOpportunitySalesProcess
+    privilegeid: '261289bb-5379-4f1e-9ef9-f9a44466629d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendChannelPropertyGroup
+    privilegeid: '48e32154-6ba5-457d-8598-f9f4e701651a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateDynamicPropertyInstance
+    privilegeid: '341d195d-6dd9-47db-96de-fa23989e0fcf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_SciCustomPublisher
+    privilegeid: 'efe3b733-9cc7-4500-8a9e-fa674182c1a1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteBookableResourceBookingExchangeSyncIdMapping
+    privilegeid: '7487d13f-0bf1-40ef-9756-fa99acbaf921'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendrevops_accountproductsummary
+    privilegeid: 'ddb41bd4-a89a-4a9e-9320-fb4ff6249d0b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadBookableResourceBookingExchangeSyncIdMapping
+    privilegeid: 'ced4a183-aa71-4494-b268-fb7aff4bad21'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvSharePersonalDocumentTemplate
+    privilegeid: '4e08386c-24b0-4d23-9bc4-fb8104d70422'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_actioncardrolesetting
+    privilegeid: '7f7de6ad-5525-4c95-a0a4-fbbe9e6095b8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_contactsuggestionruleset
+    privilegeid: '390ec776-482b-4612-b9b3-fbccde2c3762'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_PostAlbum
+    privilegeid: '7382cc82-bb5e-4053-b22e-fbd9dd566cac'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendImportMap
+    privilegeid: '630a24b8-d395-4e97-ada8-fbe706184724'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendSLA
+    privilegeid: '542c4b91-2184-4d97-b54d-fc3a75b309f3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteUserQueryVisualizations
+    privilegeid: '85f4ebc1-4b11-4809-ad5e-fc874262bde4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareConnection
+    privilegeid: '2d264bef-3a39-42f0-bd9b-fc88f44fc926'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdyn_duplicateleadmapping
+    privilegeid: 'f1c66c81-46fb-42be-8d28-fca9bb8f0575'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignSocialProfile
+    privilegeid: '59437112-29f5-44f0-9a66-fd49d342f85d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdyn_actioncardregarding
+    privilegeid: 'd431745a-122d-441a-8202-fd7818bbd694'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteActionCardUserSettings
+    privilegeid: '8ff25be5-647c-4149-a2c0-fd9cac14a738'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignCustomerRelationship
+    privilegeid: '465d9001-87eb-4567-b7c5-fdbdc61024c1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadWizardAccessPrivilege
+    privilegeid: '6b4a9461-0105-4f4a-a047-fe1b4fef02e7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadRatingValue
+    privilegeid: 'eae3115c-136c-4fd4-bb15-fe50cd5ba2b0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadReport
+    privilegeid: '71ad2527-8494-4654-968d-fe61e9a6a9df'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteActivity
+    privilegeid: '0dc8f72c-57d5-4b4d-8892-fe6aac0e4b81'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvGoOffline
+    privilegeid: '38162bd3-4b5e-4434-89b3-fe9df1f5f43a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadKnowledgeBaseRecord
+    privilegeid: '1fa298ca-8894-46f8-b144-feeb6bb82707'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_ConversationParticipantSentiment
+    privilegeid: 'cc5ce339-21cc-4e3d-9d6b-ff1c59ad2e4e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadrevops_sherwebopportunitybpf
+    privilegeid: 'd87945ec-9b72-4014-8fcf-ff959e13e612'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+

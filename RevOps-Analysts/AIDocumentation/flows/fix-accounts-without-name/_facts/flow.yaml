@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '9208db01-c38b-ef11-8a6a-7c1e524071bb'
+name: Fix Accounts without Name
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

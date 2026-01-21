@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '0b2432b9-e03e-ef11-a316-6045bdcd5ea7'
+name: 'Enrich Contact - Scheduled'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

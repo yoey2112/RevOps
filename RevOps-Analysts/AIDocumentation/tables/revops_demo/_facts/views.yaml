@@ -1,0 +1,35 @@
+views:
+  -
+    name: Demo Associated View
+    querytype: 2
+    savedqueryid: '9dc1fba2-d1a6-4c29-b715-028e260f027c'
+  -
+    name: My Open Demos
+    querytype: -1
+    savedqueryid: 'd4b8a555-9cd4-4d29-bdb3-5d28893b3b7b'
+  -
+    name: My Demos
+    description: Active Demos owned by me
+    querytype: 8192
+    savedqueryid: '026d9df2-b434-ef11-8e4e-6045bdcd5fe7'
+  -
+    name: Quick Find Active Demos
+    querytype: 4
+    savedqueryid: '95d7be23-9d46-4a8a-8a22-94d3b5ae479f'
+  -
+    name: Demo Lookup View
+    querytype: 64
+    savedqueryid: 'cfb6ec20-6ed3-429d-bcf9-bfc4f88d19e1'
+  -
+    name: Closed Demos
+    querytype: -1
+    savedqueryid: '0e1a054b-8c86-4ec1-ba62-de49161e1d0a'
+  -
+    name: All Demos
+    querytype: -1
+    savedqueryid: '921e7787-d792-420e-801d-f57040c0e9b0'
+  -
+    name: Demo Advanced Find View
+    querytype: 1
+    savedqueryid: '841581a3-2558-432b-b206-f79024c774c6'
+

@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '51c9db08-99e8-ef11-be21-000d3a09d51b'
+name: 'Contact - Extract Domain from email'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

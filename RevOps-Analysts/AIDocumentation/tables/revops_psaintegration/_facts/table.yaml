@@ -1,0 +1,9 @@
+schema_version: 1
+logical_name: revops_psaintegration
+schema_name: revops_psaintegration
+ownership_type: OrganizationOwned
+is_custom: true
+is_audit_enabled: ''
+is_activity: false
+display_name: ''
+

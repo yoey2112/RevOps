@@ -1,0 +1,60 @@
+views:
+  -
+    name: Email Templates Advanced Find View
+    description: Default Advanced Find view for Email Templates
+    querytype: 1
+    savedqueryid: '86e55d36-98ff-4e73-bd8e-0013ae58c452'
+  -
+    name: All Email Templates
+    description: All Email Templates in the user's current language
+    querytype: -1
+    savedqueryid: '5096d5ce-1a3c-4856-b996-007e41199427'
+  -
+    name: All Language Email Templates
+    description: All Email Templates
+    querytype: -1
+    savedqueryid: 'daf88706-1dad-4810-adc4-1517ed39f575'
+  -
+    name: Global Email Templates
+    querytype: 64
+    savedqueryid: '4d5be2e9-6828-482b-99aa-2387afed7b37'
+  -
+    name: Email Templates Lookup View
+    querytype: 64
+    savedqueryid: 'ec7f193e-2bcb-48bd-9f7f-337b80780f65'
+  -
+    name: View used by workflow sendemailwithtemplate
+    querytype: 2048
+    savedqueryid: 'b8d2fa25-b779-4f60-bbc9-89a02f81c3cc'
+  -
+    name: Email Templates for Lead
+    querytype: -1
+    savedqueryid: 'cd9f98f9-028b-4332-825c-8d476276e559'
+  -
+    name: Email Templates Sorted View
+    description: Entity Specific and Global Email Templates
+    querytype: -1
+    savedqueryid: '21b8d323-06c2-4cde-b756-95b86f0b3ea1'
+  -
+    name: My Email Templates
+    description: My Email Templates
+    querytype: -1
+    savedqueryid: '4c7be207-cc89-4bb7-bb61-bbd5076d05c0'
+  -
+    name: Quick Find All Email Templates
+    querytype: 4
+    savedqueryid: 'd7eab33d-8e2e-44df-8487-c823f5903068'
+  -
+    name: My All Email Templates
+    description: My All Email Templates
+    querytype: 8192
+    savedqueryid: '3cffde47-1a74-4d4a-94c1-d43ff3af296e'
+  -
+    name: Email Templates for Case
+    querytype: -1
+    savedqueryid: '40c2bf58-128d-4280-b972-dc3928372dc7'
+  -
+    name: Email Templates for Opportunity
+    querytype: -1
+    savedqueryid: '226e313a-20c5-4f6d-a359-e30b843ca399'
+

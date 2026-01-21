@@ -1,0 +1,123 @@
+views:
+  -
+    name: My active events
+    querytype: -1
+    savedqueryid: '05bf9e5d-6e68-e711-a824-000d3a33777b'
+  -
+    name: Team active events
+    querytype: -1
+    savedqueryid: '1d38c984-6e68-e711-a824-000d3a33777b'
+  -
+    name: All events
+    querytype: -1
+    savedqueryid: 'cf11fa07-7268-e711-a824-000d3a33777b'
+  -
+    name: My ready to publish events
+    querytype: -1
+    savedqueryid: '5a838214-8f68-e711-a824-000d3a33777b'
+  -
+    name: Events in series view
+    description: This view is used on Event Series tab for recurrent events
+    querytype: -1
+    savedqueryid: 'fce254f2-6e21-ea11-b827-00155d3e6106'
+  -
+    name: Event templates lookup view
+    querytype: 64
+    savedqueryid: '34c14009-66ae-e711-80f1-00155d5d652b'
+  -
+    name: Event templates
+    querytype: -1
+    savedqueryid: '35c14009-66ae-e711-80f1-00155d5d652b'
+  -
+    name: Event series
+    querytype: -1
+    savedqueryid: '4a2e457a-b9a2-e711-abb6-00155d701c02'
+  -
+    name: My events
+    querytype: 8192
+    savedqueryid: '546c45ef-2906-e611-80d3-00155d889ad7'
+  -
+    name: Event team member view
+    description: View to be used in event team member
+    querytype: 2
+    savedqueryid: '5f1b9e05-d357-e611-80d8-00155d8a41a5'
+  -
+    name: Events at the venue
+    querytype: 2
+    savedqueryid: '192a6550-4b18-e611-80d3-00155db19170'
+  -
+    name: Events history
+    description: To be used by a speaker
+    querytype: 2
+    savedqueryid: '34993a6e-5f68-e611-80d7-00155db43ee4'
+  -
+    name: 'Active events with check-ins'
+    querytype: 2
+    savedqueryid: 'c5786c66-c45f-e611-80d6-00155db669f6'
+  -
+    name: Events by team member
+    querytype: 2
+    savedqueryid: '47ffa2cd-1571-e611-80d3-00155db852b2'
+  -
+    name: Events from the last 8 months
+    querytype: -1
+    savedqueryid: '964da982-3e70-e611-80d6-00155dbe63e8'
+  -
+    name: Events for the current year
+    querytype: -1
+    savedqueryid: '6f50545c-3f70-e611-80d6-00155dbe63e8'
+  -
+    name: Events sorted by start date
+    querytype: -1
+    savedqueryid: 'afe53c5a-4570-e611-80d6-00155dbe63e8'
+  -
+    name: msevtmgt_ContactMainEventsAttended
+    description: The view used on the "Events attended" tab of the main contact form
+    querytype: 2
+    savedqueryid: 'a942f7cb-923f-e611-80d6-00155df8bf02'
+  -
+    name: 'Real-time Journeys events'
+    description: 'List of active events in Real-time Journeys'
+    querytype: -1
+    savedqueryid: '25820034-466f-ef11-a671-002248047adc'
+  -
+    name: Active events with Teams streaming
+    querytype: 64
+    savedqueryid: '316f3bea-7606-4e38-9c54-06429b6ead0b'
+  -
+    name: Event lookup view
+    querytype: 64
+    savedqueryid: '6f65002d-26d9-4176-922b-21f53752721e'
+  -
+    name: Event advanced find view
+    querytype: 1
+    savedqueryid: '5bfd1a84-824a-4830-af70-24654d8b601c'
+  -
+    name: Event lookup view
+    querytype: 64
+    savedqueryid: '43d8004f-2a4b-4282-9a39-4a04c8c31e92'
+  -
+    name: 'Real-time Journeys events for Power Pages'
+    querytype: -1
+    savedqueryid: '193c9ab6-0487-ef11-ac21-6045bd032039'
+  -
+    name: Active events
+    querytype: -1
+    savedqueryid: '90c6947a-73d4-46f8-a1b9-658512390ac7'
+  -
+    name: Event associated view
+    querytype: 2
+    savedqueryid: '3682e3aa-8716-4489-98a8-832a56955c13'
+  -
+    name: Active events
+    querytype: 64
+    savedqueryid: '5afa6bd6-cddc-4655-ab80-893fd965c881'
+  -
+    name: Inactive events
+    querytype: -1
+    savedqueryid: '470a5f3d-4be3-4ee3-9e26-93c56e489432'
+  -
+    name: Quick find active events
+    querytype: 4
+    savedqueryid: 'e8c7f353-ee22-4b27-a362-97ab6cfa30e2'
+

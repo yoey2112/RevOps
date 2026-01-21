@@ -1,0 +1,35 @@
+views:
+  -
+    name: My Open In person meetings
+    querytype: -1
+    savedqueryid: '59467e30-3bee-4cb6-bb9c-0f2935dada7e'
+  -
+    name: In person meeting Advanced Find View
+    querytype: 1
+    savedqueryid: 'dc6c0d79-dc16-48ea-b1f3-12c5f582c43f'
+  -
+    name: In person meeting Lookup View
+    querytype: 64
+    savedqueryid: '1282d0ed-8012-40cf-af42-213c52f1df51'
+  -
+    name: Closed In person meetings
+    querytype: -1
+    savedqueryid: '925ee347-469e-41c7-b5cc-49e9aadde08d'
+  -
+    name: In person meeting Associated View
+    querytype: 2
+    savedqueryid: '618649b0-b1d9-40d7-bf29-6d0e3f61af9c'
+  -
+    name: My In person meetings
+    description: Active In person meetings owned by me
+    querytype: 8192
+    savedqueryid: '1dde445d-3d84-f011-b4cc-7c1e52409afe'
+  -
+    name: All In person meetings
+    querytype: -1
+    savedqueryid: 'f1ac8fbf-5720-4e5e-b758-d088b5e4dcfa'
+  -
+    name: Quick Find Active In person meetings
+    querytype: 4
+    savedqueryid: 'a1771b60-d9de-47dd-8c74-eafea2cc6b8b'
+

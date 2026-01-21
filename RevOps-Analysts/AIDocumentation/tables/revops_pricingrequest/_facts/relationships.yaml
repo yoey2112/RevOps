@@ -1,0 +1,117 @@
+relationships:
+  -
+    schemaname: revops_pricingrequest_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_pricingrequest
+  -
+    schemaname: revops_pricingrequest_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_pricingrequest
+  -
+    schemaname: revops_pricingrequest_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_pricingrequest
+  -
+    schemaname: revops_pricingrequest_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_pricingrequest
+  -
+    schemaname: revops_pricingrequest_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_pricingrequest
+  -
+    schemaname: revops_pricingrequest_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_pricingrequest
+  -
+    schemaname: revops_pricingrequest_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_pricingrequest
+  -
+    schemaname: revops_pricingrequest_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_pricingrequest
+  -
+    schemaname: revops_pricingrequest_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_pricingrequest
+  -
+    schemaname: revops_pricingrequest_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_pricingrequest
+  -
+    schemaname: lk_revops_pricingrequest_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_pricingrequest_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_pricingrequest_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_pricingrequest_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_revops_pricingrequest
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_revops_pricingrequest
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_revops_pricingrequest
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_revops_pricingrequest
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: TransactionCurrency_revops_pricingrequest
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_pricingrequest_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_pricingrequest_approver_systemuser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_pricingrequest_product
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: product
+  -
+    schemaname: revops_pricingrequest_solution_revops_solution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: revops_solution
+

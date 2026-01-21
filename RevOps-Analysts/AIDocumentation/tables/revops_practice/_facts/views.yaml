@@ -1,0 +1,31 @@
+views:
+  -
+    name: Practices
+    description: All active Practices
+    querytype: 8192
+    savedqueryid: '5d2eb95f-a81e-ef11-840b-000d3af43335'
+  -
+    name: Practice Lookup View
+    querytype: 64
+    savedqueryid: '1cb866a6-94ed-4ad2-90d8-1886263a99dd'
+  -
+    name: Practice Associated View
+    querytype: 2
+    savedqueryid: 'b3324088-9467-4a2a-84ed-3bd527e3965e'
+  -
+    name: Quick Find Active Practices
+    querytype: 4
+    savedqueryid: '3e134e91-638f-47be-8cea-87a183f1fb1f'
+  -
+    name: Practice Advanced Find View
+    querytype: 1
+    savedqueryid: '1c65185e-a466-467c-8d30-e2cc3bc36fd6'
+  -
+    name: Inactive Practices
+    querytype: -1
+    savedqueryid: 'e95a6f29-329a-479a-8dab-f6563245367b'
+  -
+    name: Active Practices
+    querytype: -1
+    savedqueryid: 'b9f19695-98ba-43e7-9ce1-fb529c833ee6'
+

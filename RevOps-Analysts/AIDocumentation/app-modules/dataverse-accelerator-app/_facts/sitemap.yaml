@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 4
+    uniquename: cat_DataverseCompanionApp
+    appmoduleid: 'f4a277dd-0220-ef11-840b-6045bd5ea018'
+    name: Dataverse Accelerator App
+

@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '214517ef-83c4-ee11-9079-000d3a09cde5'
+name: 'Vendor Account - Create Solution Provider from vendor'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

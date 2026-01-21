@@ -1,0 +1,175 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: GENERAL
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_utmlink
+        field: revops_utmlink
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Quick View
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: ''
+        tab: General
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_url
+        field: revops_url
+      -
+        section: ''
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_parentcampaignid
+        field: revops_parentcampaignid
+      -
+        section: ''
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_campaignnameextension
+        field: revops_campaignnameextension
+      -
+        section: ''
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_utmmedium
+        field: revops_utmmedium
+      -
+        section: ''
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_utmsource
+        field: revops_utmsource
+      -
+        section: ''
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_utmterm
+        field: revops_utmterm
+      -
+        section: ''
+        tab: General
+        disabled: false
+        visible: true
+        control_id: revops_utmcontent
+        field: revops_utmcontent
+      -
+        section: ''
+        tab: General
+        disabled: true
+        visible: true
+        control_id: revops_utmlink
+        field: revops_utmlink
+      -
+        section: ''
+        tab: General
+        disabled: true
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: ''
+        tab: General
+        disabled: false
+        visible: true
+        control_id: statecode
+        field: statecode
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: General
+        visible: true
+        expanded: true
+    field_count: 10
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_utmlink
+        field: revops_utmlink
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: A card form for this entity.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 3
+    type_name: Card
+

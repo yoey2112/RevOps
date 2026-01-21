@@ -1,0 +1,82 @@
+relationships:
+  -
+    schemaname: revops_domain_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_domain
+  -
+    schemaname: revops_domain_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_domain
+  -
+    schemaname: revops_domain_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_domain
+  -
+    schemaname: revops_domain_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_domain
+  -
+    schemaname: revops_domain_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_domain
+  -
+    schemaname: revops_domain_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_domain
+  -
+    schemaname: revops_domain_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_domain
+  -
+    schemaname: revops_domain_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_domain
+  -
+    schemaname: revops_domain_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_domain
+  -
+    schemaname: revops_domain_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_domain
+  -
+    schemaname: lk_revops_domain_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_domain
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_domain_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_domain
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_domain_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_domain
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_domain_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_domain
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_domain
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_domain
+    referencedtablelogicalname: organization
+  -
+    schemaname: revops_domain_Account_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_domain
+    referencedtablelogicalname: account
+

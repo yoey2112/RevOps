@@ -1,0 +1,530 @@
+environment_variables:
+  -
+    id: 'a27f6af2-e74a-f011-877b-0022483d87a9'
+    type: String
+    schema_name: 'powerpages_sharedwithusers_f4d5bb27-493a-4052-acb9-3d510565e404'
+    display_name: 'Power Pages Site Shared Users '
+    description: null
+    default_value: null
+    current_value: 'cc9d216d-57a9-4704-8525-be40df1baa08'
+  -
+    id: 'f0c3a3b1-fb3b-f011-b4cc-002248adb7ed'
+    type: String
+    schema_name: 'powerpages_sharedwithusers_6832ea89-fa6d-4af4-be3d-69d1a25f7166'
+    display_name: 'Power Pages Site Shared Users '
+    description: null
+    default_value: null
+    current_value: 'f8872f78-6eb4-4f51-802a-5300f73c62c9,cc9d216d-57a9-4704-8525-be40df1baa08,1012b5db-009a-40c7-9e05-ea27fc248941,e6bd5c6c-420f-4b66-a6e3-3d3b97c388ee,90a842a6-cf2c-422c-b951-3f9f9caaa5de,4f5e91e8-15b7-49b8-8de4-8f590ba59994,a5665254-dbae-48f9-9198-da061e47024c,7a7795c0-91b0-47fe-bdb6-fbb8e89fdcdc'
+  -
+    id: 'b0252149-6999-4e13-acdd-0105d7241c55'
+    type: String
+    schema_name: revops_queuecst
+    display_name: 'Queue - CST'
+    description: null
+    default_value: null
+    current_value: '77b51644-82d3-ef11-8ee9-002248b08e41'
+  -
+    id: 'a18c3543-6086-409d-ad30-02b6cd496c5d'
+    type: Boolean
+    schema_name: msdyn_IsLeadSummaryBYOMEnabled
+    display_name: Use custom lead summary prompt
+    description: Flag to determine if lead summary BYOM is enabled
+    default_value: no
+    current_value: no
+  -
+    id: '28eb0056-eeda-4ea2-b1ae-084bcbf58da7'
+    type: String
+    schema_name: revops_queuecloudpbx
+    display_name: 'Queue - CloudPBX'
+    description: 'environment variable for the queue - Queue - CloudPBX'
+    default_value: null
+    current_value: 'accea86e-82d3-ef11-8ee9-002248b08e41'
+  -
+    id: 'bc081e71-9ed7-4cc9-9d66-0c90f4886702'
+    type: String
+    schema_name: revops_baseurl
+    display_name: D365 Base URL
+    description: URL of the environment to use in power automate flows.
+    default_value: 'https://sherweb-dev.crm3.dynamics.com/'
+    current_value: 'https://sherweb-prod.crm3.dynamics.com/'
+  -
+    id: 'd310ffe3-0865-4cd3-9dcd-12aa72cd822b'
+    type: String
+    schema_name: revops_subjectcspgodaddy
+    display_name: 'Subject - CSP GoDaddy'
+    description: subject GUID for CSP GoDaddy
+    default_value: null
+    current_value: '9e023a0a-0e0b-f011-bae3-6045bd5ecfaf'
+  -
+    id: '8d44974a-b6e5-499b-bff5-1a59ff662c13'
+    type: String
+    schema_name: msdyn_RegardingObjectEntityOwnerFieldName
+    display_name: RegardingObjectEntityOwnerFieldName
+    description: Specifies the schema name of the field that represents the owner in the regarding entity.
+    default_value: ownerid
+    current_value: ownerid
+  -
+    id: '9ab67e11-997d-4c4b-baa2-1cb37d644171'
+    type: String
+    schema_name: revops_iscbjectowner
+    display_name: ISC Object owner
+    description: 'User, Owner ISC-Object-Owner'
+    default_value: null
+    current_value: 'c6fe1fdf-7423-ef11-840a-000d3af34dcf'
+  -
+    id: 'e5ae61e3-7c7c-48da-9815-277814faf518'
+    type: JSON
+    schema_name: msdyn_inboxcardconfiguration
+    display_name: Inbox card configuration
+    description: Inbox card configuration JSON
+    default_value: '{ 	"incident": { 		"Header": { "attribute": "title" }, 		"MainDetail": { "attribute": "ticketnumber" }, 		"SubDetail": { "attribute": "customerid" }, 		"FooterLeft": { "attribute": "statecode" }, 		"FooterMiddle": { "attribute": "prioritycode" } 	}, 	"email": { 		"Header": { "attribute": "from" }, 		"MainDetail": { "attribute": "subject" }, 		"SubDetail": { "attribute": "regardingobjectid" }, 		"FooterMiddle": { "attribute": "statuscode" } 	} }'
+    current_value: '{ 	"incident": { 		"Header": { "attribute": "title" }, 		"MainDetail": { "attribute": "ticketnumber" }, 		"SubDetail": { "attribute": "customerid" }, 		"FooterLeft": { "attribute": "statecode" }, 		"FooterMiddle": { "attribute": "prioritycode" } 	}, 	"email": { 		"Header": { "attribute": "from" }, 		"MainDetail": { "attribute": "subject" }, 		"SubDetail": { "attribute": "regardingobjectid" }, 		"FooterMiddle": { "attribute": "statuscode" } 	} }'
+  -
+    id: '4cb8f7e3-07e2-4c60-ac6a-2bbdf92b0a3c'
+    type: String
+    schema_name: msdyn_ShouldShowPeekButton
+    display_name: Should the Peek Button Be Showed
+    description: Should the Peek Button Be Showed
+    default_value: no
+    current_value: no
+  -
+    id: '3482fd2e-0375-49af-a778-2effff7fbb0c'
+    type: String
+    schema_name: revops_competitorpax8
+    display_name: 'Competitor - Pax8'
+    description: null
+    default_value: null
+    current_value: '505896c2-3233-ef11-8e4f-6045bdf9e890'
+  -
+    id: '3c48418f-bee5-4a22-8c74-300ba415c480'
+    type: Boolean
+    schema_name: msdyn_AllowCSHAppHide
+    display_name: Enable or disable the ability to hide the CSH application
+    description: Enable or disable the ability to hide the CSH application
+    default_value: no
+    current_value: no
+  -
+    id: 'e84edfb3-77c5-4517-be9e-36f8274fa93c'
+    type: String
+    schema_name: msdyn_DefaultAccount_CSTeamMember
+    display_name: Default customer account
+    description: The default customer account for the Customer Service Team Member app
+    default_value: 'b2e60d2f-9c28-ea11-a81c-000d3a063936'
+    current_value: 'b2e60d2f-9c28-ea11-a81c-000d3a063936'
+  -
+    id: 'd463b4b2-b184-4481-a8d2-3b65095c533a'
+    type: JSON
+    schema_name: msdyn_timeentrycalendarstatus_colors
+    display_name: Time Entry Calendar Status Colors
+    description: Time Entry Calendar Status Colors
+    default_value: '[\n    {\n       "name":"Cancelled",\n       "value":192354320,\n       "color":"#FDE7E9",\n       "border":"#A80000" \n    },\n    {\n       "name":"Draft",\n       "value":192350000,\n       "color":"#FFF4CE",\n       "border":"#C48703"\n    },\n    {\n       "name":"Returned",\n       "value":192350001,\n       "color":"#FFF4CE",\n       "border":"#C48703"\n    },\n    {\n       "name":"Approved",\n       "value":192350002,\n        "color":"#DFF6DD",\n        "border":"#107C10"\n    },\n    {\n       "name":"Submitted",\n       "value":192350003, \n       "color":"#CFE4FA",\n       "border":"#004E8C"\n    },\n    {\n       "name":"Recall Requested",\n       "value":192350004,\n        "color":"#CFE4FA",\n        "border":"#002C4E"\n    }\n ]'
+    current_value: '[{"name":"Cancelled","value":192354320,"color":"#FDE7E9","border":"#A80000"},{"name":"Draft","value":192350000,"color":"#FFF4CE","border":"#C48703"},{"name":"Returned","value":192350001,"color":"#FFF4CE","border":"#C48703"},{"name":"Approved","value":192350002,"color":"#DFF6DD","border":"#107C10"},{"name":"Submitted","value":192350003,"color":"#CFE4FA","border":"#004E8C"},{"name":"Recall Requested","value":192350004,"color":"#CFE4FA","border":"#002C4E"}]'
+  -
+    id: 'e2cb56bb-401a-482f-8c98-45effca38bd9'
+    type: String
+    schema_name: revops_queuecloudpbxl3
+    display_name: 'Queue - CloudPBX - L3'
+    description: 'environment variable for the Queue - CloudPBX - L3'
+    default_value: null
+    current_value: '7d24b474-82d3-ef11-8ee9-002248b08e41'
+  -
+    id: '1d95c01f-b596-4318-b35b-4a66c231c9cf'
+    type: String
+    schema_name: revops_currencyideur
+    display_name: 'CurrencyID - EUR'
+    description: null
+    default_value: null
+    current_value: '09c10790-48c9-ef11-b8e9-6045bd5dff62'
+  -
+    id: '05d080d5-5acf-41cc-8067-4d3fd214fa95'
+    type: String
+    schema_name: revops_currencyidusd
+    display_name: 'CurrencyID - USD'
+    description: null
+    default_value: null
+    current_value: '5f87d06f-397c-ef11-ac20-6045bd5cb48a'
+  -
+    id: '63f8277f-1266-4090-b372-500d05ab3a8f'
+    type: JSON
+    schema_name: msdyn_timetrackingapplication_colors
+    display_name: Time Tracking Application Colors
+    description: Time Tracking Application Colors
+    default_value: '[\n    {\n       "name":"MainColor",\n       "value":0,\n       "color":"#2975B2"\n    },\n    {\n       "name":"SideColor",\n       "value":1,\n       "color":"#47505E"\n    }\n ]'
+    current_value: '[\n    {\n       "name":"MainColor",\n       "value":0,\n       "color":"#2975B2"\n    },\n    {\n       "name":"SideColor",\n       "value":1,\n       "color":"#47505E"\n    }\n ]'
+  -
+    id: 'd18b19b5-7011-41e2-a185-5377e62b86f7'
+    type: String
+    schema_name: revops_queueinsidesalesreps
+    display_name: 'Queue - Inside Sales Reps'
+    description: null
+    default_value: null
+    current_value: 'a79b1720-85d3-ef11-8ee9-002248b07f79'
+  -
+    id: '475bc5c9-edd4-40e4-85ae-54b7566b46be'
+    type: String
+    schema_name: msdyn_lineofbusinessfiltertemplatefeature
+    display_name: LOB Guid List
+    description: Contains All the LOB
+    default_value: '00000000-00000000-00000000-00000000'
+    current_value: '00000000-00000000-00000000-00000000'
+  -
+    id: 'd38355a3-07b9-4a45-b0a6-5fbfc20b8bdf'
+    type: Number
+    schema_name: msdyn_ArcWebClientDeprecationAcknowledge
+    display_name: ARC Web Client Deprecation Acknowledgement
+    description: 'Indicates whether a system admin has acknowledged the ARC web client deprecation notification; 0:YetToShow, 1:YetToAcknowledge, 2:Acknowledged and 3:Canceled'
+    default_value: '0'
+    current_value: '0'
+  -
+    id: 'ece44dd1-b134-4a69-b5f8-61a4d0bd35a7'
+    type: String
+    schema_name: revops_queuesalesescalation
+    display_name: 'Queue - Sales Escalation'
+    description: null
+    default_value: null
+    current_value: '54fe3ef8-19d5-f011-8544-7c1e5253f0d3'
+  -
+    id: 'd1ffcd14-4211-487f-8615-6245ef0c6f18'
+    type: String
+    schema_name: revops_portaluserid
+    display_name: Portal User ID
+    description: User ID of the portal User
+    default_value: null
+    current_value: 'cc6dc8fc-463a-f011-b4cc-6045bd5ecfaf'
+  -
+    id: 'f0e52ea7-558a-42a6-9076-638d5deca6f8'
+    type: Number
+    schema_name: msdyn_MaxChildIncidentNumber
+    display_name: Max Child Case Number
+    description: Variable defining maximum number of child cases per case
+    default_value: '100'
+    current_value: '100'
+  -
+    id: '2fed55ad-4dc8-4b40-8d94-65cc1f5bb66a'
+    type: String
+    schema_name: revops_queuemanagedservices
+    display_name: 'Queue - Managed Services'
+    description: 'environment variable for the Queue - Managed Services'
+    default_value: null
+    current_value: '0b9df038-85d3-ef11-8ee9-002248b07f79'
+  -
+    id: 'c14cccdc-c658-4995-87af-676039b671b6'
+    type: JSON
+    schema_name: msdyn_timetrackingapplication_tooltipvalues
+    display_name: Time Tracking Application Tooltip Values
+    description: 'Time Tracking Application Tooltip Values '
+    default_value: '{"values": ["versionnumber", "statecode"]}'
+    current_value: '{"values": ["versionnumber", "statecode"]}'
+  -
+    id: '2795302f-2f04-40c6-bfcc-6e508d69ada3'
+    type: Number
+    schema_name: msdyn_ArcCreateContactWithRuleOwner
+    display_name: Arc create contact with rule owner
+    description: 'Arc create contact with rule owner support values  0 or 1:  0 - Email owner, 1 - Rule owner'
+    default_value: '0'
+    current_value: '0'
+  -
+    id: '6fe8959c-1824-4246-99ea-71f1861fa044'
+    type: String
+    schema_name: msdynci_scaleUnitUri
+    display_name: scaleUnitUri
+    description: Scale unit URI for CI instance
+    default_value: defaultValue
+    current_value: defaultValue
+  -
+    id: '256696f3-58bc-4fe3-9061-7df5a4b13eb9'
+    type: Boolean
+    schema_name: msdyn_ValidateRoutingRuleBeforeActivation
+    display_name: ValidateRoutingRuleBeforeActivation
+    description: Flag to determine whether to do validation  of routing rule set before activation
+    default_value: yes
+    current_value: yes
+  -
+    id: 'a1f91866-411b-453e-bc4a-7fb685bf9905'
+    type: Number
+    schema_name: msdyn_ArcActivityMonitorForFailedScenarios
+    display_name: Arc Activity Monitor for Failed Scenarios
+    description: 'Arc Activity Monitor for Failed Scenarios supports values  0 or 1:  0 - No, 1 - Yes'
+    default_value: '1'
+    current_value: '1'
+  -
+    id: '74a04e2a-0d10-496c-925f-827be46ad2ba'
+    type: String
+    schema_name: revops_mwhteamid
+    display_name: MWH Team ID
+    description: null
+    default_value: null
+    current_value: 'caf56e17-74be-f011-bbd2-7c1e528ccd11'
+  -
+    id: '34796699-9ec4-4494-b5b1-8599cc185bac'
+    type: String
+    schema_name: revops_queuecloudsupport
+    display_name: 'Queue - Cloud Support'
+    description: 'environment variable for the queue - cloud support'
+    default_value: null
+    current_value: '3fe89662-82d3-ef11-8ee9-002248b08e41'
+  -
+    id: 'b5b3a558-d4c0-4639-b066-88c4c0c3e4c6'
+    type: Number
+    schema_name: msdyn_eligibleEntitiesForActivityEvents
+    display_name: Bot event update regarding entity for task/notes entity
+    description: Variable defining regarding entity of task/notes for bot event update
+    default_value: msdyn_swarm
+    current_value: msdyn_swarm
+  -
+    id: '83bce878-bf86-4dc1-94f7-8e6a2c8f3432'
+    type: Number
+    schema_name: msdyn_ArcActivityMonitorForSuccessScenarios
+    display_name: Arc Activity Monitor for Success Scenarios
+    description: 'Arc Activity Monitor for Success Scenarios supports values  0 or 1:  0 - No, 1 - Yes'
+    default_value: '1'
+    current_value: '1'
+  -
+    id: 'f4ba4422-2fd1-4eff-9840-96b5ec761444'
+    type: String
+    schema_name: revops_queuelevel3
+    display_name: 'Queue - Level 3'
+    description: 'environment variable for the Queue - Level 3'
+    default_value: null
+    current_value: '06f7f532-85d3-ef11-8ee9-002248b07f79'
+  -
+    id: 'adb1fe8a-8ebd-4045-90d7-976bece3c02d'
+    type: String
+    schema_name: revops_helpdeskbcqueue
+    display_name: 'Helpdesk-BC Queue'
+    description: null
+    default_value: null
+    current_value: '14e92994-82d3-ef11-8ee9-002248b08e41'
+  -
+    id: '65fc3ebb-70be-4d90-afd0-9b4c91beb59b'
+    type: JSON
+    schema_name: msdyn_timeentrystatus_colors
+    display_name: Time Entry Status Colors
+    description: Time Entry Status Colors
+    default_value: '[   {     "name": "Cancelled",     "value": 192354320,     "color": "#A80000",     "border": "#945C19"   },   {     "name": "Draft",     "value": 192350000,     "color": "#C48703",     "border": "#1d2519"   },   {     "name": "Returned",     "value": 192350001,     "color": "#A80000",     "border": "#AA8B19"   },   {     "name": "Approved",     "value": 192350002,     "color": "#107C10",     "border": "#461F99"   },   {     "name": "Submitted",     "value": 192350003,     "color": "#107C10",     "border": "#13846F"   },   {     "name": "Recall Requested",     "value": 192350004,     "color": "#C48703",     "border": "#2E5FA9"   } ]'
+    current_value: '[   {     "name": "Cancelled",     "value": 192354320,     "color": "#A80000",     "border": "#945C19"   },   {     "name": "Draft",     "value": 192350000,     "color": "#C48703",     "border": "#1d2519"   },   {     "name": "Returned",     "value": 192350001,     "color": "#A80000",     "border": "#AA8B19"   },   {     "name": "Approved",     "value": 192350002,     "color": "#107C10",     "border": "#461F99"   },   {     "name": "Submitted",     "value": 192350003,     "color": "#107C10",     "border": "#13846F"   },   {     "name": "Recall Requested",     "value": 192350004,     "color": "#C48703",     "border": "#2E5FA9"   } ]'
+  -
+    id: '7217cb35-fbc8-44d0-b7f0-9d3856707576'
+    type: Number
+    schema_name: msdyn_ArcActivityMonitorForSkippedScenarios
+    display_name: Arc Activity Monitor for Skipped Scenarios
+    description: 'Arc Activity Monitor for Skipped Scenarios supports values  0 or 1:  0 - No, 1 - Yes'
+    default_value: '1'
+    current_value: '1'
+  -
+    id: '7a6c9389-e62d-4a97-83da-9e624b8206b2'
+    type: String
+    schema_name: revops_queuelevel2
+    display_name: 'Queue - Level 2'
+    description: 'environment variable for the Queue - Level 2'
+    default_value: null
+    current_value: '17166826-85d3-ef11-8ee9-002248b07f79'
+  -
+    id: 'a826f1b2-4588-44c8-ab46-a5001d8ac3db'
+    type: JSON
+    schema_name: msdyn_caseprocessingagent_globalsettings
+    display_name: Agent Application User Global Settings
+    description: JSON blob for global settings for the Case Processing Agent
+    default_value: '{"appUserId":null,"defaultEmailTemplateId":null,"fallbackQueueId":null,"useCopilotRecommendedTemplate":false}'
+    current_value: '{"appUserId":null,"defaultEmailTemplateId":null,"fallbackQueueId":null,"useCopilotRecommendedTemplate":false}'
+  -
+    id: '8ec5b987-0fbb-4f11-8482-a55b76e0ad37'
+    type: String
+    schema_name: revops_competitorother
+    display_name: 'Competitor - Other'
+    description: null
+    default_value: null
+    current_value: '1b192ecb-8ded-f011-8406-7c1e5254a2c1'
+  -
+    id: '77a20932-2924-49ba-aaa9-a7d3e5aefd8e'
+    type: String
+    schema_name: msdyn_CustomRoleIds
+    display_name: Custom Role IDs
+    description: 'Custom Role IDs as comma-separated list'
+    default_value: '00000000-0000-0000-0000-000000000000'
+    current_value: '00000000-0000-0000-0000-000000000000'
+  -
+    id: '4d5f925e-0c73-4047-a22a-a94d86349e22'
+    type: String
+    schema_name: msdyn_AppInsightsId
+    display_name: AppInsights Id
+    description: Application Insights App Id
+    default_value: '00000000-0000-0000-0000-000000000000'
+    current_value: '00000000-0000-0000-0000-000000000000'
+  -
+    id: '8864fbb7-a54b-4e32-90fc-ab4de51bad9a'
+    type: Boolean
+    schema_name: msdyn_isbyomenabledforleadreadiness
+    display_name: Allow custom model for D365 Sales Readiness Agent
+    description: null
+    default_value: no
+    current_value: no
+  -
+    id: '0af66d50-fe07-4659-b534-ae818122720e'
+    type: String
+    schema_name: revops_queuebilling
+    display_name: 'Queue - Billing'
+    description: null
+    default_value: null
+    current_value: '0adf1f37-82d3-ef11-8ee9-002248b08e41'
+  -
+    id: '21cc4629-8ea2-4a57-8b6a-b781d79b31f7'
+    type: String
+    schema_name: msdyn_lineofbusinessfiltertemplatefeatureuserexpansion
+    display_name: LOB Guid List for user expansion
+    description: Contains All the LOB Guid List for user expansion
+    default_value: '00000000-00000000-00000000-00000000'
+    current_value: '00000000-00000000-00000000-00000000'
+  -
+    id: '373500e0-5599-4230-b9fc-bc58859bcb3a'
+    type: String
+    schema_name: revops_servicemicrosoft365
+    display_name: 'Service - Microsoft 365'
+    description: GUID of the Service "Microsoft 365"
+    default_value: null
+    current_value: '46c46549-2bea-ef11-9342-6045bd5e31ff'
+  -
+    id: '4a63eea2-d88a-4309-8c25-bceb1dfb99c8'
+    type: Boolean
+    schema_name: msdyn_IsOpportunitySummaryBYOMEnabled
+    display_name: Use custom opportunity summary prompt
+    description: Flag to determine if opportunity summary BYOM is enabled
+    default_value: no
+    current_value: no
+  -
+    id: '2feb52f6-419d-4e76-81ce-c14137065802'
+    type: String
+    schema_name: revops_currencyidgbp
+    display_name: 'CurrencyID - GBP'
+    description: null
+    default_value: null
+    current_value: '66f5fbfb-49c9-ef11-b8e9-6045bd5dff62'
+  -
+    id: '8c0318c8-e222-40c9-84ba-c18bb818fb0e'
+    type: String
+    schema_name: revops_subjectcspp2p
+    display_name: 'Subject - CSP P2P'
+    description: null
+    default_value: null
+    current_value: '777d4c10-0e0b-f011-bae3-6045bd5ecfaf'
+  -
+    id: '9d99021c-5a1c-4f5a-a037-c61266847d0f'
+    type: JSON
+    schema_name: msdynmkt_products
+    display_name: products
+    description: List of installed products.
+    default_value: '[]'
+    current_value: '["RTM"]'
+  -
+    id: '2e2a0420-8e33-4e53-941a-d7798c431a02'
+    type: Boolean
+    schema_name: msdyn_RequireDifferentOwnersForEvaluationAndRegardingObject
+    display_name: RequireDifferentOwnersForEvaluationAndRegardingObject
+    description: 'Boolean to require different owners for evaluations and their regarding objects. If turned on, disallows regarding object owner to own/create evaluations.'
+    default_value: no
+    current_value: no
+  -
+    id: '4fa7080e-5d6a-4bef-baee-dd4f9d7835e2'
+    type: Boolean
+    schema_name: msdyn_D365ChannelDefinitionsEnvironmentConfiguration
+    display_name: D365 Channel Definitions Environment Configuration
+    description: D365 Channel Definitions Environment Configuration
+    default_value: yes
+    current_value: yes
+  -
+    id: '27553854-ce9b-48ec-b7fa-e16bb2605b79'
+    type: Boolean
+    schema_name: msdyn_IsAccountSummaryBYOMEnabled
+    display_name: Use custom account summary prompt
+    description: Flag to determine if account summary BYOM is enabled
+    default_value: no
+    current_value: no
+  -
+    id: '5989354a-dbf2-45e5-8717-e43a3d5efaf0'
+    type: String
+    schema_name: revops_subjectcsp
+    display_name: 'Subject - CSP'
+    description: CSP Selection GUID from Subject Table
+    default_value: null
+    current_value: '2ffc2efd-0d0b-f011-bae3-6045bd5ecfaf'
+  -
+    id: 'b89274b2-6ca9-4414-b491-e5ebe85c56ab'
+    type: Number
+    schema_name: msdyn_IncidentShouldValidatePrimaryContact
+    display_name: Customer Entities Relationship For Incidents
+    description: 'Incident should validate primary contact values 0 and 1: 1 - Contacts and Customers in Case records need to be related, 0 - Contacts and Customers in Case records don''t need to be related​'
+    default_value: '1'
+    current_value: '0'
+  -
+    id: '379c8801-5605-4fce-8bf6-e7e72d45f2af'
+    type: Boolean
+    schema_name: msdyn_emailvalidationenabled
+    display_name: EmailValidationEnabled
+    description: null
+    default_value: yes
+    current_value: yes
+  -
+    id: '56c3d548-6489-4eb8-b342-e8274fffe9eb'
+    type: Boolean
+    schema_name: msdyn_isbyomenabledforleadoutreach
+    display_name: Allow custom model for D365 Sales Outreach Agent
+    description: null
+    default_value: no
+    current_value: no
+  -
+    id: 'b9696b7a-0dd3-401a-9925-ed6bfe320a56'
+    type: Boolean
+    schema_name: msdyn_AllowSelectLeafOnly
+    display_name: Should only leaf node selection be allowed
+    description: Should only leaf node selection be allowed
+    default_value: no
+    current_value: no
+  -
+    id: '63dd84e9-90ee-4c81-afe9-ee1deb041fc9'
+    type: Number
+    schema_name: msdyn_IncidentResolutionMode
+    display_name: null
+    description: 'Incident Resolution Mode to Use Supports values  1 or 2 or 3 :  1 - Existing Dialog, 2 - Main Form, 3- Quick Create'
+    default_value: null
+    current_value: '2'
+  -
+    id: 'cb999f7f-fdd4-4a7b-b012-eed517bd18e5'
+    type: String
+    schema_name: revops_appid_csworkspace
+    display_name: App ID – CS Workspace
+    description: App ID of the Customer Service Workspace App in each environment.
+    default_value: '7d62414a-069c-ee11-a569-000d3af4f898'
+    current_value: 'afc40e42-2d20-ef11-840b-6045bd5ea018'
+  -
+    id: 'b3878359-cd3b-47a9-9e5c-efa4b2e27764'
+    type: Number
+    schema_name: AllowUpdateResolvedCanceledIncidents
+    display_name: Incident Update Mode to Use
+    description: 'Incident Update Mode to Use supports values 0, 1, 2 and 3 : 0 - Updates not enabled for non-Active states, 1 - Updates enabled for Resolved state, 2 - Updates enabled for Cancelled state, 3 - Updates enabled for all states'
+    default_value: '3'
+    current_value: '3'
+  -
+    id: 'b0bf2c2b-605a-44b4-b537-efbd05788f32'
+    type: String
+    schema_name: msdyn_playbooksharepointpathfordca
+    display_name: 'D365 Sales - Sales Close Agent - Engage Playbook SharePoint path'
+    description: 'Sales Close Agent - Engage Playbook Sharepoint path'
+    default_value: none
+    current_value: none
+  -
+    id: '942b95d2-4a68-4c5e-be57-f495a80e6763'
+    type: Number
+    schema_name: msdyn_GlobalIncomingWorkItemsSetting
+    display_name: Global Incoming Work Items Setting
+    description: 'Global setting that determines how incoming work items are handled for conversation entities. 1 = Open in New Session, 2 = Add to Inbox, 3 = Smart Accept (default)'
+    default_value: '3'
+    current_value: '3'
+  -
+    id: '3bb795e1-8810-4868-a086-fe43fed34212'
+    type: Number
+    schema_name: msdyn_SLAWebClientDeprecationAcknowledge
+    display_name: SLA Web Client Deprecation Acknowledge
+    description: Indicates whether user has acknowledge the SLA web client deprecation notification
+    default_value: '0'
+    current_value: '0'
+

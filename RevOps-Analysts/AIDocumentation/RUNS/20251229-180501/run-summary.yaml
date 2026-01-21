@@ -1,0 +1,34 @@
+run_id: '20251229-180501'
+mode: nightly
+sources:
+  devcore_solutions_allowlist:
+    - 'revops*'
+  org_url: 'https://sherweb-prod.crm3.dynamics.com'
+  api_version: '9.2'
+counts:
+  solutions: 1083
+  tables: 92
+  queues_included: 94
+  queues_total: 1236
+  plugins: 3
+  flows: 106
+  edges: 112
+fingerprint:
+  fingerprint: '7924e25fa10f6cd0250326a8fa68bcb532ade6deb5cfe11847c2fd92e01db50d'
+  components_hashed: 219
+  timestamp: '2025-12-29T18:07:56.8850127Z'
+warnings:
+completion: success
+confidence:
+  overall: 0.909
+  threshold: 0.8
+  domains:
+    solutions: 1
+    tables: 0.95
+    queues: 0.92
+    plugins: 0.9
+    flows: 0.8
+  notes:
+    - Queues exclude user queues using owner lookup logical name annotation.
+    - POC scoring. Flows extraction is minimal; low confidence expected.
+

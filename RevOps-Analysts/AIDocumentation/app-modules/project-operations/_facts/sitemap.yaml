@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 4
+    uniquename: msdyn_ProjectService
+    appmoduleid: 'c748a902-51a5-f011-bbd2-002248afda59'
+    name: Project Operations
+

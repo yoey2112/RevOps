@@ -1,0 +1,35 @@
+views:
+  -
+    name: My Pricing Requests
+    description: Active Pricing Requests owned by me
+    querytype: 8192
+    savedqueryid: '4f53b098-941e-ef11-840b-000d3af43a08'
+  -
+    name: Pricing Request Lookup View
+    querytype: 64
+    savedqueryid: '368b8071-ed8f-414c-95a3-114534a56dbc'
+  -
+    name: Active Pricing Requests
+    querytype: -1
+    savedqueryid: '7c8ec7ea-2ba2-4a19-920f-240eb3d4dc10'
+  -
+    name: Pricing Request Associated View
+    querytype: 2
+    savedqueryid: 'd6374da9-3bdd-4282-92c6-5637399046d9'
+  -
+    name: My Active Requests
+    querytype: -1
+    savedqueryid: '5ccfc97c-8322-ef11-840b-6045bdcd3da1'
+  -
+    name: Quick Find Active Pricing Requests
+    querytype: 4
+    savedqueryid: '5784e106-827b-4fb9-b2f8-930f2128ca8d'
+  -
+    name: Inactive Pricing Requests
+    querytype: -1
+    savedqueryid: '656a5147-3282-4075-aca8-996810793d8f'
+  -
+    name: Pricing Request Advanced Find View
+    querytype: 1
+    savedqueryid: '02387efe-fb76-414a-97e1-eac9a2c59803'
+

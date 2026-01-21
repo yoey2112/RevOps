@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '1a73f488-e479-ef11-ac20-6045bdf9e493'
+name: 'Enrich Lead - Scheduled'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

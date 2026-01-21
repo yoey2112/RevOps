@@ -1,0 +1,22 @@
+relationships:
+  -
+    schemaname: lk_revops_relatedsolutionssnapshots_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_relatedsolutionssnapshots
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_relatedsolutionssnapshots_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_relatedsolutionssnapshots
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_relatedsolutionssnapshots_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_relatedsolutionssnapshots
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_relatedsolutionssnapshots_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_relatedsolutionssnapshots
+    referencedtablelogicalname: systemuser
+

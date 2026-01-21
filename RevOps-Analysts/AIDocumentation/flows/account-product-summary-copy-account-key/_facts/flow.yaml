@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: 'cfbc8f2d-646c-ef11-a670-6045bdf9e493'
+name: 'Account Product Summary - Copy Account Key'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

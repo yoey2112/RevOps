@@ -1,0 +1,153 @@
+views:
+  -
+    name: Articles drafted by Copilot
+    querytype: -1
+    savedqueryid: '00ec4586-f180-ef11-ac21-000d3a5b4dc8'
+  -
+    name: Portal Search
+    description: View used by the portal search indexer. The columns included in the view will be indexed.
+    querytype: -1
+    savedqueryid: '340566f7-a3a9-e511-942f-00155d038104'
+  -
+    name: My Knowledge Articles
+    querytype: 8192
+    savedqueryid: '46da0632-a200-e511-80d2-00155d217c03'
+  -
+    name: Associated Knowledge Articles
+    description: Displays Associated Knowledge Articles with category
+    querytype: -1
+    savedqueryid: '9eaf1aa2-5860-e611-80d3-00155db19e3e'
+  -
+    name: Archived Articles
+    querytype: -1
+    savedqueryid: '35ae2f6e-fd0b-4bc5-bdfa-004c3b147aa1'
+  -
+    name: Most Popular Articles
+    querytype: -1
+    savedqueryid: '89aebddd-5c6c-40e5-a758-01fa6e20c164'
+  -
+    name: Draft Articles
+    querytype: -1
+    savedqueryid: '35483e6c-5f0a-43de-9a08-1031cc4e85c1'
+  -
+    name: Articles Expiring This Month
+    querytype: -1
+    savedqueryid: '60c66357-6927-44ab-9fa6-18d7ce219937'
+  -
+    name: Knowledge Articles I Follow
+    description: Knowledge Articles that you follow.
+    querytype: -1
+    savedqueryid: '3bf4b6f0-e0bb-4f08-b72e-1b0191bdf9e5'
+  -
+    name: Discarded Articles
+    querytype: -1
+    savedqueryid: 'fa587199-03b6-4815-bd5d-32279485cbb8'
+  -
+    name: All Published Translations
+    querytype: -1
+    savedqueryid: 'f21843bf-0cee-4b09-896d-3af4fb1cbadb'
+  -
+    name: Quick Find Active Knowledge Articles
+    querytype: 4
+    savedqueryid: '2d48cd9a-9289-4373-b615-3bd5cdacfa8a'
+  -
+    name: Knowledge Article Associated View
+    querytype: 2
+    savedqueryid: '60e271d2-38d0-434b-bc40-501cf357ff17'
+  -
+    name: Articles to revise
+    description: 'Articles with rating <= 0.4'
+    querytype: -1
+    savedqueryid: '91189bf4-f080-ef11-ac21-6045bd04c18e'
+  -
+    name: Articles created by copilot
+    description: A view to display the articles drafted by copilot
+    querytype: -1
+    savedqueryid: 'e96cc1ad-ce11-ef11-9f8a-6045bd612a03'
+  -
+    name: Approved Articles
+    querytype: -1
+    savedqueryid: '6274af9a-c35c-4329-85fb-61c3dcac689e'
+  -
+    name: Knowledge Article Advanced Find View
+    querytype: 1
+    savedqueryid: '4e641fc6-92ee-4ff0-ac03-62f5d11cfbca'
+  -
+    name: Proposed Articles
+    querytype: -1
+    savedqueryid: '419195ba-955f-42ae-a222-74a7001029cc'
+  -
+    name: My Articles Expiring This Month
+    querytype: -1
+    savedqueryid: '82eb6e85-5243-4cc8-b49b-7f71cca87f83'
+  -
+    name: Related Versions
+    querytype: 64
+    savedqueryid: '34852847-b1ef-4183-b1ea-936eb11d504c'
+  -
+    name: Related Translations
+    querytype: 64
+    savedqueryid: 'ae82a232-1529-4bde-9972-93ce21a095c6'
+  -
+    name: Published Articles
+    querytype: -1
+    savedqueryid: '90ca108e-a83a-4065-ba7b-98ec54b57400'
+  -
+    name: My Active Articles
+    querytype: -1
+    savedqueryid: '74ad0068-53ae-47a1-b98c-a7132fc9f91e'
+  -
+    name: Draft Articles Needs Review
+    querytype: -1
+    savedqueryid: '0095c4df-ba50-4df7-b1ea-b31909f1fa57'
+  -
+    name: All Versions for Active Articles
+    querytype: -1
+    savedqueryid: 'd2bbd702-12f3-4c87-ae17-bc9e9a079e59'
+  -
+    name: Knowledge Article Lookup View
+    querytype: 64
+    savedqueryid: '0121be9c-70f2-4750-8258-beee9e97ef80'
+  -
+    name: My Published Articles
+    querytype: -1
+    savedqueryid: '9b65bd8e-09ac-4874-af7e-c51747079367'
+  -
+    name: Active Articles
+    querytype: -1
+    savedqueryid: '167b0772-f30b-4d52-bb62-c5de8f46077e'
+  -
+    name: Expired Articles Needs Review
+    querytype: -1
+    savedqueryid: '2c828827-0b0f-4cdc-a2aa-d267517b7479'
+  -
+    name: External Articles
+    querytype: -1
+    savedqueryid: 'a4686222-f85a-4ffe-b514-d6057477009a'
+  -
+    name: My Expired Articles
+    querytype: -1
+    savedqueryid: '0e907f1c-d81f-4af8-b084-d830bb9299ef'
+  -
+    name: Internal Articles
+    querytype: -1
+    savedqueryid: 'e2991c12-25d7-4bf0-a4da-dc561a94613c'
+  -
+    name: Knowledge Articles Being Followed
+    description: Knowledge Articles being followed.
+    querytype: -1
+    savedqueryid: '6641ce3b-2f5a-45d8-bd0f-dcacce9be08a'
+  -
+    name: All Articles
+    querytype: -1
+    savedqueryid: '14a1c51e-ce8a-47a2-8088-e004fa7ca953'
+  -
+    name: Scheduled  Articles
+    querytype: -1
+    savedqueryid: '05a1808b-8311-495e-b338-f3a9f415639f'
+  -
+    name: Highest Rated Articles
+    description: List of published articles with the highest rating.
+    querytype: -1
+    savedqueryid: '3d09e1c2-9488-4163-ae21-fc383c0119a5'
+

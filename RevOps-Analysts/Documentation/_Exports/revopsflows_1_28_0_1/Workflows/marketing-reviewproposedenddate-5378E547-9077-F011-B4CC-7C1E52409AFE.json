@@ -1,0 +1,829 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_c5511"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_office365": {
+        "api": {
+          "name": "shared_office365"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedoffice365_cf262"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "Recurrence": {
+          "type": "Recurrence",
+          "recurrence": {
+            "frequency": "Week",
+            "interval": 1,
+            "startTime": "2025-08-11T14:00:00Z",
+            "schedule": {
+              "weekDays": [
+                "Monday"
+              ]
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "8d0987df-2680-4b01-9273-b35221432012"
+          }
+        }
+      },
+      "actions": {
+        "CheckCampaignForProposedEndDate": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "campaigns",
+              "$filter": "(\n   (proposedend ge @{formatDateTime(variables('StartOfWeek'), 'yyyy-MM-ddT00:00:00Z')} \n    and proposedend le @{formatDateTime(variables('30days'), 'yyyy-MM-ddT23:59:59Z')})\n   or (proposedend lt @{formatDateTime(utcNow(), 'yyyy-MM-ddT00:00:00Z')})\n   or (proposedend eq null)\n)\nand not (statuscode eq 3 or statuscode eq 4 or statuscode eq 5)"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Initialize_null": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "3221724a-1cc2-47bb-8048-5418fa3d2b6e"
+          }
+        },
+        "Apply_to_each": {
+          "type": "Foreach",
+          "foreach": "@outputs('CheckCampaignForProposedEndDate')?['body/value']",
+          "actions": {
+            "Condition_CheckingNull": {
+              "type": "If",
+              "expression": {
+                "and": [
+                  {
+                    "equals": [
+                      "@items('Apply_to_each')?['proposedend']",
+                      "@null"
+                    ]
+                  }
+                ]
+              },
+              "actions": {
+                "check_if_owner": {
+                  "type": "If",
+                  "expression": {
+                    "and": [
+                      {
+                        "equals": [
+                          "@items('Apply_to_each')?['_revops_campaignowner_value']",
+                          "@null"
+                        ]
+                      }
+                    ]
+                  },
+                  "actions": {},
+                  "else": {
+                    "actions": {
+                      "checking_name_of_owner_-_null_value_for_proposed_end_date": {
+                        "type": "OpenApiConnection",
+                        "inputs": {
+                          "parameters": {
+                            "entityName": "systemusers",
+                            "recordId": "@items('Apply_to_each')?['_revops_campaignowner_value']"
+                          },
+                          "host": {
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                            "operationId": "GetItem",
+                            "connectionName": "shared_commondataserviceforapps"
+                          }
+                        },
+                        "metadata": {
+                          "operationMetadataId": "8ff8b021-9c36-49b8-891b-f0c76d5443d6"
+                        }
+                      },
+                      "Append_to_array_variable_null_-_no_proposed_end_date": {
+                        "type": "AppendToArrayVariable",
+                        "inputs": {
+                          "name": "null",
+                          "value": {
+                            "Campaign Name": "@{items('Apply_to_each')?['name']}",
+                            "Campaign Owner": "@{outputs('checking_name_of_owner_-_null_value_for_proposed_end_date')?['body/fullname']}",
+                            "Campaign Owner Email address": " @{outputs('checking_name_of_owner_-_null_value_for_proposed_end_date')?['body/internalemailaddress']}",
+                            "Campaign link": "@{outputs('Compose')}"
+                          }
+                        },
+                        "runAfter": {
+                          "checking_name_of_owner_-_null_value_for_proposed_end_date": [
+                            "Succeeded"
+                          ]
+                        },
+                        "metadata": {
+                          "operationMetadataId": "3840e8c4-b6da-44df-a451-cae6a6c24ce7"
+                        }
+                      }
+                    }
+                  },
+                  "metadata": {
+                    "operationMetadataId": "31c68c70-106f-4568-94e5-838efeffd54d"
+                  }
+                }
+              },
+              "else": {
+                "actions": {
+                  "Condition_-_check_if_owner": {
+                    "type": "If",
+                    "expression": {
+                      "and": [
+                        {
+                          "equals": [
+                            "@items('Apply_to_each')?['_revops_campaignowner_value']",
+                            "@null"
+                          ]
+                        }
+                      ]
+                    },
+                    "actions": {
+                      "TO_REUSE_IF_NEED_BE_IN_THE_FUTURE_-_NO_OWNER_-_Condition_Expired_-_EndingSoon_1": {
+                        "type": "If",
+                        "expression": {
+                          "and": [
+                            {
+                              "lessOrEquals": [
+                                "@items('Apply_to_each')?['proposedend']",
+                                "@utcNow()"
+                              ]
+                            }
+                          ]
+                        },
+                        "actions": {
+                          "Append_to_array_expired_1": {
+                            "type": "AppendToArrayVariable",
+                            "inputs": {
+                              "name": "ExpiredNoOwner",
+                              "value": {
+                                "Campaign Name": "@{items('Apply_to_each')?['name']}",
+                                "Proposed End": "@{formatDateTime(items('Apply_to_each')?['proposedend'], 'yyyy-MM-dd')}",
+                                "Campaign link": "@{outputs('Compose')}"
+                              }
+                            },
+                            "metadata": {
+                              "operationMetadataId": "eb723b9f-7c56-498f-93a2-518ce8e67614"
+                            }
+                          }
+                        },
+                        "else": {
+                          "actions": {
+                            "Append_to_array_EndingSoon_1": {
+                              "type": "AppendToArrayVariable",
+                              "inputs": {
+                                "name": "EndingSoonNoOwner",
+                                "value": {
+                                  "Campaign Name": "@{items('Apply_to_each')?['name']}",
+                                  "Proposed End": "@{formatDateTime(items('Apply_to_each')?['proposedend'], 'yyyy-MM-dd')}",
+                                  "Campaign Link": "@{outputs('Compose')}"
+                                }
+                              },
+                              "metadata": {
+                                "operationMetadataId": "307d4867-3234-4ec1-a9ab-19e39e7fca93"
+                              }
+                            }
+                          }
+                        },
+                        "metadata": {
+                          "operationMetadataId": "5ad011ec-64b7-4b0a-9591-9b4c5c8b7ee6"
+                        }
+                      }
+                    },
+                    "else": {
+                      "actions": {
+                        "checking_name_of_owner": {
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "parameters": {
+                              "entityName": "systemusers",
+                              "recordId": "@items('Apply_to_each')?['_revops_campaignowner_value']"
+                            },
+                            "host": {
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                              "operationId": "GetItem",
+                              "connectionName": "shared_commondataserviceforapps"
+                            }
+                          },
+                          "metadata": {
+                            "operationMetadataId": "8ff8b021-9c36-49b8-891b-f0c76d5443d6"
+                          }
+                        },
+                        "Condition_Expired_-_EndingSoon": {
+                          "type": "If",
+                          "expression": {
+                            "and": [
+                              {
+                                "lessOrEquals": [
+                                  "@items('Apply_to_each')?['proposedend']",
+                                  "@utcNow()"
+                                ]
+                              }
+                            ]
+                          },
+                          "actions": {
+                            "Append_to_array_expired": {
+                              "type": "AppendToArrayVariable",
+                              "inputs": {
+                                "name": "Expired",
+                                "value": {
+                                  "Campaign Name": "@{items('Apply_to_each')?['name']}",
+                                  "Campaign Owner": "@{outputs('checking_name_of_owner')?['body/fullname']}",
+                                  "Campaign Owner Email address": " @{outputs('checking_name_of_owner')?['body/internalemailaddress']}",
+                                  "Proposed End": "@{formatDateTime(items('Apply_to_each')?['proposedend'], 'yyyy-MM-dd')}",
+                                  "Campaign link": "@{outputs('Compose')}"
+                                }
+                              },
+                              "metadata": {
+                                "operationMetadataId": "0f5cef40-de96-4063-b601-c2427b46160e"
+                              }
+                            }
+                          },
+                          "else": {
+                            "actions": {
+                              "Append_to_array_EndingSoon": {
+                                "type": "AppendToArrayVariable",
+                                "inputs": {
+                                  "name": "EndingSoon",
+                                  "value": {
+                                    "Campaign Name": "@{items('Apply_to_each')?['name']}",
+                                    " Campaign Owner": "@{outputs('checking_name_of_owner')?['body/fullname']}",
+                                    "Campaign Owner Email address": " @{outputs('checking_name_of_owner')?['body/internalemailaddress']}",
+                                    "Proposed End": "@{formatDateTime(items('Apply_to_each')?['proposedend'], 'yyyy-MM-dd')}",
+                                    "Campaign Link": "@{outputs('Compose')}"
+                                  }
+                                },
+                                "metadata": {
+                                  "operationMetadataId": "ede287c7-1579-43e0-bc95-215184f86d2f"
+                                }
+                              }
+                            }
+                          },
+                          "runAfter": {
+                            "checking_name_of_owner": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "a1258648-5b85-4224-bf8e-4bea3c0b31d6"
+                          }
+                        }
+                      }
+                    },
+                    "metadata": {
+                      "operationMetadataId": "9fc246c0-011a-475f-bae9-576a18568736"
+                    }
+                  }
+                }
+              },
+              "runAfter": {
+                "Compose": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "caf1d086-64c8-4da7-a3fd-6a2a71963c2d"
+              }
+            },
+            "Compose": {
+              "type": "Compose",
+              "inputs": "https://sherweb-prod.crm3.dynamics.com/main.aspx?appid=51dc05e6-7a23-ef11-840a-0022483e8dfe&pagetype=entityrecord&etn=campaign&id=@{items('Apply_to_each')?['campaignid']}\n",
+              "metadata": {
+                "operationMetadataId": "a3bdd175-143f-4d67-b702-767a702c4670"
+              }
+            }
+          },
+          "runAfter": {
+            "CheckCampaignForProposedEndDate": [
+              "SUCCEEDED"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b93f249c-af8b-4436-b70a-fc96cf30e1d5"
+          }
+        },
+        "Initialize_variable_-_StartOfWeek": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "StartOfWeek",
+                "type": "string",
+                "value": "@startOfDay(addDays(utcNow(), sub(1, dayOfWeek(utcNow()))))"
+              }
+            ]
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "be7f8c29-871e-4ca7-a9f3-47378b669865"
+          }
+        },
+        "Initialize_variable_30days": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "30days",
+                "type": "string",
+                "value": "@{startOfDay(addDays(utcNow(), add(sub(1, dayOfWeek(utcNow())), 30)))}\n"
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_-_StartOfWeek": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4a046d8c-9635-428d-a713-d5db5adc5ed1"
+          }
+        },
+        "EndingSoon": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "EndingSoon",
+                "type": "array",
+                "value": []
+              }
+            ]
+          },
+          "runAfter": {
+            "Initialize_variable_30days": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "215e7355-c900-40ff-b46d-4357031e5c20"
+          }
+        },
+        "Expired": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Expired",
+                "type": "array",
+                "value": []
+              }
+            ]
+          },
+          "runAfter": {
+            "EndingSoonNoOwner": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "fa06ef9b-f33b-42cb-a568-18bc958f520e"
+          }
+        },
+        "createTableEndingSoon": {
+          "type": "Table",
+          "inputs": {
+            "from": "@variables('EndingSoon')",
+            "format": "HTML"
+          },
+          "runAfter": {
+            "Apply_to_each": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6ae51b5d-fcee-4169-aa0c-3aa32b3418e6"
+          }
+        },
+        "createTableExpired": {
+          "type": "Table",
+          "inputs": {
+            "from": "@variables('Expired')",
+            "format": "HTML"
+          },
+          "runAfter": {
+            "createTableEndingSoonNoOwner": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "0e5015d2-6235-42a1-a97f-246fb6a9d497"
+          }
+        },
+        "Initialize_null": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "null",
+                "type": "array",
+                "value": []
+              }
+            ]
+          },
+          "runAfter": {
+            "ExpiredNoOwner": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4abdf470-79ab-4224-8cbe-7ef1173aedd4"
+          }
+        },
+        "Create_TableNull": {
+          "type": "Table",
+          "inputs": {
+            "from": "@variables('null')",
+            "format": "HTML"
+          },
+          "runAfter": {
+            "createTableExpiredNoOwner": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a004d94c-bbf5-4470-b6be-4c3e98964b20"
+          }
+        },
+        "ExpiredNoOwner": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ExpiredNoOwner",
+                "type": "array",
+                "value": []
+              }
+            ]
+          },
+          "runAfter": {
+            "Expired": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "fa06ef9b-f33b-42cb-a568-18bc958f520e"
+          }
+        },
+        "EndingSoonNoOwner": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "EndingSoonNoOwner",
+                "type": "array",
+                "value": []
+              }
+            ]
+          },
+          "runAfter": {
+            "EndingSoon": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "215e7355-c900-40ff-b46d-4357031e5c20"
+          }
+        },
+        "createTableExpiredNoOwner": {
+          "type": "Table",
+          "inputs": {
+            "from": "@variables('ExpiredNoOwner')",
+            "format": "HTML"
+          },
+          "runAfter": {
+            "createTableExpired": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "67b0471d-fa20-4046-8f03-f0d4cee64acc"
+          }
+        },
+        "createTableEndingSoonNoOwner": {
+          "type": "Table",
+          "inputs": {
+            "from": "@variables('EndingSoonNoOwner')",
+            "format": "HTML"
+          },
+          "runAfter": {
+            "createTableEndingSoon": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "134abb45-98b4-47db-86a8-e9cc246d6373"
+          }
+        },
+        "Select_-_owners_of_the_array_expired": {
+          "type": "Select",
+          "inputs": {
+            "from": "@variables('Expired')",
+            "select": {
+              "owner": "@item()?['Campaign Owner']",
+              "email": "@item()?['Campaign Owner Email address']\r\n"
+            }
+          },
+          "runAfter": {
+            "Create_TableNull": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a4543971-a18d-4dd1-ab91-8974ef59d6bc"
+          }
+        },
+        "Compose_-_unique_owner_expired": {
+          "type": "Compose",
+          "inputs": "@union(body('Select_-_owners_of_the_array_expired'),body('Select_-_owners_of_the_array_expired'))",
+          "runAfter": {
+            "Select_-_owner_of_the_array_null": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4d8a28fb-2a21-48fc-a4df-e82361aee090"
+          }
+        },
+        "aeach_expired": {
+          "type": "Foreach",
+          "foreach": "@outputs('Compose_-_unique_owner_expired')",
+          "actions": {
+            "Filter_array_-_expired": {
+              "type": "Query",
+              "inputs": {
+                "from": "@variables('Expired')",
+                "where": "@equals(item()?['Campaign Owner Email address'],items('aeach_expired')?['Email'])"
+              },
+              "metadata": {
+                "operationMetadataId": "c84319d9-ff66-42f6-bf5c-32e378b65b2f"
+              }
+            },
+            "Create_HTML_table_-_expired": {
+              "type": "Table",
+              "inputs": {
+                "from": "@body('Filter_array_-_expired')",
+                "format": "HTML"
+              },
+              "runAfter": {
+                "Filter_array_-_expired": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "3e39aa1c-7f5a-4adf-8274-d9cd1eb77a2b"
+              }
+            },
+            "Send_an_email_from_a_shared_mailbox_(V2)": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "emailMessage/MailboxAddress": "revops-noreply@sherweb.com",
+                  "emailMessage/To": "@items('aeach_expired')?['Email']",
+                  "emailMessage/Subject": "[Campaign Status] Notification based on proposed end time",
+                  "emailMessage/Body": "<p class=\"editor-paragraph\">Good day!<br>You are receiving this email because there is some campaign that might be needing attention. See below for your convenience:<br><br><b><strong class=\"editor-text-bold\">Campaign that have an expired proposed end time that you are the owner:</strong></b><br>@{body('Create_HTML_table_-_expired')}</p><br><br><p class=\"editor-paragraph\">Should this campaign's obsolete, just change the status of the campaign to completed, all asset will then be closed following the status change.</p><p class=\"editor-paragraph\"><br>Thank you,</p><p class=\"editor-paragraph\">RevOps Team</p>",
+                  "emailMessage/Importance": "Normal"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365",
+                  "operationId": "SharedMailboxSendEmailV2",
+                  "connectionName": "shared_office365"
+                }
+              },
+              "runAfter": {
+                "Create_HTML_table_-_expired": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "c344bc4c-846e-4e6a-978d-d484792dbf89"
+              }
+            }
+          },
+          "runAfter": {
+            "Compose_-_unique_owner_null": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9c881e43-5a4d-40e3-8bd4-7cc322600ab7"
+          }
+        },
+        "aeach_ending_soon": {
+          "type": "Foreach",
+          "foreach": "@outputs('Compose_-_unique_owner_ending_soon')",
+          "actions": {
+            "Filter_array_-_ending_soon": {
+              "type": "Query",
+              "inputs": {
+                "from": "@variables('EndingSoon')",
+                "where": "@equals(item()?['Campaign Owner Email address'],items('aeach_ending_soon')?['Email'])"
+              },
+              "metadata": {
+                "operationMetadataId": "61ed3583-acbb-4252-be38-1880b0bbfba1"
+              }
+            },
+            "Create_HTML_table_-_ending_soon": {
+              "type": "Table",
+              "inputs": {
+                "from": "@body('Filter_array_-_ending_soon')",
+                "format": "HTML"
+              },
+              "runAfter": {
+                "Filter_array_-_ending_soon": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "21e53beb-3a45-4b1a-a6b3-706b5bfbb452"
+              }
+            },
+            "Send_an_email_from_a_shared_mailbox_(V2)_1": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "emailMessage/MailboxAddress": "revops-noreply@sherweb.com",
+                  "emailMessage/To": "@items('aeach_ending_soon')?['Email']",
+                  "emailMessage/Subject": "[Campaign Status] campaign part of the last 30 days proposed end date",
+                  "emailMessage/Body": "<p class=\"editor-paragraph\">Good day!<br>You are receiving this email because there is some campaign that might be needing attention. See below for your convenience:<br><br><b><strong class=\"editor-text-bold\">Campaign included in the next 30 days that the proposed end date is in:</strong></b><br>@{body('Create_HTML_table_-_ending_soon')}</p><br><p class=\"editor-paragraph\">Should this campaign's obsolete, just change the status of the campaign to completed, all asset will then be closed following the status change.</p><br><p class=\"editor-paragraph\">Thank you,</p><p class=\"editor-paragraph\">RevOps Team.</p>",
+                  "emailMessage/Importance": "Normal"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365",
+                  "operationId": "SharedMailboxSendEmailV2",
+                  "connectionName": "shared_office365"
+                }
+              },
+              "runAfter": {
+                "Create_HTML_table_-_ending_soon": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "ad2091e5-73c7-43d3-858c-2165f42ffd45"
+              }
+            }
+          },
+          "runAfter": {
+            "Compose_-_unique_owner_null": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "79765c83-f4fa-46f4-9803-37d54a7682cf"
+          }
+        },
+        "Select_-_owner_of_the_array_ending_soon": {
+          "type": "Select",
+          "inputs": {
+            "from": "@variables('EndingSoon')",
+            "select": {
+              "owner": "@item()?['Campaign Owner']",
+              "email": "@item()?['Campaign Owner Email address']\r\n"
+            }
+          },
+          "runAfter": {
+            "Select_-_owners_of_the_array_expired": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4bf57347-28a9-4e13-bafb-3cc8045a1b92"
+          }
+        },
+        "Compose_-_unique_owner_ending_soon": {
+          "type": "Compose",
+          "inputs": "@union(body('Select_-_owner_of_the_array_ending_soon'),body('Select_-_owner_of_the_array_ending_soon'))",
+          "runAfter": {
+            "Compose_-_unique_owner_expired": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f3c7edd6-1bb5-4326-b6bf-b404dc3e0bd7"
+          }
+        },
+        "Select_-_owner_of_the_array_null": {
+          "type": "Select",
+          "inputs": {
+            "from": "@variables('null')",
+            "select": {
+              "owner": "@item()?['Campaign Owner']",
+              "email": "@item()?['Campaign Owner Email address']\r\n"
+            }
+          },
+          "runAfter": {
+            "Select_-_owner_of_the_array_ending_soon": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "0d120693-87d9-417a-893e-992505ccb997"
+          }
+        },
+        "Compose_-_unique_owner_null": {
+          "type": "Compose",
+          "inputs": "@union(body('Select_-_owner_of_the_array_null'),body('Select_-_owner_of_the_array_null'))",
+          "runAfter": {
+            "Compose_-_unique_owner_ending_soon": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "87ca12bf-c8ab-44de-ad21-7455de349d98"
+          }
+        },
+        "Aeach_null": {
+          "type": "Foreach",
+          "foreach": "@outputs('Compose_-_unique_owner_null')",
+          "actions": {
+            "Filter_array_-_null": {
+              "type": "Query",
+              "inputs": {
+                "from": "@variables('null')",
+                "where": "@equals(item()?['Campaign Owner Email address'],items('aeach_null')?['Email'])"
+              },
+              "metadata": {
+                "operationMetadataId": "606f177c-4cc4-46e6-9f18-840262ec712d"
+              }
+            },
+            "Create_HTML_table_-_null": {
+              "type": "Table",
+              "inputs": {
+                "from": "@body('Filter_array_-_null')",
+                "format": "HTML"
+              },
+              "runAfter": {
+                "Filter_array_-_null": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "7bef6910-952f-475a-9f47-b55790f0c9b7"
+              }
+            },
+            "Send_an_email_from_a_shared_mailbox_(V2)_2": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "emailMessage/MailboxAddress": "revops-noreply@sherweb.com",
+                  "emailMessage/To": "@items('aeach_null')?['Email']",
+                  "emailMessage/Subject": "[Campaign Status] campaign without proposed end date",
+                  "emailMessage/Body": "<p class=\"editor-paragraph\">Good day!</p><p class=\"editor-paragraph\">You are receiving this email because there is some campaign that might be needing attention. See below for your convenience:<br><br><b><strong class=\"editor-text-bold\">Campaign without proposed end date:</strong></b><br>@{body('Create_HTML_table_-_null')}<br><br>Should this campaign's obsolete, just change the status of the campaign to completed, all asset will then be closed following the status change.</p><br><p class=\"editor-paragraph\">Thank you,</p><p class=\"editor-paragraph\">RevOps Team</p>",
+                  "emailMessage/Importance": "Normal"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365",
+                  "operationId": "SharedMailboxSendEmailV2",
+                  "connectionName": "shared_office365"
+                }
+              },
+              "runAfter": {
+                "Create_HTML_table_-_null": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "663be1c4-7e75-4753-b2d0-47aaa59af256"
+              }
+            }
+          },
+          "runAfter": {
+            "Compose_-_unique_owner_null": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5264fafe-1bbf-48a0-b4ee-af900bb05c14"
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

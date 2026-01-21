@@ -1,0 +1,3036 @@
+{
+  "edges": [
+    {
+      "from_asset_id": "plugin:cbd5a8f0-9111-40b8-81b2-1f6f870ea8f3",
+      "evidence": "plugin.registration",
+      "confidence": "medium",
+      "edge_type": "plugin_triggers_on_table",
+      "to_asset_id": "table:account"
+    },
+    {
+      "from_asset_id": "plugin:f5a10995-357b-4b89-af82-ad395cd4357e",
+      "evidence": "plugin.registration",
+      "confidence": "medium",
+      "edge_type": "plugin_triggers_on_table",
+      "to_asset_id": "table:account"
+    },
+    {
+      "from_asset_id": "plugin:db443b24-e527-4701-9122-fe3e1e993779",
+      "evidence": "plugin.registration",
+      "confidence": "medium",
+      "edge_type": "plugin_triggers_on_table",
+      "to_asset_id": "table:account"
+    },
+    {
+      "from_asset_id": "plugin:115c57ce-6551-47cf-8f60-262b00fb8eec",
+      "evidence": "plugin.registration",
+      "confidence": "medium",
+      "edge_type": "plugin_triggers_on_table",
+      "to_asset_id": "table:account"
+    },
+    {
+      "from_asset_id": "plugin:38bacd4b-61a6-4028-9d42-e19343472774",
+      "evidence": "plugin.registration",
+      "confidence": "medium",
+      "edge_type": "plugin_triggers_on_table",
+      "to_asset_id": "table:account"
+    },
+    {
+      "from_asset_id": "plugin:2b6e064b-56da-4614-9a02-9596ee147cf0",
+      "evidence": "plugin.registration",
+      "confidence": "medium",
+      "edge_type": "plugin_triggers_on_table",
+      "to_asset_id": "table:account"
+    },
+    {
+      "from_asset_id": "plugin:a1da7847-b1bd-411d-ba0d-14fc3f831836",
+      "evidence": "plugin.registration",
+      "confidence": "medium",
+      "edge_type": "plugin_triggers_on_table",
+      "to_asset_id": "table:account"
+    },
+    {
+      "from_asset_id": "flow:4b2cd07d-1f9a-ee11-be37-000d3af4f266",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:cb799a23-777b-ef11-ac20-6045bdf9e493",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:5e0d76fd-ba26-f011-8c4e-7ced8d04f24d",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:1d01247d-8de8-ef11-be21-000d3a09d51b",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:77b3076c-1200-f011-bae3-7c1e52409afe",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:633172f5-c29e-f011-bbd2-7ced8d061554",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:416659c3-51ba-f011-bbd3-7c1e52067e9e",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:20e5e4f3-3f57-f011-bec2-7ced8d063295",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:cfbc8f2d-646c-ef11-a670-6045bdf9e493",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:80e8dada-3f3a-f011-b4cc-7c1e52409afe",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:12b018cd-fd93-f011-b4cc-6045bdfa0630",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:ec3260dc-9343-ef11-a316-6045bdcd5ea7",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:d96a7992-b69f-f011-bbd2-7ced8d058789",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:05e173a0-6274-ef11-ac20-000d3af47275",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:2710bbe6-7877-f011-b4cc-7c1e52409afe",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:ff8ff78c-3d1c-ef11-840a-0022486d6c17",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:2d4ec9f4-5832-ef11-8e4e-6045bdcd5e2a",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:76fd7f57-ba3c-f011-b4cc-7c1e52409afe",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:c547a2b9-25bb-f011-bbd3-6045bdf9f19e",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:98f9cc2a-e108-f011-bae3-7ced8d04f24d",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:2c98e0f8-b81a-f011-998a-7ced8d04f24d",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:5ba51fee-143a-ef11-a316-6045bdcd5dde",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:7dac8344-11ac-ef11-a72d-6045bdf9b92b",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:6a5560fe-157d-f011-b4cc-7ced8d04f24d",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:0cbf6af4-007d-f011-b4cc-7c1e52409afe",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:de29be5c-030f-ef11-9f89-000d3a0a0668",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:c6ee8cbc-1919-ef11-840a-7c1e520637cd",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:4abab8df-5206-f011-bae2-7ced8d063295",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:50c55434-3d1c-ef11-840b-002248d5a732",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:0f2473c5-239a-ee11-be37-000d3af4f717",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:530a3f91-b481-ef11-ac21-000d3af43697",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:1a73f488-e479-ef11-ac20-6045bdf9e493",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:bf728815-6f4c-f011-877b-7c1e52409afe",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:1b21a4d6-5ada-ee11-904d-002248d5a732",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:51c9db08-99e8-ef11-be21-000d3a09d51b",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:88c1fdd1-a46b-ef11-a670-000d3af47275",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:f3277816-22ed-ee11-a1fd-0022486dc4eb",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:4312b647-622e-ef11-8e4f-6045bdcd5dde",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:a21628e1-353e-ef11-a316-6045bdcd5dde",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:65ab024b-5c7f-f011-b4cc-7c1e52409afe",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:2203afa2-feca-f011-8544-7ced8d061554",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:c6c03138-6102-ef11-9f8a-002248d5a732",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:169b861b-fa16-f011-998a-7ced8d04f24d",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:eeb603b3-bc47-f011-877a-7c1e52409afe",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:0e903c77-505a-ef11-bfe3-6045bdf9a15c",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:eb2ba9c6-fa5d-ee11-8df0-000d3a09f3d2",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:577e4e2b-453a-ef11-a316-6045bdcd5e88",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:3d01394b-a3cb-f011-8544-7c1e52067e9e",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:227c7350-1a8f-f011-b4cb-7ced8d04e0f6",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:e5a057bf-fd48-ef11-accd-0022486df470",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:214517ef-83c4-ee11-9079-000d3a09cde5",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:98aad464-f360-f011-bec1-7c1e5206727f",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:f665edbc-a4f3-ef11-be20-7c1e5206727f",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:a4267844-d0bf-f011-bbd3-7c1e52067e9e",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:d50de08e-0f88-f011-b4cc-7ced8d06221f",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:e67c203d-3b24-f011-8c4e-7c1e52409afe",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:64e3c0bb-b194-f011-b4cc-6045bdfa0630",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:0137957c-7de9-ef11-be20-7c1e52870606",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:4426e14b-a0fa-ef11-bae1-7c1e5206727f",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:da34706c-cc9e-f011-bbd2-7ced8d061554",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:90a1ff34-7b95-f011-b4cc-6045bdfa0630",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:b3ce4fa1-dc75-ef11-ac20-7c1e520630e3",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:3c9cd4b9-1919-ef11-840a-6045bdcd283e",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:1f4f7206-f616-f011-998a-7c1e5206727f",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:5c484896-530e-ef11-9f89-000d3af4117b",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:0aa72c99-f571-f011-bec2-7ced8d063295",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:ad8c22c4-107d-f011-b4cc-7c1e52409afe",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:565632f5-0d85-f011-b4cc-7ced8d063295",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:d6284b19-ef3e-ef11-a316-6045bdcd5ea7",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:2649d858-4bd5-f011-8544-7ced8d061554",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:bcf520bb-d4ad-f011-bbd3-7c1e52067e9e",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:26f2d8ab-5e99-ee11-be37-000d3af4f266",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:16df325b-ce8f-f011-b4cc-6045bdfa0630",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:e9a9e743-e9d1-ef11-a72e-7c1e52063863",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:b15a64db-b976-f011-b4cc-7ced8d063295",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:91fb6fe3-6b78-f011-b4cc-7ced8d063295",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:742ea0c4-d142-f011-877a-7ced8d063295",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:08fd6ead-3a19-f011-998a-7ced8d063295",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:c4942a87-cdc0-f011-bbd3-7ced8d061554",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:2002e152-9539-ef11-a316-6045bdcd5dde",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:d0f6ec6a-023b-f011-b4cc-7ced8d063295",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:df670963-ac82-f011-b4cb-7c1e5206727f",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:ea953a71-6ad6-ee11-904c-002248d5a789",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:dd389c85-6d9c-ef11-8a6a-000d3af4dd88",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:6b0c257b-5941-f011-877a-7c1e52409afe",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:9208db01-c38b-ef11-8a6a-7c1e524071bb",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:9b2cc09c-bcc4-f011-bbd3-7c1e52067e9e",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:885fa9a4-521f-ef11-840a-6045bdcd283e",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:0950b5ca-c089-f011-b4cc-6045bdcd501f",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:83b3c17e-2bca-f011-8544-6045bdf9f19e",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:0b2432b9-e03e-ef11-a316-6045bdcd5ea7",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:a622cb37-5595-ef11-8a69-000d3a0a3998",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:5378e547-9077-f011-b4cc-7c1e52409afe",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:1b9a722f-a343-ef11-a316-0022486df470",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:ae8115af-54be-f011-bbd3-7c1e52067e9e",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:incident"
+    },
+    {
+      "from_asset_id": "flow:abcf0f94-f9b1-ef11-a72d-7c1e52063863",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:82f50409-87c4-ee11-9079-000d3a09cf8e",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:1a3834b4-abdd-ee11-904c-0022486dc4eb",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:4c3cce43-8ed5-ee11-904c-002248d5a732",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:875fa9a4-521f-ef11-840a-6045bdcd283e",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:bbd3e232-67e2-ef11-be20-7c1e52870606",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:d3fa82ea-5606-f011-bae2-7c1e5206727f",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:8ff7c609-5fd4-ee11-904c-002248d5a27a",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:53f99fc6-82c4-ee11-9079-000d3a09cf8e",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:5376b140-5ada-ee11-904c-6045bdf9e7de",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "flow:122313bc-9aa0-f011-bbd2-7ced8d061554",
+      "evidence": "workflow.primaryentity",
+      "confidence": "high",
+      "edge_type": "flow_triggers_on_table",
+      "to_asset_id": "table:none"
+    },
+    {
+      "from_asset_id": "sla:a8e517bd-a7e4-ef11-be21-0022486e1e61",
+      "evidence": "sla.objecttypecode",
+      "confidence": "high",
+      "edge_type": "sla_applies_to_table",
+      "to_asset_id": "table:112"
+    },
+    {
+      "from_asset_id": "sla:195f628d-f25c-f011-877b-002248b2c290",
+      "evidence": "sla.objecttypecode",
+      "confidence": "high",
+      "edge_type": "sla_applies_to_table",
+      "to_asset_id": "table:112"
+    },
+    {
+      "from_asset_id": "sla:88a8c0d4-7883-f011-b4cc-002248b2c290",
+      "evidence": "sla.objecttypecode",
+      "confidence": "high",
+      "edge_type": "sla_applies_to_table",
+      "to_asset_id": "table:112"
+    }
+  ],
+  "nodes": [
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:f4b7c406-5ec3-441d-ba6c-01d2c19f68d0",
+      "name": "revopsportals_Patch_1bc50d9a"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:0114d858-cdfd-4882-ac4a-036b3c77954a",
+      "name": "RevOpsRequestsForm"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:40c19b0a-2845-4086-b83e-05d84383ce69",
+      "name": "revopsplugins_Patch_3c139d82"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:9199b3fc-72fd-4c6f-b886-21f002df69d0",
+      "name": "revopsflows_Patch_a615b3d9"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:5080cc19-e8d8-484a-b8e2-2ef9b461c965",
+      "name": "revopstables_Patch_1ab804f7"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:7b8ecab4-0c2e-4aeb-9c88-32b2bbe9213f",
+      "name": "revopstables_Patch_47162902"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:fc5693c4-2d41-4e27-a701-357babf338bc",
+      "name": "revopsplugins"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:1b8e285d-5095-4ce1-a465-3f4ee4b67377",
+      "name": "revopsplugins_Patch_3ce751d2"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:4afc5d11-e8f9-4a58-858e-415ff36e3a1f",
+      "name": "revopsportals_Patch_b61c1681"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:de9074e0-ad7a-40a8-93f8-42bc2e82c631",
+      "name": "revopsportals_Patch_bec1ca79"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:6e8835b1-4a09-4316-b23f-42eb492303d1",
+      "name": "revopsplugins_Patch_05cd72ef"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:e352b98d-5d69-43c0-9a8f-47a71d03ecd3",
+      "name": "revopstables_Patch_2a2eceba"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:81ebc797-e544-4e17-9ac5-48b3e61fb83b",
+      "name": "revopsportals_Patch_13ea2a37"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:d4c6f130-9bec-42e6-9d4d-492d763f79d9",
+      "name": "revopstables_Patch_c09dbb7c"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:d3c8b1b0-b401-4c0f-a00f-4b8b3613cd37",
+      "name": "revopstables_Patch_606f8605"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:fef933d8-0243-43e6-aea4-4e56037c1d79",
+      "name": "revopstables_Patch_25fb7d7d"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:c971fcd6-a895-417e-b7f3-5509c7fc84b8",
+      "name": "revopsflows_Patch_cca5dfdc"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:3e78a108-303c-4631-86b0-5ea181d04b83",
+      "name": "revopsportals"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:82cf9556-4222-4fa6-91c3-5fc406109482",
+      "name": "revopstables_Patch_f58687fa"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:3699880a-af0d-4741-8b57-62ba926657e8",
+      "name": "revopsflows_Patch_236d5646"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:ea883b6e-56c8-424c-9954-7d61d32f2514",
+      "name": "revopsflows_Patch_0f11d2ca"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:706dfaa6-819e-4456-9808-859db99d0c9a",
+      "name": "revopsai"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:4bfd4d80-9aca-4b65-823e-9214916045dd",
+      "name": "revopsflows_Patch_848906fb"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:414c8dfd-6637-4d8f-94a8-aa6b9d54ab6e",
+      "name": "revopsplugins_Patch_826f81ae"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:b8d59b61-33b7-4c7e-a391-c3a9da24d5ca",
+      "name": "revopsportals_Patch_2cc2b236"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:d9fa242e-3b4f-405d-9adb-cc3b1a21f7e7",
+      "name": "revopsplugins_Patch_10d7dea8"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:6010b212-b1fe-45e0-b80c-cdc42d310cc2",
+      "name": "revopsflows"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:f62d4a04-b998-44c7-b364-d2f0db298dc1",
+      "name": "revopsportals_Patch_5e7e67a7"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:0b71d0fb-bb03-4fa9-954b-e2e78ce3886b",
+      "name": "revopstables"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:42151328-a259-41a1-b2c1-e990c54e43f3",
+      "name": "revopstables_Patch_74d819bb"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:aa6fb6dd-d9b4-4368-af95-ea50ac8226cb",
+      "name": "revopstables_Patch_264c53c8"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:327f8dfb-0eac-4820-b601-ee50bd3e3803",
+      "name": "revopsportals_Patch_9797a3c5"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:29c131f3-e60e-42dd-ad72-f0aa97123318",
+      "name": "revopsportals_Patch_9ec3ca7a"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:cb8fa273-fed5-4c87-8c45-f0feb1895f48",
+      "name": "revopsportals_Patch_bb3ded54"
+    },
+    {
+      "type": "solution",
+      "path": "_registry/solutions",
+      "asset_id": "solution:6007e2a3-bdf6-4047-a588-f40ff56bb97b",
+      "name": "revopsportals_Patch_ac120dd3"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_service",
+      "asset_id": "table:revops_service",
+      "name": "revops_service"
+    },
+    {
+      "type": "table",
+      "path": "tables/msdynmkt_marketingform",
+      "asset_id": "table:msdynmkt_marketingform",
+      "name": "msdynmkt_marketingform"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_sherwebsalesbpf",
+      "asset_id": "table:revops_sherwebsalesbpf",
+      "name": "revops_sherwebsalesbpf"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_mwhaccount",
+      "asset_id": "table:revops_mwhaccount",
+      "name": "revops_mwhaccount"
+    },
+    {
+      "type": "table",
+      "path": "tables/syncerror",
+      "asset_id": "table:syncerror",
+      "name": "syncerror"
+    },
+    {
+      "type": "table",
+      "path": "tables/msfp_surveyresponse",
+      "asset_id": "table:msfp_surveyresponse",
+      "name": "msfp_surveyresponse"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_opportunitiessnapshots",
+      "asset_id": "table:revops_opportunitiessnapshots",
+      "name": "revops_opportunitiessnapshots"
+    },
+    {
+      "type": "table",
+      "path": "tables/msevtmgt_sessionregistration",
+      "asset_id": "table:msevtmgt_sessionregistration",
+      "name": "msevtmgt_sessionregistration"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_accountreassignment",
+      "asset_id": "table:revops_accountreassignment",
+      "name": "revops_accountreassignment"
+    },
+    {
+      "type": "table",
+      "path": "tables/msdynmkt_fragment",
+      "asset_id": "table:msdynmkt_fragment",
+      "name": "msdynmkt_fragment"
+    },
+    {
+      "type": "table",
+      "path": "tables/incidentresolution",
+      "asset_id": "table:incidentresolution",
+      "name": "incidentresolution"
+    },
+    {
+      "type": "table",
+      "path": "tables/transactioncurrency",
+      "asset_id": "table:transactioncurrency",
+      "name": "transactioncurrency"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_platformsettings",
+      "asset_id": "table:revops_platformsettings",
+      "name": "revops_platformsettings"
+    },
+    {
+      "type": "table",
+      "path": "tables/msdynmkt_marketingformsubmission",
+      "asset_id": "table:msdynmkt_marketingformsubmission",
+      "name": "msdynmkt_marketingformsubmission"
+    },
+    {
+      "type": "table",
+      "path": "tables/contact",
+      "asset_id": "table:contact",
+      "name": "contact"
+    },
+    {
+      "type": "table",
+      "path": "tables/msdynmkt_email",
+      "asset_id": "table:msdynmkt_email",
+      "name": "msdynmkt_email"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_stateorprovince",
+      "asset_id": "table:revops_stateorprovince",
+      "name": "revops_stateorprovince"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_cadencecall",
+      "asset_id": "table:revops_cadencecall",
+      "name": "revops_cadencecall"
+    },
+    {
+      "type": "table",
+      "path": "tables/phonecall",
+      "asset_id": "table:phonecall",
+      "name": "phonecall"
+    },
+    {
+      "type": "table",
+      "path": "tables/msevtmgt_event",
+      "asset_id": "table:msevtmgt_event",
+      "name": "msevtmgt_event"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_solutiondetails",
+      "asset_id": "table:revops_solutiondetails",
+      "name": "revops_solutiondetails"
+    },
+    {
+      "type": "table",
+      "path": "tables/appointment",
+      "asset_id": "table:appointment",
+      "name": "appointment"
+    },
+    {
+      "type": "table",
+      "path": "tables/incident",
+      "asset_id": "table:incident",
+      "name": "incident"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_demo",
+      "asset_id": "table:revops_demo",
+      "name": "revops_demo"
+    },
+    {
+      "type": "table",
+      "path": "tables/queue",
+      "asset_id": "table:queue",
+      "name": "queue"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_audienceimport",
+      "asset_id": "table:revops_audienceimport",
+      "name": "revops_audienceimport"
+    },
+    {
+      "type": "table",
+      "path": "tables/product",
+      "asset_id": "table:product",
+      "name": "product"
+    },
+    {
+      "type": "table",
+      "path": "tables/template",
+      "asset_id": "table:template",
+      "name": "template"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_partnerinvestment",
+      "asset_id": "table:revops_partnerinvestment",
+      "name": "revops_partnerinvestment"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_cumulussignup",
+      "asset_id": "table:revops_cumulussignup",
+      "name": "revops_cumulussignup"
+    },
+    {
+      "type": "table",
+      "path": "tables/list",
+      "asset_id": "table:list",
+      "name": "list"
+    },
+    {
+      "type": "table",
+      "path": "tables/systemuser",
+      "asset_id": "table:systemuser",
+      "name": "systemuser"
+    },
+    {
+      "type": "table",
+      "path": "tables/msdyn_conversationsuggestionrequestpayload",
+      "asset_id": "table:msdyn_conversationsuggestionrequestpayload",
+      "name": "msdyn_conversationsuggestionrequestpayload"
+    },
+    {
+      "type": "table",
+      "path": "tables/opportunity",
+      "asset_id": "table:opportunity",
+      "name": "opportunity"
+    },
+    {
+      "type": "table",
+      "path": "tables/msdynmkt_segment",
+      "asset_id": "table:msdynmkt_segment",
+      "name": "msdynmkt_segment"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_productsummary",
+      "asset_id": "table:revops_productsummary",
+      "name": "revops_productsummary"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_accountsoftwaretool",
+      "asset_id": "table:revops_accountsoftwaretool",
+      "name": "revops_accountsoftwaretool"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_country",
+      "asset_id": "table:revops_country",
+      "name": "revops_country"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_competitortransferid",
+      "asset_id": "table:revops_competitortransferid",
+      "name": "revops_competitortransferid"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_practice",
+      "asset_id": "table:revops_practice",
+      "name": "revops_practice"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_churn",
+      "asset_id": "table:revops_churn",
+      "name": "revops_churn"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_lateralmove",
+      "asset_id": "table:revops_lateralmove",
+      "name": "revops_lateralmove"
+    },
+    {
+      "type": "table",
+      "path": "tables/msdynmkt_brandsender",
+      "asset_id": "table:msdynmkt_brandsender",
+      "name": "msdynmkt_brandsender"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_cumulusorganization",
+      "asset_id": "table:revops_cumulusorganization",
+      "name": "revops_cumulusorganization"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_relatedsolutionssnapshots",
+      "asset_id": "table:revops_relatedsolutionssnapshots",
+      "name": "revops_relatedsolutionssnapshots"
+    },
+    {
+      "type": "table",
+      "path": "tables/msevtmgt_session",
+      "asset_id": "table:msevtmgt_session",
+      "name": "msevtmgt_session"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_techstacksnapshots",
+      "asset_id": "table:revops_techstacksnapshots",
+      "name": "revops_techstacksnapshots"
+    },
+    {
+      "type": "table",
+      "path": "tables/msevtmgt_eventregistration",
+      "asset_id": "table:msevtmgt_eventregistration",
+      "name": "msevtmgt_eventregistration"
+    },
+    {
+      "type": "table",
+      "path": "tables/msdyn_operatinghour",
+      "asset_id": "table:msdyn_operatinghour",
+      "name": "msdyn_operatinghour"
+    },
+    {
+      "type": "table",
+      "path": "tables/email",
+      "asset_id": "table:email",
+      "name": "email"
+    },
+    {
+      "type": "table",
+      "path": "tables/msdyn_customerfeedbacksurveyresponse",
+      "asset_id": "table:msdyn_customerfeedbacksurveyresponse",
+      "name": "msdyn_customerfeedbacksurveyresponse"
+    },
+    {
+      "type": "table",
+      "path": "tables/msdynmkt_eventmetadata",
+      "asset_id": "table:msdynmkt_eventmetadata",
+      "name": "msdynmkt_eventmetadata"
+    },
+    {
+      "type": "table",
+      "path": "tables/msdyn_project",
+      "asset_id": "table:msdyn_project",
+      "name": "msdyn_project"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_domain",
+      "asset_id": "table:revops_domain",
+      "name": "revops_domain"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_psaintegration",
+      "asset_id": "table:revops_psaintegration",
+      "name": "revops_psaintegration"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_territoryregion",
+      "asset_id": "table:revops_territoryregion",
+      "name": "revops_territoryregion"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_solutioncategory",
+      "asset_id": "table:revops_solutioncategory",
+      "name": "revops_solutioncategory"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_transfer",
+      "asset_id": "table:revops_transfer",
+      "name": "revops_transfer"
+    },
+    {
+      "type": "table",
+      "path": "tables/msdynmkt_journey",
+      "asset_id": "table:msdynmkt_journey",
+      "name": "msdynmkt_journey"
+    },
+    {
+      "type": "table",
+      "path": "tables/processsession",
+      "asset_id": "table:processsession",
+      "name": "processsession"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_cumulusaccount",
+      "asset_id": "table:revops_cumulusaccount",
+      "name": "revops_cumulusaccount"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_smeengagement",
+      "asset_id": "table:revops_smeengagement",
+      "name": "revops_smeengagement"
+    },
+    {
+      "type": "table",
+      "path": "tables/task",
+      "asset_id": "table:task",
+      "name": "task"
+    },
+    {
+      "type": "table",
+      "path": "tables/category",
+      "asset_id": "table:category",
+      "name": "category"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_accountsolutionsummary",
+      "asset_id": "table:revops_accountsolutionsummary",
+      "name": "revops_accountsolutionsummary"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_onboardingcall",
+      "asset_id": "table:revops_onboardingcall",
+      "name": "revops_onboardingcall"
+    },
+    {
+      "type": "table",
+      "path": "tables/knowledgearticle",
+      "asset_id": "table:knowledgearticle",
+      "name": "knowledgearticle"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_solutionsummary",
+      "asset_id": "table:revops_solutionsummary",
+      "name": "revops_solutionsummary"
+    },
+    {
+      "type": "table",
+      "path": "tables/team",
+      "asset_id": "table:team",
+      "name": "team"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_accountpotentialtechstack",
+      "asset_id": "table:revops_accountpotentialtechstack",
+      "name": "revops_accountpotentialtechstack"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_solution",
+      "asset_id": "table:revops_solution",
+      "name": "revops_solution"
+    },
+    {
+      "type": "table",
+      "path": "tables/activitypointer",
+      "asset_id": "table:activitypointer",
+      "name": "activitypointer"
+    },
+    {
+      "type": "table",
+      "path": "tables/territory",
+      "asset_id": "table:territory",
+      "name": "territory"
+    },
+    {
+      "type": "table",
+      "path": "tables/competitor",
+      "asset_id": "table:competitor",
+      "name": "competitor"
+    },
+    {
+      "type": "table",
+      "path": "tables/msevtmgt_checkin",
+      "asset_id": "table:msevtmgt_checkin",
+      "name": "msevtmgt_checkin"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_accountproductsummary",
+      "asset_id": "table:revops_accountproductsummary",
+      "name": "revops_accountproductsummary"
+    },
+    {
+      "type": "table",
+      "path": "tables/goal",
+      "asset_id": "table:goal",
+      "name": "goal"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_changelog",
+      "asset_id": "table:revops_changelog",
+      "name": "revops_changelog"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_pricingrequest",
+      "asset_id": "table:revops_pricingrequest",
+      "name": "revops_pricingrequest"
+    },
+    {
+      "type": "table",
+      "path": "tables/campaign",
+      "asset_id": "table:campaign",
+      "name": "campaign"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_businessreview",
+      "asset_id": "table:revops_businessreview",
+      "name": "revops_businessreview"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_utmlink",
+      "asset_id": "table:revops_utmlink",
+      "name": "revops_utmlink"
+    },
+    {
+      "type": "table",
+      "path": "tables/annotation",
+      "asset_id": "table:annotation",
+      "name": "annotation"
+    },
+    {
+      "type": "table",
+      "path": "tables/opportunityclose",
+      "asset_id": "table:opportunityclose",
+      "name": "opportunityclose"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_opportunitysolution",
+      "asset_id": "table:revops_opportunitysolution",
+      "name": "revops_opportunitysolution"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_cumulususer",
+      "asset_id": "table:revops_cumulususer",
+      "name": "revops_cumulususer"
+    },
+    {
+      "type": "table",
+      "path": "tables/account",
+      "asset_id": "table:account",
+      "name": "account"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_sherwebopportunitybpf",
+      "asset_id": "table:revops_sherwebopportunitybpf",
+      "name": "revops_sherwebopportunitybpf"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_solutionprovider",
+      "asset_id": "table:revops_solutionprovider",
+      "name": "revops_solutionprovider"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_inpersonmeeting",
+      "asset_id": "table:revops_inpersonmeeting",
+      "name": "revops_inpersonmeeting"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_gicsmapping",
+      "asset_id": "table:revops_gicsmapping",
+      "name": "revops_gicsmapping"
+    },
+    {
+      "type": "table",
+      "path": "tables/revops_subsolution",
+      "asset_id": "table:revops_subsolution",
+      "name": "revops_subsolution"
+    },
+    {
+      "type": "table",
+      "path": "tables/lead",
+      "asset_id": "table:lead",
+      "name": "lead"
+    },
+    {
+      "type": "plugin",
+      "path": "plugins/RevOps.Plugins.CaseCustomerRespondedSetter",
+      "asset_id": "plugin:cbd5a8f0-9111-40b8-81b2-1f6f870ea8f3",
+      "name": "RevOps.Plugins.CaseCustomerRespondedSetter"
+    },
+    {
+      "type": "plugin",
+      "path": "plugins/RevOps.Plugins.CaseInteractionStamper",
+      "asset_id": "plugin:f5a10995-357b-4b89-af82-ad395cd4357e",
+      "name": "RevOps.Plugins.CaseInteractionStamper"
+    },
+    {
+      "type": "plugin",
+      "path": "plugins/RevOps.Plugins.EmailWorkflowMarker",
+      "asset_id": "plugin:db443b24-e527-4701-9122-fe3e1e993779",
+      "name": "RevOps.Plugins.EmailWorkflowMarker"
+    },
+    {
+      "type": "plugin",
+      "path": "plugins/RevOps.SolutionPlugins",
+      "asset_id": "plugin:115c57ce-6551-47cf-8f60-262b00fb8eec",
+      "name": "RevOps.SolutionPlugins"
+    },
+    {
+      "type": "plugin",
+      "path": "plugins/RevOps.EmailPlugins",
+      "asset_id": "plugin:38bacd4b-61a6-4028-9d42-e19343472774",
+      "name": "RevOps.EmailPlugins"
+    },
+    {
+      "type": "plugin",
+      "path": "plugins/RevOps.Plugins.CaseOwnerStamper",
+      "asset_id": "plugin:2b6e064b-56da-4614-9a02-9596ee147cf0",
+      "name": "RevOps.Plugins.CaseOwnerStamper"
+    },
+    {
+      "type": "plugin",
+      "path": "plugins/sherweb.plugin",
+      "asset_id": "plugin:a1da7847-b1bd-411d-ba0d-14fc3f831836",
+      "name": "sherweb.plugin"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Lead - Extract Domain from email",
+      "asset_id": "flow:4b2cd07d-1f9a-ee11-be37-000d3af4f266",
+      "name": "Lead - Extract Domain from email"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Fix Primary Contact on Account",
+      "asset_id": "flow:cb799a23-777b-ef11-ac20-6045bdf9e493",
+      "name": "Fix Primary Contact on Account"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Contact - Resolve Account by Domain (select row)",
+      "asset_id": "flow:5e0d76fd-ba26-f011-8c4e-7ced8d04f24d",
+      "name": "Contact - Resolve Account by Domain (select row)"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Contact - Resolve Account by Domain",
+      "asset_id": "flow:1d01247d-8de8-ef11-be21-000d3a09d51b",
+      "name": "Contact - Resolve Account by Domain"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[Events] - Scanned Import connection to event and more",
+      "asset_id": "flow:77b3076c-1200-f011-bae3-7c1e52409afe",
+      "name": "[Events] - Scanned Import connection to event and more"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Opportunity - set current BPF stage - sherweb opp bpf",
+      "asset_id": "flow:633172f5-c29e-f011-bbd2-7ced8d061554",
+      "name": "Opportunity - set current BPF stage - sherweb opp bpf"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Bulk Resolve Cases",
+      "asset_id": "flow:416659c3-51ba-f011-bbd3-7c1e52067e9e",
+      "name": "Bulk Resolve Cases"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Day 0 - Cumulus CES",
+      "asset_id": "flow:20e5e4f3-3f57-f011-bec2-7ced8d063295",
+      "name": "Day 0 - Cumulus CES"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Account Product Summary - Copy Account Key",
+      "asset_id": "flow:cfbc8f2d-646c-ef11-a670-6045bdf9e493",
+      "name": "Account Product Summary - Copy Account Key"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Queue item ownership change based on case ownership",
+      "asset_id": "flow:80e8dada-3f3a-f011-b4cc-7c1e52409afe",
+      "name": "Queue item ownership change based on case ownership"
+    },
+    {
+      "type": "flow",
+      "path": "flows/P2P Transfer Population from Case",
+      "asset_id": "flow:12b018cd-fd93-f011-b4cc-6045bdfa0630",
+      "name": "P2P Transfer Population from Case"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Cumulus Account Manager - Team Created Or Updated",
+      "asset_id": "flow:ec3260dc-9343-ef11-a316-6045bdcd5ea7",
+      "name": "Cumulus Account Manager - Team Created Or Updated"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Case to NiCE",
+      "asset_id": "flow:d96a7992-b69f-f011-bbd2-7ced8d058789",
+      "name": "Case to NiCE"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Link Cumulus User Contact to Account",
+      "asset_id": "flow:05e173a0-6274-ef11-ac20-000d3af47275",
+      "name": "Link Cumulus User Contact to Account"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Attach file to Asana",
+      "asset_id": "flow:2710bbe6-7877-f011-b4cc-7c1e52409afe",
+      "name": "Attach file to Asana"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Link Cumulus Users To Contact",
+      "asset_id": "flow:ff8ff78c-3d1c-ef11-840a-0022486d6c17",
+      "name": "Link Cumulus Users To Contact"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Enrich Account - OnCreate",
+      "asset_id": "flow:2d4ec9f4-5832-ef11-8e4e-6045bdcd5e2a",
+      "name": "Enrich Account - OnCreate"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Incoming Email, set Customer responded",
+      "asset_id": "flow:76fd7f57-ba3c-f011-b4cc-7c1e52409afe",
+      "name": "Incoming Email, set Customer responded"
+    },
+    {
+      "type": "flow",
+      "path": "flows/CS - case create for manual account creation for UK Partners",
+      "asset_id": "flow:c547a2b9-25bb-f011-bbd3-6045bdf9f19e",
+      "name": "CS - case create for manual account creation for UK Partners"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Case resolution survey",
+      "asset_id": "flow:98f9cc2a-e108-f011-bae3-7ced8d04f24d",
+      "name": "Case resolution survey"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[lead] - MQL date",
+      "asset_id": "flow:2c98e0f8-b81a-f011-998a-7ced8d04f24d",
+      "name": "[lead] - MQL date"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Account - Backfill Channel & Relationship",
+      "asset_id": "flow:5ba51fee-143a-ef11-a316-6045bdcd5dde",
+      "name": "Account - Backfill Channel & Relationship"
+    },
+    {
+      "type": "flow",
+      "path": "flows/P2P Automation",
+      "asset_id": "flow:7dac8344-11ac-ef11-a72d-6045bdf9b92b",
+      "name": "P2P Automation"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Update Last Interaction - Portal Comment",
+      "asset_id": "flow:6a5560fe-157d-f011-b4cc-7ced8d04f24d",
+      "name": "Update Last Interaction - Portal Comment"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Update Last Interaction - Email",
+      "asset_id": "flow:0cbf6af4-007d-f011-b4cc-7c1e52409afe",
+      "name": "Update Last Interaction - Email"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Opportunity - Update Solution Summary",
+      "asset_id": "flow:de29be5c-030f-ef11-9f89-000d3a0a0668",
+      "name": "Opportunity - Update Solution Summary"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Cumulus Account Manager - User Created Or Updated",
+      "asset_id": "flow:c6ee8cbc-1919-ef11-840a-7c1e520637cd",
+      "name": "Cumulus Account Manager - User Created Or Updated"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Commitment Agreement Form",
+      "asset_id": "flow:4abab8df-5206-f011-bae2-7ced8d063295",
+      "name": "Commitment Agreement Form"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Link Cumulus Accounts to Parent Accounts",
+      "asset_id": "flow:50c55434-3d1c-ef11-840b-002248d5a732",
+      "name": "Link Cumulus Accounts to Parent Accounts"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Lead - Resolve Account by Domain",
+      "asset_id": "flow:0f2473c5-239a-ee11-be37-000d3af4f717",
+      "name": "Lead - Resolve Account by Domain"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[Journey] - custom trigger for lead",
+      "asset_id": "flow:530a3f91-b481-ef11-ac21-000d3af43697",
+      "name": "[Journey] - custom trigger for lead"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Enrich Lead - Scheduled",
+      "asset_id": "flow:1a73f488-e479-ef11-ac20-6045bdf9e493",
+      "name": "Enrich Lead - Scheduled"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[Audience Import] - upsert contact and associate",
+      "asset_id": "flow:bf728815-6f4c-f011-877b-7c1e52409afe",
+      "name": "[Audience Import] - upsert contact and associate"
+    },
+    {
+      "type": "flow",
+      "path": "flows/GTW Registrant added",
+      "asset_id": "flow:1b21a4d6-5ada-ee11-904d-002248d5a732",
+      "name": "GTW Registrant added"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Contact - Extract Domain from email",
+      "asset_id": "flow:51c9db08-99e8-ef11-be21-000d3a09d51b",
+      "name": "Contact - Extract Domain from email"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Cumulus User Created",
+      "asset_id": "flow:88c1fdd1-a46b-ef11-a670-000d3af47275",
+      "name": "Cumulus User Created"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Opportunity Update Probability when Won",
+      "asset_id": "flow:f3277816-22ed-ee11-a1fd-0022486dc4eb",
+      "name": "Opportunity Update Probability when Won"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Incomplete Cart",
+      "asset_id": "flow:4312b647-622e-ef11-8e4f-6045bdcd5dde",
+      "name": "Incomplete Cart"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Create Work Item - Approve/Enable Mailbox",
+      "asset_id": "flow:a21628e1-353e-ef11-a316-6045bdcd5dde",
+      "name": "Create Work Item - Approve/Enable Mailbox"
+    },
+    {
+      "type": "flow",
+      "path": "flows/ISO 3166 Cumulus Account to Account - Manual",
+      "asset_id": "flow:65ab024b-5c7f-f011-b4cc-7c1e52409afe",
+      "name": "ISO 3166 Cumulus Account to Account - Manual"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Set Case lookup value on Customer Feedback Survey Response",
+      "asset_id": "flow:2203afa2-feca-f011-8544-7ced8d061554",
+      "name": "Set Case lookup value on Customer Feedback Survey Response"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Lead - Resolve contact by email",
+      "asset_id": "flow:c6c03138-6102-ef11-9f8a-002248d5a732",
+      "name": "Lead - Resolve contact by email"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[Activity email] - stamp sql date",
+      "asset_id": "flow:169b861b-fa16-f011-998a-7ced8d04f24d",
+      "name": "[Activity email] - stamp sql date"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Case - Send notification to owner when a customer replies",
+      "asset_id": "flow:eeb603b3-bc47-f011-877a-7c1e52409afe",
+      "name": "Case - Send notification to owner when a customer replies"
+    },
+    {
+      "type": "flow",
+      "path": "flows/RevOps Change Log",
+      "asset_id": "flow:0e903c77-505a-ef11-bfe3-6045bdf9a15c",
+      "name": "RevOps Change Log"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Select Orgs From Cumulus Where ClientUniqueName",
+      "asset_id": "flow:eb2ba9c6-fa5d-ee11-8df0-000d3a09f3d2",
+      "name": "Select Orgs From Cumulus Where ClientUniqueName"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Account Solutions Summary - Copy Account Key",
+      "asset_id": "flow:577e4e2b-453a-ef11-a316-6045bdcd5e88",
+      "name": "Account Solutions Summary - Copy Account Key"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Set Customer Verified Resolution Value",
+      "asset_id": "flow:3d01394b-a3cb-f011-8544-7c1e52067e9e",
+      "name": "Set Customer Verified Resolution Value"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Create Case from Zabbix Alert",
+      "asset_id": "flow:227c7350-1a8f-f011-b4cb-7ced8d04e0f6",
+      "name": "Create Case from Zabbix Alert"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[Journey] DCIJ - Website contact form submitted",
+      "asset_id": "flow:e5a057bf-fd48-ef11-accd-0022486df470",
+      "name": "[Journey] DCIJ - Website contact form submitted"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Vendor Account - Create Solution Provider from vendor",
+      "asset_id": "flow:214517ef-83c4-ee11-9079-000d3a09cde5",
+      "name": "Vendor Account - Create Solution Provider from vendor"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Incoming Portal Comment, set Customer responded",
+      "asset_id": "flow:98aad464-f360-f011-bec1-7c1e5206727f",
+      "name": "Incoming Portal Comment, set Customer responded"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[Form Submission] - UTM shenanigans enrichment & consent processing",
+      "asset_id": "flow:f665edbc-a4f3-ef11-be20-7c1e5206727f",
+      "name": "[Form Submission] - UTM shenanigans enrichment & consent processing"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[lead] - check parent account relationship for Trade Show lead",
+      "asset_id": "flow:a4267844-d0bf-f011-bbd3-7c1e52067e9e",
+      "name": "[lead] - check parent account relationship for Trade Show lead"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Fill Parent Account of Cumulus Account",
+      "asset_id": "flow:d50de08e-0f88-f011-b4cc-7ced8d06221f",
+      "name": "Fill Parent Account of Cumulus Account"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Contact - Extract Domain from email (selecting rows)",
+      "asset_id": "flow:e67c203d-3b24-f011-8c4e-7c1e52409afe",
+      "name": "Contact - Extract Domain from email (selecting rows)"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Send P2P Transfer",
+      "asset_id": "flow:64e3c0bb-b194-f011-b4cc-6045bdfa0630",
+      "name": "Send P2P Transfer"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Accounts - Manual -  Fix Generic Domains format",
+      "asset_id": "flow:0137957c-7de9-ef11-be20-7c1e52870606",
+      "name": "Accounts - Manual -  Fix Generic Domains format"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Organization Created or Deleted in Cumulus",
+      "asset_id": "flow:4426e14b-a0fa-ef11-bae1-7c1e5206727f",
+      "name": "Organization Created or Deleted in Cumulus"
+    },
+    {
+      "type": "flow",
+      "path": "flows/opportunity - set current bpf stage - sherweb sales bpf",
+      "asset_id": "flow:da34706c-cc9e-f011-bbd2-7ced8d061554",
+      "name": "opportunity - set current bpf stage - sherweb sales bpf"
+    },
+    {
+      "type": "flow",
+      "path": "flows/zremove[JourneyManual] DCIJ - Website contact form submitted",
+      "asset_id": "flow:90a1ff34-7b95-f011-b4cc-6045bdfa0630",
+      "name": "zremove[JourneyManual] DCIJ - Website contact form submitted"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Enrich Account - Manual",
+      "asset_id": "flow:b3ce4fa1-dc75-ef11-ac20-7c1e520630e3",
+      "name": "Enrich Account - Manual"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Cumulus Account Manager Update",
+      "asset_id": "flow:3c9cd4b9-1919-ef11-840a-6045bdcd283e",
+      "name": "Cumulus Account Manager Update"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[Activity phone] - stamp sql date",
+      "asset_id": "flow:1f4f7206-f616-f011-998a-7c1e5206727f",
+      "name": "[Activity phone] - stamp sql date"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Opportunity Solution - Create Solution Summary",
+      "asset_id": "flow:5c484896-530e-ef11-9f89-000d3af4117b",
+      "name": "Opportunity Solution - Create Solution Summary"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Veeam_ContractRequest",
+      "asset_id": "flow:0aa72c99-f571-f011-bec2-7ced8d063295",
+      "name": "Veeam_ContractRequest"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Update Last Interaction - Note",
+      "asset_id": "flow:ad8c22c4-107d-f011-b4cc-7c1e52409afe",
+      "name": "Update Last Interaction - Note"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[phone call] - add notes to description",
+      "asset_id": "flow:565632f5-0d85-f011-b4cc-7ced8d063295",
+      "name": "[phone call] - add notes to description"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Enrich Account - Scheduled",
+      "asset_id": "flow:d6284b19-ef3e-ef11-a316-6045bdcd5ea7",
+      "name": "Enrich Account - Scheduled"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Conversations to NiCE",
+      "asset_id": "flow:2649d858-4bd5-f011-8544-7ced8d061554",
+      "name": "Conversations to NiCE"
+    },
+    {
+      "type": "flow",
+      "path": "flows/CS - Notify manager of customer escalation",
+      "asset_id": "flow:bcf520bb-d4ad-f011-bbd3-7c1e52067e9e",
+      "name": "CS - Notify manager of customer escalation"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Lead - Set Territory on Lead",
+      "asset_id": "flow:26f2d8ab-5e99-ee11-be37-000d3af4f266",
+      "name": "Lead - Set Territory on Lead"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[Global] PIT tier",
+      "asset_id": "flow:16df325b-ce8f-f011-b4cc-6045bdfa0630",
+      "name": "[Global] PIT tier"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Case Queue Update - Update Queue Item",
+      "asset_id": "flow:e9a9e743-e9d1-ef11-a72e-7c1e52063863",
+      "name": "Case Queue Update - Update Queue Item"
+    },
+    {
+      "type": "flow",
+      "path": "flows/marketing - report inactive campaign owner",
+      "asset_id": "flow:b15a64db-b976-f011-b4cc-7ced8d063295",
+      "name": "marketing - report inactive campaign owner"
+    },
+    {
+      "type": "flow",
+      "path": "flows/marketing - close asset from campaign",
+      "asset_id": "flow:91fb6fe3-6b78-f011-b4cc-7ced8d063295",
+      "name": "marketing - close asset from campaign"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[Lead] notify user when assigned",
+      "asset_id": "flow:742ea0c4-d142-f011-877a-7ced8d063295",
+      "name": "[Lead] notify user when assigned"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[Activity tasks] - stamp sql date",
+      "asset_id": "flow:08fd6ead-3a19-f011-998a-7ced8d063295",
+      "name": "[Activity tasks] - stamp sql date"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[lead] UK cookie fallback territory",
+      "asset_id": "flow:c4942a87-cdc0-f011-bbd3-7ced8d061554",
+      "name": "[lead] UK cookie fallback territory"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Account - Set Cumulus Account created on Opps",
+      "asset_id": "flow:2002e152-9539-ef11-a316-6045bdcd5dde",
+      "name": "Account - Set Cumulus Account created on Opps"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[MWH] - omit accounts and contacts from consent",
+      "asset_id": "flow:d0f6ec6a-023b-f011-b4cc-7ced8d063295",
+      "name": "[MWH] - omit accounts and contacts from consent"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Account Ownership change notification",
+      "asset_id": "flow:df670963-ac82-f011-b4cb-7c1e5206727f",
+      "name": "Account Ownership change notification"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[Calendly] Create and update a lead when a Calendly event is created",
+      "asset_id": "flow:ea953a71-6ad6-ee11-904c-002248d5a789",
+      "name": "[Calendly] Create and update a lead when a Calendly event is created"
+    },
+    {
+      "type": "flow",
+      "path": "flows/P2P Transfer Notifications",
+      "asset_id": "flow:dd389c85-6d9c-ef11-8a6a-000d3af4dd88",
+      "name": "P2P Transfer Notifications"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Queue item release, set case Owner",
+      "asset_id": "flow:6b0c257b-5941-f011-877a-7c1e52409afe",
+      "name": "Queue item release, set case Owner"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Fix Accounts without Name",
+      "asset_id": "flow:9208db01-c38b-ef11-8a6a-7c1e524071bb",
+      "name": "Fix Accounts without Name"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Update Currency Exchange Rates",
+      "asset_id": "flow:9b2cc09c-bcc4-f011-bbd3-7c1e52067e9e",
+      "name": "Update Currency Exchange Rates"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Enrich Contact - OnCreate",
+      "asset_id": "flow:885fa9a4-521f-ef11-840a-6045bdcd283e",
+      "name": "Enrich Contact - OnCreate"
+    },
+    {
+      "type": "flow",
+      "path": "flows/ISO 3166 Cumulus Account to Account - Scheduled",
+      "asset_id": "flow:0950b5ca-c089-f011-b4cc-6045bdcd501f",
+      "name": "ISO 3166 Cumulus Account to Account - Scheduled"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Create Case from Migration Request",
+      "asset_id": "flow:83b3c17e-2bca-f011-8544-6045bdf9f19e",
+      "name": "Create Case from Migration Request"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Enrich Contact - Scheduled",
+      "asset_id": "flow:0b2432b9-e03e-ef11-a316-6045bdcd5ea7",
+      "name": "Enrich Contact - Scheduled"
+    },
+    {
+      "type": "flow",
+      "path": "flows/[lead] - disqualify honeypot field contains data",
+      "asset_id": "flow:a622cb37-5595-ef11-8a69-000d3a0a3998",
+      "name": "[lead] - disqualify honeypot field contains data"
+    },
+    {
+      "type": "flow",
+      "path": "flows/marketing - review proposed end date",
+      "asset_id": "flow:5378e547-9077-f011-b4cc-7c1e52409afe",
+      "name": "marketing - review proposed end date"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Enrich Contact - Manual",
+      "asset_id": "flow:1b9a722f-a343-ef11-a316-0022486df470",
+      "name": "Enrich Contact - Manual"
+    },
+    {
+      "type": "flow",
+      "path": "flows/ResolveCase",
+      "asset_id": "flow:ae8115af-54be-f011-bbd3-7c1e52067e9e",
+      "name": "ResolveCase"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Daily Tier Update per MRR ",
+      "asset_id": "flow:abcf0f94-f9b1-ef11-a72d-7c1e52063863",
+      "name": "Daily Tier Update per MRR "
+    },
+    {
+      "type": "flow",
+      "path": "flows/Opportunity - Create Opportunities from Account Potential",
+      "asset_id": "flow:82f50409-87c4-ee11-9079-000d3a09cf8e",
+      "name": "Opportunity - Create Opportunities from Account Potential"
+    },
+    {
+      "type": "flow",
+      "path": "flows/GTW Get Check-Ins",
+      "asset_id": "flow:1a3834b4-abdd-ee11-904c-0022486dc4eb",
+      "name": "GTW Get Check-Ins"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Account Created in Cumulus",
+      "asset_id": "flow:4c3cce43-8ed5-ee11-904c-002248d5a732",
+      "name": "Account Created in Cumulus"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Enrich Lead - OnCreate",
+      "asset_id": "flow:875fa9a4-521f-ef11-840a-6045bdcd283e",
+      "name": "Enrich Lead - OnCreate"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Set Supported Service Column - Email Channel",
+      "asset_id": "flow:bbd3e232-67e2-ef11-be20-7c1e52870606",
+      "name": "Set Supported Service Column - Email Channel"
+    },
+    {
+      "type": "flow",
+      "path": "flows/VMware_ContractRequest",
+      "asset_id": "flow:d3fa82ea-5606-f011-bae2-7c1e5206727f",
+      "name": "VMware_ContractRequest"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Account - Set Territory on Account",
+      "asset_id": "flow:8ff7c609-5fd4-ee11-904c-002248d5a27a",
+      "name": "Account - Set Territory on Account"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Competitor - Create current provider when a competitor is created",
+      "asset_id": "flow:53f99fc6-82c4-ee11-9079-000d3a09cf8e",
+      "name": "Competitor - Create current provider when a competitor is created"
+    },
+    {
+      "type": "flow",
+      "path": "flows/GTW webinar is created",
+      "asset_id": "flow:5376b140-5ada-ee11-904c-6045bdf9e7de",
+      "name": "GTW webinar is created"
+    },
+    {
+      "type": "flow",
+      "path": "flows/Assign SME Engagement to Object Owner",
+      "asset_id": "flow:122313bc-9aa0-f011-bbd2-7ced8d061554",
+      "name": "Assign SME Engagement to Object Owner"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<ade72ef964e04307aaee678565a4a16b_1>",
+      "asset_id": "queue:8286c868-0ced-ef11-be20-000d3a0c615d",
+      "name": "<ade72ef964e04307aaee678565a4a16b_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<ddb58302677947668d9cd3a358d70d37_1>",
+      "asset_id": "queue:f08c577c-1971-f011-bec1-000d3a84ef99",
+      "name": "<ddb58302677947668d9cd3a358d70d37_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<3eb6ce5fe12f4c6bbe4cd34789e2a7ad_1>",
+      "asset_id": "queue:5b00c9f9-1b71-f011-bec1-000d3a84ef99",
+      "name": "<3eb6ce5fe12f4c6bbe4cd34789e2a7ad_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<c0c5d3a7e6b6456da40de5bb800a57c3_1>",
+      "asset_id": "queue:89082a0b-1c71-f011-bec1-000d3a84ef99",
+      "name": "<c0c5d3a7e6b6456da40de5bb800a57c3_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<24ef7cf2b498f011b41c002248b081f9_1>",
+      "asset_id": "queue:4fbd8af5-b498-f011-b41c-000d3ae971d5",
+      "name": "<24ef7cf2b498f011b41c002248b081f9_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<fb410c26d0804309a602d0d827a4fcec_1>",
+      "asset_id": "queue:cc2d55fb-9771-ef11-a66f-0022483c5aa3",
+      "name": "<fb410c26d0804309a602d0d827a4fcec_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<06b3487241954cda8393d3c970544f13_1>",
+      "asset_id": "queue:bd166f0d-354b-f011-8779-0022483ce9a9",
+      "name": "<06b3487241954cda8393d3c970544f13_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<9ce42f69bd484a62a630963d8e50221c_1>",
+      "asset_id": "queue:3eed8e2f-7ad2-f011-8543-0022483dc07f",
+      "name": "<9ce42f69bd484a62a630963d8e50221c_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<8edaadf90800f011bae36045bd605559_1>",
+      "asset_id": "queue:397ed701-0900-f011-bae3-0022483dedd6",
+      "name": "<8edaadf90800f011bae36045bd605559_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<b3415a98b91ff01199890022483dedd6_1>",
+      "asset_id": "queue:cc8a63a4-b91f-f011-998a-002248add628",
+      "name": "<b3415a98b91ff01199890022483dedd6_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<5dd00fa390f2402e87017894c508a9a7_1>",
+      "asset_id": "queue:b0ce6d28-f66c-f011-b4cb-002248ae1603",
+      "name": "<5dd00fa390f2402e87017894c508a9a7_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<0b4b99ff67e845db99df046d028d32a4_1>",
+      "asset_id": "queue:ff8f4ff9-f66c-f011-b4cb-002248ae1603",
+      "name": "<0b4b99ff67e845db99df046d028d32a4_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<9c942d2eb2dd4e38a7d621a3b1503ac2_1>",
+      "asset_id": "queue:f34215f1-1f27-f011-8c4d-002248afce9a",
+      "name": "<9c942d2eb2dd4e38a7d621a3b1503ac2_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<3ebcb28158e840d594e78dabd4dab93b_1>",
+      "asset_id": "queue:173208fd-1f27-f011-8c4d-002248afce9a",
+      "name": "<3ebcb28158e840d594e78dabd4dab93b_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<1e7960d3570d4105be9e9698908e57bf_1>",
+      "asset_id": "queue:bcc1f808-2027-f011-8c4d-002248afce9a",
+      "name": "<1e7960d3570d4105be9e9698908e57bf_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<01fd31ba265e4d82a61829c93d5b4eca_1>",
+      "asset_id": "queue:ad91fa0e-2027-f011-8c4d-002248afce9a",
+      "name": "<01fd31ba265e4d82a61829c93d5b4eca_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<0bacc33ebe844b85a72e05b86f8fed21_1>",
+      "asset_id": "queue:e70b6eb4-5aa5-f011-bbd2-002248afda59",
+      "name": "<0bacc33ebe844b85a72e05b86f8fed21_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<995a90413eb6431e8067bd2a72ec7c77_1>",
+      "asset_id": "queue:3f7b66ba-5aa5-f011-bbd2-002248afda59",
+      "name": "<995a90413eb6431e8067bd2a72ec7c77_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<afa11375edd44be79c7efba89217c9d7_1>",
+      "asset_id": "queue:fe117f94-59a5-f011-bbd2-002248afde81",
+      "name": "<afa11375edd44be79c7efba89217c9d7_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<26e5dd400d074b4d987e67b8386c963c_1>",
+      "asset_id": "queue:db4292c2-f598-ef11-8a6b-002248b1d264",
+      "name": "<26e5dd400d074b4d987e67b8386c963c_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<M365 / HEX pod>",
+      "asset_id": "queue:436191cb-5362-f011-bec2-002248b2c290",
+      "name": "<M365 / HEX pod>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Cloud Support>",
+      "asset_id": "queue:34e7ee09-5662-f011-bec2-002248b2c290",
+      "name": "<Cloud Support>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<CloudPBX pod>",
+      "asset_id": "queue:413ba956-5762-f011-bec2-002248b2c290",
+      "name": "<CloudPBX pod>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<BA pod>",
+      "asset_id": "queue:8cf7b10c-5862-f011-bec2-002248b2c290",
+      "name": "<BA pod>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SBC Pod>",
+      "asset_id": "queue:dd99fa1e-5862-f011-bec2-002248b2c290",
+      "name": "<SBC Pod>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Level 3s>",
+      "asset_id": "queue:64b30e84-5962-f011-bec2-002248b2c290",
+      "name": "<Level 3s>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<51ccbc28b7bd4a6b94eae81b1541083d_1>",
+      "asset_id": "queue:4a3a26da-a123-ef11-840a-6045bd5d1869",
+      "name": "<51ccbc28b7bd4a6b94eae81b1541083d_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<28a698ab538140259f9f748ab25bd150_1>",
+      "asset_id": "queue:21548866-f15e-f011-bec1-6045bd5e3bdc",
+      "name": "<28a698ab538140259f9f748ab25bd150_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<f4e36f57cb5d4712a4da716563aff7c1_1>",
+      "asset_id": "queue:ddebf873-f15e-f011-bec1-6045bd5e3bdc",
+      "name": "<f4e36f57cb5d4712a4da716563aff7c1_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<sherweb-prod>",
+      "asset_id": "queue:74cc832d-d31f-ef11-840b-6045bd5ea018",
+      "name": "<sherweb-prod>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<d36c9d9bdfd9467dabbcbdbd8ba4cd63_1>",
+      "asset_id": "queue:7549bc03-1920-ef11-840b-6045bd5ea018",
+      "name": "<d36c9d9bdfd9467dabbcbdbd8ba4cd63_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<d514df595ed3484b9d41572976dac638_1>",
+      "asset_id": "queue:bd1b0058-2e20-ef11-840b-6045bd5ea018",
+      "name": "<d514df595ed3484b9d41572976dac638_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<94a034358e86490eb5bfe1e7bdfb6ea2_1>",
+      "asset_id": "queue:441a544f-5a3f-f011-8779-6045bd603ebd",
+      "name": "<94a034358e86490eb5bfe1e7bdfb6ea2_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<712282464520f011998a002248b1d6cf_1>",
+      "asset_id": "queue:6b11c449-4520-f011-998a-6045bd605559",
+      "name": "<712282464520f011998a002248b1d6cf_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<d0505ed83703f011bae30022483cf35f_1>",
+      "asset_id": "queue:a7ce88dc-3703-f011-bae3-6045bd605de1",
+      "name": "<d0505ed83703f011bae30022483cf35f_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<4cfb7bca768542298b6586b9803c2c8f_1>",
+      "asset_id": "queue:da02b603-f9da-f011-8543-6045bd606a3e",
+      "name": "<4cfb7bca768542298b6586b9803c2c8f_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Sales>",
+      "asset_id": "queue:f68a7cb5-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Sales>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Marketing>",
+      "asset_id": "queue:fe8a7cb5-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Marketing>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Products>",
+      "asset_id": "queue:ec9479bb-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Products>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Operations>",
+      "asset_id": "queue:f49479bb-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Operations>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Technical Support>",
+      "asset_id": "queue:f89479bb-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Technical Support>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Development>",
+      "asset_id": "queue:fc9479bb-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Development>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Human Resources>",
+      "asset_id": "queue:009579bb-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Human Resources>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Finance>",
+      "asset_id": "queue:049579bb-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Finance>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Cloud Infrastructure & Services>",
+      "asset_id": "queue:089579bb-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Cloud Infrastructure & Services>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<C2>",
+      "asset_id": "queue:0c9579bb-3f3e-ef11-a316-6045bd619d89",
+      "name": "<C2>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Team Marketing>",
+      "asset_id": "queue:129579bb-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Team Marketing>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Team Executives>",
+      "asset_id": "queue:159579bb-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Team Executives>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Sherweb>",
+      "asset_id": "queue:ad8eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Sherweb>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SW-Presales>",
+      "asset_id": "queue:b08eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<SW-Presales>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SW-SalesOperations>",
+      "asset_id": "queue:b38eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<SW-SalesOperations>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Online Backup>",
+      "asset_id": "queue:b68eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Online Backup>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Sécurité>",
+      "asset_id": "queue:b98eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Sécurité>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Team Sales Longueuil>",
+      "asset_id": "queue:bc8eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Team Sales Longueuil>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SW-PartnerSalesManager>",
+      "asset_id": "queue:bf8eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<SW-PartnerSalesManager>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Team Product>",
+      "asset_id": "queue:c28eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Team Product>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SW-RC/BD>",
+      "asset_id": "queue:c58eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<SW-RC/BD>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Team VOIP>",
+      "asset_id": "queue:c88eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Team VOIP>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SW-MarketingCreative>",
+      "asset_id": "queue:cd8eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<SW-MarketingCreative>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SW-MarketingEvents>",
+      "asset_id": "queue:d08eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<SW-MarketingEvents>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SW-MarketingGTM>",
+      "asset_id": "queue:d38eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<SW-MarketingGTM>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SW-ProductSpecialist>",
+      "asset_id": "queue:d68eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<SW-ProductSpecialist>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Direct>",
+      "asset_id": "queue:d98eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Direct>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<CST>",
+      "asset_id": "queue:dc8eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<CST>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SW-CRMAdministration>",
+      "asset_id": "queue:df8eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<SW-CRMAdministration>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SW-RC/P>",
+      "asset_id": "queue:e28eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<SW-RC/P>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SW-GDC/PA>",
+      "asset_id": "queue:e68eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<SW-GDC/PA>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SW-PresalesManager>",
+      "asset_id": "queue:ea8eeac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<SW-PresalesManager>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<z_[OLD] SW-GDC/EP>",
+      "asset_id": "queue:028feac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<z_[OLD] SW-GDC/EP>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<z_[OLD] POD - Council S>",
+      "asset_id": "queue:058feac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<z_[OLD] POD - Council S>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SW-AssignAccount>",
+      "asset_id": "queue:088feac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<SW-AssignAccount>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SW-Export>",
+      "asset_id": "queue:0b8feac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<SW-Export>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<z_[OLD]POD - Council E>",
+      "asset_id": "queue:0e8feac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<z_[OLD]POD - Council E>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<POD - Chargers>",
+      "asset_id": "queue:138feac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<POD - Chargers>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<z[OLD]POD - Council O>",
+      "asset_id": "queue:178feac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<z[OLD]POD - Council O>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<z_[OLD]POD - Council B>",
+      "asset_id": "queue:1a8feac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<z_[OLD]POD - Council B>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<z_[OLD]POD - Council W>",
+      "asset_id": "queue:1d8feac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<z_[OLD]POD - Council W>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<z_[OLD]POD - Council N>",
+      "asset_id": "queue:208feac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<z_[OLD]POD - Council N>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Canada>",
+      "asset_id": "queue:238feac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Canada>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<US>",
+      "asset_id": "queue:268feac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<US>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<BizDev>",
+      "asset_id": "queue:298feac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<BizDev>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Advisors / ISV>",
+      "asset_id": "queue:2c8feac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<Advisors / ISV>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SME/BDM>",
+      "asset_id": "queue:2f8feac2-3f3e-ef11-a316-6045bd619d89",
+      "name": "<SME/BDM>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<SDRs>",
+      "asset_id": "queue:c5f87aa5-879b-ef11-8a6a-6045bd61f3dd",
+      "name": "<SDRs>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<aab5ac628320410a90cbc5a55f6b3b8b_1>",
+      "asset_id": "queue:f39fd562-4439-f011-b4cc-6045bd61f90b",
+      "name": "<aab5ac628320410a90cbc5a55f6b3b8b_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<4cc6cbc791a3416a958b746c568ff794_1>",
+      "asset_id": "queue:75139d59-f1ed-f011-8406-7c1e5253bbc5",
+      "name": "<4cc6cbc791a3416a958b746c568ff794_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<972b85112bf343319da681e806f24a5c_1>",
+      "asset_id": "queue:ebabce5f-f1ed-f011-8406-7c1e5253bbc5",
+      "name": "<972b85112bf343319da681e806f24a5c_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<d4adffea79cf48c6a89de931370b3c13_1>",
+      "asset_id": "queue:02acce5f-f1ed-f011-8406-7c1e5253bbc5",
+      "name": "<d4adffea79cf48c6a89de931370b3c13_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<MWH Cloud>",
+      "asset_id": "queue:871a386c-0dca-f011-8544-7c1e5253f0d3",
+      "name": "<MWH Cloud>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<b4c89ad2f4caf01185447ced8d3654cb_1>",
+      "asset_id": "queue:b207a3da-f4ca-f011-8544-7c1e5253f8a5",
+      "name": "<b4c89ad2f4caf01185447ced8d3654cb_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<167b4f324df242ddbfa32d04ba9355a9_1>",
+      "asset_id": "queue:0ea767fa-48bd-f011-bbd2-7c1e5254a8e1",
+      "name": "<167b4f324df242ddbfa32d04ba9355a9_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<MWH>",
+      "asset_id": "queue:d2f56e17-74be-f011-bbd2-7c1e528ccd11",
+      "name": "<MWH>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<Sherweb - UK>",
+      "asset_id": "queue:71489c63-36b3-f011-bbd3-7ced8d36504f",
+      "name": "<Sherweb - UK>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<6f87ac140fcbf01185447ced8d3654cb_1>",
+      "asset_id": "queue:3f1dd617-0fcb-f011-8544-7ced8d3656aa",
+      "name": "<6f87ac140fcbf01185447ced8d3654cb_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<cfd2ff947e3a4383b78ba134ed93d386_1>",
+      "asset_id": "queue:47c66fa4-f9b2-f011-bbd2-7ced8d667020",
+      "name": "<cfd2ff947e3a4383b78ba134ed93d386_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<cb34a52deb33456b9015e320f1302ff3_1>",
+      "asset_id": "queue:f7df5533-39b5-f011-bbd2-7ced8da605cb",
+      "name": "<cb34a52deb33456b9015e320f1302ff3_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<ce1004038fca4d2da4d6d273fa8427f4_1>",
+      "asset_id": "queue:c9624e39-39b5-f011-bbd2-7ced8da605cb",
+      "name": "<ce1004038fca4d2da4d6d273fa8427f4_1>"
+    },
+    {
+      "type": "queue",
+      "path": "queues/<M365 / Hex QM>",
+      "asset_id": "queue:b8185b24-f7f2-f011-8407-7ced8de095ba",
+      "name": "<M365 / Hex QM>"
+    },
+    {
+      "type": "sla",
+      "path": "slas/Case",
+      "asset_id": "sla:a8e517bd-a7e4-ef11-be21-0022486e1e61",
+      "name": "Case"
+    },
+    {
+      "type": "sla",
+      "path": "slas/SLA for Cases",
+      "asset_id": "sla:195f628d-f25c-f011-877b-002248b2c290",
+      "name": "SLA for Cases"
+    },
+    {
+      "type": "sla",
+      "path": "slas/6 Tier SLO for cases",
+      "asset_id": "sla:88a8c0d4-7883-f011-b4cc-002248b2c290",
+      "name": "6 Tier SLO for cases"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Live chat workstream",
+      "asset_id": "workstream:bdbc5029-f12d-e911-8185-000d3a0704f0",
+      "name": "Live chat workstream"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Default Individual Voicemail Workstream",
+      "asset_id": "workstream:82fca120-9497-1c80-2cad-0feb6481ddab",
+      "name": "Default Individual Voicemail Workstream"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Support Outbound",
+      "asset_id": "workstream:f1748714-69a6-6d2b-3a9e-11d20b9a6e9e",
+      "name": "Support Outbound"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Billing Voice - French",
+      "asset_id": "workstream:10e85d64-07f1-ec67-f584-1304c2a4b323",
+      "name": "Billing Voice - French"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Support and Sales Chat -FR",
+      "asset_id": "workstream:179dea07-66ff-2df0-b406-2a362f871288",
+      "name": "Support and Sales Chat -FR"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Redirect to Main IVR",
+      "asset_id": "workstream:1b52be0f-4a6d-c4be-bc85-2e3399c3d89d",
+      "name": "Redirect to Main IVR"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/MWH CSP",
+      "asset_id": "workstream:8e67dffd-b4ad-5027-8c70-3ae1b944ec33",
+      "name": "MWH CSP"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/MWH Security",
+      "asset_id": "workstream:a9dd9fb3-d5e2-00fd-a99e-3e874a9a6646",
+      "name": "MWH Security"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Voicemails",
+      "asset_id": "workstream:873fd243-9a97-288f-ae7f-4cb1d73dab28",
+      "name": "Voicemails"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Support Voice - ENG",
+      "asset_id": "workstream:947a8722-de73-fea9-839f-53bb4bd81fc0",
+      "name": "Support Voice - ENG"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Billing Voice - English",
+      "asset_id": "workstream:b036f673-ed3a-9f81-93d7-570c2ca4695f",
+      "name": "Billing Voice - English"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Support Outbound 2",
+      "asset_id": "workstream:27152769-4b5d-b86d-94b3-684d1aefa913",
+      "name": "Support Outbound 2"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Billing Outbound",
+      "asset_id": "workstream:2cbe0c65-ee47-c529-d7e0-6c64cdafafe9",
+      "name": "Billing Outbound"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Sales Outbound",
+      "asset_id": "workstream:26eeabca-efbf-eeb3-bf59-6d9294af1965",
+      "name": "Sales Outbound"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Sales Voice - English",
+      "asset_id": "workstream:ae811f9f-7c92-3b06-8db3-806c7f65177b",
+      "name": "Sales Voice - English"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Default Group Voicemail Workstream",
+      "asset_id": "workstream:bbe15f45-1193-9770-93b3-880375a232da",
+      "name": "Default Group Voicemail Workstream"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/MWH CSP Outbound",
+      "asset_id": "workstream:dc70499f-3f84-7787-8bb3-93f21cd843d1",
+      "name": "MWH CSP Outbound"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Support Outbound 3",
+      "asset_id": "workstream:fb47ee7f-841b-bc8a-659a-97835cc407c5",
+      "name": "Support Outbound 3"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/MWH Main IVR",
+      "asset_id": "workstream:6db6ad44-98fc-eb0c-86a2-a3bdf071dc3f",
+      "name": "MWH Main IVR"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Phone call workstream",
+      "asset_id": "workstream:d6f5d46f-32a8-4812-a669-a87030127965",
+      "name": "Phone call workstream"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Support Voice - FR",
+      "asset_id": "workstream:3e2c1259-1e4e-d7fd-9698-ab411c3cd504",
+      "name": "Support Voice - FR"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/UK to M365",
+      "asset_id": "workstream:91941281-6ca6-2636-4ab4-b2b39b911628",
+      "name": "UK to M365"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/MWH Cloud",
+      "asset_id": "workstream:8d385be4-9437-2d41-7c3e-c457c46b7863",
+      "name": "MWH Cloud"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Support and Sales Chat -ENG",
+      "asset_id": "workstream:7735e3fc-3111-77dd-255c-cc78255ccf66",
+      "name": "Support and Sales Chat -ENG"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Sales Voice - French",
+      "asset_id": "workstream:f6d7544f-c397-8cc6-84b4-dc9d21248a09",
+      "name": "Sales Voice - French"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/C2 Overflow",
+      "asset_id": "workstream:b544dc50-d2a0-cbd9-702d-fee019caeafc",
+      "name": "C2 Overflow"
+    },
+    {
+      "type": "workstream",
+      "path": "omnichannel/workstreams/Microsoft Teams workstream",
+      "asset_id": "workstream:28fbb780-b4bb-4e52-bcdf-ffbcddd8fd13",
+      "name": "Microsoft Teams workstream"
+    }
+  ],
+  "schema_version": 2,
+  "timestamp": "2026-01-18T02:03:36.4264385Z",
+  "generated_run_id": "20260118-020019",
+  "edge_count": 116
+}

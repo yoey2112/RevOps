@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: 'e5a057bf-fd48-ef11-accd-0022486df470'
+name: '[Journey] DCIJ - Website contact form submitted'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

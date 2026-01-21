@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: 'da34706c-cc9e-f011-bbd2-7ced8d061554'
+name: 'opportunity - set current bpf stage - sherweb sales bpf'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

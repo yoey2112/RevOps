@@ -1,0 +1,117 @@
+relationships:
+  -
+    schemaname: revops_accountpotentialtechstack_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_accountpotentialtechstack
+  -
+    schemaname: revops_accountpotentialtechstack_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_accountpotentialtechstack
+  -
+    schemaname: revops_accountpotentialtechstack_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_accountpotentialtechstack
+  -
+    schemaname: revops_accountpotentialtechstack_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_accountpotentialtechstack
+  -
+    schemaname: revops_accountpotentialtechstack_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_accountpotentialtechstack
+  -
+    schemaname: revops_accountpotentialtechstack_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_accountpotentialtechstack
+  -
+    schemaname: revops_accountpotentialtechstack_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_accountpotentialtechstack
+  -
+    schemaname: revops_accountpotentialtechstack_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_accountpotentialtechstack
+  -
+    schemaname: revops_accountpotentialtechstack_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_accountpotentialtechstack
+  -
+    schemaname: revops_accountpotentialtechstack_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_accountpotentialtechstack
+  -
+    schemaname: lk_revops_accountpotentialtechstack_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_accountpotentialtechstack_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_accountpotentialtechstack_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_accountpotentialtechstack_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_accountpotentialtechstack
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: organization
+  -
+    schemaname: TransactionCurrency_revops_accountpotentialtechstack
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_accountpotentialtechstack_account_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_accountpotentialtechstack_currentprovider_revops_solutionprovider
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: revops_solutionprovider
+  -
+    schemaname: revops_accountpotentialtechstack_opportunity_opportunity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: revops_accountpotentialtechstack_product_product
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: product
+  -
+    schemaname: revops_accountpotentialtechstack_solutioncategory_revops_solutioncategory
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: revops_solutioncategory
+  -
+    schemaname: revops_accountpotentialtechstack_practice_revops_practice
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_accountpotentialtechstack_solution_revops_solution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: revops_solution
+

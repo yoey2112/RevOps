@@ -1,0 +1,107 @@
+relationships:
+  -
+    schemaname: revops_lateralmove_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_lateralmove
+  -
+    schemaname: revops_lateralmove_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_lateralmove
+  -
+    schemaname: revops_lateralmove_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_lateralmove
+  -
+    schemaname: revops_lateralmove_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_lateralmove
+  -
+    schemaname: revops_lateralmove_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_lateralmove
+  -
+    schemaname: revops_lateralmove_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_lateralmove
+  -
+    schemaname: revops_lateralmove_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_lateralmove
+  -
+    schemaname: revops_lateralmove_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_lateralmove
+  -
+    schemaname: revops_lateralmove_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_lateralmove
+  -
+    schemaname: revops_lateralmove_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_lateralmove
+  -
+    schemaname: lk_revops_lateralmove_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_lateralmove_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_lateralmove_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_lateralmove_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_lateralmove
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: organization
+  -
+    schemaname: revops_lateralmove_gainingaccount_revops_cumulusaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_lateralmove_gainingaccountparent_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_lateralmove_gainingorg_revops_cumulusorganization
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_lateralmove_losingaccount_revops_cumulusaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_lateralmove_losingaccountparent_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_lateralmove_losingorg_revops_cumulusorganization
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: revops_cumulusorganization
+

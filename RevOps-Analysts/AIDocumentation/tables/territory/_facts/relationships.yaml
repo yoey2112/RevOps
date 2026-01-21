@@ -1,0 +1,142 @@
+relationships:
+  -
+    schemaname: Territory_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: territory
+  -
+    schemaname: territory_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: territory
+  -
+    schemaname: territory_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: territory
+  -
+    schemaname: territory_system_users
+    relationshiptype: OneToMany
+    referencingtablelogicalname: systemuser
+    referencedtablelogicalname: territory
+  -
+    schemaname: territory_accounts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: territory
+  -
+    schemaname: userentityinstancedata_territory
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: territory
+  -
+    schemaname: Territory_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: territory
+  -
+    schemaname: Territory_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: territory
+  -
+    schemaname: territory_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: territory
+  -
+    schemaname: Territory_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: territory
+  -
+    schemaname: territory_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: territory
+  -
+    schemaname: Territory_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: territory
+  -
+    schemaname: Territory_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: territory
+  -
+    schemaname: msdyn_territory_msdyn_resourcerequirement_Territory
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_resourcerequirement
+    referencedtablelogicalname: territory
+  -
+    schemaname: msdyn_territory_msdyn_resourceterritory_Territory
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_resourceterritory
+    referencedtablelogicalname: territory
+  -
+    schemaname: territory_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: territory
+  -
+    schemaname: revops_territory_territory_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: territory
+  -
+    schemaname: revops_territoryregion_territory_territory
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_territoryregion
+    referencedtablelogicalname: territory
+  -
+    schemaname: territory_parent_territory
+    relationshiptype: OneToMany
+    referencingtablelogicalname: territory
+    referencedtablelogicalname: territory
+  -
+    schemaname: organization_territories
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: territory
+    referencedtablelogicalname: organization
+  -
+    schemaname: lk_territory_entityimage
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: territory
+    referencedtablelogicalname: imagedescriptor
+  -
+    schemaname: TransactionCurrency_Territory
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: territory
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: system_user_territories
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: territory
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_territory_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: territory
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_territory_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: territory
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_territorybase_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: territory
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_territorybase_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: territory
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: territory_parent_territory
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: territory
+    referencedtablelogicalname: territory
+

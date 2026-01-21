@@ -1,0 +1,213 @@
+schema_version: 1
+solutions:
+  -
+    solutionid: '706dfaa6-819e-4456-9808-859db99d0c9a'
+    uniquename: revopsai
+    friendlyname: 'RevOps - AI'
+    version: '1.0.0.1'
+    ismanaged: true
+  -
+    solutionid: '6010b212-b1fe-45e0-b80c-cdc42d310cc2'
+    uniquename: revopsflows
+    friendlyname: 'RevOps - Flows'
+    version: '1.28.0.3'
+    ismanaged: true
+  -
+    solutionid: 'ea883b6e-56c8-424c-9954-7d61d32f2514'
+    uniquename: revopsflows_Patch_0f11d2ca
+    friendlyname: 'RevOps - Flows - 20260105'
+    version: '1.28.1.5'
+    ismanaged: true
+  -
+    solutionid: '3699880a-af0d-4741-8b57-62ba926657e8'
+    uniquename: revopsflows_Patch_236d5646
+    friendlyname: 'RevOps - Flows - 20260106'
+    version: '1.28.1.8'
+    ismanaged: true
+  -
+    solutionid: '4bfd4d80-9aca-4b65-823e-9214916045dd'
+    uniquename: revopsflows_Patch_848906fb
+    friendlyname: 'RevOps - Flows - p2P Update'
+    version: '1.28.2.2'
+    ismanaged: true
+  -
+    solutionid: '9199b3fc-72fd-4c6f-b886-21f002df69d0'
+    uniquename: revopsflows_Patch_a615b3d9
+    friendlyname: 'RevOps - Flows - 20260106-2'
+    version: '1.28.1.11'
+    ismanaged: true
+  -
+    solutionid: 'c971fcd6-a895-417e-b7f3-5509c7fc84b8'
+    uniquename: revopsflows_Patch_cca5dfdc
+    friendlyname: 'RevOps - Flows - 20260115 Clearbit Lead'
+    version: '1.28.2.4'
+    ismanaged: true
+  -
+    solutionid: 'fc5693c4-2d41-4e27-a701-357babf338bc'
+    uniquename: revopsplugins
+    friendlyname: 'RevOps - Plugins'
+    version: '1.1.0.2'
+    ismanaged: true
+  -
+    solutionid: '6e8835b1-4a09-4316-b23f-42eb492303d1'
+    uniquename: revopsplugins_Patch_05cd72ef
+    friendlyname: 'RevOps - Plugins - Optionset fix'
+    version: '1.1.1.7'
+    ismanaged: true
+  -
+    solutionid: 'd9fa242e-3b4f-405d-9adb-cc3b1a21f7e7'
+    uniquename: revopsplugins_Patch_10d7dea8
+    friendlyname: 'RevOps - Plugins - Set Customer Responded'
+    version: '1.1.2.2'
+    ismanaged: true
+  -
+    solutionid: '40c19b0a-2845-4086-b83e-05d84383ce69'
+    uniquename: revopsplugins_Patch_3c139d82
+    friendlyname: 'RevOps - Plugins - CaseOwnerStamper'
+    version: '1.1.2.6'
+    ismanaged: true
+  -
+    solutionid: '1b8e285d-5095-4ce1-a465-3f4ee4b67377'
+    uniquename: revopsplugins_Patch_3ce751d2
+    friendlyname: 'RevOps - Plugins - Solutions'
+    version: '1.1.1.2'
+    ismanaged: true
+  -
+    solutionid: '414c8dfd-6637-4d8f-94a8-aa6b9d54ab6e'
+    uniquename: revopsplugins_Patch_826f81ae
+    friendlyname: 'RevOps - Plugins - Customer Responded'
+    version: '1.1.2.9'
+    ismanaged: true
+  -
+    solutionid: '3e78a108-303c-4631-86b0-5ea181d04b83'
+    uniquename: revopsportals
+    friendlyname: 'RevOps - Portals'
+    version: '1.2.0.1'
+    ismanaged: true
+  -
+    solutionid: '81ebc797-e544-4e17-9ac5-48b3e61fb83b'
+    uniquename: revopsportals_Patch_13ea2a37
+    friendlyname: 'RevOps - Portals - remove related record from list'
+    version: '1.2.18.3'
+    ismanaged: true
+  -
+    solutionid: 'f4b7c406-5ec3-441d-ba6c-01d2c19f68d0'
+    uniquename: revopsportals_Patch_1bc50d9a
+    friendlyname: 'RevOps - Portals - fix the contact and length of modal '
+    version: '1.2.13.3'
+    ismanaged: true
+  -
+    solutionid: 'b8d59b61-33b7-4c7e-a391-c3a9da24d5ca'
+    uniquename: revopsportals_Patch_2cc2b236
+    friendlyname: 'RevOps - Portals - Escalate Request Modal Fix'
+    version: '1.2.13.5'
+    ismanaged: true
+  -
+    solutionid: 'f62d4a04-b998-44c7-b364-d2f0db298dc1'
+    uniquename: revopsportals_Patch_5e7e67a7
+    friendlyname: 'RevOps - Portals - KB page fix'
+    version: '1.2.1.7'
+    ismanaged: true
+  -
+    solutionid: '327f8dfb-0eac-4820-b601-ee50bd3e3803'
+    uniquename: revopsportals_Patch_9797a3c5
+    friendlyname: 'RevOps - Portals - Escalation Patch'
+    version: '1.2.12.2'
+    ismanaged: true
+  -
+    solutionid: '29c131f3-e60e-42dd-ad72-f0aa97123318'
+    uniquename: revopsportals_Patch_9ec3ca7a
+    friendlyname: 'RevOps - Portals - Menu for unauthenticated'
+    version: '1.2.5.21'
+    ismanaged: true
+  -
+    solutionid: '6007e2a3-bdf6-4047-a588-f40ff56bb97b'
+    uniquename: revopsportals_Patch_ac120dd3
+    friendlyname: 'RevOps - Portals - Escalate button move'
+    version: '1.2.14.2'
+    ismanaged: true
+  -
+    solutionid: '4afc5d11-e8f9-4a58-858e-415ff36e3a1f'
+    uniquename: revopsportals_Patch_b61c1681
+    friendlyname: 'RevOps - Portals - authentication'
+    version: '1.2.5.15'
+    ismanaged: true
+  -
+    solutionid: 'cb8fa273-fed5-4c87-8c45-f0feb1895f48'
+    uniquename: revopsportals_Patch_bb3ded54
+    friendlyname: 'RevOps - Portals - Migration Request All Components'
+    version: '1.2.11.12'
+    ismanaged: true
+  -
+    solutionid: 'de9074e0-ad7a-40a8-93f8-42bc2e82c631'
+    uniquename: revopsportals_Patch_bec1ca79
+    friendlyname: 'RevOps - Portals - Banner search bar'
+    version: '1.2.5.19'
+    ismanaged: true
+  -
+    solutionid: '0114d858-cdfd-4882-ac4a-036b3c77954a'
+    uniquename: RevOpsRequestsForm
+    friendlyname: Rev Ops Requests
+    version: '1.1.0.45'
+    ismanaged: true
+  -
+    solutionid: '0b71d0fb-bb03-4fa9-954b-e2e78ce3886b'
+    uniquename: revopstables
+    friendlyname: 'RevOps - Tables'
+    version: '1.41.0.2'
+    ismanaged: true
+  -
+    solutionid: '5080cc19-e8d8-484a-b8e2-2ef9b461c965'
+    uniquename: revopstables_Patch_1ab804f7
+    friendlyname: 'RevOps - Tables - thursday 1-15'
+    version: '1.41.5.6'
+    ismanaged: true
+  -
+    solutionid: 'fef933d8-0243-43e6-aea4-4e56037c1d79'
+    uniquename: revopstables_Patch_25fb7d7d
+    friendlyname: 'RevOps - Tables - Env Variable'
+    version: '1.41.4.3'
+    ismanaged: true
+  -
+    solutionid: 'aa6fb6dd-d9b4-4368-af95-ea50ac8226cb'
+    uniquename: revopstables_Patch_264c53c8
+    friendlyname: 'RevOps - Tables - Thursday sour patch'
+    version: '1.41.3.8'
+    ismanaged: true
+  -
+    solutionid: 'e352b98d-5d69-43c0-9a8f-47a71d03ecd3'
+    uniquename: revopstables_Patch_2a2eceba
+    friendlyname: 'RevOps - Tables - Monday update'
+    version: '1.41.4.5'
+    ismanaged: true
+  -
+    solutionid: '7b8ecab4-0c2e-4aeb-9c88-32b2bbe9213f'
+    uniquename: revopstables_Patch_47162902
+    friendlyname: 'RevOps - Tables - Case updates'
+    version: '1.41.3.6'
+    ismanaged: true
+  -
+    solutionid: 'd3c8b1b0-b401-4c0f-a00f-4b8b3613cd37'
+    uniquename: revopstables_Patch_606f8605
+    friendlyname: 'RevOps - Tables - Interaction Timestamps'
+    version: '1.41.3.2'
+    ismanaged: true
+  -
+    solutionid: '42151328-a259-41a1-b2c1-e990c54e43f3'
+    uniquename: revopstables_Patch_74d819bb
+    friendlyname: 'RevOps - Tables - 12/15 Patch'
+    version: '1.41.1.4'
+    ismanaged: true
+  -
+    solutionid: 'd4c6f130-9bec-42e6-9d4d-492d763f79d9'
+    uniquename: revopstables_Patch_c09dbb7c
+    friendlyname: 'RevOps - Tables - Taco Tuesday  12-16'
+    version: '1.41.2.5'
+    ismanaged: true
+  -
+    solutionid: '82cf9556-4222-4fa6-91c3-5fc406109482'
+    uniquename: revopstables_Patch_f58687fa
+    friendlyname: 'RevOps - Tables - Case Owner tracking'
+    version: '1.41.3.11'
+    ismanaged: true
+

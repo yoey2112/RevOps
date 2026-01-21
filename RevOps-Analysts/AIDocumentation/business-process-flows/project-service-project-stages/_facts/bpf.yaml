@@ -1,0 +1,6 @@
+workflowid: '665e73aa-18c2-47d8-86bf-c50499c73b82'
+primaryentity: msdyn_project
+description: Track stages of a Project from creation to close.
+uniquename: msdyn_bpf_665e73aa18c247d886bfc50499c73b82
+name: 'Project Service - Project Stages'
+

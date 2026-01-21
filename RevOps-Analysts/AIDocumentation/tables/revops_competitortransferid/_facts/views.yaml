@@ -1,0 +1,31 @@
+views:
+  -
+    name: Inactive Competitor Transfer IDS
+    querytype: -1
+    savedqueryid: '56c7686f-ad84-4824-bb2f-03a88d5f2751'
+  -
+    name: Competitor Transfer ID Advanced Find View
+    querytype: 1
+    savedqueryid: '59c35e61-d1a5-4f63-9644-11f7e25d64a2'
+  -
+    name: Competitor Transfer IDS
+    description: All active Competitor Transfer IDS
+    querytype: 8192
+    savedqueryid: 'c3a7ae10-5c99-f011-b41b-7ced8d04e0f6'
+  -
+    name: Quick Find Active Competitor Transfer IDS
+    querytype: 4
+    savedqueryid: '024e07fe-cfaa-4050-a4ee-8bf3c020b912'
+  -
+    name: Competitor Transfer ID Associated View
+    querytype: 2
+    savedqueryid: '355d6f4f-c70a-486c-8616-b8134b1ad612'
+  -
+    name: Competitor Transfer ID Lookup View
+    querytype: 64
+    savedqueryid: '9f1dd989-a831-4f25-ac97-d9c2acee53d7'
+  -
+    name: Active Competitor Transfer IDS
+    querytype: -1
+    savedqueryid: '72d0f672-0486-41c3-9e72-f3eb0aa6b9bd'
+

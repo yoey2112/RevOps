@@ -1,0 +1,92 @@
+relationships:
+  -
+    schemaname: revops_territoryregion_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_territoryregion
+  -
+    schemaname: revops_territoryregion_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_territoryregion
+  -
+    schemaname: revops_territoryregion_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_territoryregion
+  -
+    schemaname: revops_territoryregion_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_territoryregion
+  -
+    schemaname: revops_territoryregion_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_territoryregion
+  -
+    schemaname: revops_territoryregion_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_territoryregion
+  -
+    schemaname: revops_territoryregion_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_territoryregion
+  -
+    schemaname: revops_territoryregion_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_territoryregion
+  -
+    schemaname: revops_territoryregion_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_territoryregion
+  -
+    schemaname: revops_territoryregion_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_territoryregion
+  -
+    schemaname: lk_revops_territoryregion_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_territoryregion
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_territoryregion_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_territoryregion
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_territoryregion_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_territoryregion
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_territoryregion_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_territoryregion
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_territoryregion
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_territoryregion
+    referencedtablelogicalname: organization
+  -
+    schemaname: revops_territoryregion_revops_country_revops_country
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_territoryregion
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_territoryregion_stateorprovince_revops_stateorprovince
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_territoryregion
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: revops_territoryregion_territory_territory
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_territoryregion
+    referencedtablelogicalname: territory
+

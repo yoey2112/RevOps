@@ -1,0 +1,172 @@
+views:
+  -
+    name: Lead Advanced Find View
+    querytype: 1
+    savedqueryid: '00000000-0000-0000-00aa-000000666700'
+  -
+    name: My Open Leads
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001005'
+  -
+    name: Open Leads
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001006'
+  -
+    name: Leads Opened This Week
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001007'
+  -
+    name: Leads Opened Last Week
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001008'
+  -
+    name: Closed Leads
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001009'
+  -
+    name: All leads (dashboard)
+    description: Shows all leads.
+    querytype: -1
+    savedqueryid: '3ab4e809-bb6b-e711-a826-000d3a337469'
+  -
+    name: Customer journey leads
+    querytype: -1
+    savedqueryid: '530af1b4-b634-e711-80e6-000d3ab6b319'
+  -
+    name: All Leads
+    description: Shows all leads.
+    querytype: -1
+    savedqueryid: '5a926b99-3a5f-df11-ae90-00155d2e3002'
+  -
+    name: Campaign Leads
+    description: Displays Leads for the Campaign record.
+    querytype: -1
+    savedqueryid: '333b0ce1-c380-e211-90f7-00155d89bb01'
+  -
+    name: Leads I Follow
+    description: Leads that you follow.
+    querytype: -1
+    savedqueryid: 'd603107c-5e90-e011-95ae-00155d9cfa02'
+  -
+    name: Leads Being Followed
+    description: Leads being followed.
+    querytype: -1
+    savedqueryid: 'd603107c-5e90-e011-95ae-00155d9cfa03'
+  -
+    name: My Open Leads by Relationship
+    querytype: -1
+    savedqueryid: '077cde7b-6f4e-e611-80be-0024e8469fb9'
+  -
+    name: Lead Associated View
+    description: Displays information about related leads in the detail form of any associated lead record.
+    querytype: 2
+    savedqueryid: 'f7ba26ee-3f8e-4cf2-8e02-0b4bbcd16da8'
+  -
+    name: Open leads without sequences
+    description: Show open leads that aren't connected to a sequence.
+    querytype: -1
+    savedqueryid: '0cc3ebe5-428c-4bf4-8019-0d1371bf42ef'
+  -
+    name: Lead Lookup View
+    querytype: 64
+    savedqueryid: 'ecbac1a3-f8d8-4423-8f7e-10b11119739a'
+  -
+    name: All Members
+    querytype: 32
+    savedqueryid: 'fc1b8995-4e44-4d65-99be-1e945953564c'
+  -
+    name: Lead List Member View
+    description: Displays information about related leads in the Members subgrid of the Marketing Lists.
+    querytype: 2
+    savedqueryid: 'fc71d030-7a82-4b51-bde8-29b24b7abf9d'
+  -
+    name: Quick Find Marketing List Members
+    querytype: 32
+    savedqueryid: 'e76ac89f-97c3-42da-a8bc-2b201429eba5'
+  -
+    name: Segment associated leads
+    description: Segment associated leads.
+    querytype: 1024
+    savedqueryid: '5303731d-e322-4ee6-9487-2bf035aaf3c0'
+  -
+    name: My Open Leads Scored
+    querytype: -1
+    savedqueryid: '1228adc4-47ae-4112-b51c-2c3d715cd52a'
+  -
+    name: Leads Mobile Client Draft View
+    querytype: 32768
+    savedqueryid: '85dab92c-2396-41cd-b76b-33452c87c31b'
+  -
+    name: Selected Leads Campaigns
+    description: Selected Leads for Campaigns and Quick Campaigns.
+    querytype: -1
+    savedqueryid: 'c8f256c6-f809-4951-b286-3cbd9f99f80b'
+  -
+    name: Leads I follow (dashboard)
+    querytype: -1
+    savedqueryid: '967e17d8-ade4-425d-90e3-4e9b68aa70ad'
+  -
+    name: Excluded Leads Campaigns
+    description: Excluded Leads for Campaigns and Quick Campaigns.
+    querytype: -1
+    savedqueryid: '7c17132b-cda1-497a-b4c2-50da36bc0d4a'
+  -
+    name: 'Leads: Influenced Deals That We Won'
+    description: Key leads who influenced deals that have been won in the last 12 months.
+    querytype: -1
+    savedqueryid: '2ed4a79b-1db9-454d-96ea-5718ffb98fd6'
+  -
+    name: Paid Advertising leads
+    description: view that shows all leads generated from paid advertisement
+    querytype: -1
+    savedqueryid: '8a34f86f-8d77-ef11-ac20-6045bdf9e493'
+  -
+    name: CyberMSP
+    querytype: -1
+    savedqueryid: 'a93702b3-b355-f011-bec1-7c1e5206727f'
+  -
+    name: 'Leads: Older Than 6 Months'
+    querytype: -1
+    savedqueryid: 'afe23d8a-6651-474d-b8ee-90210a8231f6'
+  -
+    name: My Recent Leads
+    description: Recently changed leads owned by me
+    querytype: 8192
+    savedqueryid: 'a52f1d7b-a57e-4a71-b4f1-ca948cb33543'
+  -
+    name: Inactive Members
+    querytype: 32
+    savedqueryid: '0459ccfb-bd0f-4e0b-95e7-cac9bc3688fa'
+  -
+    name: All leads in current fiscal year
+    description: Display all the leads created in the current fiscal year.
+    querytype: -1
+    savedqueryid: '42051953-0b19-4c1f-9398-d3ab897b124a'
+  -
+    name: 'Leads: No campaign Activities Sent'
+    querytype: -1
+    savedqueryid: 'fe961bbb-e5ea-44ba-aff3-db1d8bbba18b'
+  -
+    name: Active Members
+    querytype: 32
+    savedqueryid: '9237f5bf-3f99-4034-8501-e279334774bb'
+  -
+    name: Quick Find All Leads
+    querytype: 4
+    savedqueryid: 'f1a7c4d9-f439-46da-8b69-ecc133214695'
+  -
+    name: My Connections
+    description: Shows all active instances of the lead that the current user is connected to via an active connection.
+    querytype: -1
+    savedqueryid: 'ef3cdb5b-71ed-4e73-92b2-ed6d47156521'
+  -
+    name: My open leads without sequences
+    description: Show my open leads that aren't connected to a sequence.
+    querytype: -1
+    savedqueryid: '7f3b423d-0ba1-42b6-a561-ef4554b10e37'
+  -
+    name: Lead BulkOperation View
+    description: Display Leads BulkOperation View.
+    querytype: 2
+    savedqueryid: '49fd0049-f06b-4130-90df-f50c34111df7'
+

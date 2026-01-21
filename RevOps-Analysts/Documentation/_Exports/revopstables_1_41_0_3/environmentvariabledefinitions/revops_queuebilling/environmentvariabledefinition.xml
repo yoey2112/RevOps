@@ -1,0 +1,10 @@
+<environmentvariabledefinition schemaname="revops_queuebilling">
+  <displayname default="Queue - Billing">
+    <label description="Queue - Billing" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.40.27.1</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

@@ -1,0 +1,35 @@
+views:
+  -
+    name: Quick Find Active Onboarding Calls
+    querytype: 4
+    savedqueryid: 'eead6909-0a42-4870-96ae-332142522b84'
+  -
+    name: My Onboarding Calls
+    description: Active Onboarding Calls owned by me
+    querytype: 8192
+    savedqueryid: '215e86f0-b534-ef11-8e4e-6045bdcd5e22'
+  -
+    name: Onboarding Call Advanced Find View
+    querytype: 1
+    savedqueryid: 'cb851ba2-1357-45d4-9edf-71fd5c06d5d5'
+  -
+    name: Closed Onboarding Calls
+    querytype: -1
+    savedqueryid: '225d4538-2f85-4f23-8a85-ad0b78d23575'
+  -
+    name: Onboarding Call Lookup View
+    querytype: 64
+    savedqueryid: 'f2ef1eef-be58-4e71-a305-afc583e17a13'
+  -
+    name: All Onboarding Calls
+    querytype: -1
+    savedqueryid: 'ca99f861-eb2c-4283-8024-dede0ec6b39d'
+  -
+    name: My Open Onboarding Calls
+    querytype: -1
+    savedqueryid: '6162f010-50ec-49b1-8c68-dffef3294ad0'
+  -
+    name: Onboarding Call Associated View
+    querytype: 2
+    savedqueryid: '70522679-3eb5-43d9-b869-f6532ed0eb21'
+

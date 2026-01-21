@@ -1,0 +1,77 @@
+relationships:
+  -
+    schemaname: revops_gicsmapping_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_gicsmapping
+  -
+    schemaname: revops_gicsmapping_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_gicsmapping
+  -
+    schemaname: revops_gicsmapping_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_gicsmapping
+  -
+    schemaname: revops_gicsmapping_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_gicsmapping
+  -
+    schemaname: revops_gicsmapping_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_gicsmapping
+  -
+    schemaname: revops_gicsmapping_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_gicsmapping
+  -
+    schemaname: revops_gicsmapping_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_gicsmapping
+  -
+    schemaname: revops_gicsmapping_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_gicsmapping
+  -
+    schemaname: revops_gicsmapping_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_gicsmapping
+  -
+    schemaname: revops_gicsmapping_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_gicsmapping
+  -
+    schemaname: lk_revops_gicsmapping_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_gicsmapping
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_gicsmapping_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_gicsmapping
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_gicsmapping_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_gicsmapping
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_gicsmapping_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_gicsmapping
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_gicsmapping
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_gicsmapping
+    referencedtablelogicalname: organization
+

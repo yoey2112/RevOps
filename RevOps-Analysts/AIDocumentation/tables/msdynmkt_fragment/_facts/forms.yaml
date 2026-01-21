@@ -1,0 +1,732 @@
+forms:
+  -
+    name: Save as block properties
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Save As Block Properties
+        name: ''
+        tab: general_tab
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: general_tab
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: ''
+        tab: general_tab
+        disabled: false
+        visible: true
+        control_id: isreadytosend_param
+        field: isreadytosend_param
+      -
+        section: ''
+        tab: general_tab
+        disabled: false
+        visible: true
+        control_id: msdynmkt_protected
+        field: msdynmkt_protected
+      -
+        section: ''
+        tab: general_tab
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: general_tab
+        disabled: false
+        visible: true
+        control_id: entityimage
+        field: entityimage
+      -
+        section: ''
+        tab: general_tab
+        disabled: false
+        visible: true
+        control_id: msdynmkt_thumbnailimage
+        field: msdynmkt_thumbnailimage
+    description: null
+    tabs:
+      -
+        label: General
+        name: general_tab
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Main
+  -
+    name: Properties
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Settings
+        name: settings
+        tab: tab_2
+        visible: true
+      -
+        label: History
+        name: history
+        tab: tab_2
+        visible: true
+    fields:
+      -
+        section: settings
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: msdynmkt_protected
+        field: msdynmkt_protected
+      -
+        section: settings
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: entityimage
+        field: entityimage
+      -
+        section: settings
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: msdynmkt_thumbnailimage
+        field: msdynmkt_thumbnailimage
+      -
+        section: settings
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: msdynmkt_tags
+        field: msdynmkt_tags
+      -
+        section: settings
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: owningbusinessunit
+        field: owningbusinessunit
+      -
+        section: settings
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: msdynmkt_designerhtml
+        field: msdynmkt_designerhtml
+      -
+        section: settings
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: msdynmkt_finalizedhtml
+        field: msdynmkt_finalizedhtml
+      -
+        section: history
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: createdby
+        field: createdby
+      -
+        section: history
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: history
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+      -
+        section: history
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: history
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: null
+    tabs:
+      -
+        label: Details
+        name: tab_2
+        visible: true
+        expanded: true
+    field_count: 13
+    type_name: Main
+  -
+    name: Content block quick create form
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: section
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+    description: Content block quick create form.
+    tabs:
+      -
+        label: Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Quick Create
+  -
+    name: Content Block Filter Data
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: section
+        name: tab_1_column_1_section_1_data_filter
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1_data_filter
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_protected
+        field: msdynmkt_protected
+      -
+        section: tab_1_column_1_section_1_data_filter
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_tags
+        field: msdynmkt_tags
+    description: null
+    tabs:
+      -
+        label: Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick View
+  -
+    name: Designer
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_designerhtml
+        field: msdynmkt_designerhtml
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_previewhtml
+        field: msdynmkt_previewhtml
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_finalizedhtml
+        field: msdynmkt_finalizedhtml
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_placeholders
+        field: msdynmkt_placeholders
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_protected
+        field: msdynmkt_protected
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_tags
+        field: msdynmkt_tags
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: owningbusinessunit
+        field: owningbusinessunit
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fragmentid
+        field: msdynmkt_fragmentid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_conditionalcontent
+        field: msdynmkt_conditionalcontent
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdby
+        field: createdby
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: entityimage
+        field: entityimage
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_thumbnailimage
+        field: msdynmkt_thumbnailimage
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 22
+    type_name: Main
+  -
+    name: Save as block properties
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Save As Block Properties
+        name: ''
+        tab: general_tab
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: general_tab
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: ''
+        tab: general_tab
+        disabled: false
+        visible: true
+        control_id: isreadytosend_param
+        field: isreadytosend_param
+      -
+        section: ''
+        tab: general_tab
+        disabled: false
+        visible: true
+        control_id: msdynmkt_protected
+        field: msdynmkt_protected
+      -
+        section: ''
+        tab: general_tab
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: general_tab
+        disabled: false
+        visible: true
+        control_id: entityimage
+        field: entityimage
+      -
+        section: ''
+        tab: general_tab
+        disabled: false
+        visible: true
+        control_id: msdynmkt_thumbnailimage
+        field: msdynmkt_thumbnailimage
+    description: null
+    tabs:
+      -
+        label: General
+        name: general_tab
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: GENERAL
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick View
+  -
+    name: Information
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: A card form for this entity.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 4
+    type_name: Card
+  -
+    name: Content Block Filter
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_protected
+        field: msdynmkt_protected
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_tags
+        field: msdynmkt_tags
+    description: null
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Main
+  -
+    name: Content block details
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_tags
+        field: msdynmkt_tags
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_protected
+        field: msdynmkt_protected
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdby
+        field: createdby
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 4
+    type_name: Quick View
+  -
+    name: Gallery Properties
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_protected
+        field: msdynmkt_protected
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_tags
+        field: msdynmkt_tags
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: owningbusinessunit
+        field: owningbusinessunit
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: createdby
+        field: createdby
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fragmentid
+        field: msdynmkt_fragmentid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msdynmkt_name
+        field: msdynmkt_name
+    description: null
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 8
+    type_name: Main
+

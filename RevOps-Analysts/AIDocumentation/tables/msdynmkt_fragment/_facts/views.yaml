@@ -1,0 +1,43 @@
+views:
+  -
+    name: Content block Lookup View
+    querytype: 64
+    savedqueryid: 'd248dd89-ee96-4a6e-b38d-000ede74a220'
+  -
+    name: Imported from outbound marketing
+    querytype: -1
+    savedqueryid: '30b005ed-05f9-4f01-9cd7-1b22af2fe0f4'
+  -
+    name: Content block Advanced Find View
+    querytype: 1
+    savedqueryid: '647f6d2c-ef53-436c-94c6-260a4f98cdef'
+  -
+    name: My Content blocks
+    description: Active Content blocks owned by me
+    querytype: 8192
+    savedqueryid: '1197cf82-009a-ec11-8d33-6045bd950de3'
+  -
+    name: Quick Find Active Content blocks
+    querytype: 4
+    savedqueryid: 'e5329cd8-6973-4a2a-a0cb-a5f1a0d0b697'
+  -
+    name: Active Content blocks
+    querytype: -1
+    savedqueryid: '14531fbe-5f97-4fa9-82f0-b37e2a46e661'
+  -
+    name: Layoutless Content blocks
+    querytype: 64
+    savedqueryid: '08bc10db-e2ec-46cc-829d-bcb60536ba78'
+  -
+    name: Save As Content Block View
+    querytype: 64
+    savedqueryid: 'bfff20c3-8f9c-4f3e-a8b6-d501ba782562'
+  -
+    name: Content block Associated View
+    querytype: 2
+    savedqueryid: '7e9d5f3c-d8f8-4fba-b409-ee78cb05bdab'
+  -
+    name: Inactive Content blocks
+    querytype: -1
+    savedqueryid: '60f39064-9c0a-4591-ad7b-f9a0d4ddbc0a'
+

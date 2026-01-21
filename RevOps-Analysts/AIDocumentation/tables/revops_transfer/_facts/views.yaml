@@ -1,0 +1,44 @@
+views:
+  -
+    name: Transfer Associated View
+    querytype: 2
+    savedqueryid: '27a181fc-0a80-474b-9800-176c123f9d99'
+  -
+    name: Quick Find Active Transfers
+    querytype: 4
+    savedqueryid: 'af2a4a47-d378-4abc-8bd7-2e11f00f608c'
+  -
+    name: Transfer Advanced Find View
+    querytype: 1
+    savedqueryid: 'd25c69e2-9dfd-4d8b-83b1-41828c7897df'
+  -
+    name: Transfers
+    description: All active Transfers
+    querytype: 8192
+    savedqueryid: '73a92ed3-9d94-f011-b4cc-6045bdcd501f'
+  -
+    name: License Adjustment Details View
+    description: Details for License Adjustment cases
+    querytype: -1
+    savedqueryid: '9844fcd3-2dc6-f011-bbd3-7c1e52067e9e'
+  -
+    name: 'Case - P2P Transfers'
+    querytype: -1
+    savedqueryid: 'e7ada753-a194-f011-b4cb-7ced8d04e0f6'
+  -
+    name: Migration Details for Case
+    querytype: -1
+    savedqueryid: '937734cd-a6c0-f011-bbd3-7ced8d058789'
+  -
+    name: Inactive Transfers
+    querytype: -1
+    savedqueryid: '198bba9d-3a48-47ca-a9fe-ad59d738e346'
+  -
+    name: Active Transfers
+    querytype: -1
+    savedqueryid: '013ecef7-3893-42b7-ae02-c82c0320cda9'
+  -
+    name: Transfer Lookup View
+    querytype: 64
+    savedqueryid: '885275c8-a108-4cdd-bfb6-e56cd650a9ba'
+

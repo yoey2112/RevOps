@@ -1,0 +1,31 @@
+views:
+  -
+    name: My SME Engagements
+    description: Active SME Engagements owned by me
+    querytype: 8192
+    savedqueryid: '31a9d42c-ff9a-f011-b41b-7ced8d04e0f6'
+  -
+    name: Quick Find Active SME Engagements
+    querytype: 4
+    savedqueryid: '36828ebe-9c56-4ae1-acdc-8405ddbf6223'
+  -
+    name: SME Engagement Advanced Find View
+    querytype: 1
+    savedqueryid: '062b9457-6da6-43ea-92cc-9c2ca12f9200'
+  -
+    name: Inactive SME Engagements
+    querytype: -1
+    savedqueryid: 'fa32f58b-982f-4685-a710-9e795c3519b8'
+  -
+    name: SME Engagement Associated View
+    querytype: 2
+    savedqueryid: '9f939181-9ab9-4f79-8dbb-ac1afa3fdd25'
+  -
+    name: Active SME Engagements
+    querytype: -1
+    savedqueryid: '20f7dd99-18c4-48ed-830d-bf2950a44348'
+  -
+    name: SME Engagement Lookup View
+    querytype: 64
+    savedqueryid: '5fd0813b-9863-4fde-9dc2-fb5e2757cec8'
+

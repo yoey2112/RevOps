@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 4
+    uniquename: CustomerServiceTeamMember
+    appmoduleid: '685a7b00-c660-f011-bec1-002248b26171'
+    name: Customer Service Team Member
+

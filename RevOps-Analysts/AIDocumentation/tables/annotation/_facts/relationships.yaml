@@ -1,0 +1,1417 @@
+relationships:
+  -
+    schemaname: Annotation_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: annotation
+  -
+    schemaname: Annotation_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: annotation
+  -
+    schemaname: userentityinstancedata_annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: annotation
+  -
+    schemaname: Annotation_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: annotation
+  -
+    schemaname: Annotation_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: annotation
+  -
+    schemaname: annotation_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: annotation
+  -
+    schemaname: knowledgearticle_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: channelaccessprofile_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: channelaccessprofile
+  -
+    schemaname: profilerule_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: channelaccessprofilerule
+  -
+    schemaname: KnowledgeBaseRecord_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: knowledgebaserecord
+  -
+    schemaname: lk_annotationbase_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: Mailbox_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: mailbox
+  -
+    schemaname: team_annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: team
+  -
+    schemaname: annotation_owning_user
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: PhoneCall_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: Contact_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: contact
+  -
+    schemaname: SocialActivity_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: socialactivity
+  -
+    schemaname: sla_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: sla
+  -
+    schemaname: Calendar_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: calendar
+  -
+    schemaname: Email_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: email
+  -
+    schemaname: Task_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: task
+  -
+    schemaname: ConvertRule_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: convertrule
+  -
+    schemaname: lk_annotationbase_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: EmailServerProfile_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: emailserverprofile
+  -
+    schemaname: Account_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: account
+  -
+    schemaname: RecurringAppointmentMaster_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: recurringappointmentmaster
+  -
+    schemaname: routingrule_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: routingrule
+  -
+    schemaname: business_unit_annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: lk_annotationbase_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: Letter_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: letter
+  -
+    schemaname: Fax_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: fax
+  -
+    schemaname: owner_annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: owner
+  -
+    schemaname: profileruleitem_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: channelaccessprofileruleitem
+  -
+    schemaname: Workflow_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: workflow
+  -
+    schemaname: routingruleitem_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: routingruleitem
+  -
+    schemaname: Appointment_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: appointment
+  -
+    schemaname: lk_annotationbase_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: Goal_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: goal
+  -
+    schemaname: KbArticle_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: kbarticle
+  -
+    schemaname: SharePointDocument_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: sharepointdocument
+  -
+    schemaname: DuplicateRule_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: duplicaterule
+  -
+    schemaname: msdyn_flow_approval_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_flow_approval
+  -
+    schemaname: msdyn_aimodel_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_aimodel
+  -
+    schemaname: msdyn_aifptrainingdocument_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_aifptrainingdocument
+  -
+    schemaname: msdyn_aiodimage_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_aiodimage
+  -
+    schemaname: chat_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: chat
+  -
+    schemaname: adx_invitation_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_invitation
+  -
+    schemaname: adx_inviteredemption_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_inviteredemption
+  -
+    schemaname: adx_portalcomment_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_portalcomment
+  -
+    schemaname: mspcat_catalogsubmissionfiles_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: mspcat_catalogsubmissionfiles
+  -
+    schemaname: Lead_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: lead
+  -
+    schemaname: bookableresource_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: bookableresource
+  -
+    schemaname: bookableresourcebooking_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: bookableresourcebooking
+  -
+    schemaname: bookableresourcebookingheader_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: bookableresourcebookingheader
+  -
+    schemaname: bookableresourcecategoryassn_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: bookableresourcecategoryassn
+  -
+    schemaname: bookableresourcecharacteristic_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: bookableresourcecharacteristic
+  -
+    schemaname: bookableresourcegroup_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: bookableresourcegroup
+  -
+    schemaname: bulkoperation_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: bulkoperation
+  -
+    schemaname: Campaign_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: campaign
+  -
+    schemaname: CampaignActivity_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: campaignactivity
+  -
+    schemaname: CampaignResponse_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: campaignresponse
+  -
+    schemaname: List_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: list
+  -
+    schemaname: Commitment_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: commitment
+  -
+    schemaname: Contract_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: contract
+  -
+    schemaname: ContractDetail_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: contractdetail
+  -
+    schemaname: entitlement_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: entitlement
+  -
+    schemaname: entitlementchannel_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: entitlementchannel
+  -
+    schemaname: entitlementtemplate_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: entitlementtemplate
+  -
+    schemaname: Equipment_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: equipment
+  -
+    schemaname: Incident_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: incident
+  -
+    schemaname: IncidentResolution_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: incidentresolution
+  -
+    schemaname: ResourceSpec_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: resourcespec
+  -
+    schemaname: Service_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: service
+  -
+    schemaname: ServiceAppointment_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: serviceappointment
+  -
+    schemaname: Product_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_customerasset_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_customerasset
+  -
+    schemaname: msdyn_functionallocation_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_functionallocation
+  -
+    schemaname: msdyn_iotalert_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_iotalert
+  -
+    schemaname: msdyn_iotdevice_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_iotdevice
+  -
+    schemaname: msdyn_iotdevicecategory_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_iotdevicecategory
+  -
+    schemaname: msdyn_iotdevicecommand_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_iotdevicecommand
+  -
+    schemaname: msdyn_iotdeviceregistrationhistory_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_iotdeviceregistrationhistory
+  -
+    schemaname: msdyn_playbookinstance_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_playbookinstance
+  -
+    schemaname: msdyn_playbooktemplate_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_playbooktemplate
+  -
+    schemaname: Invoice_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: invoice
+  -
+    schemaname: Opportunity_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: OpportunityClose_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: opportunityclose
+  -
+    schemaname: OrderClose_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: orderclose
+  -
+    schemaname: Quote_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: quote
+  -
+    schemaname: QuoteClose_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: quoteclose
+  -
+    schemaname: SalesOrder_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: salesorder
+  -
+    schemaname: Competitor_Annotation
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: competitor
+  -
+    schemaname: msdyn_taggedrecord_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_taggedrecord
+  -
+    schemaname: msdyn_forecastconfiguration_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_forecastconfiguration
+  -
+    schemaname: msdyn_forecastpredictionstatus_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_forecastpredictionstatus
+  -
+    schemaname: msdyn_postalbum_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_postalbum
+  -
+    schemaname: msfp_alert_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msfp_alert
+  -
+    schemaname: msfp_question_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msfp_question
+  -
+    schemaname: msfp_surveyinvite_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msfp_surveyinvite
+  -
+    schemaname: msfp_surveyresponse_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msfp_surveyresponse
+  -
+    schemaname: msdyn_copilottranscript_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_copilottranscript
+  -
+    schemaname: msdyn_swarm_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_swarm
+  -
+    schemaname: msdyn_overflowactionconfig_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_overflowactionconfig
+  -
+    schemaname: msdyn_liveconversation_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_liveconversation
+  -
+    schemaname: msdyn_ocflaggedspam_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_ocflaggedspam
+  -
+    schemaname: msdyn_ocliveworkitem_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_ocliveworkitem
+  -
+    schemaname: msdyn_ocsession_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_ocsession
+  -
+    schemaname: msdyn_personalsoundsetting_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_personalsoundsetting
+  -
+    schemaname: msdyn_soundfile_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_soundfile
+  -
+    schemaname: msdyn_soundnotificationsetting_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_soundnotificationsetting
+  -
+    schemaname: msdyn_transcript_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_transcript
+  -
+    schemaname: msdyn_salessuggestion_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_salessuggestion
+  -
+    schemaname: msdyn_actual_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_actual
+  -
+    schemaname: msdyn_bookingalert_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_bookingalert
+  -
+    schemaname: msdyn_bookingalertstatus_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_bookingalertstatus
+  -
+    schemaname: msdyn_bookingrule_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_bookingrule
+  -
+    schemaname: msdyn_organizationalunit_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_organizationalunit
+  -
+    schemaname: msdyn_priority_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_priority
+  -
+    schemaname: msdyn_requirementcharacteristic_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_requirementcharacteristic
+  -
+    schemaname: msdyn_requirementresourcecategory_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_requirementresourcecategory
+  -
+    schemaname: msdyn_requirementresourcepreference_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_requirementresourcepreference
+  -
+    schemaname: msdyn_requirementstatus_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_requirementstatus
+  -
+    schemaname: msdyn_resourcerequirement_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_resourcerequirement
+  -
+    schemaname: msdyn_resourcerequirementdetail_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_resourcerequirementdetail
+  -
+    schemaname: msdyn_resourceterritory_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_resourceterritory
+  -
+    schemaname: msdyn_systemuserschedulersetting_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_systemuserschedulersetting
+  -
+    schemaname: msdyn_timegroup_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_timegroup
+  -
+    schemaname: msdyn_timegroupdetail_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_timegroupdetail
+  -
+    schemaname: msdyn_transactionorigin_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_transactionorigin
+  -
+    schemaname: msevtmgt_checkin_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_checkin
+  -
+    schemaname: msevtmgt_event_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_event
+  -
+    schemaname: msevtmgt_eventpurchase_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_eventpurchase
+  -
+    schemaname: msevtmgt_eventpurchaseattendee_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_eventpurchaseattendee
+  -
+    schemaname: msevtmgt_eventpurchasepass_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_eventpurchasepass
+  -
+    schemaname: msevtmgt_eventregistration_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_eventregistration
+  -
+    schemaname: msevtmgt_hotel_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_hotel
+  -
+    schemaname: msevtmgt_hotelroomallocation_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_hotelroomallocation
+  -
+    schemaname: msevtmgt_hotelroomreservation_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_hotelroomreservation
+  -
+    schemaname: msevtmgt_layout_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_layout
+  -
+    schemaname: msevtmgt_room_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_room
+  -
+    schemaname: msevtmgt_session_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_sessionregistration_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_sessionregistration
+  -
+    schemaname: msevtmgt_sessiontrack_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_sessiontrack
+  -
+    schemaname: msevtmgt_speaker_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_speaker
+  -
+    schemaname: msevtmgt_speakerengagement_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_speakerengagement
+  -
+    schemaname: msevtmgt_sponsorablearticle_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_sponsorablearticle
+  -
+    schemaname: msevtmgt_sponsorship_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_sponsorship
+  -
+    schemaname: msevtmgt_venue_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_venue
+  -
+    schemaname: msevtmgt_webinarconfiguration_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_webinarconfiguration
+  -
+    schemaname: msevtmgt_webinarprovider_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_webinarprovider
+  -
+    schemaname: msdyncrm_appointmentactivitymarketingtemplate_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_appointmentactivitymarketingtemplate
+  -
+    schemaname: msdyncrm_contentsettings_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_contentsettings
+  -
+    schemaname: msdyncrm_customerjourney_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_customerjourney
+  -
+    schemaname: msdyncrm_marketingdynamiccontentmetadata_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_marketingdynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemaildynamiccontentmetadata_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_marketingemaildynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemailtestsend_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_marketingemailtestsend
+  -
+    schemaname: msdyncrm_marketingform_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_marketingform
+  -
+    schemaname: msdyncrm_marketingformtemplate_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_marketingformtemplate
+  -
+    schemaname: msdyncrm_marketingpage_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_marketingpage
+  -
+    schemaname: msdyncrm_marketingpagetemplate_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_marketingpagetemplate
+  -
+    schemaname: msdyncrm_mktactivity_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_mktactivity
+  -
+    schemaname: msdyncrm_phonecallactivitymarketingtemplate_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_phonecallactivitymarketingtemplate
+  -
+    schemaname: msdyncrm_taskactivitymarketingtemplate_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_taskactivitymarketingtemplate
+  -
+    schemaname: msdyncrm_uicconfig_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_uicconfig
+  -
+    schemaname: msdyncrm_leadscoremodel_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_leadscoremodel
+  -
+    schemaname: msdyncrm_linkedinaccount_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_linkedinaccount
+  -
+    schemaname: msdyncrm_linkedinactivity_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_linkedinactivity
+  -
+    schemaname: msdyncrm_linkedinfieldmapping_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_linkedinfieldmapping
+  -
+    schemaname: msdyncrm_linkedinform_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_linkedinform
+  -
+    schemaname: msdyncrm_linkedinformanswer_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_linkedinformanswer
+  -
+    schemaname: msdyncrm_linkedinformquestion_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_linkedinformquestion
+  -
+    schemaname: msdyncrm_linkedinformsubmission_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_linkedinformsubmission
+  -
+    schemaname: msdyncrm_linkedinleadmatchingstrategy_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_linkedinleadmatchingstrategy
+  -
+    schemaname: msdyncrm_linkedinuserprofile_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_linkedinuserprofile
+  -
+    schemaname: msdyncrm_migration_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyncrm_migration
+  -
+    schemaname: msdyn_ocvoicemail_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_ocvoicemail
+  -
+    schemaname: li_inmail_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: li_inmail
+  -
+    schemaname: li_message_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: li_message
+  -
+    schemaname: li_pointdrivepresentationviewed_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: li_pointdrivepresentationviewed
+  -
+    schemaname: revops_demo_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: revops_demo
+  -
+    schemaname: revops_onboardingcall_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_cumulussignup_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: revops_cumulussignup
+  -
+    schemaname: msdyn_amsbuild_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_amsbuild
+  -
+    schemaname: msdyn_amsmodel_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_amsmodel
+  -
+    schemaname: msdyn_amsprofile_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_amsprofile
+  -
+    schemaname: msdyn_amsprofilesettings_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_amsprofilesettings
+  -
+    schemaname: msdyn_amstag_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_amstag
+  -
+    schemaname: approvalprocess_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: approvalprocess
+  -
+    schemaname: approvalstageapproval_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: approvalstageapproval
+  -
+    schemaname: adx_sitesetting_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_sitesetting
+  -
+    schemaname: adx_webfile_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_webfile
+  -
+    schemaname: adx_weblink_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_weblink
+  -
+    schemaname: adx_webnotificationurl_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_webnotificationurl
+  -
+    schemaname: adx_webpage_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_webpage
+  -
+    schemaname: adx_webrole_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_webrole
+  -
+    schemaname: adx_website_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_website
+  -
+    schemaname: adx_ad_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_ad
+  -
+    schemaname: adx_adplacement_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_adplacement
+  -
+    schemaname: adx_alertsubscription_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_alertsubscription
+  -
+    schemaname: adx_entitypermission_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_entitypermission
+  -
+    schemaname: adx_poll_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_poll
+  -
+    schemaname: adx_polloption_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_polloption
+  -
+    schemaname: adx_pollplacement_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_pollplacement
+  -
+    schemaname: adx_pollsubmission_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_pollsubmission
+  -
+    schemaname: adx_publishingstatetransitionrule_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_publishingstatetransitionrule
+  -
+    schemaname: adx_redirect_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_redirect
+  -
+    schemaname: adx_shortcut_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_shortcut
+  -
+    schemaname: adx_websitebinding_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_websitebinding
+  -
+    schemaname: adx_communityforum_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_communityforum
+  -
+    schemaname: adx_communityforumaccesspermission_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_communityforumaccesspermission
+  -
+    schemaname: adx_communityforumannouncement_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_communityforumannouncement
+  -
+    schemaname: adx_communityforumpost_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_communityforumpost
+  -
+    schemaname: adx_communityforumthread_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_communityforumthread
+  -
+    schemaname: adx_casedeflection_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_casedeflection
+  -
+    schemaname: adx_contentaccesslevel_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: adx_contentaccesslevel
+  -
+    schemaname: msdyn_summarysynthesizerinput_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_summarysynthesizerinput
+  -
+    schemaname: msdyn_summarysynthesizeroutput_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_summarysynthesizeroutput
+  -
+    schemaname: msdyn_comment_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_comment
+  -
+    schemaname: msdyn_synthesizeroutput_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_synthesizeroutput
+  -
+    schemaname: revops_businessreview_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: revops_businessreview
+  -
+    schemaname: revops_cadencecall_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: revops_cadencecall
+  -
+    schemaname: revops_inpersonmeeting_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: revops_inpersonmeeting
+  -
+    schemaname: msevtmgt_paymentprovider_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_paymentprovider
+  -
+    schemaname: msdyn_agentcopilotterm_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_agentcopilotterm
+  -
+    schemaname: msdynmkt_segmentationcsvupload_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdynmkt_segmentationcsvupload
+  -
+    schemaname: msdyn_timeentry_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_timeentry
+  -
+    schemaname: msdyn_paymentterm_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_paymentterm
+  -
+    schemaname: msdyn_purchaseorder_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_purchaseorder
+  -
+    schemaname: msdyn_purchaseorderproduct_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_purchaseorderproduct
+  -
+    schemaname: msdyn_purchaseorderreceipt_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_purchaseorderreceipt
+  -
+    schemaname: msdyn_purchaseorderreceiptproduct_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_purchaseorderreceiptproduct
+  -
+    schemaname: msdyn_shipvia_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_shipvia
+  -
+    schemaname: msdyn_taxcode_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_taxcode
+  -
+    schemaname: msdyn_taxcodedetail_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_taxcodedetail
+  -
+    schemaname: msdyn_warehouse_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_warehouse
+  -
+    schemaname: msdyn_project_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_project
+  -
+    schemaname: msdyn_projectparameter_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_projectparameter
+  -
+    schemaname: msdyn_projecttask_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_projecttask
+  -
+    schemaname: msdyn_projecttaskdependency_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_projecttaskdependency
+  -
+    schemaname: msdyn_projectteam_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_projectteam
+  -
+    schemaname: msdyn_resourcerequest_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_resourcerequest
+  -
+    schemaname: msdyn_rolecompetencyrequirement_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_rolecompetencyrequirement
+  -
+    schemaname: msdyn_workhourtemplate_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_workhourtemplate
+  -
+    schemaname: msdyn_projectprogram_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_projectprogram
+  -
+    schemaname: msdyn_accountpricelist_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_accountpricelist
+  -
+    schemaname: msdyn_approval_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_approval
+  -
+    schemaname: msdyn_approvalset_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_approvalset
+  -
+    schemaname: msdyn_contactpricelist_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_contactpricelist
+  -
+    schemaname: msdyn_delegation_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_delegation
+  -
+    schemaname: msdyn_estimate_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_estimate
+  -
+    schemaname: msdyn_estimateline_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_estimateline
+  -
+    schemaname: msdyn_expense_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_expense
+  -
+    schemaname: msdyn_expensecategory_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_expensecategory
+  -
+    schemaname: msdyn_expensereceipt_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_expensereceipt
+  -
+    schemaname: msdyn_fact_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_fact
+  -
+    schemaname: msdyn_invoicelinetransaction_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_invoicelinetransaction
+  -
+    schemaname: msdyn_journal_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_journal
+  -
+    schemaname: msdyn_journalline_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_journalline
+  -
+    schemaname: msdyn_materialusagelog_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_materialusagelog
+  -
+    schemaname: msdyn_opportunitypricelist_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_opportunitypricelist
+  -
+    schemaname: msdyn_orderlineresourcecategory_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_orderlineresourcecategory
+  -
+    schemaname: msdyn_orderlinetransaction_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_orderlinetransaction
+  -
+    schemaname: msdyn_orderlinetransactioncategory_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_orderlinetransactioncategory
+  -
+    schemaname: msdyn_orderlinetransactionclassification_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_orderlinetransactionclassification
+  -
+    schemaname: msdyn_orderpricelist_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_orderpricelist
+  -
+    schemaname: msdyn_processnotes_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_processnotes
+  -
+    schemaname: msdyn_projectapproval_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_projectapproval
+  -
+    schemaname: msdyn_projectapprovalaianalyzed_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_projectapprovalaianalyzed
+  -
+    schemaname: msdyn_projectparameterpricelist_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_projectparameterpricelist
+  -
+    schemaname: msdyn_projectpricelist_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_projectpricelist
+  -
+    schemaname: msdyn_quotelineresourcecategory_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_quotelineresourcecategory
+  -
+    schemaname: msdyn_quotelinetransaction_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_quotelinetransaction
+  -
+    schemaname: msdyn_quotelinetransactioncategory_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_quotelinetransactioncategory
+  -
+    schemaname: msdyn_quotelinetransactionclassification_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_quotelinetransactionclassification
+  -
+    schemaname: msdyn_quotepricelist_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_quotepricelist
+  -
+    schemaname: msdyn_resourcecategorypricelevel_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_resourcecategorypricelevel
+  -
+    schemaname: msdyn_transactioncategory_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_transactioncategory
+  -
+    schemaname: msdyn_transactioncategoryclassification_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_transactioncategoryclassification
+  -
+    schemaname: msdyn_transactioncategoryhierarchyelement_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_transactioncategoryhierarchyelement
+  -
+    schemaname: msdyn_transactioncategorypricelevel_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_transactioncategorypricelevel
+  -
+    schemaname: msdyn_transactionconnection_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_transactionconnection
+  -
+    schemaname: msdyn_transactiontype_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msdyn_transactiontype
+  -
+    schemaname: revops_smeengagement_Annotations
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: revops_smeengagement
+

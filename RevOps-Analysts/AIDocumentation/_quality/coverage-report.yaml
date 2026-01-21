@@ -1,0 +1,105 @@
+run:
+  source_url: "https://sherweb-prod.crm3.dynamics.com"
+  run_id: "20251229-133335"
+  confidence_overall: 0.909
+  counts:
+    solutions: 1083
+    tables: 92
+    queues_included: 94
+    queues_total: 1236
+    plugins: 3
+    flows: 106
+    edges: 112
+  evidence: RevOps-Analysts/AIDocumentation/RUNS/20251229-133335/run-summary.yaml
+
+coverage:
+  tables_total: 92
+  tables_with_forms: 76
+  tables_with_valid_columns: 0
+  tables_with_valid_relationships: 0
+  tables_with_valid_views: 0
+  definition_of_valid: "Lists must contain structured objects with required keys; scalars/empty strings are invalid placeholders."
+
+anomalies:
+  - type: columns_placeholder_files
+    count: 77
+    examples:
+      - RevOps-Analysts/AIDocumentation/tables/task/_facts/columns.yaml
+      - RevOps-Analysts/AIDocumentation/tables/revops_pricingrequest/_facts/columns.yaml
+    evidence: columns.yaml
+  - type: relationships_placeholder_files
+    count: 77
+    examples:
+      - RevOps-Analysts/AIDocumentation/tables/transactioncurrency/_facts/relationships.yaml
+      - RevOps-Analysts/AIDocumentation/tables/revops_pricingrequest/_facts/relationships.yaml
+    evidence: relationships.yaml
+  - type: views_placeholder_files
+    count: 92
+    examples:
+      - RevOps-Analysts/AIDocumentation/tables/account/_facts/views.yaml
+      - RevOps-Analysts/AIDocumentation/tables/incident/_facts/views.yaml
+    evidence: views.yaml
+  - type: plugins_placeholder_files
+    count: 3
+    examples:
+      - RevOps-Analysts/AIDocumentation/plugins/RevOps.SolutionPlugins/_facts/plugin-types.yaml
+      - RevOps-Analysts/AIDocumentation/plugins/RevOps.SolutionPlugins/_facts/sdk-steps.yaml
+      - RevOps-Analysts/AIDocumentation/plugins/RevOps.EmailPlugins/_facts/plugin-types.yaml
+    evidence: plugin-types.yaml, sdk-steps.yaml
+  - type: coverage_report_narrative_mismatch
+    details: "Probe sections blank and forms claimed limited; contradicts outputs with 76 forms present."
+    evidence: RevOps-Analysts/AIDocumentation/RUNS/20251229-133335/coverage-report.md
+
+top_gaps:
+  - table: account
+    facets: [views]
+    status: Placeholder
+    evidence_file: RevOps-Analysts/AIDocumentation/tables/account/_facts/views.yaml
+  - table: task
+    facets: [columns]
+    status: Placeholder
+    evidence_file: RevOps-Analysts/AIDocumentation/tables/task/_facts/columns.yaml
+  - table: incident
+    facets: [views]
+    status: Placeholder
+    evidence_file: RevOps-Analysts/AIDocumentation/tables/incident/_facts/views.yaml
+  - table: transactioncurrency
+    facets: [relationships]
+    status: Placeholder
+    evidence_file: RevOps-Analysts/AIDocumentation/tables/transactioncurrency/_facts/relationships.yaml
+  - table: revops_pricingrequest
+    facets: [columns, relationships, views]
+    status: Placeholder
+    evidence_files:
+      - RevOps-Analysts/AIDocumentation/tables/revops_pricingrequest/_facts/columns.yaml
+      - RevOps-Analysts/AIDocumentation/tables/revops_pricingrequest/_facts/relationships.yaml
+      - RevOps-Analysts/AIDocumentation/tables/revops_pricingrequest/_facts/views.yaml
+  - table: opportunity
+    facets: [views]
+    status: Placeholder
+    evidence_file: RevOps-Analysts/AIDocumentation/tables/opportunity/_facts/views.yaml
+  - table: msdynmkt_email
+    facets: [views]
+    status: Placeholder
+    evidence_file: RevOps-Analysts/AIDocumentation/tables/msdynmkt_email/_facts/views.yaml
+  - table: m sevtmgt_event
+    facets: [views]
+    status: Placeholder
+    evidence_file: RevOps-Analysts/AIDocumentation/tables/msevtmgt_event/_facts/views.yaml
+  - table: revops_accountsoftwaretool
+    facets: [views]
+    status: Placeholder
+    evidence_file: RevOps-Analysts/AIDocumentation/tables/revops_accountsoftwaretool/_facts/views.yaml
+  - table: revops_solutioncategory
+    facets: [relationships]
+    status: Placeholder
+    evidence_file: RevOps-Analysts/AIDocumentation/tables/revops_solutioncategory/_facts/relationships.yaml
+
+evidence_files:
+  - RevOps-Analysts/AIDocumentation/RUNS/20251229-133335/run-summary.yaml
+  - RevOps-Analysts/AIDocumentation/RUNS/20251229-133335/coverage-report.md
+  - RevOps-Analysts/AIDocumentation/tables/*/_facts/forms.yaml
+  - RevOps-Analysts/AIDocumentation/tables/*/_facts/columns.yaml
+  - RevOps-Analysts/AIDocumentation/tables/*/_facts/relationships.yaml
+  - RevOps-Analysts/AIDocumentation/tables/*/_facts/views.yaml
+  - RevOps-Analysts/AIDocumentation/_graph/reverse-index.yaml

@@ -1,0 +1,89 @@
+views:
+  -
+    name: All Queues
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001300'
+  -
+    name: ARC Queues to Monitor
+    description: 'Queues to Monitor for multi-queue rule'
+    querytype: -1
+    savedqueryid: '049cd35b-641b-f011-8c51-000d3a33115d'
+  -
+    name: Omnichannel queues
+    querytype: -1
+    savedqueryid: '475ba760-c16c-e911-8196-000d3af7379e'
+  -
+    name: Queue Associated View
+    description: Displays information about related queues in the detail form of any associated entity record.
+    querytype: 2
+    savedqueryid: '1851be2d-d60b-48a1-bdf4-11e5e2555316'
+  -
+    name: Business Queues
+    querytype: 64
+    savedqueryid: 'f374f814-00a2-44ed-8b88-13f34e202e79'
+  -
+    name: Omnichannel queues for Voice
+    querytype: -1
+    savedqueryid: '5a400d54-8f5c-4738-ad5a-1a97ef85192e'
+  -
+    name: Local User Queues
+    querytype: -1
+    savedqueryid: '6692d3a5-268d-4392-9752-2acf707062bb'
+  -
+    name: Queues Lookup View
+    querytype: 64
+    savedqueryid: '3434f892-b38a-4a21-98e4-35c473073f52'
+  -
+    name: 'Queues: Primary Email (Pending Approval)'
+    querytype: -1
+    savedqueryid: '3a8191c3-d94e-4fd4-af7b-5bf29568a563'
+  -
+    name: My Active Queues
+    querytype: -1
+    savedqueryid: '3a8191c3-d94e-4fd4-af8b-5bf29568a563'
+  -
+    name: Active Queues
+    querytype: -1
+    savedqueryid: '240b4abc-99b6-499c-87e2-5c70829ff273'
+  -
+    name: Email Queue Lookup
+    querytype: -1
+    savedqueryid: 'bdab2cce-5eff-ef11-bae3-6045bdf9b70e'
+  -
+    name: Inactive Queues
+    querytype: -1
+    savedqueryid: '81270043-a34e-4091-8733-608ee808d565'
+  -
+    name: Advanced Queues Lookup View
+    querytype: -1
+    savedqueryid: 'b111be5d-98ef-ef11-be20-7ced8d063295'
+  -
+    name: Private Queues Lookup View
+    querytype: 64
+    savedqueryid: '75566a9b-cce8-4ed8-acbd-83ee42dd6dee'
+  -
+    name: Omnichannel queues for Entity
+    querytype: -1
+    savedqueryid: '94a21ec6-5bed-483a-bf49-8db31c15ce0c'
+  -
+    name: My Queues
+    description: Queues owned by me
+    querytype: 8192
+    savedqueryid: '5cbcd8ed-879c-4a03-aea0-9cb85508c6c5'
+  -
+    name: Queues Advanced Find View
+    querytype: 1
+    savedqueryid: '4d39b01d-e4be-4385-b371-e2d4ae758fb4'
+  -
+    name: Omnichannel queues for messaging
+    querytype: -1
+    savedqueryid: '3c891757-8003-4852-bfca-e5673963ada6'
+  -
+    name: Quick Find Queues
+    querytype: 4
+    savedqueryid: '11c421c8-6167-4a61-bba5-e83a4bd790f7'
+  -
+    name: Entity Queues
+    querytype: -1
+    savedqueryid: '597e5016-ebc4-4d4b-a7dc-ebd41ff66cfb'
+

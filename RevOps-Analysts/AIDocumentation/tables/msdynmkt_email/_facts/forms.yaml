@@ -1,0 +1,1072 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: A card form for this entity.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 3
+    type_name: Card
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: GENERAL
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Quick View
+  -
+    name: Email fields control
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Section
+        name: '{b492de69-96f8-4bfb-bdbb-4df610d2e4d7}_section_2'
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: '{b492de69-96f8-4bfb-bdbb-4df610d2e4d7}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_subject
+        field: msdynmkt_subject
+      -
+        section: '{b492de69-96f8-4bfb-bdbb-4df610d2e4d7}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fromemail
+        field: msdynmkt_fromemail
+      -
+        section: '{b492de69-96f8-4bfb-bdbb-4df610d2e4d7}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_to
+        field: msdynmkt_to
+      -
+        section: '{b492de69-96f8-4bfb-bdbb-4df610d2e4d7}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fromname
+        field: msdynmkt_fromname
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msdynmkt_name
+        field: msdynmkt_name
+    description: A form for email fields control.
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 5
+    type_name: Main
+  -
+    name: Email quick create form
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: section
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: section
+        name: tab_1_column_2_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: section
+        name: tab_1_column_3_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_subject
+        field: msdynmkt_subject
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_messagedesignation
+        field: msdynmkt_messagedesignation
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_description
+        field: msdynmkt_description
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fromemail
+        field: msdynmkt_fromemail
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fromname
+        field: msdynmkt_fromname
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_placeholders
+        field: msdynmkt_placeholders
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_to
+        field: msdynmkt_to
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_replytoemail
+        field: msdynmkt_replytoemail
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_templateid
+        field: msdynmkt_templateid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_previewtext
+        field: msdynmkt_previewtext
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_textpart
+        field: msdynmkt_textpart
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_automaticallygeneratetextpart
+        field: msdynmkt_automaticallygeneratetextpart
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_emailcontenttype
+        field: msdynmkt_emailcontenttype
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_designerhtml
+        field: msdynmkt_designerhtml
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_emailbody
+        field: msdynmkt_emailbody
+    description: Email quick create form.
+    tabs:
+      -
+        label: Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 18
+    type_name: Quick Create
+  -
+    name: Email header form
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ''
+        name: email_header_section
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: email_header_section
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_senderid
+        field: msdynmkt_senderid
+      -
+        section: email_header_section
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fromname
+        field: msdynmkt_fromname
+      -
+        section: email_header_section
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_brandprofileid
+        field: msdynmkt_brandprofileid
+      -
+        section: email_header_section
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fromemail
+        field: msdynmkt_fromemail
+      -
+        section: email_header_section
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_subject
+        field: msdynmkt_subject
+      -
+        section: email_header_section
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_previewtext
+        field: msdynmkt_previewtext
+      -
+        section: email_header_section
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: owningbusinessunit
+        field: owningbusinessunit
+    description: A header form for email entity.
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 7
+    type_name: Main
+  -
+    name: Email settings control
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Section
+        name: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_messagedesignation
+        field: msdynmkt_messagedesignation
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_emailcontenttype
+        field: msdynmkt_emailcontenttype
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_replytoemail
+        field: msdynmkt_replytoemail
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_automaticallygeneratetextpart
+        field: msdynmkt_automaticallygeneratetextpart
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_textpart_onSettings
+        field: msdynmkt_textpart
+    description: A form for email settings control.
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: '{b4d3cead-cf8e-4161-bc23-83f76a3cf6b1}'
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: '{b4d3cead-cf8e-4161-bc23-83f76a3cf6b1}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_subject
+        field: msdynmkt_subject
+      -
+        section: '{b4d3cead-cf8e-4161-bc23-83f76a3cf6b1}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_emailbody
+        field: msdynmkt_emailbody
+      -
+        section: '{b4d3cead-cf8e-4161-bc23-83f76a3cf6b1}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_designerhtml
+        field: msdynmkt_designerhtml
+      -
+        section: '{b4d3cead-cf8e-4161-bc23-83f76a3cf6b1}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_placeholders
+        field: msdynmkt_placeholders
+      -
+        section: '{b4d3cead-cf8e-4161-bc23-83f76a3cf6b1}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fromname
+        field: msdynmkt_fromname
+      -
+        section: '{b4d3cead-cf8e-4161-bc23-83f76a3cf6b1}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fromemail
+        field: msdynmkt_fromemail
+      -
+        section: '{b4d3cead-cf8e-4161-bc23-83f76a3cf6b1}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 7
+    type_name: Main
+  -
+    name: Email Bulk Edit Form
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ''
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fromemail
+        field: msdynmkt_fromemail
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fromname
+        field: msdynmkt_fromname
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_to
+        field: msdynmkt_to
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_replytoemail
+        field: msdynmkt_replytoemail
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_compliancesettingscompanyaddress
+        field: msdynmkt_compliancesettingscompanyaddress
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_messagedesignation
+        field: msdynmkt_messagedesignation
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_emailcontenttype
+        field: msdynmkt_emailcontenttype
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_emailcontentlanguage
+        field: msdynmkt_emailcontentlanguage
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_placeholders
+        field: msdynmkt_placeholders
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_compliancesettings
+        field: msdynmkt_compliancesettings
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_compliancesettings3
+        field: msdynmkt_compliancesettings3
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_compliancesettings4
+        field: msdynmkt_compliancesettings4
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 13
+    type_name: Main
+  -
+    name: Email header
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Section
+        name: section_subject
+        tab: email_header
+        visible: true
+      -
+        label: Send settings
+        name: section_send_settings_expanded
+        tab: email_header
+        visible: true
+      -
+        label: Email Settings
+        name: section_email_settings
+        tab: email_header
+        visible: true
+      -
+        label: Compliance
+        name: email_header_section_5
+        tab: email_header
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: section_subject
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_subject
+        field: msdynmkt_subject
+      -
+        section: section_subject
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_previewtext
+        field: msdynmkt_previewtext
+      -
+        section: section_send_settings_expanded
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_senderid
+        field: msdynmkt_senderid
+      -
+        section: section_send_settings_expanded
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fromemail
+        field: msdynmkt_fromemail
+      -
+        section: section_send_settings_expanded
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_brandprofileid
+        field: msdynmkt_brandprofileid
+      -
+        section: section_send_settings_expanded
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fromname
+        field: msdynmkt_fromname
+      -
+        section: section_send_settings_expanded
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_replytoemail
+        field: msdynmkt_replytoemail
+      -
+        section: section_send_settings_expanded
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_compliancesettingscompanyaddress
+        field: msdynmkt_compliancesettingscompanyaddress
+      -
+        section: section_email_settings
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_templateid
+        field: msdynmkt_templateid
+      -
+        section: section_email_settings
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_templateid_bu
+        field: msdynmkt_templateid
+      -
+        section: section_email_settings
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: owningbusinessunit
+        field: owningbusinessunit
+      -
+        section: section_email_settings
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_messagedesignation
+        field: msdynmkt_messagedesignation
+      -
+        section: section_email_settings
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_compliancesettings
+        field: msdynmkt_compliancesettings
+      -
+        section: section_email_settings
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_compliancesettings3
+        field: msdynmkt_compliancesettings3
+      -
+        section: section_email_settings
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_emailcontenttype
+        field: msdynmkt_emailcontenttype
+      -
+        section: section_email_settings
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_emailcontentlanguage
+        field: msdynmkt_emailcontentlanguage
+      -
+        section: section_email_settings
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_automaticallygeneratetextpart
+        field: msdynmkt_automaticallygeneratetextpart
+      -
+        section: section_email_settings
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: msdynmkt_textpart
+        field: msdynmkt_textpart
+      -
+        section: section_email_settings
+        tab: email_header
+        disabled: false
+        visible: true
+        control_id: owningbusinessunit
+        field: owningbusinessunit
+    description: The header page for the email entity.
+    tabs:
+      -
+        label: ''
+        name: email_header
+        visible: true
+        expanded: true
+    field_count: 20
+    type_name: Main
+  -
+    name: Email fields control collapsed
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Section
+        name: '{b67f71d1-a60f-4a7e-8895-681035aee8de}_section_2'
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: '{b67f71d1-a60f-4a7e-8895-681035aee8de}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_subject
+        field: msdynmkt_subject
+      -
+        section: '{b67f71d1-a60f-4a7e-8895-681035aee8de}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fromemail
+        field: msdynmkt_fromemail
+    description: A form for email fields control collapsed.
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ''
+        name: ''
+        tab: ''
+        visible: true
+      -
+        label: Send settings
+        name: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        visible: false
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_subject
+        field: msdynmkt_subject
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_designerhtml
+        field: msdynmkt_designerhtml
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_previewhtml
+        field: msdynmkt_previewhtml
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_placeholders
+        field: msdynmkt_placeholders
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_conditionalcontent
+        field: msdynmkt_conditionalcontent
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fromemail
+        field: msdynmkt_fromemail
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_fromname
+        field: msdynmkt_fromname
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_to
+        field: msdynmkt_to
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_replytoemail
+        field: msdynmkt_replytoemail
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_compliancesettingscompanyaddress
+        field: msdynmkt_compliancesettingscompanyaddress
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_previewtext
+        field: msdynmkt_previewtext
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_emailbody
+        field: msdynmkt_emailbody
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_messagedesignation
+        field: msdynmkt_messagedesignation
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_emailcontenttype
+        field: msdynmkt_emailcontenttype
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_emailcontentlanguage
+        field: msdynmkt_emailcontentlanguage
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_automaticallygeneratetextpart
+        field: msdynmkt_automaticallygeneratetextpart
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_templateid
+        field: msdynmkt_templateid
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_textpart
+        field: msdynmkt_textpart
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_previewtext
+        field: msdynmkt_previewtext
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_emailid
+        field: msdynmkt_emailid
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_conditionalcontent
+        field: msdynmkt_conditionalcontent
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_brandprofileid
+        field: msdynmkt_brandprofileid
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_brandprofiledata
+        field: msdynmkt_brandprofiledata
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_senderid
+        field: msdynmkt_senderid
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_compliancesettings
+        field: msdynmkt_compliancesettings
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_compliancesettings3
+        field: msdynmkt_compliancesettings3
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: owningbusinessunit
+        field: owningbusinessunit
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_compliancesettings4
+        field: msdynmkt_compliancesettings4
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_purpose
+        field: msdynmkt_purpose
+      -
+        section: '{ab58b287-6c6e-4337-9ad6-abf4d3f8ac68}_section_2'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_topic
+        field: msdynmkt_topic
+    description: A form for this entity.
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 33
+    type_name: Main
+

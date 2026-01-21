@@ -1,0 +1,63 @@
+views:
+  -
+    name: Form Submission full view
+    description: creating a new view cause this UI is FG
+    querytype: -1
+    savedqueryid: '9e11ba66-fdc1-ee11-9079-000d3a09cf8e'
+  -
+    name: PMT session View
+    description: View for PMT for form submissions and session values and other relevant information
+    querytype: -1
+    savedqueryid: 'b459bcb3-ac8f-ef11-8a6a-000d3af4dd88'
+  -
+    name: PMT Full View
+    description: View for PMT for form submissions and other relevant information with no filters
+    querytype: -1
+    savedqueryid: '0adf8c14-dc91-ef11-8a6a-000d3af4dd88'
+  -
+    name: MarketingFormSubmissions
+    description: All active MarketingFormSubmissions
+    querytype: 8192
+    savedqueryid: 'd7c2b195-13f2-ec11-82e6-0022482ae716'
+  -
+    name: Quick Find Active MarketingFormSubmissions
+    querytype: 4
+    savedqueryid: 'abf27de1-744e-4589-a4af-1eacd8eacf94'
+  -
+    name: Failed form submissions
+    querytype: -1
+    savedqueryid: '7a2faf80-93e5-4a9b-8a6f-509e2fb16392'
+  -
+    name: Inactive MarketingFormSubmissions
+    querytype: -1
+    savedqueryid: 'bf3d63a6-97b1-4605-ba17-58a08514feb0'
+  -
+    name: PMT UTM View
+    description: View for PMT for form submissions and UTM values and other relevant information
+    querytype: -1
+    savedqueryid: 'bd6c5e2f-a54a-ef11-accd-6045bdcd5e2a'
+  -
+    name: Form submissions
+    querytype: -1
+    savedqueryid: 'd2dfc712-cd0f-47e7-b8f4-8fe927152e9d'
+  -
+    name: MarketingFormSubmission Advanced Find View
+    querytype: 1
+    savedqueryid: '7c3f29df-2cab-4dd7-bea2-b69487afa3ed'
+  -
+    name: MarketingFormSubmission Associated View
+    querytype: 2
+    savedqueryid: '037afbda-01d8-4f65-906e-d5c32ead4a7a'
+  -
+    name: Form submissions
+    querytype: -1
+    savedqueryid: 'b6663d93-5483-4cb6-aaf6-e232a9ca546c'
+  -
+    name: Active MarketingFormSubmissions
+    querytype: -1
+    savedqueryid: '4c38d10b-8377-4ea3-8d44-e4a387386a54'
+  -
+    name: MarketingFormSubmission Lookup View
+    querytype: 64
+    savedqueryid: '62657f87-9537-483a-8471-f6253cb92244'
+

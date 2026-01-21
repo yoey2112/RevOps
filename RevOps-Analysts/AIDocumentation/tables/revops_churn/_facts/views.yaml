@@ -1,0 +1,31 @@
+views:
+  -
+    name: My Churns
+    description: Active Churns owned by me
+    querytype: 8192
+    savedqueryid: '45842abd-9c64-ef11-a670-000d3af43a08'
+  -
+    name: Quick Find Active Churns
+    querytype: 4
+    savedqueryid: 'b7d985f1-12f9-4bd9-8813-626c7eb1d773'
+  -
+    name: Active Churns
+    querytype: -1
+    savedqueryid: '82eb0098-6055-40e1-83fe-bc4259569ab7'
+  -
+    name: Churn Advanced Find View
+    querytype: 1
+    savedqueryid: 'f3d71bf6-cede-4f16-b520-bd6cbad767a4'
+  -
+    name: Churn Associated View
+    querytype: 2
+    savedqueryid: 'd81ddb68-c3ca-4098-8f3c-e6414c75731b'
+  -
+    name: Inactive Churns
+    querytype: -1
+    savedqueryid: 'dcc346ba-1591-4460-a940-f70a04aac047'
+  -
+    name: Churn Lookup View
+    querytype: 64
+    savedqueryid: '870db52f-9842-4f91-9133-ff5028edc4d1'
+

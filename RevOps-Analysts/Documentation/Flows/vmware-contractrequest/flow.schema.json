@@ -1,0 +1,127 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_microsoftforms": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedmicrosoftforms_3c509"
+        },
+        "api": {
+          "name": "shared_microsoftforms"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedoffice365_09028"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_new_response_is_submitted": {
+          "splitOn": "@triggerOutputs()?['body/value']",
+          "metadata": {
+            "operationMetadataId": "dcc4f52b-359c-4f91-bb82-15aef70362fa"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_microsoftforms",
+              "connectionName": "shared_microsoftforms",
+              "operationId": "CreateFormWebhook"
+            },
+            "parameters": {
+              "form_id": "WbJEd__xJkS4aXpOcLKBBoHE4I5K6DFMoSUvcYdacSVUQktWUFdJRkVZRk45NEgwVjVDUEcxTzA5USQlQCN0PWcu"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Get_response_details": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "d0877073-3448-4a72-ab21-92a3cc5e333c"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_microsoftforms",
+              "connectionName": "shared_microsoftforms",
+              "operationId": "GetFormResponseById"
+            },
+            "parameters": {
+              "form_id": "WbJEd__xJkS4aXpOcLKBBoHE4I5K6DFMoSUvcYdacSVUQktWUFdJRkVZRk45NEgwVjVDUEcxTzA5USQlQCN0PWcu",
+              "response_id": "@triggerOutputs()?['body/resourceData/responseId']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Initialize_variable_1": {
+          "runAfter": {
+            "Get_response_details": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "19117701-732b-475f-ac89-cf9669b23f41"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "RecipientEmail",
+                "type": "string",
+                "value": "sopsrequest@sherweb.com"
+              }
+            ]
+          }
+        },
+        "Send_an_email_(V2)": {
+          "runAfter": {
+            "Initialize_variable_1": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4723e032-1bff-4992-af71-07115d23d372"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365",
+              "connectionName": "shared_office365",
+              "operationId": "SendEmailV2"
+            },
+            "parameters": {
+              "emailMessage/To": "@variables('RecipientEmail')",
+              "emailMessage/Subject": "New VMware Sales Contract Request",
+              "emailMessage/Body": "<p class=\"editor-paragraph\">New VMware Sales Contract Request</p><br><p class=\"editor-paragraph\">Ticket requestor: @{outputs('Get_response_details')?['body/responder']}</p><br><p class=\"editor-paragraph\"><b><strong class=\"editor-text-bold\">Signatory Details</strong></b></p><p class=\"editor-paragraph\">Language: @{outputs('Get_response_details')?['body/rc4a5713a6f154283b0eb1bba8cb802e6']}</p><p class=\"editor-paragraph\">Full Name: @{outputs('Get_response_details')?['body/rba60abf716e54510ad68b07d48317a50']}</p><p class=\"editor-paragraph\">Email: @{outputs('Get_response_details')?['body/r3e31732369ea49fdb11cb1a65b8c80f2']}</p><br><p class=\"editor-paragraph\"><b><strong class=\"editor-text-bold\">General Details</strong></b></p><p class=\"editor-paragraph\">Core Commitment Amount: @{outputs('Get_response_details')?['body/r0ed99286ecc74969932feb61825e0c11']}</p><p class=\"editor-paragraph\">MSRP Discount %: @{outputs('Get_response_details')?['body/r2c7445e5a0474da69c14fa73592f0bad']}</p><p class=\"editor-paragraph\">Overage Pricing %: @{outputs('Get_response_details')?['body/r81e677af41924ab3b8289744c6c98cb3']}</p><p class=\"editor-paragraph\">Currency: @{outputs('Get_response_details')?['body/r9308c735af394e22828ca4ce5fba8cd2']}</p><p class=\"editor-paragraph\">Effective Date (YYYY-MM-DD): @{outputs('Get_response_details')?['body/r9489d03e3c254093b2ea80b795cde2b5']}</p><p class=\"editor-paragraph\">Termination Date (YYYY-MM-DD):  @{outputs('Get_response_details')?['body/r08c2198199d14aff9ef1aaca807e1dad']}</p><p class=\"editor-paragraph\">Cumulus URL: @{outputs('Get_response_details')?['body/r5dbcf6b9837640d3bd0106b187f2ab9e']}</p>",
+              "emailMessage/Importance": "Normal"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,40 @@
+views:
+  -
+    name: Phone Call Lookup View
+    querytype: 64
+    savedqueryid: 'd4a3e33d-16d2-41fd-91aa-14cfbf88633a'
+  -
+    name: My Completed Phone Calls
+    querytype: -1
+    savedqueryid: 'b65900d5-7d55-4ac9-bc6a-33c24b458b05'
+  -
+    name: Recent Phone Calls in which I am a Participant
+    description: Recently changed phone calls where I am a participant
+    querytype: 8192
+    savedqueryid: '340ab993-ee0a-4d24-a3fd-49545a2a2b55'
+  -
+    name: Phone Call Advanced Find View
+    querytype: 1
+    savedqueryid: '316aed39-ab40-45e4-8463-68714f01af80'
+  -
+    name: All Phone Calls
+    querytype: -1
+    savedqueryid: 'f6a2f891-6846-4b21-b922-712695afd65c'
+  -
+    name: My Phone Calls
+    querytype: -1
+    savedqueryid: '65f927d1-8cf1-4639-97d4-7b6388fb26d2'
+  -
+    name: My Phone calls
+    description: Phone calls Synced To Outlook
+    querytype: 131072
+    savedqueryid: 'c152d9ef-eef2-4717-939b-9eff5d8ec767'
+  -
+    name: Phone Call Associated View
+    querytype: 2
+    savedqueryid: '04f1599c-09e1-40d5-a493-b25165f2c3c3'
+  -
+    name: Quick Find All Phone Calls
+    querytype: 4
+    savedqueryid: '0b7f57e9-7772-427d-bf9c-bd4db3eb1682'
+

@@ -1,0 +1,31 @@
+views:
+  -
+    name: Service Advanced Find View
+    querytype: 1
+    savedqueryid: 'b81d6fcc-10b6-4378-a0a8-027c19453709'
+  -
+    name: Active Services
+    querytype: -1
+    savedqueryid: '20a61e25-fb51-43d9-9101-0ab8fedddf5f'
+  -
+    name: Services
+    description: All active Services
+    querytype: 8192
+    savedqueryid: 'bca56b67-1eea-ef11-be21-6045bdcd5088'
+  -
+    name: Service Lookup View
+    querytype: 64
+    savedqueryid: 'eae916c2-ad94-4839-9dca-8f0fba45a6f9'
+  -
+    name: Quick Find Active Services
+    querytype: 4
+    savedqueryid: 'c4c194be-efb6-4136-883a-be18e6a0e770'
+  -
+    name: Inactive Services
+    querytype: -1
+    savedqueryid: 'a93b6c40-381c-4787-bdbd-c7762668e509'
+  -
+    name: Service Associated View
+    querytype: 2
+    savedqueryid: '25110619-2f02-4ae9-b5d3-f6285654e964'
+

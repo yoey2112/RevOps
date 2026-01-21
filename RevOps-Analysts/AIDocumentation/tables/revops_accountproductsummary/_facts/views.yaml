@@ -1,0 +1,31 @@
+views:
+  -
+    name: Account Product Summaries
+    description: All active Account Product Summaries
+    querytype: 8192
+    savedqueryid: '2b940b95-bb6a-ef11-a670-000d3af43a08'
+  -
+    name: Quick Find Active Account Product Summaries
+    querytype: 4
+    savedqueryid: '1b5a69ce-3f18-4b73-9d32-2488ec4e4a85'
+  -
+    name: Account Product Summary Advanced Find View
+    querytype: 1
+    savedqueryid: '9aa6bfce-6e6d-4b88-a4b1-2902d80f5b5a'
+  -
+    name: Active Account Product Summaries
+    querytype: -1
+    savedqueryid: '0a8ba021-89e0-449e-aa43-4c35d3ab756d'
+  -
+    name: Account Product Summary Associated View
+    querytype: 2
+    savedqueryid: 'c6b2a503-1a4c-44ed-a04a-5c6bc210a06a'
+  -
+    name: Account Product Summary Lookup View
+    querytype: 64
+    savedqueryid: '3745bb62-90f0-426b-8275-691c66d3f196'
+  -
+    name: Inactive Account Product Summaries
+    querytype: -1
+    savedqueryid: 'f8864773-4ccb-4c11-a944-af365a11aaaf'
+

@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 8
+    uniquename: AppforOutlookModule
+    appmoduleid: '41e055ac-2820-ef11-840b-6045bd5ea018'
+    name: Dynamics 365 App for Outlook
+

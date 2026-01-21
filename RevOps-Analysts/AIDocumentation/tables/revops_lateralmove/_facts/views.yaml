@@ -1,0 +1,31 @@
+views:
+  -
+    name: Lateral Movements
+    description: All active Lateral Movements
+    querytype: 8192
+    savedqueryid: '956fd594-d549-ef11-acce-000d3af43a08'
+  -
+    name: Lateral Movement Lookup View
+    querytype: 64
+    savedqueryid: '37274a3e-8002-4afa-84ab-27ee74db3d50'
+  -
+    name: Inactive Lateral Movements
+    querytype: -1
+    savedqueryid: '2ada8670-bba9-44f8-a12d-45415415bde5'
+  -
+    name: Lateral Movement Advanced Find View
+    querytype: 1
+    savedqueryid: '6b2216ad-48dc-4722-9791-51c287800f14'
+  -
+    name: Lateral Movement Associated View
+    querytype: 2
+    savedqueryid: '71b99ca0-8f41-40bc-8854-7a95c93a01fb'
+  -
+    name: Quick Find Active Lateral Movements
+    querytype: 4
+    savedqueryid: 'c216f168-74d3-48f6-a675-c603922aa592'
+  -
+    name: Active Lateral Movements
+    querytype: -1
+    savedqueryid: '85169b90-9fe7-4a9b-bd7a-ccf35459695a'
+

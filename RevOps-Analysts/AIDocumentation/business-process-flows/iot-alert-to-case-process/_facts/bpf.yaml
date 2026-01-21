@@ -1,0 +1,6 @@
+workflowid: '006c4c42-2abe-4b61-9149-56df5b9625f9'
+primaryentity: msdyn_iotalert
+description: Use this process flow to convert an IoT alert into a customer service case.
+uniquename: msdyn_iottocaseprocess
+name: IoT Alert to Case Process
+

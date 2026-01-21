@@ -1,0 +1,82 @@
+relationships:
+  -
+    schemaname: revops_utmlink_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_utmlink
+  -
+    schemaname: revops_utmlink_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_utmlink
+  -
+    schemaname: revops_utmlink_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_utmlink
+  -
+    schemaname: revops_utmlink_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_utmlink
+  -
+    schemaname: revops_utmlink_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_utmlink
+  -
+    schemaname: revops_utmlink_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_utmlink
+  -
+    schemaname: revops_utmlink_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_utmlink
+  -
+    schemaname: revops_utmlink_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_utmlink
+  -
+    schemaname: revops_utmlink_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_utmlink
+  -
+    schemaname: revops_utmlink_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_utmlink
+  -
+    schemaname: lk_revops_utmlink_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_utmlink
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_utmlink_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_utmlink
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_utmlink_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_utmlink
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_utmlink_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_utmlink
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_utmlink
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_utmlink
+    referencedtablelogicalname: organization
+  -
+    schemaname: revops_utmlink_parentcampaignid_campaign
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_utmlink
+    referencedtablelogicalname: campaign
+

@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 4
+    uniquename: mspp_PowerPageManagement
+    appmoduleid: '91ae37a5-0420-ef11-840b-6045bd5ea018'
+    name: Power Pages Management
+

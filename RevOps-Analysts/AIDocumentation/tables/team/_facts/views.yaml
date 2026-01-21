@@ -1,0 +1,57 @@
+views:
+  -
+    name: Local Business Owner Teams
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001024'
+  -
+    name: Subsidiary Teams
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001025'
+  -
+    name: All Owner Teams
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001026'
+  -
+    name: My Owner Teams
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001027'
+  -
+    name: Team Associated View
+    querytype: 2
+    savedqueryid: '00000000-0000-0000-00aa-000010001205'
+  -
+    name: Teams Lookup View
+    querytype: 64
+    savedqueryid: '57e39843-404c-48e5-b1d9-1889098fb65c'
+  -
+    name: My Connections
+    description: Shows all instances of the team that the current user is connected to via an active connection.
+    querytype: -1
+    savedqueryid: 'a596ff84-88fd-4eea-84f6-335b357e176a'
+  -
+    name: All Security Group Teams
+    querytype: -1
+    savedqueryid: 'dea89ba4-eed0-41fe-adfc-35aa73456462'
+  -
+    name: All User Owner Teams
+    description: Shows all Owner Teams in the organization
+    querytype: 2048
+    savedqueryid: 'e89c1160-4c80-4186-a7f1-5e682f17874b'
+  -
+    name: All User Access Teams
+    querytype: -1
+    savedqueryid: '1811613a-143d-40fd-8d7b-7356ec7c9df5'
+  -
+    name: All Microsoft 365 Group Teams
+    description: All Microsoft 365 Group Teams
+    querytype: -1
+    savedqueryid: '023e8fd1-8872-46ac-82b6-76f9eececc20'
+  -
+    name: Teams Advanced Find View
+    querytype: 1
+    savedqueryid: '7e24e807-9f95-4546-94c9-c4f29ec812ba'
+  -
+    name: Teams Quick Find View
+    querytype: 4
+    savedqueryid: '8b0a6284-d7ed-4459-a695-d3a10e770864'
+

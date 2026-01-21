@@ -1,0 +1,144 @@
+views:
+  -
+    name: Activity Advanced Find View
+    querytype: 1
+    savedqueryid: '00000000-0000-0000-00aa-000000666100'
+  -
+    name: My Activities
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001899'
+  -
+    name: Open Activities
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001900'
+  -
+    name: Closed Activities
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001901'
+  -
+    name: All Activities
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001902'
+  -
+    name: Open Activity Associated View
+    querytype: 2
+    savedqueryid: '00000000-0000-0000-00aa-000010001903'
+  -
+    name: All Activities for Customer
+    description: 'Shows all activities for the customer, sorted by most recent activity.'
+    querytype: 2048
+    savedqueryid: '00000000-0000-0000-00aa-000010001905'
+  -
+    name: 'Manager - due activities [this month]'
+    description: All activities due this month for the manager's team
+    querytype: -1
+    savedqueryid: 'ef797217-e09d-ef11-8a6a-000d3af43697'
+  -
+    name: 'Manager - created activities [this month]'
+    description: All activities created this month by the manager's team
+    querytype: -1
+    savedqueryid: '1964b9c1-389d-ef11-8a6a-000d3af4dd88'
+  -
+    name: Portal Timeline View
+    querytype: -1
+    savedqueryid: '620cdb5e-d7c9-e511-80d1-00155d20b011'
+  -
+    name: My Team Members' Activities
+    description: Shows all the open and scheduled activities (except Email) which are owned by users belonging to teams administered by the current user.
+    querytype: -1
+    savedqueryid: '8fba639e-cd73-df11-805d-00155db1891a'
+  -
+    name: Open Activities
+    description: Open Activities (to be used asynchronously).
+    querytype: 1024
+    savedqueryid: 'd7d0c4d8-b4c2-4602-99c8-25d5069e079e'
+  -
+    name: Quick Find All Activities
+    querytype: 4
+    savedqueryid: '2aeee36c-aefd-44f5-b3b5-367b69bdc371'
+  -
+    name: My Closed Activities
+    querytype: -1
+    savedqueryid: 'ed1f0041-4f6b-4171-8757-4ac44c2fcafa'
+  -
+    name: All Planning Activities Associated View
+    description: This view displays all planning activities associated with a campaign.
+    querytype: 2
+    savedqueryid: '47f4e494-fee0-483c-844c-5a9e35b1c565'
+  -
+    name: Due and overdue activities
+    querytype: -1
+    savedqueryid: '95de183f-1945-ef11-bfe2-6045bd057909'
+  -
+    name: 'Manager - all activities [this year]'
+    description: All activities for the year by the manager's team
+    querytype: -1
+    savedqueryid: 'c5adc60d-d5a1-ef11-a72d-6045bdf9b92b'
+  -
+    name: Closed Activities
+    description: Closed Activities (to be used asynchronously).
+    querytype: 1024
+    savedqueryid: '2de3fb66-6730-4dfd-886f-658128402c78'
+  -
+    name: My Activities
+    description: My Activities (to be used asynchronously).
+    querytype: 1024
+    savedqueryid: 'f798ea5d-beb1-445f-90b4-6eb98078c9c6'
+  -
+    name: Scheduled Activities
+    querytype: -1
+    savedqueryid: '1795e537-6270-4c62-8175-77cf045315f3'
+  -
+    name: Next Activity
+    querytype: -1
+    savedqueryid: '1d145a26-fdb7-45ae-b55a-7befa66e184f'
+  -
+    name: 'Manager - created activities [last month]'
+    description: All activities created last month by the US team in Sales
+    querytype: -1
+    savedqueryid: 'e922efc6-63a0-ef11-a72d-7c1e52063863'
+  -
+    name: 'Manager - closed activities [this month]'
+    description: All activities closed this month for the manager's team
+    querytype: -1
+    savedqueryid: '97137c30-63a0-ef11-a72d-7c1e524085ab'
+  -
+    name: Account Activity Governance
+    querytype: -1
+    savedqueryid: '7bc93bcf-f46e-f011-b4cc-7c1e52409afe'
+  -
+    name: All Activities
+    description: All Activities (to be used asynchronously).
+    querytype: 1024
+    savedqueryid: '1ccbda4d-62e2-4306-98e2-7e65be117c5e'
+  -
+    name: Activities Lookup View
+    querytype: 64
+    savedqueryid: '2fcd7d4b-531d-4232-82c4-a491da528744'
+  -
+    name: Closed Activity Associated View
+    querytype: 2
+    savedqueryid: '21e2b905-6fdb-470d-8517-ad69b4c01268'
+  -
+    name: All Activity Associated View
+    description: This view displays all activities associated with an entity.
+    querytype: 2
+    savedqueryid: '7f15e2bb-305a-468f-9af7-be865755a984'
+  -
+    name: Open Planning Activity Associated View
+    querytype: 2
+    savedqueryid: 'f8d3a0d7-83ee-47b7-945c-c9463cbf380d'
+  -
+    name: Last Activity
+    querytype: -1
+    savedqueryid: '924e0056-ebf8-408e-90c3-d3b6bdd676e7'
+  -
+    name: Scheduled Activities
+    querytype: 1024
+    savedqueryid: 'af9989c2-db61-4ea5-be20-de211c78dc98'
+  -
+    name: My Closed Activities
+    description: My Closed Activities (to be used asynchronously).
+    querytype: 1024
+    savedqueryid: '5673525f-a98f-4fe9-b6a3-ff0bb809a81c'
+

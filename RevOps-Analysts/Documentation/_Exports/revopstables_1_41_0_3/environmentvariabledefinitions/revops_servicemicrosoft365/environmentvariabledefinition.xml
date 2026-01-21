@@ -1,0 +1,13 @@
+<environmentvariabledefinition schemaname="revops_servicemicrosoft365">
+  <description default="GUID of the Service &quot;Microsoft 365&quot;">
+    <label description="GUID of the Service &quot;Microsoft 365&quot;" languagecode="1033" />
+  </description>
+  <displayname default="Service - Microsoft 365">
+    <label description="Service - Microsoft 365" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.40.3.5</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

@@ -1,0 +1,124 @@
+views:
+  -
+    name: Product Advanced Find View
+    querytype: 1
+    savedqueryid: '00000000-0000-0000-00aa-000000666a00'
+  -
+    name: PDS Products
+    querytype: -1
+    savedqueryid: 'a19af1fe-70ff-ef11-bae2-000d3a319f57'
+  -
+    name: Published Independent Products
+    description: Published Products with Product Structure of Product
+    querytype: -1
+    savedqueryid: '8b37f837-c656-eb11-a81b-000d3ac2bfa2'
+  -
+    name: 'Web - Products'
+    querytype: -1
+    savedqueryid: '8e5fb400-bed4-e511-80d5-00155d20df09'
+  -
+    name: Export Field Translations
+    querytype: 65536
+    savedqueryid: '9cfe2a9f-13c4-e311-8f2e-00155d9d2505'
+  -
+    name: ProductsView
+    description: Displays the list of Products
+    querytype: -1
+    savedqueryid: '37c33d65-0f5a-e611-80d1-00155db16f89'
+  -
+    name: Product Lookup View
+    querytype: 64
+    savedqueryid: '8ba625b2-6a2a-4735-bab2-0c74ae8442a4'
+  -
+    name: Products in Parent Price List
+    querytype: 64
+    savedqueryid: 'bcc509ee-1444-4a95-aed2-128efd85ffd5'
+  -
+    name: 'All Products, Families & Bundles'
+    querytype: -1
+    savedqueryid: '44aeb57e-840f-4026-b898-24b261493c3c'
+  -
+    name: Draft Product Bundles
+    description: Displays information about all product bundles in the system which are in Draft state
+    querytype: -1
+    savedqueryid: 'fc9c9aa7-16d8-4ef7-a540-2604464efac1'
+  -
+    name: 'Retired Products, Families & Bundles'
+    querytype: -1
+    savedqueryid: '04e73647-b32a-406b-8f81-3017311dac20'
+  -
+    name: Active Products Lookup View
+    description: Shows all active product records in the system.
+    querytype: 64
+    savedqueryid: '58afc3c5-8add-4552-98cb-473bc8f75619'
+  -
+    name: All Product Bundles
+    description: Displays information about all product bundles in the system.
+    querytype: -1
+    savedqueryid: 'eab4cded-a39f-4b21-b06a-49a45bfa47fd'
+  -
+    name: Product Family Lookup View
+    querytype: 64
+    savedqueryid: '19d7f2e0-e427-40fb-85e8-53e7cef2b166'
+  -
+    name: Products
+    description: All products
+    querytype: 8192
+    savedqueryid: '9f046f5f-c33e-42c3-b7b7-55fcef5f40ca'
+  -
+    name: Products With Price List
+    querytype: 64
+    savedqueryid: '6abca607-018d-4042-a8a7-56a6a1190483'
+  -
+    name: Quick Find All Products
+    querytype: 4
+    savedqueryid: '1aa93c16-e1e3-45cc-a9ae-83d9ec18ff9c'
+  -
+    name: Product Suggestions
+    querytype: 2
+    savedqueryid: '2ba93c16-e1e3-45cc-a9ae-83d9ec18ff9c'
+  -
+    name: Retired Product Bundles
+    description: Displays information about all product bundles in the system which are in Retired state
+    querytype: -1
+    savedqueryid: '2f13d083-c17f-46dc-b40e-8a4603c0711c'
+  -
+    name: 'Active Products, Families & Bundles'
+    querytype: -1
+    savedqueryid: 'a066d18a-8a4a-44ee-b78e-9a870dc799dd'
+  -
+    name: Product Associated View
+    description: Displays information about products in the detail form of any associated competitor or sales literature record.
+    querytype: 2
+    savedqueryid: 'f8de15f4-4c76-4a21-94c9-a38fcafdb73d'
+  -
+    name: Entitlement Products
+    querytype: 2
+    savedqueryid: '9084dda0-1101-4339-8f19-aea4d5b6b474'
+  -
+    name: Kit Product Lookup View
+    querytype: 64
+    savedqueryid: '18b841eb-8738-4bcb-9a59-af7f906e73b4'
+  -
+    name: Bundle Lookup View
+    querytype: 64
+    savedqueryid: 'dd35464e-bb9d-4575-9270-ba09db4244c1'
+  -
+    name: 'Draft Products, Families & Bundles'
+    querytype: -1
+    savedqueryid: 'a6c39ba9-ee07-4587-98a7-c23cb1ef496e'
+  -
+    name: Product Bundle Associated View
+    description: Displays information about product bundles in the detail form of any associated related record.
+    querytype: 2
+    savedqueryid: 'ebf28110-7cc8-46f9-8d3f-c7d81c60ccc1'
+  -
+    name: Bundle Product Lookup View
+    querytype: 64
+    savedqueryid: '89a80f99-f388-412a-add2-d75c6acd930f'
+  -
+    name: Active Product Bundles
+    description: Displays information about product bundles which are in active state.
+    querytype: -1
+    savedqueryid: '06377234-f167-47e7-bd5e-f7cc61b82f99'
+

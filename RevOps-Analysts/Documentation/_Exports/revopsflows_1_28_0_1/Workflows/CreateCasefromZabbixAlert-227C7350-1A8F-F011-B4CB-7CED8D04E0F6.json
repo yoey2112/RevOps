@@ -1,0 +1,221 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_cf5b3"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_61b07"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "be4dedcf-3f31-413a-a4e8-ea679c655132"
+          },
+          "type": "Request",
+          "kind": "Http",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Cumulus ID": {
+                  "type": "string"
+                },
+                "Environment": {
+                  "type": "string"
+                },
+                "Event Date": {
+                  "type": "string"
+                },
+                "Event ID": {
+                  "type": "string"
+                },
+                "Event Name": {
+                  "type": "string"
+                },
+                "Event Severity": {
+                  "type": "string"
+                },
+                "Event Time": {
+                  "type": "string"
+                },
+                "Host Name": {
+                  "type": "string"
+                },
+                "MaintEmail": {
+                  "type": "string"
+                },
+                "NOCType": {
+                  "type": "string"
+                },
+                "PrimEmail": {
+                  "type": "string"
+                },
+                "Trigger URL": {
+                  "type": "string"
+                }
+              }
+            },
+            "method": "POST",
+            "triggerAuthenticationType": "All"
+          }
+        }
+      },
+      "actions": {
+        "Create_Case": {
+          "runAfter": {
+            "Condition": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6442d1d1-c06d-44a3-865e-36525f36c367"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "CreateRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "incidents",
+              "item/title": "@{triggerBody()?['NOCType']} - @{triggerBody()?['Cumulus ID']} - @{triggerBody()?['Event Name']}",
+              "item/casetypecode": 234570004,
+              "item/customerid_contact@odata.bind": "/contacts(c20b0f5c-c255-f011-bec2-6045bd622821)",
+              "item/ownerid@odata.bind": "/systemusers(c6fe1fdf-7423-ef11-840a-000d3af34dcf)",
+              "item/statuscode": 1,
+              "item/primarycontactid@odata.bind": "/contacts(c20b0f5c-c255-f011-bec2-6045bd622821)",
+              "item/revops_cumulusaccount@odata.bind": "@variables('Cumulus Account')",
+              "item/caseorigincode": 234570002,
+              "item/revops_queue@odata.bind": "/queues(0b9df038-85d3-ef11-8ee9-002248b07f79)",
+              "item/revops_service@odata.bind": "/revops_services(6004e948-2bea-ef11-9342-000d3ae85aca)"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Add_Note_in_Case": {
+          "runAfter": {
+            "Create_Case": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "0a71b7d1-29f8-4722-aaa0-e4e0355a63af"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "CreateRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "annotations",
+              "item/subject": "Zabbix Alert",
+              "item/notetext": "Problem started at @{triggerBody()?['Event Time']} on @{triggerBody()?['Event Date']}\nProblem name: @{triggerBody()?['Event Name']}\nHost: @{triggerBody()?['Host Name']}\nSeverity: @{triggerBody()?['Event Severity']}\n\nOriginal problem ID: @{triggerBody()?['Event ID']}\n@{triggerBody()?['Trigger URL']}\n\nNOCType:  @{triggerBody()?['NOCType']}\nCumulusID:  @{triggerBody()?['Cumulus ID']}\nEnvironment:  @{triggerBody()?['Environment']}\nPrimEmail: @{triggerBody()?['PrimEmail']}\nMaintEmail:  @{triggerBody()?['MaintEmail']}"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "List_Cumulus_Accounts": {
+          "runAfter": {
+            "Cumulus_Account": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "922aa3e7-afac-4ed5-a398-d81078819b14"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "revops_cumulusaccounts",
+              "$filter": "revops_clientuniquename eq '@{triggerBody()?['Cumulus ID']}'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Condition": {
+          "actions": {
+            "Set_Cumulus_Account_Value": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "81616c6f-cde3-4907-984f-ddea94e1c5c7"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "Cumulus Account",
+                "value": "@{concat('/revops_cumulusaccounts(', outputs('List_Cumulus_Accounts')?['body/value'][0]?['revops_cumulusaccountid'], ')')}"
+              }
+            }
+          },
+          "runAfter": {
+            "List_Cumulus_Accounts": [
+              "Succeeded"
+            ]
+          },
+          "expression": {
+            "greater": [
+              "@length(outputs('List_Cumulus_Accounts')?['body']?['value'])",
+              0
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "91595109-5e05-4a50-ace2-e7d9875da1d6"
+          },
+          "type": "If"
+        },
+        "Cumulus_Account": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "554a5231-ed2d-4e8a-82dd-a663d434b647"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Cumulus Account",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

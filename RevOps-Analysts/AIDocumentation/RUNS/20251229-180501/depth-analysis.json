@@ -1,0 +1,4939 @@
+{
+  "plugins": [
+    {
+      "plugin_id": "a1da7847-b1bd-411d-ba0d-14fc3f831836",
+      "plugin_name": "sherweb.plugin",
+      "steps": [
+        {
+          "name": "sherweb.plugin.PhoneCall: Update of phonecall",
+          "mode": 0,
+          "entity": "phonecall",
+          "message": "Update",
+          "rank": 1,
+          "step_id": "b143fda5-bf0c-ef11-9f89-000d3a0a0668",
+          "stage": 20
+        }
+      ],
+      "step_count": 1,
+      "version": "1.0.0.0"
+    },
+    {
+      "version": "1.0.0.0",
+      "plugin_name": "RevOps.EmailPlugins",
+      "step_count": 0,
+      "plugin_id": "38bacd4b-61a6-4028-9d42-e19343472774",
+      "steps": []
+    },
+    {
+      "plugin_id": "115c57ce-6551-47cf-8f60-262b00fb8eec",
+      "plugin_name": "RevOps.SolutionPlugins",
+      "steps": [
+        {
+          "name": "RevOps.SolutionPlugins.UpdateSolutionCategoriesOnRelationship: Disassociate of any Entity",
+          "mode": 0,
+          "entity": null,
+          "message": "Disassociate",
+          "rank": 1,
+          "step_id": "d6c9b085-cfcb-f011-8544-7ced8d058789",
+          "stage": 40
+        },
+        {
+          "name": "RevOps.SolutionPlugins.UpdateSolutionCategoriesOnRelationship: Associate of any Entity",
+          "mode": 0,
+          "entity": null,
+          "message": "Associate",
+          "rank": 1,
+          "step_id": "182d7578-cfcb-f011-8544-7ced8d061ad0",
+          "stage": 40
+        }
+      ],
+      "step_count": 2,
+      "version": "1.0.0.0"
+    }
+  ],
+  "flows": [
+    {
+      "flow_id": "51c9db08-99e8-ef11-be21-000d3a09d51b",
+      "actions": [
+        {
+          "name": "Initialize_variable",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Split_Email",
+          "entity": null,
+          "operation": null,
+          "type": "SetVariable"
+        },
+        {
+          "name": "Get_Domain",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Update_a_row",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "Contact - Extract Domain from email",
+      "triggers": [
+        {
+          "name": "When_a_contact_is_added_or_modified",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "f3277816-22ed-ee11-a1fd-0022486dc4eb",
+      "actions": [
+        {
+          "name": "Update_Probability_100",
+          "entity": "opportunities",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "Opportunity Update Probability when Won",
+      "triggers": [
+        {
+          "name": "When_Opportunity_is_Won",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "416659c3-51ba-f011-bbd3-7c1e52067e9e",
+      "actions": [
+        {
+          "name": "Parse_CaseIDs",
+          "entity": null,
+          "operation": null,
+          "type": "ParseJson"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Bulk Resolve Cases",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "ad8c22c4-107d-f011-b4cc-7c1e52409afe",
+      "actions": [
+        {
+          "name": "Related_to_Case",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "Update Last Interaction - Note",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "2d4ec9f4-5832-ef11-8e4e-6045bdcd5e2a",
+      "actions": [
+        {
+          "name": "Get_secret",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "HTTP",
+          "entity": null,
+          "operation": null,
+          "type": "Http"
+        },
+        {
+          "name": "Lookup_Account_created",
+          "entity": "accounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "company",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Error_404_or_422",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Terminate",
+          "entity": null,
+          "operation": null,
+          "type": "Terminate"
+        },
+        {
+          "name": "geo",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 7,
+      "flow_name": "Enrich Account - OnCreate",
+      "triggers": [
+        {
+          "name": "Account_created",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "bf728815-6f4c-f011-877b-7c1e52409afe",
+      "actions": [
+        {
+          "name": "List_rows",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Condition",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "iVar_contactid",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 3,
+      "flow_name": "[Audience Import] - upsert contact and associate",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "565632f5-0d85-f011-b4cc-7ced8d063295",
+      "actions": [
+        {
+          "name": "Update_a_row",
+          "entity": "phonecalls",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_a_row_by_ID",
+          "entity": "phonecalls",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "[phone call] - add notes to description",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "b3ce4fa1-dc75-ef11-ac20-7c1e520630e3",
+      "actions": [
+        {
+          "name": "Terminate",
+          "entity": null,
+          "operation": null,
+          "type": "Terminate"
+        },
+        {
+          "name": "Do_until",
+          "entity": null,
+          "operation": null,
+          "type": "Until"
+        },
+        {
+          "name": "Get_secret",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "company",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Enrich_failed",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Count_rows",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 6,
+      "flow_name": "Enrich Account - Manual",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "5c484896-530e-ef11-9f89-000d3af4117b",
+      "actions": [
+        {
+          "name": "Update_Opportunity",
+          "entity": "opportunities",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "List_All_Opportunity_Solutions_with_Name",
+          "entity": "revops_opportunitysolutions",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Concatenate_Values",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Concat_Solution",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "Opportunity Solution - Create Solution Summary",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "8ff7c609-5fd4-ee11-904c-002248d5a27a",
+      "actions": [
+        {
+          "name": "Validate_Country",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "Account - Set Territory on Account",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "d3fa82ea-5606-f011-bae2-7c1e5206727f",
+      "actions": [
+        {
+          "name": "Get_response_details",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Initialize_variable_1",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Send_an_email_(V2)",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 3,
+      "flow_name": "VMware_ContractRequest",
+      "triggers": [
+        {
+          "name": "When_a_new_response_is_submitted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "98aad464-f360-f011-bec1-7c1e5206727f",
+      "actions": [
+        {
+          "name": "Update_Case",
+          "entity": "incidents",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_Owning_User",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "List_Environment_URL_Definition",
+          "entity": "environmentvariabledefinitions",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "List_AppID_Definition",
+          "entity": "environmentvariabledefinitions",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Compose_-_Definition",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Get_Environment_URL",
+          "entity": "environmentvariablevalues",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Compose_-_Environment_URL",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Compose_-_AppID_Definition",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Get_App_ID",
+          "entity": "environmentvariablevalues",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Compose_-_Application_ID",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Send_an_email_from_a_shared_mailbox_(V2)",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 11,
+      "flow_name": "Incoming Portal Comment, set Customer responded",
+      "triggers": [
+        {
+          "name": "When_a_Portal_Comment_is_added",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "98f9cc2a-e108-f011-bae3-7ced8d04f24d",
+      "actions": [
+        {
+          "name": "Get_Case_Contact",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Send_a_survey",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Terminate",
+          "entity": null,
+          "operation": null,
+          "type": "Terminate"
+        }
+      ],
+      "step_count": 3,
+      "flow_name": "Case resolution survey",
+      "triggers": [
+        {
+          "name": "When_a_Case_is_Closed",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "9b2cc09c-bcc4-f011-bbd3-7c1e52067e9e",
+      "actions": [
+        {
+          "name": "Query_Currency_Exchange_Dataset",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Parse_JSON",
+          "entity": null,
+          "operation": null,
+          "type": "ParseJson"
+        },
+        {
+          "name": "Filter_array_-_USD",
+          "entity": null,
+          "operation": null,
+          "type": "Query"
+        },
+        {
+          "name": "Update_USD_Exchange_Rate",
+          "entity": "transactioncurrencies",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Filter_array_-_EUR",
+          "entity": null,
+          "operation": null,
+          "type": "Query"
+        },
+        {
+          "name": "Update_EUR_Exchange_Rate",
+          "entity": "transactioncurrencies",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Filter_array_-_GBP",
+          "entity": null,
+          "operation": null,
+          "type": "Query"
+        },
+        {
+          "name": "Update_GBP_Exchange_Rate",
+          "entity": "transactioncurrencies",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 8,
+      "flow_name": "Update Currency Exchange Rates",
+      "triggers": [
+        {
+          "name": "Recurrence",
+          "entity": null,
+          "type": "Recurrence",
+          "recurrence": "Day"
+        }
+      ]
+    },
+    {
+      "flow_id": "16df325b-ce8f-f011-b4cc-6045bdfa0630",
+      "actions": [
+        {
+          "name": "List_rows",
+          "entity": "accounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "For_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "[Global] PIT tier",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "05e173a0-6274-ef11-ac20-000d3af47275",
+      "actions": [
+        {
+          "name": "List_Cumulus_Users",
+          "entity": "revops_cumulususers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Link Cumulus User Contact to Account",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "214517ef-83c4-ee11-9079-000d3a09cde5",
+      "actions": [
+        {
+          "name": "Create_Solution_Provider",
+          "entity": "revops_solutionproviders",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "Vendor Account - Create Solution Provider from vendor",
+      "triggers": [
+        {
+          "name": "When_Vendor_Account_Created",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "1a3834b4-abdd-ee11-904c-0022486dc4eb",
+      "actions": [
+        {
+          "name": "Initialize_Webinar_Token",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_client_id",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_organizers",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_Webinar",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Get_Event_Details",
+          "entity": "msevtmgt_events",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Initialize_Session_Key",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "HTTP_-_Get_session",
+          "entity": null,
+          "operation": null,
+          "type": "Http"
+        },
+        {
+          "name": "Collection_of_SESSIONS_in_JSON_format",
+          "entity": null,
+          "operation": null,
+          "type": "ParseJson"
+        },
+        {
+          "name": "HTTP_-_REFRESH_TOKEN",
+          "entity": null,
+          "operation": null,
+          "type": "Http"
+        },
+        {
+          "name": "Parse_JSON",
+          "entity": null,
+          "operation": null,
+          "type": "ParseJson"
+        },
+        {
+          "name": "Condition_3",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 11,
+      "flow_name": "GTW Get Check-Ins",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "577e4e2b-453a-ef11-a316-6045bdcd5e88",
+      "actions": [
+        {
+          "name": "Update_a_row",
+          "entity": "revops_accountsolutionsummaries",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "Account Solutions Summary - Copy Account Key",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "7dac8344-11ac-ef11-a72d-6045bdf9b92b",
+      "actions": [
+        {
+          "name": "Partner_Details",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Parse_JSON",
+          "entity": null,
+          "operation": null,
+          "type": "ParseJson"
+        },
+        {
+          "name": "getDetails",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Get_file_content",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Create_file",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Create_transferdetails_table",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Create_orgDetails_table",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Do_until",
+          "entity": null,
+          "operation": null,
+          "type": "Until"
+        },
+        {
+          "name": "Initialize_variable",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Condition",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 11,
+      "flow_name": "P2P Automation",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "abcf0f94-f9b1-ef11-a72d-7c1e52063863",
+      "actions": [
+        {
+          "name": "Compose",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "FetchModifiedRows",
+          "entity": "accounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Update_Tiers",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        }
+      ],
+      "step_count": 3,
+      "flow_name": "Daily Tier Update per MRR ",
+      "triggers": [
+        {
+          "name": "Recurrence",
+          "entity": null,
+          "type": "Recurrence",
+          "recurrence": "Day"
+        }
+      ]
+    },
+    {
+      "flow_id": "9208db01-c38b-ef11-8a6a-7c1e524071bb",
+      "actions": [
+        {
+          "name": "List_Accounts",
+          "entity": "accounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Fix Accounts without Name",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "1b9a722f-a343-ef11-a316-0022486df470",
+      "actions": [
+        {
+          "name": "Terminate",
+          "entity": null,
+          "operation": null,
+          "type": "Terminate"
+        },
+        {
+          "name": "List_Contacts",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_secret",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "person",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "company",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Count_rows",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Initialize_SkipToken",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Do_until",
+          "entity": null,
+          "operation": null,
+          "type": "Until"
+        }
+      ],
+      "step_count": 8,
+      "flow_name": "Enrich Contact - Manual",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "d0f6ec6a-023b-f011-b4cc-7ced8d063295",
+      "actions": [
+        {
+          "name": "Delay",
+          "entity": null,
+          "operation": null,
+          "type": "Wait"
+        },
+        {
+          "name": "list_contacts",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "get_account",
+          "entity": "accounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "update_account",
+          "entity": "accounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Condition",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 6,
+      "flow_name": "[MWH] - omit accounts and contacts from consent",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "2002e152-9539-ef11-a316-6045bdcd5dde",
+      "actions": [
+        {
+          "name": "List_Opps",
+          "entity": "opportunities",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Account - Set Cumulus Account created on Opps",
+      "triggers": [
+        {
+          "name": "When_Relationship_Type_is_Customer",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "53f99fc6-82c4-ee11-9079-000d3a09cf8e",
+      "actions": [
+        {
+          "name": "Create_Solution_Providers",
+          "entity": "revops_solutionproviders",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "Competitor - Create current provider when a competitor is created",
+      "triggers": [
+        {
+          "name": "When_Competitor_Created",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "d6284b19-ef3e-ef11-a316-6045bdcd5ea7",
+      "actions": [
+        {
+          "name": "Terminate",
+          "entity": null,
+          "operation": null,
+          "type": "Terminate"
+        },
+        {
+          "name": "Get_secret",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "company",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Enrich_failed",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "List_Accounts",
+          "entity": "accounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "geo",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 7,
+      "flow_name": "Enrich Account - Scheduled",
+      "triggers": [
+        {
+          "name": "Recurrence",
+          "entity": null,
+          "type": "Recurrence",
+          "recurrence": "Day"
+        }
+      ]
+    },
+    {
+      "flow_id": "08fd6ead-3a19-f011-998a-7ced8d063295",
+      "actions": [
+        {
+          "name": "Has_gt_1_activity",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "list_activities",
+          "entity": "activitypointers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Initialize_variable",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Set_variable",
+          "entity": null,
+          "operation": null,
+          "type": "SetVariable"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "[Activity tasks] - stamp sql date",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "0137957c-7de9-ef11-be20-7c1e52870606",
+      "actions": [
+        {
+          "name": "List_Generic_Domains",
+          "entity": "revops_domains",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each_domain",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Initialize_domainlist",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Compose_OData_filter_for_Accounts",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "List_accounts",
+          "entity": "accounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        }
+      ],
+      "step_count": 6,
+      "flow_name": "Accounts - Manual -  Fix Generic Domains format",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "0950b5ca-c089-f011-b4cc-6045bdcd501f",
+      "actions": [
+        {
+          "name": "varCountryCache",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "varSubdivisionCache",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "List_Accounts_with_Cumulus_Accounts",
+          "entity": "accounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "For_each_Account",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Terminate",
+          "entity": null,
+          "operation": null,
+          "type": "Terminate"
+        }
+      ],
+      "step_count": 5,
+      "flow_name": "ISO 3166 Cumulus Account to Account - Scheduled",
+      "triggers": [
+        {
+          "name": "Daily",
+          "entity": null,
+          "type": "Recurrence",
+          "recurrence": "Day"
+        }
+      ]
+    },
+    {
+      "flow_id": "c4942a87-cdc0-f011-bbd3-7ced8d061554",
+      "actions": [
+        {
+          "name": "Update_territory_on_lead",
+          "entity": "leads",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "[lead] UK cookie fallback territory",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "90a1ff34-7b95-f011-b4cc-6045bdfa0630",
+      "actions": [
+        {
+          "name": "Has_account",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Get_lead_by_ID",
+          "entity": "leads",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Inquiry_Type_Support",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Get_contact_by_ID",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_created_entity_by_ID",
+          "entity": "msdynmkt_createdentitylinks",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 5,
+      "flow_name": "zremove[JourneyManual] DCIJ - Website contact form submitted",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": "msdynmkt_marketingformsubmissions",
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "169b861b-fa16-f011-998a-7ced8d04f24d",
+      "actions": [
+        {
+          "name": "Has_gt_1_activity",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "list_activities",
+          "entity": "activitypointers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "[Activity email] - stamp sql date",
+      "triggers": [
+        {
+          "name": "email_for_lead_is_added",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "88c1fdd1-a46b-ef11-a670-000d3af47275",
+      "actions": [
+        {
+          "name": "Contact_Count",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "List_Contacts",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Set_variable_-_Contact_Count",
+          "entity": null,
+          "operation": null,
+          "type": "SetVariable"
+        },
+        {
+          "name": "Matching_Contact",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Get_Cumulus_User",
+          "entity": "revops_cumulususers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "LinkedAccount",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Get_Cumulus_Account",
+          "entity": "revops_cumulusaccounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "List_Users",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "SystemUserID",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 9,
+      "flow_name": "Cumulus User Created",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "bbd3e232-67e2-ef11-be20-7c1e52870606",
+      "actions": [
+        {
+          "name": "Update_Service",
+          "entity": "incidents",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Detect_Service_in_Description",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "List_rows",
+          "entity": "emails",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Html_to_text",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "Set Supported Service Column - Email Channel",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "65ab024b-5c7f-f011-b4cc-7c1e52409afe",
+      "actions": [
+        {
+          "name": "varCountryCache",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "varSubdivisionCache",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "List_Accounts_with_Cumulus_Accounts",
+          "entity": "accounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "For_each_Account",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Terminate",
+          "entity": null,
+          "operation": null,
+          "type": "Terminate"
+        }
+      ],
+      "step_count": 5,
+      "flow_name": "ISO 3166 Cumulus Account to Account - Manual",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "1a73f488-e479-ef11-ac20-6045bdf9e493",
+      "actions": [
+        {
+          "name": "List_Leads",
+          "entity": "leads",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Get_secret",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Count_rows",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Terminate",
+          "entity": null,
+          "operation": null,
+          "type": "Terminate"
+        },
+        {
+          "name": "person",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "company",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Clearbit_stateorprovince",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Parse_person_success",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 9,
+      "flow_name": "Enrich Lead - Scheduled",
+      "triggers": [
+        {
+          "name": "Recurrence",
+          "entity": null,
+          "type": "Recurrence",
+          "recurrence": "Day"
+        }
+      ]
+    },
+    {
+      "flow_id": "ec3260dc-9343-ef11-a316-6045bdcd5ea7",
+      "actions": [
+        {
+          "name": "List_Users",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Current_Environment",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Check_Environment",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 3,
+      "flow_name": "Cumulus Account Manager - Team Created Or Updated",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "91fb6fe3-6b78-f011-b4cc-7ced8d063295",
+      "actions": [
+        {
+          "name": "List_rows_-_Events_completed",
+          "entity": "msevtmgt_events",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each_-_event",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "List_rows_-_Emails_completed",
+          "entity": "msdynmkt_emails",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each_-_email",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "List_rows_-_Forms_completed",
+          "entity": "msdynmkt_marketingforms",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each_-_form",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Condition_-_if_completed",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Initialize_variable_-_journey",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_event",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_form",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_email",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Get_a_row_by_ID_-_modified_by_checkup",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_a_row_by_ID_-_campaign_owner_checkup",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Send_an_email_from_a_shared_mailbox_(V2)",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 14,
+      "flow_name": "marketing - close asset from campaign",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted_-_StatusCode_in_Campaign",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "actions": [],
+      "flow_name": "ResolveCase",
+      "flow_id": "ae8115af-54be-f011-bbd3-7c1e52067e9e",
+      "triggers": [],
+      "step_count": 0
+    },
+    {
+      "flow_id": "5376b140-5ada-ee11-904c-6045bdf9e7de",
+      "actions": [
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "GTW webinar is created",
+      "triggers": [
+        {
+          "name": "When_a_webinar_is_created",
+          "entity": null,
+          "type": "OpenApiConnection",
+          "recurrence": "Minute"
+        }
+      ]
+    },
+    {
+      "flow_id": "e5a057bf-fd48-ef11-accd-0022486df470",
+      "actions": [
+        {
+          "name": "Has_account",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Get_lead_by_ID",
+          "entity": "leads",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Inquiry_Type_Support",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Get_contact_by_ID",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "[Journey] DCIJ - Website contact form submitted",
+      "triggers": [
+        {
+          "name": "When_an_action_is_performed",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "cfbc8f2d-646c-ef11-a670-6045bdf9e493",
+      "actions": [
+        {
+          "name": "Update_a_row",
+          "entity": "revops_accountproductsummaries",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "Account Product Summary - Copy Account Key",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "0e903c77-505a-ef11-bfe3-6045bdf9a15c",
+      "actions": [
+        {
+          "name": "Get_query_results",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Condition",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Initialize_variable",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Set_variable",
+          "entity": null,
+          "operation": null,
+          "type": "SetVariable"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "RevOps Change Log",
+      "triggers": [
+        {
+          "name": "Recurrence",
+          "entity": null,
+          "type": "Recurrence",
+          "recurrence": "Week"
+        }
+      ]
+    },
+    {
+      "flow_id": "1d01247d-8de8-ef11-be21-000d3a09d51b",
+      "actions": [
+        {
+          "name": "Number_of_Accounts",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Associate_Lead_to_Account",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Set_Number_Of_Accounts",
+          "entity": null,
+          "operation": null,
+          "type": "SetVariable"
+        },
+        {
+          "name": "List_Accounts",
+          "entity": "accounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "Contact - Resolve Account by Domain",
+      "triggers": [
+        {
+          "name": "When_a_Contact_is_added_or_Domain_Modified",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "5378e547-9077-f011-b4cc-7c1e52409afe",
+      "actions": [
+        {
+          "name": "CheckCampaignForProposedEndDate",
+          "entity": "campaigns",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Initialize_variable_-_StartOfWeek",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_30days",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "EndingSoon",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Expired",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "createTableEndingSoon",
+          "entity": null,
+          "operation": null,
+          "type": "Table"
+        },
+        {
+          "name": "createTableExpired",
+          "entity": null,
+          "operation": null,
+          "type": "Table"
+        },
+        {
+          "name": "Initialize_null",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Create_TableNull",
+          "entity": null,
+          "operation": null,
+          "type": "Table"
+        },
+        {
+          "name": "ExpiredNoOwner",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "EndingSoonNoOwner",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "createTableExpiredNoOwner",
+          "entity": null,
+          "operation": null,
+          "type": "Table"
+        },
+        {
+          "name": "createTableEndingSoonNoOwner",
+          "entity": null,
+          "operation": null,
+          "type": "Table"
+        },
+        {
+          "name": "Select_-_owners_of_the_array_expired",
+          "entity": null,
+          "operation": null,
+          "type": "Select"
+        },
+        {
+          "name": "Compose_-_unique_owner_expired",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "aeach_expired",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "aeach_ending_soon",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Select_-_owner_of_the_array_ending_soon",
+          "entity": null,
+          "operation": null,
+          "type": "Select"
+        },
+        {
+          "name": "Compose_-_unique_owner_ending_soon",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Select_-_owner_of_the_array_null",
+          "entity": null,
+          "operation": null,
+          "type": "Select"
+        },
+        {
+          "name": "Compose_-_unique_owner_null",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Aeach_null",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        }
+      ],
+      "step_count": 23,
+      "flow_name": "marketing - review proposed end date",
+      "triggers": [
+        {
+          "name": "Recurrence",
+          "entity": null,
+          "type": "Recurrence",
+          "recurrence": "Week"
+        }
+      ]
+    },
+    {
+      "flow_id": "2710bbe6-7877-f011-b4cc-7c1e52409afe",
+      "actions": [
+        {
+          "name": "Get_response_details",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Parse_JSON",
+          "entity": null,
+          "operation": null,
+          "type": "ParseJson"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Initialize_variable_-_taskgid",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Create_Task",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Compose_-_output_response_detail",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "HTTP_-_subtask",
+          "entity": null,
+          "operation": null,
+          "type": "Http"
+        }
+      ],
+      "step_count": 7,
+      "flow_name": "Attach file to Asana",
+      "triggers": [
+        {
+          "name": "When_a_new_response_is_submitted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "c6c03138-6102-ef11-9f8a-002248d5a732",
+      "actions": [
+        {
+          "name": "Match_Contact_by_email",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Number_of_Contacts",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Lead - Resolve contact by email",
+      "triggers": [
+        {
+          "name": "When_a_lead_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "d50de08e-0f88-f011-b4cc-7ced8d06221f",
+      "actions": [
+        {
+          "name": "List_Cumulus_Accounts",
+          "entity": "revops_cumulusaccounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Number_of_Accounts",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "AccountID",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "SkipCU",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Number_of_Domains",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "GenericDomainFormat",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "DomainValue",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 8,
+      "flow_name": "Fill Parent Account of Cumulus Account",
+      "triggers": [
+        {
+          "name": "Recurrence",
+          "entity": null,
+          "type": "Recurrence",
+          "recurrence": "Day"
+        }
+      ]
+    },
+    {
+      "flow_id": "e67c203d-3b24-f011-8c4e-7c1e52409afe",
+      "actions": [
+        {
+          "name": "Initialize_variable",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Split_Email",
+          "entity": null,
+          "operation": null,
+          "type": "SetVariable"
+        },
+        {
+          "name": "Get_Domain",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Update_a_row",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "Contact - Extract Domain from email (selecting rows)",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": "contacts",
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "12b018cd-fd93-f011-b4cc-6045bdfa0630",
+      "actions": [
+        {
+          "name": "Parse_JSON",
+          "entity": null,
+          "operation": null,
+          "type": "ParseJson"
+        },
+        {
+          "name": "For_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Get_Competitor",
+          "entity": "competitors",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_Competitor_ID",
+          "entity": "revops_competitortransferids",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Update_Case_Owner",
+          "entity": "incidents",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 5,
+      "flow_name": "P2P Transfer Population from Case",
+      "triggers": [
+        {
+          "name": "New_Case_from_P2P_Transfer",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "ff8ff78c-3d1c-ef11-840a-0022486d6c17",
+      "actions": [
+        {
+          "name": "List_Cumulus_Users",
+          "entity": "revops_cumulususers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Contact_Count",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "List_Users",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "SystemUserID",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 5,
+      "flow_name": "Link Cumulus Users To Contact",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "c6ee8cbc-1919-ef11-840a-7c1e520637cd",
+      "actions": [
+        {
+          "name": "Check_Environment",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Current_Environment",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "List_Users",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 3,
+      "flow_name": "Cumulus Account Manager - User Created Or Updated",
+      "triggers": [
+        {
+          "name": "When_a_user_is_added_or_modified",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "0aa72c99-f571-f011-bec2-7ced8d063295",
+      "actions": [
+        {
+          "name": "Get_response_details",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Initialize_ContractType",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Send_an_email_(V2)",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Initialize_ticket_recipient_email",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "Veeam_ContractRequest",
+      "triggers": [
+        {
+          "name": "When_a_new_response_is_submitted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "50c55434-3d1c-ef11-840b-002248d5a732",
+      "actions": [
+        {
+          "name": "List_Cumulus_Accounts",
+          "entity": "revops_cumulusaccounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Account_Count",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Email_Domain",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Account_Count_-_Generic_Domain",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Send_an_email_(V2)",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "NoMatch",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 7,
+      "flow_name": "Link Cumulus Accounts to Parent Accounts",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "1b21a4d6-5ada-ee11-904d-002248d5a732",
+      "actions": [
+        {
+          "name": "Add_registrant",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_Event_Details",
+          "entity": "msevtmgt_events",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_Contact_Details",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Update_GTW_Registration_Key",
+          "entity": "msevtmgt_eventregistrations",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "GTW Registrant added",
+      "triggers": [
+        {
+          "name": "When_a_Registration_is_CReated",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "a4267844-d0bf-f011-bbd3-7c1e52067e9e",
+      "actions": [
+        {
+          "name": "Delay_CHANGE_TOMINUTES",
+          "entity": null,
+          "operation": null,
+          "type": "Wait"
+        },
+        {
+          "name": "Condition_-_HasAccount",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "[lead] - check parent account relationship for Trade Show lead",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "cb799a23-777b-ef11-ac20-6045bdf9e493",
+      "actions": [
+        {
+          "name": "List_Accounts",
+          "entity": "accounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Number_of_Cumulus_Accounts",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 3,
+      "flow_name": "Fix Primary Contact on Account",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "0b2432b9-e03e-ef11-a316-6045bdcd5ea7",
+      "actions": [
+        {
+          "name": "Terminate",
+          "entity": null,
+          "operation": null,
+          "type": "Terminate"
+        },
+        {
+          "name": "List_Contacts",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_secret",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "person",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "company",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        }
+      ],
+      "step_count": 6,
+      "flow_name": "Enrich Contact - Scheduled",
+      "triggers": [
+        {
+          "name": "Recurrence",
+          "entity": null,
+          "type": "Recurrence",
+          "recurrence": "Day"
+        }
+      ]
+    },
+    {
+      "flow_id": "4312b647-622e-ef11-8e4f-6045bdcd5dde",
+      "actions": [
+        {
+          "name": "Required_Fields",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Language",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Number_of_Leads",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 3,
+      "flow_name": "Incomplete Cart",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "1f4f7206-f616-f011-998a-7c1e5206727f",
+      "actions": [
+        {
+          "name": "Has_gt_1_activity",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "list_activities",
+          "entity": "activitypointers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "[Activity phone] - stamp sql date",
+      "triggers": [
+        {
+          "name": "Phone_call_for_lead_is_added",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "5e0d76fd-ba26-f011-8c4e-7ced8d04f24d",
+      "actions": [
+        {
+          "name": "Number_of_Accounts",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Associate_Lead_to_Account",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Set_Number_Of_Accounts",
+          "entity": null,
+          "operation": null,
+          "type": "SetVariable"
+        },
+        {
+          "name": "List_Accounts",
+          "entity": "accounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "Contact - Resolve Account by Domain (select row)",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": "contacts",
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "0cbf6af4-007d-f011-b4cc-7c1e52409afe",
+      "actions": [
+        {
+          "name": "Related_to_Case",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Initialize_variable_-_Email_Direction",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Update Last Interaction - Email",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "2203afa2-feca-f011-8544-7ced8d061554",
+      "actions": [
+        {
+          "name": "Get_related_Conversation",
+          "entity": "msdyn_ocliveworkitems",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_related_Case",
+          "entity": "incidents",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Set_Case_lookup_value",
+          "entity": "msdyn_customerfeedbacksurveyresponses",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Set_CSAT_Survey_Completed_to_Yes",
+          "entity": "incidents",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "Set Case lookup value on Customer Feedback Survey Response",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "eb2ba9c6-fa5d-ee11-8df0-000d3a09f3d2",
+      "actions": [
+        {
+          "name": "Exécuter_une_requête_sur_un_jeu_de_données",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Réponse",
+          "entity": null,
+          "operation": null,
+          "type": "Response"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Select Orgs From Cumulus Where ClientUniqueName",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "3d01394b-a3cb-f011-8544-7c1e52067e9e",
+      "actions": [
+        {
+          "name": "List_CSAT_Responses",
+          "entity": "msdyn_customerfeedbacksurveyresponses",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Condition",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Delay",
+          "entity": null,
+          "operation": null,
+          "type": "Wait"
+        }
+      ],
+      "step_count": 3,
+      "flow_name": "Set Customer Verified Resolution Value",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "6a5560fe-157d-f011-b4cc-7ced8d04f24d",
+      "actions": [
+        {
+          "name": "Related_to_Case",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "Update Last Interaction - Portal Comment",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "633172f5-c29e-f011-bbd2-7ced8d061554",
+      "actions": [
+        {
+          "name": "Update_a_row_-_opportunity_to_set_BPF",
+          "entity": "opportunities",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_a_row_by_ID_-_check_name_of_active_stage",
+          "entity": "processstages",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Opportunity - set current BPF stage - sherweb opp bpf",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted_-_sherweb_opp_bpf",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "a21628e1-353e-ef11-a316-6045bdcd5dde",
+      "actions": [
+        {
+          "name": "Create_a_Specialist_Task",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "Create Work Item - Approve/Enable Mailbox",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "4c3cce43-8ed5-ee11-904c-002248d5a732",
+      "actions": [
+        {
+          "name": "List_Accounts",
+          "entity": "accounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "List_Cumulus_Accounts",
+          "entity": "revops_cumulusaccounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Number_of_Cumulus__Accounts",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Number_of_Accounts",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "List_Contacts",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Number_of_Contacts",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "List_Cumulus_Users",
+          "entity": "revops_cumulususers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Number_of_Cumulus_Users",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "List_Leads",
+          "entity": "leads",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Number_of_Leads",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "LeadsContact",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "List_Domains",
+          "entity": "revops_domains",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Number_of_Domains",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Matching_Domain",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Matching_Contact",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Matching_Cumulus_User",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Matching_Account",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "GenericDomainFormat",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "DomainValue",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Number_of_Accounts_Check",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "AccountID",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "List_Users",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "SystemUserID",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "AccountURL",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Matching_Leads",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Number_of_Opportunities",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Matching_Opportunities",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "IV_Cumulus_signup",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Current_Environment",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Link_Cumulus_Account_to_Parent_Account",
+          "entity": "accounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Matching_Cumulus_Account",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Number_of_Leads_-_Sales_Ready",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Add_cumulus_signup_custom_activity",
+          "entity": "revops_cumulussignups",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "List_Opportunities",
+          "entity": "opportunities",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Set_Number_of_Opportunities",
+          "entity": null,
+          "operation": null,
+          "type": "SetVariable"
+        },
+        {
+          "name": "Update_Contact_for_Onboarding_Trigger",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 36,
+      "flow_name": "Account Created in Cumulus",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "77b3076c-1200-f011-bae3-7c1e52409afe",
+      "actions": [
+        {
+          "name": "List_rows_present_in_a_table",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Filter_array",
+          "entity": null,
+          "operation": null,
+          "type": "Query"
+        },
+        {
+          "name": "Condition_-_if_Missing_Data",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Initialize_variable_-_ContactID",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_DomainName",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_Invalid_Event_IDs",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Apply_to_each_Row_from_source_file",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Initialize_variable_-_var_ContactsCreated_",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_var_ContactsFound",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_var_RegistrationsCompleted",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Post_card_in_a_chat_or_channel_-_Summary",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Initialize_variable_-_var_leadsFound",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_var_leadsCreated",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_leadID",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_var_accountid",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_InvalidTargetOwner",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Apply_to_each_-_check_target_owner",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Condition_-_InvalidTargetOwner",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Initialize_variable_-_ownerid",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 19,
+      "flow_name": "[Events] - Scanned Import connection to event and more",
+      "triggers": [
+        {
+          "name": "When_a_file_is_created_(properties_only)",
+          "entity": null,
+          "type": "OpenApiConnection",
+          "recurrence": "Minute"
+        }
+      ]
+    },
+    {
+      "flow_id": "eeb603b3-bc47-f011-877a-7c1e52409afe",
+      "actions": [
+        {
+          "name": "Get_Related_Case",
+          "entity": "incidents",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_Owning_User",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Send_an_email_from_a_shared_mailbox_(V2)",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Update_email",
+          "entity": "emails",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Delay_2_seconds",
+          "entity": null,
+          "operation": null,
+          "type": "Wait"
+        },
+        {
+          "name": "Get_Environment_URL",
+          "entity": "environmentvariablevalues",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "List_Environment_URL_Definition",
+          "entity": "environmentvariabledefinitions",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Compose_-_Definition",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Compose_-_Environment_URL",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "List_AppID_Definition",
+          "entity": "environmentvariabledefinitions",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Compose_-_AppID_Definition",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Get_App_ID",
+          "entity": "environmentvariablevalues",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Compose_-_Application_ID",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        }
+      ],
+      "step_count": 13,
+      "flow_name": "Case - Send notification to owner when a customer replies",
+      "triggers": [
+        {
+          "name": "When_an_email_is_set_to_\"Notify_case_owner_=_true\"",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "a622cb37-5595-ef11-8a69-000d3a0a3998",
+      "actions": [
+        {
+          "name": "Update_a_row",
+          "entity": "leads",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "[lead] - disqualify honeypot field contains data",
+      "triggers": [
+        {
+          "name": "When_an_action_is_performed",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "122313bc-9aa0-f011-bbd2-7ced8d061554",
+      "actions": [
+        {
+          "name": "Get_User_ID",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Check_group_membership_(V2)",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Condition",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 3,
+      "flow_name": "Assign SME Engagement to Object Owner",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "4abab8df-5206-f011-bae2-7ced8d063295",
+      "actions": [
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "Commitment Agreement Form",
+      "triggers": [
+        {
+          "name": "When_a_new_response_is_submitted",
+          "entity": null,
+          "type": "ApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "4b2cd07d-1f9a-ee11-be37-000d3af4f266",
+      "actions": [
+        {
+          "name": "Condition",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Initialize_variable",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Lead - Extract Domain from email",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "f665edbc-a4f3-ef11-be20-7c1e5206727f",
+      "actions": [
+        {
+          "name": "Initialize_variable_-_UTM_Campaign",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_UTM_Medium",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_UTM_Source",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Compose_-_utms",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Compose_-_split_utm_strings",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Compose_#",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Initialize_variable_-_GCLID",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_GAD_Source",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_UTM_Content",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_UTM_Keyword",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_li_fat_id",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_Reddit_CID",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-__gl",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Delay",
+          "entity": null,
+          "operation": null,
+          "type": "Wait"
+        },
+        {
+          "name": "Get_form_sub",
+          "entity": "msdynmkt_marketingformsubmissions",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_created_entity",
+          "entity": "msdynmkt_createdentitylinks",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Linked_to_contact",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Linked_to_lead",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "List_field_submissions",
+          "entity": "msdynmkt_marketingfieldsubmissions",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "fieldvalue_exisits",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Set_email",
+          "entity": null,
+          "operation": null,
+          "type": "SetVariable"
+        },
+        {
+          "name": "Initialize_email",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 23,
+      "flow_name": "[Form Submission] - UTM shenanigans enrichment & consent processing",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "d96a7992-b69f-f011-bbd2-7ced8d058789",
+      "actions": [
+        {
+          "name": "var_Case",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Set_case",
+          "entity": null,
+          "operation": null,
+          "type": "SetVariable"
+        },
+        {
+          "name": "Terminate",
+          "entity": null,
+          "operation": null,
+          "type": "Terminate"
+        },
+        {
+          "name": "Get_Queue_Name",
+          "entity": "queues",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_secret",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_Agent_Email",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_Supported_Service",
+          "entity": "revops_services",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "HTTP_v1",
+          "entity": null,
+          "operation": null,
+          "type": "Http"
+        }
+      ],
+      "step_count": 8,
+      "flow_name": "Case to NiCE",
+      "triggers": [
+        {
+          "name": "Case_Created_or_Modified",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "0f2473c5-239a-ee11-be37-000d3af4f717",
+      "actions": [
+        {
+          "name": "Match_Account_by_Domain",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Number_of_Accounts",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Lead - Resolve Account by Domain",
+      "triggers": [
+        {
+          "name": "When_a_Lead_is_added_or_Domain_Modified",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "83b3c17e-2bca-f011-8544-6045bdf9f19e",
+      "actions": [
+        {
+          "name": "Get_Queue",
+          "entity": "queues",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Update_Transfer",
+          "entity": "revops_transfers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "For_each_queue",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Initialize_variable_-_queue",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_subject",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Get_Subject_-_Migration",
+          "entity": "subjects",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "For_each_subject",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Get_Cumulus_Account",
+          "entity": "revops_cumulusorganizations",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "For_each_Cumulus_Account",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Initialize_variable_-_account",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_variable_-_cumulus_account",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Create_Case",
+          "entity": "incidents",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 12,
+      "flow_name": "Create Case from Migration Request",
+      "triggers": [
+        {
+          "name": "Transfer_added",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "742ea0c4-d142-f011-877a-7ced8d063295",
+      "actions": [
+        {
+          "name": "Get_lead_by_ID",
+          "entity": "leads",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_owner_by_ID",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "modified_=_owner",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Condition",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "[Lead] notify user when assigned",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "c547a2b9-25bb-f011-bbd3-6045bdf9f19e",
+      "actions": [
+        {
+          "name": "Create_a_case",
+          "entity": "incidents",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_response_details",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Parse_JSON",
+          "entity": null,
+          "operation": null,
+          "type": "ParseJson"
+        },
+        {
+          "name": "add_a_note",
+          "entity": "annotations",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "CS - case create for manual account creation for UK Partners",
+      "triggers": [
+        {
+          "name": "When_a_new_response_is_submitted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "76fd7f57-ba3c-f011-b4cc-7c1e52409afe",
+      "actions": [
+        {
+          "name": "Get_a_row_by_ID",
+          "entity": "incidents",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Case_Status",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Incoming Email, set Customer responded",
+      "triggers": [
+        {
+          "name": "Incoming_Email_received",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "b15a64db-b976-f011-b4cc-7ced8d063295",
+      "actions": [
+        {
+          "name": "GetCampaignOwner",
+          "entity": "campaigns",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "For_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Initialize_variable_CampaignNoValidOwner",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Create_HTML_table_CampaignNoValidOwner",
+          "entity": null,
+          "operation": null,
+          "type": "Table"
+        },
+        {
+          "name": "Initialize_variable_CampaignNoOwner",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Create_HTML_table_CampaignNoOwner",
+          "entity": null,
+          "operation": null,
+          "type": "Table"
+        },
+        {
+          "name": "Send_an_email_from_a_shared_mailbox_(V2)",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 7,
+      "flow_name": "marketing - report inactive campaign owner",
+      "triggers": [
+        {
+          "name": "Recurrence",
+          "entity": null,
+          "type": "Recurrence",
+          "recurrence": "Week"
+        }
+      ]
+    },
+    {
+      "flow_id": "20e5e4f3-3f57-f011-bec2-7ced8d063295",
+      "actions": [
+        {
+          "name": "List_rows_-_customer_voice_survey_responses",
+          "entity": "msfp_surveyresponses",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "For_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Day 0 - Cumulus CES",
+      "triggers": [
+        {
+          "name": "Recurrence",
+          "entity": null,
+          "type": "Recurrence",
+          "recurrence": "Week"
+        }
+      ]
+    },
+    {
+      "flow_id": "80e8dada-3f3a-f011-b4cc-7c1e52409afe",
+      "actions": [
+        {
+          "name": "Condition",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Get_a_row_by_ID",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Queue item ownership change based on case ownership",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "885fa9a4-521f-ef11-840a-6045bdcd283e",
+      "actions": [
+        {
+          "name": "Get_secret",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "HTTP",
+          "entity": null,
+          "operation": null,
+          "type": "Http"
+        },
+        {
+          "name": "Lookup_Contact_created",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "person",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "company",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Error_404_or_422",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Enrich_Contact",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Terminate",
+          "entity": null,
+          "operation": null,
+          "type": "Terminate"
+        },
+        {
+          "name": "GICSCode_not_empty_or_null",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 9,
+      "flow_name": "Enrich Contact - OnCreate",
+      "triggers": [
+        {
+          "name": "Contact_created",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "6b0c257b-5941-f011-877a-7c1e52409afe",
+      "actions": [
+        {
+          "name": "Delay",
+          "entity": null,
+          "operation": null,
+          "type": "Wait"
+        },
+        {
+          "name": "Get_a_row_by_ID",
+          "entity": "queueitems",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Condition",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 3,
+      "flow_name": "Queue item release, set case Owner",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "64e3c0bb-b194-f011-b4cc-6045bdfa0630",
+      "actions": [
+        {
+          "name": "Get_Cumulus_Account",
+          "entity": "revops_cumulusaccounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_Cumulus_Org",
+          "entity": "revops_cumulusorganizations",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_Platform_Settings",
+          "entity": "revops_platformsettingses",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Compose_–_CreateTransfer_body",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Get_Case",
+          "entity": "incidents",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_Contact",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "HTTP",
+          "entity": null,
+          "operation": null,
+          "type": "Http"
+        },
+        {
+          "name": "Switch",
+          "entity": null,
+          "operation": null,
+          "type": "Switch"
+        },
+        {
+          "name": "Get_Competitor_ID",
+          "entity": "revops_competitortransferids",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_Region",
+          "entity": "msdyn_regions",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_Competitor",
+          "entity": "competitors",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Condition_-_PAX8_and_Azure",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Add_Payload_to_Transfer",
+          "entity": "revops_transfers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Condition",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Condition_Region_is_GB",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Initialize_variable",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 16,
+      "flow_name": "Send P2P Transfer",
+      "triggers": [
+        {
+          "name": "When_a_transfer_is_ready_to_be_sent",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "de29be5c-030f-ef11-9f89-000d3a0a0668",
+      "actions": [
+        {
+          "name": "Concat_Solution",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "List_All_Opportunity_Solutions_with_Name",
+          "entity": "revops_opportunitysolutions",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Concatenate_Values",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "Opportunity - Update Solution Summary",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "4426e14b-a0fa-ef11-bae1-7c1e5206727f",
+      "actions": [
+        {
+          "name": "Switch",
+          "entity": null,
+          "operation": null,
+          "type": "Switch"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "Organization Created or Deleted in Cumulus",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "875fa9a4-521f-ef11-840a-6045bdcd283e",
+      "actions": [
+        {
+          "name": "Lookup_Lead_created",
+          "entity": "leads",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Update_Lead",
+          "entity": "leads",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_secret",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "HTTP",
+          "entity": null,
+          "operation": null,
+          "type": "Http"
+        },
+        {
+          "name": "Terminate",
+          "entity": null,
+          "operation": null,
+          "type": "Terminate"
+        },
+        {
+          "name": "Error_404_or_422",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "countryCode_not_empty_or_null",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "person",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "company",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Clearbit_stateorprovince",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Update_Lead_stateorprovince",
+          "entity": "leads",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "GICSCode_not_empty_or_null",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 12,
+      "flow_name": "Enrich Lead - OnCreate",
+      "triggers": [
+        {
+          "name": "Lead_created",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "2649d858-4bd5-f011-8544-7ced8d061554",
+      "actions": [
+        {
+          "name": "Excluded_Queues",
+          "entity": "queues",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Conversation_in_Excluded_Queue",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Filter_array_-_Queues",
+          "entity": null,
+          "operation": null,
+          "type": "Query"
+        },
+        {
+          "name": "Terminate",
+          "entity": null,
+          "operation": null,
+          "type": "Terminate"
+        },
+        {
+          "name": "HTTP_POST_to_NiCE",
+          "entity": null,
+          "operation": null,
+          "type": "Http"
+        },
+        {
+          "name": "List_conversations",
+          "entity": "msdyn_ocliveworkitems",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "var_conversation",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 7,
+      "flow_name": "Conversations to NiCE",
+      "triggers": [
+        {
+          "name": "conversation_added_or_modified",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "2c98e0f8-b81a-f011-998a-7ced8d04f24d",
+      "actions": [
+        {
+          "name": "Update_a_row",
+          "entity": "leads",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "[lead] - MQL date",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "26f2d8ab-5e99-ee11-be37-000d3af4f266",
+      "actions": [
+        {
+          "name": "Validate_Lead_Account",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 1,
+      "flow_name": "Lead - Set Territory on Lead",
+      "triggers": [
+        {
+          "name": "When_Lead_is_Created_or_Updated",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "bcf520bb-d4ad-f011-bbd3-7c1e52067e9e",
+      "actions": [
+        {
+          "name": "Check_Parent_case",
+          "entity": "incidents",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Check_if_queue_is_billing_or_sales",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Get_owner_of_parent_case",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_Service",
+          "entity": "revops_services",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_Queue",
+          "entity": "queues",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 5,
+      "flow_name": "CS - Notify manager of customer escalation",
+      "triggers": [
+        {
+          "name": "Check_case_sent_to_TSS_Management_with_escalation_reason",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "df670963-ac82-f011-b4cb-7c1e5206727f",
+      "actions": [
+        {
+          "name": "Get_Owning_User",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Send_an_email_(V2)",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Account Ownership change notification",
+      "triggers": [
+        {
+          "name": "When_Account_owner_shanges",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "5ba51fee-143a-ef11-a316-6045bdcd5dde",
+      "actions": [
+        {
+          "name": "Initialize_Count_of_Accounts",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Do_until",
+          "entity": null,
+          "operation": null,
+          "type": "Until"
+        },
+        {
+          "name": "Do_until_1",
+          "entity": null,
+          "operation": null,
+          "type": "Until"
+        },
+        {
+          "name": "Set_Count_of_accounts_2",
+          "entity": null,
+          "operation": null,
+          "type": "SetVariable"
+        },
+        {
+          "name": "Post_message_in_a_chat_or_channel",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 5,
+      "flow_name": "Account - Backfill Channel & Relationship",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "e9a9e743-e9d1-ef11-a72e-7c1e52063863",
+      "actions": [
+        {
+          "name": "List_Queue_Items",
+          "entity": "queueitems",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Condition",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Case Queue Update - Update Queue Item",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "da34706c-cc9e-f011-bbd2-7ced8d061554",
+      "actions": [
+        {
+          "name": "Get_a_row_by_ID",
+          "entity": "processstages",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Update_a_row",
+          "entity": "opportunities",
+          "operation": null,
+          "type": "OpenApiConnection"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "opportunity - set current bpf stage - sherweb sales bpf",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "227c7350-1a8f-f011-b4cb-7ced8d04e0f6",
+      "actions": [
+        {
+          "name": "Create_Case",
+          "entity": "incidents",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Add_Note_in_Case",
+          "entity": "annotations",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "List_Cumulus_Accounts",
+          "entity": "revops_cumulusaccounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Condition",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Cumulus_Account",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        }
+      ],
+      "step_count": 5,
+      "flow_name": "Create Case from Zabbix Alert",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "dd389c85-6d9c-ef11-8a6a-000d3af4dd88",
+      "actions": [
+        {
+          "name": "Response",
+          "entity": null,
+          "operation": null,
+          "type": "Response"
+        },
+        {
+          "name": "Get_items",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Get_transfer",
+          "entity": "revops_transfers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Has_Transfers",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 4,
+      "flow_name": "P2P Transfer Notifications",
+      "triggers": [
+        {
+          "name": "manual",
+          "entity": null,
+          "type": "Request",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "ea953a71-6ad6-ee11-904c-002248d5a789",
+      "actions": [
+        {
+          "name": "Find_lead_by_email",
+          "entity": "leads",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Does_owner_exist",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Initialize_Lead_ID",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_Invitee_First_Name",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_Invitee_Last_Name",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Was_first_name_and_last_name_provided",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Initialize_Owner_ID",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Find_Owner_by_email",
+          "entity": "systemusers",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Create_Appointment",
+          "entity": "appointments",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Initialize_Answers",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Initialize_Calendly_Slug",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Apply_to_each_(answers)",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "For_each_API",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        },
+        {
+          "name": "Get_Event_Type",
+          "entity": null,
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Compose_event_type",
+          "entity": null,
+          "operation": null,
+          "type": "Compose"
+        },
+        {
+          "name": "Initialize_event_type",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Set_variable_event_type",
+          "entity": null,
+          "operation": null,
+          "type": "SetVariable"
+        },
+        {
+          "name": "Lead_update_or_create",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Is_Managed_or_secret_Calendly_event",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 19,
+      "flow_name": "[Calendly] Create and update a lead when a Calendly event is created",
+      "triggers": [
+        {
+          "name": "When_a_meeting_is_booked",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "82f50409-87c4-ee11-9079-000d3a09cf8e",
+      "actions": [
+        {
+          "name": "List_Account_Potential",
+          "entity": "revops_accountpotentialtechstacks",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Apply_to_each",
+          "entity": null,
+          "operation": null,
+          "type": "Foreach"
+        }
+      ],
+      "step_count": 2,
+      "flow_name": "Opportunity - Create Opportunities from Account Potential",
+      "triggers": [
+        {
+          "name": "When_Partner_Signup_Opportunity_is_Won",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "530a3f91-b481-ef11-ac21-000d3af43697",
+      "actions": [
+        {
+          "name": "Get_contact_by_ID",
+          "entity": "contacts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "List_leads",
+          "entity": "leads",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Condition",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 3,
+      "flow_name": "[Journey] - custom trigger for lead",
+      "triggers": [
+        {
+          "name": "When_an_action_is_performed",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    },
+    {
+      "flow_id": "3c9cd4b9-1919-ef11-840a-6045bdcd283e",
+      "actions": [
+        {
+          "name": "List_Cumulus_Accounts",
+          "entity": "revops_cumulusaccounts",
+          "operation": null,
+          "type": "OpenApiConnection"
+        },
+        {
+          "name": "Check_Environment",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        },
+        {
+          "name": "Current_Environment",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "AccountManagerId",
+          "entity": null,
+          "operation": null,
+          "type": "InitializeVariable"
+        },
+        {
+          "name": "Condition",
+          "entity": null,
+          "operation": null,
+          "type": "If"
+        }
+      ],
+      "step_count": 5,
+      "flow_name": "Cumulus Account Manager Update",
+      "triggers": [
+        {
+          "name": "When_a_row_is_added,_modified_or_deleted",
+          "entity": null,
+          "type": "OpenApiConnectionWebhook",
+          "recurrence": null
+        }
+      ]
+    }
+  ],
+  "generated_on_utc": "2025-12-29T18:07:56.7175393Z"
+}

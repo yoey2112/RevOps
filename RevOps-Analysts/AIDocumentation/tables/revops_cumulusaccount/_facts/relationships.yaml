@@ -1,0 +1,162 @@
+relationships:
+  -
+    schemaname: revops_cumulusaccount_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_cumulusaccount_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_cumulusaccount_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_cumulusaccount_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_cumulusaccount_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_cumulusaccount_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_cumulusaccount_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_cumulusaccount_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_cumulususer_cumulusaccount_revops_cumulusaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulususer
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_cumulusaccount_advisor_revops_cumulusaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulusaccount
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_cumulusorganization_cumulusaccount_revops_cumulusaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulusorganization
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_cumulussignup_cumulusaccount_revops_cumulusaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_incident_cumulusaccount_revops_cumulusaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_lateralmove_gainingaccount_revops_cumulusaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_lateralmove_losingaccount_revops_cumulusaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_productsummary_cumulusaccountid_revops_cumulusaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_solutiondetails_cumulusaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_solutiondetails
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_solutionsummary_cumulusaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_solutionsummary
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_transfer_cumulusaccount_revops_cumulusaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_smeengagement_cumulusaccount_revops_cumulusaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_smeengagement
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_msdyn_project_cumulusaccount_revops_cumulusaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_project
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: lk_revops_cumulusaccount_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusaccount
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_cumulusaccount_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusaccount
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_cumulusaccount_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusaccount
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_cumulusaccount_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusaccount
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_revops_cumulusaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusaccount
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_revops_cumulusaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusaccount
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_revops_cumulusaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusaccount
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_revops_cumulusaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusaccount
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: TransactionCurrency_revops_cumulusaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusaccount
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_cumulusaccount_account_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusaccount
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_cumulusaccount_advisor_revops_cumulusaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusaccount
+    referencedtablelogicalname: revops_cumulusaccount
+

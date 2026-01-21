@@ -1,0 +1,27 @@
+﻿# Flow Logic: veeam-contractrequest
+
+<!-- AI:BEGIN AUTO -->
+## Trigger
+**Type**: OpenApiConnectionWebhook
+**Kind**: N/A
+
+## Actions (4 total)
+
+### 1. Get_response_details
+**Type**: OpenApiConnection
+
+### 2. Initialize_ContractType
+**Type**: InitializeVariable
+
+### 3. Send_an_email_(V2)
+**Type**: OpenApiConnection
+
+### 4. Initialize_ticket_recipient_email
+**Type**: InitializeVariable
+
+---
+Last Updated By: AI
+Source: flow.schema.json
+Date: 2025-12-15
+Confidence: Medium
+<!-- AI:END AUTO -->

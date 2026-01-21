@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '2649d858-4bd5-f011-8544-7ced8d061554'
+name: Conversations to NiCE
+category: 5
+type: 1
+statecode: 0
+statuscode: 1
+primaryentity: none
+

@@ -1,0 +1,223 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Discovery
+        name: StageStep3_section1
+        tab: StageStep3
+        visible: true
+      -
+        label: Propose
+        name: StageStep21_section1
+        tab: StageStep21
+        visible: true
+      -
+        label: Negotiation
+        name: StageStep29_section1
+        tab: StageStep29
+        visible: true
+      -
+        label: Onboarding
+        name: StageStep40_section1
+        tab: StageStep40
+        visible: true
+      -
+        label: Activation
+        name: StageStep54_section1
+        tab: StageStep54
+        visible: true
+    fields:
+      -
+        section: StageStep3_section1
+        tab: StageStep3
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_channel'
+        field: revops_channel
+      -
+        section: StageStep3_section1
+        tab: StageStep3
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_opportunitytype'
+        field: revops_opportunitytype
+      -
+        section: StageStep3_section1
+        tab: StageStep3
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_discoverycallmeeting'
+        field: revops_discoverycallmeeting
+      -
+        section: StageStep3_section1
+        tab: StageStep3
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:customerpainpoints'
+        field: customerpainpoints
+      -
+        section: StageStep3_section1
+        tab: StageStep3
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:customerneed'
+        field: customerneed
+      -
+        section: StageStep3_section1
+        tab: StageStep3
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:estimatedclosedate'
+        field: estimatedclosedate
+      -
+        section: StageStep3_section1
+        tab: StageStep3
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_updatedaccountprofile'
+        field: revops_updatedaccountprofile
+      -
+        section: StageStep3_section1
+        tab: StageStep3
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_updatedaccountpotential'
+        field: revops_updatedaccountpotential
+      -
+        section: StageStep21_section1
+        tab: StageStep21
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_proposeddiscounts'
+        field: revops_proposeddiscounts
+      -
+        section: StageStep21_section1
+        tab: StageStep21
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_demos'
+        field: revops_demos
+      -
+        section: StageStep21_section1
+        tab: StageStep21
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_smediscussions'
+        field: revops_smediscussions
+      -
+        section: StageStep29_section1
+        tab: StageStep29
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_pricingdiscountconfirmed'
+        field: revops_pricingdiscountconfirmed
+      -
+        section: StageStep29_section1
+        tab: StageStep29
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_discusstcs'
+        field: revops_discusstcs
+      -
+        section: StageStep29_section1
+        tab: StageStep29
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_estimatequotesent'
+        field: revops_estimatequotesent
+      -
+        section: StageStep29_section1
+        tab: StageStep29
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_signcontract'
+        field: revops_signcontract
+      -
+        section: StageStep40_section1
+        tab: StageStep40
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_cumulusaccountcreated'
+        field: revops_cumulusaccountcreated
+      -
+        section: StageStep40_section1
+        tab: StageStep40
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_keycontactsupdatedincrm'
+        field: revops_keycontactsupdatedincrm
+      -
+        section: StageStep40_section1
+        tab: StageStep40
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_onboardingcallscheduled'
+        field: revops_onboardingcallscheduled
+      -
+        section: StageStep40_section1
+        tab: StageStep40
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_confirmapproveddiscountappliedtoaccount'
+        field: revops_confirmapproveddiscountappliedtoaccount
+      -
+        section: StageStep40_section1
+        tab: StageStep40
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_provisioningrequestsubmitted'
+        field: revops_provisioningrequestsubmitted
+      -
+        section: StageStep40_section1
+        tab: StageStep40
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_servicesprovisionedincumulus'
+        field: revops_servicesprovisionedincumulus
+      -
+        section: StageStep54_section1
+        tab: StageStep54
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_profilingcompleteupdated'
+        field: revops_profilingcompleteupdated
+      -
+        section: StageStep54_section1
+        tab: StageStep54
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebopportunitybpf:revops_cadencemeetingset'
+        field: revops_cadencemeetingset
+    description: A form for this entity.
+    tabs:
+      -
+        label: Discovery
+        name: StageStep3
+        visible: false
+        expanded: true
+      -
+        label: Propose
+        name: StageStep21
+        visible: false
+        expanded: true
+      -
+        label: Negotiation
+        name: StageStep29
+        visible: false
+        expanded: true
+      -
+        label: Onboarding
+        name: StageStep40
+        visible: false
+        expanded: true
+      -
+        label: Activation
+        name: StageStep54
+        visible: false
+        expanded: true
+    field_count: 23
+    type_name: Main
+

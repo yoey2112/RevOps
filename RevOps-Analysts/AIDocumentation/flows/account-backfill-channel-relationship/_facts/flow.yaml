@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '5ba51fee-143a-ef11-a316-6045bdcd5dde'
+name: 'Account - Backfill Channel & Relationship'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

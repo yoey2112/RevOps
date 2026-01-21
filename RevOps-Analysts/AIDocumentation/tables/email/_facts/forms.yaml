@@ -1,0 +1,1502 @@
+forms:
+  -
+    name: 'Email - Customer Service'
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Recipient Information
+        name: recipient information
+        tab: Email
+        visible: true
+      -
+        label: 'E-mail Description'
+        name: email description
+        tab: Email
+        visible: true
+      -
+        label: ''
+        name: Regarding information
+        tab: Email
+        visible: true
+      -
+        label: Attachments
+        name: attachments
+        tab: Email
+        visible: true
+      -
+        label: EMAIL ENGAGEMENT
+        name: emailengagementactions
+        tab: Email
+        visible: true
+      -
+        label: RECIPIENT ACTIVITY
+        name: Emailrecipient_section_6
+        tab: Email
+        visible: true
+      -
+        label: Section
+        name: tab_4_section_2
+        tab: Email
+        visible: true
+    fields:
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: msdyn_sentiment
+        field: msdyn_sentiment
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: cc
+        field: cc
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: bcc
+        field: bcc
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: email description
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Regarding information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: footer_emailfollowed
+        field: isemailfollowed
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: footer_emailremainderset
+        field: isemailreminderset
+    description: Email form used in Customer Service apps.
+    tabs:
+      -
+        label: Email
+        name: Email
+        visible: true
+        expanded: true
+    field_count: 12
+    type_name: Main
+  -
+    name: Bulk Email
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ''
+        name: Email_MainSection
+        tab: Email
+        visible: true
+      -
+        label: ''
+        name: Email_PreviewSection
+        tab: Email
+        visible: false
+      -
+        label: ''
+        name: emailengagementactions
+        tab: Email_Engagement
+        visible: true
+      -
+        label: ''
+        name: Emailrecipient_section_6
+        tab: Email_Engagement
+        visible: true
+      -
+        label: ''
+        name: Email_Engagement_column_3_section_1
+        tab: Email_Engagement
+        visible: true
+    fields:
+      -
+        section: Email_MainSection
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: Email_MainSection
+        tab: Email
+        disabled: true
+        visible: true
+        control_id: msdyn_recipientlist
+        field: msdyn_recipientlist
+      -
+        section: Email_MainSection
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: Email_MainSection
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Email_PreviewSection
+        tab: Email
+        disabled: true
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: Email_PreviewSection
+        tab: Email
+        disabled: true
+        visible: true
+        control_id: previewsubject
+        field: subject
+      -
+        section: Email_PreviewSection
+        tab: Email
+        disabled: true
+        visible: true
+        control_id: previewdescription
+        field: description
+      -
+        section: Email_PreviewSection
+        tab: Email
+        disabled: true
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: scheduledend
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: footer_emailfollowed
+        field: isemailfollowed
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: footer_emailremainderset
+        field: isemailreminderset
+    description: A bulk email form for email experience.
+    tabs:
+      -
+        label: ''
+        name: Email
+        visible: true
+        expanded: true
+      -
+        label: ''
+        name: Email_Engagement
+        visible: true
+        expanded: true
+    field_count: 14
+    type_name: Main
+  -
+    name: Email card
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: Color Strip
+        name: Color Strip
+        tab: ''
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: ''
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: ''
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: Color Strip
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: senton
+        field: senton
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+    description: null
+    tabs:
+      -
+        label: Card
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Card
+  -
+    name: OpenEmailForm
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Recipient Information
+        name: recipient information
+        tab: Email
+        visible: true
+      -
+        label: 'E-mail Description'
+        name: email description
+        tab: Email
+        visible: true
+      -
+        label: ''
+        name: Regarding information
+        tab: Email
+        visible: true
+    fields:
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: msdyn_sentiment
+        field: msdyn_sentiment
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: cc
+        field: cc
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: bcc
+        field: bcc
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: email description
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Regarding information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: Regarding information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: scheduledend
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: footer_emailfollowed
+        field: isemailfollowed
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: footer_emailremainderset
+        field: isemailreminderset
+    description: Updated default Email form.
+    tabs:
+      -
+        label: Email
+        name: Email
+        visible: true
+        expanded: true
+    field_count: 15
+    type_name: Main
+  -
+    name: Enhanced Email
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Recipient information
+        name: recipient information
+        tab: Email
+        visible: true
+      -
+        label: ''
+        name: Regarding information
+        tab: Email
+        visible: true
+      -
+        label: EMAIL ENGAGEMENT
+        name: emailengagementactions
+        tab: Email_Engagement
+        visible: true
+      -
+        label: RECIPIENT ACTIVITY
+        name: Emailrecipient_section_6
+        tab: Email_Engagement
+        visible: true
+    fields:
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: msdyn_sentiment
+        field: msdyn_sentiment
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: cc
+        field: cc
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: bcc
+        field: bcc
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Regarding information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: scheduledend
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: footer_emailfollowed
+        field: isemailfollowed
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: footer_emailremainderset
+        field: isemailreminderset
+    description: A form for Enhanced Email experience.
+    tabs:
+      -
+        label: Email
+        name: Email
+        visible: true
+        expanded: true
+      -
+        label: Email Engagement
+        name: Email_Engagement
+        visible: true
+        expanded: true
+    field_count: 14
+    type_name: Main
+  -
+    name: Email Reference Panel
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: EMAIL DETAILS
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: DESCRIPTION
+        name: tab_1_section_2
+        tab: tab_1
+        visible: true
+      -
+        label: OTHER DETAILS
+        name: tab_1_section_4
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: cc
+        field: cc
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: bcc
+        field: bcc
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: statecode
+        field: statecode
+      -
+        section: tab_1_section_2
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: tab_1_section_4
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: tab_1_section_4
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: tab_1_section_4
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: tab_1_section_4
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: A form that displays Reference Panel of Email.
+    tabs:
+      -
+        label: ''
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 12
+    type_name: Quick View
+  -
+    name: Email Card form
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: ''
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: ''
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: ''
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ColorStrip
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: CardFooter
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: CardFooter
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: Default Email card form.
+    tabs:
+      -
+        label: Email card
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 9
+    type_name: Card
+  -
+    name: Email
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Recipient Information
+        name: recipient information
+        tab: Email
+        visible: true
+      -
+        label: 'E-mail Description'
+        name: email description
+        tab: Email
+        visible: true
+      -
+        label: ''
+        name: Regarding information
+        tab: Email
+        visible: true
+      -
+        label: Attachments
+        name: attachments
+        tab: Email
+        visible: true
+      -
+        label: EMAIL ENGAGEMENT
+        name: emailengagementactions
+        tab: Email
+        visible: true
+      -
+        label: RECIPIENT ACTIVITY
+        name: Emailrecipient_section_6
+        tab: Email
+        visible: true
+      -
+        label: Section
+        name: tab_4_section_2
+        tab: Email
+        visible: true
+    fields:
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: msdyn_sentiment
+        field: msdyn_sentiment
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: cc
+        field: cc
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: bcc
+        field: bcc
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: email description
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Regarding information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: Regarding information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: scheduledend
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: footer_emailfollowed
+        field: isemailfollowed
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: footer_emailremainderset
+        field: isemailreminderset
+    description: Updated default Email form.
+    tabs:
+      -
+        label: Email
+        name: Email
+        visible: true
+        expanded: true
+    field_count: 15
+    type_name: Main
+  -
+    name: Email for Interactive experience
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: REGARDING
+        name: tab_2_section_5
+        tab: tab_2
+        visible: true
+      -
+        label: DETAILS
+        name: tab_2_section_2
+        tab: tab_2
+        visible: true
+      -
+        label: ATTACHMENTS
+        name: tab_2_section_3
+        tab: tab_2
+        visible: true
+    fields:
+      -
+        section: tab_2_section_5
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: tab_2_section_2
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: msdyn_sentiment
+        field: msdyn_sentiment
+      -
+        section: tab_2_section_2
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: tab_2_section_2
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: tab_2_section_2
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: cc
+        field: cc
+      -
+        section: tab_2_section_2
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: bcc
+        field: bcc
+      -
+        section: tab_2_section_2
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: tab_2_section_2
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: scheduledend
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Default Interactive experience Email form.
+    tabs:
+      -
+        label: Email
+        name: tab_2
+        visible: true
+        expanded: true
+    field_count: 12
+    type_name: Main
+  -
+    name: Wizard
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ''
+        name: recipient information
+        tab: Email
+        visible: true
+      -
+        label: ''
+        name: Hidden Section
+        tab: Email
+        visible: false
+      -
+        label: Attachments
+        name: attachments
+        tab: Email
+        visible: false
+      -
+        label: ''
+        name: email description
+        tab: Email
+        visible: true
+      -
+        label: ''
+        name: Regarding information
+        tab: Email
+        visible: true
+    fields:
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: msdyn_sentiment
+        field: msdyn_sentiment
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: Hidden Section
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: Hidden Section
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: cc
+        field: cc
+      -
+        section: Hidden Section
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: bcc
+        field: bcc
+      -
+        section: Hidden Section
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: Hidden Section
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Hidden Section
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: email description
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Regarding information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: scheduledend
+    description: Email form for use in the quick campaign dialog and distribute campaign activity dialog.
+    tabs:
+      -
+        label: ''
+        name: Email
+        visible: true
+        expanded: true
+    field_count: 13
+    type_name: Main
+  -
+    name: Enhanced Email (deprecated)
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: Recipient Information
+        name: recipient information
+        tab: Email
+        visible: true
+      -
+        label: Email
+        name: properties_section
+        tab: Properties
+        visible: true
+      -
+        label: Attachments
+        name: attachments
+        tab: Attachments
+        visible: true
+      -
+        label: EMAIL ENGAGEMENT
+        name: emailengagementactions
+        tab: EmailEngagementTab
+        visible: true
+      -
+        label: RECIPIENT ACTIVITY
+        name: Emailrecipient_section_6
+        tab: EmailEngagementTab
+        visible: true
+    fields:
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: recipient information
+        tab: Email
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: properties_section
+        tab: Properties
+        disabled: false
+        visible: true
+        control_id: cc
+        field: cc
+      -
+        section: properties_section
+        tab: Properties
+        disabled: false
+        visible: true
+        control_id: bcc
+        field: bcc
+      -
+        section: properties_section
+        tab: Properties
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: properties_section
+        tab: Properties
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: properties_section
+        tab: Properties
+        disabled: true
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: properties_section
+        tab: Properties
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+    description: A form for Enhanced Email experience
+    tabs:
+      -
+        label: Email
+        name: Email
+        visible: true
+        expanded: true
+      -
+        label: Properties
+        name: Properties
+        visible: true
+        expanded: true
+      -
+        label: Attachments
+        name: Attachments
+        visible: true
+        expanded: true
+      -
+        label: Email Engagement
+        name: EmailEngagementTab
+        visible: false
+        expanded: true
+    field_count: 9
+    type_name: Main
+  -
+    name: Information
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: Recipient Information
+        name: recipient information
+        tab: email
+        visible: true
+      -
+        label: Email Description
+        name: email description
+        tab: email
+        visible: true
+      -
+        label: Attachments
+        name: attachments
+        tab: attachments
+        visible: true
+      -
+        label: Email Details
+        name: email details
+        tab: details
+        visible: true
+    fields:
+      -
+        section: recipient information
+        tab: email
+        disabled: false
+        visible: true
+        control_id: msdyn_sentiment
+        field: msdyn_sentiment
+      -
+        section: recipient information
+        tab: email
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: recipient information
+        tab: email
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: recipient information
+        tab: email
+        disabled: false
+        visible: true
+        control_id: cc
+        field: cc
+      -
+        section: recipient information
+        tab: email
+        disabled: false
+        visible: true
+        control_id: bcc
+        field: bcc
+      -
+        section: email description
+        tab: email
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: email description
+        tab: email
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: email description
+        tab: email
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: email details
+        tab: details
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: email details
+        tab: details
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: email details
+        tab: details
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: email details
+        tab: details
+        disabled: false
+        visible: true
+        control_id: category
+        field: category
+      -
+        section: email details
+        tab: details
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: email details
+        tab: details
+        disabled: false
+        visible: true
+        control_id: subcategory
+        field: subcategory
+    description: A form for this entity.
+    tabs:
+      -
+        label: Email
+        name: email
+        visible: true
+        expanded: true
+      -
+        label: Attachments
+        name: attachments
+        visible: true
+        expanded: true
+      -
+        label: Details
+        name: details
+        visible: true
+        expanded: true
+    field_count: 14
+    type_name: Main
+

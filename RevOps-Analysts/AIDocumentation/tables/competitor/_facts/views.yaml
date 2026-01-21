@@ -1,0 +1,48 @@
+views:
+  -
+    name: Competitor Advanced Find View
+    querytype: 1
+    savedqueryid: '00000000-0000-0000-00aa-000000666300'
+  -
+    name: All Competitors
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001110'
+  -
+    name: Competitor Associated View
+    description: 'Displays information about competitors in the detail form of any associated opportunity, product, sales literature, quote, order, or invoice record.'
+    querytype: 2
+    savedqueryid: '00000000-0000-0000-00aa-000010001206'
+  -
+    name: Competitors
+    description: All competitors
+    querytype: 8192
+    savedqueryid: '102e4e1f-78b3-49cf-b80f-290237b6a267'
+  -
+    name: All Competitors (summary)
+    description: Displays information about competitors in lead and opportunity records.
+    querytype: -1
+    savedqueryid: '57bca9ac-87a0-4c28-adc8-2d0a4645f29e'
+  -
+    name: Quick Find All Competitors
+    querytype: 4
+    savedqueryid: 'd2638a4d-0627-4d57-bd07-3e7241b54d6f'
+  -
+    name: Competitors I Follow
+    description: Competitors that you follow.
+    querytype: -1
+    savedqueryid: '03d46203-3074-4793-b857-5803e7083692'
+  -
+    name: Competitors Being Followed
+    description: Competitors being followed.
+    querytype: -1
+    savedqueryid: '03d46203-3074-4793-b857-5803e7083693'
+  -
+    name: Competitor Lookup View
+    querytype: 64
+    savedqueryid: '3bf5b939-6d58-477c-b903-95c43f1eda56'
+  -
+    name: My Connections
+    description: Shows all instances of the competitor that the current user is connected to via an active connection.
+    querytype: -1
+    savedqueryid: 'da5750d5-60a6-4ac7-a58a-a90cd2b1af0a'
+

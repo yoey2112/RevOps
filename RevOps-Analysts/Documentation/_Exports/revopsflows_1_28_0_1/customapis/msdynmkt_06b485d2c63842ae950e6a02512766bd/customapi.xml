@@ -1,0 +1,15 @@
+<customapi uniquename="msdynmkt_06b485d2c63842ae950e6a02512766bd">
+  <allowedcustomprocessingsteptype>1</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Website form is submitted.">
+    <label description="Website form is submitted." languagecode="1033" />
+  </description>
+  <displayname default="Sherweb - Website Form Submitted [lead]">
+    <label description="Sherweb - Website Form Submitted [lead]" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>Sherweb - Website Form Submitted [lead]</name>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

@@ -1,0 +1,6 @@
+workflowid: 'bd57803e-0408-44d6-b21d-ae7158ec6555'
+primaryentity: knowledgearticle
+description: This is the default process flow for KnowledgeArticle Translations.
+uniquename: translationprocess
+name: Translation Process
+

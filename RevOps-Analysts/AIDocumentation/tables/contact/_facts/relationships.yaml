@@ -1,0 +1,1237 @@
+relationships:
+  -
+    schemaname: contact_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: contact
+  -
+    schemaname: slakpiinstance_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: slakpiinstance
+    referencedtablelogicalname: contact
+  -
+    schemaname: socialactivity_postauthoraccount_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialactivity
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_Email_EmailSender
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_Tasks
+    relationshiptype: OneToMany
+    referencingtablelogicalname: task
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_PostFollows
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postfollow
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_PostRoles
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postrole
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_PostRegardings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postregarding
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_RecurringAppointmentMasters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: recurringappointmentmaster
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_master_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_customer_relationship_partner
+    relationshiptype: OneToMany
+    referencingtablelogicalname: customerrelationship
+    referencedtablelogicalname: contact
+  -
+    schemaname: lk_contact_feedback_createdby
+    relationshiptype: OneToMany
+    referencingtablelogicalname: feedback
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_actioncard
+    relationshiptype: OneToMany
+    referencingtablelogicalname: actioncard
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_Annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_SocialActivities
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialactivity
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_ActivityPointers
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_MailboxTrackingFolder
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: contact
+  -
+    schemaname: account_primary_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: contact
+  -
+    schemaname: Socialprofile_customer_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialprofile
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_ExternalPartyItems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: externalpartyitem
+    referencedtablelogicalname: contact
+  -
+    schemaname: socialactivity_postauthor_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialactivity
+    referencedtablelogicalname: contact
+  -
+    schemaname: lk_contact_feedback_createdonbehalfby
+    relationshiptype: OneToMany
+    referencingtablelogicalname: feedback
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_Emails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_Appointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_Feedback
+    relationshiptype: OneToMany
+    referencingtablelogicalname: feedback
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_CustomerAddress
+    relationshiptype: OneToMany
+    referencingtablelogicalname: customeraddress
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_Phonecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_customer_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: contact
+  -
+    schemaname: userentityinstancedata_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_customer_relationship_customer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: customerrelationship
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_Faxes
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fax
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_Letters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: letter
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_chats
+    relationshiptype: OneToMany
+    referencingtablelogicalname: chat
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_adx_inviteredemptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_inviteredemption
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_adx_portalcomments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_portalcomment
+    referencedtablelogicalname: contact
+  -
+    schemaname: lead_customer_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: contact
+  -
+    schemaname: lead_parent_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_bookableresource_ContactId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bookableresource
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_BulkOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperation
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_CampaignResponses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: contact
+  -
+    schemaname: CreatedContact_BulkOperationLogs
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperationlog
+    referencedtablelogicalname: contact
+  -
+    schemaname: SourceContact_BulkOperationLogs
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperationlog
+    referencedtablelogicalname: contact
+  -
+    schemaname: Contact_ServiceAppointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: serviceappointment
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_as_responsible_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: contact
+  -
+    schemaname: contractlineitem_customer_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contractdetail
+    referencedtablelogicalname: contact
+  -
+    schemaname: contract_billingcustomer_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contract
+    referencedtablelogicalname: contact
+  -
+    schemaname: contract_customer_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contract
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_as_primary_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_entitlement_ContactId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: entitlement
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_entitlement_Customer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: entitlement
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_customer_opportunity_roles
+    relationshiptype: OneToMany
+    referencingtablelogicalname: customeropportunityrole
+    referencedtablelogicalname: contact
+  -
+    schemaname: invoice_customer_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: invoice
+    referencedtablelogicalname: contact
+  -
+    schemaname: opportunity_customer_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: contact
+  -
+    schemaname: order_customer_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: salesorder
+    referencedtablelogicalname: contact
+  -
+    schemaname: quote_customer_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quote
+    referencedtablelogicalname: contact
+  -
+    schemaname: opportunity_parent_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_playbookinstance_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_playbookinstance
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_SharePointDocuments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointdocument
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_msdyn_taggedrecord_contact_msdyn_dynamicsrecordid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_taggedrecord
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_msdyn_orgchartnode_msdyn_noderecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_orgchartnode
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_contactkpiitem_contactid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_contactkpiitem
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_mostcontacted_regardingObjectId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_mostcontacted
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_mostcontactedby_regardingObjectId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_mostcontactedby
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_dailycontactkpiitem_entityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_dailycontactkpiitem
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_Posts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: post
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_msfp_alerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_alert
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_msfp_surveyinvites
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyinvite
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_msfp_surveyresponses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_msdyn_copilottranscripts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_copilottranscript
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_msdyn_preferredagent_contact_msdyn_recordId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_preferredagent
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_msdyn_ocliveworkitems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_msdyn_ocsessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocsession
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_ocliveworkitem_Customer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_liveconversation_Customer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_liveconversation
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_sequencetarget_contact_msdyn_target
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_sequencetarget
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_salesroutingdiagnostic_contact_msdyn_target
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesroutingdiagnostic
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_sabackupdiagnostic_contact_msdyn_target
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_sabackupdiagnostic
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_salesroutingrun_targetobject
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesroutingrun
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_salessuggestion
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salessuggestion
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_linkeditemvalidity_polymorphic_contactid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_linkedentityattributevalidity
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_msdyn_bookingalerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_bookingalert
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_msevtmgt_attendeepass_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_attendeepass
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_msevtmgt_building_PrimaryContact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_building
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_msevtmgt_eventpurchase
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_eventpurchase
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_msevtmgt_eventpurchaseattendee
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_eventpurchaseattendee
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_msevtmgt_eventteammember_Contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_eventteammember
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_msevtmgt_hotel_PrimaryContact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_hotel
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_msevtmgt_hotelroomallocation_PrimaryContact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_hotelroomallocation
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_msevtmgt_room_PrimaryContact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_room
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_msevtmgt_speaker_Contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_speaker
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_msevtmgt_venue_PrimaryContact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_venue
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_waitlistitem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_waitlistitem
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_waitlistitem_addedby
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_waitlistitem
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyncrm_contact_msdyncrm_customerjourneycustomchannelactivity_Contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyncrm_customerjourneycustomchannelactivity
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyncrm_contact_msdyncrm_geopin
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyncrm_geopin
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyncrm_contact_msdyncrm_marketingemailtestsend_testcontactid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyncrm_marketingemailtestsend
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyncrm_contact_msdyncrm_defaultmarketingsetting_DefaultTestContact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyncrm_defaultmarketingsetting
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyncrm_contact_marketingformsubmission_original
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyncrm_marketingformsubmission
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyncrm_contact_marketingformsubmission_matched
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyncrm_marketingformsubmission
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyncrm_contact_msdyncrm_linkedinformsubmission_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyncrm_linkedinformsubmission
+    referencedtablelogicalname: contact
+  -
+    schemaname: msgdpr_contact_msgdpr_gdprconsentchangerecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msgdpr_gdprconsentchangerecord
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_msdyn_ocvoicemails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocvoicemail
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_ocvoicemail_Customer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocvoicemail
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_li_inmails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_inmail
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_li_messages
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_message
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_li_pointdrivepresentationvieweds
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_pointdrivepresentationviewed
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_msdyn_salescopilotinsight_contact_msdyn_targetentityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salescopilotinsight
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_revops_demos
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_demo
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_revops_onboardingcalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_parent_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_msdyn_conversationparticipantinsights_contact_msdyn_User
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_conversationparticipantinsights
+    referencedtablelogicalname: contact
+  -
+    schemaname: PowerPagesSiteAIFeedback_Contact_Contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: powerpagessiteaifeedback
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdynmkt_createdentitylink_targetcontact_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_createdentitylink
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_revops_cumulussignups
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_ocexternalsecuritysetting_contactid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocexternalsecuritysetting
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_msdyn_lastagent_contact_msdyn_recordId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_lastagent
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_contact_webpage
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_webpage
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_adx_alertsubscriptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_alertsubscription
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_changedcontact_webpagehistory
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_webpagehistory
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_contact_pagenotification
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_pagenotification
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_contact_pollsubmission
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_pollsubmission
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_contact_webfilelog
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_webfilelog
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_contact_webpagelog
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_webpagelog
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_invitation_invitecontact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_invitation
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_invitation_invitercontact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_invitation
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_invitation_redeemedContact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_invitation
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_subscribercontact_pagealert
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_pagealert
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_contact_externalidentity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_externalidentity
+    referencedtablelogicalname: contact
+  -
+    schemaname: bpf_contact_adx_bpf_c2857b638fa7473d8e2f112c232cebd8
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_bpf_c2857b638fa7473d8e2f112c232cebd8
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_webformsession_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_webformsession
+    referencedtablelogicalname: contact
+  -
+    schemaname: msa_contact_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_contact_communityforumalert
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_communityforumalert
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_contact_communityforumannouncement
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_communityforumannouncement
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_contact_communityforumpost
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_communityforumpost
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_contact_forumnotification
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_forumnotification
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_contact_adx_casedeflection_Contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_casedeflection
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_salesagentrun_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesagentrun
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_msdyn_comments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_comment
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_revops_businessreviews
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_businessreview
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_revops_cadencecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_revops_inpersonmeetings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_inpersonmeeting
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_msdyn_approvals
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_approval
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_actual_ContactCustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_actual
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_actual_ContactVendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_actual
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_budgetline_contactcustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_budgetline
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_contactpricelist_Contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_contactpricelist
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_estimateline_ContactCustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_estimateline
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_estimateline_ContactVendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_estimateline
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_fact_ContactCustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_fact
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_fact_ContactVendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_fact
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_invoicelinetransaction_ContactCustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_invoicelinetransaction
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_invoicelinetransaction_ContactVendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_invoicelinetransaction
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_journalline_ContactCustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_journalline
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_journalline_ContactVendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_journalline
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_orderlinetransaction_ContactCustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_orderlinetransaction
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_orderlinetransaction_ContactVendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_orderlinetransaction
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_quotelinetransaction_ContactCustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_quotelinetransaction
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_quotelinetransaction_ContactVendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_quotelinetransaction
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_subcontract_VendorAccountManager
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_subcontract
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_contact_msdyn_subcontractlineresource
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_subcontractlineresource
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_msdyn_projectcontractlinesplitbillingrule_customer_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectcontractlinesplitbillingrule
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_msdyn_projectcontractsplitbillingrule_customer_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectcontractsplitbillingrule
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_projectquotelinesplitbillingrule_customer_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectquotelinesplitbillingrule
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_projectquotesplitbillingrule_customer_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectquotesplitbillingrule
+    referencedtablelogicalname: contact
+  -
+    schemaname: revops_cumulususer_contact_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulususer
+    referencedtablelogicalname: contact
+  -
+    schemaname: incident_customer_contacts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: contact
+  -
+    schemaname: msa_contact_incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_eventregistration_registeredby
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_eventregistration
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_msevtmgt_checkin_Contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_checkin
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_msevtmgt_eventregistration_Contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_eventregistration
+    referencedtablelogicalname: contact
+  -
+    schemaname: msevtmgt_contact_msevtmgt_sessionregistration_contactid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_sessionregistration
+    referencedtablelogicalname: contact
+  -
+    schemaname: msgdpr_contact_msgdpr_gdprparent
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: contact
+  -
+    schemaname: revops_audienceimport_contact_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_audienceimport
+    referencedtablelogicalname: contact
+  -
+    schemaname: revops_contact_contact_formsubmissionid_msdynmkt
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: contact
+  -
+    schemaname: revops_msdyn_project_contact_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_project
+    referencedtablelogicalname: contact
+  -
+    schemaname: msdyn_dcaengageagentresult_regarding_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_dcaengageagentresult
+    referencedtablelogicalname: contact
+  -
+    schemaname: revops_transfer_contact_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: contact
+  -
+    schemaname: transactioncurrency_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: contact_master_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: contact
+  -
+    schemaname: lk_contactbase_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_contact_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_contacts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: team
+  -
+    schemaname: manualsla_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: sla
+  -
+    schemaname: system_user_contacts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_contactbase_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_contact_entityimage
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: imagedescriptor
+  -
+    schemaname: owner_contacts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: owner
+  -
+    schemaname: sla_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: sla
+  -
+    schemaname: contact_customer_accounts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: account
+  -
+    schemaname: lk_contact_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: processstage_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: processstage
+  -
+    schemaname: contact_owning_user
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_externalparty_contact_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: externalparty
+  -
+    schemaname: contact_customer_contacts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: contact
+  -
+    schemaname: business_unit_contacts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: lk_externalparty_contact_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: externalparty
+  -
+    schemaname: contact_originating_lead
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: lead
+  -
+    schemaname: price_level_contacts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: pricelevel
+  -
+    schemaname: equipment_contacts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: equipment
+  -
+    schemaname: service_contacts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: service
+  -
+    schemaname: contact_parent_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_portallanguage_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: adx_portallanguage
+  -
+    schemaname: msa_contact_managingpartner
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_msdyn_contactkpiitem_contact_contactkpiid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdyn_contactkpiitem
+  -
+    schemaname: msdyn_msdyn_segment_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdyn_segment
+  -
+    schemaname: msdyncrm_msdyncrm_customerjourney_contact_customerjourneyid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdyncrm_customerjourney
+  -
+    schemaname: msdyncrm_msdyncrm_marketingemail_contact_emailid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdyncrm_marketingemail
+  -
+    schemaname: msdyncrm_msdyncrm_marketingform_contact_marketingformid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdyncrm_marketingform
+  -
+    schemaname: msdyncrm_msdyncrm_marketingpage_contact_marketingpageid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdyncrm_marketingpage
+  -
+    schemaname: msdyncrm_msdyncrm_segment_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdyncrm_segment
+  -
+    schemaname: msdyncrm_quicksendemail_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdyncrm_quicksendemail
+  -
+    schemaname: msdynmkt_msdynmkt_email_contact_emailid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: msdynmkt_msdynmkt_journey_contact_customerjourneyid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_msdynmkt_marketingform_contact_marketingformid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdynmkt_marketingform
+  -
+    schemaname: msevtmgt_checkin_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msevtmgt_checkin
+  -
+    schemaname: msevtmgt_msevtmgt_event_contact_originatingeventid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msevtmgt_event
+  -
+    schemaname: msgdpr_contact_msgdpr_gdprparent
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: contact
+  -
+    schemaname: msgdpr_msdyncrm_marketingform_contact_consentchangesourceformId
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdyncrm_marketingform
+  -
+    schemaname: revops_Contact_UserContactTest_SystemUser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: contact_subscription_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: subscription
+    referencedtablelogicalname: contact
+  -
+    schemaname: contactleads_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: lead
+  -
+    schemaname: listcontact_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: list
+    referencedtablelogicalname: contact
+  -
+    schemaname: BulkOperation_Contacts
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: bulkoperation
+    referencedtablelogicalname: contact
+  -
+    schemaname: CampaignActivity_Contacts
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: campaignactivity
+    referencedtablelogicalname: contact
+  -
+    schemaname: entitlementcontacts_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: entitlement
+  -
+    schemaname: servicecontractcontacts_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: contract
+  -
+    schemaname: contactinvoices_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: invoice
+    referencedtablelogicalname: contact
+  -
+    schemaname: contactorders_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: salesorder
+    referencedtablelogicalname: contact
+  -
+    schemaname: contactquotes_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: quote
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_communityforumthread_contact
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: adx_communityforumthread
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_ContactContentAccessLevel
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: adx_contentaccesslevel
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_contactproduct
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: product
+  -
+    schemaname: adx_forum_activityalert
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: adx_communityforum
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_invitation_invitecontacts
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: adx_invitation
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_invitation_redeemedcontacts
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: adx_invitation
+    referencedtablelogicalname: contact
+  -
+    schemaname: adx_webrole_contact
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: adx_webrole
+    referencedtablelogicalname: contact
+  -
+    schemaname: powerpagecomponent_mspp_webrole_contact
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: powerpagecomponent
+    referencedtablelogicalname: contact
+  -
+    schemaname: revops_msdyn_project_Contact_Contacts
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdyn_project
+

@@ -1,0 +1,682 @@
+relationships:
+  -
+    schemaname: revops_onboardingcall_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: CampaignResponse_revops_onboardingcalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_ActionCards
+    relationshiptype: OneToMany
+    referencingtablelogicalname: actioncard
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_QueueItems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queueitem
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_Annotations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_Feedback
+    relationshiptype: OneToMany
+    referencingtablelogicalname: feedback
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: revops_onboardingcall_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_onboardingcall
+  -
+    schemaname: msdyn_bookingalertstatus_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_bookingalertstatus
+  -
+    schemaname: msdyn_bookingrule_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_bookingrule
+  -
+    schemaname: msdyn_resourceterritory_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_resourceterritory
+  -
+    schemaname: msdyn_systemuserschedulersetting_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_systemuserschedulersetting
+  -
+    schemaname: msdyn_timegroup_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_timegroup
+  -
+    schemaname: msdyn_timegroupdetail_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_timegroupdetail
+  -
+    schemaname: interactionforemail_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: interactionforemail
+  -
+    schemaname: msevtmgt_checkin_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_checkin
+  -
+    schemaname: msevtmgt_event_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_event
+  -
+    schemaname: msevtmgt_eventpurchase_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_eventpurchase
+  -
+    schemaname: msevtmgt_eventpurchaseattendee_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_eventpurchaseattendee
+  -
+    schemaname: msevtmgt_eventpurchasepass_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_eventpurchasepass
+  -
+    schemaname: msevtmgt_eventregistration_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_eventregistration
+  -
+    schemaname: msevtmgt_hotel_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_hotel
+  -
+    schemaname: msevtmgt_hotelroomallocation_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_hotelroomallocation
+  -
+    schemaname: msevtmgt_hotelroomreservation_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_hotelroomreservation
+  -
+    schemaname: msevtmgt_layout_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_layout
+  -
+    schemaname: msevtmgt_room_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_room
+  -
+    schemaname: msevtmgt_session_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_sessionregistration_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_sessionregistration
+  -
+    schemaname: msevtmgt_sessiontrack_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_sessiontrack
+  -
+    schemaname: msevtmgt_speaker_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_speaker
+  -
+    schemaname: msevtmgt_speakerengagement_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_speakerengagement
+  -
+    schemaname: msevtmgt_sponsorablearticle_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_sponsorablearticle
+  -
+    schemaname: msevtmgt_sponsorship_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_sponsorship
+  -
+    schemaname: msevtmgt_venue_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_venue
+  -
+    schemaname: msevtmgt_webinarconfiguration_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_webinarconfiguration
+  -
+    schemaname: msevtmgt_webinarprovider_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_webinarprovider
+  -
+    schemaname: msdyncrm_contentsettings_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_contentsettings
+  -
+    schemaname: msdyncrm_customerjourney_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_customerjourney
+  -
+    schemaname: msdyncrm_marketingdynamiccontentmetadata_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_marketingdynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemaildynamiccontentmetadata_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_marketingemaildynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemailtestsend_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_marketingemailtestsend
+  -
+    schemaname: msdyncrm_uicconfig_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_uicconfig
+  -
+    schemaname: msdyncrm_leadscoremodel_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_leadscoremodel
+  -
+    schemaname: msdyncrm_migration_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_migration
+  -
+    schemaname: knowledgebaserecord_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: knowledgebaserecord
+  -
+    schemaname: account_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_onboardingcall_systemuser_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: contact_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: contact
+  -
+    schemaname: revops_onboardingcall_mailbox_sendermailboxid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: mailbox
+  -
+    schemaname: revops_onboardingcall_transactioncurrency_transactioncurrencyid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_onboardingcall_owner_ownerid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: owner
+  -
+    schemaname: revops_onboardingcall_systemuser_owninguser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_onboardingcall_sla_slaid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: sla
+  -
+    schemaname: revops_onboardingcall_businessunit_owningbusinessunit
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: knowledgearticle_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: adx_invitation_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_invitation
+  -
+    schemaname: mspp_adplacement_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: mspp_adplacement
+  -
+    schemaname: mspp_pollplacement_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: mspp_pollplacement
+  -
+    schemaname: mspp_publishingstatetransitionrule_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: mspp_publishingstatetransitionrule
+  -
+    schemaname: mspp_redirect_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: mspp_redirect
+  -
+    schemaname: mspp_shortcut_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: mspp_shortcut
+  -
+    schemaname: mspp_website_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: mspp_website
+  -
+    schemaname: lead_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: lead
+  -
+    schemaname: bookableresourcebooking_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: bookableresourcebooking
+  -
+    schemaname: bookableresourcebookingheader_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: bookableresourcebookingheader
+  -
+    schemaname: bulkoperation_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: bulkoperation
+  -
+    schemaname: campaign_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: campaign
+  -
+    schemaname: campaignactivity_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: campaignactivity
+  -
+    schemaname: contract_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: contract
+  -
+    schemaname: entitlement_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: entitlement
+  -
+    schemaname: entitlementtemplate_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: entitlementtemplate
+  -
+    schemaname: incident_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: incident
+  -
+    schemaname: site_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: site
+  -
+    schemaname: revops_onboardingcall_service_serviceid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: service
+  -
+    schemaname: msdyn_customerasset_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_customerasset
+  -
+    schemaname: msdyn_playbookinstance_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_playbookinstance
+  -
+    schemaname: invoice_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: invoice
+  -
+    schemaname: opportunity_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: quote_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: quote
+  -
+    schemaname: salesorder_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: salesorder
+  -
+    schemaname: msdyn_postalbum_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_postalbum
+  -
+    schemaname: msdyn_swarm_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_swarm
+  -
+    schemaname: msdyn_salessuggestion_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_salessuggestion
+  -
+    schemaname: msdyncrm_linkedinaccount_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_linkedinaccount
+  -
+    schemaname: msdyncrm_linkedinactivity_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_linkedinactivity
+  -
+    schemaname: msdyncrm_linkedinfieldmapping_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_linkedinfieldmapping
+  -
+    schemaname: msdyncrm_linkedinform_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_linkedinform
+  -
+    schemaname: msdyncrm_linkedinformanswer_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_linkedinformanswer
+  -
+    schemaname: msdyncrm_linkedinformquestion_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_linkedinformquestion
+  -
+    schemaname: msdyncrm_linkedinformsubmission_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_linkedinformsubmission
+  -
+    schemaname: msdyncrm_linkedinleadmatchingstrategy_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_linkedinleadmatchingstrategy
+  -
+    schemaname: msdyncrm_linkedinuserprofile_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyncrm_linkedinuserprofile
+  -
+    schemaname: revops_onboardingcall_systemuser_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_onboardingcall_systemuser_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_onboardingcall_systemuser_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_onboardingcall_team_owningteam
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: team
+  -
+    schemaname: revops_onboardingcall_sla_slainvokedid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: sla
+  -
+    schemaname: activity_pointer_revops_onboardingcall
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: adx_webpage_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_webpage
+  -
+    schemaname: adx_website_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_website
+  -
+    schemaname: adx_ad_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_ad
+  -
+    schemaname: adx_adplacement_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_adplacement
+  -
+    schemaname: adx_poll_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_poll
+  -
+    schemaname: adx_polloption_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_polloption
+  -
+    schemaname: adx_pollplacement_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_pollplacement
+  -
+    schemaname: adx_pollsubmission_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_pollsubmission
+  -
+    schemaname: adx_publishingstatetransitionrule_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_publishingstatetransitionrule
+  -
+    schemaname: adx_redirect_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_redirect
+  -
+    schemaname: adx_shortcut_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_shortcut
+  -
+    schemaname: adx_communityforumaccesspermission_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_communityforumaccesspermission
+  -
+    schemaname: adx_communityforumalert_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_communityforumalert
+  -
+    schemaname: adx_casedeflection_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_casedeflection
+  -
+    schemaname: adx_contentaccesslevel_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: adx_contentaccesslevel
+  -
+    schemaname: revops_audienceimport_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: revops_audienceimport
+  -
+    schemaname: msdyn_paymentterm_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_paymentterm
+  -
+    schemaname: msdyn_purchaseorder_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_purchaseorder
+  -
+    schemaname: msdyn_purchaseorderproduct_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_purchaseorderproduct
+  -
+    schemaname: msdyn_purchaseorderreceipt_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_purchaseorderreceipt
+  -
+    schemaname: msdyn_purchaseorderreceiptproduct_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_purchaseorderreceiptproduct
+  -
+    schemaname: msdyn_shipvia_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_shipvia
+  -
+    schemaname: msdyn_warehouse_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_warehouse
+  -
+    schemaname: msdyn_projectteam_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_projectteam
+  -
+    schemaname: msdyn_processnotes_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_processnotes
+  -
+    schemaname: revops_smeengagement_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: revops_smeengagement
+  -
+    schemaname: msdyn_project_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msdyn_project
+  -
+    schemaname: revops_mwhaccount_revops_onboardingcalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: revops_mwhaccount
+

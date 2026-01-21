@@ -1,0 +1,28 @@
+views:
+  -
+    name: Quick Find All Categories
+    querytype: 4
+    savedqueryid: '58738c1e-58b4-41bd-b266-015430707cec'
+  -
+    name: All Categories
+    querytype: -1
+    savedqueryid: 'd9f3c7f5-7e80-4dce-b889-4d46e9ce9931'
+  -
+    name: Categories lookup view
+    description: Lookup view of Categories.
+    querytype: 64
+    savedqueryid: '1fe1a98c-24d2-41bd-8d63-5cd6eafe7582'
+  -
+    name: Associated Child Categories
+    querytype: 64
+    savedqueryid: 'f9d2d076-c806-4db1-a24b-92b91d78ff22'
+  -
+    name: Related Categories
+    description: Display all associated Categories for the current Knowledge Article.
+    querytype: 64
+    savedqueryid: '50e935ba-2e0d-460d-ad36-b699b9b991d8'
+  -
+    name: Category Advanced Find View
+    querytype: 1
+    savedqueryid: 'e55cf341-9451-4c1d-a580-f202ab7bd506'
+

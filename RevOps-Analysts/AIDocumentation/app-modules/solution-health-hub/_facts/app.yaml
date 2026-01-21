@@ -1,0 +1,8 @@
+appmoduleid: 'aadf41f6-0020-ef11-840b-6045bd5ea018'
+appmoduleversion: null
+clienttype: 4
+url: null
+description: 'Solution Health Hub enables rules-based validation on the health of your organization and its components. Developers and solution implementers can create rules that allow admins to prevent or diagnose potential problems and promote the health of your organization and organization components. Administrators can run the defined rules periodically and as a first step in troubleshooting to discover potential problems, help prevent difficulties, and safeguard operations in their organization.'
+name: Solution Health Hub
+uniquename: msdyn_SolutionHealthHub
+

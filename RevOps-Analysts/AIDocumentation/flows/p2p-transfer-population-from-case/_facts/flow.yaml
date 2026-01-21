@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '12b018cd-fd93-f011-b4cc-6045bdfa0630'
+name: P2P Transfer Population from Case
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

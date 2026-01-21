@@ -1,0 +1,92 @@
+relationships:
+  -
+    schemaname: userentityinstancedata_template
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: template
+  -
+    schemaname: template_activity_mime_attachments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitymimeattachment
+    referencedtablelogicalname: template
+  -
+    schemaname: Template_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: template
+  -
+    schemaname: Template_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: template
+  -
+    schemaname: Email_EmailTemplate
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: template
+  -
+    schemaname: Template_Organization
+    relationshiptype: OneToMany
+    referencingtablelogicalname: organization
+    referencedtablelogicalname: template
+  -
+    schemaname: Template_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: template
+  -
+    schemaname: emailtemplate_convertrule
+    relationshiptype: OneToMany
+    referencingtablelogicalname: convertrule
+    referencedtablelogicalname: template
+  -
+    schemaname: Template_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: template
+  -
+    schemaname: lk_templatebase_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: template
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_templatebase_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: template
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_email_templates
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: template
+    referencedtablelogicalname: team
+  -
+    schemaname: business_unit_templates
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: template
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: system_user_email_templates
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: template
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: owner_templates
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: template
+    referencedtablelogicalname: owner
+  -
+    schemaname: lk_templatebase_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: template
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_templatebase_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: template
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: ImageDescriptor_Template
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: template
+    referencedtablelogicalname: imagedescriptor
+

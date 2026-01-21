@@ -1,0 +1,39 @@
+views:
+  -
+    name: My Opportunity Solutions
+    description: Active Opportunity Solutions owned by me
+    querytype: 8192
+    savedqueryid: '487adf0e-ad1e-ef11-840b-000d3af43a08'
+  -
+    name: Churn Solutions Grid
+    querytype: -1
+    savedqueryid: '8996be8b-af65-ef11-a670-000d3af4b99b'
+  -
+    name: Opportunity Solutions Grid
+    querytype: -1
+    savedqueryid: '84cc59ad-b11e-ef11-840b-002248d5a732'
+  -
+    name: Active Opportunity Solutions
+    querytype: -1
+    savedqueryid: '3c36ece8-f525-4f00-8418-566f8e664ec9'
+  -
+    name: Opportunity Solution Associated View
+    querytype: 2
+    savedqueryid: '1cf8c874-4b97-4623-a78e-8e49b621de26'
+  -
+    name: Inactive Opportunity Solutions
+    querytype: -1
+    savedqueryid: '10b0ae25-608a-4196-be99-9013f8162851'
+  -
+    name: Opportunity Solution Lookup View
+    querytype: 64
+    savedqueryid: 'bd1f2b8f-33ec-4e7f-9ed5-c0fce06fc42b'
+  -
+    name: Quick Find Active Opportunity Solutions
+    querytype: 4
+    savedqueryid: '0c8faa19-58e5-49c0-a9e8-e874ad80aa95'
+  -
+    name: Opportunity Solution Advanced Find View
+    querytype: 1
+    savedqueryid: 'f347daf3-5771-4949-9eff-eea3cd12de9d'
+

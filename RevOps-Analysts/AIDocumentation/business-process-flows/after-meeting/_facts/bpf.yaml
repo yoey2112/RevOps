@@ -1,0 +1,6 @@
+workflowid: '6e9a821b-3cbc-4f04-9619-f2b723fe4880'
+primaryentity: appointment
+description: Use this task flow to update your appointment and related records after your meeting is over.
+uniquename: after_meeting
+name: After Meeting
+

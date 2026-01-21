@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '875fa9a4-521f-ef11-840a-6045bdcd283e'
+name: 'Enrich Lead - OnCreate'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="msdynmkt_pageurl">
+  <description default="msdynmkt_pageurl">
+    <label description="msdynmkt_pageurl" languagecode="1033" />
+  </description>
+  <displayname default="PageURL">
+    <label description="PageURL" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>msdynmkt_pageurl</name>
+  <type>10</type>
+</customapirequestparameter>

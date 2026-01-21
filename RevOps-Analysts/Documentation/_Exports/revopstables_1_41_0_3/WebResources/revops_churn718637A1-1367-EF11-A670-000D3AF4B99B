@@ -1,0 +1,15 @@
+function toggleSectionVisibility(executionContext) {
+
+    var formContext = executionContext.getFormContext();
+
+    var optionSetValue = formContext.getAttribute("revops_churntype").getValue(); // Get the selected value of the option set field
+
+    var sectionName = "null_section_5"; // The name of the section to show/hide
+
+    if (optionSetValue === 234570001) { // Replace YOUR_OPTION_VALUE with the value you want to check
+
+        formContext.ui.tabs.get("General").sections.get(sectionName).setVisible(false); // Hide the section
+    } else {
+        formContext.ui.tabs.get("General").sections.get(sectionName).setVisible(true); // Show the section
+    }
+}

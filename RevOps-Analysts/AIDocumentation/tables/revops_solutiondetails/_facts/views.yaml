@@ -1,0 +1,31 @@
+views:
+  -
+    name: My Solution Details
+    description: Active Solution Details owned by me
+    querytype: 8192
+    savedqueryid: '898482c4-491f-ef11-840b-000d3af43a08'
+  -
+    name: Active Solution Details
+    querytype: -1
+    savedqueryid: '7654fd52-d30c-4658-8ea0-0739c6e488cf'
+  -
+    name: Quick Find Active Solution Details
+    querytype: 4
+    savedqueryid: '4ebda7dc-77cb-4faf-b8dd-24f1062a3a4b'
+  -
+    name: Solution Details Lookup View
+    querytype: 64
+    savedqueryid: '50e9bb09-dc69-474e-b625-60043ebf8aad'
+  -
+    name: Inactive Solution Details
+    querytype: -1
+    savedqueryid: 'fafc7aa2-edd6-4c6c-bd13-7865cebd962c'
+  -
+    name: Solution Details Advanced Find View
+    querytype: 1
+    savedqueryid: '588c52c7-8b15-408f-872a-8a0c9bf4785c'
+  -
+    name: Solution Details Associated View
+    querytype: 2
+    savedqueryid: '03c5ae98-e57b-4e6a-91f7-e47a4128bf81'
+

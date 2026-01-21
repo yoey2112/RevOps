@@ -1,0 +1,33 @@
+var team1Id= 'e64454d9-2924-ef11-840a-0022483e8dfe'
+var team2Id= '77266598-8efe-ef11-bae3-000d3ae89403'
+
+
+function getUserAndTeams(executionContext) {
+    var formContext = executionContext.getFormContext(); // Get the form context
+    var userId = Xrm.Utility.getGlobalContext().userSettings.userId; // Get the ID of the currently logged-in user
+    var userName = Xrm.Utility.getGlobalContext().userSettings.userName; // Get the name of the currently logged-in user
+    
+    userId = userId.replace(/{/g, "'").replace(/}/g, "'");
+    
+    // Retrieve the teams the user belongs to
+    var query = "?$filter=systemuserid eq " + userId + "&$select=teamid";
+    
+    // Make the Web API call to retrieve team memberships
+    Xrm.WebApi.retrieveMultipleRecords("teammembership", query).then(
+        function (result) {
+            if (result.entities.length > 0) {   
+                for (var i = 0; i < result.entities.length; i++) {
+                    var teamId = result.entities[i].teamid;                    
+                    if(teamId === team1Id || teamId === team2Id)
+                    {
+                       var camp = formContext.getControl("revops_probability"); 
+                        camp.setVisible(true);
+                    }                                                                              
+                }
+            } 
+        },
+        function (error) {
+            console.log("Error retrieving team memberships: " + error.message);
+        }
+    );
+}

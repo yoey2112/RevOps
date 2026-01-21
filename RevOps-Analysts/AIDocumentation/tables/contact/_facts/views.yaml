@@ -1,0 +1,176 @@
+views:
+  -
+    name: Contacts Advanced Find View
+    querytype: 1
+    savedqueryid: '00000000-0000-0000-00aa-000000666400'
+  -
+    name: My Active Contacts
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001003'
+  -
+    name: Active Contacts
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001004'
+  -
+    name: Inactive Contacts
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001033'
+  -
+    name: Contact Associated View
+    description: 'Displays contact information in the detail form of any associated account, opportunity, quote, order, or invoice record. This view is in Contacts and Other Contacts side tabs.'
+    querytype: 2
+    savedqueryid: '00000000-0000-0000-00aa-000010001210'
+  -
+    name: All Contacts Not at Company
+    querytype: -1
+    savedqueryid: '973e2d26-653a-e911-8185-000d3a070f2c'
+  -
+    name: My Contacts Not at Company
+    querytype: -1
+    savedqueryid: '1d3a0a34-653a-e911-8185-000d3a070f2c'
+  -
+    name: Segment members
+    querytype: -1
+    savedqueryid: '4129e27c-d0ce-e811-8158-000d3afd9907'
+  -
+    name: Contacts I Follow
+    description: Contacts that you follow.
+    querytype: -1
+    savedqueryid: '3a282da1-5d90-e011-95ae-00155d9cfa02'
+  -
+    name: Contacts Being Followed
+    description: Contacts being followed.
+    querytype: -1
+    savedqueryid: '3a282da1-5d90-e011-95ae-00155d9cfa03'
+  -
+    name: 'VOC FY24 - MRR < 100 + EN'
+    description: 'view for the intial survey 1 test: MRR less than 100 + language is not french'
+    querytype: -1
+    savedqueryid: 'a0510ef3-115b-ef11-bfe3-0022486df470'
+  -
+    name: 'VOC FY24 - MRR > 0 + FR'
+    description: 'view for the intial survey 1 test: MRR greater than 0 + language is  french'
+    querytype: -1
+    savedqueryid: '3d5bce45-125b-ef11-bfe3-0022486df470'
+  -
+    name: 'CS - Contacts Lookup View'
+    querytype: -1
+    savedqueryid: '9be72748-42d4-ef11-a72e-0022486e1e61'
+  -
+    name: My Active Contacts by Relationship
+    querytype: -1
+    savedqueryid: 'ef26335d-6f4e-e611-80be-0024e8469fb9'
+  -
+    name: 'Contacts: No Orders in Last 6 Months'
+    querytype: -1
+    savedqueryid: '9818766e-7172-4d59-9279-013835c3decd'
+  -
+    name: 'Contacts: Influenced Deals That We Won'
+    description: Key contacts who influenced deals that have been won in the last 12 months.
+    querytype: -1
+    savedqueryid: '0a8fa653-4147-4282-bf6b-168cfa839803'
+  -
+    name: Quick Find Marketing List Members
+    querytype: 32
+    savedqueryid: 'afdb8a51-9681-4cc9-aaa4-29449e5bc9e1'
+  -
+    name: Selected Contacts Campaigns
+    description: Selected Contacts for Campaigns and Quick Campaigns.
+    querytype: -1
+    savedqueryid: '38962192-31ff-46fc-9ac3-2db0a7d9dc7c'
+  -
+    name: 'VOC FY24 - MRR > 100 + EN'
+    description: 'view for the intial survey 1 test: MRR greater than 100 + language is not french'
+    querytype: -1
+    savedqueryid: 'd2392d0f-125b-ef11-bfe3-6045bdcd5e2a'
+  -
+    name: Contacts BulkOperation View
+    description: Display Contacts BulkOperation View
+    querytype: 2
+    savedqueryid: '14ea1914-0e2c-4918-8eca-60930324f18f'
+  -
+    name: Contacts Mobile Client Draft View
+    querytype: 32768
+    savedqueryid: 'fe7c9f99-efe8-44dc-9191-619492401b0c'
+  -
+    name: My Connections
+    description: Shows all active instances of the contact that the current user is connected to via an active connection.
+    querytype: -1
+    savedqueryid: 'ab582fb0-a846-453e-ad88-77f75ce91264'
+  -
+    name: My key contacts
+    description: Key contacts of my accounts
+    querytype: -1
+    savedqueryid: '9732bf0e-7f5e-f011-877a-7c1e5206727f'
+  -
+    name: My Outlook Contacts
+    description: Contacts Syncing to Outlook
+    querytype: 131072
+    savedqueryid: '58dc4bee-60b7-4a84-987f-800296b71404'
+  -
+    name: Contacts Lookup View
+    querytype: 64
+    savedqueryid: 'a2d479c5-53e3-4c69-addd-802327e67a0d'
+  -
+    name: All Contacts
+    querytype: -1
+    savedqueryid: '0d5d377b-5e7c-47b5-bab1-a5cb8b4ac105'
+  -
+    name: Inactive Members
+    querytype: 32
+    savedqueryid: '09963269-65e7-4f70-963f-a61ee495e705'
+  -
+    name: 'Contacts: No Campaign Activities in Last 3 Months'
+    querytype: -1
+    savedqueryid: '927e6cd8-b3ed-4c20-a154-b8bd8a86d172'
+  -
+    name: Active Members
+    querytype: 32
+    savedqueryid: '33a05713-9d37-4ce8-b41f-bc515f426271'
+  -
+    name: 'Contact De-Dup lookup display'
+    description: Get the parent customer and email address for the specified contact
+    querytype: 2048
+    savedqueryid: 'c14e0638-4996-4720-97cd-c58f0df74220'
+  -
+    name: 'Contact multi-line lookup display'
+    description: Get the email address and phone number for the specified contact
+    querytype: 2048
+    savedqueryid: 'c14e0638-4996-4720-97cd-c58f0df74228'
+  -
+    name: Contact List Members View
+    description: Displays contact information in the Members subgrid of Marketing Lists.
+    querytype: 2
+    savedqueryid: '58fb20ff-d5be-406f-908e-c777e9dedf5f'
+  -
+    name: My Contacts
+    description: Contacts owned by me
+    querytype: 8192
+    savedqueryid: '65d2cba8-eeda-4419-b03b-d9c2d8272e51'
+  -
+    name: 'Contacts: Responded to Campaigns in Last 6 Months'
+    querytype: -1
+    savedqueryid: '9c241a33-ca0b-4e50-ae92-db780d5b2a12'
+  -
+    name: All Members
+    querytype: 32
+    savedqueryid: '2f0d0ede-d356-4b1e-83bd-e978f10e3eeb'
+  -
+    name: Excluded Contacts Campaigns
+    description: Excluded Contacts for Campaigns and Quick Campaigns.
+    querytype: -1
+    savedqueryid: '69103b65-f27e-45ce-a69c-eb1a7c805a45'
+  -
+    name: Active Contacts Subgrid View
+    description: Displays the Name and Email of active contacts.
+    querytype: -1
+    savedqueryid: '73bc2d9b-4e0e-424c-8839-ed59d6817e3a'
+  -
+    name: Quick Find Active Contacts
+    querytype: 4
+    savedqueryid: '8df19b44-a073-40c3-9d6d-ee1355d8c4ba'
+  -
+    name: Entitlement Contacts
+    querytype: 2
+    savedqueryid: 'eda26f1e-dbcc-40ad-91f2-ff2878d1d8d8'
+

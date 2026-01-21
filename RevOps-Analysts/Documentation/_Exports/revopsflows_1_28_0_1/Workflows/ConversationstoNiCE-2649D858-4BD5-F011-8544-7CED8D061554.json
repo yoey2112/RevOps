@@ -1,0 +1,373 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps-2": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_5c996"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_keyvault": {
+        "api": {
+          "name": "shared_keyvault"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedkeyvault_bf42e"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_ab8a2"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "conversation_added_or_modified": {
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "msdyn_ocliveworkitem",
+              "subscriptionRequest/scope": 4
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps-2"
+            }
+          }
+        }
+      },
+      "actions": {
+        "Excluded_Queues": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "queues",
+              "$select": "queueid",
+              "$filter": "name eq 'Sales Outbound' or name eq 'Sales Phone' or name eq 'Billing Phone' or name eq 'Sales Chat' or name eq 'Billing Outbound' or name eq 'Billing'"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {}
+        },
+        "Conversation_in_Excluded_Queue": {
+          "type": "If",
+          "expression": {
+            "and": [
+              {
+                "contains": [
+                  "@string(outputs('Excluded_Queues')?['body/value'])",
+                  "@triggerOutputs()?['body/_msdyn_cdsqueueid_value']"
+                ]
+              }
+            ]
+          },
+          "actions": {
+            "Terminate_-_Conversation_excluded": {
+              "type": "Terminate",
+              "inputs": {
+                "runStatus": "Succeeded"
+              }
+            }
+          },
+          "else": {
+            "actions": {
+              "Get_secret": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "secretName": "DynamicsToNice"
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_keyvault",
+                    "operationId": "GetSecret",
+                    "connectionName": "shared_keyvault"
+                  }
+                }
+              },
+              "Get_Agent": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "entityName": "systemusers",
+                    "recordId": "@triggerOutputs()?['body/_msdyn_activeagentid_value']",
+                    "$select": "systemuserid,internalemailaddress"
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                    "operationId": "GetItem",
+                    "connectionName": "shared_commondataserviceforapps-2"
+                  }
+                },
+                "runAfter": {
+                  "Get_secret": [
+                    "SUCCEEDED"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "185d38f6-13a0-4a8f-b20f-2efe79b2bcab"
+                }
+              },
+              "Get_Customer_(Contact)": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "entityName": "contacts",
+                    "recordId": "@triggerOutputs()?['body/_msdyn_customer_value']"
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                    "operationId": "GetItem",
+                    "connectionName": "shared_commondataserviceforapps-2"
+                  }
+                },
+                "runAfter": {
+                  "Get_secret": [
+                    "SUCCEEDED"
+                  ]
+                }
+              },
+              "Get_Queue": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "entityName": "queues",
+                    "recordId": "@triggerOutputs()?['body/_msdyn_cdsqueueid_value']",
+                    "$select": "queueid,name"
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                    "operationId": "GetItem",
+                    "connectionName": "shared_commondataserviceforapps"
+                  }
+                },
+                "runAfter": {
+                  "Get_secret": [
+                    "SUCCEEDED"
+                  ]
+                }
+              },
+              "Get_Customer_(Account)": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "entityName": "accounts",
+                    "recordId": "@triggerOutputs()?['body/_msdyn_customer_value']"
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                    "operationId": "GetItem",
+                    "connectionName": "shared_commondataserviceforapps-2"
+                  }
+                },
+                "runAfter": {
+                  "Get_secret": [
+                    "SUCCEEDED"
+                  ]
+                }
+              },
+              "Set_conversation": {
+                "type": "SetVariable",
+                "inputs": {
+                  "name": "conversation",
+                  "value": {
+                    "EntityType": "conversation",
+                    "Id": "@triggerOutputs()?['body/msdyn_ocliveworkitemid']",
+                    "Fields": {
+                      "Title": "@triggerOutputs()?['body/msdyn_title']",
+                      "ContactID": "@if(equals(coalesce(triggerOutputs()?['body/_msdyn_customer_value@Microsoft.Dynamics.CRM.lookuplogicalname'], ''), 'contact'), triggerOutputs()?['body/_msdyn_customer_value'], null)",
+                      "CompanyID": "@if(equals(coalesce(triggerOutputs()?['body/_msdyn_customer_value@Microsoft.Dynamics.CRM.lookuplogicalname'], ''), 'account'), triggerOutputs()?['body/_msdyn_customer_value'], null)",
+                      "StatusName": "@triggerOutputs()?['body/statuscode']",
+                      "StateCode": "@triggerOutputs()?['body/statecode']",
+                      "StateName": "@triggerOutputs()?['body/statecode_label']",
+                      "Source": "@triggerOutputs()?['body/msdyn_channel']",
+                      "SourceName": "@triggerOutputs()?['body/msdyn_channel_label']",
+                      "QueueID": "@outputs('Get_Queue')?['body/queueid']",
+                      "QueueName": "@outputs('Get_Queue')?['body/name']",
+                      "CreatedDate": "@triggerOutputs()?['body/msdyn_createdon']",
+                      "LastActivityDate": "@triggerOutputs()?['body/msdyn_modifiedon']",
+                      "ResolvedDateTime": "@triggerOutputs()?['body/msdyn_closedon']",
+                      "CustomerLanguageName": "@coalesce(split(coalesce(triggerOutputs()?['body/_msdyn_customerlanguageid_value@OData.Community.Display.V1.FormattedValue'], ''), ' - ')[0], null)",
+                      "AgentId": "@coalesce(outputs('Get_Agent')?['body/systemuserid'], null)",
+                      "AgentEmail": "@coalesce(outputs('Get_Agent')?['body/internalemailaddress'], null)",
+                      "HandleTimeInSeconds": "@triggerOutputs()?['body/msdyn_conversationhandletimeinseconds']",
+                      "HoldTimeInSeconds": "@triggerOutputs()?['body/msdyn_conversationholdtimeinseconds']",
+                      "QueueDelayTime": "@triggerOutputs()?['body/msdyn_conversationfirstwaittimeinseconds']",
+                      "IsAbandoned": "@triggerOutputs()?['body/msdyn_isabandoned']",
+                      "HandledShort": "@if(less(coalesce(triggerOutputs()?['body/msdyn_conversationhandletimeinseconds'], 0), 120), 1, 0)",
+                      "HandledLong": "@if(greaterOrEquals(coalesce(triggerOutputs()?['body/msdyn_conversationhandletimeinseconds'], 0), 120), 1, 0)"
+                    }
+                  }
+                },
+                "runAfter": {
+                  "Get_Agent": [
+                    "SUCCEEDED"
+                  ],
+                  "Get_Queue": [
+                    "SUCCEEDED",
+                    "FAILED"
+                  ],
+                  "Get_Customer_(Contact)": [
+                    "SUCCEEDED",
+                    "FAILED"
+                  ],
+                  "Get_Customer_(Account)": [
+                    "SUCCEEDED",
+                    "FAILED"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "def3c72d-4773-4210-be8d-e0292e4b6c43"
+                }
+              },
+              "HTTP_POST_to_test_endpoint": {
+                "type": "Http",
+                "inputs": {
+                  "uri": "https://b7cf3a9aa8e0e08f8e31b55071da7d.f3.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/d43670ba38c74c0da5f22e03444181ac/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=eQ1MXa5tpoResN4P-AcE4sieGe4GYQWV24UMTJ-y-h4",
+                  "method": "POST",
+                  "headers": {
+                    "x-connectionid": "@{outputs('Get_secret')?['body/value']}",
+                    "Content-Type": "application/json",
+                    "Accept": "*/*",
+                    "Accept-Encoding": "gzip, deflate, br",
+                    "Connection": "keep-alive"
+                  },
+                  "body": "@variables('conversation')"
+                },
+                "runAfter": {
+                  "Set_conversation": [
+                    "SUCCEEDED"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "f738500c-fa7d-4e17-87e7-2366f0614f11"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "var_conversation": [
+              "SUCCEEDED"
+            ]
+          }
+        },
+        "Filter_array_-_Queues": {
+          "type": "Query",
+          "inputs": {
+            "from": "@outputs('Excluded_Queues')?['body/value']",
+            "where": "@equals(item()?['queueid'],triggerOutputs()?['body/_msdyn_cdsqueueid_value'])"
+          },
+          "runAfter": {
+            "Excluded_Queues": [
+              "SUCCEEDED"
+            ]
+          }
+        },
+        "Terminate": {
+          "type": "Terminate",
+          "inputs": {
+            "runStatus": "Succeeded"
+          },
+          "runAfter": {
+            "Conversation_in_Excluded_Queue": [
+              "SUCCEEDED"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d713da30-f51d-41c2-af84-150f6378ac16"
+          }
+        },
+        "HTTP_POST_to_NiCE": {
+          "type": "Http",
+          "inputs": {
+            "uri": "https://nicedatabridgewebappdev.azurewebsites.net/api/v1/ticketprocess",
+            "method": "POST",
+            "headers": {
+              "x-connectionid": "@{outputs('Get_secret')?['body/value']}",
+              "Content-Type": "application/json",
+              "Accept": "*/*",
+              "Accept-Encoding": "gzip, deflate, br",
+              "Connection": "keep-alive"
+            },
+            "body": "@variables('conversation')"
+          },
+          "runAfter": {
+            "Terminate": [
+              "SUCCEEDED"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f738500c-fa7d-4e17-87e7-2366f0614f11"
+          }
+        },
+        "List_conversations": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "msdyn_ocliveworkitems",
+              "$top": 1
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps-2"
+            }
+          },
+          "runAfter": {
+            "HTTP_POST_to_NiCE": [
+              "SUCCEEDED"
+            ]
+          }
+        },
+        "var_conversation": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "conversation",
+                "type": "object"
+              }
+            ]
+          },
+          "runAfter": {
+            "Filter_array_-_Queues": [
+              "SUCCEEDED"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ea778ece-62c3-4e57-a6af-9e8ff7e70db8"
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

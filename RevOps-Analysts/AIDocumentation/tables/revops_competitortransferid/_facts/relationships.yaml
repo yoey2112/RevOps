@@ -1,0 +1,102 @@
+relationships:
+  -
+    schemaname: revops_competitortransferid_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_competitortransferid
+  -
+    schemaname: revops_competitortransferid_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_competitortransferid
+  -
+    schemaname: revops_competitortransferid_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_competitortransferid
+  -
+    schemaname: revops_competitortransferid_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_competitortransferid
+  -
+    schemaname: revops_competitortransferid_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_competitortransferid
+  -
+    schemaname: revops_competitortransferid_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_competitortransferid
+  -
+    schemaname: revops_competitortransferid_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_competitortransferid
+  -
+    schemaname: revops_competitortransferid_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_competitortransferid
+  -
+    schemaname: revops_competitortransferid_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_competitortransferid
+  -
+    schemaname: revops_competitortransferid_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: revops_competitortransferid
+  -
+    schemaname: revops_competitortransferid_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: revops_competitortransferid
+  -
+    schemaname: revops_competitortransferid_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_competitortransferid
+  -
+    schemaname: revops_transfer_competitorid_revops_competitortransferid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: revops_competitortransferid
+  -
+    schemaname: lk_revops_competitortransferid_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_competitortransferid
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_competitortransferid_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_competitortransferid
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_competitortransferid_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_competitortransferid
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_competitortransferid_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_competitortransferid
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_competitortransferid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_competitortransferid
+    referencedtablelogicalname: organization
+  -
+    schemaname: revops_competitortransferid_competitor_competitor
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_competitortransferid
+    referencedtablelogicalname: competitor
+  -
+    schemaname: revops_competitortransferid_region_msdyn_region
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_competitortransferid
+    referencedtablelogicalname: msdyn_region
+

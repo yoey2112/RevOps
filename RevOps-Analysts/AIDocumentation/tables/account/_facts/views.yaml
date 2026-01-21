@@ -1,0 +1,144 @@
+views:
+  -
+    name: Account Advanced Find View
+    querytype: 1
+    savedqueryid: '00000000-0000-0000-00aa-000000666000'
+  -
+    name: My Active Accounts
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001001'
+  -
+    name: Active Accounts
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001002'
+  -
+    name: Inactive Accounts
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001031'
+  -
+    name: Account Associated View
+    description: 'Displays information about related accounts in the detail form of any associated account record. This view is in the Sub-Accounts side tab.'
+    querytype: 2
+    savedqueryid: '00000000-0000-0000-00aa-000010001200'
+  -
+    name: Customers
+    description: Active Customers that are not vendors
+    querytype: -1
+    savedqueryid: 'c56204af-fad5-eb11-b1bb-000d3a6ccb88'
+  -
+    name: Selected Accounts Campaigns
+    description: Selected Accounts for Campaigns and Quick Campaigns.
+    querytype: -1
+    savedqueryid: 'd15e48f6-e8fe-e811-8165-000d3af92c6e'
+  -
+    name: Account BulkOperation View
+    description: Display Accounts for BulkOperation View
+    querytype: 2
+    savedqueryid: '59e57080-0cc2-e211-9b83-00155d89b902'
+  -
+    name: Accounts I Follow
+    description: Accounts that you follow.
+    querytype: -1
+    savedqueryid: '61273827-328e-e011-95ae-00155d9cfa02'
+  -
+    name: Accounts Being Followed
+    description: Accounts being followed.
+    querytype: -1
+    savedqueryid: '61273827-328e-e011-95ae-00155d9cfa03'
+  -
+    name: Customers
+    querytype: -1
+    savedqueryid: '4203fcf9-3c56-e411-80ca-00155db9b402'
+  -
+    name: Vendors and Suppliers
+    querytype: -1
+    savedqueryid: 'cbe2bfd8-3d56-e411-80ca-00155db9b402'
+  -
+    name: Vendors
+    description: View to see all Vendor accounts
+    querytype: -1
+    savedqueryid: '5c14d244-d307-ef11-9f8a-002248d5a732'
+  -
+    name: My Active Accounts by Relationship
+    querytype: -1
+    savedqueryid: '4bfea08c-9a4d-e611-80fc-0024e84720c6'
+  -
+    name: Account List Member View
+    description: Displays information about related accounts in the Members subgrid of the Marketing Lists.
+    querytype: 2
+    savedqueryid: '38a21ffb-4e32-4038-beb9-03172a0dd034'
+  -
+    name: 'Accounts: Responded to Campaigns in Last 6 Months'
+    querytype: -1
+    savedqueryid: '49fb9771-09e1-4e70-b193-198752493577'
+  -
+    name: All Members
+    querytype: 32
+    savedqueryid: '51de84dd-732f-440f-a506-26123a19ab50'
+  -
+    name: All Accounts
+    querytype: -1
+    savedqueryid: '65ffaf9a-e8c5-432d-860b-32f841b00d87'
+  -
+    name: My Accounts
+    description: Accounts owned by me
+    querytype: 8192
+    savedqueryid: '31089fd8-596a-47be-9c9c-3ff82c7a8f8c'
+  -
+    name: Quick Find Marketing List Members
+    querytype: 32
+    savedqueryid: '4d149ed9-12f1-4cd3-8427-418674f21bed'
+  -
+    name: Quick Find Active Accounts
+    querytype: 4
+    savedqueryid: '2d1187c4-23fe-4bb5-9647-43bb1c6ddbd1'
+  -
+    name: Account names list
+    querytype: 64
+    savedqueryid: '199a7fea-93b3-47c8-b950-4b6d60b2c955'
+  -
+    name: Active Members
+    querytype: 32
+    savedqueryid: 'a424ac61-bec9-48b0-a3e0-4bb903bd186e'
+  -
+    name: Inactive Members
+    querytype: 32
+    savedqueryid: 'd9c57fee-71ad-48e2-a17b-4ebbd01ec328'
+  -
+    name: My Connections
+    description: Shows all active instances of the account that the current user is connected to via an active connection.
+    querytype: -1
+    savedqueryid: 'd234426e-1f37-4944-9255-50e19b541c4c'
+  -
+    name: 'Account De-dup lookup display'
+    description: Get the city and state for the specified account
+    querytype: 2048
+    savedqueryid: 'f9e54d49-0c76-4cbd-979b-5fe94b496be0'
+  -
+    name: 'Account multi-line lookup display'
+    description: Get the email address and phone number for the specified account
+    querytype: 2048
+    savedqueryid: 'f9e54d49-0c76-4cbd-979b-5fe94b496beb'
+  -
+    name: 'Accounts: No Orders in Last 6 Months'
+    querytype: -1
+    savedqueryid: 'c147f1f7-1d78-4d10-85bf-7e03b79f74fa'
+  -
+    name: 'Accounts: Influenced Deals That We Won'
+    description: Key accounts that influenced deals that have been won in the last 12 months.
+    querytype: -1
+    savedqueryid: '15c63745-0a6e-4322-8416-a62c84d90279'
+  -
+    name: 'Accounts: No Campaign Activities in Last 3 Months'
+    querytype: -1
+    savedqueryid: 'cfbcd7af-aee5-4e45-8ecc-c040d4020581'
+  -
+    name: Account Lookup View
+    querytype: 64
+    savedqueryid: 'a9af0ab8-861d-4cfa-92a5-c6281fed7fab'
+  -
+    name: Excluded Accounts Campaigns
+    description: Excluded Accounts for Campaigns and Quick Campaigns.
+    querytype: -1
+    savedqueryid: '7de498c2-508f-49a4-b2e8-d550d5b1b9ee'
+

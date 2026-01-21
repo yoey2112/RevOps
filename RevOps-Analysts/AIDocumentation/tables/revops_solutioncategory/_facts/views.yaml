@@ -1,0 +1,31 @@
+views:
+  -
+    name: Solution Categories
+    description: All active Solution Categories
+    querytype: 8192
+    savedqueryid: '19529f63-a322-ef11-840b-000d3af430c4'
+  -
+    name: Solution Category Lookup View
+    querytype: 64
+    savedqueryid: 'c14cd2c3-6ce3-4b8c-ac4a-202c088b63c2'
+  -
+    name: Solution Category Associated View
+    querytype: 2
+    savedqueryid: '3d61410a-468a-4e8f-91a8-389355fd64ec'
+  -
+    name: Solution Category Advanced Find View
+    querytype: 1
+    savedqueryid: '43492e47-27a7-44ec-a0bc-67e170990c93'
+  -
+    name: Inactive Solution Categories
+    querytype: -1
+    savedqueryid: 'fc0bf040-f43b-4dd5-af02-74066c68a478'
+  -
+    name: Quick Find Active Solution Categories
+    querytype: 4
+    savedqueryid: '6bd934fd-5477-4af3-bb27-8994002d5a60'
+  -
+    name: Active Solution Categories
+    querytype: -1
+    savedqueryid: 'b4c444bc-0324-4f70-826d-e08ac05606e4'
+

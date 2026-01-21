@@ -1,0 +1,31 @@
+views:
+  -
+    name: Customer feedback surveys response
+    description: All active Customer feedback surveys response
+    querytype: 8192
+    savedqueryid: 'b19041a3-018a-ef11-8a6a-0022483c3bc7'
+  -
+    name: Customer feedback survey response Lookup View
+    querytype: 64
+    savedqueryid: '1328333a-f789-4384-b6eb-1eef73708e91'
+  -
+    name: Customer feedback survey response Advanced Find View
+    querytype: 1
+    savedqueryid: 'c38208e4-8e17-4b2b-a942-1f3449045871'
+  -
+    name: Customer feedback survey response Associated View
+    querytype: 2
+    savedqueryid: 'd37375f2-e5ed-4d5a-8bed-765248b14b88'
+  -
+    name: Quick Find Active Customer feedback surveys response
+    querytype: 4
+    savedqueryid: 'f0663401-c06e-4f6d-9002-a2f3ebf9eaf3'
+  -
+    name: Inactive Customer feedback surveys response
+    querytype: -1
+    savedqueryid: 'd94c8bf3-02c8-4753-a3a8-a4a20af99a17'
+  -
+    name: Active Customer feedback surveys response
+    querytype: -1
+    savedqueryid: '86f14c68-2cc9-46ec-87ba-db5b928a5456'
+

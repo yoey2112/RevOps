@@ -1,0 +1,117 @@
+TITLE
+=====
+RevOps - Queues Component Index
+
+PURPOSE
+-------
+Quick reference index of all Queues components in this folder.
+
+COMPONENTS
+----------
+- -01fd31ba265e4d82a61829c93d5b4eca-1- : Queue: <01fd31ba265e4d82a61829c93d5b4eca_1>
+- -06b3487241954cda8393d3c970544f13-1- : Queue: <06b3487241954cda8393d3c970544f13_1>
+- -0b4b99ff67e845db99df046d028d32a4-1- : Queue: <0b4b99ff67e845db99df046d028d32a4_1>
+- -0bacc33ebe844b85a72e05b86f8fed21-1- : Queue: <0bacc33ebe844b85a72e05b86f8fed21_1>
+- -167b4f324df242ddbfa32d04ba9355a9-1- : Queue: <167b4f324df242ddbfa32d04ba9355a9_1>
+- -1e7960d3570d4105be9e9698908e57bf-1- : Queue: <1e7960d3570d4105be9e9698908e57bf_1>
+- -24ef7cf2b498f011b41c002248b081f9-1- : Queue: <24ef7cf2b498f011b41c002248b081f9_1>
+- -26e5dd400d074b4d987e67b8386c963c-1- : Queue: <26e5dd400d074b4d987e67b8386c963c_1>
+- -28a698ab538140259f9f748ab25bd150-1- : Queue: <28a698ab538140259f9f748ab25bd150_1>
+- -3eb6ce5fe12f4c6bbe4cd34789e2a7ad-1- : Queue: <3eb6ce5fe12f4c6bbe4cd34789e2a7ad_1>
+- -3ebcb28158e840d594e78dabd4dab93b-1- : Queue: <3ebcb28158e840d594e78dabd4dab93b_1>
+- -4cc6cbc791a3416a958b746c568ff794-1- : Queue: <4cc6cbc791a3416a958b746c568ff794_1>
+- -4cfb7bca768542298b6586b9803c2c8f-1- : Queue: <4cfb7bca768542298b6586b9803c2c8f_1>
+- -51ccbc28b7bd4a6b94eae81b1541083d-1- : Queue: <51ccbc28b7bd4a6b94eae81b1541083d_1>
+- -5dd00fa390f2402e87017894c508a9a7-1- : Queue: <5dd00fa390f2402e87017894c508a9a7_1>
+- -6f87ac140fcbf01185447ced8d3654cb-1- : Queue: <6f87ac140fcbf01185447ced8d3654cb_1>
+- -712282464520f011998a002248b1d6cf-1- : Queue: <712282464520f011998a002248b1d6cf_1>
+- -8edaadf90800f011bae36045bd605559-1- : Queue: <8edaadf90800f011bae36045bd605559_1>
+- -94a034358e86490eb5bfe1e7bdfb6ea2-1- : Queue: <94a034358e86490eb5bfe1e7bdfb6ea2_1>
+- -972b85112bf343319da681e806f24a5c-1- : Queue: <972b85112bf343319da681e806f24a5c_1>
+- -995a90413eb6431e8067bd2a72ec7c77-1- : Queue: <995a90413eb6431e8067bd2a72ec7c77_1>
+- -9c942d2eb2dd4e38a7d621a3b1503ac2-1- : Queue: <9c942d2eb2dd4e38a7d621a3b1503ac2_1>
+- -9ce42f69bd484a62a630963d8e50221c-1- : Queue: <9ce42f69bd484a62a630963d8e50221c_1>
+- -aab5ac628320410a90cbc5a55f6b3b8b-1- : Queue: <aab5ac628320410a90cbc5a55f6b3b8b_1>
+- -ade72ef964e04307aaee678565a4a16b-1- : Queue: <ade72ef964e04307aaee678565a4a16b_1>
+- -advisors-isv- : Queue: <Advisors / ISV>
+- -afa11375edd44be79c7efba89217c9d7-1- : Queue: <afa11375edd44be79c7efba89217c9d7_1>
+- -b3415a98b91ff01199890022483dedd6-1- : Queue: <b3415a98b91ff01199890022483dedd6_1>
+- -b4c89ad2f4caf01185447ced8d3654cb-1- : Queue: <b4c89ad2f4caf01185447ced8d3654cb_1>
+- -ba-pod- : Queue: <BA pod>
+- -bizdev- : Queue: <BizDev>
+- -c0c5d3a7e6b6456da40de5bb800a57c3-1- : Queue: <c0c5d3a7e6b6456da40de5bb800a57c3_1>
+- -c2- : Queue: <C2>
+- -canada- : Queue: <Canada>
+- -cb34a52deb33456b9015e320f1302ff3-1- : Queue: <cb34a52deb33456b9015e320f1302ff3_1>
+- -ce1004038fca4d2da4d6d273fa8427f4-1- : Queue: <ce1004038fca4d2da4d6d273fa8427f4_1>
+- -cfd2ff947e3a4383b78ba134ed93d386-1- : Queue: <cfd2ff947e3a4383b78ba134ed93d386_1>
+- -cloud-infrastructure-services- : Queue: <Cloud Infrastructure & Services>
+- -cloud-support- : Queue: <Cloud Support>
+- -cloudpbx-pod- : Queue: <CloudPBX pod>
+- -cst- : Queue: <CST>
+- -d0505ed83703f011bae30022483cf35f-1- : Queue: <d0505ed83703f011bae30022483cf35f_1>
+- -d36c9d9bdfd9467dabbcbdbd8ba4cd63-1- : Queue: <d36c9d9bdfd9467dabbcbdbd8ba4cd63_1>
+- -d4adffea79cf48c6a89de931370b3c13-1- : Queue: <d4adffea79cf48c6a89de931370b3c13_1>
+- -d514df595ed3484b9d41572976dac638-1- : Queue: <d514df595ed3484b9d41572976dac638_1>
+- -ddb58302677947668d9cd3a358d70d37-1- : Queue: <ddb58302677947668d9cd3a358d70d37_1>
+- -development- : Queue: <Development>
+- -direct- : Queue: <Direct>
+- -f4e36f57cb5d4712a4da716563aff7c1-1- : Queue: <f4e36f57cb5d4712a4da716563aff7c1_1>
+- -fb410c26d0804309a602d0d827a4fcec-1- : Queue: <fb410c26d0804309a602d0d827a4fcec_1>
+- -finance- : Queue: <Finance>
+- -human-resources- : Queue: <Human Resources>
+- -level-3s- : Queue: <Level 3s>
+- -m365-hex-pod- : Queue: <M365 / HEX pod>
+- -m365-hex-qm- : Queue: <M365 / Hex QM>
+- -marketing- : Queue: <Marketing>
+- -mwh- : Queue: <MWH>
+- -mwh-cloud- : Queue: <MWH Cloud>
+- -online-backup- : Queue: <Online Backup>
+- -operations- : Queue: <Operations>
+- -pod-chargers- : Queue: <POD - Chargers>
+- -products- : Queue: <Products>
+- -s-curit- : Queue: <Sécurité>
+- -sales- : Queue: <Sales>
+- -sbc-pod- : Queue: <SBC Pod>
+- -sdrs- : Queue: <SDRs>
+- -sherweb- : Queue: <Sherweb>
+- -sherweb-prod- : Queue: <sherweb-prod>
+- -sherweb-uk- : Queue: <Sherweb - UK>
+- -sme-bdm- : Queue: <SME/BDM>
+- -sw-assignaccount- : Queue: <SW-AssignAccount>
+- -sw-crmadministration- : Queue: <SW-CRMAdministration>
+- -sw-export- : Queue: <SW-Export>
+- -sw-gdc-pa- : Queue: <SW-GDC/PA>
+- -sw-marketingcreative- : Queue: <SW-MarketingCreative>
+- -sw-marketingevents- : Queue: <SW-MarketingEvents>
+- -sw-marketinggtm- : Queue: <SW-MarketingGTM>
+- -sw-partnersalesmanager- : Queue: <SW-PartnerSalesManager>
+- -sw-presales- : Queue: <SW-Presales>
+- -sw-presalesmanager- : Queue: <SW-PresalesManager>
+- -sw-productspecialist- : Queue: <SW-ProductSpecialist>
+- -sw-rc-bd- : Queue: <SW-RC/BD>
+- -sw-rc-p- : Queue: <SW-RC/P>
+- -sw-salesoperations- : Queue: <SW-SalesOperations>
+- -team-executives- : Queue: <Team Executives>
+- -team-marketing- : Queue: <Team Marketing>
+- -team-product- : Queue: <Team Product>
+- -team-sales-longueuil- : Queue: <Team Sales Longueuil>
+- -team-voip- : Queue: <Team VOIP>
+- -technical-support- : Queue: <Technical Support>
+- -us- : Queue: <US>
+- -z-old-pod-council-b- : Queue: <z_[OLD]POD - Council B>
+- -z-old-pod-council-e- : Queue: <z_[OLD]POD - Council E>
+- -z-old-pod-council-n- : Queue: <z_[OLD]POD - Council N>
+- -z-old-pod-council-o- : Queue: <z[OLD]POD - Council O>
+- -z-old-pod-council-s- : Queue: <z_[OLD] POD - Council S>
+- -z-old-pod-council-w- : Queue: <z_[OLD]POD - Council W>
+- -z-old-sw-gdc-ep- : Queue: <z_[OLD] SW-GDC/EP>
+
+HOW TO USE
+----------
+Each component has its own subfolder containing:
+- README.md and README.txt for overview
+- _facts/*.yaml for structured metadata
+- Additional documentation files as needed
+
+For detailed information about a specific component, navigate to its subfolder.

@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '0f2473c5-239a-ee11-be37-000d3af4f717'
+name: 'Lead - Resolve Account by Domain'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

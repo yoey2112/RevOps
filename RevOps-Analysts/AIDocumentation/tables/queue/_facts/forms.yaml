@@ -1,0 +1,304 @@
+forms:
+  -
+    name: Omnichannel queue
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: SUMMARY
+        name: queue information
+        tab: general
+        visible: true
+      -
+        label: Section
+        name: general_section_4
+        tab: general
+        visible: true
+    fields:
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdyn_priority
+        field: msdyn_priority
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdyn_queuetype
+        field: msdyn_queuetype
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_queuelookupvisible
+        field: revops_queuelookupvisible
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_defaultsendingemail
+        field: revops_defaultsendingemail
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdyn_isomnichannelqueue
+        field: msdyn_isomnichannelqueue
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: queueviewtype
+        field: queueviewtype
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_incomingemailfilteringmethod
+        field: incomingemailfilteringmethod
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_queueviewtype
+        field: queueviewtype
+    description: A form for this entity.
+    tabs:
+      -
+        label: Summary
+        name: general
+        visible: true
+        expanded: true
+    field_count: 10
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Queue Information
+        name: queue information
+        tab: general
+        visible: true
+      -
+        label: Incoming Email
+        name: incoming email
+        tab: general
+        visible: true
+      -
+        label: Email Configuration
+        name: email configuration
+        tab: general
+        visible: true
+    fields:
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: emailaddress
+        field: emailaddress
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: incoming email
+        tab: general
+        disabled: false
+        visible: true
+        control_id: incomingemailfilteringmethod
+        field: incomingemailfilteringmethod
+      -
+        section: email configuration
+        tab: general
+        disabled: false
+        visible: true
+        control_id: defaultmailbox
+        field: defaultmailbox
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Main
+  -
+    name: Queue
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: SUMMARY
+        name: queue information
+        tab: general
+        visible: true
+      -
+        label: EMAIL SETTINGS
+        name: incoming email
+        tab: general
+        visible: true
+      -
+        label: ''
+        name: RecordCreationAndUpdateRule
+        tab: general
+        visible: true
+      -
+        label: ''
+        name: QueueItems
+        tab: general
+        visible: true
+      -
+        label: ''
+        name: QueueMembers
+        tab: general
+        visible: false
+      -
+        label: Members
+        name: QueueMembersNoRecord
+        tab: general
+        visible: false
+    fields:
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: queueviewtype
+        field: queueviewtype
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: emailaddress
+        field: emailaddress
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_emailqueue
+        field: revops_emailqueue
+      -
+        section: queue information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_parentadvancedqueue
+        field: revops_parentadvancedqueue
+      -
+        section: incoming email
+        tab: general
+        disabled: false
+        visible: true
+        control_id: incomingemailfilteringmethod
+        field: incomingemailfilteringmethod
+      -
+        section: incoming email
+        tab: general
+        disabled: false
+        visible: true
+        control_id: defaultmailbox
+        field: defaultmailbox
+      -
+        section: incoming email
+        tab: general
+        disabled: false
+        visible: true
+        control_id: emailsignature
+        field: emailsignature
+    description: Updated default Queue form.
+    tabs:
+      -
+        label: Summary
+        name: general
+        visible: true
+        expanded: true
+    field_count: 10
+    type_name: Main
+  -
+    name: Queue Hub Form
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Section
+        name: tab_2_section_1
+        tab: UsersTab
+        visible: true
+    fields:
+    description: null
+    tabs:
+      -
+        label: Tab
+        name: UsersTab
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Main
+

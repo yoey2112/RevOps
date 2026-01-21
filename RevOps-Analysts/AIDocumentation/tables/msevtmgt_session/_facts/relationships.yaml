@@ -1,0 +1,367 @@
+relationships:
+  -
+    schemaname: msevtmgt_session_ActivityPointers
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_msfp_surveyinvites
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyinvite
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_msdyn_ocsessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocsession
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_adx_portalcomments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_portalcomment
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_msfp_surveyresponses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_msdyn_bookingalerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_bookingalert
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_msfp_alerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_alert
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_adx_inviteredemptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_inviteredemption
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_chats
+    relationshiptype: OneToMany
+    referencingtablelogicalname: chat
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_msdyn_copilottranscripts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_copilottranscript
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_msdyn_ocliveworkitems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_Appointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_Emails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_Faxes
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fax
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_Letters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: letter
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_PhoneCalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_Tasks
+    relationshiptype: OneToMany
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_RecurringAppointmentMasters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: recurringappointmentmaster
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_SocialActivities
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialactivity
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_Annotations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_ServiceAppointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: serviceappointment
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_msevtmgt_session_msevtmgt_speakerengagement_Session
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_speakerengagement
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_msevtmgt_roomreservation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_roomreservation
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_waitlistitem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_waitlistitem
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_msdyn_ocvoicemails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocvoicemail
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_li_inmails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_inmail
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_li_messages
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_message
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_li_pointdrivepresentationvieweds
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_pointdrivepresentationviewed
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_revops_demos
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_demo
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_revops_onboardingcalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_revops_cumulussignups
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_adx_alertsubscriptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_alertsubscription
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_msdyn_comments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_comment
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_revops_businessreviews
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_businessreview
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_revops_cadencecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_revops_inpersonmeetings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_inpersonmeeting
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_msdyn_approvals
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_approval
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_msevtmgt_checkin_SessionAttended
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_checkin
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_msevtmgt_sessionregistration
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_sessionregistration
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: lk_msevtmgt_session_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msevtmgt_session_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msevtmgt_session_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msevtmgt_session_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_msevtmgt_session
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_msevtmgt_session
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_msevtmgt_session
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_msevtmgt_session
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: msevtmgt_event_msevtmgt_session_Event
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: msevtmgt_event
+  -
+    schemaname: msevtmgt_EventTeamMember_msevtmgt_Session_Producer
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: msevtmgt_eventteammember
+  -
+    schemaname: msevtmgt_msevtmgt_webinartype_msevtmgt_session_WebinarType
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: msevtmgt_webinartype
+  -
+    schemaname: msevtmgt_pass_msevtmgt_session_PassSessions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: msevtmgt_pass
+  -
+    schemaname: msevtmgt_session_building
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: msevtmgt_building
+  -
+    schemaname: msevtmgt_session_layout
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: msevtmgt_layout
+  -
+    schemaname: msevtmgt_session_room
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: msevtmgt_room
+  -
+    schemaname: msevtmgt_speaker_msevtmgt_Session
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: msevtmgt_speaker
+  -
+    schemaname: msevtmgt_systemuser_msevtmgt_session_streamowner
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: msevtmgt_Venue_msevtmgt_Session_Venue
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: msevtmgt_venue
+  -
+    schemaname: msevtmgt_webinarconfiguration_msevtmgt_session_Web
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: msevtmgt_webinarconfiguration
+  -
+    schemaname: msevtmgt_eventregistration_msevtmgt_session
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msevtmgt_eventregistration
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_msevtmgt_session_msevtmgt_teammember
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msevtmgt_eventteammember
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_pass_msevtmgt_session
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msevtmgt_pass
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_msevtmgt_attendeepass
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: msevtmgt_attendeepass
+  -
+    schemaname: msevtmgt_session_msevtmgt_session
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_session_msevtmgt_speaker
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msevtmgt_session
+    referencedtablelogicalname: msevtmgt_speaker
+  -
+    schemaname: msevtmgt_sessiontrack_msevtmgt_session
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msevtmgt_sessiontrack
+    referencedtablelogicalname: msevtmgt_session
+

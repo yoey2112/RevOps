@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 4
+    uniquename: OmniChannelEngagementHub
+    appmoduleid: 'd83ac8b0-9c23-ef11-840b-002248b1d264'
+    name: Omnichannel for Customer Service
+

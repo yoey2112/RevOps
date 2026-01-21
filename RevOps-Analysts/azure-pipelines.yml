@@ -1,0 +1,155 @@
+trigger: none
+
+schedules:
+  - cron: "0 2 * * 0"
+    displayName: Weekly DocGen and SharePoint Sync
+    branches:
+      include:
+        - main
+    always: true
+
+variables:
+  - group: DocGen-Prod
+  - group: 'Service Principal RevOps-ADO-DocSync-1'
+  - name: DOCS_ROOT
+    value: 'AIDocumentation'
+  - name: SITE_HOSTNAME
+    value: 'sherwebcorp.sharepoint.com'
+  - name: SITE_PATH
+    value: '/sites/T_FN_Revops'
+  - name: LIBRARY_NAME
+    value: 'RevOps Docs Mirror'
+
+stages:
+  - stage: DocGeneration
+    displayName: 'Generate Documentation'
+    pool:
+      vmImage: ubuntu-latest
+    jobs:
+      - job: DocGen
+        displayName: 'Run DocGen'
+        steps:
+          - checkout: self
+            persistCredentials: true
+
+          - bash: |
+              set -euo pipefail
+
+              echo "pwsh version:"
+              pwsh -NoLogo -NoProfile -Command '$PSVersionTable.PSVersion'
+
+              echo "Git HEAD commit:"
+              git rev-parse HEAD
+              git log -1 --oneline
+
+              echo "Show file paths we will parse:"
+              ls -la "$(Build.SourcesDirectory)/pipelines/scripts/DocGen"
+
+              echo "----"
+              echo "Printing DocGen.Schemas.psm1 (first 140 lines with numbers):"
+              nl -ba "$(Build.SourcesDirectory)/pipelines/scripts/DocGen/DocGen.Schemas.psm1" | sed -n '1,140p'
+
+              echo "----"
+              echo "Printing DocGen.Schemas.psm1 (lines 45-95):"
+              nl -ba "$(Build.SourcesDirectory)/pipelines/scripts/DocGen/DocGen.Schemas.psm1" | sed -n '45,95p'
+
+              echo "----"
+              echo "File encoding check (shows CRLF or odd chars):"
+              file -b "$(Build.SourcesDirectory)/pipelines/scripts/DocGen/DocGen.Schemas.psm1" || true
+
+              echo "----"
+              echo "Byte dump (first 800 bytes):"
+              python3 -c "import pathlib; p=pathlib.Path('pipelines/scripts/DocGen/DocGen.Schemas.psm1'); d=p.read_bytes(); print(d[:800])"
+
+              echo "Parse preflight (pinpoint exact file/line/col if parser fails)..."
+              pwsh -NoLogo -NoProfile -NonInteractive -Command '
+                $ErrorActionPreference="Stop";
+                function ParseCheck([string]$path){
+                  $tokens=$null; $errs=$null;
+                  [System.Management.Automation.Language.Parser]::ParseFile($path,[ref]$tokens,[ref]$errs) | Out-Null;
+                  if($errs -and $errs.Count -gt 0){
+                    foreach($e in $errs){
+                      Write-Host ("PARSE ERROR: " + $e.Message);
+                      Write-Host ("  File: " + $e.Extent.File);
+                      Write-Host ("  Line: " + $e.Extent.StartLineNumber + " Col: " + $e.Extent.StartColumnNumber);
+                      Write-Host ("  Text: " + $e.Extent.Text);
+                      Write-Host "";
+                    }
+                    exit 1
+                  } else {
+                    Write-Host ("Parse OK: " + $path)
+                  }
+                }
+
+                $root=$env:BUILD_SOURCESDIRECTORY;
+                ParseCheck (Join-Path $root "pipelines/scripts/Run-DocUpdate.ps1");
+                ParseCheck (Join-Path $root "pipelines/scripts/DocGen/DocGen.psm1");
+                ParseCheck (Join-Path $root "pipelines/scripts/DocGen/DocGen.Schemas.psm1");
+              '
+
+              echo "Running DocGen (with detailed error dump)..."
+              pwsh -NoLogo -NoProfile -NonInteractive -Command '
+                $ErrorActionPreference="Stop";
+                $ErrorView="NormalView";
+                try {
+                  & (Join-Path $env:BUILD_SOURCESDIRECTORY "pipelines/scripts/Run-DocUpdate.ps1") -Mode nightly
+                } catch {
+                  Write-Host "=== DOCGEN FAILED ===";
+                  Write-Host ("Message: " + $_.Exception.Message);
+                  if($_.InvocationInfo){
+                    Write-Host "Position:";
+                    Write-Host $_.InvocationInfo.PositionMessage;
+                    Write-Host ("Script: " + $_.InvocationInfo.ScriptName);
+                    Write-Host ("Line: " + $_.InvocationInfo.ScriptLineNumber);
+                    Write-Host ("Offset: " + $_.InvocationInfo.OffsetInLine);
+                  }
+                  Write-Host "Full error:";
+                  $_ | Format-List * -Force | Out-String | Write-Host
+                  exit 1
+                }
+              '
+            displayName: Run DocGen (Weekly) with file dump + preflight
+            env:
+              SYSTEM_ACCESSTOKEN: $(System.AccessToken)
+              REPO_ROOT: $(Build.SourcesDirectory)
+              ADO_PROJECT_NAME: RevOps - Analysts
+              ADO_REPO_NAME: RevOps - Analysts
+              ADO_DEFAULT_BRANCH: main
+              DOC_BRANCH_PREFIX: aidocs
+              DOC_CONFIDENCE_THRESHOLD: "0.80"
+              DOC_DEVCORE_SOLUTIONS: "revops*"
+              DV_ORG_URL: $(DvOrgUrl)
+              DV_TENANT_ID: $(DvTenantId)
+              DV_CLIENT_ID: $(DvClientId)
+              DV_CLIENT_SECRET: $(DvClientSecret)
+              DV_API_VERSION: $(DvApiVersion)
+
+  - stage: SharePointSync
+    displayName: 'Sync to SharePoint'
+    dependsOn: DocGeneration
+    condition: succeeded()
+    pool:
+      vmImage: windows-latest
+    jobs:
+      - job: SyncDocs
+        displayName: 'Mirror AIDocumentation to SharePoint'
+        steps:
+          - checkout: self
+            fetchDepth: 1
+
+          - powershell: |
+              $ErrorActionPreference = 'Stop'
+              Write-Host "PowerShell version: $($PSVersionTable.PSVersion)"
+            displayName: 'Sanity check'
+
+          - powershell: |
+              $ErrorActionPreference = 'Stop'
+              ./pipelines/scripts/Mirror-AIDocumentation-ToSharePoint.ps1 `
+                -TenantId "$(SP_TENANT_ID)" `
+                -ClientId "$(SP_CLIENT_ID)" `
+                -ClientSecret "$(SP_CLIENT_SECRET)" `
+                -SiteHostname "$(SITE_HOSTNAME)" `
+                -SitePath "$(SITE_PATH)" `
+                -LibraryName "$(LIBRARY_NAME)" `
+                -DocsRoot "$(DOCS_ROOT)"
+            displayName: 'Mirror /AIDocumentation to SharePoint Library'

@@ -1,0 +1,114 @@
+forms:
+  -
+    name: Sync Error
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ''
+        name: SYNCERROR_INFORMATION
+        tab: General_Tab
+        visible: true
+      -
+        label: ''
+        name: ''
+        tab: General_Tab
+        visible: true
+      -
+        label: ''
+        name: ''
+        tab: Details
+        visible: true
+    fields:
+      -
+        section: SYNCERROR_INFORMATION
+        tab: General_Tab
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: SYNCERROR_INFORMATION
+        tab: General_Tab
+        disabled: false
+        visible: true
+        control_id: action
+        field: action
+      -
+        section: SYNCERROR_INFORMATION
+        tab: General_Tab
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: SYNCERROR_INFORMATION
+        tab: General_Tab
+        disabled: false
+        visible: true
+        control_id: errortype
+        field: errortype
+      -
+        section: SYNCERROR_INFORMATION
+        tab: General_Tab
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: ''
+        tab: General_Tab
+        disabled: false
+        visible: true
+        control_id: errortime
+        field: errortime
+      -
+        section: ''
+        tab: General_Tab
+        disabled: false
+        visible: true
+        control_id: errormessage
+        field: errormessage
+      -
+        section: ''
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: errorcode
+        field: errorcode
+      -
+        section: ''
+        tab: Details
+        disabled: false
+        visible: true
+        control_id: errordetail
+        field: errordetail
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Default Sync Error form.
+    tabs:
+      -
+        label: General
+        name: General_Tab
+        visible: true
+        expanded: true
+      -
+        label: Details
+        name: Details
+        visible: true
+        expanded: false
+    field_count: 11
+    type_name: Main
+

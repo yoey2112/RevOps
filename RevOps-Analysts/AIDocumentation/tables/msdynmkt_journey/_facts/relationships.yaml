@@ -1,0 +1,182 @@
+relationships:
+  -
+    schemaname: msdynmkt_journey_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_journey_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_journey_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_journey_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_journey_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_journey_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_journey_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_journey_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_journey_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_experiment_journeyId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_experiment
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_journey_journeyevent
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_journeyevent
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_journey_journeyoptimizationcount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_journeyoptimizationcount
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_journeydependency_journey
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_journeydependency
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_JourneyWorkflowMapping_JourneyId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_journeyworkflowmapping
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_segmentusage_JourneyId_lookup
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_segmentusage
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_segmentusage_msdynmkt_journey_dependententityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_segmentusage
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_journey_msdynmkt_journeyrunparameter_JourneyId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_journeyrunparameter
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_task_JourneyId_msdynmkt_journey
+    relationshiptype: OneToMany
+    referencingtablelogicalname: task
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_phonecall_JourneyId_msdynmkt_journey
+    relationshiptype: OneToMany
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_opportunity_JourneyId_msdynmkt_journey
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_msdynmkt_journey_msdynmkt_teamsengagement_engagementjourney
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_teamsengagement
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_msdynmkt_journey_lead_customerjourneyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_journey_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_marketingformsubmission_customerjourneyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_msdynmkt_journey_contact_customerjourneyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: lk_msdynmkt_journey_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_journey
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_journey_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_journey
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_journey_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_journey
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_journey_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_journey
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_msdynmkt_journey
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_journey
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_msdynmkt_journey
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_journey
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_msdynmkt_journey
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_journey
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_msdynmkt_journey
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_journey
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: msdynmkt_journey_to_template
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_journey
+    referencedtablelogicalname: msdynmkt_journeytemplate
+  -
+    schemaname: msdynmkt_msdynmkt_journey_DoubleOptInCompliance_ms
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_journey
+    referencedtablelogicalname: msdynmkt_compliancesettings4
+  -
+    schemaname: revops_msdynmkt_journey_parentcampaignid_campaig
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_journey
+    referencedtablelogicalname: campaign
+

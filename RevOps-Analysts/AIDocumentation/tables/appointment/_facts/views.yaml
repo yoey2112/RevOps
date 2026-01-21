@@ -1,0 +1,75 @@
+views:
+  -
+    name: Appointment Tooltips view
+    description: Appointment Tooltips view
+    querytype: -1
+    savedqueryid: '903ae6d0-c966-eb11-89ff-000d3a272cbe'
+  -
+    name: Recent Appointments in which I am a Participant
+    description: Recently changed appointments where I am a participant
+    querytype: 8192
+    savedqueryid: '271c8528-c8d8-4868-a822-013128e34834'
+  -
+    name: Appointment Advanced Find View
+    querytype: 1
+    savedqueryid: '56339419-5fae-4048-80b5-3278e420d375'
+  -
+    name: Appointment Lookup View
+    querytype: 64
+    savedqueryid: 'de2e5182-841c-43bf-8d21-46cfff36f706'
+  -
+    name: Appointment Associated View
+    querytype: 2
+    savedqueryid: 'd0479533-05a4-4bd3-affc-5767379a344d'
+  -
+    name: Quick Find All Appointments
+    querytype: 4
+    savedqueryid: '2aeb5a3e-cb75-4734-8d0c-6873fa8d5126'
+  -
+    name: My Draft Appointments
+    description: Displays Draft Appointments the current user owns.
+    querytype: -1
+    savedqueryid: '116ae565-8b51-4bdf-a51b-76a3b7cec9d6'
+  -
+    name: 'Manager - Due appointments [This month]'
+    querytype: -1
+    savedqueryid: '29949fd2-d9a1-ef11-a72d-7c1e520634d5'
+  -
+    name: All Appointments
+    description: All Appointments (to be used asynchronously).
+    querytype: 1024
+    savedqueryid: 'bc829d10-a49d-409d-9a61-918fedadbad9'
+  -
+    name: My Completed Appointments
+    description: Displays completed Appointments the current user owns (to be used asynchronously).
+    querytype: 1024
+    savedqueryid: '9c3008e6-0fc1-4b8c-98b1-a4859efd1333'
+  -
+    name: Appointment Mobile Client Draft View
+    querytype: 32768
+    savedqueryid: 'd84914e6-f2ad-494f-b069-b28bb9ce4822'
+  -
+    name: All Appointments
+    querytype: -1
+    savedqueryid: '5b5f75f6-b585-4212-952a-b4cbb64e2627'
+  -
+    name: My Appointments
+    description: Displays Appointments the current user owns.
+    querytype: -1
+    savedqueryid: '606eea12-0c33-47d3-96e1-ba1529ee8205'
+  -
+    name: My Completed Appointments
+    description: Displays completed Appointments the current user owns.
+    querytype: -1
+    savedqueryid: '939d9171-7353-4dc7-804e-cbb31a2b2448'
+  -
+    name: My Appointments
+    description: Displays Appointments the current user owns (to be used asynchronously).
+    querytype: 1024
+    savedqueryid: '840dc305-b29c-4639-bd7a-dc43b489c084'
+  -
+    name: My Appointments
+    description: Appointments Synced To Outlook
+    querytype: 131072
+    savedqueryid: '3b5046c0-70a1-44c4-be6e-e6f553e7ee7c'
+

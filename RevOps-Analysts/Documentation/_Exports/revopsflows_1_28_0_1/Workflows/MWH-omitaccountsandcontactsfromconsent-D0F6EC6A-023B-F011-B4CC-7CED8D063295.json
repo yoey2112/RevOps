@@ -1,0 +1,207 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_bccd6"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "22d2d1b5-61f6-4164-9610-c95a529846ce"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "revops_cumulusaccount",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filterexpression": "revops_subsidiaryid eq '5ca542ba-cab8-460c-8fd9-cb656e17e4fe' and revops_clientnode eq 'Sherweb Ireland'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Delay": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "d543fc8a-5897-4545-ad66-3ed4259f22c1"
+          },
+          "type": "Wait",
+          "inputs": {
+            "interval": {
+              "count": 169,
+              "unit": "Second"
+            }
+          }
+        },
+        "list_contacts": {
+          "runAfter": {
+            "Condition": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "73d119c4-037b-44f3-b88b-e92cd8c3da9f"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "contacts",
+              "$select": "contactid, donotbulkemail, donotemail",
+              "$filter": "_parentcustomerid_value eq @{outputs('get_account')?['body/accountid']}"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "get_account": {
+          "runAfter": {
+            "Delay": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ddae0eb8-cb8c-4c77-9057-4a338858833a"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "accounts",
+              "recordId": "@triggerOutputs()?['body/_revops_account_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Apply_to_each": {
+          "foreach": "@outputs('list_contacts')?['body/value']",
+          "actions": {
+            "update_contacts": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "f32d2092-fd90-4704-a61f-69cfcfd53660"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateOnlyRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "contacts",
+                  "recordId": "@items('Apply_to_each')?['contactid']",
+                  "item/donotbulkemail": "True",
+                  "item/donotemail": "True",
+                  "item/donotphone": "True"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "list_contacts": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4633efba-76ee-4b76-a609-c838eb429086"
+          },
+          "type": "Foreach"
+        },
+        "update_account": {
+          "runAfter": {
+            "Apply_to_each": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "731b06d8-cc87-4691-b1e5-861493b50c8c"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "UpdateOnlyRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "accounts",
+              "recordId": "@outputs('get_account')?['body/accountid']",
+              "item/donotbulkemail": "True",
+              "item/donotemail": "True",
+              "item/donotphone": "True"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Condition": {
+          "actions": {
+            "Terminate": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "567c891c-b571-4893-bf72-0e7505e0da07"
+              },
+              "type": "Terminate",
+              "inputs": {
+                "runStatus": "Cancelled"
+              }
+            }
+          },
+          "runAfter": {
+            "get_account": [
+              "Succeeded"
+            ]
+          },
+          "expression": {
+            "contains": [
+              "@outputs('get_account')?['body/revops_domain']",
+              "sherweb.com"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "99e7e6e6-976d-466d-ba47-76f6fc9b3664"
+          },
+          "type": "If"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

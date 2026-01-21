@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: 'df670963-ac82-f011-b4cb-7c1e5206727f'
+name: Account Ownership change notification
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

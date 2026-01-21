@@ -1,0 +1,197 @@
+relationships:
+  -
+    schemaname: revops_solution_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solution_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solution_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solution_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solution_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solution_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solution_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solution_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solution_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solution_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_accountproductsummary_solutionid_revops_solution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountproductsummary
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_accountsolutionsummary_solution_revops_solution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountsolutionsummary
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_demo_solution_revops_solution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_demo
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_goal_solution_revops_solution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_incident_solution_revops_solution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_opportunity_solution_revops_solution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_opportunitysolution_solution_revops_solution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_pricingrequest_solution_revops_solution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_productsummary_solutionid_revops_solution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solution_campaign
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solution_Product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: product
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solution_proposedsolution_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solution_solution_Lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solution_solutioncategory
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_solutioncategory
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solutionsummary_solution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_solutionsummary
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_subsolution_parentsolution_revops_solution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_subsolution
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_smeengagement_solution_revops_solution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_smeengagement
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_msdyn_project_solution_revops_solution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_project
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_accountpotentialtechstack_solution_revops_solution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: lk_revops_solution_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solution
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_solution_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solution
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_solution_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solution
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_solution_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solution
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_solution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solution
+    referencedtablelogicalname: organization
+  -
+    schemaname: revops_practice_solutions
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solution
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_solution_projectmanager_systemuser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solution
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_solution_solutioncategory_revops_solutioncategory
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solution
+    referencedtablelogicalname: revops_solutioncategory
+  -
+    schemaname: revops_solution_vendor_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solution
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_solution_revops_solutioncategory_revops_solutioncategory
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: revops_solutioncategory
+    referencedtablelogicalname: revops_solution
+

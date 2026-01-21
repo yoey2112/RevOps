@@ -1,0 +1,549 @@
+flows:
+  d6284b19-ef3e-ef11-a316-6045bdcd5ea7:
+    uses_tables:
+      -
+        table: account
+        table_name: account
+        via_action: List_Accounts
+    flow_name: 'Enrich Account - Scheduled'
+    triggers_on_tables:
+  5e0d76fd-ba26-f011-8c4e-7ced8d04f24d:
+    uses_tables:
+      -
+        table: account
+        table_name: account
+        via_action: List_Accounts
+    flow_name: 'Contact - Resolve Account by Domain (select row)'
+    triggers_on_tables:
+  1d01247d-8de8-ef11-be21-000d3a09d51b:
+    uses_tables:
+      -
+        table: account
+        table_name: account
+        via_action: List_Accounts
+    flow_name: 'Contact - Resolve Account by Domain'
+    triggers_on_tables:
+  82f50409-87c4-ee11-9079-000d3a09cf8e:
+    uses_tables:
+      -
+        table: revops_accountpotentialtechstack
+        table_name: revops_accountpotentialtechstack
+        via_action: List_Account_Potential
+    flow_name: 'Opportunity - Create Opportunities from Account Potential'
+    triggers_on_tables:
+  26f2d8ab-5e99-ee11-be37-000d3af4f266:
+    uses_tables:
+      -
+        table: revops_stateorprovince
+        table_name: revops_stateorprovince
+        via_action: List_Territory_Region_3
+      -
+        table: revops_country
+        table_name: revops_country
+        via_action: List_Territory_Region_3
+      -
+        table: revops_territoryregion
+        table_name: revops_territoryregion
+        via_action: List_Territory_Region_3
+    flow_name: 'Lead - Set Territory on Lead'
+    triggers_on_tables:
+  0b2432b9-e03e-ef11-a316-6045bdcd5ea7:
+    uses_tables:
+      -
+        table: contact
+        table_name: contact
+        via_action: List_Contacts
+    flow_name: 'Enrich Contact - Scheduled'
+    triggers_on_tables:
+  5ba51fee-143a-ef11-a316-6045bdcd5dde:
+    uses_tables:
+      -
+        table: revops_cumulusaccount
+        table_name: revops_cumulusaccount
+        via_action: List_Partner_Accounts
+      -
+        table: account
+        table_name: account
+        via_action: List_Partner_Accounts
+    flow_name: 'Account - Backfill Channel & Relationship'
+    triggers_on_tables:
+  2002e152-9539-ef11-a316-6045bdcd5dde:
+    uses_tables:
+      -
+        table: opportunity
+        table_name: opportunity
+        via_action: List_Opps
+    flow_name: 'Account - Set Cumulus Account created on Opps'
+    triggers_on_tables:
+  1b9a722f-a343-ef11-a316-0022486df470:
+    uses_tables:
+      -
+        table: contact
+        table_name: contact
+        via_action: List_Contacts
+    flow_name: 'Enrich Contact - Manual'
+    triggers_on_tables:
+  cb799a23-777b-ef11-ac20-6045bdf9e493:
+    uses_tables:
+      -
+        table: revops_cumulusaccount
+        table_name: revops_cumulusaccount
+        via_action: List_Accounts
+      -
+        table: account
+        table_name: account
+        via_action: List_Accounts
+    flow_name: Fix Primary Contact on Account
+    triggers_on_tables:
+  9208db01-c38b-ef11-8a6a-7c1e524071bb:
+    uses_tables:
+      -
+        table: account
+        table_name: account
+        via_action: List_Accounts
+    flow_name: Fix Accounts without Name
+    triggers_on_tables:
+  4c3cce43-8ed5-ee11-904c-002248d5a732:
+    uses_tables:
+      -
+        table: contact
+        table_name: contact
+        via_action: List_Opportunities_with_Matching_Domain
+      -
+        table: opportunity
+        table_name: opportunity
+        via_action: List_Opportunities_with_Matching_Domain
+    flow_name: Account Created in Cumulus
+    triggers_on_tables:
+  c6c03138-6102-ef11-9f8a-002248d5a732:
+    uses_tables:
+      -
+        table: contact
+        table_name: contact
+        via_action: List_Contacts
+      -
+        table: account
+        table_name: account
+        via_action: List_Contacts
+    flow_name: 'Lead - Resolve contact by email'
+    triggers_on_tables:
+  05e173a0-6274-ef11-ac20-000d3af47275:
+    uses_tables:
+      -
+        table: contact
+        table_name: contact
+        via_action: List_Cumulus_Users
+      -
+        table: revops_cumulususer
+        table_name: revops_cumulususer
+        via_action: List_Cumulus_Users
+    flow_name: Link Cumulus User Contact to Account
+    triggers_on_tables:
+  8ff7c609-5fd4-ee11-904c-002248d5a27a:
+    uses_tables:
+      -
+        table: revops_stateorprovince
+        table_name: revops_stateorprovince
+        via_action: List_Territory_Region
+      -
+        table: revops_country
+        table_name: revops_country
+        via_action: List_Territory_Region
+      -
+        table: revops_territoryregion
+        table_name: revops_territoryregion
+        via_action: List_Territory_Region
+    flow_name: 'Account - Set Territory on Account'
+    triggers_on_tables:
+  0f2473c5-239a-ee11-be37-000d3af4f717:
+    uses_tables:
+      -
+        table: account
+        table_name: account
+        via_action: List_Accounts
+    flow_name: 'Lead - Resolve Account by Domain'
+    triggers_on_tables:
+  b3ce4fa1-dc75-ef11-ac20-7c1e520630e3:
+    uses_tables:
+      -
+        table: account
+        table_name: account
+        via_action: List_Accounts
+    flow_name: 'Enrich Account - Manual'
+    triggers_on_tables:
+  77b3076c-1200-f011-bae3-7c1e52409afe:
+    uses_tables:
+      -
+        table: contact
+        table_name: contact
+        via_action: 'List_rows_-_Contacts'
+    flow_name: '[Events] - Scanned Import connection to event and more'
+    triggers_on_tables:
+tables:
+  opportunity:
+    used_by_flows:
+      -
+        id: '2002e152-9539-ef11-a316-6045bdcd5dde'
+        action_path: List_Opps
+        action: List_Opps
+        edge_type: flow_uses_table
+        name: 'Account - Set Cumulus Account created on Opps'
+      -
+        id: '4c3cce43-8ed5-ee11-904c-002248d5a732'
+        action_path: Matching_Opportunities/false/List_Opportunities_with_Matching_Domain
+        action: List_Opportunities_with_Matching_Domain
+        edge_type: flow_uses_table
+        name: Account Created in Cumulus
+    triggered_flows:
+    table_name: opportunity
+    used_by_plugins:
+  phonecall:
+    used_by_flows:
+    triggered_flows:
+    table_name: phonecall
+    used_by_plugins:
+      -
+        id: 'a1da7847-b1bd-411d-ba0d-14fc3f831836'
+        stage: 20
+        step: 'sherweb.plugin.PhoneCall: Update of phonecall'
+        edge_type: plugin_registered_on_table
+        name: sherweb.plugin
+  revops_cumulusaccount:
+    used_by_flows:
+      -
+        id: 'cb799a23-777b-ef11-ac20-6045bdf9e493'
+        action_path: List_Accounts
+        action: List_Accounts
+        edge_type: flow_uses_table
+        name: Fix Primary Contact on Account
+      -
+        id: '5ba51fee-143a-ef11-a316-6045bdcd5dde'
+        action_path: Do_until/List_Partner_Accounts
+        action: List_Partner_Accounts
+        edge_type: flow_uses_table
+        name: 'Account - Backfill Channel & Relationship'
+    triggered_flows:
+    table_name: revops_cumulusaccount
+    used_by_plugins:
+  incident:
+    used_by_flows:
+    triggered_flows:
+    table_name: incident
+    used_by_plugins:
+      -
+        id: '2b6e064b-56da-4614-9a02-9596ee147cf0'
+        stage: 20
+        step: 'RevOps.Plugins.CaseOwnerStamper.CaseOwnerStamper: Update of incident'
+        edge_type: plugin_registered_on_table
+        name: RevOps.Plugins.CaseOwnerStamper
+  revops_accountpotentialtechstack:
+    used_by_flows:
+      -
+        id: '82f50409-87c4-ee11-9079-000d3a09cf8e'
+        action_path: List_Account_Potential
+        action: List_Account_Potential
+        edge_type: flow_uses_table
+        name: 'Opportunity - Create Opportunities from Account Potential'
+    triggered_flows:
+    table_name: revops_accountpotentialtechstack
+    used_by_plugins:
+  adx_portalcomment:
+    used_by_flows:
+    triggered_flows:
+    table_name: adx_portalcomment
+    used_by_plugins:
+      -
+        id: 'cbd5a8f0-9111-40b8-81b2-1f6f870ea8f3'
+        stage: 40
+        step: 'RevOps.Plugins.CaseCustomerRespondedSetter.CaseCustomerRespondedSetter: Create of adx_portalcomment'
+        edge_type: plugin_registered_on_table
+        name: RevOps.Plugins.CaseCustomerRespondedSetter
+      -
+        id: 'f5a10995-357b-4b89-af82-ad395cd4357e'
+        stage: 40
+        step: 'RevOps.Plugins.CaseInteractionStamper.CaseInteractionStamper: Create of adx_portalcomment'
+        edge_type: plugin_registered_on_table
+        name: RevOps.Plugins.CaseInteractionStamper
+  revops_stateorprovince:
+    used_by_flows:
+      -
+        id: '26f2d8ab-5e99-ee11-be37-000d3af4f266'
+        action_path: Validate_Lead_Account/Validate_Account_Territory/false/Condition/List_Territory_Region_3
+        action: List_Territory_Region_3
+        edge_type: flow_uses_table
+        name: 'Lead - Set Territory on Lead'
+      -
+        id: '8ff7c609-5fd4-ee11-904c-002248d5a27a'
+        action_path: Validate_Country/List_Territory_Region
+        action: List_Territory_Region
+        edge_type: flow_uses_table
+        name: 'Account - Set Territory on Account'
+    triggered_flows:
+    table_name: revops_stateorprovince
+    used_by_plugins:
+  revops_country:
+    used_by_flows:
+      -
+        id: '26f2d8ab-5e99-ee11-be37-000d3af4f266'
+        action_path: Validate_Lead_Account/Validate_Account_Territory/false/Condition/List_Territory_Region_3
+        action: List_Territory_Region_3
+        edge_type: flow_uses_table
+        name: 'Lead - Set Territory on Lead'
+      -
+        id: '8ff7c609-5fd4-ee11-904c-002248d5a27a'
+        action_path: Validate_Country/List_Territory_Region
+        action: List_Territory_Region
+        edge_type: flow_uses_table
+        name: 'Account - Set Territory on Account'
+    triggered_flows:
+    table_name: revops_country
+    used_by_plugins:
+  account:
+    used_by_flows:
+      -
+        id: 'cb799a23-777b-ef11-ac20-6045bdf9e493'
+        action_path: List_Accounts
+        action: List_Accounts
+        edge_type: flow_uses_table
+        name: Fix Primary Contact on Account
+      -
+        id: '5e0d76fd-ba26-f011-8c4e-7ced8d04f24d'
+        action_path: List_Accounts
+        action: List_Accounts
+        edge_type: flow_uses_table
+        name: 'Contact - Resolve Account by Domain (select row)'
+      -
+        id: '1d01247d-8de8-ef11-be21-000d3a09d51b'
+        action_path: List_Accounts
+        action: List_Accounts
+        edge_type: flow_uses_table
+        name: 'Contact - Resolve Account by Domain'
+      -
+        id: '5ba51fee-143a-ef11-a316-6045bdcd5dde'
+        action_path: Do_until/List_Partner_Accounts
+        action: List_Partner_Accounts
+        edge_type: flow_uses_table
+        name: 'Account - Backfill Channel & Relationship'
+      -
+        id: '0f2473c5-239a-ee11-be37-000d3af4f717'
+        action_path: Match_Account_by_Domain/List_Accounts
+        action: List_Accounts
+        edge_type: flow_uses_table
+        name: 'Lead - Resolve Account by Domain'
+      -
+        id: 'c6c03138-6102-ef11-9f8a-002248d5a732'
+        action_path: Match_Contact_by_email/List_Contacts
+        action: List_Contacts
+        edge_type: flow_uses_table
+        name: 'Lead - Resolve contact by email'
+      -
+        id: 'b3ce4fa1-dc75-ef11-ac20-7c1e520630e3'
+        action_path: Do_until/List_Accounts
+        action: List_Accounts
+        edge_type: flow_uses_table
+        name: 'Enrich Account - Manual'
+      -
+        id: 'd6284b19-ef3e-ef11-a316-6045bdcd5ea7'
+        action_path: List_Accounts
+        action: List_Accounts
+        edge_type: flow_uses_table
+        name: 'Enrich Account - Scheduled'
+      -
+        id: '9208db01-c38b-ef11-8a6a-7c1e524071bb'
+        action_path: List_Accounts
+        action: List_Accounts
+        edge_type: flow_uses_table
+        name: Fix Accounts without Name
+    triggered_flows:
+    table_name: account
+    used_by_plugins:
+  msdyn_ocliveworkitem:
+    used_by_flows:
+    triggered_flows:
+    table_name: msdyn_ocliveworkitem
+    used_by_plugins:
+      -
+        id: 'f5a10995-357b-4b89-af82-ad395cd4357e'
+        stage: 40
+        step: 'RevOps.Plugins.CaseInteractionStamper.CaseInteractionStamper: Update of msdyn_ocliveworkitem'
+        edge_type: plugin_registered_on_table
+        name: RevOps.Plugins.CaseInteractionStamper
+  contact:
+    used_by_flows:
+      -
+        id: '77b3076c-1200-f011-bae3-7c1e52409afe'
+        action_path: 'Apply_to_each_Row_from_source_file/List_rows_-_Contacts'
+        action: 'List_rows_-_Contacts'
+        edge_type: flow_uses_table
+        name: '[Events] - Scanned Import connection to event and more'
+      -
+        id: '05e173a0-6274-ef11-ac20-000d3af47275'
+        action_path: List_Cumulus_Users
+        action: List_Cumulus_Users
+        edge_type: flow_uses_table
+        name: Link Cumulus User Contact to Account
+      -
+        id: 'c6c03138-6102-ef11-9f8a-002248d5a732'
+        action_path: Match_Contact_by_email/List_Contacts
+        action: List_Contacts
+        edge_type: flow_uses_table
+        name: 'Lead - Resolve contact by email'
+      -
+        id: '0b2432b9-e03e-ef11-a316-6045bdcd5ea7'
+        action_path: List_Contacts
+        action: List_Contacts
+        edge_type: flow_uses_table
+        name: 'Enrich Contact - Scheduled'
+      -
+        id: '1b9a722f-a343-ef11-a316-0022486df470'
+        action_path: List_Contacts
+        action: List_Contacts
+        edge_type: flow_uses_table
+        name: 'Enrich Contact - Manual'
+      -
+        id: '4c3cce43-8ed5-ee11-904c-002248d5a732'
+        action_path: Matching_Opportunities/false/List_Opportunities_with_Matching_Domain
+        action: List_Opportunities_with_Matching_Domain
+        edge_type: flow_uses_table
+        name: Account Created in Cumulus
+    triggered_flows:
+    table_name: contact
+    used_by_plugins:
+  email:
+    used_by_flows:
+    triggered_flows:
+    table_name: email
+    used_by_plugins:
+      -
+        id: 'cbd5a8f0-9111-40b8-81b2-1f6f870ea8f3'
+        stage: 40
+        step: 'RevOps.Plugins.CaseCustomerRespondedSetter.CaseCustomerRespondedSetter: Create of email'
+        edge_type: plugin_registered_on_table
+        name: RevOps.Plugins.CaseCustomerRespondedSetter
+      -
+        id: 'cbd5a8f0-9111-40b8-81b2-1f6f870ea8f3'
+        stage: 40
+        step: 'RevOps.Plugins.CaseCustomerRespondedSetter.CaseCustomerRespondedSetter: Update of email'
+        edge_type: plugin_registered_on_table
+        name: RevOps.Plugins.CaseCustomerRespondedSetter
+      -
+        id: 'f5a10995-357b-4b89-af82-ad395cd4357e'
+        stage: 40
+        step: 'RevOps.Plugins.CaseInteractionStamper.CaseInteractionStamper: Create of email'
+        edge_type: plugin_registered_on_table
+        name: RevOps.Plugins.CaseInteractionStamper
+      -
+        id: 'f5a10995-357b-4b89-af82-ad395cd4357e'
+        stage: 40
+        step: 'RevOps.Plugins.CaseInteractionStamper.CaseInteractionStamper: Update of email'
+        edge_type: plugin_registered_on_table
+        name: RevOps.Plugins.CaseInteractionStamper
+      -
+        id: 'db443b24-e527-4701-9122-fe3e1e993779'
+        stage: 20
+        step: 'Email Create - Mark isworkflowcreated from [WF]'
+        edge_type: plugin_registered_on_table
+        name: RevOps.Plugins.EmailWorkflowMarker
+  revops_territoryregion:
+    used_by_flows:
+      -
+        id: '26f2d8ab-5e99-ee11-be37-000d3af4f266'
+        action_path: Validate_Lead_Account/Validate_Account_Territory/false/Condition/List_Territory_Region_3
+        action: List_Territory_Region_3
+        edge_type: flow_uses_table
+        name: 'Lead - Set Territory on Lead'
+      -
+        id: '8ff7c609-5fd4-ee11-904c-002248d5a27a'
+        action_path: Validate_Country/List_Territory_Region
+        action: List_Territory_Region
+        edge_type: flow_uses_table
+        name: 'Account - Set Territory on Account'
+    triggered_flows:
+    table_name: revops_territoryregion
+    used_by_plugins:
+  revops_cumulususer:
+    used_by_flows:
+      -
+        id: '05e173a0-6274-ef11-ac20-000d3af47275'
+        action_path: List_Cumulus_Users
+        action: List_Cumulus_Users
+        edge_type: flow_uses_table
+        name: Link Cumulus User Contact to Account
+    triggered_flows:
+    table_name: revops_cumulususer
+    used_by_plugins:
+plugins:
+  db443b24-e527-4701-9122-fe3e1e993779:
+    plugin_name: RevOps.Plugins.EmailWorkflowMarker
+    registered_on_tables:
+      -
+        stage: 20
+        table: email
+        step: 'Email Create - Mark isworkflowcreated from [WF]'
+        table_name: email
+  f5a10995-357b-4b89-af82-ad395cd4357e:
+    plugin_name: RevOps.Plugins.CaseInteractionStamper
+    registered_on_tables:
+      -
+        stage: 40
+        table: adx_portalcomment
+        step: 'RevOps.Plugins.CaseInteractionStamper.CaseInteractionStamper: Create of adx_portalcomment'
+        table_name: adx_portalcomment
+      -
+        stage: 40
+        table: msdyn_ocliveworkitem
+        step: 'RevOps.Plugins.CaseInteractionStamper.CaseInteractionStamper: Update of msdyn_ocliveworkitem'
+        table_name: msdyn_ocliveworkitem
+      -
+        stage: 40
+        table: email
+        step: 'RevOps.Plugins.CaseInteractionStamper.CaseInteractionStamper: Create of email'
+        table_name: email
+      -
+        stage: 40
+        table: email
+        step: 'RevOps.Plugins.CaseInteractionStamper.CaseInteractionStamper: Update of email'
+        table_name: email
+  cbd5a8f0-9111-40b8-81b2-1f6f870ea8f3:
+    plugin_name: RevOps.Plugins.CaseCustomerRespondedSetter
+    registered_on_tables:
+      -
+        stage: 40
+        table: adx_portalcomment
+        step: 'RevOps.Plugins.CaseCustomerRespondedSetter.CaseCustomerRespondedSetter: Create of adx_portalcomment'
+        table_name: adx_portalcomment
+      -
+        stage: 40
+        table: email
+        step: 'RevOps.Plugins.CaseCustomerRespondedSetter.CaseCustomerRespondedSetter: Create of email'
+        table_name: email
+      -
+        stage: 40
+        table: email
+        step: 'RevOps.Plugins.CaseCustomerRespondedSetter.CaseCustomerRespondedSetter: Update of email'
+        table_name: email
+  a1da7847-b1bd-411d-ba0d-14fc3f831836:
+    plugin_name: sherweb.plugin
+    registered_on_tables:
+      -
+        stage: 20
+        table: phonecall
+        step: 'sherweb.plugin.PhoneCall: Update of phonecall'
+        table_name: phonecall
+  2b6e064b-56da-4614-9a02-9596ee147cf0:
+    plugin_name: RevOps.Plugins.CaseOwnerStamper
+    registered_on_tables:
+      -
+        stage: 20
+        table: incident
+        step: 'RevOps.Plugins.CaseOwnerStamper.CaseOwnerStamper: Update of incident'
+        table_name: incident
+schema_version: 1
+description: 'Reverse dependency index for AI agent queries. Query tables to find connected flows, plugins, etc.'
+generated_utc: '2026-01-18T02:03:32.2131413Z'
+summary:
+  total_flows_with_dependencies: 18
+  total_plugins_with_dependencies: 5
+  total_tables_with_dependencies: 14
+  total_edges: 37
+

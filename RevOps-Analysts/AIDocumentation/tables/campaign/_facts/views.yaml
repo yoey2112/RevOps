@@ -1,0 +1,66 @@
+views:
+  -
+    name: All Campaigns for Current Fiscal Year
+    description: Shows campaigns that are planned for the current fiscal year.
+    querytype: -1
+    savedqueryid: 'c933b407-c568-df11-986c-00155d2e3002'
+  -
+    name: List campaigns
+    querytype: -1
+    savedqueryid: 'fb4cdd59-b169-49d0-85ad-03ed83d5b97f'
+  -
+    name: Campaign Templates
+    querytype: -1
+    savedqueryid: '4ae3ea64-d41f-4faf-baa3-51217aba0bd9'
+  -
+    name: My active Campaigns
+    description: My active Campaigns
+    querytype: 8192
+    savedqueryid: '5a904e4b-4e7a-47b7-8765-5398b9aa2b8d'
+  -
+    name: All Campaigns and Campaign Templates
+    querytype: -1
+    savedqueryid: '8ebce151-8451-490d-a8db-59fff97949e8'
+  -
+    name: Quick Find Campaigns
+    querytype: 4
+    savedqueryid: 'a26c3587-5b94-4a77-9d33-5d75b4c922fe'
+  -
+    name: All Active and ongoing campaigns
+    description: All active campaigns
+    querytype: -1
+    savedqueryid: 'a554fa5c-223e-ef11-a316-6045bdcd5ea7'
+  -
+    name: My Campaigns
+    querytype: -1
+    savedqueryid: '7f68a34b-26f1-430f-b3ef-7079f2925c69'
+  -
+    name: Campaign Lookup View
+    querytype: 64
+    savedqueryid: '0e76dc73-2052-484e-8c00-a760f8d522ec'
+  -
+    name: My Connections
+    description: Shows all instances of the campaign that the current user is connected to via an active connection
+    querytype: -1
+    savedqueryid: '5e586db6-222a-4ea3-8bd0-a85ee0ff52c3'
+  -
+    name: Launched Campaigns
+    querytype: -1
+    savedqueryid: 'e0ae0e28-bae2-41e8-bc76-adc046eb6987'
+  -
+    name: Inactive Campaigns
+    querytype: -1
+    savedqueryid: '9ab56292-e76f-47bd-b79f-b97d8c4762c8'
+  -
+    name: Campaign Associated View
+    querytype: 2
+    savedqueryid: '244af698-f753-48fd-9803-c1939dcf02d1'
+  -
+    name: Non Template Campaigns
+    querytype: 64
+    savedqueryid: '1e66f196-a542-4993-aad3-e6d7bcbdcec8'
+  -
+    name: Campaign Advanced Find View
+    querytype: 1
+    savedqueryid: 'fb9c4222-b591-4c1b-a30c-fef47bd10430'
+

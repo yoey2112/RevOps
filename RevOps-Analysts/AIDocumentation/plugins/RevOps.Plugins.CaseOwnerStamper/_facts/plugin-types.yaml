@@ -1,0 +1,6 @@
+types:
+  -
+    plugintypeid: 'ad6c8d6e-fe5a-4679-a741-6df4771667ee'
+    typename: RevOps.Plugins.CaseOwnerStamper.CaseOwnerStamper
+    name: RevOps.Plugins.CaseOwnerStamper.CaseOwnerStamper
+

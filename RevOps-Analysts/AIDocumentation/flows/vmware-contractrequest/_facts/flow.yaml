@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: 'd3fa82ea-5606-f011-bae2-7c1e5206727f'
+name: VMware_ContractRequest
+category: 5
+type: 1
+statecode: 0
+statuscode: 1
+primaryentity: none
+

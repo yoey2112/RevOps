@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 4
+    uniquename: msdyn_SolutionHealthHub
+    appmoduleid: 'aadf41f6-0020-ef11-840b-6045bd5ea018'
+    name: Solution Health Hub
+

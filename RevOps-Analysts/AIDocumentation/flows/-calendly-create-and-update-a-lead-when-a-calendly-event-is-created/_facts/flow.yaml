@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: 'ea953a71-6ad6-ee11-904c-002248d5a789'
+name: '[Calendly] Create and update a lead when a Calendly event is created'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

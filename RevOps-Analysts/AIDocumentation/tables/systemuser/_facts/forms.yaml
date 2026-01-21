@@ -1,0 +1,1372 @@
+forms:
+  -
+    name: User
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Section
+        name: tab_7_section_1
+        tab: VirtualAgentSummaryTab
+        visible: true
+      -
+        label: Section
+        name: tab_7_section_2
+        tab: VirtualAgentSummaryTab
+        visible: true
+      -
+        label: User Information
+        name: user information_2
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: Mailing Address
+        name: mailing address
+        tab: DETAILS_TAB
+        visible: true
+      -
+        label: Section
+        name: tab_8_section_1
+        tab: VirtualAgentDetailsTab
+        visible: true
+      -
+        label: Client Access License (CAL) Information
+        name: administration
+        tab: ADMINISTRATION_TAB
+        visible: true
+      -
+        label: 'E-mail Access Configuration'
+        name: 'e-mail configuration'
+        tab: ADMINISTRATION_TAB
+        visible: true
+      -
+        label: Account Information
+        name: onpremise account information
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Account Information
+        name: online account information
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: User Information
+        name: user information
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: SOCIAL PANE
+        name: SOCIAL_PANE_TAB
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: ''
+        name: teams information
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: ''
+        name: queue information
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Organization Information
+        name: organization information
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Queue Information
+        name: queue selection
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: General
+        name: urstab_section_general
+        tab: usrstab
+        visible: true
+      -
+        label: Section
+        name: tab_5_section_2
+        tab: usrstab
+        visible: true
+      -
+        label: Section
+        name: tab_5_section_3
+        tab: usrstab
+        visible: true
+      -
+        label: User Details
+        name: tab_6_section_2
+        tab: Omnichannel_TAB
+        visible: true
+      -
+        label: Languages
+        name: Section_Language
+        tab: Omnichannel_TAB
+        visible: true
+      -
+        label: Regions
+        name: Section_Region
+        tab: Omnichannel_TAB
+        visible: true
+      -
+        label: Emergency Call Notifications
+        name: recipientemails_section_3
+        tab: Omnichannel_TAB
+        visible: true
+      -
+        label: Omnichannel Queues
+        name: tab_6_section_5
+        tab: Omnichannel_TAB
+        visible: true
+      -
+        label: Skills Configuration
+        name: SECTION_Skills
+        tab: Omnichannel_TAB
+        visible: true
+      -
+        label: Capacity
+        name: tab_6_section_4
+        tab: Omnichannel_TAB
+        visible: true
+    fields:
+      -
+        section: tab_7_section_1
+        tab: VirtualAgentSummaryTab
+        disabled: false
+        visible: true
+        control_id: fullname
+        field: fullname
+      -
+        section: tab_7_section_1
+        tab: VirtualAgentSummaryTab
+        disabled: false
+        visible: true
+        control_id: msdyn_capacity
+        field: msdyn_capacity
+      -
+        section: tab_7_section_1
+        tab: VirtualAgentSummaryTab
+        disabled: false
+        visible: true
+        control_id: msdyn_botdescription
+        field: msdyn_botdescription
+      -
+        section: user information_2
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: homephone
+        field: homephone
+      -
+        section: user information_2
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: address1_telephone2
+        field: address1_telephone2
+      -
+        section: user information_2
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: personalemailaddress
+        field: personalemailaddress
+      -
+        section: user information_2
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: preferredphonecode
+        field: preferredphonecode
+      -
+        section: user information_2
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: mobilealertemail
+        field: mobilealertemail
+      -
+        section: user information_2
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: address1_telephone3
+        field: address1_telephone3
+      -
+        section: user information_2
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: address1_fax
+        field: address1_fax
+      -
+        section: mailing address
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: preferredaddresscode
+        field: preferredaddresscode
+      -
+        section: mailing address
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: address1_composite
+        field: address1_composite
+      -
+        section: mailing address
+        tab: DETAILS_TAB
+        disabled: false
+        visible: true
+        control_id: address2_composite
+        field: address2_composite
+      -
+        section: tab_8_section_1
+        tab: VirtualAgentDetailsTab
+        disabled: false
+        visible: true
+        control_id: applicationid
+        field: applicationid
+      -
+        section: tab_8_section_1
+        tab: VirtualAgentDetailsTab
+        disabled: false
+        visible: true
+        control_id: azureactivedirectoryobjectid
+        field: azureactivedirectoryobjectid
+      -
+        section: tab_8_section_1
+        tab: VirtualAgentDetailsTab
+        disabled: false
+        visible: true
+        control_id: msdyn_agentType
+        field: msdyn_agentType
+      -
+        section: tab_8_section_1
+        tab: VirtualAgentDetailsTab
+        disabled: false
+        visible: true
+        control_id: msdyn_botapplicationid
+        field: msdyn_botapplicationid
+      -
+        section: tab_8_section_1
+        tab: VirtualAgentDetailsTab
+        disabled: false
+        visible: true
+        control_id: msdyn_botprovider
+        field: msdyn_botprovider
+      -
+        section: administration
+        tab: ADMINISTRATION_TAB
+        disabled: false
+        visible: true
+        control_id: accessmode
+        field: accessmode
+      -
+        section: administration
+        tab: ADMINISTRATION_TAB
+        disabled: false
+        visible: true
+        control_id: caltype
+        field: caltype
+      -
+        section: 'e-mail configuration'
+        tab: ADMINISTRATION_TAB
+        disabled: false
+        visible: true
+        control_id: defaultmailbox
+        field: defaultmailbox
+      -
+        section: onpremise account information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: domainname
+        field: domainname
+      -
+        section: online account information
+        tab: SUMMARY_TAB
+        disabled: true
+        visible: true
+        control_id: windowsliveid
+        field: windowsliveid
+      -
+        section: online account information
+        tab: SUMMARY_TAB
+        disabled: true
+        visible: true
+        control_id: invitestatuscode
+        field: invitestatuscode
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: fullname
+        field: fullname
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: nickname
+        field: nickname
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_salesrole
+        field: revops_salesrole
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: internalemailaddress
+        field: internalemailaddress
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: mobilephone
+        field: mobilephone
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: address1_telephone1
+        field: address1_telephone1
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_schedulingurl
+        field: revops_schedulingurl
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_jobtitle_en
+        field: revops_jobtitle_en
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_jobtitle_fr
+        field: revops_jobtitle_fr
+      -
+        section: organization information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: revops_keepleadownership
+        field: revops_keepleadownership
+      -
+        section: organization information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: territoryid
+        field: territoryid
+      -
+        section: organization information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: businessunitid
+        field: businessunitid
+      -
+        section: organization information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: siteid
+        field: siteid
+      -
+        section: organization information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: parentsystemuserid
+        field: parentsystemuserid
+      -
+        section: queue selection
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: queueid
+        field: queueid
+      -
+        section: urstab_section_general
+        tab: usrstab
+        disabled: false
+        visible: true
+        control_id: address1_latitude
+        field: address1_latitude
+      -
+        section: urstab_section_general
+        tab: usrstab
+        disabled: false
+        visible: true
+        control_id: address1_longitude
+        field: address1_longitude
+      -
+        section: tab_6_section_2
+        tab: Omnichannel_TAB
+        disabled: false
+        visible: true
+        control_id: msdyn_capacity
+        field: msdyn_capacity
+      -
+        section: tab_6_section_2
+        tab: Omnichannel_TAB
+        disabled: false
+        visible: true
+        control_id: default_presence_user
+        field: msdyn_defaultpresenceiduser
+      -
+        section: tab_6_section_2
+        tab: Omnichannel_TAB
+        disabled: false
+        visible: true
+        control_id: msdyn_callforwardingnumber
+        field: msdyn_callforwardingnumber
+      -
+        section: tab_6_section_2
+        tab: Omnichannel_TAB
+        disabled: false
+        visible: true
+        control_id: msdyn_phonenumberid
+        field: msdyn_phonenumberid
+      -
+        section: recipientemails_section_3
+        tab: Omnichannel_TAB
+        disabled: false
+        visible: true
+        control_id: 'msdyn_emergencyemailrecipients '
+        field: msdyn_emergencyemailrecipients
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: footer_isdisabled
+        field: isdisabled
+    description: Updated default User form
+    tabs:
+      -
+        label: Summary
+        name: VirtualAgentSummaryTab
+        visible: false
+        expanded: true
+      -
+        label: Details
+        name: DETAILS_TAB
+        visible: true
+        expanded: true
+      -
+        label: Details
+        name: VirtualAgentDetailsTab
+        visible: false
+        expanded: true
+      -
+        label: Administration
+        name: ADMINISTRATION_TAB
+        visible: true
+        expanded: true
+      -
+        label: Summary
+        name: SUMMARY_TAB
+        visible: true
+        expanded: true
+      -
+        label: Scheduling
+        name: usrstab
+        visible: true
+        expanded: false
+      -
+        label: Omnichannel
+        name: Omnichannel_TAB
+        visible: true
+        expanded: true
+    field_count: 48
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Section
+        name: tab_recordwall_section_1
+        tab: tab_recordwall
+        visible: true
+      -
+        label: Account Information
+        name: onpremise account information
+        tab: general
+        visible: true
+      -
+        label: Account Information
+        name: online account information
+        tab: general
+        visible: true
+      -
+        label: User Information
+        name: user information
+        tab: general
+        visible: true
+      -
+        label: Organization Information
+        name: organization information
+        tab: general
+        visible: true
+      -
+        label: Email Configuration
+        name: email configuration
+        tab: general
+        visible: true
+      -
+        label: Client Access License (CAL) Information
+        name: administration
+        tab: general
+        visible: true
+      -
+        label: Queue Information
+        name: queue selection
+        tab: general
+        visible: true
+      -
+        label: Mailing Address
+        name: mailing address
+        tab: addresses
+        visible: true
+      -
+        label: Other Address
+        name: other address
+        tab: addresses
+        visible: true
+      -
+        label: Address Preference
+        name: address preference
+        tab: addresses
+        visible: true
+    fields:
+      -
+        section: onpremise account information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: domainname
+        field: domainname
+      -
+        section: online account information
+        tab: general
+        disabled: true
+        visible: true
+        control_id: windowsliveid
+        field: windowsliveid
+      -
+        section: online account information
+        tab: general
+        disabled: true
+        visible: true
+        control_id: invitestatuscode
+        field: invitestatuscode
+      -
+        section: user information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: firstname
+        field: firstname
+      -
+        section: user information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_telephone1
+        field: address1_telephone1
+      -
+        section: user information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: lastname
+        field: lastname
+      -
+        section: user information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_telephone2
+        field: address1_telephone2
+      -
+        section: user information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: user information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: homephone
+        field: homephone
+      -
+        section: user information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: internalemailaddress
+        field: internalemailaddress
+      -
+        section: user information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: mobilephone
+        field: mobilephone
+      -
+        section: user information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: personalemailaddress
+        field: personalemailaddress
+      -
+        section: user information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: preferredphonecode
+        field: preferredphonecode
+      -
+        section: user information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: mobilealertemail
+        field: mobilealertemail
+      -
+        section: user information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_telephone3
+        field: address1_telephone3
+      -
+        section: user information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_fax
+        field: address1_fax
+      -
+        section: organization information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: positionid
+        field: positionid
+      -
+        section: organization information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: parentsystemuserid
+        field: parentsystemuserid
+      -
+        section: organization information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: businessunitid
+        field: businessunitid
+      -
+        section: organization information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: territoryid
+        field: territoryid
+      -
+        section: organization information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: siteid
+        field: siteid
+      -
+        section: email configuration
+        tab: general
+        disabled: false
+        visible: true
+        control_id: defaultmailbox
+        field: defaultmailbox
+      -
+        section: administration
+        tab: general
+        disabled: false
+        visible: true
+        control_id: accessmode
+        field: accessmode
+      -
+        section: administration
+        tab: general
+        disabled: false
+        visible: true
+        control_id: caltype
+        field: caltype
+      -
+        section: queue selection
+        tab: general
+        disabled: false
+        visible: true
+        control_id: queueid
+        field: queueid
+      -
+        section: mailing address
+        tab: addresses
+        disabled: false
+        visible: true
+        control_id: address1_line1
+        field: address1_line1
+      -
+        section: mailing address
+        tab: addresses
+        disabled: false
+        visible: true
+        control_id: address1_stateorprovince
+        field: address1_stateorprovince
+      -
+        section: mailing address
+        tab: addresses
+        disabled: false
+        visible: true
+        control_id: address1_line2
+        field: address1_line2
+      -
+        section: mailing address
+        tab: addresses
+        disabled: false
+        visible: true
+        control_id: address1_postalcode
+        field: address1_postalcode
+      -
+        section: mailing address
+        tab: addresses
+        disabled: false
+        visible: true
+        control_id: address1_line3
+        field: address1_line3
+      -
+        section: mailing address
+        tab: addresses
+        disabled: false
+        visible: true
+        control_id: address1_country
+        field: address1_country
+      -
+        section: mailing address
+        tab: addresses
+        disabled: false
+        visible: true
+        control_id: address1_city
+        field: address1_city
+      -
+        section: other address
+        tab: addresses
+        disabled: false
+        visible: true
+        control_id: address2_line1
+        field: address2_line1
+      -
+        section: other address
+        tab: addresses
+        disabled: false
+        visible: true
+        control_id: address2_stateorprovince
+        field: address2_stateorprovince
+      -
+        section: other address
+        tab: addresses
+        disabled: false
+        visible: true
+        control_id: address2_line2
+        field: address2_line2
+      -
+        section: other address
+        tab: addresses
+        disabled: false
+        visible: true
+        control_id: address2_postalcode
+        field: address2_postalcode
+      -
+        section: other address
+        tab: addresses
+        disabled: false
+        visible: true
+        control_id: address2_line3
+        field: address2_line3
+      -
+        section: other address
+        tab: addresses
+        disabled: false
+        visible: true
+        control_id: address2_country
+        field: address2_country
+      -
+        section: other address
+        tab: addresses
+        disabled: false
+        visible: true
+        control_id: address2_city
+        field: address2_city
+      -
+        section: address preference
+        tab: addresses
+        disabled: false
+        visible: true
+        control_id: preferredaddresscode
+        field: preferredaddresscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: footer_isdisabled
+        field: isdisabled
+    description: A form for this entity.
+    tabs:
+      -
+        label: What's New
+        name: tab_recordwall
+        visible: true
+        expanded: false
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Addresses
+        name: addresses
+        visible: true
+        expanded: true
+    field_count: 41
+    type_name: Main
+  -
+    name: User Hierarchy Tile Form
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Information
+        name: user tile
+        tab: hierarchy
+        visible: true
+    fields:
+      -
+        section: user tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: user tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: businessunitid
+        field: businessunitid
+      -
+        section: user tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: internalemailaddress
+        field: internalemailaddress
+      -
+        section: user tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: mobilephone
+        field: mobilephone
+      -
+        section: user tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: fullname
+        field: fullname
+    description: This is the user hierarchy definition.
+    tabs:
+      -
+        label: Hierarchy
+        name: hierarchy
+        visible: true
+        expanded: true
+    field_count: 5
+    type_name: Quick View
+  -
+    name: Information
+    is_active: true
+    type: 1
+    sections:
+      -
+        label: Section 1
+        name: section 1
+        tab: general
+        visible: true
+      -
+        label: Organization Info
+        name: organization info
+        tab: general
+        visible: true
+    fields:
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: firstname
+        field: firstname
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_telephone1
+        field: address1_telephone1
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: lastname
+        field: lastname
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_telephone2
+        field: address1_telephone2
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: homephone
+        field: homephone
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: internalemailaddress
+        field: internalemailaddress
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: mobilephone
+        field: mobilephone
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: personalemailaddress
+        field: personalemailaddress
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: preferredphonecode
+        field: preferredphonecode
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: mobilealertemail
+        field: mobilealertemail
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_telephone3
+        field: address1_telephone3
+      -
+        section: organization info
+        tab: general
+        disabled: false
+        visible: true
+        control_id: domainname
+        field: domainname
+      -
+        section: organization info
+        tab: general
+        disabled: false
+        visible: true
+        control_id: businessunitid
+        field: businessunitid
+      -
+        section: organization info
+        tab: general
+        disabled: false
+        visible: true
+        control_id: parentsystemuserid
+        field: parentsystemuserid
+      -
+        section: organization info
+        tab: general
+        disabled: false
+        visible: true
+        control_id: siteid
+        field: siteid
+      -
+        section: organization info
+        tab: general
+        disabled: false
+        visible: true
+        control_id: territoryid
+        field: territoryid
+      -
+        section: organization info
+        tab: general
+        disabled: false
+        visible: true
+        control_id: positionid
+        field: positionid
+    description: This form displays an appointment book for the Service Calendar.
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+    field_count: 18
+    type_name: Type 1
+  -
+    name: User form – Business
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Account Information
+        name: onpremise account information
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Account Information
+        name: online account information
+        tab: SUMMARY_TAB
+        visible: false
+      -
+        label: User Information
+        name: user information
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Organization Information
+        name: organization information
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Mailing Address
+        name: mailing address
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Teams
+        name: TEAMS_TAB
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Direct Reports
+        name: DirectReports
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Client Access License (CAL) Information
+        name: administration
+        tab: ADMINISTRATION_TAB
+        visible: true
+      -
+        label: 'E-mail Access Configuration'
+        name: 'e-mail configuration'
+        tab: ADMINISTRATION_TAB
+        visible: true
+    fields:
+      -
+        section: onpremise account information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: domainname
+        field: domainname
+      -
+        section: online account information
+        tab: SUMMARY_TAB
+        disabled: true
+        visible: true
+        control_id: windowsliveid
+        field: windowsliveid
+      -
+        section: online account information
+        tab: SUMMARY_TAB
+        disabled: true
+        visible: true
+        control_id: invitestatuscode
+        field: invitestatuscode
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: fullname
+        field: fullname
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: internalemailaddress
+        field: internalemailaddress
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: mobilephone
+        field: mobilephone
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: address1_telephone1
+        field: address1_telephone1
+      -
+        section: organization information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: businessunitid
+        field: businessunitid
+      -
+        section: organization information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: parentsystemuserid
+        field: parentsystemuserid
+      -
+        section: mailing address
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: preferredaddresscode
+        field: preferredaddresscode
+      -
+        section: mailing address
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: address1_composite
+        field: address1_composite
+      -
+        section: administration
+        tab: ADMINISTRATION_TAB
+        disabled: false
+        visible: true
+        control_id: accessmode
+        field: accessmode
+      -
+        section: administration
+        tab: ADMINISTRATION_TAB
+        disabled: false
+        visible: true
+        control_id: caltype
+        field: caltype
+      -
+        section: 'e-mail configuration'
+        tab: ADMINISTRATION_TAB
+        disabled: false
+        visible: true
+        control_id: defaultmailbox
+        field: defaultmailbox
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: footer_isdisabled
+        field: isdisabled
+    description: Default User form for Business Edition
+    tabs:
+      -
+        label: Summary
+        name: SUMMARY_TAB
+        visible: true
+        expanded: true
+      -
+        label: Administration
+        name: ADMINISTRATION_TAB
+        visible: false
+        expanded: false
+    field_count: 16
+    type_name: Main
+  -
+    name: Application User
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Account Information
+        name: onpremise account information
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: User Information
+        name: user information
+        tab: SUMMARY_TAB
+        visible: true
+      -
+        label: Cognitive Services Information
+        name: cognitive services information
+        tab: SUMMARY_TAB
+        visible: false
+    fields:
+      -
+        section: onpremise account information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: domainname
+        field: domainname
+      -
+        section: onpremise account information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: applicationid
+        field: applicationid
+      -
+        section: onpremise account information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: applicationiduri
+        field: applicationiduri
+      -
+        section: onpremise account information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: azureactivedirectoryobjectid
+        field: azureactivedirectoryobjectid
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: fullname
+        field: fullname
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: internalemailaddress
+        field: internalemailaddress
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: msdyn_agentType
+        field: msdyn_agentType
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: msdyn_botapplicationid
+        field: msdyn_botapplicationid
+      -
+        section: user information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: msdyn_bothandle
+        field: msdyn_bothandle
+      -
+        section: cognitive services information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: msdyn_cognitiveservicessubscriptionkey
+        field: msdyn_cognitiveservicessubscriptionkey
+      -
+        section: cognitive services information
+        tab: SUMMARY_TAB
+        disabled: false
+        visible: true
+        control_id: msdyn_cognitiveservicesregion
+        field: msdyn_cognitiveservicesregion
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: footer_isdisabled
+        field: isdisabled
+    description: Application User Form
+    tabs:
+      -
+        label: Summary
+        name: SUMMARY_TAB
+        visible: true
+        expanded: true
+    field_count: 12
+    type_name: Main
+

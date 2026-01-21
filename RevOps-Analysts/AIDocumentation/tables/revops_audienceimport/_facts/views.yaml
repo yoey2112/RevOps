@@ -1,0 +1,31 @@
+views:
+  -
+    name: Active Audience imports
+    querytype: -1
+    savedqueryid: '1845cb98-29a9-4d04-972e-2c7605ba5935'
+  -
+    name: Quick Find Active Audience imports
+    querytype: 4
+    savedqueryid: '5e41511a-adff-4383-90f6-3c354b7a0b24'
+  -
+    name: Audience import Associated View
+    querytype: 2
+    savedqueryid: '45700758-4a0e-41f2-ae2f-47f12172e5cc'
+  -
+    name: Audience imports
+    description: All active Audience imports
+    querytype: 8192
+    savedqueryid: '8f7c5992-a44b-f011-877a-6045bdf9bd77'
+  -
+    name: Audience import Lookup View
+    querytype: 64
+    savedqueryid: 'cebb5178-5a95-4e62-92fa-7b59f5d9abdd'
+  -
+    name: Inactive Audience imports
+    querytype: -1
+    savedqueryid: '3469b54e-ed5c-43f6-8d7a-9bee9d1915cc'
+  -
+    name: Audience import Advanced Find View
+    querytype: 1
+    savedqueryid: '68db6a29-084f-4931-8ff7-ceccda759a1d'
+

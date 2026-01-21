@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '227c7350-1a8f-f011-b4cb-7ced8d04e0f6'
+name: Create Case from Zabbix Alert
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

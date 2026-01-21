@@ -1,0 +1,5 @@
+displayname: Services to Migrate Column
+description: Controls the visibility of the Service to Migrate Column based on the value of the Case Type Column
+webresourceid: 'ef59cf66-c4d1-ef11-a72e-0022486e1e61'
+name: revops_servicestomigrate
+

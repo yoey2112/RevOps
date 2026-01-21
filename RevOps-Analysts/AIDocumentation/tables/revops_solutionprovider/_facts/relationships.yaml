@@ -1,0 +1,82 @@
+relationships:
+  -
+    schemaname: revops_solutionprovider_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_solutionprovider
+  -
+    schemaname: revops_solutionprovider_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_solutionprovider
+  -
+    schemaname: revops_solutionprovider_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_solutionprovider
+  -
+    schemaname: revops_solutionprovider_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_solutionprovider
+  -
+    schemaname: revops_solutionprovider_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_solutionprovider
+  -
+    schemaname: revops_solutionprovider_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_solutionprovider
+  -
+    schemaname: revops_solutionprovider_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_solutionprovider
+  -
+    schemaname: revops_solutionprovider_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_solutionprovider
+  -
+    schemaname: revops_solutionprovider_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_solutionprovider
+  -
+    schemaname: revops_solutionprovider_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_solutionprovider
+  -
+    schemaname: revops_accountpotentialtechstack_currentprovider_revops_solutionprovider
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: revops_solutionprovider
+  -
+    schemaname: lk_revops_solutionprovider_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutionprovider
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_solutionprovider_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutionprovider
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_solutionprovider_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutionprovider
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_solutionprovider_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutionprovider
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_solutionprovider
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutionprovider
+    referencedtablelogicalname: organization
+

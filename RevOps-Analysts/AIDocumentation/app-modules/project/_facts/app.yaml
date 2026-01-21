@@ -1,0 +1,8 @@
+appmoduleid: '3470cace-39a5-f011-bbd3-7ced8d376572'
+appmoduleversion: null
+clienttype: 4
+url: null
+description: Manage projects from creation to delivery.
+name: Project
+uniquename: msdyn_ProjectServiceCore
+

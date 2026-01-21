@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '122313bc-9aa0-f011-bbd2-7ced8d061554'
+name: Assign SME Engagement to Object Owner
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

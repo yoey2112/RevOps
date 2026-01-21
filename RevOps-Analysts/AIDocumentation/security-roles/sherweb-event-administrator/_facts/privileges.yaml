@@ -1,0 +1,2037 @@
+privileges:
+  -
+    privilege_name: prvWritemsdynmkt_domain
+    privilegeid: 'd9cdc7a9-35cf-4f79-b158-00e562dff8b0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvDeletemsevtmgt_Speaker
+    privilegeid: '6066939a-5dde-42eb-8a2d-0155c9b13e09'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadOptionSet
+    privilegeid: 'e3f45b8e-4872-4bb5-8b84-01ee8f9c9da1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyncrm_setupdomain
+    privilegeid: 'ba018e73-caa1-4022-a91e-01f159a9b074'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_eventadministration
+    privilegeid: 'ad15686e-6330-47d4-9b8b-0206aaa3b15d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareWorkflow
+    privilegeid: '501786bc-f127-4c56-a4dc-02cc0325117d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWritemsevtmgt_eventvendor
+    privilegeid: '188ce94b-f6c7-4a62-84a6-03bdc5316d3e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_eventpurchaseattendee
+    privilegeid: 'fea6d277-35e7-433b-821d-03d481a8408d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_Session
+    privilegeid: '7c8a1f29-ebd6-40ec-86c8-04382b3d6a5b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_SessionRegistration
+    privilegeid: 'e1b5c91c-8f3d-490b-8384-055a59e96b5e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdynmkt_marketingform
+    privilegeid: 'a6c30af9-f425-40f3-9457-058aa12301fd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_Building
+    privilegeid: '8a4becdf-ed03-4957-867c-0612bc1068fa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_pass
+    privilegeid: 'd1a20a8f-50ef-4dda-bc41-0661c92f5c12'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_websiteentityconfiguration
+    privilegeid: 'b69faa8e-cd5c-4b08-8158-0672c5633413'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_EventRegistration
+    privilegeid: 'd5667ed7-2003-4c62-acb0-0947e16d6807'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_EventRegistration
+    privilegeid: '9af6af92-9cec-49b1-a3d1-0a9993a134a7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_SponsorableArticle
+    privilegeid: '3a6ecae6-c5ab-421c-a436-0add3ff14a71'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_Speaker
+    privilegeid: 'c5a9c5a8-ed3c-4245-bbdb-0af3656b2701'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_eventpurchase
+    privilegeid: 'd6fc57b2-2eab-4e2e-9eca-0b2a909c552c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_Event
+    privilegeid: '9b7e8655-f80c-403e-996a-0cdd66730e72'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_CheckIn
+    privilegeid: '9255a923-514e-44f1-90d9-0e21a962b6ea'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdyncrm_setupdomain
+    privilegeid: '013798e5-a0d7-47f9-afbc-0e5275c5d5b1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_eventpurchaseattendee
+    privilegeid: '0c3f25a2-a7ee-4aee-81c6-0ecfbf18aaf3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_bpf_9623d46752ae497989f62ac0d11dad99
+    privilegeid: '7e46887e-f176-4d8f-8d02-0f5ee0e2f1f7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_Venue
+    privilegeid: '72a6980d-1eaa-42cc-97d4-105ed3b3a0cf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_SessionRegistration
+    privilegeid: 'd4a2537d-a973-4849-9415-110e5f782e51'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyncrm_marketingconfiguration
+    privilegeid: '7251312c-5d25-43ae-8188-1295c808f947'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_Session
+    privilegeid: '557e34a4-f0d3-432c-812d-12c06020da77'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_pass
+    privilegeid: 'cc6dfa4e-3554-4ca1-9b4e-132a1eb38b9d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyncrm_setupdomain
+    privilegeid: 'dc4370fb-8140-4e6a-a27d-133507c9ca1b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_EventTeamMember
+    privilegeid: '0f01c6c5-a432-4add-8678-154d4ea669a2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_customregistrationfield
+    privilegeid: 'd5957f55-6aae-4a29-b8ac-1649bda7dacf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_WebinarProvider
+    privilegeid: '6e342435-9463-476c-86d6-17300e6cd895'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadOrganization
+    privilegeid: 'dbd3ad17-b6bd-46c8-8db7-179fec82c937'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_Event
+    privilegeid: 'd8273ac7-3046-4164-a47f-18318c281c36'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_SessionTrack
+    privilegeid: 'abbc64c5-b179-48a2-bf5e-186e04a15508'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_eventpurchasepass
+    privilegeid: '1a71a72d-5d49-4303-a99c-194bfc7b4201'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_eventpurchasepass
+    privilegeid: 'f8786165-59c4-45bc-88d0-198884291951'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_websiteentityconfiguration
+    privilegeid: 'a7ba12cf-bef0-4b20-92f9-1aa2c9225d3d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSolution
+    privilegeid: 'b64e92c8-5d2a-4052-a026-1b73eff9cebf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_PowerPagesWebsite
+    privilegeid: '82b3b2cd-c25a-46cd-a648-1beab59525b3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_EntityCounter
+    privilegeid: 'e85c255f-25da-4352-ae64-1d0e9fd0b93d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_SessionRegistration
+    privilegeid: 'a3ce9e21-2561-4ae0-8214-1def1d5c9408'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToWorkflow
+    privilegeid: '6f54cea3-5b92-4507-952c-1e2430b7b1f9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_SessionRegistration
+    privilegeid: 'f094c923-a518-4c0d-9963-1e77bb90e35a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_Session
+    privilegeid: '1d27e9da-3996-419e-af67-1efe863b2f43'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_Sponsorship
+    privilegeid: 'c17c61a9-6031-4495-b18f-1f359b3c1fa9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_HotelRoomReservation
+    privilegeid: '3019e331-8539-4acc-b184-1f965f0fcb03'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_HotelRoomReservation
+    privilegeid: 'ad10bd8a-4b07-4533-974d-1fb59607fdb7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadAsyncOperation
+    privilegeid: 'e84acc8f-0c61-43e3-a716-20964a483bdf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_eventpurchasepass
+    privilegeid: '7ed33eae-c59c-4f96-8125-20ebfa0be26a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_eventpurchaseattendee
+    privilegeid: '128b1788-05bb-4393-8fb1-220aa71aec9f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_WebinarProvider
+    privilegeid: 'c1bc69f7-3992-4811-9eb9-223fee4d6f7d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_EventTeamMember
+    privilegeid: 'e7b887e3-a32a-44b1-aa10-23c5e150b43f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_CheckIn
+    privilegeid: '2350944d-5f50-4582-812a-2400af419e73'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_customerinsightsinfo
+    privilegeid: 'cf346843-ac2d-4dda-80be-24698cc02a4a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsevtmgt_speakerengagement
+    privilegeid: '5fdb8e73-5ccd-4f7b-b24e-24cde5ff10bc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignContact
+    privilegeid: '43c63782-c7c6-471c-bd9c-24f79bf8c2a1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAssignmsevtmgt_Hotel
+    privilegeid: '27da0034-84d0-4368-b563-24fa5de1ed2f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdynmkt_matchingstrategy
+    privilegeid: '49822354-ce19-4512-90e2-2690fad03977'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_eventadministration
+    privilegeid: 'edfc97e0-84e8-41dd-b51f-26a23a11ed71'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_webapplication
+    privilegeid: '8e9b778d-0309-4bb0-93a1-26c79458e464'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdyncrm_file
+    privilegeid: 'aae077f1-d561-4c6e-b5d6-26d487f2e6e4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvWritemsevtmgt_file
+    privilegeid: '689e0a6c-216a-4664-acfb-29b0f88f27ba'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_leadtoopportunity
+    privilegeid: '1935bc5b-ea1d-458e-9691-2a281463de9d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_AttendeePass
+    privilegeid: 'a2d07764-6c7b-47e4-88a9-2a3bd1bf2248'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_Room
+    privilegeid: '74c1b3b3-c037-48f1-a8d6-2a5065edb3e4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateUserEntityUISettings
+    privilegeid: '8d2aa266-8fee-43a4-85e7-2aa1aaab5259'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadUserEntityUISettings
+    privilegeid: '8d2aa266-8fee-43a4-85e7-2aa1aaab525a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvWriteUserEntityUISettings
+    privilegeid: '8d2aa266-8fee-43a4-85e7-2aa1aaab525b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeleteUserEntityUISettings
+    privilegeid: '8d2aa266-8fee-43a4-85e7-2aa1aaab525c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvShareUserEntityUISettings
+    privilegeid: '8d2aa266-8fee-43a4-85e7-2aa1aaab525d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTomsevtmgt_waitlistitem
+    privilegeid: '98f32c14-6983-4577-8459-2aae8497e960'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_Sponsorship
+    privilegeid: '92707df3-efc3-416a-b025-2b2d39755a26'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_SponsorableArticle
+    privilegeid: '93ff5ae3-f2fa-4233-957a-2b708ff841a1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_Session
+    privilegeid: 'de6a0879-04d7-48f8-bec2-2b87f0e56be7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_eventcustomregistrationfield
+    privilegeid: 'd9433ce9-48f2-4961-b540-2beddb1b523b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_EventRegistration
+    privilegeid: '1551f5fb-70b5-4db4-a837-2c1b9118addd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyncrm_setupdomain
+    privilegeid: '59a35a9c-af82-4dbc-96cd-2cd9c15fc7d3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_SessionTrack
+    privilegeid: '658ef903-f127-451f-8330-2d13c6e6f7a4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_speakerengagement
+    privilegeid: '29cdd99d-8489-4789-9681-2e09a617ed6f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyncrm_file
+    privilegeid: '487ba9bc-ef10-471c-920a-2ea9661e7f32'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_Layout
+    privilegeid: '597c570e-2a9d-41b7-800c-2ec82f602b14'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_Hotel
+    privilegeid: 'e6344fd2-f9cd-4593-bf99-30426210bcae'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_tour
+    privilegeid: '2956256e-e28f-4c1c-98df-30c0a9ed1fb7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_HotelRoomReservation
+    privilegeid: 'b1031f34-bd86-4959-8619-31baab483fde'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_SessionTrack
+    privilegeid: '9ae58459-cc13-424c-b8f2-33ab0c09e326'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_file
+    privilegeid: 'a81f9403-5c74-43f9-8d8c-34ba7f677af0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignWorkflow
+    privilegeid: 'd0cd3ea7-83cd-4769-9ef7-35398d2e1243'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsdynmkt_marketingformtemplate
+    privilegeid: 'a140e7e7-77ae-47d6-a110-35d6da58e505'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_SessionRegistration
+    privilegeid: '74a66a4d-7879-47e5-b86f-369d1540a0fa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_WebinarProvider
+    privilegeid: '8edbc908-c323-4e60-9196-36d9f3967259'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_CheckIn
+    privilegeid: '83d38fa0-48b9-4eb3-a472-381022dbf124'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_eventpurchase
+    privilegeid: '409563e1-5ebe-4073-8ae7-381c02901627'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_Room
+    privilegeid: '4db94021-611d-4cef-8f89-38863851ed1c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadAttribute
+    privilegeid: 'b8caea5d-f379-4295-aa59-38adeb73e853'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_PowerPagesWebsite
+    privilegeid: 'f5d730fa-8c83-45d3-9684-38df3a6acf41'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToUser
+    privilegeid: '3399e6d2-dd3c-4a14-8433-39c1eca27aaa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_eventpurchase
+    privilegeid: '4d9a031d-de4e-49a6-bf75-3ab3680e23c8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_Building
+    privilegeid: '1c430569-3b0c-4dbe-baec-3b233efa5294'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_EventRegistration
+    privilegeid: 'ed158160-ea3a-4e6c-9288-43dff0535aa7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_WebinarProvider
+    privilegeid: 'c4541742-79b2-4550-bdd9-4525a045c311'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_customregistrationfield
+    privilegeid: '506bed3a-972f-4d53-ac77-4583f6e4f754'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_roomreservation
+    privilegeid: '8c63cce5-7d40-489c-9100-4615cff981d6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_pass
+    privilegeid: '2a6b968e-39a5-433b-ab4c-46823ef27d3a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_PowerPagesWebsite
+    privilegeid: 'dced81a0-7101-4ff4-b4ae-469ef22267bd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSharePointData
+    privilegeid: 'fecbd29c-df64-4ede-a611-47226b402c22'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_SponsorableArticle
+    privilegeid: 'd67e7211-31cf-4be0-893f-4b05ee204ea7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyncrm_file
+    privilegeid: 'b761d1cc-0ee9-483e-82f4-4bf5bc291c9c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_Layout
+    privilegeid: 'c648fbce-14b7-41c3-8a7a-4cab26035af4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_waitlistitem
+    privilegeid: '5c85f53f-309f-463d-b67b-4d00b96b88ad'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_roomreservation
+    privilegeid: '48852933-059b-46ab-bde2-4d3cf6b1d6b6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSdkMessage
+    privilegeid: '94c3ac2c-eb23-41cb-a903-4e2e49e910b4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_eventadministration
+    privilegeid: '6902652b-32d0-4194-a1fa-4e53207353a2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadBusinessUnit
+    privilegeid: '487cdbaf-59f9-4db3-b648-4eed351ff00b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdynmkt_domain
+    privilegeid: '5ec402c9-0efc-430e-bcbe-4efb4066e9d3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvWritemsevtmgt_Speaker
+    privilegeid: 'f23b5de0-53e9-4a68-af7a-4f08764b69b8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_EventRegistration
+    privilegeid: 'f2dafc9c-be71-4dd0-b200-5067662e53fd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_eventvendor
+    privilegeid: '18cd5cbe-e02b-4792-91c9-50e8e84e38b7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_EventTeamMember
+    privilegeid: 'cb124aaa-f27b-47e3-a161-52939d295426'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_roomreservation
+    privilegeid: 'b6a1500d-4d4d-4d2e-8901-5307510e0324'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyncrm_leadtoopportunity
+    privilegeid: '7e093533-c859-4221-9687-5355196de841'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadUserSettings
+    privilegeid: '8437fa7c-3681-4fc7-bfd8-53a23fdecd65'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_eventpurchaseattendee
+    privilegeid: '1c712c4c-be7d-421e-ae56-54259ab5abd2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_Venue
+    privilegeid: 'f4d68ca4-c69f-4399-b4c2-54cdecaf2129'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_eventpurchaseattendee
+    privilegeid: 'fe8064a0-b566-4355-a9b1-5554dff58085'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_eventcustomregistrationfield
+    privilegeid: '4863dceb-0ff4-457c-9611-559e53a78174'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_eventpurchase
+    privilegeid: '1b28f01e-4ed2-4a7d-9ec3-567fab166ede'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_customregistrationfield
+    privilegeid: '4ad7d847-a3a3-4fa0-a5c3-569a05039ebc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_WebinarProvider
+    privilegeid: 'd5ef1708-eb22-47a3-8586-569d091aed35'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadContact
+    privilegeid: 'ba09ec92-12c4-4312-ba16-5715c2cbd6da'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsevtmgt_registrationresponse
+    privilegeid: 'c8e088a3-dd1a-4b28-b6c4-57619e00dbcf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_authenticationsettings
+    privilegeid: 'c121239b-84b0-4b38-85a1-583df8a1f567'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_setupdomain
+    privilegeid: '498c79c9-94db-43b2-a2df-58a1803a66cc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_speakerengagement
+    privilegeid: 'fdc1cff7-ccda-4251-893f-59f2136ae905'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_AttendeePass
+    privilegeid: 'e69dc114-7485-42d4-b83e-5a4e85c314e9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_file
+    privilegeid: '27e97835-97e3-4b6a-a404-5a97098d1d9e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyncrm_leadtoopportunity
+    privilegeid: '681979b9-2eab-4ee3-8e0d-5af4a1162aab'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadWebResource
+    privilegeid: '4156db68-93e2-4a83-8cbb-5bb344ebaf47'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_SessionRegistration
+    privilegeid: '2a32b2d5-c0f5-494d-bac4-5ecee753982a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToContact
+    privilegeid: '158327b5-f4c1-448e-93d1-5f135126665b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadmsevtmgt_Event
+    privilegeid: '8fc335ff-2e1e-469f-8c98-5fc89db020fb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_Event
+    privilegeid: '8568f72b-bc1f-4bce-baca-5fd0d167fd26'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdynmkt_marketingform
+    privilegeid: 'ecac1f6f-411c-455e-8af2-60f77e1dd2b4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_Hotel
+    privilegeid: '91c1ebd3-8929-4853-ad13-6141db38d7a3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_WebinarType
+    privilegeid: 'd7e1133e-0260-4792-9d25-6141fd81d4fd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_customregistrationfield
+    privilegeid: 'ef7f7db6-d127-4d84-8ac5-61ce02aac654'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_webinarconfiguration
+    privilegeid: 'bf9c2c55-e18d-48f4-bfe4-61e392fe33d0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_Layout
+    privilegeid: '4ed0643c-1e75-423e-93ba-624b99c245f9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_EventRegistration
+    privilegeid: '5d7da691-f701-46a1-ab99-63cfdbc36f29'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_SponsorableArticle
+    privilegeid: 'a3f97051-7729-4f79-87ed-6433e8c2146b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadAttributeMap
+    privilegeid: '0a40e638-2d3a-4d44-be3a-64f601f76734'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_WebinarType
+    privilegeid: 'ed486dc8-3383-4de4-affd-659ea4390080'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_SponsorableArticle
+    privilegeid: '34a8b4f1-d85e-4e61-bc66-661a568ecb97'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_eventcustomregistrationfield
+    privilegeid: '8c6e682e-e102-4409-b944-6657d5cc1ffe'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdynmkt_marketingformsubmission
+    privilegeid: '28497a4c-cd0b-4958-b2df-66bbb08e71ee'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdynmkt_marketingform
+    privilegeid: 'a78f3bfd-9fd6-40e5-ab2d-66e027283c19'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvFlow
+    privilegeid: '9b71eaaa-6b6a-4c96-aefe-675ba31a88f3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadEntity
+    privilegeid: 'a3311f47-2134-44ee-a258-6774018d4bc3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_Hotel
+    privilegeid: '0fef18fb-f338-46ce-8371-678c753a19d9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_AttendeePass
+    privilegeid: '05b190df-21fb-4116-9ecc-67c2b53f84e7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_waitlistitem
+    privilegeid: 'ca3b27ee-a126-4234-a8c3-68a3d8ea3fbf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_Session
+    privilegeid: '6580cb25-9a1b-4c9c-820a-68fdd6d876e0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_Speaker
+    privilegeid: '1682a357-36b8-4e16-8cfc-6965a80c311c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_roomreservation
+    privilegeid: '9bf63932-e1aa-45ec-970c-69663e5a0608'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_EventRegistration
+    privilegeid: 'ba5635a1-dbd3-44fa-a7c1-6b98af2f43b1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyncrm_file
+    privilegeid: 'e6be48d6-45f9-442f-b7f2-6c5fc4ec1c95'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvAppendmsevtmgt_Sponsorship
+    privilegeid: '45798028-4e8c-4cf0-844a-6c8857f67fb7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_PostConfig
+    privilegeid: '6f29f679-4da0-48c0-ad70-6cbb2d65e6aa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_waitlistitem
+    privilegeid: 'f9e01f80-d154-4d5e-982f-6d45d9aaeb72'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_HotelRoomReservation
+    privilegeid: 'b6f65b6d-c9aa-4d46-8711-6e4bcbc606e0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdynmkt_domain
+    privilegeid: 'fd6f49fc-b10c-4270-8e84-6e79e3366a88'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvWritemsevtmgt_SessionTrack
+    privilegeid: 'bcf77451-0119-422f-9b15-6fa0117b8375'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_registrationresponse
+    privilegeid: '88433930-4ffc-48de-a36f-7186d2561ce1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_speakerengagement
+    privilegeid: 'bf714157-ece7-4f45-b795-71d0a0650b66'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyncrm_setupdomain
+    privilegeid: 'af0887ab-bdb1-489d-b71e-728fd304bf7f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_file
+    privilegeid: '76337675-b609-4c53-958e-7483ddb8ff1f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_eventadministration
+    privilegeid: '73a10d81-bcb2-4346-8039-75146e3a5f78'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteSharePointData
+    privilegeid: 'cfdd12cf-090b-4599-8302-771962d2350a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdyncrm_marketingconfiguration
+    privilegeid: '4440dee4-8da9-4f34-b81d-773f9e39cae7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_HotelRoomAllocation
+    privilegeid: 'e4a34142-9353-4789-9116-788d51cc39cd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_webinarconsent
+    privilegeid: 'd750a547-65e7-4efc-96ef-79e2c03f7ca9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_HotelRoomReservation
+    privilegeid: 'f032a356-ae47-402b-a0f5-79eb3855686a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_EventTeamMember
+    privilegeid: 'cd510007-984b-4013-bfb6-7a42023cf33b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_eventvendor
+    privilegeid: '53aa21da-1ab1-488d-9945-7a732f3d81cb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_websiteentityconfiguration
+    privilegeid: '89d6a25d-8879-4b50-a9c6-7abc022b5693'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_Speaker
+    privilegeid: '971a62ee-24e3-4b00-8b55-7af37f30c885'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_PowerPagesWebsite
+    privilegeid: '10d46781-4234-4963-8296-7af747e85f13'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_Hotel
+    privilegeid: '7b96e3ef-d715-4d8d-92dc-7c97c530ef63'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_Speaker
+    privilegeid: '8032a7d4-cb06-417e-9773-7d7222709019'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_HotelRoomAllocation
+    privilegeid: 'be95a49e-6a1a-4146-916f-7db733f0f43a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyncrm_file
+    privilegeid: 'b030b555-c5e2-4c4a-8743-7f4d07b2d3c6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_registrationresponse
+    privilegeid: 'dc94793b-2257-440b-aa63-813438609af5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_eventpurchaseattendee
+    privilegeid: 'b919f0c8-e43e-4984-b364-814a9aa11f04'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdynmkt_marketingform
+    privilegeid: '1d85a786-6dd8-4a87-a7a0-8170c62ca13b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_Room
+    privilegeid: '2fc487a1-5712-49bd-8eca-83b1dcf40ea4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdynmkt_virtualdomain
+    privilegeid: '99a7deac-6413-4a48-b88b-83b6831bbc04'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_webinarconfiguration
+    privilegeid: '06bb83d1-cf98-4118-b1b8-84a7b487af55'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_websiteentityconfiguration
+    privilegeid: '1c7f0802-17fb-40e9-aa88-85b09e36cb1a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendContact
+    privilegeid: '2b16ba12-6ab4-4ad2-b7c0-8641d2d6dff2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadSdkMessageProcessingStepImage
+    privilegeid: '122e085f-8c52-47e8-8415-875dee1c961e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdynmkt_trackingcontext
+    privilegeid: '7533bb74-19b3-4071-badd-8792a115f6d4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_Layout
+    privilegeid: '38062db2-1a00-4c3a-a55d-87b4e017ac6a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_AttendeePass
+    privilegeid: 'c030324e-cb47-4b42-ad07-886552896968'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_EntityCounter
+    privilegeid: 'ee9228bf-c9f0-4e8d-970d-8971255724e7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_Session
+    privilegeid: '9c2ea8d5-097d-41dc-b920-89772043044c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_webinarconsent
+    privilegeid: 'b2a46071-1f4b-4bd8-ac4a-89f6562ea82f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSystemForm
+    privilegeid: 'b9c59cef-f5d1-46b4-8c3b-8a38906c8c0e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_HotelRoomAllocation
+    privilegeid: '5d37d792-79c1-4132-8464-8ac9e96d27e1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_pass
+    privilegeid: '7f6c0eeb-3d9d-46a7-bcb2-8d31e1010e9e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdynmkt_marketingformtemplate
+    privilegeid: '4f651a59-9802-420a-8032-8edac5020d55'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadQuery
+    privilegeid: '902d70d3-2ff8-4d93-92f9-8efdcf889af8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_SessionTrack
+    privilegeid: '7922aa5f-c3bc-4972-a63a-8eff0f14f224'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_Room
+    privilegeid: '37f20e56-8099-423f-996c-8f2f51dbd99d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_eventvendor
+    privilegeid: 'c21f2c40-52ca-4ab8-8574-8f31cfd95c56'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_HotelRoomAllocation
+    privilegeid: '6fd5011a-1cc9-4958-bd2e-9010a0bbd062'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_eventcustomregistrationfield
+    privilegeid: 'f582043c-1ab6-4d9f-9477-90609ec6d957'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_Venue
+    privilegeid: '8c53eca9-0b98-4679-b9e8-9083eaf20163'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_eventpurchasepass
+    privilegeid: '8fd6f6c8-032f-461e-9fda-9190c8804dbc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyncrm_leadtoopportunity
+    privilegeid: 'aa02174a-39b8-492c-a4cf-921f4ef0f70d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_HotelRoomReservation
+    privilegeid: 'f4657644-834b-4975-adf9-927e637eb0d5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_roomreservation
+    privilegeid: 'e1ac1845-6fed-4292-9778-92c6f795af51'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteWorkflow
+    privilegeid: 'ed7e875d-9536-4d2c-a2f3-939a9d84f72c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsevtmgt_Session
+    privilegeid: 'fbf5ad9d-b668-4764-a568-94a5d9625f48'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadEntityKey
+    privilegeid: '1ae48019-2ad5-4a28-8482-9542ae96c4e7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_registrationresponse
+    privilegeid: '8354d174-0043-4086-9b23-960a6a44e775'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteWorkflow
+    privilegeid: '5f19703e-0b4a-451e-91e8-968929927820'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendmsevtmgt_Room
+    privilegeid: 'b5f56fb5-6d1c-4a92-91d7-97343bdb963e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_eventpurchasepass
+    privilegeid: '54f6dd9e-307b-471d-a5db-974e519f84ad'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdynmkt_domain
+    privilegeid: '539e343e-392a-4ff0-b387-9797e4d97ea2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvWorkflowExecution
+    privilegeid: 'b56c6b1d-efb6-49c3-a18c-97a8b59e10bf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_registrationresponse
+    privilegeid: '5d068e6a-d14e-48db-8cc1-9a68a9175c24'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_PowerPagesWebsite
+    privilegeid: 'cb40d297-b6eb-48ac-af22-9ad0ba659623'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_Room
+    privilegeid: 'e99951ed-3daf-41d0-92cf-9b63a5550ab0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_Room
+    privilegeid: 'c33165c3-a985-4d44-97ac-9bf8d079846b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_Building
+    privilegeid: 'e0a73f4d-4522-41cf-8ed8-9c2a5c3d324a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_registrationresponse
+    privilegeid: 'e9290f27-1b58-4624-86b7-9d0ebc370098'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_PowerPagesWebsite
+    privilegeid: '7dda05e8-3609-442e-a789-9dadd7ef97b6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_Venue
+    privilegeid: 'd5443cd5-daf2-4e40-8739-9db8d48b7b9c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_customregistrationfield
+    privilegeid: '1147f5c4-c0f2-45d4-b677-9dbfccc89742'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_digitalassetsconfiguration
+    privilegeid: 'd4b8eba5-51de-4167-9e84-9e554c44bed9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_EntityCounter
+    privilegeid: '545e48f3-1bd5-4de4-b123-9fd08de47b19'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_customregistrationfield
+    privilegeid: '1ed8071e-c63d-446f-a76d-a0051333b138'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_eventadministration
+    privilegeid: 'a5ec1cf5-13cb-4781-9103-a0405f2228af'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_eventvendor
+    privilegeid: '16d2cca1-c0d4-45f0-b0c6-a0a293c5b3b1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_Building
+    privilegeid: '6f8ef408-420c-4224-bdd2-a190caeeb52f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsdyncrm_file
+    privilegeid: '01425582-ccec-431b-9bda-a19bc198bc59'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_SponsorableArticle
+    privilegeid: 'c8a8c339-d463-493e-ab45-a21f92261762'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvActivateSynchronousWorkflow
+    privilegeid: 'dd55297d-5aaa-4645-8ef5-a2348eab3460'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvReadRelationship
+    privilegeid: 'aa38bf03-556f-418e-ae55-a3e8fbbc0f2d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_SponsorableArticle
+    privilegeid: 'ac14e494-f6fe-4e76-b673-a4145a60af06'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_Speaker
+    privilegeid: '1468aefb-8460-44a1-8c64-a436a7112bdf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadWorkflow
+    privilegeid: '9d5e4741-3403-42d2-90b4-a561b3f94f52'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_webapplication
+    privilegeid: '0c662cc7-7375-4a05-9bab-a63ba819ab1d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_EntityCounter
+    privilegeid: 'fae082f9-09f5-493e-853b-a7f5b1c6161e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_customregistrationfield
+    privilegeid: '9785b4d3-ad17-4124-9cee-a7ff4469bceb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_EntityCounter
+    privilegeid: '2c43afb0-6711-483c-baeb-a8edee9ac176'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_eventpurchase
+    privilegeid: '8e4328b7-1bb7-4c88-9bc2-a9ac45ade2fe'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_CheckIn
+    privilegeid: '4e4d229a-ee8f-467c-a559-aa5afc50490b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_EntityCounter
+    privilegeid: 'daba182d-1a31-4fa2-a8db-ab36662d346f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_bpf_9623d46752ae497989f62ac0d11dad99
+    privilegeid: '8068c7ea-5d39-492b-9cae-ab56b0a07bbb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_bpf_9623d46752ae497989f62ac0d11dad99
+    privilegeid: 'c0cfe409-6426-487a-a452-abb9b6f3c765'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdynmkt_marketingformsubmission
+    privilegeid: '27fea5d7-8891-4d90-ad02-ac06bf371712'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_Venue
+    privilegeid: 'df48869b-e681-4855-b321-ac9712023bda'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_SessionRegistration
+    privilegeid: '2452d2ab-57c2-4b00-a7a5-accceeda6ac9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_SessionTrack
+    privilegeid: 'c31d8349-c3b7-4b1b-9e79-aeb08d1599d7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_SessionRegistration
+    privilegeid: '7c681fdf-fce9-4f6c-9c9e-aed6abc52a3f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_bpf_9623d46752ae497989f62ac0d11dad99
+    privilegeid: 'ed54c0cb-60ae-4173-af5d-af756a6b7474'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_Speaker
+    privilegeid: '8db92e03-ccc2-4f98-85a7-aff3d84dfb1b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_PowerPagesWebsite
+    privilegeid: '808dc295-1fe8-4ea4-ad90-b104dfcbb16e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_PowerPagesWebsite
+    privilegeid: '8eed44c8-a76d-4a11-97bd-b20fe29e415d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_HotelRoomReservation
+    privilegeid: '5a17fd77-090e-4354-9af3-b255a715bd90'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdynmkt_matchingstrategy
+    privilegeid: '9c13b0b3-809c-419a-be8a-b35a3500a2a1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_webinarconfiguration
+    privilegeid: '7cd444f6-6f35-4d77-89c3-b370e5c02407'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_registrationresponse
+    privilegeid: '521145fe-53eb-43a2-a383-b3b702ba5c6b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_Building
+    privilegeid: 'a2aa2808-8b64-4a5c-a286-b3e06b581d1b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_webinarconfiguration
+    privilegeid: '1ca87d58-fe91-4c15-9b6a-b41024804dc7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_Sponsorship
+    privilegeid: '718b1208-7f79-4a36-84cf-b4c2f25578f0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_websiteentityconfiguration
+    privilegeid: 'e36d5c65-a3df-4852-9bbc-b4d96e77ecd5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdynmkt_marketingform
+    privilegeid: '809ed4da-46b4-4d07-9944-b53a8e83e06f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateWorkflow
+    privilegeid: '356f7a5a-5f9b-4a55-8398-b5732f6a08e5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvDeletemsevtmgt_CheckIn
+    privilegeid: 'f22078f9-6f1a-4d9a-aab7-b63027f5a24e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_EntityCounter
+    privilegeid: 'cdea2eb4-ad74-438e-9e7b-b6407404c3f1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_websiteentityconfiguration
+    privilegeid: 'bdbedc63-54b4-4a0f-8036-b674f2c80382'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_defaultmarketingsetting
+    privilegeid: '98d9a0df-3c32-4db6-868a-b8a1675dec42'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadCustomization
+    privilegeid: '7bb3b531-ac45-4977-89c8-b99768e55ab8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_Hotel
+    privilegeid: 'a0c73024-5968-4dc2-b53b-bac01d02c658'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_EventTeamMember
+    privilegeid: 'be4a64bf-b68a-4a6c-b01f-bac148d4165d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_featureconfiguration
+    privilegeid: 'dd297925-34a2-42b3-a19a-bb1b6b0ef611'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_CheckIn
+    privilegeid: 'dc139675-5c99-4d0f-85e9-bb3eb61455db'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_eventpurchase
+    privilegeid: 'f0274ac5-5d52-4aed-b86e-bb940cd8a1c7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_pass
+    privilegeid: '7816c522-c48a-4982-b20f-bc2c0bdfbf81'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyncrm_marketingconfiguration
+    privilegeid: 'ed262716-7631-40e3-9894-bd2655dc75ce'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_Event
+    privilegeid: '8936078c-6ae9-40c9-a30b-bd911e48667f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_SessionTrack
+    privilegeid: '1608743e-c9bc-4df9-b2b6-be59dd55a6fa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_Event
+    privilegeid: 'c43e9205-d2a3-4bf0-865a-be653f9d2da0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_eventvendor
+    privilegeid: '7e4c9010-4dd9-45e4-8b85-be7890e868b0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsdynmkt_domain
+    privilegeid: '161b5c72-14a8-4d07-ba3f-be8b2f928dd4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvDeletemsevtmgt_pass
+    privilegeid: '01d5d6ae-202f-4df3-9bbf-bea3dffe9a26'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_bpf_9623d46752ae497989f62ac0d11dad99
+    privilegeid: 'd95e949c-ed44-4110-9ca7-bf47e846e9fd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_roomreservation
+    privilegeid: '57a745ff-bc5e-4a1d-aa37-bf6baf0e1f11'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdynmkt_marketingfieldsubmission
+    privilegeid: '7245c14a-24ca-4043-8558-c1259d426915'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_HotelRoomAllocation
+    privilegeid: 'd0d7aeef-7e5f-4931-a40e-c1cf41c586a4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdynmkt_matchingstrategy
+    privilegeid: 'bd5c3927-697f-4e2f-90da-c218910aff3c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_speakerengagement
+    privilegeid: '386270fd-adb0-4dd9-9674-c3018c7fa03f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_eventpurchase
+    privilegeid: '922eef00-eb49-45b0-aea0-c423e2e3f16f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_EventRegistration
+    privilegeid: 'f03aa0b9-14b0-4019-bd59-c4b31b4f74a6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_eventpurchasepass
+    privilegeid: '17762950-8495-421d-8e29-c4bdd069211c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_pass
+    privilegeid: '96d9ca8b-f4b4-48eb-a361-c53e1bff352d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSdkMessageProcessingStep
+    privilegeid: 'db10a828-ec49-4035-8b7e-c58efaf169ec'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_Sponsorship
+    privilegeid: '86365704-867a-457c-8351-c64e239d0d17'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_webapplication
+    privilegeid: 'a36b96c5-39e9-4c88-a1e4-c6745f05b479'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_waitlistitem
+    privilegeid: 'f52fcf11-2952-48fa-9d16-c8a8245c7bf5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_eventcustomregistrationfield
+    privilegeid: 'c402f2d3-65d7-4233-8ed2-ca2d68a2c21c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_SessionTrack
+    privilegeid: '61711b21-a7e1-4c0d-a65f-cb12309ee66e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_HotelRoomReservation
+    privilegeid: '93502dff-e768-4d83-a802-cb2245bb5f43'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_waitlistitem
+    privilegeid: 'f2974595-15f3-4440-9312-cb4932e2590a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_speakerengagement
+    privilegeid: '5376e926-f5aa-4720-ab86-cb6aca2a6e2f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyncrm_leadtoopportunity
+    privilegeid: '4afb5096-882c-4a44-a286-cbc98a2380ae'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadPluginAssembly
+    privilegeid: 'f5b50296-a212-488a-be92-cbcca8971717'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_Hotel
+    privilegeid: '6f796a2b-77a6-4009-a750-cbf71ccd0351'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyncrm_marketingconfiguration
+    privilegeid: '211ee04f-348b-4934-a808-cc5a5e984033'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_Venue
+    privilegeid: '78f9c228-a889-442a-a20a-ccfe9765d3fe'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_webapplication
+    privilegeid: '0569754c-afaf-4ad0-9d9c-cdb27840fc81'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendWorkflow
+    privilegeid: '71b53683-e781-471f-b9c4-cdcaf62a0cc5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreateSharePointData
+    privilegeid: '5eb85025-363b-46ea-a77e-ce24159cd231'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_eventadministration
+    privilegeid: '02892e3d-0f21-4502-b6a3-cf206e6b3daf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_webinarconsent
+    privilegeid: '24bade27-2bfe-4d62-a8fa-cf4bf5516d0b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_SponsorableArticle
+    privilegeid: 'ffe0afba-dd31-4793-ac18-cfb1cd704ab5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadPluginType
+    privilegeid: '9365005c-4703-473b-8d3c-d073cfd8670c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_Venue
+    privilegeid: '3fefe1dd-7165-4d6f-827f-d0e2b11b82e5'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_speakerengagement
+    privilegeid: '12fe9f9a-5f6f-409f-a319-d107d9fc2b6b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_Layout
+    privilegeid: 'f375d244-d5b6-4cdb-8f24-d1f157494c2e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_websiteentityconfiguration
+    privilegeid: 'd0e53956-ee87-43fb-83d6-d2677bf96f39'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadEntityMap
+    privilegeid: '2d331a5b-4d6c-42be-bf0a-d2c0facd97c8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_Sponsorship
+    privilegeid: 'f35fa029-1224-4623-8d84-d36b9423bb95'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_speakerengagement
+    privilegeid: 'c13bcb85-acf7-4539-bedc-d38c0f9f5814'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_eventpurchasepass
+    privilegeid: 'fb54ae82-8a85-426a-bb32-d4fc4101c348'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_webinarconfiguration
+    privilegeid: 'e4546e1e-7679-4e77-acb4-d54339afcb81'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_AttendeePass
+    privilegeid: '8d0e2ab1-8556-419e-956c-d5ce8c174e0d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_eventcustomregistrationfield
+    privilegeid: '16ab0795-3810-41de-90d7-d5e698e30955'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_Layout
+    privilegeid: '969bc9c1-0d62-43c4-b709-d5ea20183d41'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_websiteentityconfiguration
+    privilegeid: '81f8a3fb-ba86-4274-8488-d7745bfd9da3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_eventpurchaseattendee
+    privilegeid: 'e5d3ad33-06ea-43a1-b36a-d88f311d7052'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_file
+    privilegeid: '4f10c40d-2b81-4295-82cd-d8d98a26d76f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSharePointDocument
+    privilegeid: 'd71fc8d0-99bc-430e-abd7-d95c64f11e9c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_webinarconsent
+    privilegeid: '2f31435d-3c1f-400b-9b0a-d9d19b68ddbf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_EventTeamMember
+    privilegeid: '4b37c98d-5239-4d35-83c6-daaab6de98f3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_Session
+    privilegeid: '57d893bc-f8f3-4561-891f-db54964a636b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_webinarconsent
+    privilegeid: 'd6c3b81a-f737-4e2f-929b-dc2edc04e72b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadUser
+    privilegeid: '76faad15-bc44-4f4d-84dc-dd1e1dda74d9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_HotelRoomAllocation
+    privilegeid: '70041653-8a08-4820-9fba-dd55cfaf02b4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_waitlistitem
+    privilegeid: 'b4556639-9da0-4c3b-acd9-ddca3292e792'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_WebinarType
+    privilegeid: 'a1b74426-95f3-48b0-b643-dfa855ecfc38'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_webapplication
+    privilegeid: 'a808db74-ed51-4136-93b0-e0571b929f6c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdynmkt_domain
+    privilegeid: '92f9bc10-768a-4a44-94e4-e06876ad032f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvReadmsevtmgt_Building
+    privilegeid: 'f9acae4e-52dd-4731-8c49-e210af8c8793'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_eventvendor
+    privilegeid: 'bc71054c-4554-4534-8af4-e331c55a887e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_AttendeePass
+    privilegeid: '17f138a9-e529-4afc-85f8-e358782ab678'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_roomreservation
+    privilegeid: '59791996-3dc2-4b67-aa07-e39d89ac0b8a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_Sponsorship
+    privilegeid: 'c4ce3f2d-c6bd-4c5e-b0ca-e3db60527f40'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_Layout
+    privilegeid: 'a04c1f29-a4e9-4f75-8319-e4416bb72550'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdyncrm_file
+    privilegeid: '84cb3421-ab8d-401a-b92f-e466a200d8f0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Local
+  -
+    privilege_name: prvWriteContact
+    privilegeid: '65c22075-4e09-4f39-baec-e4bc3a950686'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvCreatemsevtmgt_bpf_9623d46752ae497989f62ac0d11dad99
+    privilegeid: '3354f590-0c07-4b96-ba47-e50c0b5b4a97'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdynmkt_marketingformsubmission
+    privilegeid: '1388f05e-7dc8-4977-8e00-e50e98e22a6f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_file
+    privilegeid: '6ce35e0f-611f-49fe-805a-e5baea64dc02'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_eventadministration
+    privilegeid: 'c8c7c2e9-08d4-421f-ab0b-e6689c141a53'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadRole
+    privilegeid: '222a920a-2778-4564-85cb-e78dde8e4276'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_file
+    privilegeid: '123c5e02-4868-4b9f-a1bf-e7fe53f59576'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadAppModule
+    privilegeid: 'cad9c968-cb81-444d-873a-e91b88f345eb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsdynmkt_domain
+    privilegeid: '28ff4cc1-d565-46ec-b5ae-e95d816b8bce'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Deep
+  -
+    privilege_name: prvCreatemsevtmgt_pass
+    privilegeid: 'a0c81f0f-95c7-4c5f-97e4-e9c5e046d0e4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_roomreservation
+    privilegeid: '5bf838e2-7482-4841-b4f2-e9f682a66b94'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignmsevtmgt_Event
+    privilegeid: '98ea3f3c-f4a9-4ddc-b914-eac649f30621'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_AttendeePass
+    privilegeid: '52cea23b-d5dd-4e14-a667-ece61df85e67'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_EventTeamMember
+    privilegeid: 'baf819e9-d24e-489f-bbe8-ed0aff4853e4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_eventvendor
+    privilegeid: 'cf003b92-0b9c-403b-bfbb-ee17307b9b0c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_webinarconfiguration
+    privilegeid: '4931fb2c-132a-46db-9aae-ef3867d5ecae'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateContact
+    privilegeid: 'a8bff87f-0df0-41d4-babd-f093faf1e32c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendmsevtmgt_Building
+    privilegeid: '9b178954-c0a7-465e-8f75-f11d41fa596e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdynmkt_matchingstrategy
+    privilegeid: '370eaae8-387e-477c-9647-f19e406287a7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsevtmgt_webinarconsent
+    privilegeid: 'fe22a567-463e-4994-8c51-f24a34d48a3f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_Hotel
+    privilegeid: '04737957-98f1-4c17-b36f-f2e82a6b50fd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_Sponsorship
+    privilegeid: 'd6b1afe5-af7c-4b25-9e7e-f2ff6aee9198'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_webapplication
+    privilegeid: '886147a8-ad8b-48a5-9156-f31b522471bc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_HotelRoomAllocation
+    privilegeid: '7f522c3c-14c8-41a4-a62c-f382d989de56'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_EventTeamMember
+    privilegeid: '039e5f29-6fd3-4c6c-80f0-f3963b67f0a4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_HotelRoomAllocation
+    privilegeid: '01714f9f-6112-4312-90e5-f47b125c2106'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_CheckIn
+    privilegeid: '2e5278eb-c3a4-451a-aa9a-f69ae7542a39'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdynmkt_marketingformsubmission
+    privilegeid: '8bae7f0e-e03e-44da-820e-f6ee5d3d55a3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdynmkt_matchingstrategyattribute
+    privilegeid: '84c60347-76df-4339-afa2-f7bcacc291c0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdynmkt_marketingformfield
+    privilegeid: 'f4af8264-9744-4dd2-a048-f7e410d4d224'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_eventadministration
+    privilegeid: '3f3e4b51-9917-4f40-86bd-f853d7324d34'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_file
+    privilegeid: 'a1e13782-8604-483e-95e5-f85aac9042c1'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_marketingconfiguration
+    privilegeid: '9302fcbf-d5c6-4ddc-ac10-fa6543c0274c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsevtmgt_eventpurchase
+    privilegeid: 'b17b332c-b0b2-4854-a8f4-fb05cb6a1f81'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_waitlistitem
+    privilegeid: '5580826e-a3df-4dac-b75e-fb547030359b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsevtmgt_Layout
+    privilegeid: '0d74d188-7be7-4c79-b866-fb831a62530b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_registrationresponse
+    privilegeid: '3a45f94c-e54a-4ed0-9494-fcede608d0e2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_eventmanagementconfiguration
+    privilegeid: '73242471-0861-43a4-a388-fda10fe6d7d6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_Room
+    privilegeid: '88ff6611-8561-4346-bd81-fdf12dc7e036'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyncrm_marketingconfiguration
+    privilegeid: '00d95ae1-d1e9-40b7-94b4-fe0769763387'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvSharemsevtmgt_Venue
+    privilegeid: '7a6029e6-4ed7-4701-b604-fe1858a550a8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_eventpurchasepass
+    privilegeid: '73f440cc-bc70-4c58-955a-fee89a9fb97c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeletemsevtmgt_eventpurchaseattendee
+    privilegeid: '9f629540-90bd-4ee4-9cfd-ff757598dc86'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsevtmgt_eventcustomregistrationfield
+    privilegeid: 'c6db5ea0-8977-4922-adfd-ff8686edd6a7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+

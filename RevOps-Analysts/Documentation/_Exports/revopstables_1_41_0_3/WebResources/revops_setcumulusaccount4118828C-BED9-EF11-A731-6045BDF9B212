@@ -1,0 +1,32 @@
+function onCumulusOrganizationChange(executionContext) {
+    var formContext = executionContext.getFormContext();
+    var cumulusOrgLookup = formContext.getAttribute("revops_cumulusorganization").getValue();
+
+    if (cumulusOrgLookup && cumulusOrgLookup.length > 0) {
+        var cumulusOrgId = cumulusOrgLookup[0].id;
+
+        Xrm.WebApi.retrieveRecord("revops_cumulusorganization", cumulusOrgId, "?$select=_revops_cumulusaccount_value").then(
+            function (result) {
+                if (result["_revops_cumulusaccount_value"]) {
+                    var cumulusAccountId = result["_revops_cumulusaccount_value"];
+                    var cumulusAccountName = result["_revops_cumulusaccount_value@OData.Community.Display.V1.FormattedValue"];
+
+                    formContext.getAttribute("revops_cumulusaccount").setValue([
+                        {
+                            id: cumulusAccountId,
+                            name: cumulusAccountName,
+                            entityType: "revops_cumulusaccount"
+                        }
+                    ]);
+                } else {
+                    formContext.getAttribute("revops_cumulusaccount").setValue(null);
+                }
+            },
+            function (error) {
+                console.error("Error retrieving Cumulus Account: ", error.message);
+            }
+        );
+    } else {
+        formContext.getAttribute("revops_cumulusaccount").setValue(null);
+    }
+}

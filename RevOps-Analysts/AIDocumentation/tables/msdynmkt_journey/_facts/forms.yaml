@@ -1,0 +1,234 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ''
+        name: tab_2_section_1
+        tab: tab
+        visible: true
+      -
+        label: Settings
+        name: settings_tab_section_1
+        tab: settings
+        visible: true
+    fields:
+      -
+        section: tab_2_section_1
+        tab: tab
+        disabled: false
+        visible: true
+        control_id: msdynmkt_journeyjson
+        field: msdynmkt_journeyjson
+      -
+        section: tab_2_section_1
+        tab: tab
+        disabled: true
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: tab_2_section_1
+        tab: tab
+        disabled: true
+        visible: true
+        control_id: msdynmkt_errorDetails
+        field: msdynmkt_errorDetails
+      -
+        section: tab_2_section_1
+        tab: tab
+        disabled: false
+        visible: true
+        control_id: msdynmkt_baseversionjourneyid
+        field: msdynmkt_baseversionjourneyid
+      -
+        section: tab_2_section_1
+        tab: tab
+        disabled: true
+        visible: true
+        control_id: msdynmkt_versionnumber
+        field: msdynmkt_versionnumber
+      -
+        section: tab_2_section_1
+        tab: tab
+        disabled: false
+        visible: true
+        control_id: msdynmkt_issupersededbylaterversion
+        field: msdynmkt_issupersededbylaterversion
+      -
+        section: tab_2_section_1
+        tab: tab
+        disabled: false
+        visible: true
+        control_id: msdynmkt_frequencycaptype
+        field: msdynmkt_frequencycaptype
+      -
+        section: tab_2_section_1
+        tab: tab
+        disabled: false
+        visible: true
+        control_id: owningbusinessunit
+        field: owningbusinessunit
+      -
+        section: tab_2_section_1
+        tab: tab
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: tab_2_section_1
+        tab: tab
+        disabled: false
+        visible: true
+        control_id: msdynmkt_purpose
+        field: msdynmkt_purpose
+      -
+        section: tab_2_section_1
+        tab: tab
+        disabled: false
+        visible: true
+        control_id: msdynmkt_doubleoptincompliance
+        field: msdynmkt_doubleoptincompliance
+      -
+        section: tab_2_section_1
+        tab: tab
+        disabled: false
+        visible: true
+        control_id: msdynmkt_pauseTime
+        field: msdynmkt_pauseTime
+      -
+        section: tab_2_section_1
+        tab: tab
+        disabled: false
+        visible: true
+        control_id: msdynmkt_automaticResumeTime
+        field: msdynmkt_automaticResumeTime
+      -
+        section: tab_2_section_1
+        tab: tab
+        disabled: false
+        visible: true
+        control_id: msdynmkt_queueTriggers
+        field: msdynmkt_queueTriggers
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msdynmkt_name
+        field: msdynmkt_name
+    description: A form for this entity.
+    tabs:
+      -
+        label: Design
+        name: tab
+        visible: true
+        expanded: true
+      -
+        label: Settings
+        name: settings
+        visible: false
+        expanded: true
+    field_count: 15
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: A card form for this entity.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 4
+    type_name: Card
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: GENERAL
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick View
+

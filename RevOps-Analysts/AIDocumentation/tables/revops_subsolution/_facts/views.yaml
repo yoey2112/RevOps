@@ -1,0 +1,31 @@
+views:
+  -
+    name: 'Active Sub-Solutions'
+    querytype: -1
+    savedqueryid: 'cb0fd173-618e-4918-801b-08ee7d3ec933'
+  -
+    name: 'Inactive Sub-Solutions'
+    querytype: -1
+    savedqueryid: '1426d32a-badf-476d-b5ac-43eacae56a86'
+  -
+    name: 'Sub-Solution Lookup View'
+    querytype: 64
+    savedqueryid: 'e93d5c24-f9b3-4615-9713-555e9842e9f3'
+  -
+    name: 'Quick Find Active Sub-Solutions'
+    querytype: 4
+    savedqueryid: '7901ff7e-69f1-453d-bff6-5922376581fd'
+  -
+    name: 'Sub-Solutions'
+    description: 'All active Sub-Solutions'
+    querytype: 8192
+    savedqueryid: '8699abff-b9c3-ef11-a72f-6045bdcd5088'
+  -
+    name: 'Sub-Solution Associated View'
+    querytype: 2
+    savedqueryid: '35a72f32-3ac1-4f29-9a82-727b72fb5b93'
+  -
+    name: 'Sub-Solution Advanced Find View'
+    querytype: 1
+    savedqueryid: 'ba9ca1dd-4a4c-4640-b804-c0b66f05901e'
+

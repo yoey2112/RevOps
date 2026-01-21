@@ -1,0 +1,67 @@
+relationships:
+  -
+    schemaname: revops_changelog_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_changelog
+  -
+    schemaname: revops_changelog_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_changelog
+  -
+    schemaname: revops_changelog_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_changelog
+  -
+    schemaname: revops_changelog_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_changelog
+  -
+    schemaname: revops_changelog_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_changelog
+  -
+    schemaname: revops_changelog_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_changelog
+  -
+    schemaname: revops_changelog_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_changelog
+  -
+    schemaname: revops_changelog_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_changelog
+  -
+    schemaname: lk_revops_changelog_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_changelog
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_changelog_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_changelog
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_changelog_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_changelog
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_changelog_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_changelog
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_changelog
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_changelog
+    referencedtablelogicalname: organization
+

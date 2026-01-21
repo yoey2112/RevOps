@@ -1,0 +1,23 @@
+views:
+  -
+    savedqueryid: '4e4c931e-5373-4886-8003-38dcc005e9bd'
+    querytype: 1
+    name: Opportunity Close Advanced Find View
+  -
+    savedqueryid: '08ccc142-bf47-4c48-95bd-581273f8c8cb'
+    querytype: 2
+    name: Opportunity Close Associated View
+  -
+    savedqueryid: '991090f9-9717-4132-87e4-78b834f164fd'
+    querytype: 4
+    name: Quick Find Opportunity Closes
+  -
+    savedqueryid: '87ccf4cc-62ad-446e-9369-fb6a23fa9411'
+    querytype: 8192
+    description: Recent opportunity close activities associated with closed opportunities that I have downloaded
+    name: My Recent Opportunity Close Activities
+  -
+    savedqueryid: '0cb3b256-88ae-4040-8c80-fe40ed23ff4b'
+    querytype: -1
+    name: All Opportunity Closes
+

@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '4426e14b-a0fa-ef11-bae1-7c1e5206727f'
+name: Organization Created or Deleted in Cumulus
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

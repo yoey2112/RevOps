@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: 'c4942a87-cdc0-f011-bbd3-7ced8d061554'
+name: '[lead] UK cookie fallback territory'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="msdynmkt_attribute2">
+  <description default="msdynmkt_attribute2">
+    <label description="msdynmkt_attribute2" languagecode="1033" />
+  </description>
+  <displayname default="Attribute2">
+    <label description="Attribute2" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>msdynmkt_attribute2</name>
+  <type>10</type>
+</customapirequestparameter>

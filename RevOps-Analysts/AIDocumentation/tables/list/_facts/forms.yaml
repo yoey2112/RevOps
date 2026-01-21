@@ -1,0 +1,827 @@
+forms:
+  -
+    name: Marketing list
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: Information
+        name: information
+        tab: Summary
+        visible: true
+    fields:
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: listname
+        field: listname
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyncrm_issubscription
+        field: msdyncrm_issubscription
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: type
+        field: type
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: purpose
+        field: purpose
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: createdfromcode
+        field: createdfromcode
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: source
+        field: source
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: lastusedon
+        field: lastusedon
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: lockstatus
+        field: lockstatus
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+    description: 'Marketing list SMB form - Deprecated'
+    tabs:
+      -
+        label: ''
+        name: Summary
+        visible: true
+        expanded: true
+    field_count: 11
+    type_name: Main
+  -
+    name: Marketing list
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Information
+        name: information
+        tab: Summary
+        visible: true
+      -
+        label: Campaigns
+        name: campaigns
+        tab: Summary
+        visible: true
+      -
+        label: Quick Campaigns
+        name: quickcampaigns
+        tab: Summary
+        visible: true
+      -
+        label: InformationSL
+        name: InformationSL
+        tab: SummarySubscriptionListTab
+        visible: true
+      -
+        label: Information2SL
+        name: Information2SL
+        tab: SummarySubscriptionListTab
+        visible: true
+      -
+        label: Members
+        name: members
+        tab: members
+        visible: false
+      -
+        label: Members
+        name: ucimembers
+        tab: members
+        visible: true
+      -
+        label: List Operations
+        name: listoperationssection
+        tab: members
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: notes
+        visible: true
+    fields:
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: listname
+        field: listname
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: type
+        field: type
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyncrm_issubscription
+        field: msdyncrm_issubscription
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: purpose
+        field: purpose
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: createdfromcode
+        field: createdfromcode
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: source
+        field: source
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: cost
+        field: cost
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: lastusedon
+        field: lastusedon
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: lockstatus
+        field: lockstatus
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: statecode
+        field: statecode
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: query
+        field: query
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: membertype
+        field: membertype
+      -
+        section: InformationSL
+        tab: SummarySubscriptionListTab
+        disabled: false
+        visible: true
+        control_id: listname
+        field: listname
+      -
+        section: InformationSL
+        tab: SummarySubscriptionListTab
+        disabled: false
+        visible: true
+        control_id: purpose
+        field: purpose
+      -
+        section: InformationSL
+        tab: SummarySubscriptionListTab
+        disabled: false
+        visible: true
+        control_id: source
+        field: source
+      -
+        section: InformationSL
+        tab: SummarySubscriptionListTab
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Information2SL
+        tab: SummarySubscriptionListTab
+        disabled: true
+        visible: true
+        control_id: msdyncrm_issubscription
+        field: msdyncrm_issubscription
+      -
+        section: Information2SL
+        tab: SummarySubscriptionListTab
+        disabled: true
+        visible: true
+        control_id: type
+        field: type
+      -
+        section: Information2SL
+        tab: SummarySubscriptionListTab
+        disabled: true
+        visible: true
+        control_id: createdfromcode
+        field: createdfromcode
+      -
+        section: Information2SL
+        tab: SummarySubscriptionListTab
+        disabled: true
+        visible: true
+        control_id: lockstatus
+        field: lockstatus
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_lockstatus
+        field: lockstatus
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_lastusedon
+        field: lastusedon
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Updated default Marketing List form
+    tabs:
+      -
+        label: Summary
+        name: Summary
+        visible: false
+        expanded: true
+      -
+        label: Summary
+        name: SummarySubscriptionListTab
+        visible: false
+        expanded: true
+      -
+        label: Members
+        name: members
+        visible: true
+        expanded: true
+      -
+        label: Notes
+        name: notes
+        visible: true
+        expanded: false
+    field_count: 27
+    type_name: Main
+  -
+    name: Property Page View
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: section
+        name: list_mainTab
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: list_mainTab
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: listname
+        field: listname
+      -
+        section: list_mainTab
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: purpose
+        field: purpose
+      -
+        section: list_mainTab
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+      -
+        section: list_mainTab
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: list_mainTab
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: list_mainTab
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: null
+    tabs:
+      -
+        label: Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Quick View
+  -
+    name: Marketing List Light
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Information
+        name: information
+        tab: Summary
+        visible: true
+      -
+        label: Members
+        name: ucimembers
+        tab: Summary
+        visible: true
+      -
+        label: Members
+        name: members
+        tab: Summary
+        visible: false
+      -
+        label: Section
+        name: Summary_section_5
+        tab: Summary
+        visible: true
+      -
+        label: Campaigns
+        name: campaigns
+        tab: Summary
+        visible: true
+      -
+        label: Quick Campaigns
+        name: quickcampaigns
+        tab: Summary
+        visible: true
+      -
+        label: Section
+        name: Summary_section_4
+        tab: Summary
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: notes
+        visible: true
+    fields:
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: listname
+        field: listname
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: type
+        field: type
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: purpose
+        field: purpose
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: createdfromcode
+        field: createdfromcode
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: source
+        field: source
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: cost
+        field: cost
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: lastusedon
+        field: lastusedon
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: lockstatus
+        field: lockstatus
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: statecode
+        field: statecode
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: query
+        field: query
+      -
+        section: information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: membertype
+        field: membertype
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_lockstatus
+        field: lockstatus
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_lastusedon
+        field: lastusedon
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Updated classic Marketing List form
+    tabs:
+      -
+        label: Summary
+        name: Summary
+        visible: true
+        expanded: true
+      -
+        label: Notes
+        name: notes
+        visible: true
+        expanded: false
+    field_count: 18
+    type_name: Main
+  -
+    name: Information (deprecated)
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: Marketing List Information
+        name: marketing list information
+        tab: general
+        visible: true
+      -
+        label: Description
+        name: description
+        tab: general
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: notes
+        visible: true
+    fields:
+      -
+        section: marketing list information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: listname
+        field: listname
+      -
+        section: marketing list information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdfromcode
+        field: createdfromcode
+      -
+        section: marketing list information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: type
+        field: type
+      -
+        section: marketing list information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: purpose
+        field: purpose
+      -
+        section: marketing list information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: source
+        field: source
+      -
+        section: marketing list information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: marketing list information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: marketing list information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: cost
+        field: cost
+      -
+        section: marketing list information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: lastusedon
+        field: lastusedon
+      -
+        section: marketing list information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: lockstatus
+        field: lockstatus
+      -
+        section: marketing list information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: description
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+    description: A form for this entity (deprecated)
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Notes
+        name: notes
+        visible: true
+        expanded: false
+    field_count: 12
+    type_name: Main
+  -
+    name: Marketing list quick view
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Section
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: listname
+        field: listname
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyncrm_issubscription
+        field: msdyncrm_issubscription
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: type
+        field: type
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: purpose
+        field: purpose
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: createdfromcode
+        field: createdfromcode
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: source
+        field: source
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: lastusedon
+        field: lastusedon
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: lockstatus
+        field: lockstatus
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+    description: null
+    tabs:
+      -
+        label: Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 11
+    type_name: Quick View
+

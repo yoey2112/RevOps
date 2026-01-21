@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '6a5560fe-157d-f011-b4cc-7ced8d04f24d'
+name: 'Update Last Interaction - Portal Comment'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

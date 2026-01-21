@@ -1,0 +1,98 @@
+views:
+  -
+    name: '06 Active subscription lists - light view'
+    querytype: -1
+    savedqueryid: '6becd0df-8978-e911-a820-000d3a3ae762'
+  -
+    name: Active Static Subscription Lists for Contact
+    querytype: 64
+    savedqueryid: '5b947342-990d-e811-8130-000d3aa22439'
+  -
+    name: Active Marketing Lists Brief
+    description: Select view of Active Marketing Lists
+    querytype: 2
+    savedqueryid: '6e255efb-607b-e211-b3b3-00155d894f2e'
+  -
+    name: '10 Campaign marketing lists'
+    description: Display Marketing Lists for the Campaign record.
+    querytype: -1
+    savedqueryid: 'b1b7f81b-c780-e211-90f7-00155d89bb01'
+  -
+    name: '01 Active subscription lists'
+    querytype: -1
+    savedqueryid: 'cd5d6080-5a60-e911-b821-00155d961f09'
+  -
+    name: '03 My subscription lists'
+    querytype: -1
+    savedqueryid: '9d8c69e9-ffaf-4a10-8ea6-17ecba4d0761'
+  -
+    name: Lists For Campaign
+    querytype: 64
+    savedqueryid: 'b4e49a57-0229-4087-837c-45e1bdd7dd38'
+  -
+    name: All recently changed active Lists owned by me
+    description: All recently changed active Lists owned by me
+    querytype: 8192
+    savedqueryid: 'ab0fd8b6-085b-44f2-8dee-5d556c97c555'
+  -
+    name: Marketing List Advanced Find View
+    querytype: 1
+    savedqueryid: 'a6650cbd-67bf-4b27-bb41-5f88d64531a1'
+  -
+    name: '12 Marketing lists used in last 6 months'
+    querytype: -1
+    savedqueryid: '8d80f4ac-c8e2-417f-85fb-67126920c6d4'
+  -
+    name: Marketing List Lookup View
+    querytype: 64
+    savedqueryid: 'f500d0fa-a21e-47fb-b0c6-7be373175895'
+  -
+    name: '07 Active marketing lists'
+    querytype: -1
+    savedqueryid: '7d7737d8-1a05-4abb-bebd-843404a83dad'
+  -
+    name: '14 Unused Marketing Lists'
+    querytype: -1
+    savedqueryid: '89e2a15d-1b9b-4cb9-a6d7-930a2332f8d7'
+  -
+    name: '11 Lists associated with the owner'
+    querytype: -1
+    savedqueryid: 'b21acaf1-ab60-4761-bc05-9575784a6f80'
+  -
+    name: Marketing List Associated View
+    querytype: 2
+    savedqueryid: 'bdd93547-53f6-4609-b591-9f48ce86295f'
+  -
+    name: Basic Marketing Lists
+    querytype: 64
+    savedqueryid: '577ea96e-b1f6-499b-98a7-abb5be8233f9'
+  -
+    name: '08 My active marketing lists'
+    querytype: -1
+    savedqueryid: '823b9210-b82a-4b11-b0f6-b9e4c9c8403f'
+  -
+    name: '02 My active subscription lists'
+    querytype: -1
+    savedqueryid: 'a61679b5-9689-417e-a312-c0a988a69caa'
+  -
+    name: '13 My connections'
+    description: Shows all active instances of the list that the current user is connected to via an active connection
+    querytype: -1
+    savedqueryid: 'f33b0c61-c5a9-4881-8275-c2dc63626251'
+  -
+    name: '04 Inactive subscription lists'
+    querytype: -1
+    savedqueryid: '7c5b54ac-3ccb-4d0e-a956-de2a530b38f6'
+  -
+    name: '09 Inactive marketing lists'
+    querytype: -1
+    savedqueryid: '8a9a7a15-687d-46fd-a78b-e1814a975876'
+  -
+    name: '05 My inactive subscription lists'
+    querytype: -1
+    savedqueryid: '98706a92-5f53-4fc5-9d9b-e265a606dba0'
+  -
+    name: Quick Find Active Marketing Lists
+    querytype: 4
+    savedqueryid: '3535c5b5-dbbf-46ae-b860-fc9149b60411'
+

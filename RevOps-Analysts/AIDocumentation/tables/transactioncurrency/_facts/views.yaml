@@ -1,0 +1,35 @@
+views:
+  -
+    name: Quick Find All Currencies
+    querytype: 4
+    savedqueryid: '21e59cb2-0691-42d5-b17e-0b0ab552e427'
+  -
+    name: Inactive Currencies
+    querytype: -1
+    savedqueryid: 'a2420357-be1d-4480-8da8-0ee8c33cd95a'
+  -
+    name: All Currencies Associated View
+    querytype: 2
+    savedqueryid: 'be87bffc-5a00-4b77-8979-14b8db8fa310'
+  -
+    name: Currency Advanced Find View
+    querytype: 1
+    savedqueryid: '03b869f9-5c8e-43ba-be3f-43ed965de59d'
+  -
+    name: Currency list
+    description: Currency list obtained from .NET
+    querytype: 2048
+    savedqueryid: '1a364391-bf41-407b-b91f-5c326baf0a3b'
+  -
+    name: All Currencies
+    querytype: -1
+    savedqueryid: 'e70701bd-134e-41a7-be66-67d8dd30d0e3'
+  -
+    name: Active Currencies
+    querytype: -1
+    savedqueryid: 'c8f16d88-e49c-48dd-af54-a6bd5102c439'
+  -
+    name: Currency Lookup View
+    querytype: 64
+    savedqueryid: 'cd5625b0-dda8-4ee2-b13f-b9331e027c8a'
+

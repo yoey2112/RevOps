@@ -1,0 +1,37 @@
+<appaction uniquename="revops__SendP2PEmail!76964193f8c042b38b44240bbc8a1b0b!msdyn_CustomerServiceWorkspace!revops_transfer!2">
+  <appmoduleid>
+    <uniquename>msdyn_CustomerServiceWorkspace</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Send P2P Email">
+    <label description="Send P2P Email" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>revops_transfer</logicalname>
+  </contextentity>
+  <contextvalue>revops_transfer</contextvalue>
+  <fonticon>$clientsvg:Mail</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>2</location>
+  <name>SendP2PEmail!76964193f8c042b38b44240bbc8a1b0b</name>
+  <onclickeventjavascriptfunctionname>revops_sendTransferEmail</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":5},{"type":23}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>d6c0efe2-d89a-f011-b41c-6045bdfa0630</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100005.5000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilityformulacomponentlibraryid>
+    <name>revops_customerserviceworkspacedefaultcommandlibrary_0e9dc</name>
+  </visibilityformulacomponentlibraryid>
+  <visibilityformulacomponentname>30dc8978c2e9432d88b8d7090e01f7fb</visibilityformulacomponentname>
+  <visibilityformulafunctionname>Visible</visibilityformulafunctionname>
+  <visibilitytype>1</visibilitytype>
+</appaction>

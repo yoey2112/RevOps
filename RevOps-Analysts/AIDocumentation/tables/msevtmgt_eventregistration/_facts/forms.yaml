@@ -1,0 +1,425 @@
+forms:
+  -
+    name: Contact of the event registration
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Section
+        name: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        visible: true
+    fields:
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_contactid
+        field: msevtmgt_contactid
+    description: null
+    tabs:
+      -
+        label: Tab
+        name: GeneralTab
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Quick View
+  -
+    name: Event of the event registration
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Section
+        name: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        visible: true
+    fields:
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_eventid
+        field: msevtmgt_eventid
+    description: null
+    tabs:
+      -
+        label: Tab
+        name: GeneralTab
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Quick View
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msevtmgt_name
+        field: msevtmgt_name
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msevtmgt_contactid
+        field: msevtmgt_contactid
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick View
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Details
+        name: '{b8fb35be-1401-4f23-8a93-62e520c669ad}'
+        tab: GeneralTab
+        visible: true
+      -
+        label: Attendee profile
+        name: '{0ac965cc-f4c1-44d5-b2a2-c7235987d6ab}_section_3'
+        tab: GeneralTab
+        visible: true
+      -
+        label: Notes
+        name: ''
+        tab: GeneralTab
+        visible: true
+      -
+        label: Go to Webinar
+        name: GeneralTab_section_6
+        tab: GeneralTab
+        visible: true
+      -
+        label: Attendee passes
+        name: '{0ac965cc-f4c1-44d5-b2a2-c7235987d6ab}_section_4'
+        tab: GeneralTab
+        visible: true
+      -
+        label: Registration responses
+        name: registration_responses_section
+        tab: RegistrationResponsesTab
+        visible: true
+      -
+        label: Eligible sessions
+        name: eligible_sessions_section
+        tab: SessionEligibleTab
+        visible: true
+      -
+        label: Session registrations
+        name: session_registrations_section
+        tab: SessionRegistrationTab
+        visible: true
+      -
+        label: Custom registration fields
+        name: custom_registration_fields_tab_section_1
+        tab: CustomRegistrationFieldsTab
+        visible: true
+      -
+        label: 'Sessions check-ins'
+        name: SessionCheckinTab_section_1
+        tab: SessionCheckinTab
+        visible: true
+      -
+        label: 'Sessions check-ins'
+        name: SessionCheckinTab_section_2
+        tab: SessionCheckinTab
+        visible: false
+    fields:
+      -
+        section: '{b8fb35be-1401-4f23-8a93-62e520c669ad}'
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_primaryrole
+        field: msevtmgt_primaryrole
+      -
+        section: '{b8fb35be-1401-4f23-8a93-62e520c669ad}'
+        tab: GeneralTab
+        disabled: true
+        visible: true
+        control_id: msevtmgt_name
+        field: msevtmgt_name
+      -
+        section: '{b8fb35be-1401-4f23-8a93-62e520c669ad}'
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_contactid
+        field: msevtmgt_contactid
+      -
+        section: '{b8fb35be-1401-4f23-8a93-62e520c669ad}'
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: CompanyForContact
+        field: msevtmgt_contactid
+      -
+        section: '{b8fb35be-1401-4f23-8a93-62e520c669ad}'
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: '{b8fb35be-1401-4f23-8a93-62e520c669ad}'
+        tab: GeneralTab
+        disabled: true
+        visible: true
+        control_id: RegistrationCheckInControl
+        field: msevtmgt_name
+      -
+        section: '{b8fb35be-1401-4f23-8a93-62e520c669ad}'
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_invited
+        field: msevtmgt_invited
+      -
+        section: '{b8fb35be-1401-4f23-8a93-62e520c669ad}'
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_eventid
+        field: msevtmgt_eventid
+      -
+        section: '{b8fb35be-1401-4f23-8a93-62e520c669ad}'
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_qrcode
+        field: msevtmgt_qrcode
+      -
+        section: '{b8fb35be-1401-4f23-8a93-62e520c669ad}'
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: '{b8fb35be-1401-4f23-8a93-62e520c669ad}'
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_registrationstatus
+        field: msevtmgt_registrationstatus
+      -
+        section: '{b8fb35be-1401-4f23-8a93-62e520c669ad}'
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_registrationnotificationseen
+        field: msevtmgt_registrationnotificationseen
+      -
+        section: '{b8fb35be-1401-4f23-8a93-62e520c669ad}'
+        tab: GeneralTab
+        disabled: true
+        visible: true
+        control_id: msevtmgt_webinarregistrationid
+        field: msevtmgt_webinarregistrationid
+      -
+        section: '{b8fb35be-1401-4f23-8a93-62e520c669ad}'
+        tab: GeneralTab
+        disabled: true
+        visible: true
+        control_id: msevtmgt_iscanceled
+        field: msevtmgt_iscanceled
+      -
+        section: '{0ac965cc-f4c1-44d5-b2a2-c7235987d6ab}_section_3'
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_companysize
+        field: msevtmgt_companysize
+      -
+        section: '{0ac965cc-f4c1-44d5-b2a2-c7235987d6ab}_section_3'
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_industry
+        field: msevtmgt_industry
+      -
+        section: '{0ac965cc-f4c1-44d5-b2a2-c7235987d6ab}_section_3'
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_yearsinindustry
+        field: msevtmgt_yearsinindustry
+      -
+        section: '{0ac965cc-f4c1-44d5-b2a2-c7235987d6ab}_section_3'
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_area
+        field: msevtmgt_area
+      -
+        section: GeneralTab_section_6
+        tab: GeneralTab
+        disabled: true
+        visible: true
+        control_id: revops_registrationkey
+        field: revops_registrationkey
+      -
+        section: GeneralTab_section_6
+        tab: GeneralTab
+        disabled: true
+        visible: true
+        control_id: revops_webinarurl
+        field: revops_webinarurl
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_createdon
+        field: createdon
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_createdby
+        field: createdby
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statecode
+        field: statecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+    description: A form for this entity
+    tabs:
+      -
+        label: General
+        name: GeneralTab
+        visible: true
+        expanded: true
+      -
+        label: Registration responses
+        name: RegistrationResponsesTab
+        visible: true
+        expanded: true
+      -
+        label: Sessions eligible with pass
+        name: SessionEligibleTab
+        visible: true
+        expanded: true
+      -
+        label: Session registrations
+        name: SessionRegistrationTab
+        visible: true
+        expanded: true
+      -
+        label: Custom registration fields
+        name: CustomRegistrationFieldsTab
+        visible: false
+        expanded: true
+      -
+        label: 'Session check-ins'
+        name: SessionCheckinTab
+        visible: true
+        expanded: true
+    field_count: 24
+    type_name: Main
+  -
+    name: Event registration quick create
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: Section
+        name: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        visible: true
+      -
+        label: Section
+        name: GeneralTab_column_2_section_1
+        tab: GeneralTab
+        visible: true
+      -
+        label: Section
+        name: GeneralTab_column_3_section_1
+        tab: GeneralTab
+        visible: true
+    fields:
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_primaryrole
+        field: msevtmgt_primaryrole
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_contactid
+        field: msevtmgt_contactid
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_eventid
+        field: msevtmgt_eventid
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_invited
+        field: msevtmgt_invited
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: EventCustomUnmappedFields
+        field: msevtmgt_eventid
+    description: null
+    tabs:
+      -
+        label: Tab
+        name: GeneralTab
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Quick Create
+

@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '169b861b-fa16-f011-998a-7ced8d04f24d'
+name: '[Activity email] - stamp sql date'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

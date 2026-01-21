@@ -1,0 +1,64 @@
+views:
+  -
+    name: 'Event check-ins parent events'
+    querytype: 2
+    savedqueryid: '993e9fca-cfa2-e711-811c-000d3a743413'
+  -
+    name: 'Session check-ins parent events'
+    querytype: 2
+    savedqueryid: '4e22561c-d0a2-e711-811c-000d3a743413'
+  -
+    name: 'Active session check-ins'
+    querytype: 2
+    savedqueryid: '2a7fb39c-d3d8-e611-80d8-00155d4b262e'
+  -
+    name: 'My check-ins'
+    querytype: 8192
+    savedqueryid: 'ed49e888-3c0d-e611-80d3-00155db19170'
+  -
+    name: 'Event check-in'
+    description: 'Displays all check-ins related to an event and not a session'
+    querytype: 2
+    savedqueryid: 'b2819344-9c6e-e611-80d6-00155db66667'
+  -
+    name: 'Session check-ins subgrid view'
+    querytype: 2
+    savedqueryid: '39ca65fa-ad13-e611-80d3-00155db852b2'
+  -
+    name: Active session attendees
+    querytype: 2
+    savedqueryid: '73b05d41-7b1b-e611-80d6-00155ded2f1b'
+  -
+    name: 'Session check-ins with session details'
+    querytype: 2
+    savedqueryid: '4e55bd98-b81d-e611-80d6-00155ded2f1b'
+  -
+    name: msevtmgt_EventMainCheckins
+    description: To be used in the main event form
+    querytype: 2
+    savedqueryid: '5404685e-d43e-e611-80d6-00155df8bf02'
+  -
+    name: 'Check-in lookup view'
+    querytype: 64
+    savedqueryid: '0463ded4-be31-426c-aa1f-74437f9d4c36'
+  -
+    name: 'Active check-ins'
+    querytype: -1
+    savedqueryid: 'a607876d-ccce-404f-beb2-7531477015d1'
+  -
+    name: 'Check-in advanced find view'
+    querytype: 1
+    savedqueryid: 'ea537804-031e-42c0-983a-7e5d6063a165'
+  -
+    name: 'Quick find active check-ins'
+    querytype: 4
+    savedqueryid: '5f77b745-2eb2-464e-9fa6-ab567281e829'
+  -
+    name: 'Inactive check-ins'
+    querytype: -1
+    savedqueryid: '93cdcc79-f90a-4bcb-805d-c7aa443133ae'
+  -
+    name: 'Check-in associated view'
+    querytype: 2
+    savedqueryid: '707c45b8-70fb-41f9-aea9-dc22f7bfc2ef'
+

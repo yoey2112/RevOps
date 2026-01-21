@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 4
+    uniquename: msdyn_ProjectServiceCore
+    appmoduleid: '3470cace-39a5-f011-bbd3-7ced8d376572'
+    name: Project
+

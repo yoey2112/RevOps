@@ -1,0 +1,137 @@
+relationships:
+  -
+    schemaname: msdynmkt_marketingformsubmission_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: msdynmkt_marketingformsubmission
+  -
+    schemaname: msdynmkt_marketingformsubmission_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdynmkt_marketingformsubmission
+  -
+    schemaname: msdynmkt_marketingformsubmission_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdynmkt_marketingformsubmission
+  -
+    schemaname: msdynmkt_marketingformsubmission_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: msdynmkt_marketingformsubmission
+  -
+    schemaname: msdynmkt_marketingformsubmission_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: msdynmkt_marketingformsubmission
+  -
+    schemaname: msdynmkt_marketingformsubmission_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: msdynmkt_marketingformsubmission
+  -
+    schemaname: msdynmkt_marketingformsubmission_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: msdynmkt_marketingformsubmission
+  -
+    schemaname: msdynmkt_marketingformsubmission_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: msdynmkt_marketingformsubmission
+  -
+    schemaname: msdynmkt_marketingformsubmission_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: msdynmkt_marketingformsubmission
+  -
+    schemaname: msdynmkt_marketingformsubmission_field
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_marketingfieldsubmission
+    referencedtablelogicalname: msdynmkt_marketingformsubmission
+  -
+    schemaname: msdynmkt_marketingformsubmission_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: msdynmkt_marketingformsubmission
+  -
+    schemaname: lk_msdynmkt_marketingformsubmission_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_marketingformsubmission_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_marketingformsubmission_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_marketingformsubmission_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_msdynmkt_marketingformsubmission
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_msdynmkt_marketingformsubmission
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_msdynmkt_marketingformsubmission
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_msdynmkt_marketingformsubmission
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: msdynmkt_compliancesettings4_formsubmission
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: msdynmkt_compliancesettings4
+  -
+    schemaname: msdynmkt_marketingformsubmission_createdentity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: msdynmkt_createdentitylink
+  -
+    schemaname: msdynmkt_marketingformsubmission_customerjourneyid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: msdynmkt_marketingformsubmission_emailid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: msdynmkt_marketingformsubmission_eventregistration
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: msevtmgt_eventregistration
+  -
+    schemaname: msdynmkt_marketingformsubmission_marketingform
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: msdynmkt_marketingform
+  -
+    schemaname: revops_contact_contact_formsubmissionid_msdynmkt
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: contact
+  -
+    schemaname: revops_msdynmkt_marketingformsubmission_leadformsubmissionid_lead
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: lead
+

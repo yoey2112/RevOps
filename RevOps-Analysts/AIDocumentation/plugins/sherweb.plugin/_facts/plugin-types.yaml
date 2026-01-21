@@ -1,0 +1,6 @@
+types:
+  -
+    plugintypeid: '123d627a-e99d-4abd-8c72-bb51afe4a915'
+    typename: sherweb.plugin.PhoneCall
+    name: sherweb.plugin.PhoneCall
+

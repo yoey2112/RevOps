@@ -1,0 +1,262 @@
+relationships:
+  -
+    schemaname: revops_mwhaccount_ActivityPointers
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_msfp_surveyinvites
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyinvite
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_msdyn_ocsessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocsession
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_adx_alertsubscriptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_alertsubscription
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_adx_portalcomments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_portalcomment
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_revops_cumulussignups
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_msfp_surveyresponses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_msdyn_comments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_comment
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_revops_demos
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_demo
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_revops_onboardingcalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_msdyn_ocvoicemails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocvoicemail
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_li_inmails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_inmail
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_revops_cadencecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_li_pointdrivepresentationvieweds
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_pointdrivepresentationviewed
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_revops_businessreviews
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_businessreview
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_msdyn_bookingalerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_bookingalert
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_msfp_alerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_alert
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_li_messages
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_message
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_adx_inviteredemptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_inviteredemption
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_revops_inpersonmeetings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_inpersonmeeting
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_chats
+    relationshiptype: OneToMany
+    referencingtablelogicalname: chat
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_msdyn_approvals
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_approval
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_msdyn_copilottranscripts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_copilottranscript
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_msdyn_ocliveworkitems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_Appointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_Emails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_Faxes
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fax
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_Letters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: letter
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_PhoneCalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_Tasks
+    relationshiptype: OneToMany
+    referencingtablelogicalname: task
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_RecurringAppointmentMasters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: recurringappointmentmaster
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_SocialActivities
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialactivity
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_ServiceAppointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: serviceappointment
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_mwhaccount_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_incident_mwhaccount_revops_mwhaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: lk_revops_mwhaccount_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_mwhaccount
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_mwhaccount_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_mwhaccount
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_mwhaccount_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_mwhaccount
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_mwhaccount_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_mwhaccount
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_revops_mwhaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_mwhaccount
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_revops_mwhaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_mwhaccount
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_revops_mwhaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_mwhaccount
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_revops_mwhaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_mwhaccount
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: TransactionCurrency_revops_mwhaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_mwhaccount
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_mwhaccount_account_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_mwhaccount
+    referencedtablelogicalname: account
+

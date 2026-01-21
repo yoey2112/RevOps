@@ -1,0 +1,8 @@
+appmoduleid: 'bc12b43c-1820-ef11-840b-6045bd5ea018'
+appmoduleversion: null
+clienttype: 4
+url: null
+description: Team Member access to the Dynamics 365 Sales app module.
+name: Sales Team Member
+uniquename: msdyn_TeamMember_Sales
+

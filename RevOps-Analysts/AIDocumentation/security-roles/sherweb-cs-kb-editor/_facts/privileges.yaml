@@ -1,0 +1,147 @@
+privileges:
+  -
+    privilege_name: prvAppendToKnowledgeArticle
+    privilegeid: 'a883efd1-dc97-441e-8a6d-08d642277793'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_kbattachment
+    privilegeid: '6097e86d-e6f3-4ae4-bd4c-1448b76d2436'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_knowledgearticletemplate
+    privilegeid: 'd33ea039-9e4a-4020-b082-26c52c7429d3'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_knowledgearticletemplate
+    privilegeid: 'e894ca2b-6acc-42ec-a5a8-3285e455981d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_kbattachment
+    privilegeid: '03caeda6-89ea-47f8-bb85-4078b3711b12'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_knowledgearticleimage
+    privilegeid: '7a27a540-7e1f-42af-b93c-437e3c2516a6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSharePointData
+    privilegeid: 'fecbd29c-df64-4ede-a611-47226b402c22'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSdkMessage
+    privilegeid: '94c3ac2c-eb23-41cb-a903-4e2e49e910b4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteKnowledgeArticle
+    privilegeid: 'be55bd8e-4f83-41aa-8d80-539aba73f404'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadKnowledgeArticle
+    privilegeid: '67000c2a-56c5-4af6-8b52-63dc7d2d3201'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteSharePointData
+    privilegeid: 'cfdd12cf-090b-4599-8302-771962d2350a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_knowledgearticletemplate
+    privilegeid: '01d24cae-d0c3-4b1d-963b-7d19270183ca'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_kbattachment
+    privilegeid: '6b754ba2-a0e6-4f78-9266-8085bd39fad7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSdkMessageProcessingStepImage
+    privilegeid: '122e085f-8c52-47e8-8415-875dee1c961e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_kbattachment
+    privilegeid: '7fa26432-b2b1-4626-9882-8ef0d4b43e4c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_kbattachment
+    privilegeid: '16879bc7-b703-489d-80e3-9c2690781207'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_knowledgearticletemplate
+    privilegeid: 'ff781026-791c-4019-935d-9d74f2033f5b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_knowledgearticleimage
+    privilegeid: 'c40bb622-a28d-40e5-a22c-a9494731ad9d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyn_knowledgearticleimage
+    privilegeid: 'ac11ece7-a13a-46b8-9483-ab31faf3e33e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreatemsdyn_knowledgearticleimage
+    privilegeid: '6651d7b5-a501-45b4-a271-b0d91b187154'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendKnowledgeArticle
+    privilegeid: '1b9d9823-d381-46ac-928e-b3b97a0995ef'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateKnowledgeArticle
+    privilegeid: 'a4961bea-487e-4726-b85b-be9ae3ddc0fe'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSdkMessageProcessingStep
+    privilegeid: 'db10a828-ec49-4035-8b7e-c58efaf169ec'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadPluginAssembly
+    privilegeid: 'f5b50296-a212-488a-be92-cbcca8971717'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateSharePointData
+    privilegeid: '5eb85025-363b-46ea-a77e-ce24159cd231'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadPluginType
+    privilegeid: '9365005c-4703-473b-8d3c-d073cfd8670c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSharePointDocument
+    privilegeid: 'd71fc8d0-99bc-430e-abd7-d95c64f11e9c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWritemsdyn_knowledgearticleimage
+    privilegeid: '7c15c1b3-b537-4980-8f8e-ea359635411c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyn_knowledgearticletemplate
+    privilegeid: 'fbb5bd6f-0f80-4273-becd-f5aa3eae8a0c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+

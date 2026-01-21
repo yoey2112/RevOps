@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '0cbf6af4-007d-f011-b4cc-7c1e52409afe'
+name: 'Update Last Interaction - Email'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

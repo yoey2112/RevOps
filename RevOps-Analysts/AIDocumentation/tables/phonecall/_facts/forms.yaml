@@ -1,0 +1,1013 @@
+forms:
+  -
+    name: Phone Call Reference Panel
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: PHONE CALL DETAILS
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: DESCRIPTION
+        name: tab_1_section_2
+        tab: tab_1
+        visible: true
+      -
+        label: OTHER DETAILS
+        name: tab_1_section_3
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: phonenumber
+        field: phonenumber
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: statecode
+        field: statecode
+      -
+        section: tab_1_section_2
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: tab_1_section_3
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: tab_1_section_3
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: tab_1_section_3
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: directioncode
+        field: directioncode
+      -
+        section: tab_1_section_3
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: A form that displays Reference Panel of Phone Call.
+    tabs:
+      -
+        label: ''
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 11
+    type_name: Quick View
+  -
+    name: Phone Call
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General Information
+        name: general information
+        tab: phonecall
+        visible: true
+      -
+        label: Description
+        name: phone call description
+        tab: phonecall
+        visible: true
+      -
+        label: Phone Call Details
+        name: phone call details
+        tab: phonecall
+        visible: true
+      -
+        label: Section
+        name: tab_2_section_2
+        tab: phonecall
+        visible: true
+      -
+        label: Call Summary
+        name: tab_ci_section_call_summary
+        tab: tab_ci_call_summary
+        visible: true
+      -
+        label: Notes
+        name: tab_ci_section_notes
+        tab: tab_ci_notes
+        visible: true
+      -
+        label: Timeline Section
+        name: timeline_section
+        tab: tab_notes
+        visible: true
+    fields:
+      -
+        section: general information
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: general information
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: general information
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: general information
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: phonenumber
+        field: phonenumber
+      -
+        section: general information
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: directioncode
+        field: directioncode
+      -
+        section: phone call description
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: phone call details
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: phone call details
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: phone call details
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: tab_ci_section_call_summary
+        tab: tab_ci_call_summary
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: tab_ci_section_notes
+        tab: tab_ci_notes
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_priority
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: scheduledend
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Updated Default Phone Call Form
+    tabs:
+      -
+        label: Phone Call
+        name: phonecall
+        visible: true
+        expanded: true
+      -
+        label: Call Summary
+        name: tab_ci_call_summary
+        visible: false
+        expanded: true
+      -
+        label: Notes
+        name: tab_ci_notes
+        visible: false
+        expanded: true
+      -
+        label: Timeline
+        name: tab_notes
+        visible: false
+        expanded: true
+    field_count: 15
+    type_name: Main
+  -
+    name: Phone Call for Interactive experience
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Regarding
+        name: tab_2_section_1
+        tab: tab_2
+        visible: true
+      -
+        label: DETAILS
+        name: tab_2_section_4
+        tab: tab_2
+        visible: true
+      -
+        label: Description
+        name: tab_2_section_2
+        tab: tab_2
+        visible: true
+    fields:
+      -
+        section: tab_2_section_1
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: tab_2_section_4
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: tab_2_section_4
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: tab_2_section_4
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: tab_2_section_4
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: phonenumber
+        field: phonenumber
+      -
+        section: tab_2_section_4
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: directioncode
+        field: directioncode
+      -
+        section: tab_2_section_4
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: tab_2_section_4
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: tab_2_section_2
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: scheduledend
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Default Interactive experience Phone Call form.
+    tabs:
+      -
+        label: Phone Call
+        name: tab_2
+        visible: true
+        expanded: true
+    field_count: 13
+    type_name: Main
+  -
+    name: 'Dialer customization - post call'
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: 'Dialer customization - post call'
+        name: 'Dialer customization - post call'
+        tab: phonecall
+        visible: true
+    fields:
+      -
+        section: 'Dialer customization - post call'
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_priority
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: scheduledend
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: 'Form to customize. Includes by default Status Reason (disposition) field. will be shown post call, in details tab'
+    tabs:
+      -
+        label: Phone Call
+        name: phonecall
+        visible: true
+        expanded: true
+    field_count: 5
+    type_name: Main
+  -
+    name: Quick Form
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Information
+        name: information
+        tab: general
+        visible: true
+    fields:
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: directioncode
+        field: directioncode
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: leftvoicemail
+        field: leftvoicemail
+    description: This is the form that is displayed for the Dynamics 365 quick form.
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+    field_count: 7
+    type_name: Quick View
+  -
+    name: Phone Call Card form
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: ''
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: ''
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: ''
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ColorStrip
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: scheduledstart
+        field: scheduledstart
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: CardFooter
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: CardFooter
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: Default Phone Call card form.
+    tabs:
+      -
+        label: Phone Call Card
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 10
+    type_name: Card
+  -
+    name: Phone call quick create form.
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: ''
+        name: PhoneCall_Description
+        tab: PhoneCall_Tab_1
+        visible: true
+      -
+        label: DESCRIPTION
+        name: PhoneCall_Description_2
+        tab: PhoneCall_Tab_1
+        visible: true
+      -
+        label: ''
+        name: PhoneCall_Description_3
+        tab: PhoneCall_Tab_1
+        visible: true
+    fields:
+      -
+        section: PhoneCall_Description
+        tab: PhoneCall_Tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: PhoneCall_Description
+        tab: PhoneCall_Tab_1
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: PhoneCall_Description
+        tab: PhoneCall_Tab_1
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: PhoneCall_Description
+        tab: PhoneCall_Tab_1
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: PhoneCall_Description
+        tab: PhoneCall_Tab_1
+        disabled: false
+        visible: true
+        control_id: directioncode
+        field: directioncode
+      -
+        section: PhoneCall_Description_2
+        tab: PhoneCall_Tab_1
+        disabled: false
+        visible: true
+        control_id: phonenumber
+        field: phonenumber
+      -
+        section: PhoneCall_Description_2
+        tab: PhoneCall_Tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: PhoneCall_Description_2
+        tab: PhoneCall_Tab_1
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: PhoneCall_Description_3
+        tab: PhoneCall_Tab_1
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: PhoneCall_Description_3
+        tab: PhoneCall_Tab_1
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: PhoneCall_Description_3
+        tab: PhoneCall_Tab_1
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+    description: Phone call quick create form.
+    tabs:
+      -
+        label: General
+        name: PhoneCall_Tab_1
+        visible: true
+        expanded: true
+    field_count: 11
+    type_name: Quick Create
+  -
+    name: Phonecall card
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: Color Strip
+        name: Color Strip
+        tab: ''
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: ''
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: ''
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: Color Strip
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: actualend
+        field: actualend
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+      -
+        section: CardFooter
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: statecode
+        field: statecode
+      -
+        section: CardFooter
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: null
+    tabs:
+      -
+        label: Card
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 8
+    type_name: Card
+  -
+    name: Information
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: General Information
+        name: general information
+        tab: phonecall
+        visible: true
+      -
+        label: Phone Call Description
+        name: phone call description
+        tab: phonecall
+        visible: true
+      -
+        label: Phone Call Details
+        name: phone call details
+        tab: phonecall
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: notes
+        visible: true
+    fields:
+      -
+        section: general information
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: general information
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: phonenumber
+        field: phonenumber
+      -
+        section: general information
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: to
+        field: to
+      -
+        section: general information
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: directioncode
+        field: directioncode
+      -
+        section: phone call description
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: phone call description
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: phone call details
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: phone call details
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: phone call details
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: phone call details
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: phone call details
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: phone call details
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: category
+        field: category
+      -
+        section: phone call details
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: subcategory
+        field: subcategory
+    description: A form for this entity.
+    tabs:
+      -
+        label: Phone Call
+        name: phonecall
+        visible: true
+        expanded: true
+      -
+        label: Notes
+        name: notes
+        visible: true
+        expanded: false
+    field_count: 13
+    type_name: Main
+  -
+    name: 'Dialer customization - during call'
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: 'Dialer customization - during call'
+        name: 'Dialer customization - during call'
+        tab: phonecall
+        visible: true
+    fields:
+      -
+        section: 'Dialer customization - during call'
+        tab: phonecall
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_priority
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: scheduledend
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: 'Form to customize. Includes by default regarding field. will be shown during call, in details tab'
+    tabs:
+      -
+        label: Phone Call
+        name: phonecall
+        visible: true
+        expanded: true
+    field_count: 5
+    type_name: Main
+

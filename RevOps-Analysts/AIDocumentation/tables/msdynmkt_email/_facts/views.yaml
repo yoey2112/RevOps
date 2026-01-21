@@ -1,0 +1,53 @@
+views:
+  -
+    name: Webinar emails
+    querytype: -1
+    savedqueryid: '36c18d2f-ae57-ec11-8f8e-000d3a365320'
+  -
+    name: Active emails
+    description: All active Emails
+    querytype: -1
+    savedqueryid: '4aba25d8-7ec6-ea11-b82d-00155d952b1c'
+  -
+    name: Emails without campaigns
+    description: Emails without relationship to campaigns (for new emails being worked on)
+    querytype: -1
+    savedqueryid: '46af8dba-d819-ef11-840a-0022486d6c17'
+  -
+    name: Emails with campaigns
+    description: Emails with relationship to campaigns
+    querytype: -1
+    savedqueryid: 'af5497d4-d819-ef11-840b-002248d5a732'
+  -
+    name: Email for a Fragment
+    querytype: 64
+    savedqueryid: '2d91ed4d-7be1-4423-9763-49d3f7fdeb24'
+  -
+    name: Quick Find Active Emails
+    querytype: 4
+    savedqueryid: 'edb6320d-e2b0-4d85-94dc-52549b40a22a'
+  -
+    name: Email Advanced Find View
+    querytype: 1
+    savedqueryid: '8d054fa0-c051-475e-b27c-7281d32ec367'
+  -
+    name: Inactive emails
+    querytype: -1
+    savedqueryid: '2fecb239-eed4-47d0-a5c7-ac7a989ef327'
+  -
+    name: Email Lookup View
+    querytype: 64
+    savedqueryid: '36d55147-a5a3-4dfa-9e46-b2f4d930ecd3'
+  -
+    name: All Emails
+    querytype: -1
+    savedqueryid: 'ad6ee9c4-9cdd-4e8a-8f57-e584af01fe9e'
+  -
+    name: Email Associated View
+    querytype: 2
+    savedqueryid: '58e0372a-b722-4bae-b970-e6cb4711fbb2'
+  -
+    name: Imported from outbound marketing
+    querytype: -1
+    savedqueryid: '3fd16079-591d-42e8-8d1c-fd97ddae1311'
+

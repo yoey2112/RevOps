@@ -1,0 +1,747 @@
+relationships:
+  -
+    schemaname: appointment_PostRegardings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postregarding
+    referencedtablelogicalname: appointment
+  -
+    schemaname: appointment_PostFollows
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postfollow
+    referencedtablelogicalname: appointment
+  -
+    schemaname: appointment_PostRoles
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postrole
+    referencedtablelogicalname: appointment
+  -
+    schemaname: Appointment_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: appointment
+  -
+    schemaname: Appointment_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: appointment
+  -
+    schemaname: appointment_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: appointment
+  -
+    schemaname: appointment_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: appointment
+  -
+    schemaname: userentityinstancedata_appointment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: appointment
+  -
+    schemaname: Appointment_Annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: appointment
+  -
+    schemaname: appointment_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: appointment
+  -
+    schemaname: Appointment_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: appointment
+  -
+    schemaname: slakpiinstance_appointment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: slakpiinstance
+    referencedtablelogicalname: appointment
+  -
+    schemaname: Appointment_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: appointment
+  -
+    schemaname: Appointment_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: appointment
+  -
+    schemaname: appointment_actioncard
+    relationshiptype: OneToMany
+    referencingtablelogicalname: actioncard
+    referencedtablelogicalname: appointment
+  -
+    schemaname: appointment_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: appointment
+  -
+    schemaname: appointment_activity_mime_attachment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitymimeattachment
+    referencedtablelogicalname: appointment
+  -
+    schemaname: Appointment_QueueItem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queueitem
+    referencedtablelogicalname: appointment
+  -
+    schemaname: Appointment_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: appointment
+  -
+    schemaname: appointment_campaignresponse
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: appointment
+  -
+    schemaname: msdyn_appointment_msdyn_transcript_transcripttarget
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_transcript
+    referencedtablelogicalname: appointment
+  -
+    schemaname: msdyn_appointment_msdyn_ocrecording_recordingtarget
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocrecording
+    referencedtablelogicalname: appointment
+  -
+    schemaname: msdyn_appointment_msdyn_conversationinsight_conversationinsighttarget
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_conversationinsight
+    referencedtablelogicalname: appointment
+  -
+    schemaname: msdyn_appointment_bookableresourcebooking
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bookableresourcebooking
+    referencedtablelogicalname: appointment
+  -
+    schemaname: msdyn_appointment_msdyn_resourcerequirement
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_resourcerequirement
+    referencedtablelogicalname: appointment
+  -
+    schemaname: msdyn_msdyn_salescopilotinsight_appointment_msdyn_activityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salescopilotinsight
+    referencedtablelogicalname: appointment
+  -
+    schemaname: msdyn_appointment_msdyn_recording_appointment_activity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_recording
+    referencedtablelogicalname: appointment
+  -
+    schemaname: msdyn_msdyn_conversationactionitem_appointment_msdyn_CreatedActivity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_conversationactionitem
+    referencedtablelogicalname: appointment
+  -
+    schemaname: msdyn_msdyn_sciconversation_appointment_msdyn_RelatedActivity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_sciconversation
+    referencedtablelogicalname: appointment
+  -
+    schemaname: msdyn_appointment_msdyn_externalrecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_externalrecord
+    referencedtablelogicalname: appointment
+  -
+    schemaname: KnowledgeBaseRecord_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: knowledgebaserecord
+  -
+    schemaname: business_unit_appointment_activities
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: lk_appointment_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: TransactionCurrency_Appointment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: lk_appointment_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_appointment_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: sla_appointment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: sla
+  -
+    schemaname: Contact_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: contact
+  -
+    schemaname: lk_appointment_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: KnowledgeArticle_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: Account_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: account
+  -
+    schemaname: manualsla_appointment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: sla
+  -
+    schemaname: team_appointment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: team
+  -
+    schemaname: user_appointment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: recurringappointmentmaster_appointment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: recurringappointmentmaster
+  -
+    schemaname: processstage_appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: processstage
+  -
+    schemaname: activity_pointer_appointment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: owner_appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: owner
+  -
+    schemaname: adx_invitation_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_invitation
+  -
+    schemaname: mspp_adplacement_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: mspp_adplacement
+  -
+    schemaname: mspp_pollplacement_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: mspp_pollplacement
+  -
+    schemaname: mspp_publishingstatetransitionrule_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: mspp_publishingstatetransitionrule
+  -
+    schemaname: mspp_redirect_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: mspp_redirect
+  -
+    schemaname: mspp_shortcut_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: mspp_shortcut
+  -
+    schemaname: mspp_website_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: mspp_website
+  -
+    schemaname: Lead_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: lead
+  -
+    schemaname: bookableresourcebooking_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: bookableresourcebooking
+  -
+    schemaname: bookableresourcebookingheader_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: bookableresourcebookingheader
+  -
+    schemaname: BulkOperation_Appointment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: bulkoperation
+  -
+    schemaname: Campaign_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: campaign
+  -
+    schemaname: CampaignActivity_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: campaignactivity
+  -
+    schemaname: Contract_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: contract
+  -
+    schemaname: entitlement_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: entitlement
+  -
+    schemaname: entitlementtemplate_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: entitlementtemplate
+  -
+    schemaname: Incident_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: incident
+  -
+    schemaname: site_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: site
+  -
+    schemaname: service_appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: service
+  -
+    schemaname: msdyn_customerasset_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_customerasset
+  -
+    schemaname: msdyn_playbookinstance_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_playbookinstance
+  -
+    schemaname: Invoice_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: invoice
+  -
+    schemaname: Opportunity_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Quote_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: quote
+  -
+    schemaname: SalesOrder_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: salesorder
+  -
+    schemaname: msdyn_postalbum_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_postalbum
+  -
+    schemaname: msdyn_swarm_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_swarm
+  -
+    schemaname: msdyn_salessuggestion_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_salessuggestion
+  -
+    schemaname: msdyn_bookingalertstatus_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_bookingalertstatus
+  -
+    schemaname: msdyn_bookingrule_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_bookingrule
+  -
+    schemaname: msdyn_resourceterritory_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_resourceterritory
+  -
+    schemaname: msdyn_systemuserschedulersetting_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_systemuserschedulersetting
+  -
+    schemaname: msdyn_timegroup_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_timegroup
+  -
+    schemaname: msdyn_timegroupdetail_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_timegroupdetail
+  -
+    schemaname: msevtmgt_checkin_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_checkin
+  -
+    schemaname: msevtmgt_event_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_event
+  -
+    schemaname: msevtmgt_eventpurchase_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_eventpurchase
+  -
+    schemaname: msevtmgt_eventpurchaseattendee_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_eventpurchaseattendee
+  -
+    schemaname: msevtmgt_eventpurchasepass_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_eventpurchasepass
+  -
+    schemaname: msevtmgt_eventregistration_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_eventregistration
+  -
+    schemaname: msevtmgt_hotel_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_hotel
+  -
+    schemaname: msevtmgt_hotelroomallocation_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_hotelroomallocation
+  -
+    schemaname: msevtmgt_hotelroomreservation_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_hotelroomreservation
+  -
+    schemaname: msevtmgt_layout_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_layout
+  -
+    schemaname: msevtmgt_room_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_room
+  -
+    schemaname: msevtmgt_session_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_sessionregistration_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_sessionregistration
+  -
+    schemaname: msevtmgt_sessiontrack_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_sessiontrack
+  -
+    schemaname: msevtmgt_speaker_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_speaker
+  -
+    schemaname: msevtmgt_speakerengagement_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_speakerengagement
+  -
+    schemaname: msevtmgt_sponsorablearticle_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_sponsorablearticle
+  -
+    schemaname: msevtmgt_sponsorship_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_sponsorship
+  -
+    schemaname: msevtmgt_venue_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_venue
+  -
+    schemaname: msevtmgt_webinarconfiguration_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_webinarconfiguration
+  -
+    schemaname: msevtmgt_webinarprovider_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msevtmgt_webinarprovider
+  -
+    schemaname: msdyncrm_contentsettings_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_contentsettings
+  -
+    schemaname: msdyncrm_customerjourney_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_customerjourney
+  -
+    schemaname: msdyncrm_marketingdynamiccontentmetadata_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_marketingdynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemaildynamiccontentmetadata_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_marketingemaildynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemailtestsend_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_marketingemailtestsend
+  -
+    schemaname: msdyncrm_uicconfig_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_uicconfig
+  -
+    schemaname: msdyncrm_msdyncrm_customerjourneyiteration_appointment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_customerjourneyiteration
+  -
+    schemaname: msdyncrm_leadscoremodel_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_leadscoremodel
+  -
+    schemaname: msdyncrm_linkedinaccount_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_linkedinaccount
+  -
+    schemaname: msdyncrm_linkedinactivity_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_linkedinactivity
+  -
+    schemaname: msdyncrm_linkedinfieldmapping_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_linkedinfieldmapping
+  -
+    schemaname: msdyncrm_linkedinform_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_linkedinform
+  -
+    schemaname: msdyncrm_linkedinformanswer_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_linkedinformanswer
+  -
+    schemaname: msdyncrm_linkedinformquestion_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_linkedinformquestion
+  -
+    schemaname: msdyncrm_linkedinformsubmission_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_linkedinformsubmission
+  -
+    schemaname: msdyncrm_linkedinleadmatchingstrategy_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_linkedinleadmatchingstrategy
+  -
+    schemaname: msdyncrm_linkedinuserprofile_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_linkedinuserprofile
+  -
+    schemaname: msdyncrm_migration_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyncrm_migration
+  -
+    schemaname: adx_webpage_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_webpage
+  -
+    schemaname: adx_website_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_website
+  -
+    schemaname: adx_ad_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_ad
+  -
+    schemaname: adx_adplacement_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_adplacement
+  -
+    schemaname: adx_poll_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_poll
+  -
+    schemaname: adx_polloption_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_polloption
+  -
+    schemaname: adx_pollplacement_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_pollplacement
+  -
+    schemaname: adx_pollsubmission_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_pollsubmission
+  -
+    schemaname: adx_publishingstatetransitionrule_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_publishingstatetransitionrule
+  -
+    schemaname: adx_redirect_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_redirect
+  -
+    schemaname: adx_shortcut_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_shortcut
+  -
+    schemaname: adx_communityforumaccesspermission_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_communityforumaccesspermission
+  -
+    schemaname: adx_communityforumalert_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_communityforumalert
+  -
+    schemaname: adx_casedeflection_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_casedeflection
+  -
+    schemaname: adx_contentaccesslevel_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: adx_contentaccesslevel
+  -
+    schemaname: revops_audienceimport_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: revops_audienceimport
+  -
+    schemaname: msdyn_paymentterm_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_paymentterm
+  -
+    schemaname: msdyn_purchaseorder_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_purchaseorder
+  -
+    schemaname: msdyn_purchaseorderproduct_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_purchaseorderproduct
+  -
+    schemaname: msdyn_purchaseorderreceipt_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_purchaseorderreceipt
+  -
+    schemaname: msdyn_purchaseorderreceiptproduct_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_purchaseorderreceiptproduct
+  -
+    schemaname: msdyn_shipvia_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_shipvia
+  -
+    schemaname: msdyn_warehouse_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_warehouse
+  -
+    schemaname: msdyn_projectteam_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_projectteam
+  -
+    schemaname: msdyn_processnotes_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_processnotes
+  -
+    schemaname: revops_smeengagement_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: revops_smeengagement
+  -
+    schemaname: msdyn_project_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: msdyn_project
+  -
+    schemaname: revops_mwhaccount_Appointments
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: revops_mwhaccount
+

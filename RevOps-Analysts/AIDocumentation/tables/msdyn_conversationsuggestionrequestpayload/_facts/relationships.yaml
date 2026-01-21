@@ -1,0 +1,82 @@
+relationships:
+  -
+    schemaname: msdyn_conversationsuggestionrequestpayload_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: msdyn_conversationsuggestionrequestpayload
+  -
+    schemaname: msdyn_conversationsuggestionrequestpayload_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdyn_conversationsuggestionrequestpayload
+  -
+    schemaname: msdyn_conversationsuggestionrequestpayload_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdyn_conversationsuggestionrequestpayload
+  -
+    schemaname: msdyn_conversationsuggestionrequestpayload_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: msdyn_conversationsuggestionrequestpayload
+  -
+    schemaname: msdyn_conversationsuggestionrequestpayload_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: msdyn_conversationsuggestionrequestpayload
+  -
+    schemaname: msdyn_conversationsuggestionrequestpayload_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: msdyn_conversationsuggestionrequestpayload
+  -
+    schemaname: msdyn_conversationsuggestionrequestpayload_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: msdyn_conversationsuggestionrequestpayload
+  -
+    schemaname: msdyn_conversationsuggestionrequestpayload_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: msdyn_conversationsuggestionrequestpayload
+  -
+    schemaname: msdyn_conversationsuggestionrequestpayload_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: msdyn_conversationsuggestionrequestpayload
+  -
+    schemaname: msdyn_conversationsuggestionrequestpayload_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: msdyn_conversationsuggestionrequestpayload
+  -
+    schemaname: lk_msdyn_conversationsuggestionrequestpayload_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_conversationsuggestionrequestpayload
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdyn_conversationsuggestionrequestpayload_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_conversationsuggestionrequestpayload
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdyn_conversationsuggestionrequestpayload_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_conversationsuggestionrequestpayload
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdyn_conversationsuggestionrequestpayload_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_conversationsuggestionrequestpayload
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_msdyn_conversationsuggestionrequestpayload
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_conversationsuggestionrequestpayload
+    referencedtablelogicalname: organization
+  -
+    schemaname: msdyn_ocliveworkitem_conv_sug_req_payload
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_conversationsuggestionrequestpayload
+    referencedtablelogicalname: msdyn_ocliveworkitem
+

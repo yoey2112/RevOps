@@ -1,0 +1,57 @@
+views:
+  -
+    name: Custom triggers
+    description: Shows events created by customers in the Cxp Events Catalog.
+    querytype: -1
+    savedqueryid: '67e19e6f-12f6-ea11-a81d-000d3ac628bf'
+  -
+    name: Standard triggers
+    description: Shows events added by Dynamics Cxp to the Cxp Events Catalog.
+    querytype: -1
+    savedqueryid: 'd28806f9-12f6-ea11-a81d-000d3ac628bf'
+  -
+    name: My EventMetadata
+    description: Active EventMetadata owned by me
+    querytype: 8192
+    savedqueryid: 'f94181ed-43ee-ea11-a81d-000d3af6f0d0'
+  -
+    name: Dataverse triggers
+    description: Shows events based on dataverse entities.
+    querytype: -1
+    savedqueryid: '8a9a701b-2de5-4260-8bcb-0615766d545c'
+  -
+    name: All triggers
+    description: Shows events from Cxp Events Catalog.
+    querytype: -1
+    savedqueryid: '19895cae-ebef-4ee8-a722-07764e42fd5d'
+  -
+    name: EventMetadata Advanced Find View
+    querytype: 1
+    savedqueryid: '73efec3e-874b-42a9-a016-25071b0d6772'
+  -
+    name: Inactive EventMetadata
+    querytype: 1
+    savedqueryid: '8d5a8958-ca94-4439-aa88-4c5b86b110d1'
+  -
+    name: Journey triggers for published and draft events
+    description: Shows draft and published events usable for triggering a journey .
+    querytype: 64
+    savedqueryid: '233a9e9d-b2f3-4f6d-9126-66b3f88d5a5b'
+  -
+    name: Quick Find Active EventMetadata
+    querytype: 4
+    savedqueryid: '4c33909a-aa17-4361-ae1d-6bc997060ff3'
+  -
+    name: EventMetadata Associated View
+    querytype: 2
+    savedqueryid: '6ed7d22c-33b4-4359-b54d-9d53ff4199d8'
+  -
+    name: EventMetadata Lookup View
+    querytype: 64
+    savedqueryid: '072568c2-17d2-4340-94fa-c0a391b550a9'
+  -
+    name: Custom triggers for published and draft events
+    description: Shows draft and published custom events.
+    querytype: 64
+    savedqueryid: 'e73bf527-0031-4de2-a642-d5346709f90e'
+

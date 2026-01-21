@@ -1,0 +1,102 @@
+relationships:
+  -
+    schemaname: revops_opportunitysolution_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_opportunitysolution
+  -
+    schemaname: revops_opportunitysolution_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_opportunitysolution
+  -
+    schemaname: revops_opportunitysolution_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_opportunitysolution
+  -
+    schemaname: revops_opportunitysolution_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_opportunitysolution
+  -
+    schemaname: revops_opportunitysolution_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_opportunitysolution
+  -
+    schemaname: revops_opportunitysolution_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_opportunitysolution
+  -
+    schemaname: revops_opportunitysolution_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_opportunitysolution
+  -
+    schemaname: revops_opportunitysolution_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_opportunitysolution
+  -
+    schemaname: lk_revops_opportunitysolution_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_opportunitysolution_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_opportunitysolution_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_opportunitysolution_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_revops_opportunitysolution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_revops_opportunitysolution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_revops_opportunitysolution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_revops_opportunitysolution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: TransactionCurrency_revops_opportunitysolution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_opportunitysolution_churn_revops_churn
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: revops_churn
+  -
+    schemaname: revops_opportunitysolution_opportunity_opportunity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: revops_opportunitysolution_solution_revops_solution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: revops_solution
+

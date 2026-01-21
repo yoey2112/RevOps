@@ -1,0 +1,32 @@
+forms:
+  -
+    name: Activities Dashboard
+    is_active: true
+    type: 10
+    sections:
+      -
+        label: ''
+        name: VisualFilters
+        tab: ''
+        visible: true
+      -
+        label: ''
+        name: Streams
+        tab: StreamsContainer
+        visible: true
+    fields:
+    description: Shows an overview of data related to activities.
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+      -
+        label: ''
+        name: StreamsContainer
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Type 10
+

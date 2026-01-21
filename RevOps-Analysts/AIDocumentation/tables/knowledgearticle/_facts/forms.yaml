@@ -1,0 +1,1527 @@
+forms:
+  -
+    name: 'Knowledge Article - Portal'
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ARTICLE CONTENT
+        name: Knowledge Information
+        tab: general
+        visible: true
+      -
+        label: CONTENT
+        name: Content
+        tab: general
+        visible: false
+      -
+        label: BASIC SETTINGS
+        name: Portal Settings
+        tab: summary
+        visible: true
+      -
+        label: New Section
+        name: summary_section_6
+        tab: summary
+        visible: true
+      -
+        label: New Section
+        name: summary_section_6
+        tab: summary
+        visible: true
+    fields:
+      -
+        section: Knowledge Information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Knowledge Information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: content
+        field: content
+      -
+        section: Content
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdyn_creationmode
+        field: msdyn_creationmode
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: articlepublicnumber
+        field: articlepublicnumber
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: primaryauthorid
+        field: primaryauthorid
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: languagelocaleid
+        field: languagelocaleid
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: header_majorversionnumber
+        field: majorversionnumber
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: header_minorversionnumber
+        field: minorversionnumber
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: createdname
+        field: createdby
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: creadedon
+        field: createdon
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: modifiedname
+        field: modifiedby
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: msdyn_agentreviewstatus
+        field: msdyn_agentreviewstatus
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: msdyn_compliancestatecode
+        field: msdyn_compliancestatecode
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_languagelocaleid
+        field: languagelocaleid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_majorversionnumber
+        field: majorversionnumber
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_minorversionnumber
+        field: minorversionnumber
+    description: A form for this entity.
+    tabs:
+      -
+        label: Content
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Summary
+        name: summary
+        visible: false
+        expanded: true
+    field_count: 18
+    type_name: Main
+  -
+    name: Knowledge Article Quick Create
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: Details
+        name: quickKnowledgeArticle
+        tab: newKnowledgeArticle
+        visible: true
+      -
+        label: ''
+        name: quickKnowledgecontent
+        tab: newKnowledgeArticle
+        visible: true
+      -
+        label: ''
+        name: quickKnowledgeowner
+        tab: newKnowledgeArticle
+        visible: true
+    fields:
+      -
+        section: quickKnowledgeArticle
+        tab: newKnowledgeArticle
+        disabled: false
+        visible: true
+        control_id: quick_title
+        field: title
+      -
+        section: quickKnowledgeArticle
+        tab: newKnowledgeArticle
+        disabled: false
+        visible: true
+        control_id: quick_keywords
+        field: keywords
+      -
+        section: quickKnowledgeArticle
+        tab: newKnowledgeArticle
+        disabled: false
+        visible: true
+        control_id: languagelocaleid
+        field: languagelocaleid
+      -
+        section: quickKnowledgecontent
+        tab: newKnowledgeArticle
+        disabled: false
+        visible: true
+        control_id: quick_description
+        field: description
+      -
+        section: quickKnowledgeowner
+        tab: newKnowledgeArticle
+        disabled: false
+        visible: true
+        control_id: quick_ownerid
+        field: ownerid
+      -
+        section: quickKnowledgeowner
+        tab: newKnowledgeArticle
+        disabled: false
+        visible: true
+        control_id: quick_primaryauthorid
+        field: primaryauthorid
+    description: Default quick create form for Knowledge Article
+    tabs:
+      -
+        label: Knowledge Article
+        name: newKnowledgeArticle
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Quick Create
+  -
+    name: Article Content
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: ''
+        name: ArticleContent
+        tab: general
+        visible: true
+    fields:
+      -
+        section: ArticleContent
+        tab: general
+        disabled: true
+        visible: true
+        control_id: KnowledgeArticleTitle
+        field: title
+      -
+        section: ArticleContent
+        tab: general
+        disabled: true
+        visible: true
+        control_id: KnowledgeArticleState
+        field: statuscode
+      -
+        section: ArticleContent
+        tab: general
+        disabled: false
+        visible: true
+        control_id: KnowledgeArticleContent
+        field: content
+      -
+        section: ArticleContent
+        tab: general
+        disabled: false
+        visible: true
+        control_id: KnowledgeArticleId
+        field: knowledgearticleid
+    description: A form that displays the content of an Article.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 4
+    type_name: Quick View
+  -
+    name: Knowledge Article
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ARTICLE CONTENT
+        name: Knowledge Information
+        tab: general
+        visible: true
+      -
+        label: CONTENT
+        name: Content
+        tab: general
+        visible: true
+      -
+        label: BASIC SETTINGS
+        name: Portal Settings
+        tab: summary
+        visible: true
+      -
+        label: PUBLISH SETTINGS
+        name: Publish Settings
+        tab: summary
+        visible: true
+      -
+        label: TIMELINE
+        name: Timeline
+        tab: summary
+        visible: true
+      -
+        label: RELATED INFORMATION
+        name: ref_pan_Related
+        tab: summary
+        visible: true
+      -
+        label: Views
+        name: Views
+        tab: analytics
+        visible: true
+      -
+        label: Feedback
+        name: Feedback
+        tab: analytics
+        visible: true
+      -
+        label: Cases
+        name: Cases
+        tab: analytics
+        visible: true
+    fields:
+      -
+        section: Knowledge Information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Knowledge Information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Knowledge Information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: keywords
+        field: keywords
+      -
+        section: Content
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdyn_creationmode
+        field: msdyn_creationmode
+      -
+        section: Content
+        tab: general
+        disabled: false
+        visible: true
+        control_id: content
+        field: content
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: isinternal
+        field: isinternal
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: articlepublicnumber
+        field: articlepublicnumber
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: primaryauthorid
+        field: primaryauthorid
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: languagelocaleid
+        field: languagelocaleid
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: header_majorversionnumber
+        field: majorversionnumber
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: header_minorversionnumber
+        field: minorversionnumber
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: createdname
+        field: createdby
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: creadedon
+        field: createdon
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: modifiedname
+        field: modifiedby
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: msdyn_agentreviewstatus
+        field: msdyn_agentreviewstatus
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: msdyn_compliancestatecode
+        field: msdyn_compliancestatecode
+      -
+        section: Publish Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: Publish Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: publishon
+        field: publishon
+      -
+        section: Publish Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: expirationdate
+        field: expirationdate
+      -
+        section: ref_pan_Related
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: relatedversionsquickform
+        field: parentarticlecontentid
+      -
+        section: ref_pan_Related
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: relatedarticlequickform
+        field: rootarticleid
+      -
+        section: Views
+        tab: analytics
+        disabled: true
+        visible: true
+        control_id: knowledgearticleviews
+        field: knowledgearticleviews
+      -
+        section: Feedback
+        tab: analytics
+        disabled: false
+        visible: true
+        control_id: rating
+        field: rating
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_languagelocaleid
+        field: languagelocaleid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_majorversionnumber
+        field: majorversionnumber
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_minorversionnumber
+        field: minorversionnumber
+    description: A form for this entity.
+    tabs:
+      -
+        label: Content
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Summary
+        name: summary
+        visible: true
+        expanded: true
+      -
+        label: Analytics
+        name: analytics
+        visible: true
+        expanded: true
+    field_count: 30
+    type_name: Main
+  -
+    name: Article Related Versions
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: ''
+        name: Versions
+        tab: general
+        visible: true
+    fields:
+    description: A form that displays the reladed versions of article.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Quick View
+  -
+    name: Portal KnowledgeArticle
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ARTICLE CONTENT
+        name: Knowledge Information
+        tab: general
+        visible: true
+      -
+        label: Content
+        name: KnowledgeArticleIFrameContent
+        tab: general
+        visible: true
+      -
+        label: RELATED INFORMATION
+        name: Related_pane
+        tab: general
+        visible: true
+      -
+        label: PORTAL SETTINGS
+        name: Portal Settings
+        tab: publish
+        visible: true
+      -
+        label: ASSOCIATED INFORMATION
+        name: Associations
+        tab: publish
+        visible: true
+      -
+        label: RELATED INFORMATION
+        name: Version History
+        tab: publish
+        visible: true
+      -
+        label: Views
+        name: views
+        tab: analytics
+        visible: true
+      -
+        label: Feedback
+        name: Feedback
+        tab: analytics
+        visible: true
+      -
+        label: Cases
+        name: cases
+        tab: analytics
+        visible: true
+    fields:
+      -
+        section: Knowledge Information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Knowledge Information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: keywords
+        field: keywords
+      -
+        section: Knowledge Information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: KnowledgeArticleIFrameContent
+        tab: general
+        disabled: false
+        visible: true
+        control_id: IFRAME_articlecontent
+        field: content
+      -
+        section: Portal Settings
+        tab: publish
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: Portal Settings
+        tab: publish
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Portal Settings
+        tab: publish
+        disabled: true
+        visible: true
+        control_id: articlepublicnumber
+        field: articlepublicnumber
+      -
+        section: Portal Settings
+        tab: publish
+        disabled: false
+        visible: true
+        control_id: primaryauthorid
+        field: primaryauthorid
+      -
+        section: Portal Settings
+        tab: publish
+        disabled: true
+        visible: true
+        control_id: languagelocaleid
+        field: languagelocaleid
+      -
+        section: Portal Settings
+        tab: publish
+        disabled: false
+        visible: true
+        control_id: createdname
+        field: createdby
+      -
+        section: Portal Settings
+        tab: publish
+        disabled: false
+        visible: true
+        control_id: creadedon
+        field: createdon
+      -
+        section: Portal Settings
+        tab: publish
+        disabled: false
+        visible: true
+        control_id: modifiedname
+        field: modifiedby
+      -
+        section: Portal Settings
+        tab: publish
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: Associations
+        tab: publish
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: Associations
+        tab: publish
+        disabled: false
+        visible: true
+        control_id: publishon
+        field: publishon
+      -
+        section: Associations
+        tab: publish
+        disabled: false
+        visible: true
+        control_id: expirationdate
+        field: expirationdate
+      -
+        section: Version History
+        tab: publish
+        disabled: false
+        visible: true
+        control_id: relatedversionsquickform
+        field: parentarticlecontentid
+      -
+        section: Version History
+        tab: publish
+        disabled: false
+        visible: true
+        control_id: relatedarticlequickform
+        field: rootarticleid
+      -
+        section: views
+        tab: analytics
+        disabled: false
+        visible: true
+        control_id: articleviewcountquickform
+        field: rootarticleid
+      -
+        section: Feedback
+        tab: analytics
+        disabled: false
+        visible: true
+        control_id: rating
+        field: rating
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_majorversionnumber
+        field: majorversionnumber
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_minorversionnumber
+        field: minorversionnumber
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_languagelocaleid
+        field: languagelocaleid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+    description: A form for this entity.
+    tabs:
+      -
+        label: CONTENT
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: SETTINGS
+        name: publish
+        visible: true
+        expanded: true
+      -
+        label: ANALYTICS
+        name: analytics
+        visible: true
+        expanded: true
+    field_count: 24
+    type_name: Main
+  -
+    name: Knowledge Article Card
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: ColorStrip
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: primaryauthorid
+        field: primaryauthorid
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: CardDetails
+        tab: general
+        disabled: true
+        visible: true
+        control_id: languagelocaleid
+        field: languagelocaleid
+      -
+        section: CardFooter
+        tab: general
+        disabled: true
+        visible: true
+        control_id: majorversionnumber
+        field: majorversionnumber
+      -
+        section: CardFooter
+        tab: general
+        disabled: true
+        visible: true
+        control_id: minorversionnumber
+        field: minorversionnumber
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: knowledgearticleviews
+        field: knowledgearticleviews
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: rating
+        field: rating
+    description: Default Knowledge Article card
+    tabs:
+      -
+        label: Knowledge Article card
+        name: general
+        visible: true
+        expanded: true
+    field_count: 10
+    type_name: Card
+  -
+    name: Portal Knowledge Article for Interactive experience
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ARTICLE CONTENT
+        name: Knowledge Information
+        tab: general
+        visible: true
+      -
+        label: CONTENT
+        name: Content
+        tab: general
+        visible: true
+      -
+        label: TIMELINE
+        name: Timeline
+        tab: general
+        visible: true
+      -
+        label: BASIC SETTINGS
+        name: Portal Settings
+        tab: summary
+        visible: true
+      -
+        label: PUBLISH SETTINGS
+        name: Publish Settings
+        tab: summary
+        visible: true
+      -
+        label: RELATED INFORMATION
+        name: ref_pan_Related
+        tab: summary
+        visible: true
+      -
+        label: Views
+        name: Views
+        tab: analytics
+        visible: true
+      -
+        label: Feedback
+        name: Feedback
+        tab: analytics
+        visible: true
+      -
+        label: Cases
+        name: Cases
+        tab: analytics
+        visible: true
+    fields:
+      -
+        section: Knowledge Information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Knowledge Information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: keywords
+        field: keywords
+      -
+        section: Knowledge Information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Content
+        tab: general
+        disabled: false
+        visible: true
+        control_id: content
+        field: content
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: isinternal
+        field: isinternal
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: articlepublicnumber
+        field: articlepublicnumber
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: primaryauthorid
+        field: primaryauthorid
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: languagelocaleid
+        field: languagelocaleid
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: createdname
+        field: createdby
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: creadedon
+        field: createdon
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: modifiedname
+        field: modifiedby
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: Publish Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: Publish Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: publishon
+        field: publishon
+      -
+        section: Publish Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: expirationdate
+        field: expirationdate
+      -
+        section: ref_pan_Related
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: relatedversionsquickform
+        field: parentarticlecontentid
+      -
+        section: ref_pan_Related
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: relatedarticlequickform
+        field: rootarticleid
+      -
+        section: Views
+        tab: analytics
+        disabled: true
+        visible: true
+        control_id: knowledgearticleviews
+        field: knowledgearticleviews
+      -
+        section: Feedback
+        tab: analytics
+        disabled: false
+        visible: true
+        control_id: rating
+        field: rating
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_majorversionnumber
+        field: majorversionnumber
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_minorversionnumber
+        field: minorversionnumber
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_languagelocaleid
+        field: languagelocaleid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+    description: Default Interactive experience Portal Knowledge Article form.
+    tabs:
+      -
+        label: CONTENT
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: SUMMARY
+        name: summary
+        visible: true
+        expanded: true
+      -
+        label: ANALYTICS
+        name: analytics
+        visible: true
+        expanded: true
+    field_count: 25
+    type_name: Main
+  -
+    name: Related Articles
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: ''
+        name: Articles
+        tab: general
+        visible: true
+    fields:
+    description: A form that displays the related Articles.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Quick View
+  -
+    name: Article View Count
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: ''
+        name: ViewCount
+        tab: general
+        visible: true
+    fields:
+      -
+        section: ViewCount
+        tab: general
+        disabled: true
+        visible: true
+        control_id: knowledgearticleviews
+        field: knowledgearticleviews
+    description: A form that displays the view count of root article.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Quick View
+  -
+    name: Knowledge Article for Interactive experience
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ARTICLE CONTENT
+        name: Knowledge Information
+        tab: general
+        visible: true
+      -
+        label: ATTACHMENTS
+        name: KnowledgeArticleAttachmentSectionV2
+        tab: general
+        visible: false
+      -
+        label: CONTENT
+        name: Content
+        tab: general
+        visible: true
+      -
+        label: BASIC SETTINGS
+        name: Portal Settings
+        tab: summary
+        visible: true
+      -
+        label: PUBLISH SETTINGS
+        name: Publish Settings
+        tab: summary
+        visible: true
+      -
+        label: TIMELINE
+        name: Timeline
+        tab: summary
+        visible: true
+      -
+        label: RELATED INFORMATION
+        name: ref_pan_Related
+        tab: summary
+        visible: true
+      -
+        label: Views
+        name: Views
+        tab: analytics
+        visible: true
+      -
+        label: Feedback
+        name: Feedback
+        tab: analytics
+        visible: true
+      -
+        label: Cases
+        name: Cases
+        tab: analytics
+        visible: true
+    fields:
+      -
+        section: Knowledge Information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Knowledge Information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Knowledge Information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: keywords
+        field: keywords
+      -
+        section: Knowledge Information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_publicfacingurl
+        field: revops_publicfacingurl
+      -
+        section: Content
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdyn_creationmode
+        field: msdyn_creationmode
+      -
+        section: Content
+        tab: general
+        disabled: false
+        visible: true
+        control_id: content
+        field: content
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: isinternal
+        field: isinternal
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: articlepublicnumber
+        field: articlepublicnumber
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: primaryauthorid
+        field: primaryauthorid
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: languagelocaleid
+        field: languagelocaleid
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: header_majorversionnumber
+        field: majorversionnumber
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: header_minorversionnumber
+        field: minorversionnumber
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: createdname
+        field: createdby
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: creadedon
+        field: createdon
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: modifiedname
+        field: modifiedby
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: true
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: msdyn_agentreviewstatus
+        field: msdyn_agentreviewstatus
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: msdyn_compliancestatecode
+        field: msdyn_compliancestatecode
+      -
+        section: Portal Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: revops_category
+        field: revops_category
+      -
+        section: Publish Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: Publish Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: publishon
+        field: publishon
+      -
+        section: Publish Settings
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: expirationdate
+        field: expirationdate
+      -
+        section: ref_pan_Related
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: relatedversionsquickform
+        field: parentarticlecontentid
+      -
+        section: ref_pan_Related
+        tab: summary
+        disabled: false
+        visible: true
+        control_id: relatedarticlequickform
+        field: rootarticleid
+      -
+        section: Views
+        tab: analytics
+        disabled: true
+        visible: true
+        control_id: knowledgearticleviews
+        field: knowledgearticleviews
+      -
+        section: Feedback
+        tab: analytics
+        disabled: false
+        visible: true
+        control_id: rating
+        field: rating
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_languagelocaleid
+        field: languagelocaleid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_majorversionnumber
+        field: majorversionnumber
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_minorversionnumber
+        field: minorversionnumber
+    description: Default Interactive experience Knowledge Article form.
+    tabs:
+      -
+        label: Content
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Summary
+        name: summary
+        visible: true
+        expanded: true
+      -
+        label: Analytics
+        name: analytics
+        visible: true
+        expanded: true
+    field_count: 32
+    type_name: Main
+

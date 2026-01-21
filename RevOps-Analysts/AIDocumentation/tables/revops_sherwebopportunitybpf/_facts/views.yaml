@@ -1,0 +1,43 @@
+views:
+  -
+    name: Active Sherweb Opportunity BPF on my Opportunities
+    querytype: -1
+    savedqueryid: 'c57dad76-ff11-4901-b775-38a745228a0f'
+  -
+    name: Sherweb Opportunity BPF
+    description: All active Sherweb Opportunity BPF
+    querytype: 8192
+    savedqueryid: '78535637-5d1f-ef11-840a-6045bdf98885'
+  -
+    name: All Sherweb Opportunity BPF
+    querytype: -1
+    savedqueryid: '64dab828-4c75-42af-a3f1-61e7150834bd'
+  -
+    name: Inactive Sherweb Opportunity BPF on my Opportunities
+    querytype: -1
+    savedqueryid: '5fe931bc-86b4-494a-9f6f-6ae0ac7575f9'
+  -
+    name: Sherweb Opportunity BPF Lookup View
+    querytype: 64
+    savedqueryid: '606d0f60-2a52-4719-9866-85393f8e0476'
+  -
+    name: Quick Find Active Sherweb Opportunity BPF
+    querytype: 4
+    savedqueryid: '9191b4da-f821-481c-b853-c2fe32d160ba'
+  -
+    name: Sherweb Opportunity BPF Associated View
+    querytype: 2
+    savedqueryid: '3aab9aa4-a7bf-43d3-ae6c-cb5ad337278e'
+  -
+    name: Sherweb Opportunity BPF Advanced Find View
+    querytype: 1
+    savedqueryid: 'cb49c554-7018-45f1-80e7-cc38d10d4a77'
+  -
+    name: Active Sherweb Opportunity BPF
+    querytype: -1
+    savedqueryid: '93f15782-dc10-4692-afe2-e56b673ceb56'
+  -
+    name: Inactive Sherweb Opportunity BPF
+    querytype: -1
+    savedqueryid: 'a31c0b8d-6df7-4bbb-be62-f31fa883303c'
+

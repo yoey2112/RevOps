@@ -1,0 +1,8 @@
+appmoduleid: '41e055ac-2820-ef11-840b-6045bd5ea018'
+appmoduleversion: null
+clienttype: 8
+url: null
+description: Provides access to Dynamics 365 App for Outlook for enabled users. Available only as an Outlook app. Contact your admin for set up details.
+name: Dynamics 365 App for Outlook
+uniquename: AppforOutlookModule
+

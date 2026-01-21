@@ -1,0 +1,495 @@
+forms:
+  -
+    name: Campaign
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: CAMPAIGN
+        name: CAMPAIGN
+        tab: SUMMARY
+        visible: true
+      -
+        label: SCHEDULES
+        name: SCHEDULES
+        tab: SUMMARY
+        visible: true
+      -
+        label: OFFER
+        name: OFFER
+        tab: SUMMARY
+        visible: true
+      -
+        label: RELATED PANE
+        name: RELATED PANE
+        tab: SUMMARY
+        visible: true
+      -
+        label: New Section
+        name: SUMMARY_section_9
+        tab: SUMMARY
+        visible: true
+      -
+        label: LEADS
+        name: LEADS
+        tab: SUMMARY
+        visible: true
+      -
+        label: LISTS
+        name: LISTS
+        tab: SUMMARY
+        visible: true
+      -
+        label: CAMPAIGN ACTIVITIES
+        name: CAMPAIGN ACTIVITIES
+        tab: SUMMARY
+        visible: true
+      -
+        label: Dynamics Related Content
+        name: summary_section_relatedcontent
+        tab: tab_3
+        visible: true
+      -
+        label: FINANCIALS
+        name: FINANCIALS
+        tab: DETAILS
+        visible: true
+      -
+        label: ADMINISTRATION
+        name: ADMINISTRATION
+        tab: DETAILS
+        visible: true
+      -
+        label: RESPONSES
+        name: RESPONSES
+        tab: DETAILS
+        visible: true
+      -
+        label: DESCRIPTION
+        name: DESCRIPTION
+        tab: DETAILS
+        visible: true
+    fields:
+      -
+        section: CAMPAIGN
+        tab: SUMMARY
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: CAMPAIGN
+        tab: SUMMARY
+        disabled: false
+        visible: true
+        control_id: revops_campaignowner
+        field: revops_campaignowner
+      -
+        section: CAMPAIGN
+        tab: SUMMARY
+        disabled: false
+        visible: true
+        control_id: revops_solution
+        field: revops_solution
+      -
+        section: CAMPAIGN
+        tab: SUMMARY
+        disabled: false
+        visible: true
+        control_id: revops_campaignreference
+        field: revops_campaignreference
+      -
+        section: CAMPAIGN
+        tab: SUMMARY
+        disabled: false
+        visible: true
+        control_id: revops_campaignbrief
+        field: revops_campaignbrief
+      -
+        section: CAMPAIGN
+        tab: SUMMARY
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: CAMPAIGN
+        tab: SUMMARY
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: CAMPAIGN
+        tab: SUMMARY
+        disabled: false
+        visible: true
+        control_id: typecode
+        field: typecode
+      -
+        section: CAMPAIGN
+        tab: SUMMARY
+        disabled: false
+        visible: true
+        control_id: tmpregardingobjectid
+        field: tmpregardingobjectid
+      -
+        section: SCHEDULES
+        tab: SUMMARY
+        disabled: false
+        visible: true
+        control_id: proposedstart
+        field: proposedstart
+      -
+        section: SCHEDULES
+        tab: SUMMARY
+        disabled: false
+        visible: true
+        control_id: proposedend
+        field: proposedend
+      -
+        section: SCHEDULES
+        tab: SUMMARY
+        disabled: false
+        visible: true
+        control_id: actualstart
+        field: actualstart
+      -
+        section: SCHEDULES
+        tab: SUMMARY
+        disabled: false
+        visible: true
+        control_id: actualend
+        field: actualend
+      -
+        section: OFFER
+        tab: SUMMARY
+        disabled: false
+        visible: true
+        control_id: objective
+        field: objective
+      -
+        section: FINANCIALS
+        tab: DETAILS
+        disabled: false
+        visible: true
+        control_id: totalcampaignactivityactualcost
+        field: totalcampaignactivityactualcost
+      -
+        section: FINANCIALS
+        tab: DETAILS
+        disabled: false
+        visible: true
+        control_id: budgetedcost
+        field: budgetedcost
+      -
+        section: FINANCIALS
+        tab: DETAILS
+        disabled: false
+        visible: true
+        control_id: othercost
+        field: othercost
+      -
+        section: FINANCIALS
+        tab: DETAILS
+        disabled: false
+        visible: true
+        control_id: totalactualcost
+        field: totalactualcost
+      -
+        section: ADMINISTRATION
+        tab: DETAILS
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: ADMINISTRATION
+        tab: DETAILS
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: ADMINISTRATION
+        tab: DETAILS
+        disabled: false
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+      -
+        section: ADMINISTRATION
+        tab: DETAILS
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: DESCRIPTION
+        tab: DETAILS
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_istemplate
+        field: istemplate
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_expectedrevenue
+        field: expectedrevenue
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Updated default Campaign form.
+    tabs:
+      -
+        label: Summary
+        name: SUMMARY
+        visible: true
+        expanded: true
+      -
+        label: Journeys and Assets
+        name: tab_3
+        visible: true
+        expanded: true
+      -
+        label: Details
+        name: DETAILS
+        visible: true
+        expanded: true
+    field_count: 27
+    type_name: Main
+  -
+    name: Information
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: Campaign Details
+        name: campaign information
+        tab: general
+        visible: true
+      -
+        label: Schedule
+        name: dates
+        tab: general
+        visible: true
+      -
+        label: Description
+        name: description
+        tab: general
+        visible: true
+      -
+        label: Financials
+        name: financials
+        tab: details
+        visible: true
+      -
+        label: Administration
+        name: administration
+        tab: administration
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: notes
+        visible: true
+    fields:
+      -
+        section: campaign information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: campaign information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: campaign information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: codename
+        field: codename
+      -
+        section: campaign information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: typecode
+        field: typecode
+      -
+        section: campaign information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: campaign information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: expectedresponse
+        field: expectedresponse
+      -
+        section: campaign information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: pricelistid
+        field: pricelistid
+      -
+        section: campaign information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: objective
+        field: objective
+      -
+        section: dates
+        tab: general
+        disabled: false
+        visible: true
+        control_id: proposedstart
+        field: proposedstart
+      -
+        section: dates
+        tab: general
+        disabled: false
+        visible: true
+        control_id: actualstart
+        field: actualstart
+      -
+        section: dates
+        tab: general
+        disabled: false
+        visible: true
+        control_id: proposedend
+        field: proposedend
+      -
+        section: dates
+        tab: general
+        disabled: false
+        visible: true
+        control_id: actualend
+        field: actualend
+      -
+        section: description
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: financials
+        tab: details
+        disabled: true
+        visible: true
+        control_id: totalcampaignactivityactualcost
+        field: totalcampaignactivityactualcost
+      -
+        section: financials
+        tab: details
+        disabled: false
+        visible: true
+        control_id: budgetedcost
+        field: budgetedcost
+      -
+        section: financials
+        tab: details
+        disabled: false
+        visible: true
+        control_id: othercost
+        field: othercost
+      -
+        section: financials
+        tab: details
+        disabled: false
+        visible: true
+        control_id: expectedrevenue
+        field: expectedrevenue
+      -
+        section: financials
+        tab: details
+        disabled: true
+        visible: true
+        control_id: totalactualcost
+        field: totalactualcost
+      -
+        section: administration
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: administration
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: administration
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+      -
+        section: administration
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Financials
+        name: details
+        visible: true
+        expanded: true
+      -
+        label: Administration
+        name: administration
+        visible: true
+        expanded: true
+      -
+        label: Notes
+        name: notes
+        visible: true
+        expanded: false
+    field_count: 22
+    type_name: Main
+

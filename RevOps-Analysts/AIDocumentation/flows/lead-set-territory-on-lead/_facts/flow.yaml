@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '26f2d8ab-5e99-ee11-be37-000d3af4f266'
+name: 'Lead - Set Territory on Lead'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

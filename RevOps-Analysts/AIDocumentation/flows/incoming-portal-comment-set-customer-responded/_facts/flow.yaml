@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '98aad464-f360-f011-bec1-7c1e5206727f'
+name: 'Incoming Portal Comment, set Customer responded'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

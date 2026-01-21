@@ -1,0 +1,92 @@
+relationships:
+  -
+    schemaname: revops_accountsoftwaretool_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: revops_accountsoftwaretool_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: revops_accountsoftwaretool_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: revops_accountsoftwaretool_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: revops_accountsoftwaretool_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: revops_accountsoftwaretool_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: revops_accountsoftwaretool_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: revops_accountsoftwaretool_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: revops_accountsoftwaretool_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: revops_accountsoftwaretool_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: revops_account_itdocumentation_accountsoftwaretool
+    relationshiptype: OneToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: revops_account_psa_accountsoftwaretool
+    relationshiptype: OneToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: revops_account_rmm_accountsoftwaretool
+    relationshiptype: OneToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: lk_revops_accountsoftwaretool_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountsoftwaretool
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_accountsoftwaretool_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountsoftwaretool
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_accountsoftwaretool_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountsoftwaretool
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_accountsoftwaretool_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountsoftwaretool
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_accountsoftwaretool
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountsoftwaretool
+    referencedtablelogicalname: organization
+

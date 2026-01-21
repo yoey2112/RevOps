@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '530a3f91-b481-ef11-ac21-000d3af43697'
+name: '[Journey] - custom trigger for lead'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

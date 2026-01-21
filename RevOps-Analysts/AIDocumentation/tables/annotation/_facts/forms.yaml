@@ -1,0 +1,122 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Account Information
+        name: account information
+        tab: general
+        visible: true
+      -
+        label: Attachment Information
+        name: attachment information
+        tab: general
+        visible: true
+      -
+        label: Note Content
+        name: content information
+        tab: general
+        visible: true
+    fields:
+      -
+        section: account information
+        tab: general
+        disabled: true
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: account information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdby
+        field: createdby
+      -
+        section: account information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: account information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+      -
+        section: account information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: attachment information
+        tab: general
+        disabled: true
+        visible: true
+        control_id: isdocument
+        field: isdocument
+      -
+        section: attachment information
+        tab: general
+        disabled: true
+        visible: true
+        control_id: filesize
+        field: filesize
+      -
+        section: content information
+        tab: general
+        disabled: true
+        visible: true
+        control_id: notetext
+        field: notetext
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+    field_count: 8
+    type_name: Main
+  -
+    name: Note Quick Create Form
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: Notes Information
+        name: note's information
+        tab: general
+        visible: true
+    fields:
+      -
+        section: note's information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: note's information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: notetext
+        field: notetext
+    description: The quick create form for MoCA client.
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick Create
+

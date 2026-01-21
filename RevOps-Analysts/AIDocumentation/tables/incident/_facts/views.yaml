@@ -1,0 +1,236 @@
+views:
+  -
+    name: Case Advanced Find View
+    querytype: 1
+    savedqueryid: '00000000-0000-0000-00aa-000000666200'
+  -
+    name: My Active Cases
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001028'
+  -
+    name: My Resolved Cases
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001029'
+  -
+    name: All Cases
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001030'
+  -
+    name: Active Cases
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001032'
+  -
+    name: Resolved Cases
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001034'
+  -
+    name: All Cases for Customer
+    description: 'Shows all activities for the customer, sorted by most recent activity.'
+    querytype: 2048
+    savedqueryid: '00000000-0000-0000-00aa-000010001039'
+  -
+    name: Similar Resolved Cases
+    querytype: 2048
+    savedqueryid: '00000000-0000-0000-00aa-000010001046'
+  -
+    name: Case Associated View
+    description: 'Displays information about cases in the detail form of any associated account, contact, product, or contract record. This view is in the Service side tab.'
+    querytype: 2
+    savedqueryid: '00000000-0000-0000-00aa-000010003501'
+  -
+    name: All cases created by me
+    description: Shows all the cases created by the logged in user
+    querytype: -1
+    savedqueryid: '182a7fcf-d011-ea11-a81d-000d3a063867'
+  -
+    name: Cases for Recent Records
+    description: Cases for Recent Records
+    querytype: -1
+    savedqueryid: '6390e7f6-4528-ed11-9db1-000d3a8d107a'
+  -
+    name: Enhanced Active Cases
+    querytype: -1
+    savedqueryid: '8e6c9aa8-d371-ec11-8942-000d3a8e5539'
+  -
+    name: My Cases
+    description: Cases assigned to the current user shown within the inbox.
+    querytype: -1
+    savedqueryid: 'd3650786-67e3-eb11-bacc-000d3a9bc650'
+  -
+    name: Active Cases from IoT Alert
+    description: This view shows all active cases that are triggered from IoT alerts
+    querytype: -1
+    savedqueryid: '413fd748-45a7-e911-8199-000d3af92e18'
+  -
+    name: All Cases from IoT Alerts
+    description: All cases triggered from IoT Alerts
+    querytype: -1
+    savedqueryid: 'c4c27fad-faa7-e911-8199-000d3af92e18'
+  -
+    name: My Active Cases from IoT Alert
+    description: All my active cased triggered from IoT Alert
+    querytype: -1
+    savedqueryid: '8572d789-fca7-e911-8199-000d3af92e18'
+  -
+    name: Recent (last 60 days) cases created by me
+    description: Recent (last 60 days) cases created by me
+    querytype: -1
+    savedqueryid: 'fdfa686a-8230-ea11-a81c-000d3afd5852'
+  -
+    name: Cases Web View
+    querytype: -1
+    savedqueryid: 'f5fc33d8-ed15-df11-a16f-00155d035a12'
+  -
+    name: 'Web - Open Cases'
+    description: View used by the portal to display active cases.
+    querytype: -1
+    savedqueryid: '2bfe75da-ce0e-e511-9461-00155d038c01'
+  -
+    name: 'Web - Closed Cases'
+    description: View used by the portal to display resolved or cancelled cases.
+    querytype: -1
+    savedqueryid: '700aa010-cf0e-e511-9461-00155d038c01'
+  -
+    name: 'Web - All Cases'
+    description: View used by the portal to display all cases.
+    querytype: -1
+    savedqueryid: '9f9aa5dc-a537-e511-947e-00155d038c01'
+  -
+    name: Portal Search
+    querytype: -1
+    savedqueryid: '2cce44b9-7a0e-e211-a768-00155d03a708'
+  -
+    name: My Team Members' Resolved Cases
+    description: Shows all the cases that were resolved today by users belonging to teams administered by the current user.
+    querytype: -1
+    savedqueryid: '2d5e1400-f86d-df11-986c-00155d2e3002'
+  -
+    name: Active Cases Opened in the Last 7 days
+    description: Shows the cases that were created in the last 7 days and are still active.
+    querytype: -1
+    savedqueryid: '429bd987-ac6f-df11-986c-00155d2e3002'
+  -
+    name: My Active Cases Opened in the Last 7 days
+    description: Shows the cases for the current user that were created in the last 7 days and are still active.
+    querytype: -1
+    savedqueryid: '460f1fad-2673-df11-986c-00155d2e3002'
+  -
+    name: Cases Resolved By Me in the last 7 days
+    description: Shows cases that were resolved in the last 7 days.
+    querytype: -1
+    savedqueryid: 'bad2fbea-2673-df11-986c-00155d2e3002'
+  -
+    name: Cases Resolved in the last 7 days
+    description: Shows cases that were resolved in the last 7 days.
+    querytype: -1
+    savedqueryid: '1853caa4-255f-df11-ae90-00155d2e3002'
+  -
+    name: Cases Opened in the Last 7 days
+    description: Shows the cases that were created in the last 7 days.
+    querytype: -1
+    savedqueryid: 'c111f612-1563-df11-ae90-00155d2e3002'
+  -
+    name: Cases I Follow
+    description: Cases that you follow.
+    querytype: -1
+    savedqueryid: '54949c89-5d90-e011-95ae-00155d9cfa02'
+  -
+    name: Cases Being Followed
+    description: Cases being followed.
+    querytype: -1
+    savedqueryid: '54949c89-5d90-e011-95ae-00155d9cfa03'
+  -
+    name: Similar Resolved Cases for Interaction Centric
+    querytype: 2
+    savedqueryid: 'bd15c679-df0b-e611-80d2-00155db1076f'
+  -
+    name: Recent Cases
+    description: Recent Cases.
+    querytype: -1
+    savedqueryid: 'ebd1d24a-eea7-e211-9fb6-00155dd0ea05'
+  -
+    name: Case introduction message view
+    querytype: -1
+    savedqueryid: '5cb909c6-20f0-eb11-bad5-00224876a6de'
+  -
+    name: Active Customer Cases
+    description: A list that shows the active cases for the selected customer in the Customer Support process.
+    querytype: 64
+    savedqueryid: 'fb30f6af-cea8-4320-a060-151350f1f0e7'
+  -
+    name: My Cases for Recent Records
+    description: My Cases for Recent Records
+    querytype: -1
+    savedqueryid: '1ffc069e-b296-4a1e-9768-2b8ca570f40a'
+  -
+    name: Associated Cases
+    querytype: 2
+    savedqueryid: '72210bbb-d9d5-42df-8efd-39395a3cd7a7'
+  -
+    name: Test SLA sort view
+    description: Test view for sorting based on SLA Status and Timers
+    querytype: -1
+    savedqueryid: 'e3f9945d-e8d8-ef11-a730-7c1e52870606'
+  -
+    name: 'kbviews - site-h7opi bot Answers'
+    description: Index definition for bot Answers
+    querytype: -1
+    savedqueryid: '46b1f45a-6ea0-f011-bbd2-7ced8d061554'
+  -
+    name: Child Cases Grid Lookup View
+    querytype: 64
+    savedqueryid: 'cfb670fe-d205-450f-8edb-8f247081adb5'
+  -
+    name: Closed cases created by me
+    description: Shows cases that are closed and created by the logged in user
+    querytype: -1
+    savedqueryid: 'cc6bc541-36e4-4ceb-8b3f-ab3837236cc1'
+  -
+    name: Case Lookup View
+    querytype: 64
+    savedqueryid: '9ac51863-58c7-49a0-adcc-afd9a4c3ee59'
+  -
+    name: My Connections
+    description: Shows all active instances of the case that the current user is connected to via an active connection.
+    querytype: -1
+    savedqueryid: '6dfba3a1-6df3-4140-831b-b385c7e92b64'
+  -
+    name: Associate Child Cases View
+    querytype: 1
+    savedqueryid: '5dbd358d-6670-4138-92b3-b5810fa2a0e8'
+  -
+    name: My Active Cases with Parent Child Status
+    querytype: -1
+    savedqueryid: '4d3297df-c7f0-45f9-9e09-b5b9df223645'
+  -
+    name: Quick Find Cases
+    querytype: 4
+    savedqueryid: 'd95d47ef-4a1d-479e-9065-b9cea0089048'
+  -
+    name: Merge Incident View
+    querytype: 1
+    savedqueryid: 'e1d7d576-da76-4f22-8a65-cc57e23c41bb'
+  -
+    name: Active cases created by me
+    description: Shows cases that are active and created by the logged in user
+    querytype: -1
+    savedqueryid: '719f8513-077d-482c-9250-cc8acbb79413'
+  -
+    name: Associated Cases For Interaction Centric Form
+    querytype: 2
+    savedqueryid: '65ab1a2c-1cd9-4fbe-8fd3-d52142d6b3fd'
+  -
+    name: My Recent Cases
+    description: Recently changed cases owned by me
+    querytype: 8192
+    savedqueryid: '11352b6f-0761-4799-9f47-e5de0b7b34b3'
+  -
+    name: Active Cases with Parent Child Status
+    querytype: -1
+    savedqueryid: '95aa1763-3800-4d3e-906f-e81b4191ac8e'
+  -
+    name: Case Multiline Lookup View
+    description: Shows the active cases with their IDs and when they were last modified.
+    querytype: 2048
+    savedqueryid: '06d2061b-703e-465b-b8ad-fd69c6157127'
+

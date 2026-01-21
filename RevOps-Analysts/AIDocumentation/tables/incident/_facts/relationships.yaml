@@ -1,0 +1,757 @@
+relationships:
+  -
+    schemaname: Incident_ActivityPointers
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_adx_portalcomments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_portalcomment
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_adx_inviteredemptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_inviteredemption
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_chats
+    relationshiptype: OneToMany
+    referencingtablelogicalname: chat
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_MailboxTrackingFolder
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: incident
+  -
+    schemaname: userentityinstancedata_incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_Appointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_Emails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_Faxes
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fax
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_Letters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: letter
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_Phonecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_Tasks
+    relationshiptype: OneToMany
+    referencingtablelogicalname: task
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_RecurringAppointmentMasters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: recurringappointmentmaster
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_SocialActivities
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialactivity
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_QueueItem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queueitem
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_Annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: incident
+  -
+    schemaname: slakpiinstance_incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: slakpiinstance
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_ServiceAppointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: serviceappointment
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_actioncard
+    relationshiptype: OneToMany
+    referencingtablelogicalname: actioncard
+    referencedtablelogicalname: incident
+  -
+    schemaname: Incident_IncidentResolutions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_PostFollows
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postfollow
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_PostRegardings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postregarding
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_PostRoles
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postrole
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_existingcase
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_master_incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_parent_incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: incident
+  -
+    schemaname: OriginatingCase_Lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: incident
+  -
+    schemaname: knowledgearticle_incidents
+    relationshiptype: OneToMany
+    referencingtablelogicalname: knowledgearticleincident
+    referencedtablelogicalname: incident
+  -
+    schemaname: lk_phonetocaseprocess_incidentid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: phonetocaseprocess
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_topic
+    relationshiptype: OneToMany
+    referencingtablelogicalname: topic
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_feedback_context
+    relationshiptype: OneToMany
+    referencingtablelogicalname: feedback
+    referencedtablelogicalname: incident
+  -
+    schemaname: bpf_incident_msdyn_iottocaseprocess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_iottocaseprocess
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_iotalert_Case
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_iotalert
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_OpportunityCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_OrderCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: orderclose
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_QuoteCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quoteclose
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_Posts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: post
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_msfp_alerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_alert
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_msfp_surveyinvites
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyinvite
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_msfp_surveyresponses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_msdyn_copilottranscripts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_copilottranscript
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_caseenrichment_caseid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_caseenrichment
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_casesuggestion_suggestedentity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_casesuggestion
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_casesuggestionrequestpayload_caseid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_casesuggestionrequestpayload
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_suggestionrequestpayload
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_suggestionrequestpayload
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_suggestioninteraction_msdyn_suggestedentity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_suggestioninteraction
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_suggestioninteraction_msdyn_suggestionfor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_suggestioninteraction
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_aicontactsuggestion_sourcerecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_aicontactsuggestion
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_swarm_incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_swarm
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_relatedentity_msdyn_entityattachment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_entityattachment
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_msdyn_ocliveworkitems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_msdyn_ocsessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocsession
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_ocliveworkitem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_casetopic_incident_incidentid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_casetopic_incident
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_msdyn_bookingalerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_bookingalert
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_msdyn_ocvoicemails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocvoicemail
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_li_inmails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_inmail
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_li_messages
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_message
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_li_pointdrivepresentationvieweds
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_pointdrivepresentationviewed
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_revops_demos
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_demo
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_revops_onboardingcalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_timetracker_regardingentity_Incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_timetracker
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_nextaction_regarding_incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_nextaction
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_intententity_objectid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_intententity
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_federatedarticleincident_IncidentId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_federatedarticleincident
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_revops_cumulussignups
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_productmap_msdyn_recordid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_productmap
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_readtracker_poly_incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_readtracker
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_originatingqueue_createdincidentid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_originatingqueue
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_adx_alertsubscriptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_alertsubscription
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_intentcontexthistory_poly_incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_intentcontexthistory
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_msdyn_comments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_comment
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_msdyn_evaluation_incident_msdyn_RegardingObjectId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_evaluation
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_revops_businessreviews
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_businessreview
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_revops_cadencecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_revops_inpersonmeetings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_inpersonmeeting
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_autocaseclosureagentactivity_incidentid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_autocaseclosureagentactivity
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_autocaseclosureagentmonitoring_incidentid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_autocaseclosureagentmonitoring
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_autocaseclosureagentactivity_regarding_incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_autocaseclosureagentactivity
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_autocaseclosureagentmonitoring_regarding_incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_autocaseclosureagentmonitoring
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_msdyn_approvals
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_approval
+    referencedtablelogicalname: incident
+  -
+    schemaname: revops_Incident_relatedcases_Incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: incident
+  -
+    schemaname: revops_msdyn_customerfeedbacksurveyresponse_case_incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_customerfeedbacksurveyresponse
+    referencedtablelogicalname: incident
+  -
+    schemaname: revops_smeengagement_case_incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_smeengagement
+    referencedtablelogicalname: incident
+  -
+    schemaname: revops_transfer_case_incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: incident
+  -
+    schemaname: revops_incident_queue_queue
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: queue
+  -
+    schemaname: revops_incident_opportunity_opportunity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_msdyn_iotalert_incident_IoTAlert
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: msdyn_iotalert
+  -
+    schemaname: msa_account_incident
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: account
+  -
+    schemaname: msa_contact_incident
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: contact
+  -
+    schemaname: revops_incident_mwhaccount_revops_mwhaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: revops_mwhaccount
+  -
+    schemaname: revops_incident_ownermodifiedby_systemuser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_incidentbase_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_incidentbase_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_incidentbase_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_incidentbase_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: system_user_incidents
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_incidents
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_incidents
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_incidents
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: processstage_incident
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: processstage
+  -
+    schemaname: lk_incident_entityimage
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: imagedescriptor
+  -
+    schemaname: manualsla_cases
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: sla
+  -
+    schemaname: sla_cases
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: sla
+  -
+    schemaname: lk_externalparty_incident_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: externalparty
+  -
+    schemaname: lk_externalparty_incident_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: externalparty
+  -
+    schemaname: revops_incident_cumulusaccount_revops_cumulusaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_incident_cumulusorganization_revops_cumulusorganization
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_incident_practice_revops_practice
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_Incident_relatedcases_Incident
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: incident
+  -
+    schemaname: revops_incident_solution_revops_solution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_incident_followupbykpi_slakpiinstance
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: slakpiinstance
+  -
+    schemaname: revops_incident_account_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: account
+  -
+    schemaname: incident_customer_accounts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: account
+  -
+    schemaname: lk_incident_ChildIncidentCount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: childincidentcount
+  -
+    schemaname: contact_as_responsible_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: contact
+  -
+    schemaname: incident_customer_contacts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: contact
+  -
+    schemaname: contact_as_primary_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: contact
+  -
+    schemaname: contract_cases
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: contract
+  -
+    schemaname: contract_detail_cases
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: contractdetail
+  -
+    schemaname: entitlement_cases
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: entitlement
+  -
+    schemaname: incident_existingcase
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_master_incident
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: incident
+  -
+    schemaname: incident_parent_incident
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: incident
+  -
+    schemaname: kbarticle_incidents
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: kbarticle
+  -
+    schemaname: product_incidents
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_incident_msdyn_aiagentstatus
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: msdyn_aiagentstatus
+  -
+    schemaname: revops_incident_competitorregion_msdyn_region
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: msdyn_region
+  -
+    schemaname: revops_incident_losingcompetitor_competitor
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: competitor
+  -
+    schemaname: slakpiinstance_incident_firstresponsebykpi
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: slakpiinstance
+  -
+    schemaname: slakpiinstance_incident_resolvebykpi
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: slakpiinstance
+  -
+    schemaname: socialprofile_cases
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: socialprofile
+  -
+    schemaname: subject_incidents
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: subject
+  -
+    schemaname: TransactionCurrency_Incident
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_incident_subsolution_revops_subsolution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: revops_subsolution
+  -
+    schemaname: revops_incident_cumulususer_revops_cumulususer
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: revops_cumulususer
+  -
+    schemaname: revops_incident_service_revops_service
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: revops_service
+  -
+    schemaname: revops_incident_reassignedby_systemuser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: KnowledgeBaseRecord_Incident
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: knowledgebaserecord
+    referencedtablelogicalname: incident
+  -
+    schemaname: msdyn_incident_msdyn_customerasset
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: msdyn_customerasset
+

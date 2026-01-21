@@ -1,0 +1,92 @@
+relationships:
+  -
+    schemaname: msdyn_operatinghour_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: msdyn_operatinghour
+  -
+    schemaname: msdyn_operatinghour_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: msdyn_operatinghour
+  -
+    schemaname: msdyn_operatinghour_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: msdyn_operatinghour
+  -
+    schemaname: msdyn_operatinghour_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: msdyn_operatinghour
+  -
+    schemaname: msdyn_operatinghour_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: msdyn_operatinghour
+  -
+    schemaname: msdyn_operatinghour_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: msdyn_operatinghour
+  -
+    schemaname: msdyn_operatinghour_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: msdyn_operatinghour
+  -
+    schemaname: msdyn_msdyn_operatinghour_queue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: msdyn_operatinghour
+  -
+    schemaname: msdyn_operatinghour_msdyn_ocvoicechannelsetting_operatinghoursid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocvoicechannelsetting
+    referencedtablelogicalname: msdyn_operatinghour
+  -
+    schemaname: msdyn_msdyn_operatinghour_msdyn_livechatconfig
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_livechatconfig
+    referencedtablelogicalname: msdyn_operatinghour
+  -
+    schemaname: lk_msdyn_operatinghour_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_operatinghour
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdyn_operatinghour_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_operatinghour
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdyn_operatinghour_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_operatinghour
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdyn_operatinghour_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_operatinghour
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_msdyn_operatinghour
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_operatinghour
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_msdyn_operatinghour
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_operatinghour
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_msdyn_operatinghour
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_operatinghour
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_msdyn_operatinghour
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_operatinghour
+    referencedtablelogicalname: businessunit
+

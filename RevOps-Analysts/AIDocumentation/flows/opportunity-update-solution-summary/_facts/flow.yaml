@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: 'de29be5c-030f-ef11-9f89-000d3a0a0668'
+name: 'Opportunity - Update Solution Summary'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

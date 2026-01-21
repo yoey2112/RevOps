@@ -1,0 +1,51 @@
+views:
+  -
+    name: 'Session-registration parent events'
+    querytype: 2
+    savedqueryid: '2b8259f9-b4a2-e711-811c-000d3a743413'
+  -
+    name: My session registrations
+    querytype: 8192
+    savedqueryid: 'aece457f-7605-e611-80d3-00155db077c3'
+  -
+    name: Active event attendee records view
+    querytype: 2
+    savedqueryid: 'b9fc7db3-7617-e611-80d3-00155db852b2'
+  -
+    name: All session registration records
+    description: All related session registration records
+    querytype: 2
+    savedqueryid: 'a3eeffec-9e54-e611-80d6-00155ded2f1b'
+  -
+    name: Session registration with session details
+    querytype: 2
+    savedqueryid: '4d21d546-3b1c-e611-80d3-00155df8bff9'
+  -
+    name: Inactive session registrations
+    querytype: -1
+    savedqueryid: '0e6376c1-c382-41a7-864e-10fe9eb57b72'
+  -
+    name: Session registration associated view
+    querytype: 2
+    savedqueryid: '0e66ee55-732d-4a8c-9770-b0b42771b50e'
+  -
+    name: Active session registrations
+    querytype: -1
+    savedqueryid: 'c9b4fe24-d2aa-4776-ab00-b53f92de99b3'
+  -
+    name: Session registration advanced find view
+    querytype: 1
+    savedqueryid: 'a7c8a688-9aaa-43ac-b6ac-e108f9b4ff48'
+  -
+    name: Registration and attendance of event sessions
+    querytype: -1
+    savedqueryid: '08bd4f6c-8148-4f71-b388-ed01b34bc68f'
+  -
+    name: Session registration lookup view
+    querytype: 64
+    savedqueryid: '4aff2c09-19e0-4823-b9e3-f031f54f73e4'
+  -
+    name: Quick find active session registrations
+    querytype: 4
+    savedqueryid: '8a909510-0d3a-439c-8e4d-fccff99ede29'
+

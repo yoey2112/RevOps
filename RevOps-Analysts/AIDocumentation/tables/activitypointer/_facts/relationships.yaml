@@ -1,0 +1,872 @@
+relationships:
+  -
+    schemaname: activity_pointer_fax
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fax
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_recurrencerule
+    relationshiptype: OneToMany
+    referencingtablelogicalname: recurrencerule
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_letter
+    relationshiptype: OneToMany
+    referencingtablelogicalname: letter
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activitypointer_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_phonecall
+    relationshiptype: OneToMany
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_email
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activitypointer_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_activity_mime_attachment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitymimeattachment
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_appointment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activitypointer_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: slakpiinstance_activitypointer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: slakpiinstance
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: ActivityPointer_QueueItem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queueitem
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_task
+    relationshiptype: OneToMany
+    referencingtablelogicalname: task
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_socialactivity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialactivity
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_email_hash
+    relationshiptype: OneToMany
+    referencingtablelogicalname: emailhash
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: ActivityPointer_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: ActivityPointer_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_recurringappointmentmaster
+    relationshiptype: OneToMany
+    referencingtablelogicalname: recurringappointmentmaster
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_chat
+    relationshiptype: OneToMany
+    referencingtablelogicalname: chat
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activitypointer_FileAttachments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fileattachment
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_adx_inviteredemption
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_inviteredemption
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_adx_portalcomment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_portalcomment
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_BulkOperation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperation
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_campaignactivity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignactivity
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_campaignresponse
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_BulkOperation_logs
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperationlog
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: CreatedActivity_BulkOperationLogs
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperationlog
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: ActivityPointer_CampaignActivityItems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignactivityitem
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_campaignresponse
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_incident_resolution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_service_appointment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: serviceappointment
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_opportunity_close
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_order_close
+    relationshiptype: OneToMany
+    referencingtablelogicalname: orderclose
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_quote_close
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quoteclose
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: msdyn_readtracker_poly_activitypointer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_readtracker
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_msfp_alert
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_alert
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_msfp_surveyinvite
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyinvite
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_msfp_surveyresponse
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_msdyn_copilottranscript
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_copilottranscript
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_msdyn_ocliveworkitem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_msdyn_ocsession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocsession
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_msdyn_bookingalert
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_bookingalert
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_msdyn_ocvoicemail
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocvoicemail
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_li_inmail
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_inmail
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_li_message
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_message
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_li_pointdrivepresentationviewed
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_pointdrivepresentationviewed
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_revops_demo
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_demo
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_revops_onboardingcall
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_revops_cumulussignup
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activitypointer_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_adx_alertsubscription
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_alertsubscription
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_msdyn_comment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_comment
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_revops_businessreview
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_businessreview
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_revops_cadencecall
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_revops_inpersonmeeting
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_inpersonmeeting
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: activity_pointer_msdyn_approval
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_approval
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: interactionforemail_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: interactionforemail
+  -
+    schemaname: KnowledgeBaseRecord_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: knowledgebaserecord
+  -
+    schemaname: KnowledgeArticle_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: activitypointer_sendermailboxid_mailbox
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: mailbox
+  -
+    schemaname: lk_activitypointer_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: Contact_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: contact
+  -
+    schemaname: lk_activitypointer_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: TransactionCurrency_ActivityPointer
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: sla_activitypointer
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: sla
+  -
+    schemaname: business_unit_activitypointer
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: Account_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: account
+  -
+    schemaname: owner_activitypointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: owner
+  -
+    schemaname: manualsla_activitypointer
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: sla
+  -
+    schemaname: team_activity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: team
+  -
+    schemaname: lk_activitypointer_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_activitypointer_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_activity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: FileAttachment_ActivityPointer_DescriptionBlobId
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: fileattachment
+  -
+    schemaname: adx_invitation_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_invitation
+  -
+    schemaname: mspp_adplacement_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: mspp_adplacement
+  -
+    schemaname: mspp_pollplacement_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: mspp_pollplacement
+  -
+    schemaname: mspp_publishingstatetransitionrule_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: mspp_publishingstatetransitionrule
+  -
+    schemaname: mspp_redirect_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: mspp_redirect
+  -
+    schemaname: mspp_shortcut_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: mspp_shortcut
+  -
+    schemaname: mspp_website_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: mspp_website
+  -
+    schemaname: Lead_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: lead
+  -
+    schemaname: bookableresourcebooking_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: bookableresourcebooking
+  -
+    schemaname: bookableresourcebookingheader_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: bookableresourcebookingheader
+  -
+    schemaname: BulkOperation_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: bulkoperation
+  -
+    schemaname: Campaign_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: campaign
+  -
+    schemaname: CampaignActivity_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: campaignactivity
+  -
+    schemaname: Contract_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: contract
+  -
+    schemaname: entitlement_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: entitlement
+  -
+    schemaname: entitlementtemplate_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: entitlementtemplate
+  -
+    schemaname: Incident_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: incident
+  -
+    schemaname: site_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: site
+  -
+    schemaname: service_activity_pointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: service
+  -
+    schemaname: msdyn_customerasset_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_customerasset
+  -
+    schemaname: msdyn_playbookinstance_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_playbookinstance
+  -
+    schemaname: Invoice_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: invoice
+  -
+    schemaname: Opportunity_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Quote_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: quote
+  -
+    schemaname: SalesOrder_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: salesorder
+  -
+    schemaname: msdyn_postalbum_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_postalbum
+  -
+    schemaname: msdyn_swarm_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_swarm
+  -
+    schemaname: msdyn_salessuggestion_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_salessuggestion
+  -
+    schemaname: msdyn_bookingalertstatus_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_bookingalertstatus
+  -
+    schemaname: msdyn_bookingrule_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_bookingrule
+  -
+    schemaname: msdyn_resourceterritory_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_resourceterritory
+  -
+    schemaname: msdyn_systemuserschedulersetting_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_systemuserschedulersetting
+  -
+    schemaname: msdyn_timegroup_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_timegroup
+  -
+    schemaname: msdyn_timegroupdetail_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_timegroupdetail
+  -
+    schemaname: msevtmgt_checkin_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_checkin
+  -
+    schemaname: msevtmgt_event_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_event
+  -
+    schemaname: msevtmgt_eventpurchase_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_eventpurchase
+  -
+    schemaname: msevtmgt_eventpurchaseattendee_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_eventpurchaseattendee
+  -
+    schemaname: msevtmgt_eventpurchasepass_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_eventpurchasepass
+  -
+    schemaname: msevtmgt_eventregistration_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_eventregistration
+  -
+    schemaname: msevtmgt_hotel_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_hotel
+  -
+    schemaname: msevtmgt_hotelroomallocation_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_hotelroomallocation
+  -
+    schemaname: msevtmgt_hotelroomreservation_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_hotelroomreservation
+  -
+    schemaname: msevtmgt_layout_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_layout
+  -
+    schemaname: msevtmgt_room_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_room
+  -
+    schemaname: msevtmgt_session_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_sessionregistration_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_sessionregistration
+  -
+    schemaname: msevtmgt_sessiontrack_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_sessiontrack
+  -
+    schemaname: msevtmgt_speaker_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_speaker
+  -
+    schemaname: msevtmgt_speakerengagement_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_speakerengagement
+  -
+    schemaname: msevtmgt_sponsorablearticle_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_sponsorablearticle
+  -
+    schemaname: msevtmgt_sponsorship_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_sponsorship
+  -
+    schemaname: msevtmgt_venue_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_venue
+  -
+    schemaname: msevtmgt_webinarconfiguration_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_webinarconfiguration
+  -
+    schemaname: msevtmgt_webinarprovider_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msevtmgt_webinarprovider
+  -
+    schemaname: msdyncrm_contentsettings_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_contentsettings
+  -
+    schemaname: msdyncrm_customerjourney_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_customerjourney
+  -
+    schemaname: msdyncrm_marketingdynamiccontentmetadata_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_marketingdynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemaildynamiccontentmetadata_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_marketingemaildynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemailtestsend_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_marketingemailtestsend
+  -
+    schemaname: msdyncrm_uicconfig_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_uicconfig
+  -
+    schemaname: msdyncrm_leadscoremodel_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_leadscoremodel
+  -
+    schemaname: msdyncrm_linkedinaccount_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_linkedinaccount
+  -
+    schemaname: msdyncrm_linkedinactivity_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_linkedinactivity
+  -
+    schemaname: msdyncrm_linkedinfieldmapping_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_linkedinfieldmapping
+  -
+    schemaname: msdyncrm_linkedinform_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_linkedinform
+  -
+    schemaname: msdyncrm_linkedinformanswer_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_linkedinformanswer
+  -
+    schemaname: msdyncrm_linkedinformquestion_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_linkedinformquestion
+  -
+    schemaname: msdyncrm_linkedinformsubmission_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_linkedinformsubmission
+  -
+    schemaname: msdyncrm_linkedinleadmatchingstrategy_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_linkedinleadmatchingstrategy
+  -
+    schemaname: msdyncrm_linkedinuserprofile_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_linkedinuserprofile
+  -
+    schemaname: msdyncrm_migration_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyncrm_migration
+  -
+    schemaname: adx_webpage_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_webpage
+  -
+    schemaname: adx_website_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_website
+  -
+    schemaname: adx_ad_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_ad
+  -
+    schemaname: adx_adplacement_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_adplacement
+  -
+    schemaname: adx_poll_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_poll
+  -
+    schemaname: adx_polloption_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_polloption
+  -
+    schemaname: adx_pollplacement_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_pollplacement
+  -
+    schemaname: adx_pollsubmission_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_pollsubmission
+  -
+    schemaname: adx_publishingstatetransitionrule_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_publishingstatetransitionrule
+  -
+    schemaname: adx_redirect_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_redirect
+  -
+    schemaname: adx_shortcut_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_shortcut
+  -
+    schemaname: adx_communityforumaccesspermission_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_communityforumaccesspermission
+  -
+    schemaname: adx_communityforumalert_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_communityforumalert
+  -
+    schemaname: adx_casedeflection_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_casedeflection
+  -
+    schemaname: adx_contentaccesslevel_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: adx_contentaccesslevel
+  -
+    schemaname: revops_audienceimport_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: revops_audienceimport
+  -
+    schemaname: msdyn_paymentterm_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_paymentterm
+  -
+    schemaname: msdyn_purchaseorder_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_purchaseorder
+  -
+    schemaname: msdyn_purchaseorderproduct_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_purchaseorderproduct
+  -
+    schemaname: msdyn_purchaseorderreceipt_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_purchaseorderreceipt
+  -
+    schemaname: msdyn_purchaseorderreceiptproduct_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_purchaseorderreceiptproduct
+  -
+    schemaname: msdyn_shipvia_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_shipvia
+  -
+    schemaname: msdyn_warehouse_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_warehouse
+  -
+    schemaname: msdyn_projectteam_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_projectteam
+  -
+    schemaname: msdyn_processnotes_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_processnotes
+  -
+    schemaname: revops_smeengagement_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: revops_smeengagement
+  -
+    schemaname: msdyn_project_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: msdyn_project
+  -
+    schemaname: revops_mwhaccount_ActivityPointers
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: revops_mwhaccount
+

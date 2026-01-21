@@ -1,0 +1,22 @@
+relationships:
+  -
+    schemaname: lk_revops_opportunitiessnapshots_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitiessnapshots
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_opportunitiessnapshots_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitiessnapshots
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_opportunitiessnapshots_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitiessnapshots
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_opportunitiessnapshots_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_opportunitiessnapshots
+    referencedtablelogicalname: systemuser
+

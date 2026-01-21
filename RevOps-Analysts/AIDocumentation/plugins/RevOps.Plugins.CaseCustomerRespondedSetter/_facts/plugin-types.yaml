@@ -1,0 +1,6 @@
+types:
+  -
+    plugintypeid: 'a35a4838-63f8-4c2c-91f7-7372c7247c9a'
+    typename: RevOps.Plugins.CaseCustomerRespondedSetter.CaseCustomerRespondedSetter
+    name: RevOps.Plugins.CaseCustomerRespondedSetter.CaseCustomerRespondedSetter
+

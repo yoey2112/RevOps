@@ -1,0 +1,569 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: GENERAL
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Quick View
+  -
+    name: Migration Details
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: ''
+        tab: Transfer
+        visible: true
+      -
+        label: New Section
+        name: tab_2_section_1
+        tab: tab_2
+        visible: true
+      -
+        label: New Section
+        name: tab_3_section_1
+        tab: tab_3
+        visible: true
+      -
+        label: New Section
+        name: tab_4_section_1
+        tab: tab_4
+        visible: true
+      -
+        label: New Section
+        name: tab_5_section_1
+        tab: tab_5
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_migrationreqdestinationenvlinkedtoorg
+        field: revops_migrationreqdestinationenvlinkedtoorg
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_migrationprimarydomain
+        field: revops_migrationprimarydomain
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_migrationotherdomains
+        field: revops_migrationotherdomains
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_generalmigrationtype
+        field: revops_generalmigrationtype
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_sourceprovider
+        field: revops_sourceprovider
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_sourceproviderother
+        field: revops_sourceproviderother
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_sourceprotocol
+        field: revops_sourceprotocol
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_sourceprotocolother
+        field: revops_sourceprotocolother
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_additionalo365servicestomigrate
+        field: revops_additionalo365servicestomigrate
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_googledrivedocumentmigration
+        field: revops_googledrivedocumentmigration
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_imapmigrationlimitation
+        field: revops_imapmigrationlimitation
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_popmigrationlimitation
+        field: revops_popmigrationlimitation
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_migrationadditionalactiveservices
+        field: revops_migrationadditionalactiveservices
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_additionalactiveservicesother
+        field: revops_additionalactiveservicesother
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_migrationdestinationenvironment
+        field: revops_migrationdestinationenvironment
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_migrationoffice365initialdomainprefix
+        field: revops_migrationoffice365initialdomainprefix
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_migrationnumberofmailboxes
+        field: revops_migrationnumberofmailboxes
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_migrationlicensing
+        field: revops_migrationlicensing
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_cumulusorganization
+        field: revops_cumulusorganization
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_contact
+        field: revops_contact
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_competitor
+        field: revops_competitor
+      -
+        section: ''
+        tab: Transfer
+        disabled: true
+        visible: true
+        control_id: revops_case
+        field: revops_case
+      -
+        section: tab_2_section_1
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: revops_cumulusorganization
+        field: revops_cumulusorganization
+      -
+        section: tab_3_section_1
+        tab: tab_3
+        disabled: false
+        visible: true
+        control_id: revops_cumulusaccount
+        field: revops_cumulusaccount
+      -
+        section: tab_4_section_1
+        tab: tab_4
+        disabled: false
+        visible: true
+        control_id: revops_platformsettings
+        field: revops_platformsettings
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: revops_competitorid
+        field: revops_competitorid
+    description: null
+    tabs:
+      -
+        label: General
+        name: Transfer
+        visible: true
+        expanded: true
+      -
+        label: Cumulus Org
+        name: tab_2
+        visible: true
+        expanded: true
+      -
+        label: Cumulus Account
+        name: tab_3
+        visible: true
+        expanded: true
+      -
+        label: Platform Settings
+        name: tab_4
+        visible: true
+        expanded: true
+      -
+        label: Competitor ID
+        name: tab_5
+        visible: true
+        expanded: true
+    field_count: 27
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: A card form for this entity.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 3
+    type_name: Card
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: ''
+        tab: Transfer
+        visible: true
+      -
+        label: New Section
+        name: tab_2_section_1
+        tab: tab_2
+        visible: true
+      -
+        label: New Section
+        name: tab_3_section_1
+        tab: tab_3
+        visible: true
+      -
+        label: New Section
+        name: tab_4_section_1
+        tab: tab_4
+        visible: true
+      -
+        label: New Section
+        name: tab_5_section_1
+        tab: tab_5
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_readyfortransfer
+        field: revops_readyfortransfer
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_cumulusaccount
+        field: revops_cumulusaccount
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_cumulusorganization
+        field: revops_cumulusorganization
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_platformsettings
+        field: revops_platformsettings
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_platformsettings
+        field: revops_platformsettings
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_microsoftid
+        field: revops_microsoftid
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_datesubmitted
+        field: revops_datesubmitted
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_dayssincecurrentsubmit
+        field: revops_dayssincecurrentsubmit
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_firstsubmitted
+        field: revops_firstsubmitted
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_dayssinceoriginalsubmitted
+        field: revops_dayssinceoriginalsubmitted
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_gdap
+        field: revops_gdap
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_partnercenterurl
+        field: revops_partnercenterurl
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_requestid
+        field: revops_requestid
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_azuretransferid
+        field: revops_azuretransferid
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_competitor
+        field: revops_competitor
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_competitorid
+        field: revops_competitorid
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_transferworkload
+        field: revops_transferworkload
+      -
+        section: ''
+        tab: Transfer
+        disabled: false
+        visible: true
+        control_id: revops_payload
+        field: revops_payload
+      -
+        section: ''
+        tab: Transfer
+        disabled: true
+        visible: true
+        control_id: revops_case
+        field: revops_case
+      -
+        section: tab_2_section_1
+        tab: tab_2
+        disabled: false
+        visible: true
+        control_id: revops_cumulusorganization
+        field: revops_cumulusorganization
+      -
+        section: tab_3_section_1
+        tab: tab_3
+        disabled: false
+        visible: true
+        control_id: revops_cumulusaccount
+        field: revops_cumulusaccount
+      -
+        section: tab_4_section_1
+        tab: tab_4
+        disabled: false
+        visible: true
+        control_id: revops_platformsettings
+        field: revops_platformsettings
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: revops_competitorid
+        field: revops_competitorid
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: Transfer
+        visible: true
+        expanded: true
+      -
+        label: Cumulus Org
+        name: tab_2
+        visible: true
+        expanded: true
+      -
+        label: Cumulus Account
+        name: tab_3
+        visible: true
+        expanded: true
+      -
+        label: Platform Settings
+        name: tab_4
+        visible: true
+        expanded: true
+      -
+        label: Competitor ID
+        name: tab_5
+        visible: true
+        expanded: true
+    field_count: 25
+    type_name: Main
+

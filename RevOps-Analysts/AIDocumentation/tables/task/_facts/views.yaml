@@ -1,0 +1,36 @@
+views:
+  -
+    name: Task Lookup View
+    querytype: 64
+    savedqueryid: '20dafc19-ab36-4ab3-bce8-1f431d08748f'
+  -
+    name: Task Associated View
+    querytype: 2
+    savedqueryid: 'bd9e5b3b-94ae-4c4a-9e79-2e7aefee4f5e'
+  -
+    name: Recent Tasks in which I am a Participant
+    description: Recently changed tasks where I am a participant
+    querytype: 8192
+    savedqueryid: 'ca62d74b-9b01-4fc2-836e-37fad18397f9'
+  -
+    name: My Tasks
+    querytype: -1
+    savedqueryid: '6cf285aa-eb20-4277-925a-3e9735411ff0'
+  -
+    name: Quick Find All Tasks
+    querytype: 4
+    savedqueryid: 'b2397ca2-8672-4863-bc69-b65802061665'
+  -
+    name: My Tasks
+    description: Tasks Synced To Outlook
+    querytype: 131072
+    savedqueryid: '75c1313c-f6bd-4c94-a676-bee4215dd434'
+  -
+    name: Task Advanced Find View
+    querytype: 1
+    savedqueryid: '4340434c-44c5-4527-a915-d03af5d261cd'
+  -
+    name: All Tasks
+    querytype: -1
+    savedqueryid: '2b5f5a5d-2d23-4fe7-aa58-e77995368ae7'
+

@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: 'c6c03138-6102-ef11-9f8a-002248d5a732'
+name: 'Lead - Resolve contact by email'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

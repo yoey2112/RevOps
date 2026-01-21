@@ -1,0 +1,6 @@
+workflowid: '28920155-1862-4b42-8209-80bce3694773'
+primaryentity: contact
+description: 'Use this task flow to quickly update contact information, including business and personal information. This flow includes information from the related account.'
+uniquename: update_contact
+name: Update Contact
+

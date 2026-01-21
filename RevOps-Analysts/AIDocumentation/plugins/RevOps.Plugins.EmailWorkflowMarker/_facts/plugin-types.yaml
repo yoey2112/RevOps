@@ -1,0 +1,6 @@
+types:
+  -
+    plugintypeid: 'af4b3000-f5cf-48bd-961b-869073517916'
+    typename: RevOps.Plugins.EmailWorkflowMarker.EmailWorkflowMarker
+    name: RevOps.Plugins.EmailWorkflowMarker.EmailWorkflowMarker
+

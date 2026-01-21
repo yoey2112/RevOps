@@ -1,0 +1,570 @@
+forms:
+  -
+    name: 'information - CS'
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        visible: false
+      -
+        label: Response Details
+        name: '{fe5be043-870f-4d0f-b79f-195dcba93f38}_section_4'
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        visible: true
+      -
+        label: Question Responses
+        name: QuestionResponses
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        visible: false
+    fields:
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_name
+        field: msfp_name
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_submitdate
+        field: msfp_submitdate
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_respondent
+        field: msfp_respondent
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_respondentemailaddress
+        field: msfp_respondentemailaddress
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_surveyid
+        field: msfp_surveyid
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_surveyinviteid
+        field: msfp_surveyinviteid
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_surveyresponseurl
+        field: msfp_surveyresponseurl
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: scheduledstart
+        field: scheduledstart
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_language
+        field: msfp_language
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_locale
+        field: msfp_locale
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_npsscore
+        field: msfp_npsscore
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_sentiment
+        field: msfp_sentiment
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_otherproperties
+        field: msfp_otherproperties
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_embedcontextparameters
+        field: msfp_embedcontextparameters
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: createdby
+        field: createdby
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_sourcesurveyidentifier
+        field: msfp_sourcesurveyidentifier
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: false
+        visible: true
+        control_id: msfp_satisfactionmetricvalue
+        field: msfp_satisfactionmetricvalue
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_responsetype
+        field: msfp_responsetype
+      -
+        section: '{fe5be043-870f-4d0f-b79f-195dcba93f38}_section_4'
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: false
+        visible: true
+        control_id: msfp_questionresponseslist
+        field: msfp_questionresponseslist
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: scheduledend
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statecode
+        field: statecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Copy of Information without General tab
+    tabs:
+      -
+        label: General
+        name: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        visible: true
+        expanded: true
+    field_count: 26
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        visible: true
+      -
+        label: Response Details
+        name: '{fe5be043-870f-4d0f-b79f-195dcba93f38}_section_4'
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        visible: true
+      -
+        label: Question Responses
+        name: QuestionResponses
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        visible: false
+    fields:
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_name
+        field: msfp_name
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_submitdate
+        field: msfp_submitdate
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_respondent
+        field: msfp_respondent
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_respondentemailaddress
+        field: msfp_respondentemailaddress
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_surveyid
+        field: msfp_surveyid
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_surveyinviteid
+        field: msfp_surveyinviteid
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_surveyresponseurl
+        field: msfp_surveyresponseurl
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: scheduledstart
+        field: scheduledstart
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_language
+        field: msfp_language
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_locale
+        field: msfp_locale
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_npsscore
+        field: msfp_npsscore
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_sentiment
+        field: msfp_sentiment
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_otherproperties
+        field: msfp_otherproperties
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_embedcontextparameters
+        field: msfp_embedcontextparameters
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: createdby
+        field: createdby
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_sourcesurveyidentifier
+        field: msfp_sourcesurveyidentifier
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: false
+        visible: true
+        control_id: msfp_satisfactionmetricvalue
+        field: msfp_satisfactionmetricvalue
+      -
+        section: General
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: true
+        visible: true
+        control_id: msfp_responsetype
+        field: msfp_responsetype
+      -
+        section: '{fe5be043-870f-4d0f-b79f-195dcba93f38}_section_4'
+        tab: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        disabled: false
+        visible: true
+        control_id: msfp_questionresponseslist
+        field: msfp_questionresponseslist
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: scheduledend
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statecode
+        field: statecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: '{fe5be043-870f-4d0f-b79f-195dcba93f38}'
+        visible: true
+        expanded: true
+    field_count: 26
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: GENERAL
+        name: ''
+        tab: ''
+        visible: true
+      -
+        label: OTHER DETAILS
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: statecode
+        field: statecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Quick View
+  -
+    name: Information
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: ColorStrip
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msfp_surveyresponse
+        field: msfp_surveyresponse
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: from
+        field: from
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: A card form for this entity.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Card
+

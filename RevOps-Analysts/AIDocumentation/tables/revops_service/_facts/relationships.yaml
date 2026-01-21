@@ -1,0 +1,87 @@
+relationships:
+  -
+    schemaname: revops_service_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_service
+  -
+    schemaname: revops_service_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_service
+  -
+    schemaname: revops_service_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_service
+  -
+    schemaname: revops_service_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_service
+  -
+    schemaname: revops_service_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_service
+  -
+    schemaname: revops_service_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_service
+  -
+    schemaname: revops_service_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_service
+  -
+    schemaname: revops_service_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_service
+  -
+    schemaname: revops_service_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_service
+  -
+    schemaname: revops_service_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_service
+  -
+    schemaname: revops_incident_service_revops_service
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: revops_service
+  -
+    schemaname: revops_subsolution_parentservice_revops_service
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_subsolution
+    referencedtablelogicalname: revops_service
+  -
+    schemaname: lk_revops_service_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_service
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_service_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_service
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_service_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_service
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_service_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_service
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_service
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_service
+    referencedtablelogicalname: organization
+

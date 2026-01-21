@@ -1,0 +1,31 @@
+views:
+  -
+    name: Account Reassignments
+    description: All active Account Reassignments
+    querytype: 8192
+    savedqueryid: 'c92cfbdf-bf1e-ef11-840b-000d3af43a08'
+  -
+    name: Account Reassignment Advanced Find View
+    querytype: 1
+    savedqueryid: '91dd57c8-3cf4-4bbf-8286-015d67c9d6f1'
+  -
+    name: Quick Find Active Account Reassignments
+    querytype: 4
+    savedqueryid: '4892b580-d3ad-4954-8a58-49358621cb88'
+  -
+    name: Account Reassignment Lookup View
+    querytype: 64
+    savedqueryid: '13032134-7fde-4f1b-a7fe-4d17a2ff3513'
+  -
+    name: Inactive Account Reassignments
+    querytype: -1
+    savedqueryid: '573a9838-4c02-4a6b-ada5-74ef1618635a'
+  -
+    name: Active Account Reassignments
+    querytype: -1
+    savedqueryid: '1bc378c9-2b95-4a47-9333-83bcb63d9c55'
+  -
+    name: Account Reassignment Associated View
+    querytype: 2
+    savedqueryid: 'ea53ff57-1c88-400b-b632-85ec9acea1cf'
+

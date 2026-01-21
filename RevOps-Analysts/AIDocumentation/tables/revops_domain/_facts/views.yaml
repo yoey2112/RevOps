@@ -1,0 +1,31 @@
+views:
+  -
+    name: Domains
+    description: All active Domains
+    querytype: 8192
+    savedqueryid: 'de94add3-6623-ef11-840b-000d3af43a08'
+  -
+    name: Active Domains
+    querytype: -1
+    savedqueryid: '9034d38f-634c-4e21-8241-004fffb61ec2'
+  -
+    name: Domain Associated View
+    querytype: 2
+    savedqueryid: '1a8fdc63-76b3-4f80-9d52-33ccdf11334c'
+  -
+    name: Domain Advanced Find View
+    querytype: 1
+    savedqueryid: 'e3b37108-768a-434d-b468-3601645ae354'
+  -
+    name: Domain Lookup View
+    querytype: 64
+    savedqueryid: '4d825496-6f93-4c15-85b0-7fb316abf3a4'
+  -
+    name: Quick Find Active Domains
+    querytype: 4
+    savedqueryid: '79e6dd22-e6be-4f41-8834-e46a7ccf3e4f'
+  -
+    name: Inactive Domains
+    querytype: -1
+    savedqueryid: 'cdb84013-fe76-4beb-a3ec-fa3f5f02dd60'
+

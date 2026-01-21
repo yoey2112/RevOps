@@ -1,0 +1,39 @@
+views:
+  -
+    name: My Survey responses
+    description: Active Survey responses owned by me
+    querytype: 8192
+    savedqueryid: 'ad76b3e7-fbf9-e811-a962-000d3a3780dd'
+  -
+    name: Survey response view
+    querytype: -1
+    savedqueryid: 'eb4099b2-eb7d-e911-a98b-000d3ac000c8'
+  -
+    name: Survey response Advanced Find View
+    querytype: 1
+    savedqueryid: 'c6903e80-0d82-4de0-854f-10611c51cefb'
+  -
+    name: My Open Survey responses
+    querytype: -1
+    savedqueryid: '041f106b-ec7a-4462-8148-5b5c036e3c35'
+  -
+    name: All Survey responses
+    querytype: -1
+    savedqueryid: 'd4f5c6eb-fd62-4b39-a8fd-7d1533b02187'
+  -
+    name: Survey response Lookup View
+    querytype: 64
+    savedqueryid: 'a47a1c1a-876c-48ef-a6ca-a9ca3c030cc0'
+  -
+    name: Quick Find Active Survey responses
+    querytype: 4
+    savedqueryid: '99e3e96a-4c5c-496d-b304-ad437d56a49c'
+  -
+    name: Survey response Associated View
+    querytype: 2
+    savedqueryid: 'af20d201-1af0-402b-b4a7-e9e3b84310ca'
+  -
+    name: Closed Survey responses
+    querytype: -1
+    savedqueryid: '0bff8c19-f31b-4136-bd0a-fdcfc7f9a489'
+

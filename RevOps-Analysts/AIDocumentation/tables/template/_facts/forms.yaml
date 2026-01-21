@@ -1,0 +1,275 @@
+forms:
+  -
+    name: Template gallery filter form
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: templatetypecode
+        field: templatetypecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: languagecode
+        field: languagecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: permissionlevel
+        field: ispersonal
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: body
+        field: body
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_category
+        field: revops_category
+    description: Template gallery filter form
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 8
+    type_name: Quick View
+  -
+    name: Template
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Details
+        name: Details
+        tab: Template
+        visible: true
+      -
+        label: Template editor
+        name: Template editor
+        tab: Template
+        visible: true
+      -
+        label: Section
+        name: tab_4_section_1
+        tab: Enhance_Editor_tab
+        visible: true
+      -
+        label: Section
+        name: tab_3_section_1
+        tab: Attachment_tab
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: Details
+        tab: Template
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Details
+        tab: Template
+        disabled: false
+        visible: true
+        control_id: permissionLevelId
+        field: ispersonal
+      -
+        section: Details
+        tab: Template
+        disabled: true
+        visible: true
+        control_id: category
+        field: templatetypecode
+      -
+        section: Details
+        tab: Template
+        disabled: false
+        visible: true
+        control_id: language
+        field: languagecode
+      -
+        section: Details
+        tab: Template
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Details
+        tab: Template
+        disabled: false
+        visible: true
+        control_id: revops_category
+        field: revops_category
+      -
+        section: Details
+        tab: Template
+        disabled: false
+        visible: true
+        control_id: msdyn_lineofbusiness
+        field: msdyn_lineofbusiness
+      -
+        section: Template editor
+        tab: Template
+        disabled: false
+        visible: true
+        control_id: subjectsafehtml
+        field: subjectsafehtml
+      -
+        section: Template editor
+        tab: Template
+        disabled: false
+        visible: true
+        control_id: safehtml
+        field: safehtml
+      -
+        section: tab_4_section_1
+        tab: Enhance_Editor_tab
+        disabled: false
+        visible: true
+        control_id: isenhancededitorenabled
+        field: isenhancededitorenabled
+      -
+        section: tab_4_section_1
+        tab: Enhance_Editor_tab
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: tab_4_section_1
+        tab: Enhance_Editor_tab
+        disabled: false
+        visible: true
+        control_id: enhancededitorhtml
+        field: enhancededitorhtml
+    description: Default UCI Template Form.
+    tabs:
+      -
+        label: Template
+        name: Template
+        visible: true
+        expanded: false
+      -
+        label: Editor
+        name: Enhance_Editor_tab
+        visible: false
+        expanded: false
+      -
+        label: Attachments
+        name: Attachment_tab
+        visible: false
+        expanded: false
+    field_count: 13
+    type_name: Main
+  -
+    name: Template gallery properties form
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: section
+        name: tab_1_column_1_section_1
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: tab_1_column_1_section_1
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_category
+        field: revops_category
+    description: Template gallery properties form to add/update properties in template
+    tabs:
+      -
+        label: Tab
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick View
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Email Template Information
+        name: email template information
+        tab: general
+        visible: true
+    fields:
+      -
+        section: email template information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Main
+

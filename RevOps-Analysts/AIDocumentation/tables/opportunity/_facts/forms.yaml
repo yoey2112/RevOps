@@ -1,0 +1,1892 @@
+forms:
+  -
+    name: Opportunities Dashboard
+    is_active: true
+    type: 10
+    sections:
+      -
+        label: Section
+        name: VisualFilters
+        tab: ''
+        visible: true
+      -
+        label: Section
+        name: Streams
+        tab: StreamsContainer
+        visible: true
+    fields:
+    description: Shows an overview of data related to opportunities.
+    tabs:
+      -
+        label: Visual Filters
+        name: ''
+        visible: true
+        expanded: true
+      -
+        label: Streams
+        name: StreamsContainer
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Type 10
+  -
+    name: Follow up with Opportunity
+    is_active: true
+    type: 9
+    sections:
+      -
+        label: Opportunity Information
+        name: step_2_section1
+        tab: step_2
+        visible: true
+      -
+        label: Communication
+        name: step_2_section2
+        tab: step_2
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: '23d2b546-71c3-4245-8fb3-1addbeda5fc6_next'
+        field: '23d2b546-71c3-4245-8fb3-1addbeda5fc6_next'
+      -
+        section: step_2_section1
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: parentaccountid
+        field: parentaccountid
+      -
+        section: step_2_section1
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: parentcontactid
+        field: parentcontactid
+      -
+        section: step_2_section1
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: step_2_section1
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: step_2_section1
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: currentsituation
+        field: currentsituation
+      -
+        section: step_2_section1
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: customerneed
+        field: customerneed
+      -
+        section: step_2_section2
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: 'opportunity_parent_contact:preferredcontactmethodcode'
+        field: preferredcontactmethodcode
+      -
+        section: step_2_section2
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: 'opportunity_parent_contact:emailaddress1'
+        field: emailaddress1
+      -
+        section: step_2_section2
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: 'opportunity_parent_contact:telephone1'
+        field: telephone1
+      -
+        section: step_2_section2
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: 'opportunity_parent_contact:mobilephone'
+        field: mobilephone
+    description: null
+    tabs:
+      -
+        label: Review key information and easily follow up with the opportunity's primary contact
+        name: step_2
+        visible: true
+        expanded: true
+    field_count: 11
+    type_name: Type 9
+  -
+    name: AI for Sales
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Key details
+        name: opportunity_information
+        tab: Summary
+        visible: true
+      -
+        label: More info
+        name: Opportunity_details
+        tab: Summary
+        visible: true
+      -
+        label: Up next
+        name: Summary_CadenceWidget
+        tab: Summary
+        visible: true
+      -
+        label: NOTES PANE
+        name: Notes_pane
+        tab: Summary
+        visible: true
+      -
+        label: Predictive Opportunity Scoring
+        name: PredictiveScoreSection
+        tab: Summary
+        visible: true
+      -
+        label: Assistant
+        name: Summary_section_6
+        tab: Summary
+        visible: true
+      -
+        label: Section
+        name: Summary_section_7
+        tab: Summary
+        visible: true
+      -
+        label: Social pane
+        name: Social_pane
+        tab: Summary
+        visible: true
+      -
+        label: Section
+        name: Activity Analysis_section_2
+        tab: RELATIONSHIP_ANALYTICS_TAB
+        visible: true
+      -
+        label: Section
+        name: RAV2_section_1
+        tab: RAV2
+        visible: true
+      -
+        label: Quotes
+        name: opportunityquotes
+        tab: QUOTES
+        visible: true
+      -
+        label: Opportunity Products
+        name: opportunityproducts
+        tab: Product_Line_Items
+        visible: true
+      -
+        label: Suggestions
+        name: suggestionsection
+        tab: Product_Line_Items
+        visible: true
+      -
+        label: Dynamic Properties
+        name: DynamicProperties
+        tab: Product_Line_Items
+        visible: true
+      -
+        label: Product Line Item Totals
+        name: totals
+        tab: Product_Line_Items
+        visible: true
+      -
+        label: LinkedIn Member Profile
+        name: linkedin_v2_tab_section_1
+        tab: linkedin_v2_tab
+        visible: true
+      -
+        label: LinkedIn Account Profile
+        name: linkedin_v2_tab_section_2
+        tab: linkedin_v2_tab
+        visible: true
+      -
+        label: LinkedIn InMail
+        name: linkedin_v2_tab_section_3
+        tab: linkedin_v2_tab
+        visible: true
+    fields:
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: parentcontactid
+        field: parentcontactid
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: purchasetimeframe
+        field: purchasetimeframe
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: budgetamount
+        field: budgetamount
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: purchaseprocess
+        field: purchaseprocess
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_ordertype
+        field: msdyn_ordertype
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: currentsituation
+        field: currentsituation
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: customerneed
+        field: customerneed
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: proposedsolution
+        field: proposedsolution
+      -
+        section: opportunityproducts
+        tab: Product_Line_Items
+        disabled: false
+        visible: true
+        control_id: pricelevelid
+        field: pricelevelid
+      -
+        section: opportunityproducts
+        tab: Product_Line_Items
+        disabled: false
+        visible: true
+        control_id: isrevenuesystemcalculated
+        field: isrevenuesystemcalculated
+      -
+        section: totals
+        tab: Product_Line_Items
+        disabled: true
+        visible: true
+        control_id: totallineitemamount
+        field: totallineitemamount
+      -
+        section: totals
+        tab: Product_Line_Items
+        disabled: false
+        visible: true
+        control_id: discountpercentage
+        field: discountpercentage
+      -
+        section: totals
+        tab: Product_Line_Items
+        disabled: false
+        visible: true
+        control_id: discountamount
+        field: discountamount
+      -
+        section: totals
+        tab: Product_Line_Items
+        disabled: true
+        visible: true
+        control_id: totalamountlessfreight
+        field: totalamountlessfreight
+      -
+        section: totals
+        tab: Product_Line_Items
+        disabled: false
+        visible: true
+        control_id: freightamount
+        field: freightamount
+      -
+        section: totals
+        tab: Product_Line_Items
+        disabled: true
+        visible: true
+        control_id: totaltax
+        field: totaltax
+      -
+        section: totals
+        tab: Product_Line_Items
+        disabled: true
+        visible: true
+        control_id: totalamount
+        field: totalamount
+      -
+        section: linkedin_v2_tab_section_1
+        tab: linkedin_v2_tab
+        disabled: false
+        visible: true
+        control_id: parentcontactid
+        field: parentcontactid
+      -
+        section: linkedin_v2_tab_section_2
+        tab: linkedin_v2_tab
+        disabled: false
+        visible: true
+        control_id: parentaccountid
+        field: parentaccountid
+      -
+        section: linkedin_v2_tab_section_3
+        tab: linkedin_v2_tab
+        disabled: false
+        visible: true
+        control_id: parentcontactid
+        field: parentcontactid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_parentaccountid
+        field: parentaccountid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_estimatedclosedate
+        field: estimatedclosedate
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_estimatedvalue
+        field: estimatedvalue
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Updated default Opportunity form
+    tabs:
+      -
+        label: Summary
+        name: Summary
+        visible: true
+        expanded: true
+      -
+        label: Relationship analytics
+        name: RELATIONSHIP_ANALYTICS_TAB
+        visible: false
+        expanded: false
+      -
+        label: Relationship analytics
+        name: RAV2
+        visible: false
+        expanded: true
+      -
+        label: Quotes
+        name: QUOTES
+        visible: true
+        expanded: true
+      -
+        label: Products
+        name: Product_Line_Items
+        visible: true
+        expanded: false
+      -
+        label: LinkedIn Sales Navigator
+        name: linkedin_v2_tab
+        visible: false
+        expanded: true
+    field_count: 27
+    type_name: Main
+  -
+    name: Opportunity Quick Create
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: Details
+        name: quickOpportunity_column1
+        tab: newOpportunity
+        visible: true
+      -
+        label: section
+        name: quickOpportunity_column2
+        tab: newOpportunity
+        visible: true
+      -
+        label: Customer need
+        name: quickOpportunity_column3
+        tab: newOpportunity
+        visible: true
+    fields:
+      -
+        section: quickOpportunity_column1
+        tab: newOpportunity
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: quickOpportunity_column1
+        tab: newOpportunity
+        disabled: false
+        visible: true
+        control_id: parentaccountid
+        field: parentaccountid
+      -
+        section: quickOpportunity_column1
+        tab: newOpportunity
+        disabled: false
+        visible: true
+        control_id: parentcontactid
+        field: parentcontactid
+      -
+        section: quickOpportunity_column2
+        tab: newOpportunity
+        disabled: false
+        visible: true
+        control_id: revops_solution
+        field: revops_solution
+      -
+        section: quickOpportunity_column2
+        tab: newOpportunity
+        disabled: false
+        visible: true
+        control_id: revops_opportunitytype
+        field: revops_opportunitytype
+      -
+        section: quickOpportunity_column2
+        tab: newOpportunity
+        disabled: false
+        visible: true
+        control_id: revops_salesmotion
+        field: revops_salesmotion
+      -
+        section: quickOpportunity_column2
+        tab: newOpportunity
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: quickOpportunity_column2
+        tab: newOpportunity
+        disabled: false
+        visible: true
+        control_id: estimatedvalue
+        field: estimatedvalue
+      -
+        section: quickOpportunity_column2
+        tab: newOpportunity
+        disabled: false
+        visible: true
+        control_id: estimatedclosedate
+        field: estimatedclosedate
+      -
+        section: quickOpportunity_column3
+        tab: newOpportunity
+        disabled: false
+        visible: true
+        control_id: customerneed
+        field: customerneed
+    description: Default quick create form for Opportunity
+    tabs:
+      -
+        label: New Opportunity
+        name: newOpportunity
+        visible: true
+        expanded: true
+    field_count: 10
+    type_name: Quick Create
+  -
+    name: In Context Form
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: Key details
+        name: Summary_keydetails
+        tab: Summary
+        visible: true
+      -
+        label: Contacts
+        name: Summary_contacts
+        tab: Summary
+        visible: true
+      -
+        label: Collaboration
+        name: Summary_collaboration
+        tab: Summary
+        visible: true
+      -
+        label: Notes
+        name: Summary_notes
+        tab: Summary
+        visible: true
+      -
+        label: Tasks
+        name: Summary_tasks
+        tab: Summary
+        visible: true
+      -
+        label: Section
+        name: tab_3_section_1
+        tab: Activity
+        visible: true
+      -
+        label: Section
+        name: tab_9_section_3
+        tab: Ignore
+        visible: true
+    fields:
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: statecode
+        field: statecode
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: opportunityratingcode
+        field: opportunityratingcode
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: estimatedclosedate
+        field: estimatedclosedate
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: estimatedvalue
+        field: estimatedvalue
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: closeprobability
+        field: closeprobability
+      -
+        section: Summary_keydetails
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Summary_contacts
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: parentcontactid
+        field: parentcontactid
+      -
+        section: tab_9_section_3
+        tab: Ignore
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: tab_9_section_3
+        tab: Ignore
+        disabled: false
+        visible: true
+        control_id: isrevenuesystemcalculated
+        field: isrevenuesystemcalculated
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_parentaccountid
+        field: parentaccountid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_name
+        field: name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_parentaccountid
+        field: parentaccountid
+    description: Updated default Account form.
+    tabs:
+      -
+        label: Summary
+        name: Summary
+        visible: true
+        expanded: false
+      -
+        label: Activity
+        name: Activity
+        visible: true
+        expanded: false
+      -
+        label: Ignore
+        name: Ignore
+        visible: true
+        expanded: false
+    field_count: 12
+    type_name: Main
+  -
+    name: Lead qualification opportunity form
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Key Details
+        name: opportunity_information
+        tab: Summary
+        visible: true
+      -
+        label: More info
+        name: Opportunity_details
+        tab: Summary
+        visible: true
+    fields:
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: budgetamount
+        field: budgetamount
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: purchasetimeframe
+        field: purchasetimeframe
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: purchaseprocess
+        field: purchaseprocess
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: header_estimatedclosedate
+        field: estimatedclosedate
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_forecastcategory
+        field: msdyn_forecastcategory
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: currentsituation
+        field: currentsituation
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: customerneed
+        field: customerneed
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: proposedsolution
+        field: proposedsolution
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Opportunity form for enhanced lead qualification experience
+    tabs:
+      -
+        label: Summary
+        name: Summary
+        visible: true
+        expanded: true
+    field_count: 13
+    type_name: Main
+  -
+    name: 'Quick View - SME Engagement'
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Opportunity Information
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_totalestrevenue
+        field: revops_totalestrevenue
+    description: null
+    tabs:
+      -
+        label: New Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick View
+  -
+    name: Quick Opportunity View Form
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: section
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: estimatedvalue
+        field: estimatedvalue
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: estimatedclosedate
+        field: estimatedclosedate
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: stepname
+        field: stepname
+    description: A form that displays the Opportunity card
+    tabs:
+      -
+        label: Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 4
+    type_name: Quick View
+  -
+    name: Opportunity
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Opportunity information
+        name: opportunity_information
+        tab: Summary
+        visible: true
+      -
+        label: Opportunity details
+        name: Opportunity_details
+        tab: Summary
+        visible: true
+      -
+        label: Opportunity summary
+        name: Record_Summary_Widget
+        tab: Summary
+        visible: false
+      -
+        label: Up next
+        name: Summary_CadenceWidget
+        tab: Summary
+        visible: true
+      -
+        label: Notes pane
+        name: Notes_pane
+        tab: Summary
+        visible: true
+      -
+        label: Assistant
+        name: Summary_section_6
+        tab: Summary
+        visible: true
+      -
+        label: Activity Dates
+        name: Summary_section_11
+        tab: Summary
+        visible: true
+      -
+        label: Opportunity Solutions
+        name: Summary_section_10
+        tab: Summary
+        visible: true
+      -
+        label: Social pane
+        name: Social_pane
+        tab: Summary
+        visible: true
+      -
+        label: ''
+        name: Competitors_Section
+        tab: Summary
+        visible: true
+      -
+        label: New Section
+        name: tab_5_section_1
+        tab: tab_5
+        visible: true
+      -
+        label: Opportunity products
+        name: opportunityproducts
+        tab: Product_Line_Items
+        visible: true
+      -
+        label: Suggestions
+        name: suggestionsection
+        tab: Product_Line_Items
+        visible: true
+      -
+        label: Dynamic properties
+        name: DynamicProperties
+        tab: Product_Line_Items
+        visible: true
+      -
+        label: Product line item totals
+        name: totals
+        tab: Product_Line_Items
+        visible: true
+      -
+        label: Quotes
+        name: opportunityquotes
+        tab: QUOTES
+        visible: true
+      -
+        label: Documents Section
+        name: documents_sharepoint_section
+        tab: documents_sharepoint
+        visible: true
+      -
+        label: New Section
+        name: tab_7_section_1
+        tab: tab_7
+        visible: true
+      -
+        label: LinkedIn Member Profile
+        name: linkedin_v2_tab_section_1
+        tab: linkedin_v2_tab
+        visible: true
+      -
+        label: LinkedIn Account Profile
+        name: linkedin_v2_tab_section_2
+        tab: linkedin_v2_tab
+        visible: true
+      -
+        label: LinkedIn InMail
+        name: linkedin_v2_tab_section_3
+        tab: linkedin_v2_tab
+        visible: true
+    fields:
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: true
+        visible: true
+        control_id: revops_opportunityid
+        field: revops_opportunityid
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_solution
+        field: revops_solution
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: estimatedvalue
+        field: estimatedvalue
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: parentaccountid
+        field: parentaccountid
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: parentcontactid
+        field: parentcontactid
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1714666094350
+        field: parentcontactid
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_ordertype
+        field: msdyn_ordertype
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_totalestrevenue
+        field: revops_totalestrevenue
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_probability
+        field: revops_probability
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_weightedrevenue
+        field: revops_weightedrevenue
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: createdby
+        field: createdby
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_demosme
+        field: revops_demosme
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_opportunitytype
+        field: revops_opportunitytype
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_salesmotion
+        field: revops_salesmotion
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: currentsituation
+        field: currentsituation
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: customerneed
+        field: customerneed
+      -
+        section: Summary_section_11
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_lastactivitydate
+        field: revops_lastactivitydate
+      -
+        section: Summary_section_11
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_nextactivitydue
+        field: revops_nextactivitydue
+      -
+        section: Summary_section_10
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: revops_solutionssummary
+        field: revops_solutionssummary
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: parentaccountid
+        field: parentaccountid
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: true
+        visible: true
+        control_id: revops_accountrelationshiptype
+        field: revops_accountrelationshiptype
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: revops_channel
+        field: revops_channel
+      -
+        section: tab_5_section_1
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: QuickviewControl1706076651500
+        field: parentaccountid
+      -
+        section: opportunityproducts
+        tab: Product_Line_Items
+        disabled: false
+        visible: true
+        control_id: pricelevelid
+        field: pricelevelid
+      -
+        section: opportunityproducts
+        tab: Product_Line_Items
+        disabled: false
+        visible: true
+        control_id: isrevenuesystemcalculated
+        field: isrevenuesystemcalculated
+      -
+        section: totals
+        tab: Product_Line_Items
+        disabled: true
+        visible: true
+        control_id: totallineitemamount
+        field: totallineitemamount
+      -
+        section: totals
+        tab: Product_Line_Items
+        disabled: false
+        visible: true
+        control_id: discountpercentage
+        field: discountpercentage
+      -
+        section: totals
+        tab: Product_Line_Items
+        disabled: false
+        visible: true
+        control_id: discountamount
+        field: discountamount
+      -
+        section: totals
+        tab: Product_Line_Items
+        disabled: true
+        visible: true
+        control_id: totalamountlessfreight
+        field: totalamountlessfreight
+      -
+        section: totals
+        tab: Product_Line_Items
+        disabled: false
+        visible: true
+        control_id: freightamount
+        field: freightamount
+      -
+        section: totals
+        tab: Product_Line_Items
+        disabled: true
+        visible: true
+        control_id: totaltax
+        field: totaltax
+      -
+        section: totals
+        tab: Product_Line_Items
+        disabled: true
+        visible: true
+        control_id: totalamount
+        field: totalamount
+      -
+        section: linkedin_v2_tab_section_1
+        tab: linkedin_v2_tab
+        disabled: false
+        visible: true
+        control_id: parentcontactid
+        field: parentcontactid
+      -
+        section: linkedin_v2_tab_section_2
+        tab: linkedin_v2_tab
+        disabled: false
+        visible: true
+        control_id: parentaccountid
+        field: parentaccountid
+      -
+        section: linkedin_v2_tab_section_3
+        tab: linkedin_v2_tab
+        disabled: false
+        visible: true
+        control_id: parentcontactid
+        field: parentcontactid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_closeprobability
+        field: closeprobability
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_revops_weightedrevenue
+        field: revops_weightedrevenue
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_estimatedclosedate
+        field: estimatedclosedate
+    description: Updated default Opportunity form
+    tabs:
+      -
+        label: Summary
+        name: Summary
+        visible: true
+        expanded: true
+      -
+        label: Account Profile
+        name: tab_5
+        visible: true
+        expanded: true
+      -
+        label: Products
+        name: Product_Line_Items
+        visible: false
+        expanded: true
+      -
+        label: Quotes
+        name: QUOTES
+        visible: false
+        expanded: true
+      -
+        label: Files
+        name: documents_sharepoint
+        visible: true
+        expanded: true
+      -
+        label: SME Engagements
+        name: tab_7
+        visible: true
+        expanded: true
+      -
+        label: LinkedIn Sales Navigator
+        name: linkedin_v2_tab
+        visible: true
+        expanded: true
+    field_count: 43
+    type_name: Main
+  -
+    name: Project Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Opportunity Information
+        name: opportunity_information
+        tab: Summary
+        visible: true
+      -
+        label: Opportunity Details
+        name: Opportunity_details
+        tab: Summary
+        visible: true
+      -
+        label: NOTES PANE
+        name: Notes_pane
+        tab: Summary
+        visible: true
+      -
+        label: SOCIAL PANE
+        name: Social_pane
+        tab: Summary
+        visible: true
+      -
+        label: 'Project-based Lines'
+        name: OpportunityLinesSection
+        tab: OpportunityLinesTab
+        visible: true
+      -
+        label: 'Product-based Lines'
+        name: OpportunityLinesTab_section_3
+        tab: OpportunityLinesTab
+        visible: true
+      -
+        label: Product Line Item Totals
+        name: totals
+        tab: OpportunityLinesTab
+        visible: true
+      -
+        label: Opportunity Products
+        name: opportunityproducts
+        tab: Product_Line_Items
+        visible: true
+      -
+        label: ''
+        name: suggestionsection
+        tab: Product_Line_Items
+        visible: true
+      -
+        label: ''
+        name: DynamicProperties
+        tab: Product_Line_Items
+        visible: true
+      -
+        label: Quotes
+        name: opportunityquotes
+        tab: QUOTES
+        visible: true
+    fields:
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_ordertype
+        field: msdyn_ordertype
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: parentcontactid
+        field: parentcontactid
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: parentaccountid
+        field: parentaccountid
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_accountmanagerid
+        field: msdyn_accountmanagerid
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: msdyn_contractorganizationalunitid
+        field: msdyn_contractorganizationalunitid
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: purchasetimeframe
+        field: purchasetimeframe
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: pricelevelid
+        field: pricelevelid
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: isrevenuesystemcalculated
+        field: isrevenuesystemcalculated
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: budgetamount
+        field: budgetamount
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: closeprobability
+        field: closeprobability
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: opportunityratingcode
+        field: opportunityratingcode
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: purchaseprocess
+        field: purchaseprocess
+      -
+        section: opportunity_information
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: currentsituation
+        field: currentsituation
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: customerneed
+        field: customerneed
+      -
+        section: Opportunity_details
+        tab: Summary
+        disabled: false
+        visible: true
+        control_id: proposedsolution
+        field: proposedsolution
+      -
+        section: totals
+        tab: OpportunityLinesTab
+        disabled: true
+        visible: true
+        control_id: totallineitemamount
+        field: totallineitemamount
+      -
+        section: totals
+        tab: OpportunityLinesTab
+        disabled: false
+        visible: true
+        control_id: discountpercentage
+        field: discountpercentage
+      -
+        section: totals
+        tab: OpportunityLinesTab
+        disabled: false
+        visible: true
+        control_id: discountamount
+        field: discountamount
+      -
+        section: totals
+        tab: OpportunityLinesTab
+        disabled: true
+        visible: true
+        control_id: totalamountlessfreight
+        field: totalamountlessfreight
+      -
+        section: totals
+        tab: OpportunityLinesTab
+        disabled: false
+        visible: true
+        control_id: freightamount
+        field: freightamount
+      -
+        section: totals
+        tab: OpportunityLinesTab
+        disabled: true
+        visible: true
+        control_id: totaltax
+        field: totaltax
+      -
+        section: totals
+        tab: OpportunityLinesTab
+        disabled: true
+        visible: true
+        control_id: totalamount
+        field: totalamount
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_estimatedclosedate
+        field: estimatedclosedate
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_estimatedvalue
+        field: estimatedvalue
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Shows opportunity information for Project Service.
+    tabs:
+      -
+        label: Summary
+        name: Summary
+        visible: true
+        expanded: true
+      -
+        label: Opportunity Lines
+        name: OpportunityLinesTab
+        visible: true
+        expanded: true
+      -
+        label: Product Line Items
+        name: Product_Line_Items
+        visible: false
+        expanded: false
+      -
+        label: Quotes
+        name: QUOTES
+        visible: true
+        expanded: true
+    field_count: 29
+    type_name: Main
+  -
+    name: Information
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: Section
+        name: tab_recordwall_section_1
+        tab: tab_recordwall
+        visible: true
+      -
+        label: Opportunity Information
+        name: opportunity information
+        tab: general
+        visible: true
+      -
+        label: Forecast Information
+        name: forecast information
+        tab: general
+        visible: true
+      -
+        label: Opportunity Products
+        name: opportunityproducts
+        tab: Product Line Item Details
+        visible: true
+      -
+        label: Products
+        name: products
+        tab: Product Line Item Details
+        visible: true
+      -
+        label: Product Line Item Totals
+        name: totals
+        tab: Product Line Item Details
+        visible: true
+      -
+        label: Activities
+        name: activities
+        tab: notes and activities
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: notes and activities
+        visible: true
+      -
+        label: Quotes
+        name: opportunityquotes
+        tab: Opportunity Quotes
+        visible: true
+      -
+        label: Internal Information
+        name: internal information
+        tab: administration
+        visible: true
+    fields:
+      -
+        section: opportunity information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: opportunity information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: customerid
+        field: customerid
+      -
+        section: opportunity information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: forecast information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: isrevenuesystemcalculated
+        field: isrevenuesystemcalculated
+      -
+        section: forecast information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: estimatedvalue
+        field: estimatedvalue
+      -
+        section: forecast information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: closeprobability
+        field: closeprobability
+      -
+        section: forecast information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: estimatedclosedate
+        field: estimatedclosedate
+      -
+        section: forecast information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: opportunityratingcode
+        field: opportunityratingcode
+      -
+        section: forecast information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: opportunityproducts
+        tab: Product Line Item Details
+        disabled: false
+        visible: true
+        control_id: pricelevelid
+        field: pricelevelid
+      -
+        section: totals
+        tab: Product Line Item Details
+        disabled: false
+        visible: true
+        control_id: discountpercentage
+        field: discountpercentage
+      -
+        section: totals
+        tab: Product Line Item Details
+        disabled: false
+        visible: true
+        control_id: totallineitemamount
+        field: totallineitemamount
+      -
+        section: totals
+        tab: Product Line Item Details
+        disabled: false
+        visible: true
+        control_id: discountamount
+        field: discountamount
+      -
+        section: totals
+        tab: Product Line Item Details
+        disabled: false
+        visible: true
+        control_id: totalamountlessfreight
+        field: totalamountlessfreight
+      -
+        section: totals
+        tab: Product Line Item Details
+        disabled: false
+        visible: true
+        control_id: freightamount
+        field: freightamount
+      -
+        section: totals
+        tab: Product Line Item Details
+        disabled: false
+        visible: true
+        control_id: totalamount
+        field: totalamount
+      -
+        section: totals
+        tab: Product Line Item Details
+        disabled: false
+        visible: true
+        control_id: totaltax
+        field: totaltax
+      -
+        section: internal information
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: internal information
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: originatingleadid
+        field: originatingleadid
+      -
+        section: internal information
+        tab: administration
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: internal information
+        tab: administration
+        disabled: true
+        visible: true
+        control_id: campaignid
+        field: campaignid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_customerid
+        field: customerid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_estimatedvalue
+        field: estimatedvalue
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_estimatedclosedate
+        field: estimatedclosedate
+    description: A form for this entity.
+    tabs:
+      -
+        label: What's New
+        name: tab_recordwall
+        visible: true
+        expanded: false
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Line Items
+        name: Product Line Item Details
+        visible: true
+        expanded: true
+      -
+        label: 'Notes & Activities'
+        name: notes and activities
+        visible: true
+        expanded: false
+      -
+        label: Quotes
+        name: Opportunity Quotes
+        visible: true
+        expanded: true
+      -
+        label: Preferences
+        name: administration
+        visible: true
+        expanded: true
+    field_count: 24
+    type_name: Main
+

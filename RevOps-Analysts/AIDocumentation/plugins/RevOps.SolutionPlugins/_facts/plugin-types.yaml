@@ -1,0 +1,6 @@
+types:
+  -
+    plugintypeid: 'fd3d321f-a8be-4a34-96e5-604e147b70c3'
+    typename: RevOps.SolutionPlugins.UpdateSolutionCategoriesOnRelationship
+    name: RevOps.SolutionPlugins.UpdateSolutionCategoriesOnRelationship
+

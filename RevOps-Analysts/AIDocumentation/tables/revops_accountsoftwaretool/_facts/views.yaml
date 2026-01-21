@@ -1,0 +1,43 @@
+views:
+  -
+    name: Account Software Tools
+    description: All active Account Software Tools
+    querytype: 8192
+    savedqueryid: '8458cf45-c11e-ef11-840b-000d3af43a08'
+  -
+    name: Inactive Account Software Tools
+    querytype: -1
+    savedqueryid: '0226c694-dd50-4cad-96f7-0a699fd96615'
+  -
+    name: Account Software Tool Associated View
+    querytype: 2
+    savedqueryid: 'f0c7a46d-416b-4ca7-bed5-223b72d36ff3'
+  -
+    name: Account Software Tool Lookup View
+    querytype: 64
+    savedqueryid: 'b4258e64-98ba-49d8-bd20-32f63ef202d6'
+  -
+    name: Account Software Tool Advanced Find View
+    querytype: 1
+    savedqueryid: '16c2cdea-12e3-4b24-a7e2-3cff336e469b'
+  -
+    name: Active Account Software Tools
+    querytype: -1
+    savedqueryid: '02a47513-4073-4d04-bd9b-4a2b4316825e'
+  -
+    name: Quick Find Active Account Software Tools
+    querytype: 4
+    savedqueryid: 'b042ac05-8e32-4ca0-aea1-5b084ccf3eb3'
+  -
+    name: IT Documentation Tools
+    querytype: -1
+    savedqueryid: 'f20467e1-c21e-ef11-840a-6045bdcd283e'
+  -
+    name: PSA Tools
+    querytype: -1
+    savedqueryid: '56c34bc3-c21e-ef11-840b-6045bdcd3da1'
+  -
+    name: RMM Tools
+    querytype: -1
+    savedqueryid: '1a3fb103-c31e-ef11-840a-6045bdf98885'
+

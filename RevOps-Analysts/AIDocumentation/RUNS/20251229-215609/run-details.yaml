@@ -1,0 +1,3863 @@
+run_id: '20251229-215609'
+mode: nightly
+started_on_utc: '2025-12-29T21:56:12.5135718Z'
+sources:
+  devcore_solutions_allowlist:
+    - 'revops*'
+  api_version: '9.2'
+  org_url: 'https://sherweb-prod.crm3.dynamics.com'
+results:
+  solutions_allowlist_comparison:
+    allowlist_patterns:
+      - 'revops*'
+    missing:
+    found:
+      -
+        pattern: 'revops*'
+        count: 18
+        solutions:
+          - revopsportals_Patch_1bc50d9a
+          - RevOpsRequestsForm
+          - revopsplugins
+          - revopsplugins_Patch_3ce751d2
+          - revopsportals_Patch_b61c1681
+          - revopsportals_Patch_bec1ca79
+          - revopstables_Patch_c09dbb7c
+          - revopsportals
+          - revopsai
+          - revopsportals_Patch_2cc2b236
+          - revopsflows
+          - revopsportals_Patch_5e7e67a7
+          - revopstables
+          - revopstables_Patch_74d819bb
+          - revopsportals_Patch_9797a3c5
+          - revopsportals_Patch_9ec3ca7a
+          - revopsportals_Patch_bb3ded54
+          - revopsportals_Patch_ac120dd3
+    expected_count: 1
+  plugins_count: 3
+  tables_count: 92
+  queues_total_count: 1236
+  queues_excluded_user_count: 1142
+  flows_count: 106
+  solutions_allowlisted_count: 18
+  queues_included_count: 94
+  solutions_count: 1083
+confidence:
+  overall: 0.909
+  threshold: 0.8
+  domains:
+    solutions: 1
+    tables: 0.95
+    queues: 0.92
+    plugins: 0.9
+    flows: 0.8
+  notes:
+    - Queues exclude user queues using owner lookup logical name annotation.
+    - POC scoring. Flows extraction is minimal; low confidence expected.
+errors:
+capabilities:
+  omnichannel_ok: true
+  queues_ok: true
+  probes:
+    critical:
+      -
+        endpoint: EntityDefinitions
+        accessible: true
+        status: ok
+        readable: true
+        http_status: 200
+        message: Accessible and readable
+      -
+        endpoint: solutions
+        accessible: true
+        status: ok
+        readable: true
+        http_status: 200
+        message: Accessible and readable
+      -
+        endpoint: workflows
+        accessible: true
+        status: ok
+        readable: true
+        http_status: 200
+        message: Accessible and readable
+      -
+        endpoint: solutioncomponents
+        accessible: true
+        status: ok
+        readable: true
+        http_status: 200
+        message: Accessible and readable
+    plugins:
+      -
+        endpoint: pluginassemblies
+        accessible: true
+        status: ok
+        readable: true
+        http_status: 200
+        message: Accessible and readable
+      -
+        endpoint: plugintypes
+        accessible: true
+        status: ok
+        readable: true
+        http_status: 200
+        message: Accessible and readable
+      -
+        endpoint: sdkmessageprocessingsteps
+        accessible: true
+        status: ok
+        readable: true
+        http_status: 200
+        message: Accessible and readable
+      -
+        endpoint: sdkmessagefilters
+        accessible: true
+        status: ok
+        readable: true
+        http_status: 200
+        message: Accessible and readable
+    queues:
+      -
+        endpoint: queues
+        accessible: true
+        status: ok
+        readable: true
+        http_status: 200
+        message: Accessible and readable
+    omnichannel:
+      -
+        endpoint: msdyn_liveworkstreams
+        accessible: true
+        status: ok
+        readable: true
+        http_status: 200
+        message: Accessible and readable
+      -
+        endpoint: slas
+        accessible: true
+        status: ok
+        readable: true
+        http_status: 200
+        message: Accessible and readable
+  plugins_ok: true
+  all_critical_ok: true
+tables_enriched:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+flow_definitions:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+solutions:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+tables:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+queues:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+plugins:
+  - ''
+  - ''
+  - ''
+flows:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+slas:
+  - ''
+  - ''
+  - ''
+workstreams:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+business_process_flows:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+security_roles:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+environment_variables:
+  -
+    type: String
+    schema_name: 'powerpages_sharedwithusers_f4d5bb27-493a-4052-acb9-3d510565e404'
+    current_value: 'cc9d216d-57a9-4704-8525-be40df1baa08'
+    display_name: 'Power Pages Site Shared Users '
+    id: 'a27f6af2-e74a-f011-877b-0022483d87a9'
+    description: null
+    default_value: null
+  -
+    type: String
+    schema_name: 'powerpages_sharedwithusers_6832ea89-fa6d-4af4-be3d-69d1a25f7166'
+    current_value: 'f8872f78-6eb4-4f51-802a-5300f73c62c9,cc9d216d-57a9-4704-8525-be40df1baa08,1012b5db-009a-40c7-9e05-ea27fc248941,e6bd5c6c-420f-4b66-a6e3-3d3b97c388ee,90a842a6-cf2c-422c-b951-3f9f9caaa5de,4f5e91e8-15b7-49b8-8de4-8f590ba59994,a5665254-dbae-48f9-9198-da061e47024c,7a7795c0-91b0-47fe-bdb6-fbb8e89fdcdc'
+    display_name: 'Power Pages Site Shared Users '
+    id: 'f0c3a3b1-fb3b-f011-b4cc-002248adb7ed'
+    description: null
+    default_value: null
+  -
+    type: String
+    schema_name: revops_queuecst
+    current_value: '77b51644-82d3-ef11-8ee9-002248b08e41'
+    display_name: 'Queue - CST'
+    id: 'b0252149-6999-4e13-acdd-0105d7241c55'
+    description: null
+    default_value: null
+  -
+    type: Boolean
+    schema_name: msdyn_IsLeadSummaryBYOMEnabled
+    current_value: no
+    display_name: Use custom lead summary prompt
+    id: 'a18c3543-6086-409d-ad30-02b6cd496c5d'
+    description: Flag to determine if lead summary BYOM is enabled
+    default_value: no
+  -
+    type: String
+    schema_name: revops_queuecloudpbx
+    current_value: 'accea86e-82d3-ef11-8ee9-002248b08e41'
+    display_name: 'Queue - CloudPBX'
+    id: '28eb0056-eeda-4ea2-b1ae-084bcbf58da7'
+    description: 'environment variable for the queue - Queue - CloudPBX'
+    default_value: null
+  -
+    type: String
+    schema_name: revops_baseurl
+    current_value: 'https://sherweb-prod.crm3.dynamics.com/'
+    display_name: D365 Base URL
+    id: 'bc081e71-9ed7-4cc9-9d66-0c90f4886702'
+    description: URL of the environment to use in power automate flows.
+    default_value: 'https://sherweb-dev.crm3.dynamics.com/'
+  -
+    type: String
+    schema_name: revops_subjectcspgodaddy
+    current_value: '9e023a0a-0e0b-f011-bae3-6045bd5ecfaf'
+    display_name: 'Subject - CSP GoDaddy'
+    id: 'd310ffe3-0865-4cd3-9dcd-12aa72cd822b'
+    description: subject GUID for CSP GoDaddy
+    default_value: null
+  -
+    type: String
+    schema_name: msdyn_RegardingObjectEntityOwnerFieldName
+    current_value: ownerid
+    display_name: RegardingObjectEntityOwnerFieldName
+    id: '8d44974a-b6e5-499b-bff5-1a59ff662c13'
+    description: Specifies the schema name of the field that represents the owner in the regarding entity.
+    default_value: ownerid
+  -
+    type: String
+    schema_name: revops_iscbjectowner
+    current_value: 'c6fe1fdf-7423-ef11-840a-000d3af34dcf'
+    display_name: ISC Object owner
+    id: '9ab67e11-997d-4c4b-baa2-1cb37d644171'
+    description: 'User, Owner ISC-Object-Owner'
+    default_value: null
+  -
+    type: JSON
+    schema_name: msdyn_inboxcardconfiguration
+    current_value: '{ 	"incident": { 		"Header": { "attribute": "title" }, 		"MainDetail": { "attribute": "ticketnumber" }, 		"SubDetail": { "attribute": "customerid" }, 		"FooterLeft": { "attribute": "statecode" }, 		"FooterMiddle": { "attribute": "prioritycode" } 	}, 	"email": { 		"Header": { "attribute": "from" }, 		"MainDetail": { "attribute": "subject" }, 		"SubDetail": { "attribute": "regardingobjectid" }, 		"FooterMiddle": { "attribute": "statuscode" } 	} }'
+    display_name: Inbox card configuration
+    id: 'e5ae61e3-7c7c-48da-9815-277814faf518'
+    description: Inbox card configuration JSON
+    default_value: '{ 	"incident": { 		"Header": { "attribute": "title" }, 		"MainDetail": { "attribute": "ticketnumber" }, 		"SubDetail": { "attribute": "customerid" }, 		"FooterLeft": { "attribute": "statecode" }, 		"FooterMiddle": { "attribute": "prioritycode" } 	}, 	"email": { 		"Header": { "attribute": "from" }, 		"MainDetail": { "attribute": "subject" }, 		"SubDetail": { "attribute": "regardingobjectid" }, 		"FooterMiddle": { "attribute": "statuscode" } 	} }'
+  -
+    type: String
+    schema_name: msdyn_ShouldShowPeekButton
+    current_value: no
+    display_name: Should the Peek Button Be Showed
+    id: '4cb8f7e3-07e2-4c60-ac6a-2bbdf92b0a3c'
+    description: Should the Peek Button Be Showed
+    default_value: no
+  -
+    type: String
+    schema_name: revops_competitorpax8
+    current_value: '505896c2-3233-ef11-8e4f-6045bdf9e890'
+    display_name: 'Competitor - Pax8'
+    id: '3482fd2e-0375-49af-a778-2effff7fbb0c'
+    description: null
+    default_value: null
+  -
+    type: Boolean
+    schema_name: msdyn_AllowCSHAppHide
+    current_value: no
+    display_name: Enable or disable the ability to hide the CSH application
+    id: '3c48418f-bee5-4a22-8c74-300ba415c480'
+    description: Enable or disable the ability to hide the CSH application
+    default_value: no
+  -
+    type: String
+    schema_name: msdyn_DefaultAccount_CSTeamMember
+    current_value: 'b2e60d2f-9c28-ea11-a81c-000d3a063936'
+    display_name: Default customer account
+    id: 'e84edfb3-77c5-4517-be9e-36f8274fa93c'
+    description: The default customer account for the Customer Service Team Member app
+    default_value: 'b2e60d2f-9c28-ea11-a81c-000d3a063936'
+  -
+    type: JSON
+    schema_name: msdyn_timeentrycalendarstatus_colors
+    current_value: '[{"name":"Cancelled","value":192354320,"color":"#FDE7E9","border":"#A80000"},{"name":"Draft","value":192350000,"color":"#FFF4CE","border":"#C48703"},{"name":"Returned","value":192350001,"color":"#FFF4CE","border":"#C48703"},{"name":"Approved","value":192350002,"color":"#DFF6DD","border":"#107C10"},{"name":"Submitted","value":192350003,"color":"#CFE4FA","border":"#004E8C"},{"name":"Recall Requested","value":192350004,"color":"#CFE4FA","border":"#002C4E"}]'
+    display_name: Time Entry Calendar Status Colors
+    id: 'd463b4b2-b184-4481-a8d2-3b65095c533a'
+    description: Time Entry Calendar Status Colors
+    default_value: '[\n    {\n       "name":"Cancelled",\n       "value":192354320,\n       "color":"#FDE7E9",\n       "border":"#A80000" \n    },\n    {\n       "name":"Draft",\n       "value":192350000,\n       "color":"#FFF4CE",\n       "border":"#C48703"\n    },\n    {\n       "name":"Returned",\n       "value":192350001,\n       "color":"#FFF4CE",\n       "border":"#C48703"\n    },\n    {\n       "name":"Approved",\n       "value":192350002,\n        "color":"#DFF6DD",\n        "border":"#107C10"\n    },\n    {\n       "name":"Submitted",\n       "value":192350003, \n       "color":"#CFE4FA",\n       "border":"#004E8C"\n    },\n    {\n       "name":"Recall Requested",\n       "value":192350004,\n        "color":"#CFE4FA",\n        "border":"#002C4E"\n    }\n ]'
+  -
+    type: String
+    schema_name: revops_queuecloudpbxl3
+    current_value: '7d24b474-82d3-ef11-8ee9-002248b08e41'
+    display_name: 'Queue - CloudPBX - L3'
+    id: 'e2cb56bb-401a-482f-8c98-45effca38bd9'
+    description: 'environment variable for the Queue - CloudPBX - L3'
+    default_value: null
+  -
+    type: String
+    schema_name: revops_currencyideur
+    current_value: '09c10790-48c9-ef11-b8e9-6045bd5dff62'
+    display_name: 'CurrencyID - EUR'
+    id: '1d95c01f-b596-4318-b35b-4a66c231c9cf'
+    description: null
+    default_value: null
+  -
+    type: String
+    schema_name: revops_currencyidusd
+    current_value: '5f87d06f-397c-ef11-ac20-6045bd5cb48a'
+    display_name: 'CurrencyID - USD'
+    id: '05d080d5-5acf-41cc-8067-4d3fd214fa95'
+    description: null
+    default_value: null
+  -
+    type: JSON
+    schema_name: msdyn_timetrackingapplication_colors
+    current_value: '[\n    {\n       "name":"MainColor",\n       "value":0,\n       "color":"#2975B2"\n    },\n    {\n       "name":"SideColor",\n       "value":1,\n       "color":"#47505E"\n    }\n ]'
+    display_name: Time Tracking Application Colors
+    id: '63f8277f-1266-4090-b372-500d05ab3a8f'
+    description: Time Tracking Application Colors
+    default_value: '[\n    {\n       "name":"MainColor",\n       "value":0,\n       "color":"#2975B2"\n    },\n    {\n       "name":"SideColor",\n       "value":1,\n       "color":"#47505E"\n    }\n ]'
+  -
+    type: String
+    schema_name: revops_queueinsidesalesreps
+    current_value: 'a79b1720-85d3-ef11-8ee9-002248b07f79'
+    display_name: 'Queue - Inside Sales Reps'
+    id: 'd18b19b5-7011-41e2-a185-5377e62b86f7'
+    description: null
+    default_value: null
+  -
+    type: String
+    schema_name: msdyn_lineofbusinessfiltertemplatefeature
+    current_value: '00000000-00000000-00000000-00000000'
+    display_name: LOB Guid List
+    id: '475bc5c9-edd4-40e4-85ae-54b7566b46be'
+    description: Contains All the LOB
+    default_value: '00000000-00000000-00000000-00000000'
+  -
+    type: Number
+    schema_name: msdyn_ArcWebClientDeprecationAcknowledge
+    current_value: '0'
+    display_name: ARC Web Client Deprecation Acknowledgement
+    id: 'd38355a3-07b9-4a45-b0a6-5fbfc20b8bdf'
+    description: 'Indicates whether a system admin has acknowledged the ARC web client deprecation notification; 0:YetToShow, 1:YetToAcknowledge, 2:Acknowledged and 3:Canceled'
+    default_value: '0'
+  -
+    type: String
+    schema_name: revops_queuesalesescalation
+    current_value: '54fe3ef8-19d5-f011-8544-7c1e5253f0d3'
+    display_name: 'Queue - Sales Escalation'
+    id: 'ece44dd1-b134-4a69-b5f8-61a4d0bd35a7'
+    description: null
+    default_value: null
+  -
+    type: String
+    schema_name: revops_portaluserid
+    current_value: 'cc6dc8fc-463a-f011-b4cc-6045bd5ecfaf'
+    display_name: Portal User ID
+    id: 'd1ffcd14-4211-487f-8615-6245ef0c6f18'
+    description: User ID of the portal User
+    default_value: null
+  -
+    type: Number
+    schema_name: msdyn_MaxChildIncidentNumber
+    current_value: '100'
+    display_name: Max Child Case Number
+    id: 'f0e52ea7-558a-42a6-9076-638d5deca6f8'
+    description: Variable defining maximum number of child cases per case
+    default_value: '100'
+  -
+    type: String
+    schema_name: revops_queuemanagedservices
+    current_value: '0b9df038-85d3-ef11-8ee9-002248b07f79'
+    display_name: 'Queue - Managed Services'
+    id: '2fed55ad-4dc8-4b40-8d94-65cc1f5bb66a'
+    description: 'environment variable for the Queue - Managed Services'
+    default_value: null
+  -
+    type: JSON
+    schema_name: msdyn_timetrackingapplication_tooltipvalues
+    current_value: '{"values": ["versionnumber", "statecode"]}'
+    display_name: Time Tracking Application Tooltip Values
+    id: 'c14cccdc-c658-4995-87af-676039b671b6'
+    description: 'Time Tracking Application Tooltip Values '
+    default_value: '{"values": ["versionnumber", "statecode"]}'
+  -
+    type: Number
+    schema_name: msdyn_ArcCreateContactWithRuleOwner
+    current_value: '0'
+    display_name: Arc create contact with rule owner
+    id: '2795302f-2f04-40c6-bfcc-6e508d69ada3'
+    description: 'Arc create contact with rule owner support values  0 or 1:  0 - Email owner, 1 - Rule owner'
+    default_value: '0'
+  -
+    type: String
+    schema_name: msdynci_scaleUnitUri
+    current_value: defaultValue
+    display_name: scaleUnitUri
+    id: '6fe8959c-1824-4246-99ea-71f1861fa044'
+    description: Scale unit URI for CI instance
+    default_value: defaultValue
+  -
+    type: Boolean
+    schema_name: msdyn_ValidateRoutingRuleBeforeActivation
+    current_value: yes
+    display_name: ValidateRoutingRuleBeforeActivation
+    id: '256696f3-58bc-4fe3-9061-7df5a4b13eb9'
+    description: Flag to determine whether to do validation  of routing rule set before activation
+    default_value: yes
+  -
+    type: Number
+    schema_name: msdyn_ArcActivityMonitorForFailedScenarios
+    current_value: '1'
+    display_name: Arc Activity Monitor for Failed Scenarios
+    id: 'a1f91866-411b-453e-bc4a-7fb685bf9905'
+    description: 'Arc Activity Monitor for Failed Scenarios supports values  0 or 1:  0 - No, 1 - Yes'
+    default_value: '1'
+  -
+    type: String
+    schema_name: revops_mwhteamid
+    current_value: 'caf56e17-74be-f011-bbd2-7c1e528ccd11'
+    display_name: MWH Team ID
+    id: '74a04e2a-0d10-496c-925f-827be46ad2ba'
+    description: null
+    default_value: null
+  -
+    type: String
+    schema_name: revops_queuecloudsupport
+    current_value: '3fe89662-82d3-ef11-8ee9-002248b08e41'
+    display_name: 'Queue - Cloud Support'
+    id: '34796699-9ec4-4494-b5b1-8599cc185bac'
+    description: 'environment variable for the queue - cloud support'
+    default_value: null
+  -
+    type: Number
+    schema_name: msdyn_eligibleEntitiesForActivityEvents
+    current_value: msdyn_swarm
+    display_name: Bot event update regarding entity for task/notes entity
+    id: 'b5b3a558-d4c0-4639-b066-88c4c0c3e4c6'
+    description: Variable defining regarding entity of task/notes for bot event update
+    default_value: msdyn_swarm
+  -
+    type: Number
+    schema_name: msdyn_ArcActivityMonitorForSuccessScenarios
+    current_value: '1'
+    display_name: Arc Activity Monitor for Success Scenarios
+    id: '83bce878-bf86-4dc1-94f7-8e6a2c8f3432'
+    description: 'Arc Activity Monitor for Success Scenarios supports values  0 or 1:  0 - No, 1 - Yes'
+    default_value: '1'
+  -
+    type: String
+    schema_name: revops_queuelevel3
+    current_value: '06f7f532-85d3-ef11-8ee9-002248b07f79'
+    display_name: 'Queue - Level 3'
+    id: 'f4ba4422-2fd1-4eff-9840-96b5ec761444'
+    description: 'environment variable for the Queue - Level 3'
+    default_value: null
+  -
+    type: String
+    schema_name: revops_helpdeskbcqueue
+    current_value: '14e92994-82d3-ef11-8ee9-002248b08e41'
+    display_name: 'Helpdesk-BC Queue'
+    id: 'adb1fe8a-8ebd-4045-90d7-976bece3c02d'
+    description: null
+    default_value: null
+  -
+    type: JSON
+    schema_name: msdyn_timeentrystatus_colors
+    current_value: '[   {     "name": "Cancelled",     "value": 192354320,     "color": "#A80000",     "border": "#945C19"   },   {     "name": "Draft",     "value": 192350000,     "color": "#C48703",     "border": "#1d2519"   },   {     "name": "Returned",     "value": 192350001,     "color": "#A80000",     "border": "#AA8B19"   },   {     "name": "Approved",     "value": 192350002,     "color": "#107C10",     "border": "#461F99"   },   {     "name": "Submitted",     "value": 192350003,     "color": "#107C10",     "border": "#13846F"   },   {     "name": "Recall Requested",     "value": 192350004,     "color": "#C48703",     "border": "#2E5FA9"   } ]'
+    display_name: Time Entry Status Colors
+    id: '65fc3ebb-70be-4d90-afd0-9b4c91beb59b'
+    description: Time Entry Status Colors
+    default_value: '[   {     "name": "Cancelled",     "value": 192354320,     "color": "#A80000",     "border": "#945C19"   },   {     "name": "Draft",     "value": 192350000,     "color": "#C48703",     "border": "#1d2519"   },   {     "name": "Returned",     "value": 192350001,     "color": "#A80000",     "border": "#AA8B19"   },   {     "name": "Approved",     "value": 192350002,     "color": "#107C10",     "border": "#461F99"   },   {     "name": "Submitted",     "value": 192350003,     "color": "#107C10",     "border": "#13846F"   },   {     "name": "Recall Requested",     "value": 192350004,     "color": "#C48703",     "border": "#2E5FA9"   } ]'
+  -
+    type: Number
+    schema_name: msdyn_ArcActivityMonitorForSkippedScenarios
+    current_value: '1'
+    display_name: Arc Activity Monitor for Skipped Scenarios
+    id: '7217cb35-fbc8-44d0-b7f0-9d3856707576'
+    description: 'Arc Activity Monitor for Skipped Scenarios supports values  0 or 1:  0 - No, 1 - Yes'
+    default_value: '1'
+  -
+    type: String
+    schema_name: revops_queuelevel2
+    current_value: '17166826-85d3-ef11-8ee9-002248b07f79'
+    display_name: 'Queue - Level 2'
+    id: '7a6c9389-e62d-4a97-83da-9e624b8206b2'
+    description: 'environment variable for the Queue - Level 2'
+    default_value: null
+  -
+    type: JSON
+    schema_name: msdyn_caseprocessingagent_globalsettings
+    current_value: '{"appUserId":null,"defaultEmailTemplateId":null,"fallbackQueueId":null,"useCopilotRecommendedTemplate":false}'
+    display_name: Agent Application User Global Settings
+    id: 'a826f1b2-4588-44c8-ab46-a5001d8ac3db'
+    description: JSON blob for global settings for the Case Processing Agent
+    default_value: '{"appUserId":null,"defaultEmailTemplateId":null,"fallbackQueueId":null,"useCopilotRecommendedTemplate":false}'
+  -
+    type: String
+    schema_name: msdyn_CustomRoleIds
+    current_value: '00000000-0000-0000-0000-000000000000'
+    display_name: Custom Role IDs
+    id: '77a20932-2924-49ba-aaa9-a7d3e5aefd8e'
+    description: 'Custom Role IDs as comma-separated list'
+    default_value: '00000000-0000-0000-0000-000000000000'
+  -
+    type: String
+    schema_name: msdyn_AppInsightsId
+    current_value: '00000000-0000-0000-0000-000000000000'
+    display_name: AppInsights Id
+    id: '4d5f925e-0c73-4047-a22a-a94d86349e22'
+    description: Application Insights App Id
+    default_value: '00000000-0000-0000-0000-000000000000'
+  -
+    type: Boolean
+    schema_name: msdyn_isbyomenabledforleadreadiness
+    current_value: no
+    display_name: Allow custom model for D365 Sales Readiness Agent
+    id: '8864fbb7-a54b-4e32-90fc-ab4de51bad9a'
+    description: null
+    default_value: no
+  -
+    type: String
+    schema_name: revops_queuebilling
+    current_value: '0adf1f37-82d3-ef11-8ee9-002248b08e41'
+    display_name: 'Queue - Billing'
+    id: '0af66d50-fe07-4659-b534-ae818122720e'
+    description: null
+    default_value: null
+  -
+    type: String
+    schema_name: msdyn_lineofbusinessfiltertemplatefeatureuserexpansion
+    current_value: '00000000-00000000-00000000-00000000'
+    display_name: LOB Guid List for user expansion
+    id: '21cc4629-8ea2-4a57-8b6a-b781d79b31f7'
+    description: Contains All the LOB Guid List for user expansion
+    default_value: '00000000-00000000-00000000-00000000'
+  -
+    type: String
+    schema_name: revops_servicemicrosoft365
+    current_value: '46c46549-2bea-ef11-9342-6045bd5e31ff'
+    display_name: 'Service - Microsoft 365'
+    id: '373500e0-5599-4230-b9fc-bc58859bcb3a'
+    description: GUID of the Service "Microsoft 365"
+    default_value: null
+  -
+    type: Boolean
+    schema_name: msdyn_IsOpportunitySummaryBYOMEnabled
+    current_value: no
+    display_name: Use custom opportunity summary prompt
+    id: '4a63eea2-d88a-4309-8c25-bceb1dfb99c8'
+    description: Flag to determine if opportunity summary BYOM is enabled
+    default_value: no
+  -
+    type: String
+    schema_name: revops_currencyidgbp
+    current_value: '66f5fbfb-49c9-ef11-b8e9-6045bd5dff62'
+    display_name: 'CurrencyID - GBP'
+    id: '2feb52f6-419d-4e76-81ce-c14137065802'
+    description: null
+    default_value: null
+  -
+    type: String
+    schema_name: revops_subjectcspp2p
+    current_value: '777d4c10-0e0b-f011-bae3-6045bd5ecfaf'
+    display_name: 'Subject - CSP P2P'
+    id: '8c0318c8-e222-40c9-84ba-c18bb818fb0e'
+    description: null
+    default_value: null
+  -
+    type: JSON
+    schema_name: msdynmkt_products
+    current_value: '["RTM"]'
+    display_name: products
+    id: '9d99021c-5a1c-4f5a-a037-c61266847d0f'
+    description: List of installed products.
+    default_value: '[]'
+  -
+    type: Boolean
+    schema_name: msdyn_RequireDifferentOwnersForEvaluationAndRegardingObject
+    current_value: no
+    display_name: RequireDifferentOwnersForEvaluationAndRegardingObject
+    id: '2e2a0420-8e33-4e53-941a-d7798c431a02'
+    description: 'Boolean to require different owners for evaluations and their regarding objects. If turned on, disallows regarding object owner to own/create evaluations.'
+    default_value: no
+  -
+    type: Boolean
+    schema_name: msdyn_D365ChannelDefinitionsEnvironmentConfiguration
+    current_value: yes
+    display_name: D365 Channel Definitions Environment Configuration
+    id: '4fa7080e-5d6a-4bef-baee-dd4f9d7835e2'
+    description: D365 Channel Definitions Environment Configuration
+    default_value: yes
+  -
+    type: Boolean
+    schema_name: msdyn_IsAccountSummaryBYOMEnabled
+    current_value: no
+    display_name: Use custom account summary prompt
+    id: '27553854-ce9b-48ec-b7fa-e16bb2605b79'
+    description: Flag to determine if account summary BYOM is enabled
+    default_value: no
+  -
+    type: String
+    schema_name: revops_subjectcsp
+    current_value: '2ffc2efd-0d0b-f011-bae3-6045bd5ecfaf'
+    display_name: 'Subject - CSP'
+    id: '5989354a-dbf2-45e5-8717-e43a3d5efaf0'
+    description: CSP Selection GUID from Subject Table
+    default_value: null
+  -
+    type: Number
+    schema_name: msdyn_IncidentShouldValidatePrimaryContact
+    current_value: '0'
+    display_name: Customer Entities Relationship For Incidents
+    id: 'b89274b2-6ca9-4414-b491-e5ebe85c56ab'
+    description: 'Incident should validate primary contact values 0 and 1: 1 - Contacts and Customers in Case records need to be related, 0 - Contacts and Customers in Case records don''t need to be related​'
+    default_value: '1'
+  -
+    type: Boolean
+    schema_name: msdyn_emailvalidationenabled
+    current_value: yes
+    display_name: EmailValidationEnabled
+    id: '379c8801-5605-4fce-8bf6-e7e72d45f2af'
+    description: null
+    default_value: yes
+  -
+    type: Boolean
+    schema_name: msdyn_isbyomenabledforleadoutreach
+    current_value: no
+    display_name: Allow custom model for D365 Sales Outreach Agent
+    id: '56c3d548-6489-4eb8-b342-e8274fffe9eb'
+    description: null
+    default_value: no
+  -
+    type: Boolean
+    schema_name: msdyn_AllowSelectLeafOnly
+    current_value: no
+    display_name: Should only leaf node selection be allowed
+    id: 'b9696b7a-0dd3-401a-9925-ed6bfe320a56'
+    description: Should only leaf node selection be allowed
+    default_value: no
+  -
+    type: Number
+    schema_name: msdyn_IncidentResolutionMode
+    current_value: '2'
+    display_name: null
+    id: '63dd84e9-90ee-4c81-afe9-ee1deb041fc9'
+    description: 'Incident Resolution Mode to Use Supports values  1 or 2 or 3 :  1 - Existing Dialog, 2 - Main Form, 3- Quick Create'
+    default_value: null
+  -
+    type: String
+    schema_name: revops_appid_csworkspace
+    current_value: 'afc40e42-2d20-ef11-840b-6045bd5ea018'
+    display_name: App ID – CS Workspace
+    id: 'cb999f7f-fdd4-4a7b-b012-eed517bd18e5'
+    description: App ID of the Customer Service Workspace App in each environment.
+    default_value: '7d62414a-069c-ee11-a569-000d3af4f898'
+  -
+    type: Number
+    schema_name: AllowUpdateResolvedCanceledIncidents
+    current_value: '3'
+    display_name: Incident Update Mode to Use
+    id: 'b3878359-cd3b-47a9-9e5c-efa4b2e27764'
+    description: 'Incident Update Mode to Use supports values 0, 1, 2 and 3 : 0 - Updates not enabled for non-Active states, 1 - Updates enabled for Resolved state, 2 - Updates enabled for Cancelled state, 3 - Updates enabled for all states'
+    default_value: '3'
+  -
+    type: String
+    schema_name: msdyn_playbooksharepointpathfordca
+    current_value: none
+    display_name: 'D365 Sales - Sales Close Agent - Engage Playbook SharePoint path'
+    id: 'b0bf2c2b-605a-44b4-b537-efbd05788f32'
+    description: 'Sales Close Agent - Engage Playbook Sharepoint path'
+    default_value: none
+  -
+    type: Number
+    schema_name: msdyn_GlobalIncomingWorkItemsSetting
+    current_value: '3'
+    display_name: Global Incoming Work Items Setting
+    id: '942b95d2-4a68-4c5e-be57-f495a80e6763'
+    description: 'Global setting that determines how incoming work items are handled for conversation entities. 1 = Open in New Session, 2 = Add to Inbox, 3 = Smart Accept (default)'
+    default_value: '3'
+  -
+    type: Number
+    schema_name: msdyn_SLAWebClientDeprecationAcknowledge
+    current_value: '0'
+    display_name: SLA Web Client Deprecation Acknowledge
+    id: '3bb795e1-8810-4868-a086-fe43fed34212'
+    description: Indicates whether user has acknowledge the SLA web client deprecation notification
+    default_value: '0'
+connection_references:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+app_modules:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+routing_rules:
+web_resources:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+patch_or_upgrade_detected: true
+ended_on_utc: '2025-12-29T21:58:02.4123288Z'
+graph:
+  schema_version: 2
+  generated_run_id: '20251229-215609'
+  timestamp: '2025-12-29T21:58:02.4148193Z'
+  edge_count: 112
+  nodes:
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:f4b7c406-5ec3-441d-ba6c-01d2c19f68d0'
+      name: revopsportals_Patch_1bc50d9a
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:0114d858-cdfd-4882-ac4a-036b3c77954a'
+      name: RevOpsRequestsForm
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:fc5693c4-2d41-4e27-a701-357babf338bc'
+      name: revopsplugins
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:1b8e285d-5095-4ce1-a465-3f4ee4b67377'
+      name: revopsplugins_Patch_3ce751d2
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:4afc5d11-e8f9-4a58-858e-415ff36e3a1f'
+      name: revopsportals_Patch_b61c1681
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:de9074e0-ad7a-40a8-93f8-42bc2e82c631'
+      name: revopsportals_Patch_bec1ca79
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:d4c6f130-9bec-42e6-9d4d-492d763f79d9'
+      name: revopstables_Patch_c09dbb7c
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:3e78a108-303c-4631-86b0-5ea181d04b83'
+      name: revopsportals
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:706dfaa6-819e-4456-9808-859db99d0c9a'
+      name: revopsai
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:b8d59b61-33b7-4c7e-a391-c3a9da24d5ca'
+      name: revopsportals_Patch_2cc2b236
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:6010b212-b1fe-45e0-b80c-cdc42d310cc2'
+      name: revopsflows
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:f62d4a04-b998-44c7-b364-d2f0db298dc1'
+      name: revopsportals_Patch_5e7e67a7
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:0b71d0fb-bb03-4fa9-954b-e2e78ce3886b'
+      name: revopstables
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:42151328-a259-41a1-b2c1-e990c54e43f3'
+      name: revopstables_Patch_74d819bb
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:327f8dfb-0eac-4820-b601-ee50bd3e3803'
+      name: revopsportals_Patch_9797a3c5
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:29c131f3-e60e-42dd-ad72-f0aa97123318'
+      name: revopsportals_Patch_9ec3ca7a
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:cb8fa273-fed5-4c87-8c45-f0feb1895f48'
+      name: revopsportals_Patch_bb3ded54
+    -
+      path: _registry/solutions
+      type: solution
+      asset_id: 'solution:6007e2a3-bdf6-4047-a588-f40ff56bb97b'
+      name: revopsportals_Patch_ac120dd3
+    -
+      path: tables/revops_inpersonmeeting
+      type: table
+      asset_id: 'table:revops_inpersonmeeting'
+      name: revops_inpersonmeeting
+    -
+      path: tables/revops_churn
+      type: table
+      asset_id: 'table:revops_churn'
+      name: revops_churn
+    -
+      path: tables/revops_accountsoftwaretool
+      type: table
+      asset_id: 'table:revops_accountsoftwaretool'
+      name: revops_accountsoftwaretool
+    -
+      path: tables/msdynmkt_eventmetadata
+      type: table
+      asset_id: 'table:msdynmkt_eventmetadata'
+      name: msdynmkt_eventmetadata
+    -
+      path: tables/revops_cadencecall
+      type: table
+      asset_id: 'table:revops_cadencecall'
+      name: revops_cadencecall
+    -
+      path: tables/processsession
+      type: table
+      asset_id: 'table:processsession'
+      name: processsession
+    -
+      path: tables/revops_lateralmove
+      type: table
+      asset_id: 'table:revops_lateralmove'
+      name: revops_lateralmove
+    -
+      path: tables/revops_opportunitiessnapshots
+      type: table
+      asset_id: 'table:revops_opportunitiessnapshots'
+      name: revops_opportunitiessnapshots
+    -
+      path: tables/revops_changelog
+      type: table
+      asset_id: 'table:revops_changelog'
+      name: revops_changelog
+    -
+      path: tables/revops_subsolution
+      type: table
+      asset_id: 'table:revops_subsolution'
+      name: revops_subsolution
+    -
+      path: tables/goal
+      type: table
+      asset_id: 'table:goal'
+      name: goal
+    -
+      path: tables/phonecall
+      type: table
+      asset_id: 'table:phonecall'
+      name: phonecall
+    -
+      path: tables/queue
+      type: table
+      asset_id: 'table:queue'
+      name: queue
+    -
+      path: tables/revops_solutioncategory
+      type: table
+      asset_id: 'table:revops_solutioncategory'
+      name: revops_solutioncategory
+    -
+      path: tables/revops_practice
+      type: table
+      asset_id: 'table:revops_practice'
+      name: revops_practice
+    -
+      path: tables/revops_accountreassignment
+      type: table
+      asset_id: 'table:revops_accountreassignment'
+      name: revops_accountreassignment
+    -
+      path: tables/revops_cumulusaccount
+      type: table
+      asset_id: 'table:revops_cumulusaccount'
+      name: revops_cumulusaccount
+    -
+      path: tables/msdynmkt_marketingform
+      type: table
+      asset_id: 'table:msdynmkt_marketingform'
+      name: msdynmkt_marketingform
+    -
+      path: tables/msdyn_operatinghour
+      type: table
+      asset_id: 'table:msdyn_operatinghour'
+      name: msdyn_operatinghour
+    -
+      path: tables/revops_techstacksnapshots
+      type: table
+      asset_id: 'table:revops_techstacksnapshots'
+      name: revops_techstacksnapshots
+    -
+      path: tables/revops_accountproductsummary
+      type: table
+      asset_id: 'table:revops_accountproductsummary'
+      name: revops_accountproductsummary
+    -
+      path: tables/list
+      type: table
+      asset_id: 'table:list'
+      name: list
+    -
+      path: tables/msevtmgt_sessionregistration
+      type: table
+      asset_id: 'table:msevtmgt_sessionregistration'
+      name: msevtmgt_sessionregistration
+    -
+      path: tables/product
+      type: table
+      asset_id: 'table:product'
+      name: product
+    -
+      path: tables/revops_platformsettings
+      type: table
+      asset_id: 'table:revops_platformsettings'
+      name: revops_platformsettings
+    -
+      path: tables/transactioncurrency
+      type: table
+      asset_id: 'table:transactioncurrency'
+      name: transactioncurrency
+    -
+      path: tables/team
+      type: table
+      asset_id: 'table:team'
+      name: team
+    -
+      path: tables/msdyn_customerfeedbacksurveyresponse
+      type: table
+      asset_id: 'table:msdyn_customerfeedbacksurveyresponse'
+      name: msdyn_customerfeedbacksurveyresponse
+    -
+      path: tables/revops_smeengagement
+      type: table
+      asset_id: 'table:revops_smeengagement'
+      name: revops_smeengagement
+    -
+      path: tables/revops_utmlink
+      type: table
+      asset_id: 'table:revops_utmlink'
+      name: revops_utmlink
+    -
+      path: tables/revops_cumulusorganization
+      type: table
+      asset_id: 'table:revops_cumulusorganization'
+      name: revops_cumulusorganization
+    -
+      path: tables/contact
+      type: table
+      asset_id: 'table:contact'
+      name: contact
+    -
+      path: tables/msdyn_project
+      type: table
+      asset_id: 'table:msdyn_project'
+      name: msdyn_project
+    -
+      path: tables/revops_solutionprovider
+      type: table
+      asset_id: 'table:revops_solutionprovider'
+      name: revops_solutionprovider
+    -
+      path: tables/msevtmgt_event
+      type: table
+      asset_id: 'table:msevtmgt_event'
+      name: msevtmgt_event
+    -
+      path: tables/msdynmkt_marketingformsubmission
+      type: table
+      asset_id: 'table:msdynmkt_marketingformsubmission'
+      name: msdynmkt_marketingformsubmission
+    -
+      path: tables/msdyn_conversationsuggestionrequestpayload
+      type: table
+      asset_id: 'table:msdyn_conversationsuggestionrequestpayload'
+      name: msdyn_conversationsuggestionrequestpayload
+    -
+      path: tables/knowledgearticle
+      type: table
+      asset_id: 'table:knowledgearticle'
+      name: knowledgearticle
+    -
+      path: tables/revops_audienceimport
+      type: table
+      asset_id: 'table:revops_audienceimport'
+      name: revops_audienceimport
+    -
+      path: tables/annotation
+      type: table
+      asset_id: 'table:annotation'
+      name: annotation
+    -
+      path: tables/msdynmkt_journey
+      type: table
+      asset_id: 'table:msdynmkt_journey'
+      name: msdynmkt_journey
+    -
+      path: tables/msevtmgt_session
+      type: table
+      asset_id: 'table:msevtmgt_session'
+      name: msevtmgt_session
+    -
+      path: tables/syncerror
+      type: table
+      asset_id: 'table:syncerror'
+      name: syncerror
+    -
+      path: tables/lead
+      type: table
+      asset_id: 'table:lead'
+      name: lead
+    -
+      path: tables/incident
+      type: table
+      asset_id: 'table:incident'
+      name: incident
+    -
+      path: tables/revops_domain
+      type: table
+      asset_id: 'table:revops_domain'
+      name: revops_domain
+    -
+      path: tables/msdynmkt_brandsender
+      type: table
+      asset_id: 'table:msdynmkt_brandsender'
+      name: msdynmkt_brandsender
+    -
+      path: tables/revops_service
+      type: table
+      asset_id: 'table:revops_service'
+      name: revops_service
+    -
+      path: tables/revops_onboardingcall
+      type: table
+      asset_id: 'table:revops_onboardingcall'
+      name: revops_onboardingcall
+    -
+      path: tables/appointment
+      type: table
+      asset_id: 'table:appointment'
+      name: appointment
+    -
+      path: tables/revops_transfer
+      type: table
+      asset_id: 'table:revops_transfer'
+      name: revops_transfer
+    -
+      path: tables/incidentresolution
+      type: table
+      asset_id: 'table:incidentresolution'
+      name: incidentresolution
+    -
+      path: tables/opportunity
+      type: table
+      asset_id: 'table:opportunity'
+      name: opportunity
+    -
+      path: tables/revops_solutionsummary
+      type: table
+      asset_id: 'table:revops_solutionsummary'
+      name: revops_solutionsummary
+    -
+      path: tables/revops_cumulususer
+      type: table
+      asset_id: 'table:revops_cumulususer'
+      name: revops_cumulususer
+    -
+      path: tables/account
+      type: table
+      asset_id: 'table:account'
+      name: account
+    -
+      path: tables/revops_pricingrequest
+      type: table
+      asset_id: 'table:revops_pricingrequest'
+      name: revops_pricingrequest
+    -
+      path: tables/msevtmgt_checkin
+      type: table
+      asset_id: 'table:msevtmgt_checkin'
+      name: msevtmgt_checkin
+    -
+      path: tables/territory
+      type: table
+      asset_id: 'table:territory'
+      name: territory
+    -
+      path: tables/revops_solution
+      type: table
+      asset_id: 'table:revops_solution'
+      name: revops_solution
+    -
+      path: tables/revops_sherwebsalesbpf
+      type: table
+      asset_id: 'table:revops_sherwebsalesbpf'
+      name: revops_sherwebsalesbpf
+    -
+      path: tables/revops_competitortransferid
+      type: table
+      asset_id: 'table:revops_competitortransferid'
+      name: revops_competitortransferid
+    -
+      path: tables/revops_country
+      type: table
+      asset_id: 'table:revops_country'
+      name: revops_country
+    -
+      path: tables/revops_psaintegration
+      type: table
+      asset_id: 'table:revops_psaintegration'
+      name: revops_psaintegration
+    -
+      path: tables/systemuser
+      type: table
+      asset_id: 'table:systemuser'
+      name: systemuser
+    -
+      path: tables/revops_mwhaccount
+      type: table
+      asset_id: 'table:revops_mwhaccount'
+      name: revops_mwhaccount
+    -
+      path: tables/revops_solutiondetails
+      type: table
+      asset_id: 'table:revops_solutiondetails'
+      name: revops_solutiondetails
+    -
+      path: tables/revops_partnerinvestment
+      type: table
+      asset_id: 'table:revops_partnerinvestment'
+      name: revops_partnerinvestment
+    -
+      path: tables/revops_territoryregion
+      type: table
+      asset_id: 'table:revops_territoryregion'
+      name: revops_territoryregion
+    -
+      path: tables/category
+      type: table
+      asset_id: 'table:category'
+      name: category
+    -
+      path: tables/revops_cumulussignup
+      type: table
+      asset_id: 'table:revops_cumulussignup'
+      name: revops_cumulussignup
+    -
+      path: tables/competitor
+      type: table
+      asset_id: 'table:competitor'
+      name: competitor
+    -
+      path: tables/campaign
+      type: table
+      asset_id: 'table:campaign'
+      name: campaign
+    -
+      path: tables/email
+      type: table
+      asset_id: 'table:email'
+      name: email
+    -
+      path: tables/msdynmkt_email
+      type: table
+      asset_id: 'table:msdynmkt_email'
+      name: msdynmkt_email
+    -
+      path: tables/revops_productsummary
+      type: table
+      asset_id: 'table:revops_productsummary'
+      name: revops_productsummary
+    -
+      path: tables/revops_stateorprovince
+      type: table
+      asset_id: 'table:revops_stateorprovince'
+      name: revops_stateorprovince
+    -
+      path: tables/task
+      type: table
+      asset_id: 'table:task'
+      name: task
+    -
+      path: tables/template
+      type: table
+      asset_id: 'table:template'
+      name: template
+    -
+      path: tables/revops_sherwebopportunitybpf
+      type: table
+      asset_id: 'table:revops_sherwebopportunitybpf'
+      name: revops_sherwebopportunitybpf
+    -
+      path: tables/activitypointer
+      type: table
+      asset_id: 'table:activitypointer'
+      name: activitypointer
+    -
+      path: tables/msdynmkt_fragment
+      type: table
+      asset_id: 'table:msdynmkt_fragment'
+      name: msdynmkt_fragment
+    -
+      path: tables/revops_gicsmapping
+      type: table
+      asset_id: 'table:revops_gicsmapping'
+      name: revops_gicsmapping
+    -
+      path: tables/revops_accountpotentialtechstack
+      type: table
+      asset_id: 'table:revops_accountpotentialtechstack'
+      name: revops_accountpotentialtechstack
+    -
+      path: tables/msdynmkt_segment
+      type: table
+      asset_id: 'table:msdynmkt_segment'
+      name: msdynmkt_segment
+    -
+      path: tables/msevtmgt_eventregistration
+      type: table
+      asset_id: 'table:msevtmgt_eventregistration'
+      name: msevtmgt_eventregistration
+    -
+      path: tables/revops_relatedsolutionssnapshots
+      type: table
+      asset_id: 'table:revops_relatedsolutionssnapshots'
+      name: revops_relatedsolutionssnapshots
+    -
+      path: tables/revops_demo
+      type: table
+      asset_id: 'table:revops_demo'
+      name: revops_demo
+    -
+      path: tables/revops_businessreview
+      type: table
+      asset_id: 'table:revops_businessreview'
+      name: revops_businessreview
+    -
+      path: tables/msfp_surveyresponse
+      type: table
+      asset_id: 'table:msfp_surveyresponse'
+      name: msfp_surveyresponse
+    -
+      path: tables/revops_accountsolutionsummary
+      type: table
+      asset_id: 'table:revops_accountsolutionsummary'
+      name: revops_accountsolutionsummary
+    -
+      path: tables/revops_opportunitysolution
+      type: table
+      asset_id: 'table:revops_opportunitysolution'
+      name: revops_opportunitysolution
+    -
+      path: plugins/RevOps.EmailPlugins
+      type: plugin
+      asset_id: 'plugin:38bacd4b-61a6-4028-9d42-e19343472774'
+      name: RevOps.EmailPlugins
+    -
+      path: plugins/sherweb.plugin
+      type: plugin
+      asset_id: 'plugin:a1da7847-b1bd-411d-ba0d-14fc3f831836'
+      name: sherweb.plugin
+    -
+      path: plugins/RevOps.SolutionPlugins
+      type: plugin
+      asset_id: 'plugin:115c57ce-6551-47cf-8f60-262b00fb8eec'
+      name: RevOps.SolutionPlugins
+    -
+      path: 'flows/[Activity tasks] - stamp sql date'
+      type: flow
+      asset_id: 'flow:08fd6ead-3a19-f011-998a-7ced8d063295'
+      name: '[Activity tasks] - stamp sql date'
+    -
+      path: flows/Attach file to Asana
+      type: flow
+      asset_id: 'flow:2710bbe6-7877-f011-b4cc-7c1e52409afe'
+      name: Attach file to Asana
+    -
+      path: flows/GTW webinar is created
+      type: flow
+      asset_id: 'flow:5376b140-5ada-ee11-904c-6045bdf9e7de'
+      name: GTW webinar is created
+    -
+      path: 'flows/Lead - Resolve contact by email'
+      type: flow
+      asset_id: 'flow:c6c03138-6102-ef11-9f8a-002248d5a732'
+      name: 'Lead - Resolve contact by email'
+    -
+      path: 'flows/Competitor - Create current provider when a competitor is created'
+      type: flow
+      asset_id: 'flow:53f99fc6-82c4-ee11-9079-000d3a09cf8e'
+      name: 'Competitor - Create current provider when a competitor is created'
+    -
+      path: flows/Update Currency Exchange Rates
+      type: flow
+      asset_id: 'flow:9b2cc09c-bcc4-f011-bbd3-7c1e52067e9e'
+      name: Update Currency Exchange Rates
+    -
+      path: flows/Fix Accounts without Name
+      type: flow
+      asset_id: 'flow:9208db01-c38b-ef11-8a6a-7c1e524071bb'
+      name: Fix Accounts without Name
+    -
+      path: 'flows/Contact - Resolve Account by Domain (select row)'
+      type: flow
+      asset_id: 'flow:5e0d76fd-ba26-f011-8c4e-7ced8d04f24d'
+      name: 'Contact - Resolve Account by Domain (select row)'
+    -
+      path: 'flows/Set Supported Service Column - Email Channel'
+      type: flow
+      asset_id: 'flow:bbd3e232-67e2-ef11-be20-7c1e52870606'
+      name: 'Set Supported Service Column - Email Channel'
+    -
+      path: flows/P2P Automation
+      type: flow
+      asset_id: 'flow:7dac8344-11ac-ef11-a72d-6045bdf9b92b'
+      name: P2P Automation
+    -
+      path: flows/Set Case lookup value on Customer Feedback Survey Response
+      type: flow
+      asset_id: 'flow:2203afa2-feca-f011-8544-7ced8d061554'
+      name: Set Case lookup value on Customer Feedback Survey Response
+    -
+      path: 'flows/[phone call] - add notes to description'
+      type: flow
+      asset_id: 'flow:565632f5-0d85-f011-b4cc-7ced8d063295'
+      name: '[phone call] - add notes to description'
+    -
+      path: 'flows/Enrich Contact - Manual'
+      type: flow
+      asset_id: 'flow:1b9a722f-a343-ef11-a316-0022486df470'
+      name: 'Enrich Contact - Manual'
+    -
+      path: flows/Assign SME Engagement to Object Owner
+      type: flow
+      asset_id: 'flow:122313bc-9aa0-f011-bbd2-7ced8d061554'
+      name: Assign SME Engagement to Object Owner
+    -
+      path: flows/Create Case from Migration Request
+      type: flow
+      asset_id: 'flow:83b3c17e-2bca-f011-8544-6045bdf9f19e'
+      name: Create Case from Migration Request
+    -
+      path: flows/GTW Registrant added
+      type: flow
+      asset_id: 'flow:1b21a4d6-5ada-ee11-904d-002248d5a732'
+      name: GTW Registrant added
+    -
+      path: 'flows/Update Last Interaction - Note'
+      type: flow
+      asset_id: 'flow:ad8c22c4-107d-f011-b4cc-7c1e52409afe'
+      name: 'Update Last Interaction - Note'
+    -
+      path: 'flows/[lead] - check parent account relationship for Trade Show lead'
+      type: flow
+      asset_id: 'flow:a4267844-d0bf-f011-bbd3-7c1e52067e9e'
+      name: '[lead] - check parent account relationship for Trade Show lead'
+    -
+      path: flows/Conversations to NiCE
+      type: flow
+      asset_id: 'flow:2649d858-4bd5-f011-8544-7ced8d061554'
+      name: Conversations to NiCE
+    -
+      path: 'flows/CS - case create for manual account creation for UK Partners'
+      type: flow
+      asset_id: 'flow:c547a2b9-25bb-f011-bbd3-6045bdf9f19e'
+      name: 'CS - case create for manual account creation for UK Partners'
+    -
+      path: flows/Fill Parent Account of Cumulus Account
+      type: flow
+      asset_id: 'flow:d50de08e-0f88-f011-b4cc-7ced8d06221f'
+      name: Fill Parent Account of Cumulus Account
+    -
+      path: flows/Cumulus User Created
+      type: flow
+      asset_id: 'flow:88c1fdd1-a46b-ef11-a670-000d3af47275'
+      name: Cumulus User Created
+    -
+      path: 'flows/Create Work Item - Approve/Enable Mailbox'
+      type: flow
+      asset_id: 'flow:a21628e1-353e-ef11-a316-6045bdcd5dde'
+      name: 'Create Work Item - Approve/Enable Mailbox'
+    -
+      path: flows/Fix Primary Contact on Account
+      type: flow
+      asset_id: 'flow:cb799a23-777b-ef11-ac20-6045bdf9e493'
+      name: Fix Primary Contact on Account
+    -
+      path: 'flows/GTW Get Check-Ins'
+      type: flow
+      asset_id: 'flow:1a3834b4-abdd-ee11-904c-0022486dc4eb'
+      name: 'GTW Get Check-Ins'
+    -
+      path: 'flows/Enrich Contact - Scheduled'
+      type: flow
+      asset_id: 'flow:0b2432b9-e03e-ef11-a316-6045bdcd5ea7'
+      name: 'Enrich Contact - Scheduled'
+    -
+      path: 'flows/Daily Tier Update per MRR '
+      type: flow
+      asset_id: 'flow:abcf0f94-f9b1-ef11-a72d-7c1e52063863'
+      name: 'Daily Tier Update per MRR '
+    -
+      path: 'flows/Opportunity - Create Opportunities from Account Potential'
+      type: flow
+      asset_id: 'flow:82f50409-87c4-ee11-9079-000d3a09cf8e'
+      name: 'Opportunity - Create Opportunities from Account Potential'
+    -
+      path: 'flows/Day 0 - Cumulus CES'
+      type: flow
+      asset_id: 'flow:20e5e4f3-3f57-f011-bec2-7ced8d063295'
+      name: 'Day 0 - Cumulus CES'
+    -
+      path: 'flows/[Events] - Scanned Import connection to event and more'
+      type: flow
+      asset_id: 'flow:77b3076c-1200-f011-bae3-7c1e52409afe'
+      name: '[Events] - Scanned Import connection to event and more'
+    -
+      path: 'flows/marketing - review proposed end date'
+      type: flow
+      asset_id: 'flow:5378e547-9077-f011-b4cc-7c1e52409afe'
+      name: 'marketing - review proposed end date'
+    -
+      path: 'flows/[Form Submission] - UTM shenanigans enrichment & consent processing'
+      type: flow
+      asset_id: 'flow:f665edbc-a4f3-ef11-be20-7c1e5206727f'
+      name: '[Form Submission] - UTM shenanigans enrichment & consent processing'
+    -
+      path: 'flows/ISO 3166 Cumulus Account to Account - Scheduled'
+      type: flow
+      asset_id: 'flow:0950b5ca-c089-f011-b4cc-6045bdcd501f'
+      name: 'ISO 3166 Cumulus Account to Account - Scheduled'
+    -
+      path: flows/VMware_ContractRequest
+      type: flow
+      asset_id: 'flow:d3fa82ea-5606-f011-bae2-7c1e5206727f'
+      name: VMware_ContractRequest
+    -
+      path: flows/Account Created in Cumulus
+      type: flow
+      asset_id: 'flow:4c3cce43-8ed5-ee11-904c-002248d5a732'
+      name: Account Created in Cumulus
+    -
+      path: 'flows/Enrich Account - Manual'
+      type: flow
+      asset_id: 'flow:b3ce4fa1-dc75-ef11-ac20-7c1e520630e3'
+      name: 'Enrich Account - Manual'
+    -
+      path: flows/Veeam_ContractRequest
+      type: flow
+      asset_id: 'flow:0aa72c99-f571-f011-bec2-7ced8d063295'
+      name: Veeam_ContractRequest
+    -
+      path: flows/Set Customer Verified Resolution Value
+      type: flow
+      asset_id: 'flow:3d01394b-a3cb-f011-8544-7c1e52067e9e'
+      name: Set Customer Verified Resolution Value
+    -
+      path: 'flows/Account Solutions Summary - Copy Account Key'
+      type: flow
+      asset_id: 'flow:577e4e2b-453a-ef11-a316-6045bdcd5e88'
+      name: 'Account Solutions Summary - Copy Account Key'
+    -
+      path: 'flows/Enrich Lead - Scheduled'
+      type: flow
+      asset_id: 'flow:1a73f488-e479-ef11-ac20-6045bdf9e493'
+      name: 'Enrich Lead - Scheduled'
+    -
+      path: flows/P2P Transfer Notifications
+      type: flow
+      asset_id: 'flow:dd389c85-6d9c-ef11-8a6a-000d3af4dd88'
+      name: P2P Transfer Notifications
+    -
+      path: flows/Create Case from Zabbix Alert
+      type: flow
+      asset_id: 'flow:227c7350-1a8f-f011-b4cb-7ced8d04e0f6'
+      name: Create Case from Zabbix Alert
+    -
+      path: flows/ResolveCase
+      type: flow
+      asset_id: 'flow:ae8115af-54be-f011-bbd3-7c1e52067e9e'
+      name: ResolveCase
+    -
+      path: 'flows/[Journey] - custom trigger for lead'
+      type: flow
+      asset_id: 'flow:530a3f91-b481-ef11-ac21-000d3af43697'
+      name: '[Journey] - custom trigger for lead'
+    -
+      path: flows/Cumulus Account Manager Update
+      type: flow
+      asset_id: 'flow:3c9cd4b9-1919-ef11-840a-6045bdcd283e'
+      name: Cumulus Account Manager Update
+    -
+      path: 'flows/ISO 3166 Cumulus Account to Account - Manual'
+      type: flow
+      asset_id: 'flow:65ab024b-5c7f-f011-b4cc-7c1e52409afe'
+      name: 'ISO 3166 Cumulus Account to Account - Manual'
+    -
+      path: 'flows/[lead] - MQL date'
+      type: flow
+      asset_id: 'flow:2c98e0f8-b81a-f011-998a-7ced8d04f24d'
+      name: '[lead] - MQL date'
+    -
+      path: flows/Link Cumulus Users To Contact
+      type: flow
+      asset_id: 'flow:ff8ff78c-3d1c-ef11-840a-0022486d6c17'
+      name: Link Cumulus Users To Contact
+    -
+      path: 'flows/Account - Set Territory on Account'
+      type: flow
+      asset_id: 'flow:8ff7c609-5fd4-ee11-904c-002248d5a27a'
+      name: 'Account - Set Territory on Account'
+    -
+      path: flows/P2P Transfer Population from Case
+      type: flow
+      asset_id: 'flow:12b018cd-fd93-f011-b4cc-6045bdfa0630'
+      name: P2P Transfer Population from Case
+    -
+      path: 'flows/Enrich Account - Scheduled'
+      type: flow
+      asset_id: 'flow:d6284b19-ef3e-ef11-a316-6045bdcd5ea7'
+      name: 'Enrich Account - Scheduled'
+    -
+      path: flows/Account Ownership change notification
+      type: flow
+      asset_id: 'flow:df670963-ac82-f011-b4cb-7c1e5206727f'
+      name: Account Ownership change notification
+    -
+      path: 'flows/[Audience Import] - upsert contact and associate'
+      type: flow
+      asset_id: 'flow:bf728815-6f4c-f011-877b-7c1e52409afe'
+      name: '[Audience Import] - upsert contact and associate'
+    -
+      path: 'flows/[Activity email] - stamp sql date'
+      type: flow
+      asset_id: 'flow:169b861b-fa16-f011-998a-7ced8d04f24d'
+      name: '[Activity email] - stamp sql date'
+    -
+      path: flows/Case resolution survey
+      type: flow
+      asset_id: 'flow:98f9cc2a-e108-f011-bae3-7ced8d04f24d'
+      name: Case resolution survey
+    -
+      path: 'flows/[lead] UK cookie fallback territory'
+      type: flow
+      asset_id: 'flow:c4942a87-cdc0-f011-bbd3-7ced8d061554'
+      name: '[lead] UK cookie fallback territory'
+    -
+      path: 'flows/zremove[JourneyManual] DCIJ - Website contact form submitted'
+      type: flow
+      asset_id: 'flow:90a1ff34-7b95-f011-b4cc-6045bdfa0630'
+      name: 'zremove[JourneyManual] DCIJ - Website contact form submitted'
+    -
+      path: 'flows/Contact - Resolve Account by Domain'
+      type: flow
+      asset_id: 'flow:1d01247d-8de8-ef11-be21-000d3a09d51b'
+      name: 'Contact - Resolve Account by Domain'
+    -
+      path: 'flows/marketing - report inactive campaign owner'
+      type: flow
+      asset_id: 'flow:b15a64db-b976-f011-b4cc-7ced8d063295'
+      name: 'marketing - report inactive campaign owner'
+    -
+      path: flows/RevOps Change Log
+      type: flow
+      asset_id: 'flow:0e903c77-505a-ef11-bfe3-6045bdf9a15c'
+      name: RevOps Change Log
+    -
+      path: 'flows/CS - Notify manager of customer escalation'
+      type: flow
+      asset_id: 'flow:bcf520bb-d4ad-f011-bbd3-7c1e52067e9e'
+      name: 'CS - Notify manager of customer escalation'
+    -
+      path: 'flows/Contact - Extract Domain from email (selecting rows)'
+      type: flow
+      asset_id: 'flow:e67c203d-3b24-f011-8c4e-7c1e52409afe'
+      name: 'Contact - Extract Domain from email (selecting rows)'
+    -
+      path: 'flows/Enrich Account - OnCreate'
+      type: flow
+      asset_id: 'flow:2d4ec9f4-5832-ef11-8e4e-6045bdcd5e2a'
+      name: 'Enrich Account - OnCreate'
+    -
+      path: 'flows/Case - Send notification to owner when a customer replies'
+      type: flow
+      asset_id: 'flow:eeb603b3-bc47-f011-877a-7c1e52409afe'
+      name: 'Case - Send notification to owner when a customer replies'
+    -
+      path: flows/Incomplete Cart
+      type: flow
+      asset_id: 'flow:4312b647-622e-ef11-8e4f-6045bdcd5dde'
+      name: Incomplete Cart
+    -
+      path: 'flows/Cumulus Account Manager - User Created Or Updated'
+      type: flow
+      asset_id: 'flow:c6ee8cbc-1919-ef11-840a-7c1e520637cd'
+      name: 'Cumulus Account Manager - User Created Or Updated'
+    -
+      path: flows/Link Cumulus Accounts to Parent Accounts
+      type: flow
+      asset_id: 'flow:50c55434-3d1c-ef11-840b-002248d5a732'
+      name: Link Cumulus Accounts to Parent Accounts
+    -
+      path: 'flows/Lead - Set Territory on Lead'
+      type: flow
+      asset_id: 'flow:26f2d8ab-5e99-ee11-be37-000d3af4f266'
+      name: 'Lead - Set Territory on Lead'
+    -
+      path: 'flows/Queue item release, set case Owner'
+      type: flow
+      asset_id: 'flow:6b0c257b-5941-f011-877a-7c1e52409afe'
+      name: 'Queue item release, set case Owner'
+    -
+      path: flows/Opportunity Update Probability when Won
+      type: flow
+      asset_id: 'flow:f3277816-22ed-ee11-a1fd-0022486dc4eb'
+      name: Opportunity Update Probability when Won
+    -
+      path: 'flows/Account - Set Cumulus Account created on Opps'
+      type: flow
+      asset_id: 'flow:2002e152-9539-ef11-a316-6045bdcd5dde'
+      name: 'Account - Set Cumulus Account created on Opps'
+    -
+      path: flows/Select Orgs From Cumulus Where ClientUniqueName
+      type: flow
+      asset_id: 'flow:eb2ba9c6-fa5d-ee11-8df0-000d3a09f3d2'
+      name: Select Orgs From Cumulus Where ClientUniqueName
+    -
+      path: 'flows/Enrich Lead - OnCreate'
+      type: flow
+      asset_id: 'flow:875fa9a4-521f-ef11-840a-6045bdcd283e'
+      name: 'Enrich Lead - OnCreate'
+    -
+      path: flows/Link Cumulus User Contact to Account
+      type: flow
+      asset_id: 'flow:05e173a0-6274-ef11-ac20-000d3af47275'
+      name: Link Cumulus User Contact to Account
+    -
+      path: 'flows/[Activity phone] - stamp sql date'
+      type: flow
+      asset_id: 'flow:1f4f7206-f616-f011-998a-7c1e5206727f'
+      name: '[Activity phone] - stamp sql date'
+    -
+      path: flows/Case to NiCE
+      type: flow
+      asset_id: 'flow:d96a7992-b69f-f011-bbd2-7ced8d058789'
+      name: Case to NiCE
+    -
+      path: flows/Organization Created or Deleted in Cumulus
+      type: flow
+      asset_id: 'flow:4426e14b-a0fa-ef11-bae1-7c1e5206727f'
+      name: Organization Created or Deleted in Cumulus
+    -
+      path: 'flows/Incoming Email, set Customer responded'
+      type: flow
+      asset_id: 'flow:76fd7f57-ba3c-f011-b4cc-7c1e52409afe'
+      name: 'Incoming Email, set Customer responded'
+    -
+      path: 'flows/Contact - Extract Domain from email'
+      type: flow
+      asset_id: 'flow:51c9db08-99e8-ef11-be21-000d3a09d51b'
+      name: 'Contact - Extract Domain from email'
+    -
+      path: 'flows/Update Last Interaction - Email'
+      type: flow
+      asset_id: 'flow:0cbf6af4-007d-f011-b4cc-7c1e52409afe'
+      name: 'Update Last Interaction - Email'
+    -
+      path: 'flows/[Lead] notify user when assigned'
+      type: flow
+      asset_id: 'flow:742ea0c4-d142-f011-877a-7ced8d063295'
+      name: '[Lead] notify user when assigned'
+    -
+      path: 'flows/Case Queue Update - Update Queue Item'
+      type: flow
+      asset_id: 'flow:e9a9e743-e9d1-ef11-a72e-7c1e52063863'
+      name: 'Case Queue Update - Update Queue Item'
+    -
+      path: 'flows/Opportunity - Update Solution Summary'
+      type: flow
+      asset_id: 'flow:de29be5c-030f-ef11-9f89-000d3a0a0668'
+      name: 'Opportunity - Update Solution Summary'
+    -
+      path: flows/Commitment Agreement Form
+      type: flow
+      asset_id: 'flow:4abab8df-5206-f011-bae2-7ced8d063295'
+      name: Commitment Agreement Form
+    -
+      path: 'flows/Vendor Account - Create Solution Provider from vendor'
+      type: flow
+      asset_id: 'flow:214517ef-83c4-ee11-9079-000d3a09cde5'
+      name: 'Vendor Account - Create Solution Provider from vendor'
+    -
+      path: flows/Queue item ownership change based on case ownership
+      type: flow
+      asset_id: 'flow:80e8dada-3f3a-f011-b4cc-7c1e52409afe'
+      name: Queue item ownership change based on case ownership
+    -
+      path: 'flows/opportunity - set current bpf stage - sherweb sales bpf'
+      type: flow
+      asset_id: 'flow:da34706c-cc9e-f011-bbd2-7ced8d061554'
+      name: 'opportunity - set current bpf stage - sherweb sales bpf'
+    -
+      path: 'flows/Cumulus Account Manager - Team Created Or Updated'
+      type: flow
+      asset_id: 'flow:ec3260dc-9343-ef11-a316-6045bdcd5ea7'
+      name: 'Cumulus Account Manager - Team Created Or Updated'
+    -
+      path: 'flows/[Global] PIT tier'
+      type: flow
+      asset_id: 'flow:16df325b-ce8f-f011-b4cc-6045bdfa0630'
+      name: '[Global] PIT tier'
+    -
+      path: 'flows/[Journey] DCIJ - Website contact form submitted'
+      type: flow
+      asset_id: 'flow:e5a057bf-fd48-ef11-accd-0022486df470'
+      name: '[Journey] DCIJ - Website contact form submitted'
+    -
+      path: 'flows/Opportunity - set current BPF stage - sherweb opp bpf'
+      type: flow
+      asset_id: 'flow:633172f5-c29e-f011-bbd2-7ced8d061554'
+      name: 'Opportunity - set current BPF stage - sherweb opp bpf'
+    -
+      path: flows/Bulk Resolve Cases
+      type: flow
+      asset_id: 'flow:416659c3-51ba-f011-bbd3-7c1e52067e9e'
+      name: Bulk Resolve Cases
+    -
+      path: 'flows/Update Last Interaction - Portal Comment'
+      type: flow
+      asset_id: 'flow:6a5560fe-157d-f011-b4cc-7ced8d04f24d'
+      name: 'Update Last Interaction - Portal Comment'
+    -
+      path: 'flows/Lead - Extract Domain from email'
+      type: flow
+      asset_id: 'flow:4b2cd07d-1f9a-ee11-be37-000d3af4f266'
+      name: 'Lead - Extract Domain from email'
+    -
+      path: 'flows/[lead] - disqualify honeypot field contains data'
+      type: flow
+      asset_id: 'flow:a622cb37-5595-ef11-8a69-000d3a0a3998'
+      name: '[lead] - disqualify honeypot field contains data'
+    -
+      path: 'flows/Account Product Summary - Copy Account Key'
+      type: flow
+      asset_id: 'flow:cfbc8f2d-646c-ef11-a670-6045bdf9e493'
+      name: 'Account Product Summary - Copy Account Key'
+    -
+      path: 'flows/Accounts - Manual -  Fix Generic Domains format'
+      type: flow
+      asset_id: 'flow:0137957c-7de9-ef11-be20-7c1e52870606'
+      name: 'Accounts - Manual -  Fix Generic Domains format'
+    -
+      path: 'flows/[Calendly] Create and update a lead when a Calendly event is created'
+      type: flow
+      asset_id: 'flow:ea953a71-6ad6-ee11-904c-002248d5a789'
+      name: '[Calendly] Create and update a lead when a Calendly event is created'
+    -
+      path: 'flows/Opportunity Solution - Create Solution Summary'
+      type: flow
+      asset_id: 'flow:5c484896-530e-ef11-9f89-000d3af4117b'
+      name: 'Opportunity Solution - Create Solution Summary'
+    -
+      path: 'flows/Enrich Contact - OnCreate'
+      type: flow
+      asset_id: 'flow:885fa9a4-521f-ef11-840a-6045bdcd283e'
+      name: 'Enrich Contact - OnCreate'
+    -
+      path: 'flows/[MWH] - omit accounts and contacts from consent'
+      type: flow
+      asset_id: 'flow:d0f6ec6a-023b-f011-b4cc-7ced8d063295'
+      name: '[MWH] - omit accounts and contacts from consent'
+    -
+      path: 'flows/Incoming Portal Comment, set Customer responded'
+      type: flow
+      asset_id: 'flow:98aad464-f360-f011-bec1-7c1e5206727f'
+      name: 'Incoming Portal Comment, set Customer responded'
+    -
+      path: 'flows/Account - Backfill Channel & Relationship'
+      type: flow
+      asset_id: 'flow:5ba51fee-143a-ef11-a316-6045bdcd5dde'
+      name: 'Account - Backfill Channel & Relationship'
+    -
+      path: flows/Send P2P Transfer
+      type: flow
+      asset_id: 'flow:64e3c0bb-b194-f011-b4cc-6045bdfa0630'
+      name: Send P2P Transfer
+    -
+      path: 'flows/marketing - close asset from campaign'
+      type: flow
+      asset_id: 'flow:91fb6fe3-6b78-f011-b4cc-7ced8d063295'
+      name: 'marketing - close asset from campaign'
+    -
+      path: 'flows/Lead - Resolve Account by Domain'
+      type: flow
+      asset_id: 'flow:0f2473c5-239a-ee11-be37-000d3af4f717'
+      name: 'Lead - Resolve Account by Domain'
+    -
+      path: 'queues/<ade72ef964e04307aaee678565a4a16b_1>'
+      type: queue
+      asset_id: 'queue:8286c868-0ced-ef11-be20-000d3a0c615d'
+      name: '<ade72ef964e04307aaee678565a4a16b_1>'
+    -
+      path: 'queues/<ddb58302677947668d9cd3a358d70d37_1>'
+      type: queue
+      asset_id: 'queue:f08c577c-1971-f011-bec1-000d3a84ef99'
+      name: '<ddb58302677947668d9cd3a358d70d37_1>'
+    -
+      path: 'queues/<3eb6ce5fe12f4c6bbe4cd34789e2a7ad_1>'
+      type: queue
+      asset_id: 'queue:5b00c9f9-1b71-f011-bec1-000d3a84ef99'
+      name: '<3eb6ce5fe12f4c6bbe4cd34789e2a7ad_1>'
+    -
+      path: 'queues/<c0c5d3a7e6b6456da40de5bb800a57c3_1>'
+      type: queue
+      asset_id: 'queue:89082a0b-1c71-f011-bec1-000d3a84ef99'
+      name: '<c0c5d3a7e6b6456da40de5bb800a57c3_1>'
+    -
+      path: 'queues/<24ef7cf2b498f011b41c002248b081f9_1>'
+      type: queue
+      asset_id: 'queue:4fbd8af5-b498-f011-b41c-000d3ae971d5'
+      name: '<24ef7cf2b498f011b41c002248b081f9_1>'
+    -
+      path: 'queues/<fb410c26d0804309a602d0d827a4fcec_1>'
+      type: queue
+      asset_id: 'queue:cc2d55fb-9771-ef11-a66f-0022483c5aa3'
+      name: '<fb410c26d0804309a602d0d827a4fcec_1>'
+    -
+      path: 'queues/<06b3487241954cda8393d3c970544f13_1>'
+      type: queue
+      asset_id: 'queue:bd166f0d-354b-f011-8779-0022483ce9a9'
+      name: '<06b3487241954cda8393d3c970544f13_1>'
+    -
+      path: 'queues/<9ce42f69bd484a62a630963d8e50221c_1>'
+      type: queue
+      asset_id: 'queue:3eed8e2f-7ad2-f011-8543-0022483dc07f'
+      name: '<9ce42f69bd484a62a630963d8e50221c_1>'
+    -
+      path: 'queues/<8edaadf90800f011bae36045bd605559_1>'
+      type: queue
+      asset_id: 'queue:397ed701-0900-f011-bae3-0022483dedd6'
+      name: '<8edaadf90800f011bae36045bd605559_1>'
+    -
+      path: 'queues/<b3415a98b91ff01199890022483dedd6_1>'
+      type: queue
+      asset_id: 'queue:cc8a63a4-b91f-f011-998a-002248add628'
+      name: '<b3415a98b91ff01199890022483dedd6_1>'
+    -
+      path: 'queues/<5dd00fa390f2402e87017894c508a9a7_1>'
+      type: queue
+      asset_id: 'queue:b0ce6d28-f66c-f011-b4cb-002248ae1603'
+      name: '<5dd00fa390f2402e87017894c508a9a7_1>'
+    -
+      path: 'queues/<0b4b99ff67e845db99df046d028d32a4_1>'
+      type: queue
+      asset_id: 'queue:ff8f4ff9-f66c-f011-b4cb-002248ae1603'
+      name: '<0b4b99ff67e845db99df046d028d32a4_1>'
+    -
+      path: 'queues/<9c942d2eb2dd4e38a7d621a3b1503ac2_1>'
+      type: queue
+      asset_id: 'queue:f34215f1-1f27-f011-8c4d-002248afce9a'
+      name: '<9c942d2eb2dd4e38a7d621a3b1503ac2_1>'
+    -
+      path: 'queues/<3ebcb28158e840d594e78dabd4dab93b_1>'
+      type: queue
+      asset_id: 'queue:173208fd-1f27-f011-8c4d-002248afce9a'
+      name: '<3ebcb28158e840d594e78dabd4dab93b_1>'
+    -
+      path: 'queues/<1e7960d3570d4105be9e9698908e57bf_1>'
+      type: queue
+      asset_id: 'queue:bcc1f808-2027-f011-8c4d-002248afce9a'
+      name: '<1e7960d3570d4105be9e9698908e57bf_1>'
+    -
+      path: 'queues/<01fd31ba265e4d82a61829c93d5b4eca_1>'
+      type: queue
+      asset_id: 'queue:ad91fa0e-2027-f011-8c4d-002248afce9a'
+      name: '<01fd31ba265e4d82a61829c93d5b4eca_1>'
+    -
+      path: 'queues/<0bacc33ebe844b85a72e05b86f8fed21_1>'
+      type: queue
+      asset_id: 'queue:e70b6eb4-5aa5-f011-bbd2-002248afda59'
+      name: '<0bacc33ebe844b85a72e05b86f8fed21_1>'
+    -
+      path: 'queues/<995a90413eb6431e8067bd2a72ec7c77_1>'
+      type: queue
+      asset_id: 'queue:3f7b66ba-5aa5-f011-bbd2-002248afda59'
+      name: '<995a90413eb6431e8067bd2a72ec7c77_1>'
+    -
+      path: 'queues/<afa11375edd44be79c7efba89217c9d7_1>'
+      type: queue
+      asset_id: 'queue:fe117f94-59a5-f011-bbd2-002248afde81'
+      name: '<afa11375edd44be79c7efba89217c9d7_1>'
+    -
+      path: 'queues/<26e5dd400d074b4d987e67b8386c963c_1>'
+      type: queue
+      asset_id: 'queue:db4292c2-f598-ef11-8a6b-002248b1d264'
+      name: '<26e5dd400d074b4d987e67b8386c963c_1>'
+    -
+      path: 'queues/<M365 / HEX pod>'
+      type: queue
+      asset_id: 'queue:436191cb-5362-f011-bec2-002248b2c290'
+      name: '<M365 / HEX pod>'
+    -
+      path: 'queues/<Cloud Support>'
+      type: queue
+      asset_id: 'queue:34e7ee09-5662-f011-bec2-002248b2c290'
+      name: '<Cloud Support>'
+    -
+      path: 'queues/<CloudPBX pod>'
+      type: queue
+      asset_id: 'queue:413ba956-5762-f011-bec2-002248b2c290'
+      name: '<CloudPBX pod>'
+    -
+      path: 'queues/<BA pod>'
+      type: queue
+      asset_id: 'queue:8cf7b10c-5862-f011-bec2-002248b2c290'
+      name: '<BA pod>'
+    -
+      path: 'queues/<SBC Pod>'
+      type: queue
+      asset_id: 'queue:dd99fa1e-5862-f011-bec2-002248b2c290'
+      name: '<SBC Pod>'
+    -
+      path: 'queues/<Level 3s>'
+      type: queue
+      asset_id: 'queue:64b30e84-5962-f011-bec2-002248b2c290'
+      name: '<Level 3s>'
+    -
+      path: 'queues/<51ccbc28b7bd4a6b94eae81b1541083d_1>'
+      type: queue
+      asset_id: 'queue:4a3a26da-a123-ef11-840a-6045bd5d1869'
+      name: '<51ccbc28b7bd4a6b94eae81b1541083d_1>'
+    -
+      path: 'queues/<28a698ab538140259f9f748ab25bd150_1>'
+      type: queue
+      asset_id: 'queue:21548866-f15e-f011-bec1-6045bd5e3bdc'
+      name: '<28a698ab538140259f9f748ab25bd150_1>'
+    -
+      path: 'queues/<f4e36f57cb5d4712a4da716563aff7c1_1>'
+      type: queue
+      asset_id: 'queue:ddebf873-f15e-f011-bec1-6045bd5e3bdc'
+      name: '<f4e36f57cb5d4712a4da716563aff7c1_1>'
+    -
+      path: 'queues/<sherweb-prod>'
+      type: queue
+      asset_id: 'queue:74cc832d-d31f-ef11-840b-6045bd5ea018'
+      name: '<sherweb-prod>'
+    -
+      path: 'queues/<d36c9d9bdfd9467dabbcbdbd8ba4cd63_1>'
+      type: queue
+      asset_id: 'queue:7549bc03-1920-ef11-840b-6045bd5ea018'
+      name: '<d36c9d9bdfd9467dabbcbdbd8ba4cd63_1>'
+    -
+      path: 'queues/<d514df595ed3484b9d41572976dac638_1>'
+      type: queue
+      asset_id: 'queue:bd1b0058-2e20-ef11-840b-6045bd5ea018'
+      name: '<d514df595ed3484b9d41572976dac638_1>'
+    -
+      path: 'queues/<94a034358e86490eb5bfe1e7bdfb6ea2_1>'
+      type: queue
+      asset_id: 'queue:441a544f-5a3f-f011-8779-6045bd603ebd'
+      name: '<94a034358e86490eb5bfe1e7bdfb6ea2_1>'
+    -
+      path: 'queues/<712282464520f011998a002248b1d6cf_1>'
+      type: queue
+      asset_id: 'queue:6b11c449-4520-f011-998a-6045bd605559'
+      name: '<712282464520f011998a002248b1d6cf_1>'
+    -
+      path: 'queues/<d0505ed83703f011bae30022483cf35f_1>'
+      type: queue
+      asset_id: 'queue:a7ce88dc-3703-f011-bae3-6045bd605de1'
+      name: '<d0505ed83703f011bae30022483cf35f_1>'
+    -
+      path: 'queues/<4cfb7bca768542298b6586b9803c2c8f_1>'
+      type: queue
+      asset_id: 'queue:da02b603-f9da-f011-8543-6045bd606a3e'
+      name: '<4cfb7bca768542298b6586b9803c2c8f_1>'
+    -
+      path: 'queues/<Sales>'
+      type: queue
+      asset_id: 'queue:f68a7cb5-3f3e-ef11-a316-6045bd619d89'
+      name: '<Sales>'
+    -
+      path: 'queues/<Marketing>'
+      type: queue
+      asset_id: 'queue:fe8a7cb5-3f3e-ef11-a316-6045bd619d89'
+      name: '<Marketing>'
+    -
+      path: 'queues/<Products>'
+      type: queue
+      asset_id: 'queue:ec9479bb-3f3e-ef11-a316-6045bd619d89'
+      name: '<Products>'
+    -
+      path: 'queues/<Operations>'
+      type: queue
+      asset_id: 'queue:f49479bb-3f3e-ef11-a316-6045bd619d89'
+      name: '<Operations>'
+    -
+      path: 'queues/<Technical Support>'
+      type: queue
+      asset_id: 'queue:f89479bb-3f3e-ef11-a316-6045bd619d89'
+      name: '<Technical Support>'
+    -
+      path: 'queues/<Development>'
+      type: queue
+      asset_id: 'queue:fc9479bb-3f3e-ef11-a316-6045bd619d89'
+      name: '<Development>'
+    -
+      path: 'queues/<Human Resources>'
+      type: queue
+      asset_id: 'queue:009579bb-3f3e-ef11-a316-6045bd619d89'
+      name: '<Human Resources>'
+    -
+      path: 'queues/<Finance>'
+      type: queue
+      asset_id: 'queue:049579bb-3f3e-ef11-a316-6045bd619d89'
+      name: '<Finance>'
+    -
+      path: 'queues/<Cloud Infrastructure & Services>'
+      type: queue
+      asset_id: 'queue:089579bb-3f3e-ef11-a316-6045bd619d89'
+      name: '<Cloud Infrastructure & Services>'
+    -
+      path: 'queues/<C2>'
+      type: queue
+      asset_id: 'queue:0c9579bb-3f3e-ef11-a316-6045bd619d89'
+      name: '<C2>'
+    -
+      path: 'queues/<Team Marketing>'
+      type: queue
+      asset_id: 'queue:129579bb-3f3e-ef11-a316-6045bd619d89'
+      name: '<Team Marketing>'
+    -
+      path: 'queues/<Team Executives>'
+      type: queue
+      asset_id: 'queue:159579bb-3f3e-ef11-a316-6045bd619d89'
+      name: '<Team Executives>'
+    -
+      path: 'queues/<Sherweb>'
+      type: queue
+      asset_id: 'queue:ad8eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<Sherweb>'
+    -
+      path: 'queues/<SW-Presales>'
+      type: queue
+      asset_id: 'queue:b08eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<SW-Presales>'
+    -
+      path: 'queues/<SW-SalesOperations>'
+      type: queue
+      asset_id: 'queue:b38eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<SW-SalesOperations>'
+    -
+      path: 'queues/<Online Backup>'
+      type: queue
+      asset_id: 'queue:b68eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<Online Backup>'
+    -
+      path: 'queues/<Sécurité>'
+      type: queue
+      asset_id: 'queue:b98eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<Sécurité>'
+    -
+      path: 'queues/<Team Sales Longueuil>'
+      type: queue
+      asset_id: 'queue:bc8eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<Team Sales Longueuil>'
+    -
+      path: 'queues/<SW-PartnerSalesManager>'
+      type: queue
+      asset_id: 'queue:bf8eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<SW-PartnerSalesManager>'
+    -
+      path: 'queues/<Team Product>'
+      type: queue
+      asset_id: 'queue:c28eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<Team Product>'
+    -
+      path: 'queues/<SW-RC/BD>'
+      type: queue
+      asset_id: 'queue:c58eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<SW-RC/BD>'
+    -
+      path: 'queues/<Team VOIP>'
+      type: queue
+      asset_id: 'queue:c88eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<Team VOIP>'
+    -
+      path: 'queues/<SW-MarketingCreative>'
+      type: queue
+      asset_id: 'queue:cd8eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<SW-MarketingCreative>'
+    -
+      path: 'queues/<SW-MarketingEvents>'
+      type: queue
+      asset_id: 'queue:d08eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<SW-MarketingEvents>'
+    -
+      path: 'queues/<SW-MarketingGTM>'
+      type: queue
+      asset_id: 'queue:d38eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<SW-MarketingGTM>'
+    -
+      path: 'queues/<SW-ProductSpecialist>'
+      type: queue
+      asset_id: 'queue:d68eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<SW-ProductSpecialist>'
+    -
+      path: 'queues/<Direct>'
+      type: queue
+      asset_id: 'queue:d98eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<Direct>'
+    -
+      path: 'queues/<CST>'
+      type: queue
+      asset_id: 'queue:dc8eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<CST>'
+    -
+      path: 'queues/<SW-CRMAdministration>'
+      type: queue
+      asset_id: 'queue:df8eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<SW-CRMAdministration>'
+    -
+      path: 'queues/<SW-RC/P>'
+      type: queue
+      asset_id: 'queue:e28eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<SW-RC/P>'
+    -
+      path: 'queues/<SW-GDC/PA>'
+      type: queue
+      asset_id: 'queue:e68eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<SW-GDC/PA>'
+    -
+      path: 'queues/<SW-PresalesManager>'
+      type: queue
+      asset_id: 'queue:ea8eeac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<SW-PresalesManager>'
+    -
+      path: 'queues/<z_[OLD] SW-GDC/EP>'
+      type: queue
+      asset_id: 'queue:028feac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<z_[OLD] SW-GDC/EP>'
+    -
+      path: 'queues/<z_[OLD] POD - Council S>'
+      type: queue
+      asset_id: 'queue:058feac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<z_[OLD] POD - Council S>'
+    -
+      path: 'queues/<SW-AssignAccount>'
+      type: queue
+      asset_id: 'queue:088feac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<SW-AssignAccount>'
+    -
+      path: 'queues/<SW-Export>'
+      type: queue
+      asset_id: 'queue:0b8feac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<SW-Export>'
+    -
+      path: 'queues/<z_[OLD]POD - Council E>'
+      type: queue
+      asset_id: 'queue:0e8feac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<z_[OLD]POD - Council E>'
+    -
+      path: 'queues/<POD - Chargers>'
+      type: queue
+      asset_id: 'queue:138feac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<POD - Chargers>'
+    -
+      path: 'queues/<z[OLD]POD - Council O>'
+      type: queue
+      asset_id: 'queue:178feac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<z[OLD]POD - Council O>'
+    -
+      path: 'queues/<z_[OLD]POD - Council B>'
+      type: queue
+      asset_id: 'queue:1a8feac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<z_[OLD]POD - Council B>'
+    -
+      path: 'queues/<z_[OLD]POD - Council W>'
+      type: queue
+      asset_id: 'queue:1d8feac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<z_[OLD]POD - Council W>'
+    -
+      path: 'queues/<z_[OLD]POD - Council N>'
+      type: queue
+      asset_id: 'queue:208feac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<z_[OLD]POD - Council N>'
+    -
+      path: 'queues/<Canada>'
+      type: queue
+      asset_id: 'queue:238feac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<Canada>'
+    -
+      path: 'queues/<US>'
+      type: queue
+      asset_id: 'queue:268feac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<US>'
+    -
+      path: 'queues/<BizDev>'
+      type: queue
+      asset_id: 'queue:298feac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<BizDev>'
+    -
+      path: 'queues/<Advisors / ISV>'
+      type: queue
+      asset_id: 'queue:2c8feac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<Advisors / ISV>'
+    -
+      path: 'queues/<SME/BDM>'
+      type: queue
+      asset_id: 'queue:2f8feac2-3f3e-ef11-a316-6045bd619d89'
+      name: '<SME/BDM>'
+    -
+      path: 'queues/<SDRs>'
+      type: queue
+      asset_id: 'queue:c5f87aa5-879b-ef11-8a6a-6045bd61f3dd'
+      name: '<SDRs>'
+    -
+      path: 'queues/<aab5ac628320410a90cbc5a55f6b3b8b_1>'
+      type: queue
+      asset_id: 'queue:f39fd562-4439-f011-b4cc-6045bd61f90b'
+      name: '<aab5ac628320410a90cbc5a55f6b3b8b_1>'
+    -
+      path: 'queues/<MWH Cloud>'
+      type: queue
+      asset_id: 'queue:871a386c-0dca-f011-8544-7c1e5253f0d3'
+      name: '<MWH Cloud>'
+    -
+      path: 'queues/<b4c89ad2f4caf01185447ced8d3654cb_1>'
+      type: queue
+      asset_id: 'queue:b207a3da-f4ca-f011-8544-7c1e5253f8a5'
+      name: '<b4c89ad2f4caf01185447ced8d3654cb_1>'
+    -
+      path: 'queues/<167b4f324df242ddbfa32d04ba9355a9_1>'
+      type: queue
+      asset_id: 'queue:0ea767fa-48bd-f011-bbd2-7c1e5254a8e1'
+      name: '<167b4f324df242ddbfa32d04ba9355a9_1>'
+    -
+      path: 'queues/<MWH>'
+      type: queue
+      asset_id: 'queue:d2f56e17-74be-f011-bbd2-7c1e528ccd11'
+      name: '<MWH>'
+    -
+      path: 'queues/<Sherweb - UK>'
+      type: queue
+      asset_id: 'queue:71489c63-36b3-f011-bbd3-7ced8d36504f'
+      name: '<Sherweb - UK>'
+    -
+      path: 'queues/<6f87ac140fcbf01185447ced8d3654cb_1>'
+      type: queue
+      asset_id: 'queue:3f1dd617-0fcb-f011-8544-7ced8d3656aa'
+      name: '<6f87ac140fcbf01185447ced8d3654cb_1>'
+    -
+      path: 'queues/<cfd2ff947e3a4383b78ba134ed93d386_1>'
+      type: queue
+      asset_id: 'queue:47c66fa4-f9b2-f011-bbd2-7ced8d667020'
+      name: '<cfd2ff947e3a4383b78ba134ed93d386_1>'
+    -
+      path: 'queues/<cb34a52deb33456b9015e320f1302ff3_1>'
+      type: queue
+      asset_id: 'queue:f7df5533-39b5-f011-bbd2-7ced8da605cb'
+      name: '<cb34a52deb33456b9015e320f1302ff3_1>'
+    -
+      path: 'queues/<ce1004038fca4d2da4d6d273fa8427f4_1>'
+      type: queue
+      asset_id: 'queue:c9624e39-39b5-f011-bbd2-7ced8da605cb'
+      name: '<ce1004038fca4d2da4d6d273fa8427f4_1>'
+    -
+      path: slas/Case
+      type: sla
+      asset_id: 'sla:a8e517bd-a7e4-ef11-be21-0022486e1e61'
+      name: Case
+    -
+      path: slas/SLA for Cases
+      type: sla
+      asset_id: 'sla:195f628d-f25c-f011-877b-002248b2c290'
+      name: SLA for Cases
+    -
+      path: slas/6 Tier SLO for cases
+      type: sla
+      asset_id: 'sla:88a8c0d4-7883-f011-b4cc-002248b2c290'
+      name: '6 Tier SLO for cases'
+    -
+      path: omnichannel/workstreams/Live chat workstream
+      type: workstream
+      asset_id: 'workstream:bdbc5029-f12d-e911-8185-000d3a0704f0'
+      name: Live chat workstream
+    -
+      path: omnichannel/workstreams/Default Individual Voicemail Workstream
+      type: workstream
+      asset_id: 'workstream:82fca120-9497-1c80-2cad-0feb6481ddab'
+      name: Default Individual Voicemail Workstream
+    -
+      path: omnichannel/workstreams/Support Outbound
+      type: workstream
+      asset_id: 'workstream:f1748714-69a6-6d2b-3a9e-11d20b9a6e9e'
+      name: Support Outbound
+    -
+      path: 'omnichannel/workstreams/Billing Voice - French'
+      type: workstream
+      asset_id: 'workstream:10e85d64-07f1-ec67-f584-1304c2a4b323'
+      name: 'Billing Voice - French'
+    -
+      path: 'omnichannel/workstreams/Support and Sales Chat -FR'
+      type: workstream
+      asset_id: 'workstream:179dea07-66ff-2df0-b406-2a362f871288'
+      name: 'Support and Sales Chat -FR'
+    -
+      path: omnichannel/workstreams/Redirect to Main IVR
+      type: workstream
+      asset_id: 'workstream:1b52be0f-4a6d-c4be-bc85-2e3399c3d89d'
+      name: Redirect to Main IVR
+    -
+      path: omnichannel/workstreams/MWH CSP
+      type: workstream
+      asset_id: 'workstream:8e67dffd-b4ad-5027-8c70-3ae1b944ec33'
+      name: MWH CSP
+    -
+      path: omnichannel/workstreams/MWH Security
+      type: workstream
+      asset_id: 'workstream:a9dd9fb3-d5e2-00fd-a99e-3e874a9a6646'
+      name: MWH Security
+    -
+      path: omnichannel/workstreams/Voicemails
+      type: workstream
+      asset_id: 'workstream:873fd243-9a97-288f-ae7f-4cb1d73dab28'
+      name: Voicemails
+    -
+      path: 'omnichannel/workstreams/Support Voice - ENG'
+      type: workstream
+      asset_id: 'workstream:947a8722-de73-fea9-839f-53bb4bd81fc0'
+      name: 'Support Voice - ENG'
+    -
+      path: 'omnichannel/workstreams/Billing Voice - English'
+      type: workstream
+      asset_id: 'workstream:b036f673-ed3a-9f81-93d7-570c2ca4695f'
+      name: 'Billing Voice - English'
+    -
+      path: omnichannel/workstreams/Support Outbound 2
+      type: workstream
+      asset_id: 'workstream:27152769-4b5d-b86d-94b3-684d1aefa913'
+      name: Support Outbound 2
+    -
+      path: omnichannel/workstreams/Billing Outbound
+      type: workstream
+      asset_id: 'workstream:2cbe0c65-ee47-c529-d7e0-6c64cdafafe9'
+      name: Billing Outbound
+    -
+      path: omnichannel/workstreams/Sales Outbound
+      type: workstream
+      asset_id: 'workstream:26eeabca-efbf-eeb3-bf59-6d9294af1965'
+      name: Sales Outbound
+    -
+      path: 'omnichannel/workstreams/Sales Voice - English'
+      type: workstream
+      asset_id: 'workstream:ae811f9f-7c92-3b06-8db3-806c7f65177b'
+      name: 'Sales Voice - English'
+    -
+      path: omnichannel/workstreams/Default Group Voicemail Workstream
+      type: workstream
+      asset_id: 'workstream:bbe15f45-1193-9770-93b3-880375a232da'
+      name: Default Group Voicemail Workstream
+    -
+      path: omnichannel/workstreams/MWH CSP Outbound
+      type: workstream
+      asset_id: 'workstream:dc70499f-3f84-7787-8bb3-93f21cd843d1'
+      name: MWH CSP Outbound
+    -
+      path: omnichannel/workstreams/Support Outbound 3
+      type: workstream
+      asset_id: 'workstream:fb47ee7f-841b-bc8a-659a-97835cc407c5'
+      name: Support Outbound 3
+    -
+      path: omnichannel/workstreams/MWH Main IVR
+      type: workstream
+      asset_id: 'workstream:6db6ad44-98fc-eb0c-86a2-a3bdf071dc3f'
+      name: MWH Main IVR
+    -
+      path: omnichannel/workstreams/Phone call workstream
+      type: workstream
+      asset_id: 'workstream:d6f5d46f-32a8-4812-a669-a87030127965'
+      name: Phone call workstream
+    -
+      path: 'omnichannel/workstreams/Support Voice - FR'
+      type: workstream
+      asset_id: 'workstream:3e2c1259-1e4e-d7fd-9698-ab411c3cd504'
+      name: 'Support Voice - FR'
+    -
+      path: omnichannel/workstreams/UK to M365
+      type: workstream
+      asset_id: 'workstream:91941281-6ca6-2636-4ab4-b2b39b911628'
+      name: UK to M365
+    -
+      path: omnichannel/workstreams/MWH Cloud
+      type: workstream
+      asset_id: 'workstream:8d385be4-9437-2d41-7c3e-c457c46b7863'
+      name: MWH Cloud
+    -
+      path: 'omnichannel/workstreams/Support and Sales Chat -ENG'
+      type: workstream
+      asset_id: 'workstream:7735e3fc-3111-77dd-255c-cc78255ccf66'
+      name: 'Support and Sales Chat -ENG'
+    -
+      path: 'omnichannel/workstreams/Sales Voice - French'
+      type: workstream
+      asset_id: 'workstream:f6d7544f-c397-8cc6-84b4-dc9d21248a09'
+      name: 'Sales Voice - French'
+    -
+      path: omnichannel/workstreams/C2 Overflow
+      type: workstream
+      asset_id: 'workstream:b544dc50-d2a0-cbd9-702d-fee019caeafc'
+      name: C2 Overflow
+    -
+      path: omnichannel/workstreams/Microsoft Teams workstream
+      type: workstream
+      asset_id: 'workstream:28fbb780-b4bb-4e52-bcdf-ffbcddd8fd13'
+      name: Microsoft Teams workstream
+  edges:
+    -
+      evidence: plugin.registration
+      confidence: medium
+      from_asset_id: 'plugin:38bacd4b-61a6-4028-9d42-e19343472774'
+      edge_type: plugin_triggers_on_table
+      to_asset_id: 'table:account'
+    -
+      evidence: plugin.registration
+      confidence: medium
+      from_asset_id: 'plugin:a1da7847-b1bd-411d-ba0d-14fc3f831836'
+      edge_type: plugin_triggers_on_table
+      to_asset_id: 'table:account'
+    -
+      evidence: plugin.registration
+      confidence: medium
+      from_asset_id: 'plugin:115c57ce-6551-47cf-8f60-262b00fb8eec'
+      edge_type: plugin_triggers_on_table
+      to_asset_id: 'table:account'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:08fd6ead-3a19-f011-998a-7ced8d063295'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:2710bbe6-7877-f011-b4cc-7c1e52409afe'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:5376b140-5ada-ee11-904c-6045bdf9e7de'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:c6c03138-6102-ef11-9f8a-002248d5a732'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:53f99fc6-82c4-ee11-9079-000d3a09cf8e'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:9b2cc09c-bcc4-f011-bbd3-7c1e52067e9e'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:9208db01-c38b-ef11-8a6a-7c1e524071bb'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:5e0d76fd-ba26-f011-8c4e-7ced8d04f24d'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:bbd3e232-67e2-ef11-be20-7c1e52870606'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:7dac8344-11ac-ef11-a72d-6045bdf9b92b'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:2203afa2-feca-f011-8544-7ced8d061554'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:565632f5-0d85-f011-b4cc-7ced8d063295'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:1b9a722f-a343-ef11-a316-0022486df470'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:122313bc-9aa0-f011-bbd2-7ced8d061554'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:83b3c17e-2bca-f011-8544-6045bdf9f19e'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:1b21a4d6-5ada-ee11-904d-002248d5a732'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:ad8c22c4-107d-f011-b4cc-7c1e52409afe'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:a4267844-d0bf-f011-bbd3-7c1e52067e9e'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:2649d858-4bd5-f011-8544-7ced8d061554'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:c547a2b9-25bb-f011-bbd3-6045bdf9f19e'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:d50de08e-0f88-f011-b4cc-7ced8d06221f'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:88c1fdd1-a46b-ef11-a670-000d3af47275'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:a21628e1-353e-ef11-a316-6045bdcd5dde'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:cb799a23-777b-ef11-ac20-6045bdf9e493'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:1a3834b4-abdd-ee11-904c-0022486dc4eb'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:0b2432b9-e03e-ef11-a316-6045bdcd5ea7'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:abcf0f94-f9b1-ef11-a72d-7c1e52063863'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:82f50409-87c4-ee11-9079-000d3a09cf8e'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:20e5e4f3-3f57-f011-bec2-7ced8d063295'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:77b3076c-1200-f011-bae3-7c1e52409afe'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:5378e547-9077-f011-b4cc-7c1e52409afe'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:f665edbc-a4f3-ef11-be20-7c1e5206727f'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:0950b5ca-c089-f011-b4cc-6045bdcd501f'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:d3fa82ea-5606-f011-bae2-7c1e5206727f'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:4c3cce43-8ed5-ee11-904c-002248d5a732'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:b3ce4fa1-dc75-ef11-ac20-7c1e520630e3'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:0aa72c99-f571-f011-bec2-7ced8d063295'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:3d01394b-a3cb-f011-8544-7c1e52067e9e'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:577e4e2b-453a-ef11-a316-6045bdcd5e88'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:1a73f488-e479-ef11-ac20-6045bdf9e493'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:dd389c85-6d9c-ef11-8a6a-000d3af4dd88'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:227c7350-1a8f-f011-b4cb-7ced8d04e0f6'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:ae8115af-54be-f011-bbd3-7c1e52067e9e'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:incident'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:530a3f91-b481-ef11-ac21-000d3af43697'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:3c9cd4b9-1919-ef11-840a-6045bdcd283e'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:65ab024b-5c7f-f011-b4cc-7c1e52409afe'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:2c98e0f8-b81a-f011-998a-7ced8d04f24d'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:ff8ff78c-3d1c-ef11-840a-0022486d6c17'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:8ff7c609-5fd4-ee11-904c-002248d5a27a'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:12b018cd-fd93-f011-b4cc-6045bdfa0630'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:d6284b19-ef3e-ef11-a316-6045bdcd5ea7'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:df670963-ac82-f011-b4cb-7c1e5206727f'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:bf728815-6f4c-f011-877b-7c1e52409afe'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:169b861b-fa16-f011-998a-7ced8d04f24d'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:98f9cc2a-e108-f011-bae3-7ced8d04f24d'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:c4942a87-cdc0-f011-bbd3-7ced8d061554'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:90a1ff34-7b95-f011-b4cc-6045bdfa0630'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:1d01247d-8de8-ef11-be21-000d3a09d51b'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:b15a64db-b976-f011-b4cc-7ced8d063295'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:0e903c77-505a-ef11-bfe3-6045bdf9a15c'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:bcf520bb-d4ad-f011-bbd3-7c1e52067e9e'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:e67c203d-3b24-f011-8c4e-7c1e52409afe'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:2d4ec9f4-5832-ef11-8e4e-6045bdcd5e2a'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:eeb603b3-bc47-f011-877a-7c1e52409afe'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:4312b647-622e-ef11-8e4f-6045bdcd5dde'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:c6ee8cbc-1919-ef11-840a-7c1e520637cd'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:50c55434-3d1c-ef11-840b-002248d5a732'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:26f2d8ab-5e99-ee11-be37-000d3af4f266'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:6b0c257b-5941-f011-877a-7c1e52409afe'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:f3277816-22ed-ee11-a1fd-0022486dc4eb'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:2002e152-9539-ef11-a316-6045bdcd5dde'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:eb2ba9c6-fa5d-ee11-8df0-000d3a09f3d2'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:875fa9a4-521f-ef11-840a-6045bdcd283e'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:05e173a0-6274-ef11-ac20-000d3af47275'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:1f4f7206-f616-f011-998a-7c1e5206727f'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:d96a7992-b69f-f011-bbd2-7ced8d058789'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:4426e14b-a0fa-ef11-bae1-7c1e5206727f'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:76fd7f57-ba3c-f011-b4cc-7c1e52409afe'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:51c9db08-99e8-ef11-be21-000d3a09d51b'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:0cbf6af4-007d-f011-b4cc-7c1e52409afe'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:742ea0c4-d142-f011-877a-7ced8d063295'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:e9a9e743-e9d1-ef11-a72e-7c1e52063863'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:de29be5c-030f-ef11-9f89-000d3a0a0668'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:4abab8df-5206-f011-bae2-7ced8d063295'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:214517ef-83c4-ee11-9079-000d3a09cde5'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:80e8dada-3f3a-f011-b4cc-7c1e52409afe'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:da34706c-cc9e-f011-bbd2-7ced8d061554'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:ec3260dc-9343-ef11-a316-6045bdcd5ea7'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:16df325b-ce8f-f011-b4cc-6045bdfa0630'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:e5a057bf-fd48-ef11-accd-0022486df470'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:633172f5-c29e-f011-bbd2-7ced8d061554'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:416659c3-51ba-f011-bbd3-7c1e52067e9e'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:6a5560fe-157d-f011-b4cc-7ced8d04f24d'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:4b2cd07d-1f9a-ee11-be37-000d3af4f266'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:a622cb37-5595-ef11-8a69-000d3a0a3998'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:cfbc8f2d-646c-ef11-a670-6045bdf9e493'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:0137957c-7de9-ef11-be20-7c1e52870606'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:ea953a71-6ad6-ee11-904c-002248d5a789'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:5c484896-530e-ef11-9f89-000d3af4117b'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:885fa9a4-521f-ef11-840a-6045bdcd283e'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:d0f6ec6a-023b-f011-b4cc-7ced8d063295'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:98aad464-f360-f011-bec1-7c1e5206727f'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:5ba51fee-143a-ef11-a316-6045bdcd5dde'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:64e3c0bb-b194-f011-b4cc-6045bdfa0630'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:91fb6fe3-6b78-f011-b4cc-7ced8d063295'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: workflow.primaryentity
+      confidence: high
+      from_asset_id: 'flow:0f2473c5-239a-ee11-be37-000d3af4f717'
+      edge_type: flow_triggers_on_table
+      to_asset_id: 'table:none'
+    -
+      evidence: sla.objecttypecode
+      confidence: high
+      from_asset_id: 'sla:a8e517bd-a7e4-ef11-be21-0022486e1e61'
+      edge_type: sla_applies_to_table
+      to_asset_id: 'table:112'
+    -
+      evidence: sla.objecttypecode
+      confidence: high
+      from_asset_id: 'sla:195f628d-f25c-f011-877b-002248b2c290'
+      edge_type: sla_applies_to_table
+      to_asset_id: 'table:112'
+    -
+      evidence: sla.objecttypecode
+      confidence: high
+      from_asset_id: 'sla:88a8c0d4-7883-f011-b4cc-002248b2c290'
+      edge_type: sla_applies_to_table
+      to_asset_id: 'table:112'
+fingerprint:
+  fingerprint: '7924e25fa10f6cd0250326a8fa68bcb532ade6deb5cfe11847c2fd92e01db50d'
+  components_hashed: 219
+  timestamp: '2025-12-29T21:58:02.4668504Z'
+

@@ -1,0 +1,87 @@
+relationships:
+  -
+    schemaname: revops_platformsettings_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_platformsettings
+  -
+    schemaname: revops_platformsettings_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_platformsettings
+  -
+    schemaname: revops_platformsettings_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_platformsettings
+  -
+    schemaname: revops_platformsettings_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_platformsettings
+  -
+    schemaname: revops_platformsettings_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_platformsettings
+  -
+    schemaname: revops_platformsettings_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_platformsettings
+  -
+    schemaname: revops_platformsettings_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_platformsettings
+  -
+    schemaname: revops_platformsettings_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_platformsettings
+  -
+    schemaname: revops_platformsettings_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_platformsettings
+  -
+    schemaname: revops_platformsettings_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_platformsettings
+  -
+    schemaname: revops_transfer_platformsettings_revops_platformsettings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: revops_platformsettings
+  -
+    schemaname: lk_revops_platformsettings_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_platformsettings
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_platformsettings_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_platformsettings
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_platformsettings_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_platformsettings
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_platformsettings_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_platformsettings
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_platformsettings
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_platformsettings
+    referencedtablelogicalname: organization
+  -
+    schemaname: revops_platformsettings_organization_revops_cumulusorganization
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_platformsettings
+    referencedtablelogicalname: revops_cumulusorganization
+

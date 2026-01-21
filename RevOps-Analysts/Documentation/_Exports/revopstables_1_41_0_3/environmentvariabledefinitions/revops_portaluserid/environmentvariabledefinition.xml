@@ -1,0 +1,13 @@
+<environmentvariabledefinition schemaname="revops_portaluserid">
+  <description default="User ID of the portal User">
+    <label description="User ID of the portal User" languagecode="1033" />
+  </description>
+  <displayname default="Portal User ID">
+    <label description="Portal User ID" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

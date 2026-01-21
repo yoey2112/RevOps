@@ -1,0 +1,294 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: A card form for this entity.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 3
+    type_name: Card
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: GENERAL
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Quick View
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_utm_ft
+        field: revops_utm_ft
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msdynmkt_createdentity
+        field: msdynmkt_createdentity
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_utm_lt
+        field: revops_utm_lt
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_contact_formsubmissionid
+        field: revops_contact_formsubmissionid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_utmcampaign
+        field: revops_utmcampaign
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_leadformsubmissionid
+        field: revops_leadformsubmissionid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_utmmedium
+        field: revops_utmmedium
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: statecode
+        field: statecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_utmsource
+        field: revops_utmsource
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_utmcontent
+        field: revops_utmcontent
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msdynmkt_failuredescription
+        field: msdynmkt_failuredescription
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_utmkeyword
+        field: revops_utmkeyword
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msdynmkt_pageurl
+        field: msdynmkt_pageurl
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_gadsource
+        field: revops_gadsource
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msdynmkt_marketingformid
+        field: msdynmkt_marketingformid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops__gl
+        field: revops__gl
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_emailid
+        field: msdynmkt_emailid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_gclid
+        field: revops_gclid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_customerjourneyid
+        field: msdynmkt_customerjourneyid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_li_fat_id
+        field: revops_li_fat_id
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_rdt_cid
+        field: revops_rdt_cid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: owningbusinessunit
+        field: owningbusinessunit
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 27
+    type_name: Main
+

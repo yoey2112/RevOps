@@ -1,0 +1,31 @@
+views:
+  -
+    name: Account Solution Summaries
+    description: All active Account Solution Summaries
+    querytype: 8192
+    savedqueryid: '015db23e-8638-ef11-a317-000d3af43a08'
+  -
+    name: Inactive Account Solution Summaries
+    querytype: -1
+    savedqueryid: '45707f7c-8e20-4182-80dd-05ec6023f24a'
+  -
+    name: Account Solution Summary Lookup View
+    querytype: 64
+    savedqueryid: '4fd156e3-c41d-4f8b-9fcc-59ee72dfcaf5'
+  -
+    name: Active Account Solution Summaries
+    querytype: -1
+    savedqueryid: '6f83c4e8-b585-4c41-a731-877221b1306f'
+  -
+    name: Quick Find Active Account Solution Summaries
+    querytype: 4
+    savedqueryid: 'd35d1e37-3e80-41b0-9fad-a02bc5d11a56'
+  -
+    name: Account Solution Summary Associated View
+    querytype: 2
+    savedqueryid: 'd6d0a0f6-346c-412b-9c43-a2e6fd818539'
+  -
+    name: Account Solution Summary Advanced Find View
+    querytype: 1
+    savedqueryid: '4e90bb84-0081-483d-a610-d737741b8c66'
+

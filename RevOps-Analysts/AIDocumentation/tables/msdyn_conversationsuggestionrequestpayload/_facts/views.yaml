@@ -1,0 +1,31 @@
+views:
+  -
+    name: conversationsuggestionsrequestpayload
+    description: All active conversationsuggestionsrequestpayload
+    querytype: 8192
+    savedqueryid: '0ddd4e5e-a2c2-ea11-a812-000d3a192387'
+  -
+    name: Quick Find Active conversationsuggestionsrequestpayload
+    querytype: 4
+    savedqueryid: '5febf31d-68d1-4e20-bb09-2001b420233b'
+  -
+    name: conversationsuggestionrequestpayload Associated View
+    querytype: 2
+    savedqueryid: '016e771d-8210-4630-94fb-2bd56d67ab98'
+  -
+    name: conversationsuggestionrequestpayload Advanced Find View
+    querytype: 1
+    savedqueryid: 'e842497d-e2e4-4db1-8d9b-3519e08bad38'
+  -
+    name: conversationsuggestionrequestpayload Lookup View
+    querytype: 64
+    savedqueryid: '60a42737-dbee-4126-bc59-800118f0fbf1'
+  -
+    name: Active conversationsuggestionsrequestpayload
+    querytype: -1
+    savedqueryid: '7e318afa-8bc1-4127-8c7b-953c58df6baa'
+  -
+    name: Inactive conversationsuggestionsrequestpayload
+    querytype: -1
+    savedqueryid: '43d13be7-19e0-4500-add4-a6f3c9a28b3a'
+

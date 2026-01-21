@@ -1,0 +1,97 @@
+relationships:
+  -
+    schemaname: revops_solutiondetails_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_solutiondetails
+  -
+    schemaname: revops_solutiondetails_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_solutiondetails
+  -
+    schemaname: revops_solutiondetails_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_solutiondetails
+  -
+    schemaname: revops_solutiondetails_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_solutiondetails
+  -
+    schemaname: revops_solutiondetails_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_solutiondetails
+  -
+    schemaname: revops_solutiondetails_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_solutiondetails
+  -
+    schemaname: revops_solutiondetails_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_solutiondetails
+  -
+    schemaname: revops_solutiondetails_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_solutiondetails
+  -
+    schemaname: revops_solutiondetails_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_solutiondetails
+  -
+    schemaname: revops_solutiondetails_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_solutiondetails
+  -
+    schemaname: lk_revops_solutiondetails_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutiondetails
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_solutiondetails_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutiondetails
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_solutiondetails_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutiondetails
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_solutiondetails_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutiondetails
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_revops_solutiondetails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutiondetails
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_revops_solutiondetails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutiondetails
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_revops_solutiondetails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutiondetails
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_revops_solutiondetails
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutiondetails
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: revops_solutiondetails_cumulusaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutiondetails
+    referencedtablelogicalname: revops_cumulusaccount
+

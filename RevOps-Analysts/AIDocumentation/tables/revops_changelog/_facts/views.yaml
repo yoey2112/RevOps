@@ -1,0 +1,31 @@
+views:
+  -
+    name: Change Logs
+    description: All active Change Logs
+    querytype: 8192
+    savedqueryid: '4eb4c701-305b-ef11-bfe3-000d3af43a08'
+  -
+    name: Change Log Lookup View
+    querytype: 64
+    savedqueryid: 'ebff8b6d-5665-4cad-a958-1a44974578c9'
+  -
+    name: Quick Find Active Change Logs
+    querytype: 4
+    savedqueryid: '0d9ffbaf-bebd-48ad-aebf-2db576d581b3'
+  -
+    name: Change Log Advanced Find View
+    querytype: 1
+    savedqueryid: 'd03b1713-e1de-450a-a62d-600f53e66f66'
+  -
+    name: Change Log Associated View
+    querytype: 2
+    savedqueryid: '37723694-6b11-42f0-9c0e-698195c21587'
+  -
+    name: Change Logs
+    querytype: -1
+    savedqueryid: 'fb485aaf-b54f-4d18-bb6f-8440be09a7f0'
+  -
+    name: Inactive Change Logs
+    querytype: -1
+    savedqueryid: '23a71ee5-0800-4665-ab53-d8522729898b'
+

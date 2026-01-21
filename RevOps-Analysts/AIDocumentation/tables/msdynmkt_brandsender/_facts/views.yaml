@@ -1,0 +1,36 @@
+views:
+  -
+    name: My Senders
+    description: Active Senders owned by me
+    querytype: 8192
+    savedqueryid: 'fcca3b8e-a8da-ec11-bb3d-000d3a3436b6'
+  -
+    name: Active Senders with From name
+    description: Active Senders with From name and email information
+    querytype: -1
+    savedqueryid: '1b5d55d7-cde8-ec11-bb3e-000d3a58b67a'
+  -
+    name: Sender Associated View
+    querytype: 2
+    savedqueryid: 'e2fa6128-a4a9-4c39-94d7-4756a219850d'
+  -
+    name: Quick Find Active Senders
+    querytype: 4
+    savedqueryid: 'aea642e9-ee1f-45d3-9df4-54af04382477'
+  -
+    name: Sender Lookup View
+    querytype: 64
+    savedqueryid: '39f024e9-0a6b-433e-955b-5f48caf3c444'
+  -
+    name: Sender Advanced Find View
+    querytype: 1
+    savedqueryid: 'ece8268b-1aa5-4f37-96c9-76ea6237a0c2'
+  -
+    name: Inactive Senders
+    querytype: -1
+    savedqueryid: '76bc44ef-394a-4abc-97be-77a1a54f3e8f'
+  -
+    name: Active Senders
+    querytype: -1
+    savedqueryid: '84fb81ff-2159-44de-818e-fa988f48b1ec'
+

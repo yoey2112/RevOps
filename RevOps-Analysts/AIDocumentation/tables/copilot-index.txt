@@ -1,0 +1,112 @@
+TITLE
+=====
+RevOps - Tables Component Index
+
+PURPOSE
+-------
+Quick reference index of all Tables components in this folder.
+
+COMPONENTS
+----------
+- account : Table: account
+- activitypointer : Table: activitypointer
+- annotation : Table: annotation
+- appointment : Table: appointment
+- campaign : Table: campaign
+- category : Table: category
+- competitor : Table: competitor
+- contact : Table: contact
+- email : Table: email
+- goal : Table: goal
+- incident : Table: incident
+- incidentresolution : Table: incidentresolution
+- knowledgearticle : Table: knowledgearticle
+- lead : Table: lead
+- list : Table: list
+- msdyn_conversationsuggestionrequestpayload : Table: msdyn_conversationsuggestionrequestpayload
+- msdyn_customerfeedbacksurveyresponse : Table: msdyn_customerfeedbacksurveyresponse
+- msdyn_operatinghour : Table: msdyn_operatinghour
+- msdyn_project : Table: msdyn_project
+- msdynmkt_brandsender : Table: msdynmkt_brandsender
+- msdynmkt_email : Table: msdynmkt_email
+- msdynmkt_eventmetadata : Table: msdynmkt_eventmetadata
+- msdynmkt_fragment : Table: msdynmkt_fragment
+- msdynmkt_journey : Table: msdynmkt_journey
+- msdynmkt_marketingform : Table: msdynmkt_marketingform
+- msdynmkt_marketingformsubmission : Table: msdynmkt_marketingformsubmission
+- msdynmkt_segment : Table: msdynmkt_segment
+- msevtmgt_checkin : Table: msevtmgt_checkin
+- msevtmgt_event : Table: msevtmgt_event
+- msevtmgt_eventregistration : Table: msevtmgt_eventregistration
+- msevtmgt_session : Table: msevtmgt_session
+- msevtmgt_sessionregistration : Table: msevtmgt_sessionregistration
+- msfp_surveyresponse : Table: msfp_surveyresponse
+- opportunity : Table: opportunity
+- opportunityclose : Table: opportunityclose
+- phonecall : Table: phonecall
+- processsession : Table: processsession
+- product : Table: product
+- queue : Table: queue
+- revops_accountpotentialtechstack : Table: revops_accountpotentialtechstack
+- revops_accountproductsummary : Table: revops_accountproductsummary
+- revops_accountreassignment : Table: revops_accountreassignment
+- revops_accountsoftwaretool : Table: revops_accountsoftwaretool
+- revops_accountsolutionsummary : Table: revops_accountsolutionsummary
+- revops_audienceimport : Table: revops_audienceimport
+- revops_businessreview : Table: revops_businessreview
+- revops_cadencecall : Table: revops_cadencecall
+- revops_changelog : Table: revops_changelog
+- revops_churn : Table: revops_churn
+- revops_competitortransferid : Table: revops_competitortransferid
+- revops_country : Table: revops_country
+- revops_cumulusaccount : Table: revops_cumulusaccount
+- revops_cumulusorganization : Table: revops_cumulusorganization
+- revops_cumulussignup : Table: revops_cumulussignup
+- revops_cumulususer : Table: revops_cumulususer
+- revops_demo : Table: revops_demo
+- revops_domain : Table: revops_domain
+- revops_gicsmapping : Table: revops_gicsmapping
+- revops_inpersonmeeting : Table: revops_inpersonmeeting
+- revops_lateralmove : Table: revops_lateralmove
+- revops_mwhaccount : Table: revops_mwhaccount
+- revops_onboardingcall : Table: revops_onboardingcall
+- revops_opportunitiessnapshots : Table: revops_opportunitiessnapshots
+- revops_opportunitysolution : Table: revops_opportunitysolution
+- revops_partnerinvestment : Table: revops_partnerinvestment
+- revops_platformsettings : Table: revops_platformsettings
+- revops_practice : Table: revops_practice
+- revops_pricingrequest : Table: revops_pricingrequest
+- revops_productsummary : Table: revops_productsummary
+- revops_psaintegration : Table: revops_psaintegration
+- revops_relatedsolutionssnapshots : Table: revops_relatedsolutionssnapshots
+- revops_service : Table: revops_service
+- revops_sherwebopportunitybpf : Table: revops_sherwebopportunitybpf
+- revops_sherwebsalesbpf : Table: revops_sherwebsalesbpf
+- revops_smeengagement : Table: revops_smeengagement
+- revops_solution : Table: revops_solution
+- revops_solutioncategory : Table: revops_solutioncategory
+- revops_solutiondetails : Table: revops_solutiondetails
+- revops_solutionprovider : Table: revops_solutionprovider
+- revops_solutionsummary : Table: revops_solutionsummary
+- revops_stateorprovince : Table: revops_stateorprovince
+- revops_subsolution : Table: revops_subsolution
+- revops_techstacksnapshots : Table: revops_techstacksnapshots
+- revops_territoryregion : Table: revops_territoryregion
+- revops_transfer : Table: revops_transfer
+- revops_utmlink : Table: revops_utmlink
+- syncerror : Table: syncerror
+- systemuser : Table: systemuser
+- task : Table: task
+- team : Table: team
+- template : Table: template
+- territory : Table: territory
+- transactioncurrency : Table: transactioncurrency
+
+HOW TO USE
+----------
+Each component has its own subfolder containing:
+- README.md and README.txt for overview
+- _facts/*.yaml for structured metadata
+- Additional documentation files as needed
+
+For detailed information about a specific component, navigate to its subfolder.

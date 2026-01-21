@@ -1,0 +1,107 @@
+relationships:
+  -
+    schemaname: msdynmkt_brandsender_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: msdynmkt_brandsender
+  -
+    schemaname: msdynmkt_brandsender_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdynmkt_brandsender
+  -
+    schemaname: msdynmkt_brandsender_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdynmkt_brandsender
+  -
+    schemaname: msdynmkt_brandsender_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: msdynmkt_brandsender
+  -
+    schemaname: msdynmkt_brandsender_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: msdynmkt_brandsender
+  -
+    schemaname: msdynmkt_brandsender_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: msdynmkt_brandsender
+  -
+    schemaname: msdynmkt_brandsender_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: msdynmkt_brandsender
+  -
+    schemaname: msdynmkt_brandsender_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: msdynmkt_brandsender
+  -
+    schemaname: msdynmkt_brandsender_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: msdynmkt_brandsender
+  -
+    schemaname: msdynmkt_brandsender_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: msdynmkt_brandsender
+  -
+    schemaname: msdynmkt_msdynmkt_brandsender_msdynmkt_email_sender
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: msdynmkt_brandsender
+  -
+    schemaname: lk_msdynmkt_brandsender_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_brandsender
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_brandsender_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_brandsender
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_brandsender_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_brandsender
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_brandsender_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_brandsender
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_msdynmkt_brandsender
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_brandsender
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_msdynmkt_brandsender
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_brandsender
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_msdynmkt_brandsender
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_brandsender
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_msdynmkt_brandsender
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_brandsender
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: msdynmkt_msdynmkt_brandprofile_brandsender
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_brandsender
+    referencedtablelogicalname: msdynmkt_brandprofile
+  -
+    schemaname: revops_msdynmkt_brandsender_parentuserid_systemu
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_brandsender
+    referencedtablelogicalname: systemuser
+

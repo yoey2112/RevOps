@@ -1,0 +1,9 @@
+schema_version: 1
+logical_name: campaign
+schema_name: Campaign
+ownership_type: UserOwned
+is_custom: false
+is_audit_enabled: ''
+is_activity: false
+display_name: ''
+

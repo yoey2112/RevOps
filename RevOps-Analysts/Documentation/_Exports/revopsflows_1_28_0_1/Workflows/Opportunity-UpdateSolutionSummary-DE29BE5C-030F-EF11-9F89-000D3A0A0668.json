@@ -1,0 +1,153 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedcommondataserviceforapps_84bd5"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "14504136-f197-4f06-bb6e-9ced73263785"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "opportunity",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "revops_updatesolutionsummary",
+              "subscriptionRequest/filterexpression": "revops_updatesolutionsummary eq true"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Concat_Solution": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "1a7b6417-b3ef-404e-8880-38cd9d6f0de8"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Concat_Solution",
+                "type": "array"
+              }
+            ]
+          }
+        },
+        "List_All_Opportunity_Solutions_with_Name": {
+          "runAfter": {
+            "Concat_Solution": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9ab1764a-1ddb-498a-a1d6-07c47ae4ece1"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "revops_opportunitysolutions",
+              "$filter": "_revops_opportunity_value eq '@{triggerOutputs()?['body/opportunityid']}' and revops_name ne null"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Concatenate_Values": {
+          "foreach": "@outputs('List_All_Opportunity_Solutions_with_Name')?['body/value']",
+          "actions": {
+            "Append_to_array_variable": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "6fdcf619-9e27-4389-a901-67fc41d8ea02"
+              },
+              "type": "AppendToArrayVariable",
+              "inputs": {
+                "name": "Concat_Solution",
+                "value": "@items('Concatenate_Values')?['revops_name']"
+              }
+            }
+          },
+          "runAfter": {
+            "List_All_Opportunity_Solutions_with_Name": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "82ead9f8-8e32-4096-9b76-4238f8ea1020"
+          },
+          "type": "Foreach"
+        },
+        "Apply_to_each": {
+          "foreach": "@outputs('List_All_Opportunity_Solutions_with_Name')?['body/value']",
+          "actions": {
+            "Update_Opportunity": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "0f708cfa-1b1f-4b85-9484-c607e20af918"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_1",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "opportunities",
+                  "recordId": "@items('Apply_to_each')?['_revops_opportunity_value']",
+                  "item/revops_solutionssummary": "@replace(concat(variables('Concat_Solution'), ', '), '\"', ' ')"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Concatenate_Values": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "69d31197-7901-4968-abe3-2c03282c150f"
+          },
+          "type": "Foreach"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

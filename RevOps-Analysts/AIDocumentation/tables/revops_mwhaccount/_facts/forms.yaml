@@ -1,0 +1,242 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: A card form for this entity.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 4
+    type_name: Card
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Main
+  -
+    name: MWH Account
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: General
+        tab: ''
+        visible: true
+      -
+        label: New Section
+        name: null_section_3
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_account
+        field: revops_account
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: General
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_mrr
+        field: revops_mrr
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_domain
+        field: revops_domain
+      -
+        section: General
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: General
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_mwhaccountid2
+        field: revops_mwhaccountid2
+      -
+        section: General
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_mpnid
+        field: revops_mpnid
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: null_section_3
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_phone
+        field: revops_phone
+      -
+        section: null_section_3
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_city
+        field: revops_city
+      -
+        section: null_section_3
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_country
+        field: revops_country
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 12
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: GENERAL
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick View
+

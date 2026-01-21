@@ -1,0 +1,31 @@
+views:
+  -
+    name: Inactive Platform Settings
+    querytype: -1
+    savedqueryid: '7d46a085-73dd-473d-808d-14eda4c9c2d9'
+  -
+    name: Quick Find Active Platform Settings
+    querytype: 4
+    savedqueryid: '813edea2-8d22-47fb-81f4-28208cbd2dd4'
+  -
+    name: Platform Settings
+    description: All active Platform Settings
+    querytype: 8192
+    savedqueryid: '9fc12f96-6ea0-ef11-a72e-7c1e524082d9'
+  -
+    name: Platform Settings Lookup View
+    querytype: 64
+    savedqueryid: 'b53e8d6a-1693-4d25-9429-7e10231b20ea'
+  -
+    name: Platform Settings Advanced Find View
+    querytype: 1
+    savedqueryid: '858642c6-20ff-4266-978d-bea87f25ac73'
+  -
+    name: Active Platform Settings
+    querytype: -1
+    savedqueryid: 'ed8c8bc7-338b-45d5-be68-bef1bd2d7fa2'
+  -
+    name: Platform Settings Associated View
+    querytype: 2
+    savedqueryid: '3beee5e1-b78f-45fd-8a7e-fc4035e73431'
+

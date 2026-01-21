@@ -1,0 +1,54 @@
+## Build outputs
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+
+## VS user settings
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+
+## NuGet
+packages/
+*.nupkg
+# keep packages.config tracked but ignore downloaded packages
+!packages.config
+
+## MSBuild
+*.cache
+*.mdb
+*.pdb
+*.ilk
+*.obj
+*.tmp
+*.log
+
+## Test results
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+
+## Resharper / Rider / CodeRush
+_ReSharper*/
+*.DotSettings.user
+.idea/
+
+## OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## Publish/Web
+*.Publish.xml
+*.pubxml
+*.pubxml.user
+PublishProfiles/
+
+## Others
+*.swp
+*.bak
+*.orig

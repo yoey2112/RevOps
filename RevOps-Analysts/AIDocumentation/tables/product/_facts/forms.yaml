@@ -1,0 +1,1152 @@
+forms:
+  -
+    name: PDS Product
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Product Properties
+        name: product information
+        tab: product_details
+        visible: true
+      -
+        label: ''
+        name: costs
+        tab: product_details
+        visible: true
+      -
+        label: ''
+        name: productassocaition_items_section
+        tab: productassocaition_items
+        visible: false
+      -
+        label: ''
+        name: DynamicProperties
+        tab: productassocaition_items
+        visible: true
+      -
+        label: ''
+        name: product_dynamic_properties_section
+        tab: product_dynamic_properties
+        visible: true
+      -
+        label: ''
+        name: price_list_items_section
+        tab: price_list_items
+        visible: false
+      -
+        label: Pricing
+        name: msdynsales_pricing_information
+        tab: price_list_items
+        visible: false
+      -
+        label: ''
+        name: productsubstitute_items_section
+        tab: price_list_items
+        visible: false
+      -
+        label: Knowledge Section
+        name: knowledgesection
+        tab: price_list_items
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: notes
+        visible: true
+    fields:
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: productnumber
+        field: productnumber
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: editableParentControl
+        field: parentproductid
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: parentproductid
+        field: parentproductid
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: defaultuomscheduleid
+        field: defaultuomscheduleid
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: defaultuomid
+        field: defaultuomid
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: pricelevelid
+        field: pricelevelid
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: quantitydecimal
+        field: quantitydecimal
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: msdyn_alsoknownas
+        field: msdyn_alsoknownas
+      -
+        section: msdynsales_pricing_information
+        tab: price_list_items
+        disabled: false
+        visible: true
+        control_id: currentcost
+        field: currentcost
+      -
+        section: msdynsales_pricing_information
+        tab: price_list_items
+        disabled: false
+        visible: true
+        control_id: standardcost
+        field: standardcost
+      -
+        section: msdynsales_pricing_information
+        tab: price_list_items
+        disabled: false
+        visible: true
+        control_id: price
+        field: price
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statecode
+    description: A form for creating/editing a PDS Product.
+    tabs:
+      -
+        label: Summary
+        name: product_details
+        visible: true
+        expanded: true
+      -
+        label: Bundle Products
+        name: productassocaition_items
+        visible: false
+        expanded: true
+      -
+        label: Product Properties
+        name: product_dynamic_properties
+        visible: true
+        expanded: true
+      -
+        label: Additional Details
+        name: price_list_items
+        visible: false
+        expanded: true
+      -
+        label: Notes
+        name: notes
+        visible: false
+        expanded: true
+    field_count: 14
+    type_name: Main
+  -
+    name: Product Quick Create
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: ''
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: ''
+        name: tab_1_column_2_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: ''
+        name: tab_1_column_3_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: productnumber
+        field: productnumber
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: parentproductid
+        field: parentproductid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: validfromdate
+        field: validfromdate
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: validtodate
+        field: validtodate
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: defaultuomscheduleid
+        field: defaultuomscheduleid
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: defaultuomid
+        field: defaultuomid
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: quantitydecimal
+        field: quantitydecimal
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+    description: Default quick create form for product.
+    tabs:
+      -
+        label: ''
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 10
+    type_name: Quick Create
+  -
+    name: Project Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Product Properties
+        name: product information
+        tab: product_details
+        visible: true
+      -
+        label: ''
+        name: costs
+        tab: product_details
+        visible: true
+      -
+        label: ''
+        name: productassocaition_items_section
+        tab: productassocaition_items
+        visible: false
+      -
+        label: ''
+        name: DynamicProperties
+        tab: productassocaition_items
+        visible: true
+      -
+        label: Properties
+        name: product_dynamic_properties_section
+        tab: product_dynamic_properties
+        visible: true
+      -
+        label: Quantity Factors
+        name: product_quantity_factors_section
+        tab: product_dynamic_properties
+        visible: true
+      -
+        label: Quantity Factors
+        name: tab_6_section_1
+        tab: product_quantity_factors
+        visible: false
+      -
+        label: Section
+        name: tab_6_section_2
+        tab: product_quantity_factors
+        visible: false
+      -
+        label: ''
+        name: price_list_items_section
+        tab: price_list_items
+        visible: false
+      -
+        label: ''
+        name: productsubstitute_items_section
+        tab: price_list_items
+        visible: false
+      -
+        label: Notes
+        name: notes
+        tab: notes
+        visible: true
+    fields:
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: productnumber
+        field: productnumber
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: editableParentControl
+        field: parentproductid
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: parentproductid
+        field: parentproductid
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: validfromdate
+        field: validfromdate
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: validtodate
+        field: validtodate
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: defaultuomscheduleid
+        field: defaultuomscheduleid
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: defaultuomid
+        field: defaultuomid
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: pricelevelid
+        field: pricelevelid
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: quantitydecimal
+        field: quantitydecimal
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: price
+        field: price
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: standardcost
+        field: standardcost
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: currentcost
+        field: currentcost
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statecode
+    description: Shows the product details page for Project Service.
+    tabs:
+      -
+        label: Summary
+        name: product_details
+        visible: true
+        expanded: true
+      -
+        label: Bundle Products
+        name: productassocaition_items
+        visible: false
+        expanded: true
+      -
+        label: Product Properties
+        name: product_dynamic_properties
+        visible: true
+        expanded: true
+      -
+        label: Quantity Factors
+        name: product_quantity_factors
+        visible: false
+        expanded: false
+      -
+        label: Additional Details
+        name: price_list_items
+        visible: false
+        expanded: true
+      -
+        label: Notes
+        name: notes
+        visible: false
+        expanded: true
+    field_count: 16
+    type_name: Main
+  -
+    name: Product
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Product Properties
+        name: product information
+        tab: product_details
+        visible: true
+      -
+        label: ''
+        name: costs
+        tab: product_details
+        visible: true
+      -
+        label: ''
+        name: productassocaition_items_section
+        tab: productassocaition_items
+        visible: false
+      -
+        label: ''
+        name: DynamicProperties
+        tab: productassocaition_items
+        visible: true
+      -
+        label: ''
+        name: product_dynamic_properties_section
+        tab: product_dynamic_properties
+        visible: true
+      -
+        label: ''
+        name: price_list_items_section
+        tab: price_list_items
+        visible: false
+      -
+        label: Pricing
+        name: msdynsales_pricing_information
+        tab: price_list_items
+        visible: false
+      -
+        label: ''
+        name: productsubstitute_items_section
+        tab: price_list_items
+        visible: false
+      -
+        label: Knowledge Section
+        name: knowledgesection
+        tab: price_list_items
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: notes
+        visible: true
+    fields:
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: productnumber
+        field: productnumber
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: revops_sku
+        field: revops_sku
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: editableParentControl
+        field: parentproductid
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: parentproductid
+        field: parentproductid
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: revops_solution
+        field: revops_solution
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: revops_solutiondiscount
+        field: revops_solutiondiscount
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: revops_billingcycle
+        field: revops_billingcycle
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: validfromdate
+        field: validfromdate
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: validtodate
+        field: validtodate
+      -
+        section: product information
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: defaultuomscheduleid
+        field: defaultuomscheduleid
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: defaultuomid
+        field: defaultuomid
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: pricelevelid
+        field: pricelevelid
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: quantitydecimal
+        field: quantitydecimal
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: costs
+        tab: product_details
+        disabled: false
+        visible: true
+        control_id: revops_integrationsource
+        field: revops_integrationsource
+      -
+        section: msdynsales_pricing_information
+        tab: price_list_items
+        disabled: false
+        visible: true
+        control_id: currentcost
+        field: currentcost
+      -
+        section: msdynsales_pricing_information
+        tab: price_list_items
+        disabled: false
+        visible: true
+        control_id: standardcost
+        field: standardcost
+      -
+        section: msdynsales_pricing_information
+        tab: price_list_items
+        disabled: false
+        visible: true
+        control_id: price
+        field: price
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statecode
+    description: A form for this refreshed entity.
+    tabs:
+      -
+        label: Summary
+        name: product_details
+        visible: true
+        expanded: true
+      -
+        label: Bundle Products
+        name: productassocaition_items
+        visible: false
+        expanded: true
+      -
+        label: Product Properties
+        name: product_dynamic_properties
+        visible: true
+        expanded: true
+      -
+        label: Additional Details
+        name: price_list_items
+        visible: false
+        expanded: true
+      -
+        label: Notes
+        name: notes
+        visible: false
+        expanded: true
+    field_count: 21
+    type_name: Main
+  -
+    name: Product family Quick Create
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: ''
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: ''
+        name: tab_1_column_2_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: productnumber
+        field: productnumber
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: parentproductid
+        field: parentproductid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: defaultuomscheduleid
+        field: defaultuomscheduleid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: defaultuomid
+        field: defaultuomid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: quantitydecimal
+        field: quantitydecimal
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_alsoknownas
+        field: msdyn_alsoknownas
+    description: Default quick create form for PDS Product family.
+    tabs:
+      -
+        label: ''
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 8
+    type_name: Quick Create
+  -
+    name: Information
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: Product Information
+        name: product information
+        tab: general
+        visible: true
+      -
+        label: Costs
+        name: costs
+        tab: general
+        visible: true
+      -
+        label: Description Information
+        name: description information
+        tab: description
+        visible: true
+      -
+        label: Description
+        name: description
+        tab: description
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: notes
+        visible: true
+    fields:
+      -
+        section: product information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: productnumber
+        field: productnumber
+      -
+        section: product information
+        tab: general
+        disabled: true
+        visible: true
+        control_id: revops_sku
+        field: revops_sku
+      -
+        section: product information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: product information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subjectid
+        field: subjectid
+      -
+        section: product information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: producttypecode
+        field: producttypecode
+      -
+        section: product information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: defaultuomscheduleid
+        field: defaultuomscheduleid
+      -
+        section: product information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: quantityonhand
+        field: quantityonhand
+      -
+        section: product information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: defaultuomid
+        field: defaultuomid
+      -
+        section: product information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: producturl
+        field: producturl
+      -
+        section: product information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: costs
+        tab: general
+        disabled: false
+        visible: true
+        control_id: pricelevelid
+        field: pricelevelid
+      -
+        section: costs
+        tab: general
+        disabled: false
+        visible: true
+        control_id: price
+        field: price
+      -
+        section: costs
+        tab: general
+        disabled: false
+        visible: true
+        control_id: quantitydecimal
+        field: quantitydecimal
+      -
+        section: costs
+        tab: general
+        disabled: false
+        visible: true
+        control_id: standardcost
+        field: standardcost
+      -
+        section: costs
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_solutiondiscount
+        field: revops_solutiondiscount
+      -
+        section: costs
+        tab: general
+        disabled: false
+        visible: true
+        control_id: currentcost
+        field: currentcost
+      -
+        section: costs
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_billingcycle
+        field: revops_billingcycle
+      -
+        section: description information
+        tab: description
+        disabled: false
+        visible: true
+        control_id: vendorname
+        field: vendorname
+      -
+        section: description information
+        tab: description
+        disabled: false
+        visible: true
+        control_id: stockweight
+        field: stockweight
+      -
+        section: description information
+        tab: description
+        disabled: false
+        visible: true
+        control_id: vendorpartnumber
+        field: vendorpartnumber
+      -
+        section: description information
+        tab: description
+        disabled: false
+        visible: true
+        control_id: stockvolume
+        field: stockvolume
+      -
+        section: description information
+        tab: description
+        disabled: false
+        visible: true
+        control_id: suppliername
+        field: suppliername
+      -
+        section: description information
+        tab: description
+        disabled: false
+        visible: true
+        control_id: vendorid
+        field: vendorid
+      -
+        section: description
+        tab: description
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Description
+        name: description
+        visible: true
+        expanded: true
+      -
+        label: Notes
+        name: notes
+        visible: true
+        expanded: false
+    field_count: 24
+    type_name: Main
+  -
+    name: Product family Quick Create
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: ''
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: ''
+        name: tab_1_column_2_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: productnumber
+        field: productnumber
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: parentproductid
+        field: parentproductid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: defaultuomscheduleid
+        field: defaultuomscheduleid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: defaultuomid
+        field: defaultuomid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: quantitydecimal
+        field: quantitydecimal
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: validfromdate
+        field: validfromdate
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: validtodate
+        field: validtodate
+    description: Default quick create form for Product family.
+    tabs:
+      -
+        label: ''
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 8
+    type_name: Quick Create
+  -
+    name: Product Hierarchy Tile Form
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Information
+        name: user tile
+        tab: hierarchy
+        visible: true
+    fields:
+      -
+        section: user tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: productnumber
+        field: productnumber
+      -
+        section: user tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: productstructure
+        field: productstructure
+      -
+        section: user tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: defaultuomid
+        field: defaultuomid
+      -
+        section: user tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+    description: This is the product hierarchy definition.
+    tabs:
+      -
+        label: Hierarchy
+        name: hierarchy
+        visible: true
+        expanded: true
+    field_count: 4
+    type_name: Quick View
+

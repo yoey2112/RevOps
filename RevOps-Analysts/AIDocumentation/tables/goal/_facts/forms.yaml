@@ -1,0 +1,426 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Information
+        name: information
+        tab: general
+        visible: true
+      -
+        label: Time Period
+        name: '{3a5c2dc2-2ee7-848c-83eb-a2b1e4d1c703}'
+        tab: '{349a439d-6ed5-bae8-7c7d-3721869367ca}'
+        visible: true
+      -
+        label: Money
+        name: '{48707907-e91e-1590-1cd1-a9ddb71476d7}'
+        tab: ''
+        visible: true
+      -
+        label: Numbers
+        name: '{adadc153-6be6-448b-7b31-64c39637829b}'
+        tab: ''
+        visible: true
+      -
+        label: Decimal
+        name: '{a7c72450-609e-c738-4557-781b2088c473}'
+        tab: ''
+        visible: true
+      -
+        label: Child Goals
+        name: '{89ae1e95-1ccc-8646-eece-5de9e57b9743}'
+        tab: ''
+        visible: true
+      -
+        label: Money
+        name: '{1d7eac24-348a-75b1-8a7b-c1dbbc2d7930}'
+        tab: ''
+        visible: true
+      -
+        label: Numbers
+        name: '{7c93d1dd-bcb6-8994-06ba-b913cab6bdb4}'
+        tab: ''
+        visible: true
+      -
+        label: Decimal
+        name: '{86aa59b3-d012-bd70-488b-6d2767ea858d}'
+        tab: ''
+        visible: true
+      -
+        label: Rollup additional information
+        name: ''
+        tab: ''
+        visible: true
+      -
+        label: Define criteria for this goal. The criteria will be used for rolling up the Actuals data against the goal.
+        name: ''
+        tab: ''
+        visible: true
+      -
+        label: 'Additional Rollup Criteria - Rollup Queries'
+        name: '{16152234-8617-bee9-5eeb-069b4472173d}'
+        tab: ''
+        visible: true
+      -
+        label: 'Additional Rollup Criteria - Rollup Queries'
+        name: '{649d4e80-5014-8c90-2abe-c39b137dc761}'
+        tab: ''
+        visible: true
+      -
+        label: 'Additional Rollup Criteria - Rollup Queries'
+        name: '{009e75c7-d9c6-e460-98b7-4278be07024b}'
+        tab: ''
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: notes
+        visible: true
+      -
+        label: Participating Records
+        name: '{8ECDE6CB-085B-46D1-97A9-E357C5799076}'
+        tab: '{242FCD83-2A50-478E-922A-F4641920DDE0}'
+        visible: true
+    fields:
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: parentgoalid
+        field: parentgoalid
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: metricid
+        field: metricid
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: goalownerid
+        field: goalownerid
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: '{3a5c2dc2-2ee7-848c-83eb-a2b1e4d1c703}'
+        tab: '{349a439d-6ed5-bae8-7c7d-3721869367ca}'
+        disabled: false
+        visible: true
+        control_id: isfiscalperiodgoal
+        field: isfiscalperiodgoal
+      -
+        section: '{3a5c2dc2-2ee7-848c-83eb-a2b1e4d1c703}'
+        tab: '{349a439d-6ed5-bae8-7c7d-3721869367ca}'
+        disabled: false
+        visible: true
+        control_id: fiscalperiod
+        field: fiscalperiod
+      -
+        section: '{3a5c2dc2-2ee7-848c-83eb-a2b1e4d1c703}'
+        tab: '{349a439d-6ed5-bae8-7c7d-3721869367ca}'
+        disabled: false
+        visible: true
+        control_id: fiscalyear
+        field: fiscalyear
+      -
+        section: '{3a5c2dc2-2ee7-848c-83eb-a2b1e4d1c703}'
+        tab: '{349a439d-6ed5-bae8-7c7d-3721869367ca}'
+        disabled: false
+        visible: true
+        control_id: goalstartdate
+        field: goalstartdate
+      -
+        section: '{3a5c2dc2-2ee7-848c-83eb-a2b1e4d1c703}'
+        tab: '{349a439d-6ed5-bae8-7c7d-3721869367ca}'
+        disabled: false
+        visible: true
+        control_id: goalenddate
+        field: goalenddate
+      -
+        section: '{48707907-e91e-1590-1cd1-a9ddb71476d7}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: targetmoney
+        field: targetmoney
+      -
+        section: '{48707907-e91e-1590-1cd1-a9ddb71476d7}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: stretchtargetmoney
+        field: stretchtargetmoney
+      -
+        section: '{adadc153-6be6-448b-7b31-64c39637829b}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: targetinteger
+        field: targetinteger
+      -
+        section: '{adadc153-6be6-448b-7b31-64c39637829b}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: stretchtargetinteger
+        field: stretchtargetinteger
+      -
+        section: '{a7c72450-609e-c738-4557-781b2088c473}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: targetdecimal
+        field: targetdecimal
+      -
+        section: '{a7c72450-609e-c738-4557-781b2088c473}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: stretchtargetdecimal
+        field: stretchtargetdecimal
+      -
+        section: '{1d7eac24-348a-75b1-8a7b-c1dbbc2d7930}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: actualmoney
+        field: actualmoney
+      -
+        section: '{1d7eac24-348a-75b1-8a7b-c1dbbc2d7930}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: percentage
+        field: percentage
+      -
+        section: '{1d7eac24-348a-75b1-8a7b-c1dbbc2d7930}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: inprogressmoney
+        field: inprogressmoney
+      -
+        section: '{1d7eac24-348a-75b1-8a7b-c1dbbc2d7930}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: customrollupfieldmoney
+        field: customrollupfieldmoney
+      -
+        section: '{7c93d1dd-bcb6-8994-06ba-b913cab6bdb4}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: actualinteger
+        field: actualinteger
+      -
+        section: '{7c93d1dd-bcb6-8994-06ba-b913cab6bdb4}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: percentage
+        field: percentage
+      -
+        section: '{7c93d1dd-bcb6-8994-06ba-b913cab6bdb4}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: inprogressinteger
+        field: inprogressinteger
+      -
+        section: '{7c93d1dd-bcb6-8994-06ba-b913cab6bdb4}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: customrollupfieldinteger
+        field: customrollupfieldinteger
+      -
+        section: '{86aa59b3-d012-bd70-488b-6d2767ea858d}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: actualdecimal
+        field: actualdecimal
+      -
+        section: '{86aa59b3-d012-bd70-488b-6d2767ea858d}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: percentage
+        field: percentage
+      -
+        section: '{86aa59b3-d012-bd70-488b-6d2767ea858d}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: inprogressdecimal
+        field: inprogressdecimal
+      -
+        section: '{86aa59b3-d012-bd70-488b-6d2767ea858d}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: customrollupfielddecimal
+        field: customrollupfielddecimal
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: lastrolledupdate
+        field: lastrolledupdate
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: rolluponlyfromchildgoals
+        field: rolluponlyfromchildgoals
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: consideronlygoalownersrecords
+        field: consideronlygoalownersrecords
+      -
+        section: '{16152234-8617-bee9-5eeb-069b4472173d}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: rollupqueryactualmoneyid
+        field: rollupqueryactualmoneyid
+      -
+        section: '{16152234-8617-bee9-5eeb-069b4472173d}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: rollupqueryinprogressmoneyid
+        field: rollupqueryinprogressmoneyid
+      -
+        section: '{16152234-8617-bee9-5eeb-069b4472173d}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: rollupquerycustommoneyid
+        field: rollupquerycustommoneyid
+      -
+        section: '{649d4e80-5014-8c90-2abe-c39b137dc761}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: rollupqueryactualintegerid
+        field: rollupqueryactualintegerid
+      -
+        section: '{649d4e80-5014-8c90-2abe-c39b137dc761}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: rollupqueryinprogressintegerid
+        field: rollupqueryinprogressintegerid
+      -
+        section: '{649d4e80-5014-8c90-2abe-c39b137dc761}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: rollupquerycustomintegerid
+        field: rollupquerycustomintegerid
+      -
+        section: '{009e75c7-d9c6-e460-98b7-4278be07024b}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: rollupqueryactualdecimalid
+        field: rollupqueryactualdecimalid
+      -
+        section: '{009e75c7-d9c6-e460-98b7-4278be07024b}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: rollupqueryinprogressdecimalid
+        field: rollupqueryinprogressdecimalid
+      -
+        section: '{009e75c7-d9c6-e460-98b7-4278be07024b}'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: rollupquerycustomdecimalid
+        field: rollupquerycustomdecimalid
+      -
+        section: '{8ECDE6CB-085B-46D1-97A9-E357C5799076}'
+        tab: '{242FCD83-2A50-478E-922A-F4641920DDE0}'
+        disabled: false
+        visible: true
+        control_id: participatingrecordcontrol
+        field: metricid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: footer_statecode
+        field: statecode
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Time Period
+        name: '{349a439d-6ed5-bae8-7c7d-3721869367ca}'
+        visible: true
+        expanded: true
+      -
+        label: Targets
+        name: ''
+        visible: true
+        expanded: true
+      -
+        label: Child Goals
+        name: ''
+        visible: true
+        expanded: true
+      -
+        label: Actuals
+        name: ''
+        visible: true
+        expanded: true
+      -
+        label: Goal Criteria
+        name: ''
+        visible: true
+        expanded: true
+      -
+        label: Notes
+        name: notes
+        visible: true
+        expanded: false
+      -
+        label: Participating Records
+        name: '{242FCD83-2A50-478E-922A-F4641920DDE0}'
+        visible: false
+        expanded: false
+    field_count: 42
+    type_name: Main
+

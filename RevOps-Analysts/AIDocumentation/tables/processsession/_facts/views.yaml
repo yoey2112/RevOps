@@ -1,0 +1,34 @@
+views:
+  -
+    name: Quick Find Process Sessions
+    querytype: 4
+    savedqueryid: '8c003e70-ebce-4155-a920-3270dfdc5667'
+  -
+    name: My Complete Process Sessions
+    querytype: -1
+    savedqueryid: '8c003e75-ebce-4155-a920-3270dfdc5667'
+  -
+    name: My Process Sessions
+    querytype: -1
+    savedqueryid: '8c003e76-ebce-4155-a920-3270dfdc5667'
+  -
+    name: All Complete Process Sessions
+    querytype: -1
+    savedqueryid: '8c003e77-ebce-4155-a920-3270dfdc5667'
+  -
+    name: All Process Sessions
+    querytype: -1
+    savedqueryid: '8c003e78-ebce-4155-a920-3270dfdc5667'
+  -
+    name: Process Session Associated View
+    querytype: 2
+    savedqueryid: '8c003e79-ebce-4155-a920-3270dfdc5667'
+  -
+    name: Process Session Lookup View
+    querytype: 64
+    savedqueryid: '8c003e7a-ebce-4155-a920-3270dfdc5667'
+  -
+    name: Process Session Advanced Find View
+    querytype: 1
+    savedqueryid: 'a7c296a2-7f3c-49ef-92ec-ec7f14f47baa'
+

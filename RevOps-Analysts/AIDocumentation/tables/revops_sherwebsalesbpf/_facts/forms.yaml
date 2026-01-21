@@ -1,0 +1,313 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: 'Pre-Qualification'
+        name: StageStep4_section1
+        tab: StageStep4
+        visible: true
+      -
+        label: Qualification
+        name: StageStep18_section1
+        tab: StageStep18
+        visible: true
+      -
+        label: Discovery
+        name: StageStep32_section1
+        tab: StageStep32
+        visible: true
+      -
+        label: Propose
+        name: StageStep46_section1
+        tab: StageStep46
+        visible: true
+      -
+        label: Negotiation
+        name: StageStep54_section1
+        tab: StageStep54
+        visible: true
+      -
+        label: Onboarding
+        name: StageStep65_section1
+        tab: StageStep65
+        visible: true
+      -
+        label: Activation
+        name: StageStep79_section1
+        tab: StageStep79
+        visible: true
+    fields:
+      -
+        section: StageStep4_section1
+        tab: StageStep4
+        disabled: false
+        visible: true
+        control_id: 'bpf_lead_revops_sherwebsalesbpf:parentaccountid'
+        field: parentaccountid
+      -
+        section: StageStep4_section1
+        tab: StageStep4
+        disabled: false
+        visible: true
+        control_id: 'bpf_lead_revops_sherwebsalesbpf:companyname'
+        field: companyname
+      -
+        section: StageStep4_section1
+        tab: StageStep4
+        disabled: false
+        visible: true
+        control_id: 'bpf_lead_revops_sherwebsalesbpf:parentcontactid'
+        field: parentcontactid
+      -
+        section: StageStep4_section1
+        tab: StageStep4
+        disabled: false
+        visible: true
+        control_id: 'bpf_lead_revops_sherwebsalesbpf:emailaddress1'
+        field: emailaddress1
+      -
+        section: StageStep4_section1
+        tab: StageStep4
+        disabled: false
+        visible: true
+        control_id: 'bpf_lead_revops_sherwebsalesbpf:telephone1'
+        field: telephone1
+      -
+        section: StageStep4_section1
+        tab: StageStep4
+        disabled: false
+        visible: true
+        control_id: 'bpf_lead_revops_sherwebsalesbpf:revops_confirmcountryandstate'
+        field: revops_confirmcountryandstate
+      -
+        section: StageStep18_section1
+        tab: StageStep18
+        disabled: false
+        visible: true
+        control_id: 'bpf_lead_revops_sherwebsalesbpf:decisionmaker'
+        field: decisionmaker
+      -
+        section: StageStep18_section1
+        tab: StageStep18
+        disabled: false
+        visible: true
+        control_id: 'bpf_lead_revops_sherwebsalesbpf:revops_solution'
+        field: revops_solution
+      -
+        section: StageStep18_section1
+        tab: StageStep18
+        disabled: false
+        visible: true
+        control_id: 'bpf_lead_revops_sherwebsalesbpf:estimatedamount'
+        field: estimatedamount
+      -
+        section: StageStep18_section1
+        tab: StageStep18
+        disabled: false
+        visible: true
+        control_id: 'bpf_lead_revops_sherwebsalesbpf:revops_channel'
+        field: revops_channel
+      -
+        section: StageStep18_section1
+        tab: StageStep18
+        disabled: false
+        visible: true
+        control_id: 'bpf_lead_revops_sherwebsalesbpf:revops_leadtype'
+        field: revops_leadtype
+      -
+        section: StageStep18_section1
+        tab: StageStep18
+        disabled: false
+        visible: true
+        control_id: 'bpf_lead_revops_sherwebsalesbpf:revops_identifyneeds'
+        field: revops_identifyneeds
+      -
+        section: StageStep32_section1
+        tab: StageStep32
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_discoverycallmeeting'
+        field: revops_discoverycallmeeting
+      -
+        section: StageStep32_section1
+        tab: StageStep32
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:customerpainpoints'
+        field: customerpainpoints
+      -
+        section: StageStep32_section1
+        tab: StageStep32
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:customerneed'
+        field: customerneed
+      -
+        section: StageStep32_section1
+        tab: StageStep32
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:estimatedclosedate'
+        field: estimatedclosedate
+      -
+        section: StageStep32_section1
+        tab: StageStep32
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_updatedaccountprofile'
+        field: revops_updatedaccountprofile
+      -
+        section: StageStep32_section1
+        tab: StageStep32
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_updatedaccountpotential'
+        field: revops_updatedaccountpotential
+      -
+        section: StageStep46_section1
+        tab: StageStep46
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_proposeddiscounts'
+        field: revops_proposeddiscounts
+      -
+        section: StageStep46_section1
+        tab: StageStep46
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_demos'
+        field: revops_demos
+      -
+        section: StageStep46_section1
+        tab: StageStep46
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_smediscussions'
+        field: revops_smediscussions
+      -
+        section: StageStep54_section1
+        tab: StageStep54
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_pricingdiscountconfirmed'
+        field: revops_pricingdiscountconfirmed
+      -
+        section: StageStep54_section1
+        tab: StageStep54
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_discusstcs'
+        field: revops_discusstcs
+      -
+        section: StageStep54_section1
+        tab: StageStep54
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_estimatequotesent'
+        field: revops_estimatequotesent
+      -
+        section: StageStep54_section1
+        tab: StageStep54
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_signcontract'
+        field: revops_signcontract
+      -
+        section: StageStep65_section1
+        tab: StageStep65
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_cumulusaccountcreated'
+        field: revops_cumulusaccountcreated
+      -
+        section: StageStep65_section1
+        tab: StageStep65
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_keycontactsupdatedincrm'
+        field: revops_keycontactsupdatedincrm
+      -
+        section: StageStep65_section1
+        tab: StageStep65
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_onboardingcallscheduled'
+        field: revops_onboardingcallscheduled
+      -
+        section: StageStep65_section1
+        tab: StageStep65
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_confirmapproveddiscountappliedtoaccount'
+        field: revops_confirmapproveddiscountappliedtoaccount
+      -
+        section: StageStep65_section1
+        tab: StageStep65
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_provisioningrequestsubmitted'
+        field: revops_provisioningrequestsubmitted
+      -
+        section: StageStep65_section1
+        tab: StageStep65
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_servicesprovisionedincumulus'
+        field: revops_servicesprovisionedincumulus
+      -
+        section: StageStep79_section1
+        tab: StageStep79
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_profilingcompleteupdated'
+        field: revops_profilingcompleteupdated
+      -
+        section: StageStep79_section1
+        tab: StageStep79
+        disabled: false
+        visible: true
+        control_id: 'bpf_opportunity_revops_sherwebsalesbpf:revops_cadencemeetingset'
+        field: revops_cadencemeetingset
+    description: A form for this entity.
+    tabs:
+      -
+        label: 'Pre-Qualification'
+        name: StageStep4
+        visible: false
+        expanded: true
+      -
+        label: Qualification
+        name: StageStep18
+        visible: false
+        expanded: true
+      -
+        label: Discovery
+        name: StageStep32
+        visible: false
+        expanded: true
+      -
+        label: Propose
+        name: StageStep46
+        visible: false
+        expanded: true
+      -
+        label: Negotiation
+        name: StageStep54
+        visible: false
+        expanded: true
+      -
+        label: Onboarding
+        name: StageStep65
+        visible: false
+        expanded: true
+      -
+        label: Activation
+        name: StageStep79
+        visible: false
+        expanded: true
+    field_count: 33
+    type_name: Main
+

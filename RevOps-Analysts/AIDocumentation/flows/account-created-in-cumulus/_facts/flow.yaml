@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '4c3cce43-8ed5-ee11-904c-002248d5a732'
+name: Account Created in Cumulus
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

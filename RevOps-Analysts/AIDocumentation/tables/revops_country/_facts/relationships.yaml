@@ -1,0 +1,102 @@
+relationships:
+  -
+    schemaname: revops_country_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_country_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_country_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_country_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_country_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_country_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_country_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_country_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_country_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_country_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_account_revops_country_revops_country
+    relationshiptype: OneToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_lead_country_revops_country
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_stateorprovince_country_revops_country
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_stateorprovince
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_territoryregion_revops_country_revops_country
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_territoryregion
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: lk_revops_country_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_country
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_country_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_country
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_country_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_country
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_country_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_country
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_country
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_country
+    referencedtablelogicalname: organization
+  -
+    schemaname: revops_account_revops_country
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: revops_country
+    referencedtablelogicalname: account
+

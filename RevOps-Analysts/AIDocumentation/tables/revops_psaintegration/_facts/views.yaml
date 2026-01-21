@@ -1,0 +1,31 @@
+views:
+  -
+    name: PSA Integrations
+    description: All active PSA Integrations
+    querytype: 8192
+    savedqueryid: 'a5a7b19a-c31e-ef11-840b-000d3af43335'
+  -
+    name: PSA Integration Advanced Find View
+    querytype: 1
+    savedqueryid: '58301e1a-07d0-4a7b-ba4e-173472364e26'
+  -
+    name: Inactive PSA Integrations
+    querytype: -1
+    savedqueryid: '896b918f-7baa-4fab-b34f-2b32860079e6'
+  -
+    name: Quick Find Active PSA Integrations
+    querytype: 4
+    savedqueryid: '9f48ee96-6a0e-483d-9777-34b2d3eb0ba6'
+  -
+    name: PSA Integration Lookup View
+    querytype: 64
+    savedqueryid: '70ad810d-966c-44d3-a39b-7784d9a16487'
+  -
+    name: PSA Integration Associated View
+    querytype: 2
+    savedqueryid: '20e5cb93-7ccb-4f65-9cdd-b5e36a759014'
+  -
+    name: Active PSA Integrations
+    querytype: -1
+    savedqueryid: '87afaaf3-a6ec-4017-8a11-facf7ac61240'
+

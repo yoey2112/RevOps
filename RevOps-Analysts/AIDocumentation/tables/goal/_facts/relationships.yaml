@@ -1,0 +1,197 @@
+relationships:
+  -
+    schemaname: goal_parent_goal
+    relationshiptype: OneToMany
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: goal
+  -
+    schemaname: Goal_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: goal
+  -
+    schemaname: Goal_RollupError_Goal
+    relationshiptype: OneToMany
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: goal
+  -
+    schemaname: Goal_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: goal
+  -
+    schemaname: Goal_Annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: goal
+  -
+    schemaname: Goal_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: goal
+  -
+    schemaname: Goal_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: goal
+  -
+    schemaname: userentityinstancedata_goal
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: goal
+  -
+    schemaname: goal_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: goal
+  -
+    schemaname: goal_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: goal
+  -
+    schemaname: Goal_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: goal
+  -
+    schemaname: goal_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: goal
+  -
+    schemaname: msdyn_goal_msdyn_forecastinstance
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_forecastinstance
+    referencedtablelogicalname: goal
+  -
+    schemaname: team_goal
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_goal
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: owner
+  -
+    schemaname: goalrollupquery_actualint
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: goalrollupquery
+  -
+    schemaname: goal_rollupquery_actualmoney
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: goalrollupquery
+  -
+    schemaname: goal_rollupquery_actualdecimal
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: goalrollupquery
+  -
+    schemaname: goal_rollupquery_customint
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: goalrollupquery
+  -
+    schemaname: goal_rollupquery_custommoney
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: goalrollupquery
+  -
+    schemaname: goal_rollupquery_customdecimal
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: goalrollupquery
+  -
+    schemaname: goal_rollupquery_inprogressint
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: goalrollupquery
+  -
+    schemaname: goal_rollupquery_inprogressmoney
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: goalrollupquery
+  -
+    schemaname: goal_rollupquery_inprogressdecimal
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: goalrollupquery
+  -
+    schemaname: lk_goal_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_goal_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_goal_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_goal_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_goal
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: business_unit_goal
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: user_goal_goalowner
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: goal_parent_goal
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: goal
+  -
+    schemaname: TransactionCurrency_Goal
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: metric_goal
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: metric
+  -
+    schemaname: lk_goal_entityimage
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: imagedescriptor
+  -
+    schemaname: Goal_RollupError_Goal
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: goal
+  -
+    schemaname: team_goal_goalowner
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: team
+  -
+    schemaname: revops_goal_practice_revops_practice
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_goal_solution_revops_solution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: revops_solution
+

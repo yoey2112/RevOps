@@ -1,0 +1,730 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: GENERAL
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick View
+  -
+    name: 'Quick View - Case Form'
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Cumulus Account
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_cumulusurl
+        field: revops_cumulusurl
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: revops_resellertype
+        field: revops_resellertype
+    description: null
+    tabs:
+      -
+        label: New Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick View
+  -
+    name: 'Information - CS'
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: General info
+        tab: ''
+        visible: true
+      -
+        label: New Section
+        name: null_section_4
+        tab: ''
+        visible: true
+      -
+        label: New Section
+        name: null_section_3
+        tab: ''
+        visible: true
+      -
+        label: End Clients
+        name: tab_2_section_1
+        tab: tab_2
+        visible: true
+      -
+        label: Power BI Dashboard
+        name: tab_3_section_1
+        tab: tab_3
+        visible: true
+    fields:
+      -
+        section: General info
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_cumulusurl
+        field: revops_cumulusurl
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_account
+        field: revops_account
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_accountnumber
+        field: revops_accountnumber
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_mrr
+        field: revops_mrr
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_domain
+        field: revops_domain
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_clientid
+        field: revops_clientid
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_cumuluscreatedon
+        field: revops_cumuluscreatedon
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_clienttype
+        field: revops_clienttype
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_mpnid
+        field: revops_mpnid
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_clientuniquename
+        field: revops_clientuniquename
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_revops_isvip
+        field: revops_isvip
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_description
+        field: revops_description
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_business
+        field: revops_business
+      -
+        section: General info
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_issuspendedclient
+        field: revops_issuspendedclient
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_partnerprogram
+        field: revops_partnerprogram
+      -
+        section: General info
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_suspendedon
+        field: revops_suspendedon
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_endclientcount
+        field: revops_endclientcount
+      -
+        section: General info
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_suspensiontype
+        field: revops_suspensiontype
+      -
+        section: null_section_4
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_email
+        field: revops_email
+      -
+        section: null_section_4
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_phone
+        field: revops_phone
+      -
+        section: null_section_4
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_emailaddress2
+        field: revops_emailaddress2
+      -
+        section: null_section_4
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_telephone2
+        field: revops_telephone2
+      -
+        section: null_section_4
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_emailaddress3
+        field: revops_emailaddress3
+      -
+        section: null_section_4
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_telephone3
+        field: revops_telephone3
+      -
+        section: null_section_3
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_city
+        field: revops_city
+      -
+        section: null_section_3
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_province
+        field: revops_province
+      -
+        section: null_section_3
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_country
+        field: revops_country
+      -
+        section: null_section_3
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_zipcode
+        field: revops_zipcode
+      -
+        section: null_section_3
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_iso3166alpha2countrycode
+        field: revops_iso3166alpha2countrycode
+      -
+        section: null_section_3
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_iso3166alpha3countrycode
+        field: revops_iso3166alpha3countrycode
+      -
+        section: null_section_3
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_iso3166numericcountrycode
+        field: revops_iso3166numericcountrycode
+      -
+        section: null_section_3
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_iso3166_2subdivisioncode
+        field: revops_iso3166_2subdivisioncode
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_revops_account
+        field: revops_account
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_revops_mrr
+        field: revops_mrr
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_revops_accountnumber
+        field: revops_accountnumber
+    description: 'A form for this entity - CS.'
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+      -
+        label: Cumulus Orgs
+        name: tab_2
+        visible: true
+        expanded: false
+      -
+        label: Dashboard
+        name: tab_3
+        visible: false
+        expanded: false
+    field_count: 38
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: General info
+        tab: ''
+        visible: true
+      -
+        label: New Section
+        name: null_section_4
+        tab: ''
+        visible: true
+      -
+        label: New Section
+        name: null_section_3
+        tab: ''
+        visible: true
+      -
+        label: End Clients
+        name: tab_2_section_1
+        tab: tab_2
+        visible: true
+      -
+        label: Power BI Dashboard
+        name: tab_3_section_1
+        tab: tab_3
+        visible: true
+    fields:
+      -
+        section: General info
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_cumulusurl
+        field: revops_cumulusurl
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_account
+        field: revops_account
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_accountnumber
+        field: revops_accountnumber
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_mrr
+        field: revops_mrr
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_domain
+        field: revops_domain
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_clientid
+        field: revops_clientid
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_cumuluscreatedon
+        field: revops_cumuluscreatedon
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_clienttype
+        field: revops_clienttype
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_mpnid
+        field: revops_mpnid
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_clientuniquename
+        field: revops_clientuniquename
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_revops_isvip
+        field: revops_isvip
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_description
+        field: revops_description
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_business
+        field: revops_business
+      -
+        section: General info
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_clientnode
+        field: revops_clientnode
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_partnerprogram
+        field: revops_partnerprogram
+      -
+        section: General info
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_subsidiaryid
+        field: revops_subsidiaryid
+      -
+        section: General info
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_endclientcount
+        field: revops_endclientcount
+      -
+        section: null_section_4
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_email
+        field: revops_email
+      -
+        section: null_section_4
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_phone
+        field: revops_phone
+      -
+        section: null_section_4
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_emailaddress2
+        field: revops_emailaddress2
+      -
+        section: null_section_4
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_telephone2
+        field: revops_telephone2
+      -
+        section: null_section_4
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_emailaddress3
+        field: revops_emailaddress3
+      -
+        section: null_section_4
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_telephone3
+        field: revops_telephone3
+      -
+        section: null_section_3
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_city
+        field: revops_city
+      -
+        section: null_section_3
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_province
+        field: revops_province
+      -
+        section: null_section_3
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_country
+        field: revops_country
+      -
+        section: null_section_3
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: revops_zipcode
+        field: revops_zipcode
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_revops_mrr
+        field: revops_mrr
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_revops_accountnumber
+        field: revops_accountnumber
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_revops_account
+        field: revops_account
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+      -
+        label: Cumulus Orgs
+        name: tab_2
+        visible: true
+        expanded: false
+      -
+        label: Dashboard
+        name: tab_3
+        visible: true
+        expanded: false
+    field_count: 33
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: revops_name
+        field: revops_name
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: A card form for this entity.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 4
+    type_name: Card
+

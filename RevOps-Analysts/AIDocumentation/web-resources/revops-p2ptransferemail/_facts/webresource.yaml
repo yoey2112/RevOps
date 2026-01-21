@@ -1,0 +1,5 @@
+displayname: Send P2P Transfer Email
+description: 'create a draft Email addressed to the Case’s Contact, pre-filled with a nice HTML table (Org Name, Microsoft ID, Request ID, and Azure ID only if any selected row has one), set Regarding to the Case, and open the email for review/send'
+webresourceid: 'd6c0efe2-d89a-f011-b41c-6045bdfa0630'
+name: revops_p2ptransferemail
+

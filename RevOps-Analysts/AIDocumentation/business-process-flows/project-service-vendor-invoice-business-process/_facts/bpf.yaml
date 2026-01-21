@@ -1,0 +1,6 @@
+workflowid: '58ff80f7-252c-4c1d-9d83-23e04ee66bca'
+primaryentity: msdyn_projectvendorinvoice
+description: null
+uniquename: msdyn_vendorinvoicebusinessprocess
+name: 'Project Service - Vendor Invoice Business Process'
+

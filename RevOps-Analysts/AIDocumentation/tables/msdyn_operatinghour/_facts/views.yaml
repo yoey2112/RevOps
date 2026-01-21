@@ -1,0 +1,31 @@
+views:
+  -
+    name: Operating Hours
+    description: All active Operating Hours
+    querytype: 8192
+    savedqueryid: '760d3476-b5d6-e811-8158-000d3a01682d'
+  -
+    name: Quick Find Active Operating Hours
+    querytype: 4
+    savedqueryid: 'b5d39d88-4539-4cdf-b45f-16dd6e54c2ae'
+  -
+    name: Operating Hour Associated View
+    querytype: 2
+    savedqueryid: '4fa20e5d-e59b-48ca-8d18-2455720e6fe9'
+  -
+    name: Inactive Operating Hours
+    querytype: -1
+    savedqueryid: '1ec3f094-339a-4a37-9d07-53108f1d2127'
+  -
+    name: Active Operating Hours
+    querytype: -1
+    savedqueryid: 'af29931d-6ab8-4ddb-96ad-7cf623b30d26'
+  -
+    name: Operating Hour Advanced Find View
+    querytype: 1
+    savedqueryid: '5d53b118-1756-4b27-a194-b73a77d41792'
+  -
+    name: Operating Hour Lookup View
+    querytype: 64
+    savedqueryid: 'ab9739b5-2888-41e1-8e78-da719bebff4b'
+

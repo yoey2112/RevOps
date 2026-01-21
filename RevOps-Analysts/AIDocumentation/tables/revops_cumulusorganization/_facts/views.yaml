@@ -1,0 +1,39 @@
+views:
+  -
+    name: My Cumulus Organizations
+    description: Active Cumulus Organizations owned by me
+    querytype: 8192
+    savedqueryid: '7eb8f059-ba1e-ef11-840b-000d3af43335'
+  -
+    name: Cumulus Organization Associated View
+    querytype: 2
+    savedqueryid: '2910bc06-8066-4a44-9dc7-17c2e6092f48'
+  -
+    name: Cumulus Organization Advanced Find View
+    querytype: 1
+    savedqueryid: '4b404567-c3fd-4863-b938-3b23d2d533dd'
+  -
+    name: Lateral Move Lookup View
+    querytype: -1
+    savedqueryid: 'a1baa7fd-8455-ef11-bfe3-6045bdcd5e2a'
+  -
+    name: Quick Find Active Cumulus Organizations
+    querytype: 4
+    savedqueryid: 'd7e17d2e-fd51-45ef-8c86-79fce0406aa3'
+  -
+    name: P2P Transfer
+    querytype: -1
+    savedqueryid: 'dd1167fa-45ab-ef11-a72d-7c1e524085ab'
+  -
+    name: Active Cumulus Organizations
+    querytype: -1
+    savedqueryid: '049ed6c8-26f0-4920-85be-81af705d1291'
+  -
+    name: Inactive Cumulus Organizations
+    querytype: -1
+    savedqueryid: '9a1d334c-6449-40ef-b314-8c0eccb27880'
+  -
+    name: Cumulus Organization Lookup View
+    querytype: 64
+    savedqueryid: '056ac704-d5de-4301-80ee-de512da8799d'
+

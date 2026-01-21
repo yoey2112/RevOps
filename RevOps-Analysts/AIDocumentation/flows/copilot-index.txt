@@ -1,0 +1,125 @@
+TITLE
+=====
+RevOps - Flows Component Index
+
+PURPOSE
+-------
+Quick reference index of all Flows components in this folder.
+
+COMPONENTS
+----------
+- -activity-email-stamp-sql-date : Flow (Inventory): [Activity email] - stamp sql date
+- -activity-phone-stamp-sql-date : Flow (Inventory): [Activity phone] - stamp sql date
+- -activity-tasks-stamp-sql-date : Flow (Inventory): [Activity tasks] - stamp sql date
+- -audience-import-upsert-contact-and-associate : Flow (Inventory): [Audience Import] - upsert contact and associate
+- -calendly-create-and-update-a-lead-when-a-calendly-event-is-created : Flow (Inventory): [Calendly] Create and update a lead when a Calendly event is created
+- -events-scanned-import-connection-to-event-and-more : Flow (Inventory): [Events] - Scanned Import connection to event and more
+- -form-submission-utm-shenanigans-enrichment-consent-processing : Flow (Inventory): [Form Submission] - UTM shenanigans enrichment & consent processing
+- -global-pit-tier : Flow (Inventory): [Global] PIT tier
+- -journey-custom-trigger-for-lead : Flow (Inventory): [Journey] - custom trigger for lead
+- -journey-dcij-website-contact-form-submitted : Flow (Inventory): [Journey] DCIJ - Website contact form submitted
+- -lead-check-parent-account-relationship-for-trade-show-lead : Flow (Inventory): [lead] - check parent account relationship for Trade Show lead
+- -lead-disqualify-honeypot-field-contains-data : Flow (Inventory): [lead] - disqualify honeypot field contains data
+- -lead-mql-date : Flow (Inventory): [lead] - MQL date
+- -lead-notify-user-when-assigned : Flow (Inventory): [Lead] notify user when assigned
+- -lead-uk-cookie-fallback-territory : Flow (Inventory): [lead] UK cookie fallback territory
+- -mwh-omit-accounts-and-contacts-from-consent : Flow (Inventory): [MWH] - omit accounts and contacts from consent
+- -phone-call-add-notes-to-description : Flow (Inventory): [phone call] - add notes to description
+- account-backfill-channel-relationship : Flow (Inventory): Account - Backfill Channel & Relationship
+- account-created-in-cumulus : Flow (Inventory): Account Created in Cumulus
+- account-ownership-change-notification : Flow (Inventory): Account Ownership change notification
+- account-product-summary-copy-account-key : Flow (Inventory): Account Product Summary - Copy Account Key
+- account-set-cumulus-account-created-on-opps : Flow (Inventory): Account - Set Cumulus Account created on Opps
+- account-set-territory-on-account : Flow (Inventory): Account - Set Territory on Account
+- account-solutions-summary-copy-account-key : Flow (Inventory): Account Solutions Summary - Copy Account Key
+- accounts-manual-fix-generic-domains-format : Flow (Inventory): Accounts - Manual -  Fix Generic Domains format
+- assign-sme-engagement-to-object-owner : Flow (Inventory): Assign SME Engagement to Object Owner
+- attach-file-to-asana : Flow (Inventory): Attach file to Asana
+- bulk-resolve-cases : Flow (Inventory): Bulk Resolve Cases
+- case-queue-update-update-queue-item : Flow (Inventory): Case Queue Update - Update Queue Item
+- case-resolution-survey : Flow (Inventory): Case resolution survey
+- case-send-notification-to-owner-when-a-customer-replies : Flow (Inventory): Case - Send notification to owner when a customer replies
+- case-to-nice : Flow (Inventory): Case to NiCE
+- commitment-agreement-form : Flow (Inventory): Commitment Agreement Form
+- competitor-create-current-provider-when-a-competitor-is-created : Flow (Inventory): Competitor - Create current provider when a competitor is created
+- contact-extract-domain-from-email : Flow (Inventory): Contact - Extract Domain from email
+- contact-extract-domain-from-email-selecting-rows- : Flow (Inventory): Contact - Extract Domain from email (selecting rows)
+- contact-resolve-account-by-domain : Flow (Inventory): Contact - Resolve Account by Domain
+- contact-resolve-account-by-domain-select-row- : Flow (Inventory): Contact - Resolve Account by Domain (select row)
+- conversations-to-nice : Flow (Inventory): Conversations to NiCE
+- create-case-from-migration-request : Flow (Inventory): Create Case from Migration Request
+- create-case-from-zabbix-alert : Flow (Inventory): Create Case from Zabbix Alert
+- create-work-item-approve-enable-mailbox : Flow (Inventory): Create Work Item - Approve/Enable Mailbox
+- cs-case-create-for-manual-account-creation-for-uk-partners : Flow (Inventory): CS - case create for manual account creation for UK Partners
+- cs-notify-manager-of-customer-escalation : Flow (Inventory): CS - Notify manager of customer escalation
+- cumulus-account-manager-team-created-or-updated : Flow (Inventory): Cumulus Account Manager - Team Created Or Updated
+- cumulus-account-manager-update : Flow (Inventory): Cumulus Account Manager Update
+- cumulus-account-manager-user-created-or-updated : Flow (Inventory): Cumulus Account Manager - User Created Or Updated
+- cumulus-user-created : Flow (Inventory): Cumulus User Created
+- daily-tier-update-per-mrr- : Flow (Inventory): Daily Tier Update per MRR
+- day-0-cumulus-ces : Flow (Inventory): Day 0 - Cumulus CES
+- enrich-account-manual : Flow (Inventory): Enrich Account - Manual
+- enrich-account-oncreate : Flow (Inventory): Enrich Account - OnCreate
+- enrich-account-scheduled : Flow (Inventory): Enrich Account - Scheduled
+- enrich-contact-manual : Flow (Inventory): Enrich Contact - Manual
+- enrich-contact-oncreate : Flow (Inventory): Enrich Contact - OnCreate
+- enrich-contact-scheduled : Flow (Inventory): Enrich Contact - Scheduled
+- enrich-lead-oncreate : Flow (Inventory): Enrich Lead - OnCreate
+- enrich-lead-scheduled : Flow (Inventory): Enrich Lead - Scheduled
+- fill-parent-account-of-cumulus-account : Flow (Inventory): Fill Parent Account of Cumulus Account
+- fix-accounts-without-name : Flow (Inventory): Fix Accounts without Name
+- fix-primary-contact-on-account : Flow (Inventory): Fix Primary Contact on Account
+- gtw-get-check-ins : Flow (Inventory): GTW Get Check-Ins
+- gtw-registrant-added : Flow (Inventory): GTW Registrant added
+- gtw-webinar-is-created : Flow (Inventory): GTW webinar is created
+- incoming-email-set-customer-responded : Flow (Inventory): Incoming Email, set Customer responded
+- incoming-portal-comment-set-customer-responded : Flow (Inventory): Incoming Portal Comment, set Customer responded
+- incomplete-cart : Flow (Inventory): Incomplete Cart
+- iso-3166-cumulus-account-to-account-manual : Flow (Inventory): ISO 3166 Cumulus Account to Account - Manual
+- iso-3166-cumulus-account-to-account-scheduled : Flow (Inventory): ISO 3166 Cumulus Account to Account - Scheduled
+- lead-extract-domain-from-email : Flow (Inventory): Lead - Extract Domain from email
+- lead-resolve-account-by-domain : Flow (Inventory): Lead - Resolve Account by Domain
+- lead-resolve-contact-by-email : Flow (Inventory): Lead - Resolve contact by email
+- lead-set-territory-on-lead : Flow (Inventory): Lead - Set Territory on Lead
+- link-cumulus-accounts-to-parent-accounts : Flow (Inventory): Link Cumulus Accounts to Parent Accounts
+- link-cumulus-user-contact-to-account : Flow (Inventory): Link Cumulus User Contact to Account
+- link-cumulus-users-to-contact : Flow (Inventory): Link Cumulus Users To Contact
+- marketing-close-asset-from-campaign : Flow (Inventory): marketing - close asset from campaign
+- marketing-report-inactive-campaign-owner : Flow (Inventory): marketing - report inactive campaign owner
+- marketing-review-proposed-end-date : Flow (Inventory): marketing - review proposed end date
+- opportunity-create-opportunities-from-account-potential : Flow (Inventory): Opportunity - Create Opportunities from Account Potential
+- opportunity-set-current-bpf-stage-sherweb-opp-bpf : Flow (Inventory): Opportunity - set current BPF stage - sherweb opp bpf
+- opportunity-set-current-bpf-stage-sherweb-sales-bpf : Flow (Inventory): opportunity - set current bpf stage - sherweb sales bpf
+- opportunity-solution-create-solution-summary : Flow (Inventory): Opportunity Solution - Create Solution Summary
+- opportunity-update-probability-when-won : Flow (Inventory): Opportunity Update Probability when Won
+- opportunity-update-solution-summary : Flow (Inventory): Opportunity - Update Solution Summary
+- organization-created-or-deleted-in-cumulus : Flow (Inventory): Organization Created or Deleted in Cumulus
+- p2p-automation : Flow (Inventory): P2P Automation
+- p2p-transfer-notifications : Flow (Inventory): P2P Transfer Notifications
+- p2p-transfer-population-from-case : Flow (Inventory): P2P Transfer Population from Case
+- queue-item-ownership-change-based-on-case-ownership : Flow (Inventory): Queue item ownership change based on case ownership
+- queue-item-release-set-case-owner : Flow (Inventory): Queue item release, set case Owner
+- resolvecase : Flow (Inventory): ResolveCase
+- revops-change-log : Flow (Inventory): RevOps Change Log
+- select-orgs-from-cumulus-where-clientuniquename : Flow (Inventory): Select Orgs From Cumulus Where ClientUniqueName
+- send-p2p-transfer : Flow (Inventory): Send P2P Transfer
+- set-case-lookup-value-on-customer-feedback-survey-response : Flow (Inventory): Set Case lookup value on Customer Feedback Survey Response
+- set-customer-verified-resolution-value : Flow (Inventory): Set Customer Verified Resolution Value
+- set-supported-service-column-email-channel : Flow (Inventory): Set Supported Service Column - Email Channel
+- update-currency-exchange-rates : Flow (Inventory): Update Currency Exchange Rates
+- update-last-interaction-email : Flow (Inventory): Update Last Interaction - Email
+- update-last-interaction-note : Flow (Inventory): Update Last Interaction - Note
+- update-last-interaction-portal-comment : Flow (Inventory): Update Last Interaction - Portal Comment
+- veeam-contractrequest : Flow (Inventory): Veeam_ContractRequest
+- vendor-account-create-solution-provider-from-vendor : Flow (Inventory): Vendor Account - Create Solution Provider from vendor
+- vmware-contractrequest : Flow (Inventory): VMware_ContractRequest
+- zremove-journeymanual-dcij-website-contact-form-submitted : Flow (Inventory): zremove[JourneyManual] DCIJ - Website contact form submitted
+
+HOW TO USE
+----------
+Each component has its own subfolder containing:
+- README.md and README.txt for overview
+- _facts/*.yaml for structured metadata
+- Additional documentation files as needed
+
+For detailed information about a specific component, navigate to its subfolder.

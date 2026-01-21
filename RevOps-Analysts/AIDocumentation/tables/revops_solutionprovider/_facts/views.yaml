@@ -1,0 +1,31 @@
+views:
+  -
+    name: Solution Providers
+    description: All active Solution Providers
+    querytype: 8192
+    savedqueryid: 'd4d1a8c2-8f1e-ef11-840b-000d3af43335'
+  -
+    name: Solution Provider Lookup View
+    querytype: 64
+    savedqueryid: 'eaac8c0d-7690-49b5-96eb-07adda918559'
+  -
+    name: Active Solution Providers
+    querytype: -1
+    savedqueryid: '3d5bbf3d-9eb6-4745-9b48-71515e50e370'
+  -
+    name: Solution Provider Advanced Find View
+    querytype: 1
+    savedqueryid: '589ac217-a57c-4942-821f-bf4073b14046'
+  -
+    name: Quick Find Active Solution Providers
+    querytype: 4
+    savedqueryid: '8b52668f-af24-4d51-bece-c862d729835d'
+  -
+    name: Solution Provider Associated View
+    querytype: 2
+    savedqueryid: 'c6684805-00ea-491a-86cb-df8965482190'
+  -
+    name: Inactive Solution Providers
+    querytype: -1
+    savedqueryid: '5c496056-43c5-49e7-b7eb-e5aded5e7aa5'
+

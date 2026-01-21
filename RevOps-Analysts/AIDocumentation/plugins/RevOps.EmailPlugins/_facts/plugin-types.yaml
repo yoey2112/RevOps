@@ -1,0 +1,10 @@
+types:
+  -
+    plugintypeid: 'def446a2-3557-4a26-ba2a-83d145beb198'
+    typename: RevOps.EmailPlugins.EmailFromSetter
+    name: RevOps.EmailPlugins.EmailFromSetter
+  -
+    plugintypeid: 'db6a442b-dd23-41ae-a7d0-cedc581c0eb1'
+    typename: RevOps.EmailPlugins.EmailToScrubber
+    name: RevOps.EmailPlugins.EmailToScrubber
+

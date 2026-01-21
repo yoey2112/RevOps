@@ -1,0 +1,5 @@
+displayname: Case Email Subject Auto
+description: Populates the Subject field with Case number and Case title
+webresourceid: 'cee67920-1837-f011-8c4d-7c1e5206727f'
+name: revops_email_case_subject.js
+

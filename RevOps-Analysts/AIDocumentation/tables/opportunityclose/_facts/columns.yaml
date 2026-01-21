@@ -1,0 +1,710 @@
+columns:
+  -
+    RequiredLevel: ''
+    LogicalName: activityadditionalparams
+    DisplayName: ''
+    Description: ''
+    AttributeType: Memo
+  -
+    RequiredLevel: ''
+    LogicalName: activityid
+    DisplayName: ''
+    Description: ''
+    AttributeType: Uniqueidentifier
+  -
+    RequiredLevel: ''
+    LogicalName: activitytypecode
+    DisplayName: ''
+    Description: ''
+    AttributeType: EntityName
+  -
+    RequiredLevel: ''
+    LogicalName: activitytypecodename
+    DisplayName: ''
+    Description: ''
+    AttributeType: Virtual
+  -
+    RequiredLevel: ''
+    LogicalName: actualdurationminutes
+    DisplayName: ''
+    Description: ''
+    AttributeType: Integer
+  -
+    RequiredLevel: ''
+    LogicalName: actualend
+    DisplayName: ''
+    Description: ''
+    AttributeType: DateTime
+  -
+    RequiredLevel: ''
+    LogicalName: actualrevenue
+    DisplayName: ''
+    Description: ''
+    AttributeType: Money
+  -
+    RequiredLevel: ''
+    LogicalName: actualrevenue_base
+    DisplayName: ''
+    Description: ''
+    AttributeType: Money
+  -
+    RequiredLevel: ''
+    LogicalName: actualstart
+    DisplayName: ''
+    Description: ''
+    AttributeType: DateTime
+  -
+    RequiredLevel: ''
+    LogicalName: bcc
+    DisplayName: ''
+    Description: ''
+    AttributeType: PartyList
+  -
+    RequiredLevel: ''
+    LogicalName: category
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: cc
+    DisplayName: ''
+    Description: ''
+    AttributeType: PartyList
+  -
+    RequiredLevel: ''
+    LogicalName: community
+    DisplayName: ''
+    Description: ''
+    AttributeType: Picklist
+  -
+    RequiredLevel: ''
+    LogicalName: communityname
+    DisplayName: ''
+    Description: ''
+    AttributeType: Virtual
+  -
+    RequiredLevel: ''
+    LogicalName: competitorid
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: competitoridname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: competitoridyominame
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: createdby
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: createdbyexternalparty
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: createdbyexternalpartyname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: createdbyexternalpartyyominame
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: createdbyname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: createdbyyominame
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: createdon
+    DisplayName: ''
+    Description: ''
+    AttributeType: DateTime
+  -
+    RequiredLevel: ''
+    LogicalName: createdonbehalfby
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: createdonbehalfbyname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: createdonbehalfbyyominame
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: customers
+    DisplayName: ''
+    Description: ''
+    AttributeType: PartyList
+  -
+    RequiredLevel: ''
+    LogicalName: deliverylastattemptedon
+    DisplayName: ''
+    Description: ''
+    AttributeType: DateTime
+  -
+    RequiredLevel: ''
+    LogicalName: deliveryprioritycode
+    DisplayName: ''
+    Description: ''
+    AttributeType: Picklist
+  -
+    RequiredLevel: ''
+    LogicalName: deliveryprioritycodename
+    DisplayName: ''
+    Description: ''
+    AttributeType: Virtual
+  -
+    RequiredLevel: ''
+    LogicalName: description
+    DisplayName: ''
+    Description: ''
+    AttributeType: Memo
+  -
+    RequiredLevel: ''
+    LogicalName: exchangeitemid
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: exchangerate
+    DisplayName: ''
+    Description: ''
+    AttributeType: Decimal
+  -
+    RequiredLevel: ''
+    LogicalName: exchangeweblink
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: from
+    DisplayName: ''
+    Description: ''
+    AttributeType: PartyList
+  -
+    RequiredLevel: ''
+    LogicalName: importsequencenumber
+    DisplayName: ''
+    Description: ''
+    AttributeType: Integer
+  -
+    RequiredLevel: ''
+    LogicalName: instancetypecode
+    DisplayName: ''
+    Description: ''
+    AttributeType: Picklist
+  -
+    RequiredLevel: ''
+    LogicalName: instancetypecodename
+    DisplayName: ''
+    Description: ''
+    AttributeType: Virtual
+  -
+    RequiredLevel: ''
+    LogicalName: isbilled
+    DisplayName: ''
+    Description: ''
+    AttributeType: Boolean
+  -
+    RequiredLevel: ''
+    LogicalName: isbilledname
+    DisplayName: ''
+    Description: ''
+    AttributeType: Virtual
+  -
+    RequiredLevel: ''
+    LogicalName: ismapiprivate
+    DisplayName: ''
+    Description: ''
+    AttributeType: Boolean
+  -
+    RequiredLevel: ''
+    LogicalName: ismapiprivatename
+    DisplayName: ''
+    Description: ''
+    AttributeType: Virtual
+  -
+    RequiredLevel: ''
+    LogicalName: isregularactivity
+    DisplayName: ''
+    Description: ''
+    AttributeType: Boolean
+  -
+    RequiredLevel: ''
+    LogicalName: isregularactivityname
+    DisplayName: ''
+    Description: ''
+    AttributeType: Virtual
+  -
+    RequiredLevel: ''
+    LogicalName: isworkflowcreated
+    DisplayName: ''
+    Description: ''
+    AttributeType: Boolean
+  -
+    RequiredLevel: ''
+    LogicalName: isworkflowcreatedname
+    DisplayName: ''
+    Description: ''
+    AttributeType: Virtual
+  -
+    RequiredLevel: ''
+    LogicalName: lastonholdtime
+    DisplayName: ''
+    Description: ''
+    AttributeType: DateTime
+  -
+    RequiredLevel: ''
+    LogicalName: leftvoicemail
+    DisplayName: ''
+    Description: ''
+    AttributeType: Boolean
+  -
+    RequiredLevel: ''
+    LogicalName: leftvoicemailname
+    DisplayName: ''
+    Description: ''
+    AttributeType: Virtual
+  -
+    RequiredLevel: ''
+    LogicalName: modifiedby
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: modifiedbyexternalparty
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: modifiedbyexternalpartyname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: modifiedbyexternalpartyyominame
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: modifiedbyname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: modifiedbyyominame
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: modifiedon
+    DisplayName: ''
+    Description: ''
+    AttributeType: DateTime
+  -
+    RequiredLevel: ''
+    LogicalName: modifiedonbehalfby
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: modifiedonbehalfbyname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: modifiedonbehalfbyyominame
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: onholdtime
+    DisplayName: ''
+    Description: ''
+    AttributeType: Integer
+  -
+    RequiredLevel: ''
+    LogicalName: opportunityid
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: opportunityidname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: opportunityidtype
+    DisplayName: ''
+    Description: ''
+    AttributeType: EntityName
+  -
+    RequiredLevel: ''
+    LogicalName: opportunitystatecode
+    DisplayName: ''
+    Description: ''
+    AttributeType: Picklist
+  -
+    RequiredLevel: ''
+    LogicalName: opportunitystatecodename
+    DisplayName: ''
+    Description: ''
+    AttributeType: Virtual
+  -
+    RequiredLevel: ''
+    LogicalName: opportunitystatuscode
+    DisplayName: ''
+    Description: ''
+    AttributeType: Picklist
+  -
+    RequiredLevel: ''
+    LogicalName: opportunitystatuscodename
+    DisplayName: ''
+    Description: ''
+    AttributeType: Virtual
+  -
+    RequiredLevel: ''
+    LogicalName: optionalattendees
+    DisplayName: ''
+    Description: ''
+    AttributeType: PartyList
+  -
+    RequiredLevel: ''
+    LogicalName: organizer
+    DisplayName: ''
+    Description: ''
+    AttributeType: PartyList
+  -
+    RequiredLevel: ''
+    LogicalName: overriddencreatedon
+    DisplayName: ''
+    Description: ''
+    AttributeType: DateTime
+  -
+    RequiredLevel: ''
+    LogicalName: ownerid
+    DisplayName: ''
+    Description: ''
+    AttributeType: Owner
+  -
+    RequiredLevel: ''
+    LogicalName: owneridname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: owneridtype
+    DisplayName: ''
+    Description: ''
+    AttributeType: EntityName
+  -
+    RequiredLevel: ''
+    LogicalName: owneridyominame
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: owningbusinessunit
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: owningbusinessunitname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: owningteam
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: owninguser
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: partners
+    DisplayName: ''
+    Description: ''
+    AttributeType: PartyList
+  -
+    RequiredLevel: ''
+    LogicalName: postponeactivityprocessinguntil
+    DisplayName: ''
+    Description: ''
+    AttributeType: DateTime
+  -
+    RequiredLevel: ''
+    LogicalName: prioritycode
+    DisplayName: ''
+    Description: ''
+    AttributeType: Picklist
+  -
+    RequiredLevel: ''
+    LogicalName: prioritycodename
+    DisplayName: ''
+    Description: ''
+    AttributeType: Virtual
+  -
+    RequiredLevel: ''
+    LogicalName: processid
+    DisplayName: ''
+    Description: ''
+    AttributeType: Uniqueidentifier
+  -
+    RequiredLevel: ''
+    LogicalName: regardingobjectid
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: regardingobjectidname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: regardingobjectidyominame
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: regardingobjecttypecode
+    DisplayName: ''
+    Description: ''
+    AttributeType: EntityName
+  -
+    RequiredLevel: ''
+    LogicalName: requiredattendees
+    DisplayName: ''
+    Description: ''
+    AttributeType: PartyList
+  -
+    RequiredLevel: ''
+    LogicalName: resources
+    DisplayName: ''
+    Description: ''
+    AttributeType: PartyList
+  -
+    RequiredLevel: ''
+    LogicalName: scheduleddurationminutes
+    DisplayName: ''
+    Description: ''
+    AttributeType: Integer
+  -
+    RequiredLevel: ''
+    LogicalName: scheduledend
+    DisplayName: ''
+    Description: ''
+    AttributeType: DateTime
+  -
+    RequiredLevel: ''
+    LogicalName: scheduledstart
+    DisplayName: ''
+    Description: ''
+    AttributeType: DateTime
+  -
+    RequiredLevel: ''
+    LogicalName: sendermailboxid
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: sendermailboxidname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: senton
+    DisplayName: ''
+    Description: ''
+    AttributeType: DateTime
+  -
+    RequiredLevel: ''
+    LogicalName: seriesid
+    DisplayName: ''
+    Description: ''
+    AttributeType: Uniqueidentifier
+  -
+    RequiredLevel: ''
+    LogicalName: serviceid
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: serviceidname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: slaid
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: slainvokedid
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: slainvokedidname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: slaname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: sortdate
+    DisplayName: ''
+    Description: ''
+    AttributeType: DateTime
+  -
+    RequiredLevel: ''
+    LogicalName: stageid
+    DisplayName: ''
+    Description: ''
+    AttributeType: Uniqueidentifier
+  -
+    RequiredLevel: ''
+    LogicalName: statecode
+    DisplayName: ''
+    Description: ''
+    AttributeType: State
+  -
+    RequiredLevel: ''
+    LogicalName: statecodename
+    DisplayName: ''
+    Description: ''
+    AttributeType: Virtual
+  -
+    RequiredLevel: ''
+    LogicalName: statuscode
+    DisplayName: ''
+    Description: ''
+    AttributeType: Status
+  -
+    RequiredLevel: ''
+    LogicalName: statuscodename
+    DisplayName: ''
+    Description: ''
+    AttributeType: Virtual
+  -
+    RequiredLevel: ''
+    LogicalName: subcategory
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: subject
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: timezoneruleversionnumber
+    DisplayName: ''
+    Description: ''
+    AttributeType: Integer
+  -
+    RequiredLevel: ''
+    LogicalName: to
+    DisplayName: ''
+    Description: ''
+    AttributeType: PartyList
+  -
+    RequiredLevel: ''
+    LogicalName: transactioncurrencyid
+    DisplayName: ''
+    Description: ''
+    AttributeType: Lookup
+  -
+    RequiredLevel: ''
+    LogicalName: transactioncurrencyidname
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: traversedpath
+    DisplayName: ''
+    Description: ''
+    AttributeType: String
+  -
+    RequiredLevel: ''
+    LogicalName: utcconversiontimezonecode
+    DisplayName: ''
+    Description: ''
+    AttributeType: Integer
+  -
+    RequiredLevel: ''
+    LogicalName: versionnumber
+    DisplayName: ''
+    Description: ''
+    AttributeType: BigInt
+

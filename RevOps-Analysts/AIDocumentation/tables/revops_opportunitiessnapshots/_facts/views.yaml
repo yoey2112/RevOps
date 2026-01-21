@@ -1,0 +1,31 @@
+views:
+  -
+    name: Opportunities Snapshots
+    description: All active Opportunities Snapshots
+    querytype: 8192
+    savedqueryid: '752cd4fa-c966-ef11-a670-000d3af43335'
+  -
+    name: Opportunities Snapshot Associated View
+    querytype: 2
+    savedqueryid: '73deb0a1-11ce-45a6-acee-265d90d063e3'
+  -
+    name: Opportunities Snapshot Lookup View
+    querytype: 64
+    savedqueryid: '2a301d9a-0515-47dd-af1f-3375e153c08f'
+  -
+    name: All Opportunities Snapshots
+    querytype: -1
+    savedqueryid: 'd23227da-173d-4d71-8b77-345f6e21fc9f'
+  -
+    name: Opportunities Snapshot Advanced Find View
+    querytype: 1
+    savedqueryid: '16cbf628-aa0b-4f45-b6ad-3beee2d208a9'
+  -
+    name: Opportunities Snapshots Copilot View
+    querytype: 1048576
+    savedqueryid: '2f95c636-2a19-46d0-e5a0-738735f8e22d'
+  -
+    name: Quick Find Active Opportunities Snapshots
+    querytype: 4
+    savedqueryid: '3c299fb5-8473-4ca4-9647-a439f520acd0'
+

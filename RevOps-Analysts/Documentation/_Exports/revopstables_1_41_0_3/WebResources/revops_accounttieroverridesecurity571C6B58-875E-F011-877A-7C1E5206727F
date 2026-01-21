@@ -1,0 +1,25 @@
+function controlTierFieldsBasedOnRole(executionContext) {
+    var formContext = executionContext.getFormContext();
+    var userRoles = Xrm.Utility.getGlobalContext().userSettings.roles.getAll();
+    var hasAccess = false;
+
+    // Single shared Role ID across environments
+    var allowedRoleId = "90e19496-5dcb-ee11-9078-000d3af4c3b6";
+
+    for (var i = 0; i < userRoles.length; i++) {
+        var roleId = userRoles[i].id.replace(/[{}]/g, "").toLowerCase();
+        if (roleId === allowedRoleId) {
+            hasAccess = true;
+            break;
+        }
+    }
+
+    var fields = ["revops_tiermanualoverride", "revops_tieroverride"]; 
+
+    fields.forEach(function (fieldName) {
+        var control = formContext.getControl(fieldName);
+        if (control) {
+            control.setDisabled(!hasAccess);
+        }
+    });
+}

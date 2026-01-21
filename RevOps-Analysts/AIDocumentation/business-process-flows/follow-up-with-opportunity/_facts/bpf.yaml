@@ -1,0 +1,6 @@
+workflowid: '138acd55-4a5b-4fe8-9af7-abbe5b94745a'
+primaryentity: opportunity
+description: 'Use this task flow for quick communication with your customer. Access key information about your opportunity, along with information from the related contact and account.'
+uniquename: make_contact_on_opportunity
+name: Follow up with Opportunity
+

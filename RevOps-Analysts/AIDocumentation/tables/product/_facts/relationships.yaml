@@ -1,0 +1,377 @@
+relationships:
+  -
+    schemaname: Product_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: product
+  -
+    schemaname: Product_SharepointDocumentLocation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointdocumentlocation
+    referencedtablelogicalname: product
+  -
+    schemaname: Product_SharepointDocument
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointdocument
+    referencedtablelogicalname: product
+  -
+    schemaname: product_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: product
+  -
+    schemaname: userentityinstancedata_product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: product
+  -
+    schemaname: product_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: product
+  -
+    schemaname: product_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: product
+  -
+    schemaname: Product_DynamicProperty
+    relationshiptype: OneToMany
+    referencingtablelogicalname: dynamicproperty
+    referencedtablelogicalname: product
+  -
+    schemaname: Product_DynamicPropertyAssociation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: dynamicpropertyassociation
+    referencedtablelogicalname: product
+  -
+    schemaname: product_parent_product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: product
+    referencedtablelogicalname: product
+  -
+    schemaname: Product_ProductAssociation_AssocProd
+    relationshiptype: OneToMany
+    referencingtablelogicalname: productassociation
+    referencedtablelogicalname: product
+  -
+    schemaname: Product_ProductAssociation_Prod
+    relationshiptype: OneToMany
+    referencingtablelogicalname: productassociation
+    referencedtablelogicalname: product
+  -
+    schemaname: product_ProductSubstitute_substitutedproductid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: productsubstitute
+    referencedtablelogicalname: product
+  -
+    schemaname: product_ProductSubstitute_productid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: productsubstitute
+    referencedtablelogicalname: product
+  -
+    schemaname: product_price_levels
+    relationshiptype: OneToMany
+    referencingtablelogicalname: productpricelevel
+    referencedtablelogicalname: product
+  -
+    schemaname: product_contract_line_items
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contractdetail
+    referencedtablelogicalname: product
+  -
+    schemaname: product_incidents
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: product
+  -
+    schemaname: Product_Annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: product
+  -
+    schemaname: Product_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: product
+  -
+    schemaname: Product_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: product
+  -
+    schemaname: product_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: product
+  -
+    schemaname: Product_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_product_msdyn_customerasset_Product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_customerasset
+    referencedtablelogicalname: product
+  -
+    schemaname: opportunity_products
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunityproduct
+    referencedtablelogicalname: product
+  -
+    schemaname: product_invoice_details
+    relationshiptype: OneToMany
+    referencingtablelogicalname: invoicedetail
+    referencedtablelogicalname: product
+  -
+    schemaname: product_order_details
+    relationshiptype: OneToMany
+    referencingtablelogicalname: salesorderdetail
+    referencedtablelogicalname: product
+  -
+    schemaname: product_quote_details
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quotedetail
+    referencedtablelogicalname: product
+  -
+    schemaname: product_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_productmap_msdyn_productid_product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_productmap
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_product_msdyn_purchaseorderproduct_Product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_purchaseorderproduct
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_msdyn_budgetline_product_product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_budgetline
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_product_msdyn_actual_Product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_actual
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_product_msdyn_estimateline_Product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_estimateline
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_product_msdyn_fact_Product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_fact
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_product_msdyn_fieldcomputation_ProductId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_fieldcomputation
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_product_msdyn_invoicelinetransaction_Product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_invoicelinetransaction
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_product_msdyn_journal_Product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_journal
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_product_msdyn_journalline_Product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_journalline
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_product_msdyn_materialusagelog_Product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_materialusagelog
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_product_msdyn_orderlinetransaction_Product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_orderlinetransaction
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_product_msdyn_projectapproval_Product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectapproval
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_product_msdyn_projectvendorinvoiceline_Product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectvendorinvoiceline
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_product_msdyn_quotelinetransaction_Product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_quotelinetransaction
+    referencedtablelogicalname: product
+  -
+    schemaname: msdyn_product_msdyn_subcontractline_Product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_subcontractline
+    referencedtablelogicalname: product
+  -
+    schemaname: revops_accountpotentialtechstack_product_product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: product
+  -
+    schemaname: revops_accountproductsummary_productid_product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountproductsummary
+    referencedtablelogicalname: product
+  -
+    schemaname: revops_pricingrequest_product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: product
+  -
+    schemaname: revops_productsummary_productid_product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: product
+  -
+    schemaname: lk_productbase_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_product_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_productbase_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_product_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_products
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: organization
+  -
+    schemaname: processstage_products
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: processstage
+  -
+    schemaname: transactioncurrency_product
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: lk_product_entityimage
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: imagedescriptor
+  -
+    schemaname: lk_externalparty_product_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: externalparty
+  -
+    schemaname: lk_externalparty_product_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: externalparty
+  -
+    schemaname: price_level_products
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: pricelevel
+  -
+    schemaname: product_parent_product
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: product
+  -
+    schemaname: subject_products
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: subject
+  -
+    schemaname: unit_of_measurement_products
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: uom
+  -
+    schemaname: unit_of_measurement_schedule_products
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: uomschedule
+  -
+    schemaname: msdyn_msdyn_transactioncategory_product_TransactionCategory
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: msdyn_transactioncategory
+  -
+    schemaname: revops_solution_Product
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: product
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: campaignproduct_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: product
+  -
+    schemaname: product_entitlement_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: product
+    referencedtablelogicalname: entitlement
+  -
+    schemaname: product_entitlementtemplate_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: product
+    referencedtablelogicalname: entitlementtemplate
+  -
+    schemaname: product_knowledgebaserecord
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: product
+    referencedtablelogicalname: knowledgebaserecord
+  -
+    schemaname: msdyn_product_knowledgearticle
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: product
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: leadproduct_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: product
+  -
+    schemaname: productsalesliterature_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: product
+    referencedtablelogicalname: salesliterature
+  -
+    schemaname: competitorproduct_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: competitor
+    referencedtablelogicalname: product
+  -
+    schemaname: adx_accountproduct
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: product
+  -
+    schemaname: adx_contactproduct
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: product
+

@@ -1,0 +1,6 @@
+schema_version: 1
+pluginassemblyid: 'f5a10995-357b-4b89-af82-ad395cd4357e'
+name: RevOps.Plugins.CaseInteractionStamper
+version: '1.0.0.0'
+publickeytoken: '7d35e700d390c80a'
+

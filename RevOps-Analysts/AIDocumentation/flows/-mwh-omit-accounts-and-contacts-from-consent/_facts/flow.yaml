@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: 'd0f6ec6a-023b-f011-b4cc-7ced8d063295'
+name: '[MWH] - omit accounts and contacts from consent'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

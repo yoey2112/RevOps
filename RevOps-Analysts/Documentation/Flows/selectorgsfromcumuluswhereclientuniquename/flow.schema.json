@@ -1,0 +1,117 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_powerbi": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "cr49f_sharedpowerbi_34e38"
+        },
+        "api": {
+          "name": "shared_powerbi"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "699a1afb-9396-4195-8130-aed3d3ed6f13"
+          },
+          "type": "Request",
+          "kind": "PowerAppV2",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "title": "ClientUniqueName",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "ClientUniqueName",
+                  "x-ms-content-hint": "TEXT"
+                }
+              },
+              "required": [
+                "text"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Exécuter_une_requête_sur_un_jeu_de_données": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "d1abad0f-38fc-4770-a658-0c1fb2ba33c2"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_powerbi",
+              "operationId": "ExecuteDatasetQuery",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_powerbi"
+            },
+            "parameters": {
+              "groupid": "myworkspace",
+              "datasetid": "dcccb768-879f-4438-96fa-7e0a4a8200e5",
+              "specification/query": "// DAX Query\nDEFINE\n  VAR __DS0FilterTable = \n    TREATAS({\"@{triggerBody()['text']}\"}, 'External_Reporting Organizations'[ClientUniqueName])\n\n  VAR __DS0Core = \n    CALCULATETABLE(\n      SUMMARIZE(\n        'External_Reporting Organizations',\n        'External_Reporting Organizations'[OrganizationUniqueName],\n        'External_Reporting Organizations'[O365TenantId],\n        'External_Reporting Organizations'[ClientUniqueName],\n        'External_Reporting Organizations'[O365DomainName]\n      ),\n      KEEPFILTERS(__DS0FilterTable)\n    )\n\n  VAR __DS0PrimaryWindowed = \n    TOPN(\n      1100,\n      __DS0Core,\n      'External_Reporting Organizations'[ClientUniqueName],\n      1,\n      'External_Reporting Organizations'[OrganizationUniqueName],\n      1,\n      'External_Reporting Organizations'[O365TenantId],\n      1,\n      'External_Reporting Organizations'[O365DomainName],\n      1\n    )\n\nEVALUATE\n  __DS0PrimaryWindowed\n\nORDER BY\n  'External_Reporting Organizations'[ClientUniqueName],\n  'External_Reporting Organizations'[OrganizationUniqueName],\n  'External_Reporting Organizations'[O365TenantId],\n  'External_Reporting Organizations'[O365DomainName]",
+              "specification/serializerSettings/includeNulls": false
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Réponse": {
+          "runAfter": {
+            "Exécuter_une_requête_sur_un_jeu_de_données": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ee57b2ec-b933-4ded-9b1b-7e0c1beadd1d"
+          },
+          "type": "Response",
+          "kind": "Http",
+          "inputs": {
+            "statusCode": 200,
+            "body": "@outputs('Exécuter_une_requête_sur_un_jeu_de_données')?['body/firstTableRows']",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "External_Reporting Organizations[OrganizationUniqueName]": {
+                    "type": "string"
+                  },
+                  "External_Reporting Organizations[O365TenantId]": {
+                    "type": "string"
+                  },
+                  "External_Reporting Organizations[ClientUniqueName]": {
+                    "type": "string"
+                  },
+                  "External_Reporting Organizations[O365DomainName]": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

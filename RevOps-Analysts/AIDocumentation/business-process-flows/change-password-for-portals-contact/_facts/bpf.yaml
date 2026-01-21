@@ -1,0 +1,6 @@
+workflowid: 'c2857b63-8fa7-473d-8e2f-112c232cebd8'
+primaryentity: contact
+description: Use this task flow to change password for a portal contact
+uniquename: adx_change_password
+name: Change Password for Portals Contact
+

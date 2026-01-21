@@ -1,0 +1,132 @@
+relationships:
+  -
+    schemaname: revops_cumulusorganization_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_cumulusorganization_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_cumulusorganization_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_cumulusorganization_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_cumulusorganization_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_cumulusorganization_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_cumulusorganization_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_cumulusorganization_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_cumulusorganization_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_cumulusorganization_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_incident_cumulusorganization_revops_cumulusorganization
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_lateralmove_gainingorg_revops_cumulusorganization
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_lateralmove_losingorg_revops_cumulusorganization
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_platformsettings_organization_revops_cumulusorganization
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_platformsettings
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_transfer_cumulusorganization_revops_cumulusorganization
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_msdyn_project_cumulusorganization_revops_cumulusorganization
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_project
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: lk_revops_cumulusorganization_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusorganization
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_cumulusorganization_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusorganization
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_cumulusorganization_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusorganization
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_cumulusorganization_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusorganization
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_revops_cumulusorganization
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusorganization
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_revops_cumulusorganization
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusorganization
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_revops_cumulusorganization
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusorganization
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_revops_cumulusorganization
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusorganization
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: revops_cumulusorganization_cumulusaccount_revops_cumulusaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusorganization
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_cumulusorganization_parentaccount_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_cumulusorganization
+    referencedtablelogicalname: account
+

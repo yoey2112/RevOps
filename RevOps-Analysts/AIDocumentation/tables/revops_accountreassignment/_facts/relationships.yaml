@@ -1,0 +1,102 @@
+relationships:
+  -
+    schemaname: revops_accountreassignment_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_accountreassignment
+  -
+    schemaname: revops_accountreassignment_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_accountreassignment
+  -
+    schemaname: revops_accountreassignment_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_accountreassignment
+  -
+    schemaname: revops_accountreassignment_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_accountreassignment
+  -
+    schemaname: revops_accountreassignment_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_accountreassignment
+  -
+    schemaname: revops_accountreassignment_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_accountreassignment
+  -
+    schemaname: revops_accountreassignment_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_accountreassignment
+  -
+    schemaname: revops_accountreassignment_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_accountreassignment
+  -
+    schemaname: revops_accountreassignment_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_accountreassignment
+  -
+    schemaname: revops_accountreassignment_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_accountreassignment
+  -
+    schemaname: lk_revops_accountreassignment_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountreassignment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_accountreassignment_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountreassignment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_accountreassignment_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountreassignment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_accountreassignment_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountreassignment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_accountreassignment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountreassignment
+    referencedtablelogicalname: organization
+  -
+    schemaname: revops_accountreassignment_account_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountreassignment
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_accountreassignment_from_systemuser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountreassignment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_accountreassignment_fromteam_team
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountreassignment
+    referencedtablelogicalname: team
+  -
+    schemaname: revops_accountreassignment_to_systemuser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountreassignment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_accountreassignment_toteam_team
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountreassignment
+    referencedtablelogicalname: team
+

@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 4
+    uniquename: Customerservicehub
+    appmoduleid: '39e7c089-0f20-ef11-840b-6045bd5ea018'
+    name: Customer Service Hub
+

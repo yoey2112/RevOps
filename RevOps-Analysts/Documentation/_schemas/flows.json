@@ -1,0 +1,1259 @@
+[
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "account-backfillchannelrelationship"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "account-created-in-cumulus"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "account-setcumulusaccountcreatedonopps"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  1,
+        "FolderName":  "account-setterritoryonaccount"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "accountcreatedincumulus"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "accountownershipchangenotification"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  1,
+        "FolderName":  "accountproductsummary-copyaccountkey"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "accounts-manual-fixgenericdomainsformat"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  1,
+        "FolderName":  "accountsolutionssummary-copyaccountkey"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "activityemail-stampsqldate"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "activityphone-stampsqldate"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "activitytasks-stampsqldate"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "assignsmeengagementtoobjectowner"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "attachfiletoasana"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "audienceimport-upsertcontactandassociate"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "bulkresolvecases"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "calendlycreateandupdatealeadwhenacalendlyeventiscr"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "case-sendnotificationtoownerwhenacustomerreplies"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "casequeueupdate-updatequeueitem"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "caseresolutionsurvey"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "casetonice"
+    },
+    {
+        "TriggerType":  "ApiConnectionWebhook",
+        "ActionCount":  1,
+        "FolderName":  "commitmentagreementform"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  1,
+        "FolderName":  "competitor-createcurrentproviderwhenacompetitorisc"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "contact-extractdomainfromemail"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "contact-extractdomainfromemailselectingrows"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "contact-resolveaccountbydomain"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "contact-resolveaccountbydomainselectrow"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "conversationstonice"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "createcasefrommigrationrequest"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "createcasefromzabbixalert"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  1,
+        "FolderName":  "createworkitem-approveenablemailbox"
+    },
+    {
+        "TriggerType":  "Recurrence",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "cs-automatedunresponsiveprocess"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "cs-casecreateformanualaccountcreationforukpartners"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "cs-notifymanagerofcustomerescalation"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "cumulusaccountmanager-teamcreatedorupdated"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "cumulusaccountmanager-usercreatedorupdated"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "cumulusaccountmanagerupdate"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "cumulususercreated"
+    },
+    {
+        "TriggerType":  "Recurrence",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "dailytierupdatepermrr"
+    },
+    {
+        "TriggerType":  "Recurrence",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "day0-cumulusces"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "enrichaccount-manual"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "enrichaccount-oncreate"
+    },
+    {
+        "TriggerType":  "Recurrence",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "enrichaccount-scheduled"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "enrichcontact-manual"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "enrichcontact-oncreate"
+    },
+    {
+        "TriggerType":  "Recurrence",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "enrichcontact-scheduled"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "enrichlead-oncreate"
+    },
+    {
+        "TriggerType":  "Recurrence",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "enrichlead-scheduled"
+    },
+    {
+        "TriggerType":  "OpenApiConnection",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "events-scannedimportconnectiontoeventandmore"
+    },
+    {
+        "TriggerType":  "Recurrence",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "fillparentaccountofcumulusaccount"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "fixaccountswithoutname"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "fixprimarycontactonaccount"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "formsubmission-manualparsingutmvalues"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "formsubmission-parsingutmvalues"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "formsubmission-utmshenanigansenrichmentconsentproc"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "globalpittier"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "gtwgetcheck-ins"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "gtwregistrantadded"
+    },
+    {
+        "TriggerType":  "OpenApiConnection",
+        "ActionCount":  1,
+        "FolderName":  "gtwwebinariscreated"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "incomingemailsetcustomerresponded"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "incomingportalcommentsetcustomerresponded"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "incompletecart"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "iso-3166-cumulus-account-to-account"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "iso3166cumulusaccounttoaccount-manual"
+    },
+    {
+        "TriggerType":  "Recurrence",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "iso3166cumulusaccounttoaccount-scheduled"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "journey-customtriggerforlead"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "journeydcij-websitecontactformsubmitted"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "lead-checkparentaccountrelationshipfortradeshowlea"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  1,
+        "FolderName":  "lead-disqualifyhoneypotfieldcontainsdata"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "lead-extractdomainfromemail"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  1,
+        "FolderName":  "lead-mqldate"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "lead-resolveaccountbydomain"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "lead-resolvecontactbyemail"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  1,
+        "FolderName":  "lead-setterritoryonlead"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "leadnotifyuserwhenassigned"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  1,
+        "FolderName":  "leadukcookiefallbackterritory"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "linkcumulusaccountstoparentaccounts"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "linkcumulususercontacttoaccount"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "linkcumulususerstocontact"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "marketing-closeassetfromcampaign"
+    },
+    {
+        "TriggerType":  "Recurrence",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "marketing-reportinactivecampaignowner"
+    },
+    {
+        "TriggerType":  "Recurrence",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "marketing-reviewproposedenddate"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "mwh-omitaccountsandcontactsfromconsent"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "opportunity-createopportunitiesfromaccountpotentia"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "opportunity-setcurrentbpfstage-sherweboppbpf"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "opportunity-setcurrentbpfstage-sherwebsalesbpf"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "opportunity-updatesolutionsummary"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "opportunitysolution-createsolutionsummary"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  1,
+        "FolderName":  "opportunityupdateprobabilitywhenwon"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  1,
+        "FolderName":  "organizationcreatedordeletedincumulus"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "p2pautomation"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "p2ptransfernotifications"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "p2ptransferpopulationfromcase"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "phonecall-addnotestodescription"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "queueitemownershipchangebasedoncaseownership"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "queueitemreleasesetcaseowner"
+    },
+    {
+        "TriggerType":  "Recurrence",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "revopschangelog"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "selectorgsfromcumuluswhereclientuniquename"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "sendp2ptransfer"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "setcaselookupvalueoncustomerfeedbacksurveyresponse"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "setcustomerverifiedresolutionvalue"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "setsupportedservicecolumn-emailchannel"
+    },
+    {
+        "TriggerType":  "Recurrence",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "updatecurrencyexchangerates"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1
+                        ],
+        "FolderName":  "updatelastinteraction-email"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  1,
+        "FolderName":  "updatelastinteraction-note"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  1,
+        "FolderName":  "updatelastinteraction-portalcomment"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "veeam-contractrequest"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  1,
+        "FolderName":  "vendoraccount-createsolutionproviderfromvendor"
+    },
+    {
+        "TriggerType":  "OpenApiConnectionWebhook",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "vmware-contractrequest"
+    },
+    {
+        "TriggerType":  "Request",
+        "ActionCount":  [
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
+                        ],
+        "FolderName":  "zremovejourneymanualdcij-websitecontactformsubmitt"
+    }
+]

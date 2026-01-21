@@ -1,0 +1,14 @@
+revops_averageclientsize: |-
+    =If(
+        revops_nocustomers = 0,
+        Blank(),
+        revops_noendpoints / revops_nocustomers
+    )
+revops_tier: |
+    =If(revops_tiermanualoverride,revops_tieroverridevalue,
+    If(If(transactioncurrencyid.isocurrencycode="CAD",Decimal(revops_monthlyrecurringrevenue),Decimal(revops_mrrcad))=0,Blank(),
+    If(If(transactioncurrencyid.isocurrencycode="CAD",Decimal(revops_monthlyrecurringrevenue),Decimal(revops_mrrcad))<=999,"Tier 6",
+    If(If(transactioncurrencyid.isocurrencycode="CAD",Decimal(revops_monthlyrecurringrevenue),Decimal(revops_mrrcad))<=9999,"Tier 5",
+    If(If(transactioncurrencyid.isocurrencycode="CAD",Decimal(revops_monthlyrecurringrevenue),Decimal(revops_mrrcad))<=24999,"Tier 4",
+    If(If(transactioncurrencyid.isocurrencycode="CAD",Decimal(revops_monthlyrecurringrevenue),Decimal(revops_mrrcad))<=74999,"Tier 3",
+    If(If(transactioncurrencyid.isocurrencycode="CAD",Decimal(revops_monthlyrecurringrevenue),Decimal(revops_mrrcad))<=349999,"Tier 2","Tier 1")))))))

@@ -1,0 +1,100 @@
+views:
+  -
+    name: Sessions in the same event
+    querytype: 2
+    savedqueryid: '2add4f27-4768-e611-80d6-00155d890261'
+  -
+    name: Simultaneous sessions
+    querytype: 2
+    savedqueryid: '86a3c19b-c96a-e611-80d6-00155d890261'
+  -
+    name: Active sessions with templates
+    description: 'This view displays all active sessions, including those used in event templates'
+    querytype: -1
+    savedqueryid: '709e1fcc-7ac4-e711-80f9-00155d991f92'
+  -
+    name: Active sessions with templates for event form
+    description: 'This view displays all the active sessions, including those included in event templates'
+    querytype: -1
+    savedqueryid: '1d92babd-c359-e811-8101-00155d991fa5'
+  -
+    name: My sessions
+    querytype: 8192
+    savedqueryid: 'bd1e7527-e50d-e611-80d3-00155db19170'
+  -
+    name: 'Active sessions with check-ins'
+    querytype: 2
+    savedqueryid: 'f71d9299-c45f-e611-80d6-00155db669f6'
+  -
+    name: Active event sessions subgrid
+    querytype: 2
+    savedqueryid: 'e3c502b9-4623-e611-80d5-00155db7562a'
+  -
+    name: Active sessions records view
+    querytype: 2
+    savedqueryid: '549748dd-ab13-e611-80d3-00155db852b2'
+  -
+    name: Active sessions of the event
+    querytype: 2
+    savedqueryid: '9df1dade-6c1b-e611-80d3-00155db852b2'
+  -
+    name: Active event session view
+    querytype: 2
+    savedqueryid: '15d395ed-7117-e611-80d6-00155ded2f1b'
+  -
+    name: Event registration session view
+    querytype: 2
+    savedqueryid: '8802b1f2-c11d-e611-80d6-00155ded2f1b'
+  -
+    name: msevtmgt_ContactMainEventsAttended
+    description: The view used on the "Events attended" tab of main contact form
+    querytype: 2
+    savedqueryid: 'c3982f4b-933f-e611-80d6-00155df8bf02'
+  -
+    name: Sessions for the speaker
+    description: The view used in the subgrid on the "General" tab of the main speaker form
+    querytype: 2
+    savedqueryid: '2af536ad-8442-e611-80d6-00155df8bf02'
+  -
+    name: Simultaneous sessions
+    description: The view used in the "Simultaneous sessions" subgrid of the main speaker form
+    querytype: 2
+    savedqueryid: '3b2109a1-c642-e611-80d6-00155df8bf02'
+  -
+    name: Pass eligible sessions
+    querytype: -1
+    savedqueryid: '12a44002-84ed-4fcb-b64b-57e35544a48d'
+  -
+    name: Active sessions with Teams streaming
+    querytype: 64
+    savedqueryid: '67e1e803-e30b-440e-ae67-6a5599dbb10c'
+  -
+    name: Session associated view
+    querytype: 2
+    savedqueryid: 'd9056af4-b9cb-419b-890f-6ddd061a8839'
+  -
+    name: Session advanced find view
+    querytype: 1
+    savedqueryid: 'd17a8f34-fef1-4f5c-8669-8fb3bedefe91'
+  -
+    name: Active sessions with templates for calendar
+    description: 'This view displays all the active sessions, including those included in event templates, for calendar control'
+    querytype: -1
+    savedqueryid: 'db5a349e-e37d-e811-8105-c9d2d16f1713'
+  -
+    name: Quick find active sessions
+    querytype: 4
+    savedqueryid: '12889f9b-8338-4a1c-89d3-d61130979d71'
+  -
+    name: Session Lookup View
+    querytype: 64
+    savedqueryid: 'cad095a2-4e3b-46af-b52f-eb75232aae24'
+  -
+    name: Active sessions
+    querytype: -1
+    savedqueryid: '0969db91-8faa-482c-b745-fb244cd5513d'
+  -
+    name: Inactive sessions
+    querytype: -1
+    savedqueryid: '59c95b5b-3b30-4728-af25-fd9ca9ea9b36'
+

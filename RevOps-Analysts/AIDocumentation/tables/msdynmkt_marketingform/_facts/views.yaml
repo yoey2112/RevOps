@@ -1,0 +1,40 @@
+views:
+  -
+    name: My Marketing Forms
+    description: Active Marketing Forms owned by me
+    querytype: 8192
+    savedqueryid: 'b8b5e855-d8eb-ec11-bb3e-000d3a5bc91c'
+  -
+    name: Quick Find Active Marketing Forms
+    querytype: 4
+    savedqueryid: 'df4f7c20-2f27-4157-bb03-03c17a94c125'
+  -
+    name: Marketing Form Lookup View
+    querytype: 64
+    savedqueryid: '16af754d-8d9e-4ea1-a4a1-37320e5cb94f'
+  -
+    name: Marketing Form Associated View
+    querytype: 2
+    savedqueryid: '8dca6b08-e23a-4a05-8e45-41759a9eb9ce'
+  -
+    name: Active Forms Extended View
+    description: view with additional columns
+    querytype: -1
+    savedqueryid: '3c672faf-0533-ef11-8e4e-6045bdcd5e88'
+  -
+    name: Active Marketing Forms
+    querytype: -1
+    savedqueryid: 'ee03f983-338b-4ba4-88d8-80e8f44a9bb2'
+  -
+    name: Inactive Marketing Forms
+    querytype: -1
+    savedqueryid: '53e667ee-0067-4c5c-a83a-85af723ace3c'
+  -
+    name: Marketing Form Advanced Find View
+    querytype: 1
+    savedqueryid: '77fb1a00-09e9-474c-83a1-8757b4182ae8'
+  -
+    name: Registration Form Lookup View
+    querytype: 64
+    savedqueryid: '5d1d3182-ed92-4aaf-9b58-f415f3bfdbc4'
+

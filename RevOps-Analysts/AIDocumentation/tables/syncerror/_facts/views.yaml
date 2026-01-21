@@ -1,0 +1,28 @@
+views:
+  -
+    name: Quick Find Sync Error
+    description: Quick Find View for sync error
+    querytype: 4
+    savedqueryid: '5534cb9c-2c64-4f49-ab9f-02cc4c59e363'
+  -
+    name: Resolved Sync Errors
+    querytype: -1
+    savedqueryid: '796d59aa-d107-4715-a714-2f3635339e55'
+  -
+    name: Active Sync Errors
+    querytype: -1
+    savedqueryid: '0260e3d2-d566-422d-8200-301a4bf6752a'
+  -
+    name: All Sync Errors
+    querytype: -1
+    savedqueryid: '92f43284-93e8-43ea-a6cb-7f6bb24259e9'
+  -
+    name: My Active Sync Errors
+    querytype: -1
+    savedqueryid: 'f1203e8b-6c6a-4210-906e-8428cb1fde68'
+  -
+    name: Sync Error Advanced Find View
+    description: Advanced Find view for Sync Error
+    querytype: 1
+    savedqueryid: '1506e990-ffd9-45c2-ade4-c97c05254f70'
+

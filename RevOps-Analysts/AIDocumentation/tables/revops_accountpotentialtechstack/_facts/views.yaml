@@ -1,0 +1,31 @@
+views:
+  -
+    name: Account Potential / Tech Stacks
+    description: All active Account Potential / Tech Stacks
+    querytype: 8192
+    savedqueryid: '88a1f7ee-b91e-ef11-840b-000d3af43335'
+  -
+    name: Account Potential / Tech Stack Associated View
+    querytype: 2
+    savedqueryid: '80698734-6d05-42eb-83c4-31235c5b1ab3'
+  -
+    name: Quick Find Active Account Potential / Tech Stacks
+    querytype: 4
+    savedqueryid: '8e0f0e99-8e26-43f1-950a-5d9525bd84ea'
+  -
+    name: Account Potential / Tech Stack Advanced Find View
+    querytype: 1
+    savedqueryid: '883250e6-7202-421e-a8de-6d2fb0eb2c11'
+  -
+    name: Active Account Potential / Tech Stacks
+    querytype: -1
+    savedqueryid: '8ee21b4c-a79f-4ad2-8cc5-c55592d95d44'
+  -
+    name: Account Potential / Tech Stack Lookup View
+    querytype: 64
+    savedqueryid: '21969a1d-4dd0-4cfc-82fc-ceb698e2dfd8'
+  -
+    name: Inactive Account Potential / Tech Stacks
+    querytype: -1
+    savedqueryid: '27c1cf4b-7b8c-4975-8227-d3db566c63bf'
+

@@ -1,0 +1,287 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msevtmgt_name
+        field: msevtmgt_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick View
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: section_general
+        tab: tab_general
+        visible: true
+      -
+        label: Notes
+        name: ''
+        tab: tab_general
+        visible: true
+    fields:
+      -
+        section: section_general
+        tab: tab_general
+        disabled: false
+        visible: true
+        control_id: msevtmgt_registrationidfromqr
+        field: msevtmgt_registrationidfromqr
+      -
+        section: section_general
+        tab: tab_general
+        disabled: false
+        visible: true
+        control_id: msevtmgt_registrationid
+        field: msevtmgt_registrationid
+      -
+        section: section_general
+        tab: tab_general
+        disabled: true
+        visible: true
+        control_id: msevtmgt_contact
+        field: msevtmgt_contact
+      -
+        section: section_general
+        tab: tab_general
+        disabled: true
+        visible: true
+        control_id: msevtmgt_event
+        field: msevtmgt_event
+      -
+        section: section_general
+        tab: tab_general
+        disabled: false
+        visible: true
+        control_id: msevtmgt_checkintype
+        field: msevtmgt_checkintype
+      -
+        section: section_general
+        tab: tab_general
+        disabled: false
+        visible: true
+        control_id: revops_attendancetype
+        field: revops_attendancetype
+      -
+        section: section_general
+        tab: tab_general
+        disabled: false
+        visible: true
+        control_id: revops_levelofinterest
+        field: revops_levelofinterest
+      -
+        section: section_general
+        tab: tab_general
+        disabled: false
+        visible: true
+        control_id: msevtmgt_sessionregistration
+        field: msevtmgt_sessionregistration
+      -
+        section: section_general
+        tab: tab_general
+        disabled: true
+        visible: true
+        control_id: msevtmgt_sessionattended
+        field: msevtmgt_sessionattended
+      -
+        section: section_general
+        tab: tab_general
+        disabled: true
+        visible: true
+        control_id: msevtmgt_viewingdurationinmins
+        field: msevtmgt_viewingdurationinmins
+      -
+        section: section_general
+        tab: tab_general
+        disabled: false
+        visible: true
+        control_id: msevtmgt_numberofquestionsasked
+        field: msevtmgt_numberofquestionsasked
+      -
+        section: section_general
+        tab: tab_general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_msevtmgt_name
+        field: msevtmgt_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msevtmgt_checkintime
+        field: msevtmgt_checkintime
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msevtmgt_checkouttime
+        field: msevtmgt_checkouttime
+    description: A form for this entity
+    tabs:
+      -
+        label: General
+        name: tab_general
+        visible: true
+        expanded: true
+    field_count: 15
+    type_name: Main
+  -
+    name: Quick create form
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: Section
+        name: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        visible: true
+      -
+        label: Section
+        name: GeneralTab_column_2_section_1
+        tab: GeneralTab
+        visible: true
+      -
+        label: Section
+        name: GeneralTab_column_3_section_1
+        tab: GeneralTab
+        visible: true
+    fields:
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: true
+        visible: true
+        control_id: msevtmgt_name
+        field: msevtmgt_name
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_checkintime
+        field: msevtmgt_checkintime
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_checkouttime
+        field: msevtmgt_checkouttime
+      -
+        section: GeneralTab_column_2_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_registrationidfromqr
+        field: msevtmgt_registrationidfromqr
+      -
+        section: GeneralTab_column_2_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_registrationid
+        field: msevtmgt_registrationid
+      -
+        section: GeneralTab_column_2_section_1
+        tab: GeneralTab
+        disabled: true
+        visible: true
+        control_id: msevtmgt_contact
+        field: msevtmgt_contact
+      -
+        section: GeneralTab_column_2_section_1
+        tab: GeneralTab
+        disabled: true
+        visible: true
+        control_id: msevtmgt_event
+        field: msevtmgt_event
+      -
+        section: GeneralTab_column_2_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_checkintype
+        field: msevtmgt_checkintype
+      -
+        section: GeneralTab_column_2_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_sessionregistration
+        field: msevtmgt_sessionregistration
+      -
+        section: GeneralTab_column_2_section_1
+        tab: GeneralTab
+        disabled: true
+        visible: true
+        control_id: msevtmgt_sessionattended
+        field: msevtmgt_sessionattended
+      -
+        section: GeneralTab_column_2_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_numberofquestionsasked
+        field: msevtmgt_numberofquestionsasked
+      -
+        section: GeneralTab_column_2_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: GeneralTab_column_2_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: revops_levelofinterest
+        field: revops_levelofinterest
+    description: null
+    tabs:
+      -
+        label: Tab
+        name: GeneralTab
+        visible: true
+        expanded: true
+    field_count: 13
+    type_name: Quick Create
+

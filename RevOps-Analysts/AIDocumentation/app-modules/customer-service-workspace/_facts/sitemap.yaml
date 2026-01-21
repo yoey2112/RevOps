@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 4
+    uniquename: msdyn_CustomerServiceWorkspace
+    appmoduleid: 'afc40e42-2d20-ef11-840b-6045bd5ea018'
+    name: Customer Service workspace
+

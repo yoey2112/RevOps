@@ -1,0 +1,68 @@
+views:
+  -
+    name: Copy Project Columns
+    description: List of Project fields to be copied when copying the project.
+    querytype: -1
+    savedqueryid: '1f441532-1e52-ea11-a81e-000d3a015cf2'
+  -
+    name: Copy Project V4 Dialog Target Project View
+    querytype: -1
+    savedqueryid: 'ab2d3606-a43f-f011-b4cf-000d3a36c497'
+  -
+    name: My Active Projects Membership Lookup
+    querytype: -1
+    savedqueryid: '96e491ff-da24-e911-817c-000d3afda7b9'
+  -
+    name: Current And Upcoming Projects
+    querytype: -1
+    savedqueryid: '503325ff-e9f5-e411-80c5-00155d2390d0'
+  -
+    name: All Active Projects
+    querytype: -1
+    savedqueryid: 'bfca68ee-cab3-e511-80e4-00155db8d81d'
+  -
+    name: My Team's Active Projects
+    querytype: -1
+    savedqueryid: '57939b7c-cdb3-e511-80e4-00155db8d81d'
+  -
+    name: My Projects
+    querytype: 8192
+    savedqueryid: '8584a780-7f43-e411-80c7-00155db9b402'
+  -
+    name: 'Projects - Conversion in progress'
+    description: 'Projects converting from Upgraded projects to Project for the Web. '
+    querytype: -1
+    savedqueryid: 'ba9fa668-fc40-ed11-bba3-0022482aea8f'
+  -
+    name: import eligible project
+    querytype: -1
+    savedqueryid: '2b02b13a-3a1f-f011-9989-6045bd0a5f60'
+  -
+    name: Quick Find Active Projects
+    querytype: 4
+    savedqueryid: '611e38bd-6663-405c-86f2-6721ab3c181b'
+  -
+    name: Project Advanced Find View
+    querytype: 1
+    savedqueryid: 'dc64c75c-618b-4065-ad3c-68f513c8cc64'
+  -
+    name: Closed Projects
+    querytype: -1
+    savedqueryid: 'bde03271-faca-41b1-a0e8-95d1102059f6'
+  -
+    name: All Projects
+    querytype: -1
+    savedqueryid: '4f49784e-7370-4441-b54e-bf7be616f312'
+  -
+    name: Project Associated View
+    querytype: 2
+    savedqueryid: '5ffc1c17-efef-43f7-b9ef-c383fdc52470'
+  -
+    name: My Active Projects
+    querytype: -1
+    savedqueryid: 'a18e3a4a-429d-4a98-9466-f7aa7068b5c3'
+  -
+    name: Project Lookup View
+    querytype: 64
+    savedqueryid: 'c6646673-0205-4f29-a267-fdbf47b078b4'
+

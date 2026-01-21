@@ -1,0 +1,366 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Section
+        name: tab_recordwall_section_1
+        tab: tab_recordwall
+        visible: true
+      -
+        label: Competitor Information
+        name: competitor information
+        tab: general
+        visible: true
+      -
+        label: Address
+        name: address
+        tab: general
+        visible: true
+      -
+        label: Analysis
+        name: analysis
+        tab: analysis
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: notes
+        visible: true
+    fields:
+      -
+        section: competitor information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: competitor information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: websiteurl
+        field: websiteurl
+      -
+        section: competitor information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: stockexchange
+        field: stockexchange
+      -
+        section: competitor information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: competitor information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: keyproduct
+        field: keyproduct
+      -
+        section: competitor information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: reportedrevenue
+        field: reportedrevenue
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_line1
+        field: address1_line1
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_stateorprovince
+        field: address1_stateorprovince
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_line2
+        field: address1_line2
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_postalcode
+        field: address1_postalcode
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_line3
+        field: address1_line3
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_country
+        field: address1_country
+      -
+        section: address
+        tab: general
+        disabled: false
+        visible: true
+        control_id: address1_city
+        field: address1_city
+      -
+        section: analysis
+        tab: analysis
+        disabled: false
+        visible: true
+        control_id: overview
+        field: overview
+      -
+        section: analysis
+        tab: analysis
+        disabled: false
+        visible: true
+        control_id: strengths
+        field: strengths
+      -
+        section: analysis
+        tab: analysis
+        disabled: false
+        visible: true
+        control_id: weaknesses
+        field: weaknesses
+      -
+        section: analysis
+        tab: analysis
+        disabled: false
+        visible: true
+        control_id: opportunities
+        field: opportunities
+      -
+        section: analysis
+        tab: analysis
+        disabled: false
+        visible: true
+        control_id: threats
+        field: threats
+    description: A form for this entity.
+    tabs:
+      -
+        label: What's New
+        name: tab_recordwall
+        visible: true
+        expanded: false
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: Analysis
+        name: analysis
+        visible: true
+        expanded: true
+      -
+        label: Notes
+        name: notes
+        visible: true
+        expanded: false
+    field_count: 18
+    type_name: Main
+  -
+    name: Competitor
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Competitor Information
+        name: Competitor Information
+        tab: COMPETITOR
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: COMPETITOR
+        visible: true
+      -
+        label: Analysis
+        name: analysis
+        tab: COMPETITOR
+        visible: true
+      -
+        label: Opportunity
+        name: Opportunity
+        tab: opportunities
+        visible: true
+      -
+        label: OpportunitiesChart
+        name: OpportunitiesChart
+        tab: opportunities
+        visible: true
+      -
+        label: New Section
+        name: tab_3_section_1
+        tab: tab_3
+        visible: true
+    fields:
+      -
+        section: Competitor Information
+        tab: COMPETITOR
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: Competitor Information
+        tab: COMPETITOR
+        disabled: false
+        visible: true
+        control_id: websiteurl
+        field: websiteurl
+      -
+        section: Competitor Information
+        tab: COMPETITOR
+        disabled: false
+        visible: true
+        control_id: transactioncurrencyid
+        field: transactioncurrencyid
+      -
+        section: Competitor Information
+        tab: COMPETITOR
+        disabled: false
+        visible: true
+        control_id: address1_composite
+        field: address1_composite
+      -
+        section: analysis
+        tab: COMPETITOR
+        disabled: false
+        visible: true
+        control_id: strengths
+        field: strengths
+      -
+        section: analysis
+        tab: COMPETITOR
+        disabled: false
+        visible: true
+        control_id: weaknesses
+        field: weaknesses
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_tickersymbol
+        field: tickersymbol
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_reportedrevenue
+        field: reportedrevenue
+    description: Updated default Competitor form
+    tabs:
+      -
+        label: COMPETITOR
+        name: COMPETITOR
+        visible: true
+        expanded: true
+      -
+        label: OPPORTUNITIES
+        name: opportunities
+        visible: true
+        expanded: true
+      -
+        label: TRANSFER IDs
+        name: tab_3
+        visible: true
+        expanded: true
+    field_count: 8
+    type_name: Main
+  -
+    name: Competitor
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: Competitor Information
+        name: quickCompetitor_column1
+        tab: newCompetitor
+        visible: true
+      -
+        label: Competitor Additional Information
+        name: quickCompetitor_column2
+        tab: newCompetitor
+        visible: true
+      -
+        label: Analysis
+        name: quickCompetitor_column3
+        tab: newCompetitor
+        visible: true
+    fields:
+      -
+        section: quickCompetitor_column1
+        tab: newCompetitor
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: quickCompetitor_column1
+        tab: newCompetitor
+        disabled: false
+        visible: true
+        control_id: websiteurl
+        field: websiteurl
+      -
+        section: quickCompetitor_column2
+        tab: newCompetitor
+        disabled: false
+        visible: true
+        control_id: tickersymbol
+        field: tickersymbol
+      -
+        section: quickCompetitor_column2
+        tab: newCompetitor
+        disabled: false
+        visible: true
+        control_id: reportedrevenue
+        field: reportedrevenue
+      -
+        section: quickCompetitor_column3
+        tab: newCompetitor
+        disabled: false
+        visible: true
+        control_id: strengths
+        field: strengths
+      -
+        section: quickCompetitor_column3
+        tab: newCompetitor
+        disabled: false
+        visible: true
+        control_id: weaknesses
+        field: weaknesses
+    description: Default quick create form for Competitor
+    tabs:
+      -
+        label: New Competitor
+        name: newCompetitor
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Quick Create
+

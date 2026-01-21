@@ -1,0 +1,59 @@
+views:
+  -
+    name: My Active Goals
+    querytype: -1
+    savedqueryid: '0894c803-4b27-df11-893c-00155d26c21d'
+  -
+    name: Active Goals
+    querytype: -1
+    savedqueryid: '361e641e-4b27-df11-893c-00155d26c21d'
+  -
+    name: Closed Goals
+    querytype: -1
+    savedqueryid: '74186452-4b27-df11-893c-00155d26c21d'
+  -
+    name: My Group's Goals for This Period
+    description: Displays all the active goals that have the current user as the goal owner or manager for the current fiscal period.
+    querytype: -1
+    savedqueryid: '9c60dc64-4b27-df11-893c-00155d26c21d'
+  -
+    name: My Group's Case Goals for This Period
+    description: Shows the goal of type case with the current user as the manager or the owner of the goal.
+    querytype: -1
+    savedqueryid: '01053369-b068-df11-ae90-00155d2e3002'
+  -
+    name: Goal Associated View
+    description: Displays information about related goals in the detail form of any associated entity record.
+    querytype: 2
+    savedqueryid: '00917f76-1eb9-4292-ad0e-31b94bcef183'
+  -
+    name: Goals With Same Metrics and Time Period
+    querytype: 64
+    savedqueryid: 'f0a20746-0fe7-4edc-9889-569776b2d76a'
+  -
+    name: Goal Advanced Find View
+    querytype: 1
+    savedqueryid: 'dd1e3674-531e-4a0e-9bbf-8641d2538b02'
+  -
+    name: All Goals
+    querytype: -1
+    savedqueryid: 'e34fe149-b9e8-4a03-b52d-8c589a105a47'
+  -
+    name: Goals Lookup View
+    querytype: 64
+    savedqueryid: '0df2369b-0ca9-4cbd-8a53-8d2cb42ff355'
+  -
+    name: Quick Find Goals
+    querytype: 4
+    savedqueryid: '795dd5ac-e68c-49cf-8de2-94c419135198'
+  -
+    name: My Group's Revenue Goals for This Period
+    description: Displays all the active revenue goals in the current fiscal period that have the current user as the goal owner or manager.
+    querytype: -1
+    savedqueryid: '61f1b589-3daf-45e1-96bf-9bf7b12af252'
+  -
+    name: My Goals for This Period
+    description: Displays all the active goals in the current fiscal period that have the current user as the goal owner.
+    querytype: -1
+    savedqueryid: '0e24f0d5-c2e1-4b3d-9f43-e9c817c811df'
+

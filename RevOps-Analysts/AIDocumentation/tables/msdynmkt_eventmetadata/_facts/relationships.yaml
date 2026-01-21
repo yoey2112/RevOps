@@ -1,0 +1,107 @@
+relationships:
+  -
+    schemaname: msdynmkt_eventmetadata_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: msdynmkt_eventmetadata
+  -
+    schemaname: msdynmkt_eventmetadata_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdynmkt_eventmetadata
+  -
+    schemaname: msdynmkt_eventmetadata_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdynmkt_eventmetadata
+  -
+    schemaname: msdynmkt_eventmetadata_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: msdynmkt_eventmetadata
+  -
+    schemaname: msdynmkt_eventmetadata_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: msdynmkt_eventmetadata
+  -
+    schemaname: msdynmkt_eventmetadata_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: msdynmkt_eventmetadata
+  -
+    schemaname: msdynmkt_eventmetadata_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: msdynmkt_eventmetadata
+  -
+    schemaname: msdynmkt_eventmetadata_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: msdynmkt_eventmetadata
+  -
+    schemaname: msdynmkt_eventmetadata_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: msdynmkt_eventmetadata
+  -
+    schemaname: msdynmkt_eventmetadata_eventmetadata_sdkmessagepro
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_eventmetadata_sdkmessageprocessingstep
+    referencedtablelogicalname: msdynmkt_eventmetadata
+  -
+    schemaname: msdynmkt_eventmetadata_journeyevent
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_journeyevent
+    referencedtablelogicalname: msdynmkt_eventmetadata
+  -
+    schemaname: lk_msdynmkt_eventmetadata_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_eventmetadata
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_eventmetadata_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_eventmetadata
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_eventmetadata_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_eventmetadata
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_eventmetadata_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_eventmetadata
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_msdynmkt_eventmetadata
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_eventmetadata
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_msdynmkt_eventmetadata
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_eventmetadata
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_msdynmkt_eventmetadata
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_eventmetadata
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_msdynmkt_eventmetadata
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_eventmetadata
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: msdynmkt_customapi_eventmetadata
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_eventmetadata
+    referencedtablelogicalname: customapi
+  -
+    schemaname: revops_msdynmkt_eventmetadata_parentcampaignid_c
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_eventmetadata
+    referencedtablelogicalname: campaign
+

@@ -1,0 +1,92 @@
+relationships:
+  -
+    schemaname: msdyn_customerfeedbacksurveyresponse_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: msdyn_customerfeedbacksurveyresponse
+  -
+    schemaname: msdyn_customerfeedbacksurveyresponse_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdyn_customerfeedbacksurveyresponse
+  -
+    schemaname: msdyn_customerfeedbacksurveyresponse_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: msdyn_customerfeedbacksurveyresponse
+  -
+    schemaname: msdyn_customerfeedbacksurveyresponse_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: msdyn_customerfeedbacksurveyresponse
+  -
+    schemaname: msdyn_customerfeedbacksurveyresponse_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: msdyn_customerfeedbacksurveyresponse
+  -
+    schemaname: msdyn_customerfeedbacksurveyresponse_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: msdyn_customerfeedbacksurveyresponse
+  -
+    schemaname: msdyn_customerfeedbacksurveyresponse_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: msdyn_customerfeedbacksurveyresponse
+  -
+    schemaname: msdyn_customerfeedbacksurveyresponse_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: msdyn_customerfeedbacksurveyresponse
+  -
+    schemaname: msdyn_customerfeedbacksurveyresponse_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: msdyn_customerfeedbacksurveyresponse
+  -
+    schemaname: msdyn_customerfeedbacksurveyresponse_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: msdyn_customerfeedbacksurveyresponse
+  -
+    schemaname: lk_msdyn_customerfeedbacksurveyresponse_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_customerfeedbacksurveyresponse
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdyn_customerfeedbacksurveyresponse_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_customerfeedbacksurveyresponse
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdyn_customerfeedbacksurveyresponse_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_customerfeedbacksurveyresponse
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdyn_customerfeedbacksurveyresponse_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_customerfeedbacksurveyresponse
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_msdyn_customerfeedbacksurveyresponse
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_customerfeedbacksurveyresponse
+    referencedtablelogicalname: organization
+  -
+    schemaname: msdyn_customerfeedbacksurvey_msdyn_customerfeedbacksurveyresponse
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_customerfeedbacksurveyresponse
+    referencedtablelogicalname: msdyn_customerfeedbacksurvey
+  -
+    schemaname: msdyn_customerfeedbacksurveyinvite_msdyn_customerfeedbacksurveyresponse
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_customerfeedbacksurveyresponse
+    referencedtablelogicalname: msdyn_customerfeedbacksurveyinvite
+  -
+    schemaname: revops_msdyn_customerfeedbacksurveyresponse_case_incident
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdyn_customerfeedbacksurveyresponse
+    referencedtablelogicalname: incident
+

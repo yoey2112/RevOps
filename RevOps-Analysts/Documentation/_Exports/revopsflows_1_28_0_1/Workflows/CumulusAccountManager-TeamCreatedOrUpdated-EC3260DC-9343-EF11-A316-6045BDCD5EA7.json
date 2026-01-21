@@ -1,0 +1,184 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_24695"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_servicebus_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedservicebus_1091a"
+        },
+        "api": {
+          "name": "shared_servicebus"
+        }
+      },
+      "shared_servicebus_2": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "revops_sharedservicebus_b5c89"
+        },
+        "api": {
+          "name": "shared_servicebus"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "7503cf9d-5f77-4826-8ca8-a2c0c8bea865"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "team",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "name, emailaddress, revops_phonenumber",
+              "subscriptionRequest/filterexpression": "contains(emailaddress, '@sherweb.com')"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "List_Users": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "01bc800c-66ee-40ac-b8d0-46d2c4e595c0"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "systemusers",
+              "$top": 1
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Current_Environment": {
+          "runAfter": {
+            "List_Users": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "227d61cd-5a8a-471d-b525-8ff3b1af6f1a"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Current Environment",
+                "type": "string",
+                "value": "@{split(split(split(outputs('List_Users')?['body']['@odata.context'], 'https://')[1], '.crm')[0], '-')[1]}"
+              }
+            ]
+          }
+        },
+        "Check_Environment": {
+          "actions": {
+            "Send_message_to_test.xtkl.crm.daemon_-_Production": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "867ce25d-4f50-4fbc-a3c7-67017d60dd4c"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_servicebus_1",
+                  "operationId": "SendMessage",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_servicebus"
+                },
+                "parameters": {
+                  "entityName": "xtkl.messaging.facade",
+                  "message/ContentData": "{\n  \"Id\": \"@{triggerOutputs()?['body/teamid']}\",\n  \"FirstName\": \"@{triggerOutputs()?['body/name']}\",\n  \"PhoneNumber\": \"@{triggerOutputs()?['body/revops_phonenumber']}\",\n  \"Email\": \"@{triggerOutputs()?['body/emailaddress']}\",\n  \"LastUpdatedOn\": \"@{triggerOutputs()?['body/modifiedon']}\"\n}",
+                  "message/ContentType": "application/json",
+                  "message/Properties": {
+                    "MT-MessageType": "urn:message:Xtkl.Messaging.Facade.AzureServiceBus.Daemon.Contracts:AccountManagerCreatedOrUpdated"
+                  },
+                  "systemProperties": "None"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Current_Environment": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Send_message_to_test.xtkl.crm.daemon_-_Staging": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "867ce25d-4f50-4fbc-a3c7-67017d60dd4c"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_servicebus_2",
+                    "operationId": "SendMessage",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_servicebus"
+                  },
+                  "parameters": {
+                    "entityName": "xtkl.messaging.facade",
+                    "message/ContentData": "{\n  \"Id\": \"@{triggerOutputs()?['body/teamid']}\",\n  \"FirstName\": \"@{triggerOutputs()?['body/name']}\",\n  \"PhoneNumber\": \"@{triggerOutputs()?['body/revops_phonenumber']}\",\n  \"Email\": \"@{triggerOutputs()?['body/emailaddress']}\",\n  \"LastUpdatedOn\": \"@{triggerOutputs()?['body/modifiedon']}\"\n}",
+                    "message/ContentType": "application/json",
+                    "message/Properties": {
+                      "MT-MessageType": "urn:message:Xtkl.Messaging.Facade.AzureServiceBus.Daemon.Contracts:AccountManagerCreatedOrUpdated"
+                    },
+                    "systemProperties": "None"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@variables('Current Environment')",
+              "prod"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "141d2ebb-1499-4eb2-a564-2cd1413756b4"
+          },
+          "type": "If"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

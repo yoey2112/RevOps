@@ -1,0 +1,293 @@
+forms:
+  -
+    name: Category Main Interactive
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ''
+        name: Category Information
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: Category Information
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: Category Information
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: Category Information
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: sequencenumber
+        field: sequencenumber
+      -
+        section: Category Information
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: parentcategoryid
+        field: parentcategoryid
+    description: Default Interactive Experience category form
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 4
+    type_name: Main
+  -
+    name: Category Hierarchy Tile Form
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Information
+        name: category tile
+        tab: hierarchy
+        visible: true
+    fields:
+      -
+        section: category tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+    description: This is the Category hierarchy definition.
+    tabs:
+      -
+        label: Category
+        name: hierarchy
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Quick View
+  -
+    name: Category
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ''
+        name: General
+        tab: ''
+        visible: true
+      -
+        label: ''
+        name: Associated Categories
+        tab: AssociatedCategories
+        visible: true
+    fields:
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_frenchtitle
+        field: revops_frenchtitle
+      -
+        section: General
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: categorynumber
+        field: categorynumber
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: parentcategoryid
+        field: parentcategoryid
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_istoplevelcategory
+        field: revops_istoplevelcategory
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: revops_isinternal
+        field: revops_isinternal
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: sequencenumber
+        field: sequencenumber
+    description: Default Category form
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+      -
+        label: Associated Categories
+        name: AssociatedCategories
+        visible: true
+        expanded: true
+    field_count: 8
+    type_name: Main
+  -
+    name: Portal Category
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ''
+        name: General
+        tab: ''
+        visible: true
+      -
+        label: ''
+        name: Associated Categories
+        tab: AssociatedCategories
+        visible: true
+      -
+        label: Section
+        name: tab_3_section_1
+        tab: Associated Knowledge Articles
+        visible: true
+    fields:
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: sequencenumber
+        field: sequencenumber
+      -
+        section: General
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: parentcategoryid
+        field: parentcategoryid
+      -
+        section: General
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: categorynumber
+        field: categorynumber
+    description: Displays Portal Category Main form
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+      -
+        label: Associated Categories
+        name: AssociatedCategories
+        visible: true
+        expanded: true
+      -
+        label: Associated Knowledge Articles
+        name: Associated Knowledge Articles
+        visible: true
+        expanded: true
+    field_count: 5
+    type_name: Main
+  -
+    name: Category Quick Create
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: Details
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: title
+        field: title
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: sequencenumber
+        field: sequencenumber
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: parentcategoryid
+        field: parentcategoryid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: true
+        visible: true
+        control_id: categorynumber
+        field: categorynumber
+    description: Default quick create form for Category
+    tabs:
+      -
+        label: Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 5
+    type_name: Quick Create
+

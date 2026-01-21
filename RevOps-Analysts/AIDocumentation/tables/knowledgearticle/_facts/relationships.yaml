@@ -1,0 +1,542 @@
+relationships:
+  -
+    schemaname: knowledgearticle_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_SharePointDocumentLocations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointdocumentlocation
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_QueueItems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queueitem
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_Annotations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_Teams
+    relationshiptype: OneToMany
+    referencingtablelogicalname: team
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_PrincipalObjectAttributeAccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_documentindex
+    relationshiptype: OneToMany
+    referencingtablelogicalname: documentindex
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: KnowledgeArticle_SocialActivities
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialactivity
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: KnowledgeArticle_Letters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: letter
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: KnowledgeArticle_Tasks
+    relationshiptype: OneToMany
+    referencingtablelogicalname: task
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_views
+    relationshiptype: OneToMany
+    referencingtablelogicalname: knowledgearticleviews
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: KnowledgeArticle_Faxes
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fax
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: lk_expiredprocess_knowledgearticleid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: expiredprocess
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: KnowledgeArticle_Appointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: lk_newprocess_knowledgearticleid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: newprocess
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_rootarticle_id
+    relationshiptype: OneToMany
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: lk_translationprocess_knowledgearticleid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: translationprocess
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: KnowledgeArticle_RecurringAppointmentMasters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: recurringappointmentmaster
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: KnowledgeArticle_ActivityPointers
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: KnowledgeArticle_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_PostRoles
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postrole
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: KnowledgeArticle_Feedback
+    relationshiptype: OneToMany
+    referencingtablelogicalname: feedback
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_previousarticle_contentid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_PostFollows
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postfollow
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_PostRegardings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postregarding
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_parentarticle_contentid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: KnowledgeArticle_Phonecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: KnowledgeArticle_Emails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_chats
+    relationshiptype: OneToMany
+    referencingtablelogicalname: chat
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_FileAttachments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fileattachment
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_SharePointDocuments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointdocument
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: msdyn_knowledgearticle_feedback_context
+    relationshiptype: OneToMany
+    referencingtablelogicalname: feedback
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: msdyn_knowledgearticleimage_parentknowledgearticleid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_knowledgearticleimage
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: msdyn_knowledgearticle_favoriteknowledgearticle
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_favoriteknowledgearticle
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_adx_inviteredemptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_inviteredemption
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_adx_portalcomments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_portalcomment
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_BulkOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperation
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_CampaignResponses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_IncidentResolutions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: KnowledgeArticle_ServiceAppointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: serviceappointment
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: incident_knowledgearticles
+    relationshiptype: OneToMany
+    referencingtablelogicalname: knowledgearticleincident
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_OpportunityCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_OrderCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: orderclose
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_QuoteCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quoteclose
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_Posts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: post
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_msfp_alerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_alert
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_msfp_surveyinvites
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyinvite
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_msfp_surveyresponses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_msdyn_copilottranscripts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_copilottranscript
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: msdyn_knowledgearticle_msdyn_kbenrichment_kbid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_kbenrichment
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: msdyn_knowledgearticle_msdyn_knowledgearticlesuggestion_suggestedentity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_knowledgearticlesuggestion
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: msdyn_knowledgearticle_msdyn_suggestioninteraction_msdyn_suggestedentity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_suggestioninteraction
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_msdyn_ocliveworkitems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_msdyn_ocsessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocsession
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_msdyn_bookingalerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_bookingalert
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_msdyn_ocvoicemails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocvoicemail
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_li_inmails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_inmail
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_li_messages
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_message
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_li_pointdrivepresentationvieweds
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_pointdrivepresentationviewed
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_revops_demos
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_demo
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_revops_onboardingcalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: msdyn_copilotknowledgeinteraction_knowledgearticleid_knowledgearticle
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_copilotknowledgeinteraction
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_revops_cumulussignups
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: msdyn_intentsolutionmap_knowledgearticleid_knowledgearticle
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_intentsolutionmap
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_adx_alertsubscriptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_alertsubscription
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: adx_knowledgearticle_adx_casedeflection_KnowledgeArticle
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_casedeflection
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_msdyn_comments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_comment
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_revops_businessreviews
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_businessreview
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_revops_cadencecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_revops_inpersonmeetings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_inpersonmeeting
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: msdyn_interimupdateknowledgearticle_knowledgearticle
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_interimupdateknowledgearticle
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_msdyn_approvals
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_approval
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: msdyn_knowledgearticlecustomentity_knowledgearticle
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_knowledgearticlecustomentity
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: lk_knowledgearticle_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_knowledgearticle_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_knowledgearticle_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_knowledgearticle_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_knowledgearticle
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_knowledgearticle
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_knowledgearticle
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_knowledgearticle
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: processstage_knowledgearticle
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: processstage
+  -
+    schemaname: knowledgearticle_languagelocaleid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: languagelocale
+  -
+    schemaname: knowledgearticle_primaryauthorid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: knowledgearticle_parentarticle_contentid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: knowledgearticle_previousarticle_contentid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: subject_knowledgearticles
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: subject
+  -
+    schemaname: knowledgearticle_rootarticle_id
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: TransactionCurrency_knowledgearticle
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: FileAttachment_KnowledgeArticle_msdyn_contentstore
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: fileattachment
+  -
+    schemaname: msdyn_knowledgearticle_integratedsearchprovider
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: msdyn_integratedsearchprovider
+  -
+    schemaname: revops_knowledgearticle_category_category
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: category
+  -
+    schemaname: knowledgearticle_category
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: category
+  -
+    schemaname: msdyn_msdyn_kbattachment_knowledgearticle
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msdyn_kbattachment
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: msdyn_msdyn_customerasset_knowledgearticle
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msdyn_customerasset
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: msdyn_product_knowledgearticle
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: product
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: msdyn_msdyn_ocliveworkitem_knowledgearticle
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: adx_KnowledgeArticleContentAccessLevel
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: adx_contentaccesslevel
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: msdyn_msdyn_agentcopilotterm_knowledgearticle
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msdyn_agentcopilotterm
+    referencedtablelogicalname: knowledgearticle
+

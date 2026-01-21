@@ -1,0 +1,42 @@
+// P2P Transfer
+function openp2pTransfer(selectedItemIds) {
+
+    // Check if any records are selected
+    if (!selectedItemIds || selectedItemIds.length === 0) {
+        alert("No records selected. Please select at least one record.");
+        return;
+    }
+
+    // Log the selected IDs for debugging
+    console.log("Selected Record IDs: ", selectedItemIds);
+
+    // Side Dialog
+    var pageInput = {
+        pageType: "custom",
+        name: "revops_p2ptransfers_4acf5", // Replace with your actual custom page name
+        recordId: selectedItemIds // Pass the array of record IDs
+    };
+
+    var navigationOptions = {
+        target: 2, 
+        position: 2,
+        width: { value: 20, unit: "%" },
+        title: "P2P Transfer"
+    };
+
+    console.log("Page Input: ", pageInput);
+    console.log("Navigation Options: ", navigationOptions);
+
+    Xrm.Navigation.navigateTo(pageInput, navigationOptions)
+        .then(
+            function () {
+                console.log("Custom page opened successfully.");
+            }
+        )
+        .catch(
+            function (error) {
+                console.error("Error opening custom page: ", error);
+            }
+    );
+
+}

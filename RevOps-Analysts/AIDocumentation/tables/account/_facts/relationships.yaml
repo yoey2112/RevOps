@@ -1,0 +1,1112 @@
+relationships:
+  -
+    schemaname: account_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_Faxes
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fax
+    referencedtablelogicalname: account
+  -
+    schemaname: slakpiinstance_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: slakpiinstance
+    referencedtablelogicalname: account
+  -
+    schemaname: account_PostFollows
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postfollow
+    referencedtablelogicalname: account
+  -
+    schemaname: account_PostRegardings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postregarding
+    referencedtablelogicalname: account
+  -
+    schemaname: account_PostRoles
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postrole
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_Tasks
+    relationshiptype: OneToMany
+    referencingtablelogicalname: task
+    referencedtablelogicalname: account
+  -
+    schemaname: account_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: account
+  -
+    schemaname: account_customer_relationship_customer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: customerrelationship
+    referencedtablelogicalname: account
+  -
+    schemaname: userentityinstancedata_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: account
+  -
+    schemaname: SocialActivity_PostAuthorAccount_accounts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialactivity
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: account
+  -
+    schemaname: SocialActivity_PostAuthor_accounts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialactivity
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_MailboxTrackingFolder
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_ActivityPointers
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_Email_SendersAccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_Appointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: account
+  -
+    schemaname: Socialprofile_customer_accounts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialprofile
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_Emails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: account
+  -
+    schemaname: account_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_Phonecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: account
+  -
+    schemaname: account_customer_relationship_partner
+    relationshiptype: OneToMany
+    referencingtablelogicalname: customerrelationship
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_SocialActivities
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialactivity
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_SharepointDocument
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointdocument
+    referencedtablelogicalname: account
+  -
+    schemaname: account_actioncard
+    relationshiptype: OneToMany
+    referencingtablelogicalname: actioncard
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_CustomerAddress
+    relationshiptype: OneToMany
+    referencingtablelogicalname: customeraddress
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_Annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_Letters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: letter
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_RecurringAppointmentMasters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: recurringappointmentmaster
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_Email_EmailSender
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: account
+  -
+    schemaname: account_parent_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: account
+  -
+    schemaname: contact_customer_accounts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: account
+  -
+    schemaname: account_master_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_SharepointDocumentLocation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointdocumentlocation
+    referencedtablelogicalname: account
+  -
+    schemaname: account_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: account
+  -
+    schemaname: account_chats
+    relationshiptype: OneToMany
+    referencingtablelogicalname: chat
+    referencedtablelogicalname: account
+  -
+    schemaname: account_adx_inviteredemptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_inviteredemption
+    referencedtablelogicalname: account
+  -
+    schemaname: account_adx_portalcomments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_portalcomment
+    referencedtablelogicalname: account
+  -
+    schemaname: lead_customer_accounts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: account
+  -
+    schemaname: lead_parent_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: account
+  -
+    schemaname: account_bookableresource_AccountId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bookableresource
+    referencedtablelogicalname: account
+  -
+    schemaname: account_BulkOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperation
+    referencedtablelogicalname: account
+  -
+    schemaname: account_CampaignResponses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: account
+  -
+    schemaname: CreatedAccount_BulkOperationLogs2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperationlog
+    referencedtablelogicalname: account
+  -
+    schemaname: SourceAccount_BulkOperationLogs
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperationlog
+    referencedtablelogicalname: account
+  -
+    schemaname: account_IncidentResolutions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: account
+  -
+    schemaname: Account_ServiceAppointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: serviceappointment
+    referencedtablelogicalname: account
+  -
+    schemaname: contractlineitem_customer_accounts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contractdetail
+    referencedtablelogicalname: account
+  -
+    schemaname: contract_billingcustomer_accounts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contract
+    referencedtablelogicalname: account
+  -
+    schemaname: contract_customer_accounts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contract
+    referencedtablelogicalname: account
+  -
+    schemaname: incident_customer_accounts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: account
+  -
+    schemaname: account_entitlement_Account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: entitlement
+    referencedtablelogicalname: account
+  -
+    schemaname: account_entitlement_Customer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: entitlement
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_customerasset_Account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_customerasset
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_warranty_WarrantyHolder
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_warranty
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_warranty_WarrantyProvider
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_warranty
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_iotdevice_Account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_iotdevice
+    referencedtablelogicalname: account
+  -
+    schemaname: account_OpportunityCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: account
+  -
+    schemaname: account_OrderCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: orderclose
+    referencedtablelogicalname: account
+  -
+    schemaname: account_QuoteCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quoteclose
+    referencedtablelogicalname: account
+  -
+    schemaname: account_customer_opportunity_roles
+    relationshiptype: OneToMany
+    referencingtablelogicalname: customeropportunityrole
+    referencedtablelogicalname: account
+  -
+    schemaname: invoice_customer_accounts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: invoice
+    referencedtablelogicalname: account
+  -
+    schemaname: opportunity_customer_accounts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: account
+  -
+    schemaname: order_customer_accounts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: salesorder
+    referencedtablelogicalname: account
+  -
+    schemaname: quote_customer_accounts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quote
+    referencedtablelogicalname: account
+  -
+    schemaname: opportunity_parent_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_playbookinstance_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_playbookinstance
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_aicontactsuggestion_sourcerecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_aicontactsuggestion
+    referencedtablelogicalname: account
+  -
+    schemaname: account_msdyn_orgchartnode_msdyn_parentrecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_orgchartnode
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_accountkpiitem_accountid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_accountkpiitem
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_mostcontacted_regardingObjectId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_mostcontacted
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_mostcontactedby_regardingObjectId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_mostcontactedby
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_dailyaccountkpiitem_entityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_dailyaccountkpiitem
+    referencedtablelogicalname: account
+  -
+    schemaname: account_Posts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: post
+    referencedtablelogicalname: account
+  -
+    schemaname: account_msfp_alerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_alert
+    referencedtablelogicalname: account
+  -
+    schemaname: account_msfp_surveyinvites
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyinvite
+    referencedtablelogicalname: account
+  -
+    schemaname: account_msfp_surveyresponses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: account
+  -
+    schemaname: account_msdyn_copilottranscripts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_copilottranscript
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_swarm_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_swarm
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_msdyn_preferredagent_account_msdyn_recordId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_preferredagent
+    referencedtablelogicalname: account
+  -
+    schemaname: account_msdyn_ocliveworkitems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: account
+  -
+    schemaname: account_msdyn_ocsessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocsession
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_ocliveworkitem_Customer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_liveconversation_Customer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_liveconversation
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_sequencetarget_account_msdyn_target
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_sequencetarget
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_salesroutingdiagnostic_account_msdyn_target
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesroutingdiagnostic
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_sabackupdiagnostic_account_msdyn_target
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_sabackupdiagnostic
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_salesroutingrun_targetobject
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesroutingrun
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_salessuggestion_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salessuggestion
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_salesaccelerationinsights_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesaccelerationinsight
+    referencedtablelogicalname: account
+  -
+    schemaname: account_msdyn_bookingalerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_bookingalert
+    referencedtablelogicalname: account
+  -
+    schemaname: msevtmgt_account_msevtmgt_eventvendor_Account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_eventvendor
+    referencedtablelogicalname: account
+  -
+    schemaname: msevtmgt_account_msevtmgt_sponsorship_Sponsor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_sponsorship
+    referencedtablelogicalname: account
+  -
+    schemaname: account_msdyn_ocvoicemails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocvoicemail
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_ocvoicemail_Customer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocvoicemail
+    referencedtablelogicalname: account
+  -
+    schemaname: account_li_inmails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_inmail
+    referencedtablelogicalname: account
+  -
+    schemaname: account_li_messages
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_message
+    referencedtablelogicalname: account
+  -
+    schemaname: account_li_pointdrivepresentationvieweds
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_pointdrivepresentationviewed
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_msdyn_salescopilotinsight_account_msdyn_targetentityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salescopilotinsight
+    referencedtablelogicalname: account
+  -
+    schemaname: account_revops_demos
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_demo
+    referencedtablelogicalname: account
+  -
+    schemaname: account_revops_onboardingcalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_msdyn_conversationparticipantinsights_account_msdyn_User
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_conversationparticipantinsights
+    referencedtablelogicalname: account
+  -
+    schemaname: account_revops_cumulussignups
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: account
+  -
+    schemaname: account_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_msdyn_lastagent_account_msdyn_recordId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_lastagent
+    referencedtablelogicalname: account
+  -
+    schemaname: account_adx_alertsubscriptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_alertsubscription
+    referencedtablelogicalname: account
+  -
+    schemaname: adx_invitation_assigntoaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_invitation
+    referencedtablelogicalname: account
+  -
+    schemaname: msa_partner_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_stakeholderresearchoutput_Account_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_stakeholderresearchoutput
+    referencedtablelogicalname: account
+  -
+    schemaname: account_msdyn_comments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_comment
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_salesagentrun_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesagentrun
+    referencedtablelogicalname: account
+  -
+    schemaname: account_revops_businessreviews
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_businessreview
+    referencedtablelogicalname: account
+  -
+    schemaname: account_revops_cadencecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: account
+  -
+    schemaname: account_revops_inpersonmeetings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_inpersonmeeting
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_purchaseorder_Vendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_purchaseorder
+    referencedtablelogicalname: account
+  -
+    schemaname: account_msdyn_approvals
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_approval
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_bookableresource_Vendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bookableresource
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_accountpricelist_Account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_accountpricelist
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_actual_AccountCustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_actual
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_actual_AccountVendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_actual
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_budgetline_accountcustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_budgetline
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_budgetline_accountvendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_budgetline
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_estimateline_AccountCustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_estimateline
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_estimateline_AccountVendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_estimateline
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_fact_AccountCustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_fact
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_fact_AccountVendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_fact
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_invoicelinetransaction_AccountCustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_invoicelinetransaction
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_invoicelinetransaction_AccountVendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_invoicelinetransaction
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_journalline_AccountCustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_journalline
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_journalline_AccountVendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_journalline
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_orderlinetransaction_AccountCustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_orderlinetransaction
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_orderlinetransaction_AccountVendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_orderlinetransaction
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_project_Customer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_project
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_projectvendorinvoice_Vendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectvendorinvoice
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_quotelinetransaction_AccountCustomer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_quotelinetransaction
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_quotelinetransaction_AccountVendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_quotelinetransaction
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_resourcerequirement_Vendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_resourcerequirement
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_msdyn_subcontract_Vendor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_subcontract
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_msdyn_projectcontractlinesplitbillingrule_customer_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectcontractlinesplitbillingrule
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_msdyn_projectcontractsplitbillingrule_customer_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectcontractsplitbillingrule
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_projectquotelinesplitbillingrule_customer_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectquotelinesplitbillingrule
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_projectquotesplitbillingrule_customer_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectquotesplitbillingrule
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_resourcecategorypriceoverride_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_resourcecategorypriceoverride
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_solution_vendor_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_solution
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_cumulususer_account_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulususer
+    referencedtablelogicalname: account
+  -
+    schemaname: msa_account_incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: account
+  -
+    schemaname: msa_account_managingpartner
+    relationshiptype: OneToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: account
+  -
+    schemaname: msa_contact_managingpartner
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_account_account_BillingAccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_account_competitor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: competitor
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_accountpotentialtechstack_account_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_accountproductsummary_accountid_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountproductsummary
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_accountreassignment_account_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountreassignment
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_accountsolutionsummary_account_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountsolutionsummary
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_churn_account_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_churn
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_cumulusaccount_account_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulusaccount
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_cumulusorganization_parentaccount_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulusorganization
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_incident_account_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_lateralmove_gainingaccountparent_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_lateralmove_losingaccountparent_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_lateralmove
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_partnerinvestment_account_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_partnerinvestment
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_pricingrequest_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_productsummary_accountid_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_smeengagement_account_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_smeengagement
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_solutionsummary_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_solutionsummary
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_msdyn_project_account_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_project
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_dcaengageagentresult_regarding_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_dcaengageagentresult
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_mwhaccount_account_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_mwhaccount
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_domain_Account_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_domain
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_insightsid_salesaccelerationinsights
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: msdyn_salesaccelerationinsight
+  -
+    schemaname: revops_account_revops_country_revops_country
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: revops_country
+  -
+    schemaname: revops_account_revops_stateorprovince_revops_stateorprovince
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: account_originating_lead
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: lead
+  -
+    schemaname: lk_accountbase_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: system_user_accounts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_account_previousownerteam_team
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: team
+  -
+    schemaname: transactioncurrency_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msdyn_msdyn_segment_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: msdyn_segment
+  -
+    schemaname: territory_accounts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: territory
+  -
+    schemaname: account_parent_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: account
+  -
+    schemaname: sla_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: sla
+  -
+    schemaname: business_unit_accounts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: msdyn_account_account_BillingAccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: account
+  -
+    schemaname: owner_accounts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: owner
+  -
+    schemaname: user_accounts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_accountbase_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_accounts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: team
+  -
+    schemaname: revops_account_itdocumentation_accountsoftwaretool
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: revops_account_previousowner_systemuser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_account_psa_accountsoftwaretool
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: revops_account_rmm_accountsoftwaretool
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: revops_accountsoftwaretool
+  -
+    schemaname: lk_accountbase_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: msa_account_managingpartner
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: account
+  -
+    schemaname: processstage_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: processstage
+  -
+    schemaname: lk_externalparty_account_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: externalparty
+  -
+    schemaname: manualsla_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: sla
+  -
+    schemaname: lk_accountbase_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: equipment_accounts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: equipment
+  -
+    schemaname: account_primary_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: contact
+  -
+    schemaname: lk_externalparty_account_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: externalparty
+  -
+    schemaname: service_accounts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: service
+  -
+    schemaname: msdyn_msdyn_accountkpiitem_account_accountkpiid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: msdyn_accountkpiitem
+  -
+    schemaname: lk_account_entityimage
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: imagedescriptor
+  -
+    schemaname: price_level_accounts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: pricelevel
+  -
+    schemaname: account_master_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: account
+    referencedtablelogicalname: account
+  -
+    schemaname: accountleads_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: lead
+  -
+    schemaname: listaccount_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: list
+    referencedtablelogicalname: account
+  -
+    schemaname: BulkOperation_Accounts
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: bulkoperation
+    referencedtablelogicalname: account
+  -
+    schemaname: CampaignActivity_Accounts
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: campaignactivity
+    referencedtablelogicalname: account
+  -
+    schemaname: adx_AccountContentAccessLevel
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: adx_contentaccesslevel
+    referencedtablelogicalname: account
+  -
+    schemaname: adx_accountproduct
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: product
+  -
+    schemaname: adx_webrole_account
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: adx_webrole
+    referencedtablelogicalname: account
+  -
+    schemaname: adx_website_sponsor
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: adx_website
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_msdyn_functionallocation_account
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msdyn_functionallocation
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_msdyn_warranty_account
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msdyn_warranty
+    referencedtablelogicalname: account
+  -
+    schemaname: powerpagecomponent_mspp_webrole_account
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: powerpagecomponent
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_account_revops_country
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: revops_country
+    referencedtablelogicalname: account
+

@@ -1,0 +1,22 @@
+views:
+  -
+    name: All Territories
+    querytype: -1
+    savedqueryid: '00000000-0000-0000-00aa-000010001050'
+  -
+    name: Territories Advanced Find View
+    querytype: 1
+    savedqueryid: 'c0bb354c-6de2-4873-96ff-237e8b2d6b21'
+  -
+    name: Territory Quick Find View
+    querytype: 4
+    savedqueryid: '373b12c4-dd14-4648-bd75-62dff770017f'
+  -
+    name: Territories Lookup View
+    querytype: 64
+    savedqueryid: 'ad81b2ca-9789-4465-8c56-94c10830a6ed'
+  -
+    name: Territories Associated View
+    querytype: 2
+    savedqueryid: 'd694b5db-a1dc-4ce1-9e7b-c05d8d9cfbee'
+

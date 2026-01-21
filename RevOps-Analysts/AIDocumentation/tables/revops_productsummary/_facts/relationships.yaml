@@ -1,0 +1,117 @@
+relationships:
+  -
+    schemaname: revops_productsummary_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_productsummary
+  -
+    schemaname: revops_productsummary_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_productsummary
+  -
+    schemaname: revops_productsummary_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_productsummary
+  -
+    schemaname: revops_productsummary_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_productsummary
+  -
+    schemaname: revops_productsummary_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_productsummary
+  -
+    schemaname: revops_productsummary_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_productsummary
+  -
+    schemaname: revops_productsummary_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_productsummary
+  -
+    schemaname: revops_productsummary_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_productsummary
+  -
+    schemaname: revops_productsummary_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_productsummary
+  -
+    schemaname: revops_productsummary_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_productsummary
+  -
+    schemaname: lk_revops_productsummary_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_productsummary_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_productsummary_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_productsummary_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_revops_productsummary
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_revops_productsummary
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_revops_productsummary
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_revops_productsummary
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: TransactionCurrency_revops_productsummary
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_productsummary_accountid_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_productsummary_cumulusaccountid_revops_cumulusaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_productsummary_productid_product
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: product
+  -
+    schemaname: revops_productsummary_solutionid_revops_solution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: revops_solution
+

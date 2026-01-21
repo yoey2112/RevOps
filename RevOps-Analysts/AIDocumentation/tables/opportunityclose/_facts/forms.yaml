@@ -1,0 +1,136 @@
+forms:
+  -
+    field_count: 8
+    tabs:
+      -
+        expanded: true
+        visible: true
+        label: New Opportunity Close Record
+        name: OpportunityClose
+    type: 7
+    type_name: Quick Create
+    description: Default quick create form for Opportunity Close
+    fields:
+      -
+        control_id: opportunityid
+        visible: true
+        tab: OpportunityClose
+        section: quickOpportunityClose_column1_section1
+        field: opportunityid
+        disabled: false
+      -
+        control_id: opportunitystatecode
+        visible: true
+        tab: OpportunityClose
+        section: quickOpportunityClose_column1_section1
+        field: opportunitystatecode
+        disabled: false
+      -
+        control_id: opportunitystatuscode
+        visible: true
+        tab: OpportunityClose
+        section: quickOpportunityClose_column1_section1
+        field: opportunitystatuscode
+        disabled: false
+      -
+        control_id: actualrevenue
+        visible: true
+        tab: OpportunityClose
+        section: quickOpportunityClose_column2_section1
+        field: actualrevenue
+        disabled: false
+      -
+        control_id: actualend
+        visible: true
+        tab: OpportunityClose
+        section: quickOpportunityClose_column2_section1
+        field: actualend
+        disabled: false
+      -
+        control_id: competitorid
+        visible: true
+        tab: OpportunityClose
+        section: quickOpportunityClose_column2_section1
+        field: competitorid
+        disabled: false
+      -
+        control_id: subject
+        visible: true
+        tab: OpportunityClose
+        section: quickOpportunityClose_column2_section1
+        field: subject
+        disabled: true
+      -
+        control_id: description
+        visible: true
+        tab: OpportunityClose
+        section: quickOpportunityClose_column3_section1
+        field: description
+        disabled: false
+    is_active: true
+    name: Opportunity Close
+    sections:
+      -
+        tab: OpportunityClose
+        visible: true
+        label: Add closing details below
+        name: quickOpportunityClose_column1_section1
+      -
+        tab: OpportunityClose
+        visible: true
+        label: ''
+        name: quickOpportunityClose_column2_section1
+      -
+        tab: OpportunityClose
+        visible: true
+        label: ''
+        name: quickOpportunityClose_column3_section1
+  -
+    field_count: 4
+    tabs:
+      -
+        expanded: true
+        visible: true
+        label: Resolution
+        name: resolution
+    type: 2
+    type_name: Main
+    description: A form for this entity.
+    fields:
+      -
+        control_id: actualrevenue
+        visible: true
+        tab: resolution
+        section: information
+        field: actualrevenue
+        disabled: false
+      -
+        control_id: actualend
+        visible: true
+        tab: resolution
+        section: information
+        field: actualend
+        disabled: false
+      -
+        control_id: competitorid
+        visible: true
+        tab: resolution
+        section: information
+        field: competitorid
+        disabled: false
+      -
+        control_id: description
+        visible: true
+        tab: resolution
+        section: information
+        field: description
+        disabled: false
+    is_active: true
+    name: Information
+    sections:
+      -
+        tab: resolution
+        visible: true
+        label: Information
+        name: information
+

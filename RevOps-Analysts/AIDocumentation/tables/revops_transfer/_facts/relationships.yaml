@@ -1,0 +1,122 @@
+relationships:
+  -
+    schemaname: revops_transfer_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_transfer
+  -
+    schemaname: revops_transfer_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_transfer
+  -
+    schemaname: revops_transfer_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_transfer
+  -
+    schemaname: revops_transfer_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_transfer
+  -
+    schemaname: revops_transfer_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_transfer
+  -
+    schemaname: revops_transfer_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_transfer
+  -
+    schemaname: revops_transfer_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_transfer
+  -
+    schemaname: revops_transfer_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_transfer
+  -
+    schemaname: revops_transfer_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_transfer
+  -
+    schemaname: revops_transfer_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: revops_transfer
+  -
+    schemaname: revops_transfer_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: revops_transfer
+  -
+    schemaname: revops_transfer_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_transfer
+  -
+    schemaname: lk_revops_transfer_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_transfer_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_transfer_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_transfer_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_transfer
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: organization
+  -
+    schemaname: revops_transfer_case_incident
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: incident
+  -
+    schemaname: revops_transfer_competitorid_revops_competitortransferid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: revops_competitortransferid
+  -
+    schemaname: revops_transfer_cumulusaccount_revops_cumulusaccount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: revops_cumulusaccount
+  -
+    schemaname: revops_transfer_cumulusorganization_revops_cumulusorganization
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: revops_cumulusorganization
+  -
+    schemaname: revops_transfer_platformsettings_revops_platformsettings
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: revops_platformsettings
+  -
+    schemaname: revops_transfer_competitor_competitor
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: competitor
+  -
+    schemaname: revops_transfer_contact_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: contact
+

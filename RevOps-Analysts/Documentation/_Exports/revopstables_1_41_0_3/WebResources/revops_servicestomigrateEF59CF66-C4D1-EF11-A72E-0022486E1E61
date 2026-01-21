@@ -1,0 +1,19 @@
+function toggleServiceToMigrateVisibility(executionContext) {
+    // Get the form context
+    var formContext = executionContext.getFormContext();
+    
+    // Get the value of the "Case Type" (casetypecode) field
+    var caseTypeValue = formContext.getAttribute("casetypecode").getValue();
+    
+    // Get the "Service to Migrate" (revops_servicestomigrate) field control
+    var serviceToMigrateControl = formContext.getControl("revops_servicestomigrate");
+
+    // Check if the case type is "Migration"
+    if (caseTypeValue === 234570011) {
+        // Show the "Service to Migrate" field
+        serviceToMigrateControl.setVisible(true);
+    } else {
+        // Hide the "Service to Migrate" field
+        serviceToMigrateControl.setVisible(false);
+    }
+}

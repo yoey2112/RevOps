@@ -1,0 +1,162 @@
+relationships:
+  -
+    schemaname: msdynmkt_email_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: msdynmkt_email_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: msdynmkt_email_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: msdynmkt_email_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: msdynmkt_email_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: msdynmkt_email_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: msdynmkt_email_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: msdynmkt_journeydependency_dependency_msdynmkt_email
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_journeydependency
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: msdynmkt_msdynmkt_email_msdynmkt_teamsengagement_Email
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_teamsengagement
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: msdynmkt_msdynmkt_email_msdynmkt_webinaremailjourney_webinaremail
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_webinaremailjourney
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: msdynmkt_msdynmkt_email_lead_emailid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: msdynmkt_marketingformsubmission_emailid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: msdynmkt_msdynmkt_email_contact_emailid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdynmkt_email
+  -
+    schemaname: lk_msdynmkt_email_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_email_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_email_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_email_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_msdynmkt_email
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_msdynmkt_email
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_msdynmkt_email
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_msdynmkt_email
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: ImageDescriptor_msdynmkt_email
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: imagedescriptor
+  -
+    schemaname: msdynmkt_msdynmkt_brandprofile_msdynmkt_email_brandprofile
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: msdynmkt_brandprofile
+  -
+    schemaname: msdynmkt_msdynmkt_brandsender_msdynmkt_email_sender
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: msdynmkt_brandsender
+  -
+    schemaname: msdynmkt_msdynmkt_compliancesettings_msdynmkt_email_compliancesettings
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: msdynmkt_compliancesettings
+  -
+    schemaname: msdynmkt_msdynmkt_compliancesettings3_msdynmkt_email_compliancesettings3
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: msdynmkt_compliancesettings3
+  -
+    schemaname: msdynmkt_msdynmkt_compliancesettings4_msdynmkt_email_compliancesettings4
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: msdynmkt_compliancesettings4
+  -
+    schemaname: msdynmkt_msdynmkt_emailtemplate_msdynmkt_email
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: msdynmkt_emailtemplate
+  -
+    schemaname: msdynmkt_msdynmkt_purpose_msdynmkt_email_purpose
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: msdynmkt_purpose
+  -
+    schemaname: msdynmkt_msdynmkt_topic_msdynmkt_email_topic
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: msdynmkt_topic
+  -
+    schemaname: revops_msdynmkt_email_parentcampaignid_campaign
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_email
+    referencedtablelogicalname: campaign
+  -
+    schemaname: msdynmkt_email_fragment
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: msdynmkt_fragment
+    referencedtablelogicalname: msdynmkt_email
+

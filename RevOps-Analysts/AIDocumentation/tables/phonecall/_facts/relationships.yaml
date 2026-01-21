@@ -1,0 +1,732 @@
+relationships:
+  -
+    schemaname: phonecall_PostRegardings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postregarding
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: phonecall_PostFollows
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postfollow
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: phonecall_PostRoles
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postrole
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: PhoneCall_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: phonecall_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: PhoneCall_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: PhoneCall_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: PhoneCall_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: slakpiinstance_phonecall
+    relationshiptype: OneToMany
+    referencingtablelogicalname: slakpiinstance
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: PhoneCall_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: PhoneCall_Annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: phonecall_actioncard
+    relationshiptype: OneToMany
+    referencingtablelogicalname: actioncard
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: phonecall_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: PhoneCall_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: phonecall_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: PhoneCall_QueueItem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queueitem
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: phonecall_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: userentityinstancedata_phonecall
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: phonecall_campaignresponse
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: msdyn_phonecall_msdyn_transcript_transcripttarget
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_transcript
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: msdyn_phonecall_msdyn_ocrecording_recordingtarget
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocrecording
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: msdyn_phonecall_msdyn_conversationinsight_conversationinsighttarget
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_conversationinsight
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: msdyn_msdyn_salescopilotinsight_phonecall_msdyn_activityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salescopilotinsight
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: msdyn_msdyn_conversationactionitem_phonecall_msdyn_CreatedActivity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_conversationactionitem
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: msdyn_msdyn_sciconversation_phonecall_msdyn_RelatedActivity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_sciconversation
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: msdyn_phonecall_msdyn_recording_phone_call_activity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_recording
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: phonecall_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: phonecall
+  -
+    schemaname: KnowledgeBaseRecord_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: knowledgebaserecord
+  -
+    schemaname: lk_phonecall_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_phonecall_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: Account_Phonecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: account
+  -
+    schemaname: lk_phonecall_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: Contact_Phonecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: contact
+  -
+    schemaname: manualsla_phonecall
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: sla
+  -
+    schemaname: sla_phonecall
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: sla
+  -
+    schemaname: KnowledgeArticle_Phonecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: knowledgearticle
+  -
+    schemaname: lk_phonecall_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: processstage_phonecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: processstage
+  -
+    schemaname: user_phonecall
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: activity_pointer_phonecall
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: activitypointer
+  -
+    schemaname: team_phonecall
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: team
+  -
+    schemaname: TransactionCurrency_PhoneCall
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: business_unit_phone_call_activities
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: owner_phonecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: owner
+  -
+    schemaname: adx_invitation_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_invitation
+  -
+    schemaname: mspp_adplacement_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: mspp_adplacement
+  -
+    schemaname: mspp_pollplacement_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: mspp_pollplacement
+  -
+    schemaname: mspp_publishingstatetransitionrule_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: mspp_publishingstatetransitionrule
+  -
+    schemaname: mspp_redirect_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: mspp_redirect
+  -
+    schemaname: mspp_shortcut_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: mspp_shortcut
+  -
+    schemaname: mspp_website_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: mspp_website
+  -
+    schemaname: Lead_Phonecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: lead
+  -
+    schemaname: bookableresourcebooking_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: bookableresourcebooking
+  -
+    schemaname: bookableresourcebookingheader_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: bookableresourcebookingheader
+  -
+    schemaname: BulkOperation_Phonecall
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: bulkoperation
+  -
+    schemaname: Campaign_Phonecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: campaign
+  -
+    schemaname: CampaignActivity_Phonecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: campaignactivity
+  -
+    schemaname: Contract_Phonecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: contract
+  -
+    schemaname: entitlement_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: entitlement
+  -
+    schemaname: entitlementtemplate_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: entitlementtemplate
+  -
+    schemaname: Incident_Phonecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: incident
+  -
+    schemaname: site_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: site
+  -
+    schemaname: service_phonecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: service
+  -
+    schemaname: msdyn_customerasset_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_customerasset
+  -
+    schemaname: msdyn_playbookinstance_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_playbookinstance
+  -
+    schemaname: Invoice_Phonecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: invoice
+  -
+    schemaname: Opportunity_Phonecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Quote_Phonecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: quote
+  -
+    schemaname: SalesOrder_Phonecalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: salesorder
+  -
+    schemaname: msdyn_postalbum_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_postalbum
+  -
+    schemaname: msdyn_swarm_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_swarm
+  -
+    schemaname: msdyn_salessuggestion_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_salessuggestion
+  -
+    schemaname: msdyn_bookingalertstatus_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_bookingalertstatus
+  -
+    schemaname: msdyn_bookingrule_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_bookingrule
+  -
+    schemaname: msdyn_resourceterritory_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_resourceterritory
+  -
+    schemaname: msdyn_systemuserschedulersetting_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_systemuserschedulersetting
+  -
+    schemaname: msdyn_timegroup_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_timegroup
+  -
+    schemaname: msdyn_timegroupdetail_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_timegroupdetail
+  -
+    schemaname: msevtmgt_checkin_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_checkin
+  -
+    schemaname: msevtmgt_event_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_event
+  -
+    schemaname: msevtmgt_eventpurchase_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_eventpurchase
+  -
+    schemaname: msevtmgt_eventpurchaseattendee_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_eventpurchaseattendee
+  -
+    schemaname: msevtmgt_eventpurchasepass_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_eventpurchasepass
+  -
+    schemaname: msevtmgt_eventregistration_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_eventregistration
+  -
+    schemaname: msevtmgt_hotel_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_hotel
+  -
+    schemaname: msevtmgt_hotelroomallocation_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_hotelroomallocation
+  -
+    schemaname: msevtmgt_hotelroomreservation_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_hotelroomreservation
+  -
+    schemaname: msevtmgt_layout_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_layout
+  -
+    schemaname: msevtmgt_room_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_room
+  -
+    schemaname: msevtmgt_session_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_session
+  -
+    schemaname: msevtmgt_sessionregistration_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_sessionregistration
+  -
+    schemaname: msevtmgt_sessiontrack_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_sessiontrack
+  -
+    schemaname: msevtmgt_speaker_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_speaker
+  -
+    schemaname: msevtmgt_speakerengagement_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_speakerengagement
+  -
+    schemaname: msevtmgt_sponsorablearticle_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_sponsorablearticle
+  -
+    schemaname: msevtmgt_sponsorship_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_sponsorship
+  -
+    schemaname: msevtmgt_venue_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_venue
+  -
+    schemaname: msevtmgt_webinarconfiguration_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_webinarconfiguration
+  -
+    schemaname: msevtmgt_webinarprovider_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msevtmgt_webinarprovider
+  -
+    schemaname: msdyncrm_contentsettings_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_contentsettings
+  -
+    schemaname: msdyncrm_customerjourney_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_customerjourney
+  -
+    schemaname: msdyncrm_marketingdynamiccontentmetadata_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_marketingdynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemaildynamiccontentmetadata_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_marketingemaildynamiccontentmetadata
+  -
+    schemaname: msdyncrm_marketingemailtestsend_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_marketingemailtestsend
+  -
+    schemaname: msdyncrm_uicconfig_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_uicconfig
+  -
+    schemaname: msdyncrm_msdyncrm_customerjourneyiteration_phonecall
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_customerjourneyiteration
+  -
+    schemaname: msdyncrm_leadscoremodel_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_leadscoremodel
+  -
+    schemaname: msdyncrm_linkedinaccount_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_linkedinaccount
+  -
+    schemaname: msdyncrm_linkedinactivity_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_linkedinactivity
+  -
+    schemaname: msdyncrm_linkedinfieldmapping_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_linkedinfieldmapping
+  -
+    schemaname: msdyncrm_linkedinform_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_linkedinform
+  -
+    schemaname: msdyncrm_linkedinformanswer_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_linkedinformanswer
+  -
+    schemaname: msdyncrm_linkedinformquestion_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_linkedinformquestion
+  -
+    schemaname: msdyncrm_linkedinformsubmission_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_linkedinformsubmission
+  -
+    schemaname: msdyncrm_linkedinleadmatchingstrategy_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_linkedinleadmatchingstrategy
+  -
+    schemaname: msdyncrm_linkedinuserprofile_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_linkedinuserprofile
+  -
+    schemaname: msdyncrm_migration_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyncrm_migration
+  -
+    schemaname: msdynmkt_phonecall_JourneyId_msdynmkt_journey
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: adx_webpage_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_webpage
+  -
+    schemaname: adx_website_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_website
+  -
+    schemaname: adx_ad_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_ad
+  -
+    schemaname: adx_adplacement_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_adplacement
+  -
+    schemaname: adx_poll_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_poll
+  -
+    schemaname: adx_polloption_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_polloption
+  -
+    schemaname: adx_pollplacement_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_pollplacement
+  -
+    schemaname: adx_pollsubmission_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_pollsubmission
+  -
+    schemaname: adx_publishingstatetransitionrule_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_publishingstatetransitionrule
+  -
+    schemaname: adx_redirect_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_redirect
+  -
+    schemaname: adx_shortcut_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_shortcut
+  -
+    schemaname: adx_communityforumaccesspermission_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_communityforumaccesspermission
+  -
+    schemaname: adx_communityforumalert_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_communityforumalert
+  -
+    schemaname: adx_casedeflection_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_casedeflection
+  -
+    schemaname: adx_contentaccesslevel_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: adx_contentaccesslevel
+  -
+    schemaname: revops_audienceimport_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: revops_audienceimport
+  -
+    schemaname: msdyn_paymentterm_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_paymentterm
+  -
+    schemaname: msdyn_purchaseorder_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_purchaseorder
+  -
+    schemaname: msdyn_purchaseorderproduct_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_purchaseorderproduct
+  -
+    schemaname: msdyn_purchaseorderreceipt_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_purchaseorderreceipt
+  -
+    schemaname: msdyn_purchaseorderreceiptproduct_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_purchaseorderreceiptproduct
+  -
+    schemaname: msdyn_shipvia_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_shipvia
+  -
+    schemaname: msdyn_warehouse_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_warehouse
+  -
+    schemaname: msdyn_projectteam_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_projectteam
+  -
+    schemaname: msdyn_processnotes_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_processnotes
+  -
+    schemaname: revops_smeengagement_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: revops_smeengagement
+  -
+    schemaname: msdyn_project_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: msdyn_project
+  -
+    schemaname: revops_mwhaccount_PhoneCalls
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: revops_mwhaccount
+

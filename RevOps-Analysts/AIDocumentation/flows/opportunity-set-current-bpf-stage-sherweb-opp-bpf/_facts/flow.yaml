@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '633172f5-c29e-f011-bbd2-7ced8d061554'
+name: 'Opportunity - set current BPF stage - sherweb opp bpf'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

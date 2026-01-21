@@ -1,0 +1,35 @@
+views:
+  -
+    name: 'Closed Cumulus Sign-ups'
+    querytype: -1
+    savedqueryid: '581c9836-8d9b-47d2-9915-098b5419e6bb'
+  -
+    name: 'Cumulus Sign-up Associated View'
+    querytype: 2
+    savedqueryid: '2c1c5361-d684-4df7-a01f-46e5a3498fef'
+  -
+    name: 'My Cumulus Sign-ups'
+    description: 'Active Cumulus Sign-ups owned by me'
+    querytype: 8192
+    savedqueryid: 'e04f7fd4-43f5-ef11-be20-7ced8d063295'
+  -
+    name: 'Quick Find Active Cumulus Sign-ups'
+    querytype: 4
+    savedqueryid: '950dde4e-ee62-4efd-91f2-7ef32e14d649'
+  -
+    name: 'Cumulus Sign-up Advanced Find View'
+    querytype: 1
+    savedqueryid: 'd87f65bb-8007-4bfc-9010-87c985650197'
+  -
+    name: 'My Open Cumulus Sign-ups'
+    querytype: -1
+    savedqueryid: '020d07da-7ad9-4fae-aeb9-9116659ebf30'
+  -
+    name: 'Cumulus Sign-up Lookup View'
+    querytype: 64
+    savedqueryid: '60c20858-2d2e-4b71-b0c1-9b4e711fa0a6'
+  -
+    name: 'All Cumulus Sign-ups'
+    querytype: -1
+    savedqueryid: '49aa0424-4037-456a-89d9-9c5306b37c41'
+

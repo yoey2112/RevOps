@@ -1,0 +1,31 @@
+views:
+  -
+    name: Territory Regions
+    description: All active Territory Regions
+    querytype: 8192
+    savedqueryid: 'b94ef854-8b1e-ef11-840b-000d3af430c4'
+  -
+    name: Territory Region Lookup View
+    querytype: 64
+    savedqueryid: 'e2f510a5-9dcc-4a86-9a78-3274890a15ec'
+  -
+    name: Quick Find Active Territory Regions
+    querytype: 4
+    savedqueryid: '89172048-4360-47e9-ac27-58a95539d30c'
+  -
+    name: Active Territory Regions
+    querytype: -1
+    savedqueryid: '713cca59-9f15-480b-967e-5f7064171bbd'
+  -
+    name: Territory Region Associated View
+    querytype: 2
+    savedqueryid: '76b2d716-20d0-45f9-8dbc-9286021bee7a'
+  -
+    name: Territory Region Advanced Find View
+    querytype: 1
+    savedqueryid: '75bf7efd-1083-496e-bba6-cb915a04085d'
+  -
+    name: Inactive Territory Regions
+    querytype: -1
+    savedqueryid: '239c76cb-4dd7-4095-9e2b-f75dd41526e1'
+

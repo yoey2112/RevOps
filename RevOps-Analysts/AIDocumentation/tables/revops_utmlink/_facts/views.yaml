@@ -1,0 +1,31 @@
+views:
+  -
+    name: UTM Links
+    description: All active UTM Links
+    querytype: 8192
+    savedqueryid: 'a0bc5be0-0acd-ee11-907a-000d3af430c4'
+  -
+    name: Inactive UTM Links
+    querytype: -1
+    savedqueryid: 'c08f681a-c902-4f40-b1ff-5987fd0af178'
+  -
+    name: Quick Find Active UTM Links
+    querytype: 4
+    savedqueryid: 'e0e95e1c-d231-40ae-8844-a5ce18446e79'
+  -
+    name: Active UTM Links
+    querytype: -1
+    savedqueryid: 'cbe58880-8923-4433-a987-bb9e95936c20'
+  -
+    name: UTM Link Associated View
+    querytype: 2
+    savedqueryid: '08cd8690-0da4-4ef1-8e38-ea25299e1b31'
+  -
+    name: UTM Link Advanced Find View
+    querytype: 1
+    savedqueryid: '02fce491-b20e-49bd-a661-f7b9b63a61c2'
+  -
+    name: UTM Link Lookup View
+    querytype: 64
+    savedqueryid: 'b93d1f55-3c55-4b49-888d-f7ca89c11dc4'
+

@@ -1,0 +1,102 @@
+relationships:
+  -
+    schemaname: revops_solutioncategory_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_solutioncategory
+  -
+    schemaname: revops_solutioncategory_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_solutioncategory
+  -
+    schemaname: revops_solutioncategory_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_solutioncategory
+  -
+    schemaname: revops_solutioncategory_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_solutioncategory
+  -
+    schemaname: revops_solutioncategory_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_solutioncategory
+  -
+    schemaname: revops_solutioncategory_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_solutioncategory
+  -
+    schemaname: revops_solutioncategory_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_solutioncategory
+  -
+    schemaname: revops_solutioncategory_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_solutioncategory
+  -
+    schemaname: revops_solutioncategory_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_solutioncategory
+  -
+    schemaname: revops_solutioncategory_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_solutioncategory
+  -
+    schemaname: revops_solution_solutioncategory_revops_solutioncategory
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_solution
+    referencedtablelogicalname: revops_solutioncategory
+  -
+    schemaname: revops_accountpotentialtechstack_solutioncategory_revops_solutioncategory
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: revops_solutioncategory
+  -
+    schemaname: lk_revops_solutioncategory_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutioncategory
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_solutioncategory_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutioncategory
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_solutioncategory_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutioncategory
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_solutioncategory_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutioncategory
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_solutioncategory
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutioncategory
+    referencedtablelogicalname: organization
+  -
+    schemaname: revops_solution_solutioncategory
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutioncategory
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solutioncategory_practice_revops_practice
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_solutioncategory
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_solution_revops_solutioncategory_revops_solutioncategory
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: revops_solutioncategory
+    referencedtablelogicalname: revops_solution
+

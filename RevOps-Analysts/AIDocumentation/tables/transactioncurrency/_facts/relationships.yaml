@@ -1,0 +1,1167 @@
+relationships:
+  -
+    schemaname: TransactionCurrency_Goal
+    relationshiptype: OneToMany
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_SharePointSite
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointsite
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_UntrackedEmail
+    relationshiptype: OneToMany
+    referencingtablelogicalname: untrackedemail
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_QueueItem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queueitem
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_actioncard
+    relationshiptype: OneToMany
+    referencingtablelogicalname: actioncard
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_officegraphdocument
+    relationshiptype: OneToMany
+    referencingtablelogicalname: officegraphdocument
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_KnowledgeBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: knowledgebaserecord
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_SharePointDocument
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointdocument
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_delveactionhub
+    relationshiptype: OneToMany
+    referencingtablelogicalname: delveactionhub
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_ActionCardUserState
+    relationshiptype: OneToMany
+    referencingtablelogicalname: actioncarduserstate
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_SharePointDocumentLocation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointdocumentlocation
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_SLAItem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: slaitem
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_expiredprocess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: expiredprocess
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_externalpartyitem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: externalpartyitem
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_profileruleitem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: channelaccessprofileruleitem
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_profilerule
+    relationshiptype: OneToMany
+    referencingtablelogicalname: channelaccessprofilerule
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_socialactivity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialactivity
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_MailMergeTemplate
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailmergetemplate
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_UserMapping
+    relationshiptype: OneToMany
+    referencingtablelogicalname: usermapping
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_fixedmonthlyfiscalcalendar
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fixedmonthlyfiscalcalendar
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_semiannualfiscalcalendar
+    relationshiptype: OneToMany
+    referencingtablelogicalname: semiannualfiscalcalendar
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_PhoneCall
+    relationshiptype: OneToMany
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_Fax
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fax
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_usersettings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: usersettings
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: userentityinstancedata_transactioncurrency
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_ActivityPointer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_category
+    relationshiptype: OneToMany
+    referencingtablelogicalname: category
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_ConvertRule
+    relationshiptype: OneToMany
+    referencingtablelogicalname: convertrule
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_position
+    relationshiptype: OneToMany
+    referencingtablelogicalname: position
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_Task
+    relationshiptype: OneToMany
+    referencingtablelogicalname: task
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_SLA
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sla
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: basecurrency_organization
+    relationshiptype: OneToMany
+    referencingtablelogicalname: organization
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_Letter
+    relationshiptype: OneToMany
+    referencingtablelogicalname: letter
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_convertruleitem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: convertruleitem
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_routingruleitem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: routingruleitem
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_cardtype
+    relationshiptype: OneToMany
+    referencingtablelogicalname: cardtype
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_SystemUser
+    relationshiptype: OneToMany
+    referencingtablelogicalname: systemuser
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_Team
+    relationshiptype: OneToMany
+    referencingtablelogicalname: team
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_Email
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_BusinessUnit
+    relationshiptype: OneToMany
+    referencingtablelogicalname: businessunit
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_SocialProfile
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialprofile
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_Queue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_Appointment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_SimilarityRule
+    relationshiptype: OneToMany
+    referencingtablelogicalname: similarityrule
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_quarterlyfiscalcalendar
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quarterlyfiscalcalendar
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_KbArticle
+    relationshiptype: OneToMany
+    referencingtablelogicalname: kbarticle
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_monthlyfiscalcalendar
+    relationshiptype: OneToMany
+    referencingtablelogicalname: monthlyfiscalcalendar
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_CustomerAddress
+    relationshiptype: OneToMany
+    referencingtablelogicalname: customeraddress
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_annualfiscalcalendar
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annualfiscalcalendar
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_Connection
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_translationprocess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: translationprocess
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_ExternalParty
+    relationshiptype: OneToMany
+    referencingtablelogicalname: externalparty
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_feedback
+    relationshiptype: OneToMany
+    referencingtablelogicalname: feedback
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_contact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_ReportCategory
+    relationshiptype: OneToMany
+    referencingtablelogicalname: reportcategory
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_InteractionForEmail
+    relationshiptype: OneToMany
+    referencingtablelogicalname: interactionforemail
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_suggestioncardtemplate
+    relationshiptype: OneToMany
+    referencingtablelogicalname: suggestioncardtemplate
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_slakpiinstance
+    relationshiptype: OneToMany
+    referencingtablelogicalname: slakpiinstance
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_userfiscalcalendar
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userfiscalcalendar
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_knowledgearticleviews
+    relationshiptype: OneToMany
+    referencingtablelogicalname: knowledgearticleviews
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_Theme
+    relationshiptype: OneToMany
+    referencingtablelogicalname: theme
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_ChannelAccessProfile
+    relationshiptype: OneToMany
+    referencingtablelogicalname: channelaccessprofile
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_newprocess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: newprocess
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_knowledgearticle
+    relationshiptype: OneToMany
+    referencingtablelogicalname: knowledgearticle
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_RecurringAppointmentMaster
+    relationshiptype: OneToMany
+    referencingtablelogicalname: recurringappointmentmaster
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_account
+    relationshiptype: OneToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_recommendeddocument
+    relationshiptype: OneToMany
+    referencingtablelogicalname: recommendeddocument
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_Routingrule
+    relationshiptype: OneToMany
+    referencingtablelogicalname: routingrule
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_Territory
+    relationshiptype: OneToMany
+    referencingtablelogicalname: territory
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: chat_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: chat
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: adx_inviteredemption_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_inviteredemption
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: adx_portalcomment_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_portalcomment
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_lead
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_LeadAddress
+    relationshiptype: OneToMany
+    referencingtablelogicalname: leadaddress
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_product
+    relationshiptype: OneToMany
+    referencingtablelogicalname: product
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_productpricelevel
+    relationshiptype: OneToMany
+    referencingtablelogicalname: productpricelevel
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: DynamicPropertyAssociation_TransactionCurrency
+    relationshiptype: OneToMany
+    referencingtablelogicalname: dynamicpropertyassociation
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_Dynamicpropertyinsatance
+    relationshiptype: OneToMany
+    referencingtablelogicalname: dynamicpropertyinstance
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: DynamicPropertyOptionSetItem_TransactionCurrency
+    relationshiptype: OneToMany
+    referencingtablelogicalname: dynamicpropertyoptionsetitem
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_ProductAssociation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: productassociation
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_ProductSubstitute
+    relationshiptype: OneToMany
+    referencingtablelogicalname: productsubstitute
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_pricelevel
+    relationshiptype: OneToMany
+    referencingtablelogicalname: pricelevel
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_bookableresource
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bookableresource
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_bookableresourcebooking
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bookableresourcebooking
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_bookableresourcebookingheader
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bookableresourcebookingheader
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_bookableresourcecategory
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bookableresourcecategory
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_bookableresourcecategoryassn
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bookableresourcecategoryassn
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_bookableresourcecharacteristic
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bookableresourcecharacteristic
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_bookableresourcegroup
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bookableresourcegroup
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_bookingstatus
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bookingstatus
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_characteristic
+    relationshiptype: OneToMany
+    referencingtablelogicalname: characteristic
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_ratingmodel
+    relationshiptype: OneToMany
+    referencingtablelogicalname: ratingmodel
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_ratingvalue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: ratingvalue
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: bulkoperation_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperation
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_campaign
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaign
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_campaignactivity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignactivity
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_CampaignResponse
+    relationshiptype: OneToMany
+    referencingtablelogicalname: campaignresponse
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_list
+    relationshiptype: OneToMany
+    referencingtablelogicalname: list
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_contract
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contract
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_contractdetail
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contractdetail
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: incidentresolution_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incidentresolution
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_ServiceAppointment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: serviceappointment
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_phonetocaseprocess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: phonetocaseprocess
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_Equipment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: equipment
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_Incident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_entitlementtemplatechannel
+    relationshiptype: OneToMany
+    referencingtablelogicalname: entitlementtemplatechannel
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_Entitlement
+    relationshiptype: OneToMany
+    referencingtablelogicalname: entitlement
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_entitlementtemplate
+    relationshiptype: OneToMany
+    referencingtablelogicalname: entitlementtemplate
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_entitlementchannel
+    relationshiptype: OneToMany
+    referencingtablelogicalname: entitlementchannel
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_knowledgearticleincident
+    relationshiptype: OneToMany
+    referencingtablelogicalname: knowledgearticleincident
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_discount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: discount
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_invoice
+    relationshiptype: OneToMany
+    referencingtablelogicalname: invoice
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_invoicedetail
+    relationshiptype: OneToMany
+    referencingtablelogicalname: invoicedetail
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_opportunityclose
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_opportunityproduct
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunityproduct
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: orderclose_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: orderclose
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_quote
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quote
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: quoteclose_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quoteclose
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_quotedetail
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quotedetail
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_salesorder
+    relationshiptype: OneToMany
+    referencingtablelogicalname: salesorder
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_salesorderdetail
+    relationshiptype: OneToMany
+    referencingtablelogicalname: salesorderdetail
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_competitor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: competitor
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_discounttype
+    relationshiptype: OneToMany
+    referencingtablelogicalname: discounttype
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_SalesLiterature
+    relationshiptype: OneToMany
+    referencingtablelogicalname: salesliterature
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_leadtoopportunitysalesprocess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: leadtoopportunitysalesprocess
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_opportunitysalesprocess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunitysalesprocess
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_forecastinstance
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_forecastinstance
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msfp_alert_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_alert
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msfp_surveyinvite_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyinvite
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msfp_surveyresponse_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msdyn_copilottranscript_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_copilottranscript
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msdyn_ocliveworkitem_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msdyn_ocsession_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocsession
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_salessuggestion
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salessuggestion
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_actual
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_actual
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msdyn_bookingalert_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_bookingalert
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msevtmgt_AttendeePass
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_attendeepass
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msevtmgt_Building
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_building
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msevtmgt_Event
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_event
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msevtmgt_HotelRoomAllocation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_hotelroomallocation
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msevtmgt_pass
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_pass
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msevtmgt_Speaker
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_speaker
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msevtmgt_speakerengagement
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_speakerengagement
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msevtmgt_SponsorableArticle
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_sponsorablearticle
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msevtmgt_Sponsorship
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_sponsorship
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msevtmgt_Venue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_venue
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: new_TransactionCurrency_msevtmgt_attendeepass
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_attendeepass
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msevtmgt_TransactionCurrencyId_msevtmgt_Speaker
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_speaker
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msevtmgt_TransactionCurrencyId_msevtmgt_SponsorableArticle
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_sponsorablearticle
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msevtmgt_TransactionCurrencyId_msevtmgt_Sponsorship
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_sponsorship
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msevtmgt_TransactionCurrencyId_msevtmgt_Venue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_venue
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msdyn_ocvoicemail_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocvoicemail
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: li_inmail_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_inmail
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: li_message_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_message
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: li_pointdrivepresentationviewed_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_pointdrivepresentationviewed
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_revops_accountpotentialtechstack
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_revops_cumulusaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulusaccount
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_revops_opportunitysolution
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_revops_partnerinvestment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_partnerinvestment
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_revops_pricingrequest
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_pricingrequest
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_revops_solutionsummary
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_solutionsummary
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_revops_accountsolutionsummary
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountsolutionsummary
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_demo_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_demo
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_onboardingcall_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_revops_accountproductsummary
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountproductsummary
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_revops_Churn
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_churn
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_revops_productsummary
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_productsummary
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_cumulussignup_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: transactioncurrency_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: adx_alertsubscription_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_alertsubscription
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msdyn_comment_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_comment
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_businessreview_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_businessreview
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_cadencecall_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_inpersonmeeting_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_inpersonmeeting
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msevtmgt_eventpurchase
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_eventpurchase
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_purchaseorder
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_purchaseorder
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_purchaseorderproduct
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_purchaseorderproduct
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_ProjectProgram
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectprogram
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_ProjectRequest
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectrequest
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msdyn_approval_transactioncurrency_transactioncurrencyid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_approval
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_budgetline
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_budgetline
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_budgetlineactualassociation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_budgetlineactualassociation
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_budgetlinedetail
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_budgetlinedetail
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_contractlinedetailperformance
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_contractlinedetailperformance
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_contractlinescheduleofvalue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_contractlinescheduleofvalue
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_contractperformance
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_contractperformance
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_estimateline
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_estimateline
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_expense
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_expense
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_fact
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_fact
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_invoicelinetransaction
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_invoicelinetransaction
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_journalline
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_journalline
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_materialusagelog
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_materialusagelog
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_orderlinetransaction
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_orderlinetransaction
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_project
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_project
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_projectapproval
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectapproval
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_projectcontractlinedetailbreakdown
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectcontractlinedetailbreakdown
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_projectcontractlinemilestone
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectcontractlinemilestone
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_projectcontractlinesplitbillingrule
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectcontractlinesplitbillingrule
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_ProjectContractRetainer
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectcontractretainer
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_projectcontractsplitbillingrule
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectcontractsplitbillingrule
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_projectquotelinesplitbillingrule
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectquotelinesplitbillingrule
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_projectquotesplitbillingrule
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectquotesplitbillingrule
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_projecttask
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projecttask
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_projectvendorinvoice
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectvendorinvoice
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_projectvendorinvoiceline
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_projectvendorinvoiceline
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_quotelineanalyticsbreakdown
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_quotelineanalyticsbreakdown
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_quotelinedetailbreakdown
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_quotelinedetailbreakdown
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_quotelinescheduleofvalue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_quotelinescheduleofvalue
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_quotelinetransaction
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_quotelinetransaction
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_resourceassignment
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_resourceassignment
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_resourcecategorypricelevel
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_resourcecategorypricelevel
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_resourcecategorypriceoverride
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_resourcecategorypriceoverride
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_resourcerequirement
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_resourcerequirement
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_subcontract
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_subcontract
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_subcontractline
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_subcontractline
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_subcontractlinemilestone
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_subcontractlinemilestone
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_msdyn_transactioncategorypricelevel
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_transactioncategorypricelevel
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msdyn_organizationalunit_currency
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_organizationalunit
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msevtmgt_TransactionCurrencyId_msevtmgt_CheckIn
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_checkin
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: msevtmgt_TransactionCurrencyId_msevtmgt_Event
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_event
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: TransactionCurrency_revops_mwhaccount
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_mwhaccount
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: lk_transactioncurrencybase_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: transactioncurrency
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_transactioncurrencybase_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: transactioncurrency
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_transactioncurrency_entityimage
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: transactioncurrency
+    referencedtablelogicalname: imagedescriptor
+  -
+    schemaname: lk_transactioncurrency_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: transactioncurrency
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_transactioncurrencies
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: transactioncurrency
+    referencedtablelogicalname: organization
+  -
+    schemaname: lk_transactioncurrency_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: transactioncurrency
+    referencedtablelogicalname: systemuser
+

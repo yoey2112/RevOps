@@ -1,0 +1,124 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Select Base Currency
+        name: Select Base Currency
+        tab: Legacy_tab
+        visible: true
+      -
+        label: Transaction Currency Information
+        name: Transaction currency information
+        tab: Legacy_tab
+        visible: true
+      -
+        label: Currency Conversion
+        name: Currency conversion
+        tab: Legacy_tab
+        visible: true
+      -
+        label: General Section
+        name: General
+        tab: UCI_tab
+        visible: true
+      -
+        label: Currency Details
+        name: CurrencyInformation
+        tab: UCI_tab
+        visible: true
+    fields:
+      -
+        section: Transaction currency information
+        tab: Legacy_tab
+        disabled: false
+        visible: true
+        control_id: isocurrencycode
+        field: isocurrencycode
+      -
+        section: Transaction currency information
+        tab: Legacy_tab
+        disabled: false
+        visible: true
+        control_id: currencyprecision
+        field: currencyprecision
+      -
+        section: Transaction currency information
+        tab: Legacy_tab
+        disabled: false
+        visible: true
+        control_id: currencyname
+        field: currencyname
+      -
+        section: Transaction currency information
+        tab: Legacy_tab
+        disabled: false
+        visible: true
+        control_id: currencysymbol
+        field: currencysymbol
+      -
+        section: Currency conversion
+        tab: Legacy_tab
+        disabled: false
+        visible: true
+        control_id: exchangerate
+        field: exchangerate
+      -
+        section: General
+        tab: UCI_tab
+        disabled: false
+        visible: true
+        control_id: currencytype
+        field: currencytype
+      -
+        section: CurrencyInformation
+        tab: UCI_tab
+        disabled: true
+        visible: true
+        control_id: isocurrencycode_uci
+        field: isocurrencycode
+      -
+        section: CurrencyInformation
+        tab: UCI_tab
+        disabled: false
+        visible: true
+        control_id: currencyprecision
+        field: currencyprecision
+      -
+        section: CurrencyInformation
+        tab: UCI_tab
+        disabled: false
+        visible: true
+        control_id: currencyname
+        field: currencyname
+      -
+        section: CurrencyInformation
+        tab: UCI_tab
+        disabled: false
+        visible: true
+        control_id: currencysymbol
+        field: currencysymbol
+      -
+        section: CurrencyInformation
+        tab: UCI_tab
+        disabled: false
+        visible: true
+        control_id: exchangerate
+        field: exchangerate
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: Legacy_tab
+        visible: true
+        expanded: true
+      -
+        label: General
+        name: UCI_tab
+        visible: true
+        expanded: true
+    field_count: 11
+    type_name: Main
+

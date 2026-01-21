@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: 'f3277816-22ed-ee11-a1fd-0022486dc4eb'
+name: Opportunity Update Probability when Won
+category: 5
+type: 1
+statecode: 0
+statuscode: 1
+primaryentity: none
+

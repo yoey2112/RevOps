@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 4
+    uniquename: msdynce_saleshub
+    appmoduleid: '3971005b-2620-ef11-840b-6045bd5ea018'
+    name: Sales Hub
+

@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 4
+    uniquename: msdyncrm_MarketingSMBApp
+    appmoduleid: '51dc05e6-7a23-ef11-840a-0022483e8dfe'
+    name: 'Customer Insights - Journeys'
+

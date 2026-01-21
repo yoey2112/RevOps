@@ -1,0 +1,87 @@
+relationships:
+  -
+    schemaname: revops_partnerinvestment_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_partnerinvestment
+  -
+    schemaname: revops_partnerinvestment_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_partnerinvestment
+  -
+    schemaname: revops_partnerinvestment_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_partnerinvestment
+  -
+    schemaname: revops_partnerinvestment_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_partnerinvestment
+  -
+    schemaname: revops_partnerinvestment_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_partnerinvestment
+  -
+    schemaname: revops_partnerinvestment_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_partnerinvestment
+  -
+    schemaname: revops_partnerinvestment_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_partnerinvestment
+  -
+    schemaname: revops_partnerinvestment_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_partnerinvestment
+  -
+    schemaname: revops_partnerinvestment_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_partnerinvestment
+  -
+    schemaname: revops_partnerinvestment_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_partnerinvestment
+  -
+    schemaname: lk_revops_partnerinvestment_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_partnerinvestment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_partnerinvestment_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_partnerinvestment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_partnerinvestment_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_partnerinvestment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_partnerinvestment_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_partnerinvestment
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_partnerinvestment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_partnerinvestment
+    referencedtablelogicalname: organization
+  -
+    schemaname: TransactionCurrency_revops_partnerinvestment
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_partnerinvestment
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_partnerinvestment_account_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_partnerinvestment
+    referencedtablelogicalname: account
+

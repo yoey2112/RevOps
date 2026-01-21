@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '2c98e0f8-b81a-f011-998a-7ced8d04f24d'
+name: '[lead] - MQL date'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

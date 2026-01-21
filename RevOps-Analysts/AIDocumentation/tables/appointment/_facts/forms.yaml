@@ -1,0 +1,1665 @@
+forms:
+  -
+    name: After Meeting
+    is_active: true
+    type: 9
+    sections:
+      -
+        label: Summary
+        name: step_2_section1
+        tab: step_2
+        visible: true
+      -
+        label: Attendees
+        name: step_2_section2
+        tab: step_2
+        visible: true
+      -
+        label: Notes
+        name: step_2_section3
+        tab: step_2
+        visible: true
+      -
+        label: Case Details
+        name: Step_19_section1
+        tab: Step_19
+        visible: true
+      -
+        label: Notes
+        name: step_2_section2_2
+        tab: Step_19
+        visible: true
+      -
+        label: Assignment
+        name: step_2_section3_3
+        tab: Step_19
+        visible: true
+      -
+        label: Summary
+        name: Step_39_section1
+        tab: Step_39
+        visible: true
+      -
+        label: Contact Information
+        name: Step_39_section2
+        tab: Step_39
+        visible: true
+      -
+        label: Notes
+        name: Step_39_section3
+        tab: Step_39
+        visible: true
+      -
+        label: Personal Information
+        name: Step_55_section1
+        tab: Step_55
+        visible: true
+      -
+        label: Communication Information
+        name: Step_55_section2
+        tab: Step_55
+        visible: true
+      -
+        label: Personal Notes
+        name: Step_55_section3
+        tab: Step_55
+        visible: true
+      -
+        label: Summary
+        name: Step_77_section1
+        tab: Step_77
+        visible: true
+      -
+        label: Communication Information
+        name: Step_77_section2
+        tab: Step_77
+        visible: true
+      -
+        label: Details
+        name: Step_77_section3
+        tab: Step_77
+        visible: true
+      -
+        label: Summary
+        name: Step_105_section1
+        tab: Step_105
+        visible: true
+      -
+        label: Additional Information
+        name: Step_105_section2
+        tab: Step_105
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: 'aef4ae7d-1d23-445c-a685-f99933e81b5a_next'
+        field: 'aef4ae7d-1d23-445c-a685-f99933e81b5a_next'
+      -
+        section: step_2_section1
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: step_2_section1
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: scheduledstart
+        field: scheduledstart
+      -
+        section: step_2_section1
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: step_2_section1
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: location
+        field: location
+      -
+        section: step_2_section1
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: step_2_section2
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: requiredattendees
+        field: requiredattendees
+      -
+        section: step_2_section2
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: optionalattendees
+        field: optionalattendees
+      -
+        section: step_2_section3
+        tab: step_2
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: ''
+        tab: Step_19
+        disabled: false
+        visible: true
+        control_id: '7e7288cc-d628-b81c-da38-ed2b33c5c86e_back'
+        field: '7e7288cc-d628-b81c-da38-ed2b33c5c86e_back'
+      -
+        section: ''
+        tab: Step_19
+        disabled: false
+        visible: true
+        control_id: '7e7288cc-d628-b81c-da38-ed2b33c5c86e_next'
+        field: '7e7288cc-d628-b81c-da38-ed2b33c5c86e_next'
+      -
+        section: Step_19_section1
+        tab: Step_19
+        disabled: false
+        visible: true
+        control_id: 'Incident_Appointments:title'
+        field: title
+      -
+        section: Step_19_section1
+        tab: Step_19
+        disabled: false
+        visible: true
+        control_id: 'Incident_Appointments:ticketnumber'
+        field: ticketnumber
+      -
+        section: Step_19_section1
+        tab: Step_19
+        disabled: false
+        visible: true
+        control_id: 'Incident_Appointments:subjectid'
+        field: subjectid
+      -
+        section: Step_19_section1
+        tab: Step_19
+        disabled: false
+        visible: true
+        control_id: 'Incident_Appointments:prioritycode'
+        field: prioritycode
+      -
+        section: Step_19_section1
+        tab: Step_19
+        disabled: false
+        visible: true
+        control_id: 'Incident_Appointments:responseby'
+        field: responseby
+      -
+        section: Step_19_section1
+        tab: Step_19
+        disabled: false
+        visible: true
+        control_id: 'Incident_Appointments:resolveby'
+        field: resolveby
+      -
+        section: step_2_section2_2
+        tab: Step_19
+        disabled: false
+        visible: true
+        control_id: 'Incident_Appointments:description'
+        field: description
+      -
+        section: step_2_section3_3
+        tab: Step_19
+        disabled: false
+        visible: true
+        control_id: 'Incident_Appointments:ownerid'
+        field: ownerid
+      -
+        section: ''
+        tab: Step_39
+        disabled: false
+        visible: true
+        control_id: '3b7a919d-1026-8192-2002-1e661ebc5186_back'
+        field: '3b7a919d-1026-8192-2002-1e661ebc5186_back'
+      -
+        section: ''
+        tab: Step_39
+        disabled: false
+        visible: true
+        control_id: '3b7a919d-1026-8192-2002-1e661ebc5186_next'
+        field: '3b7a919d-1026-8192-2002-1e661ebc5186_next'
+      -
+        section: Step_39_section1
+        tab: Step_39
+        disabled: false
+        visible: true
+        control_id: 'Account_Appointments:name'
+        field: name
+      -
+        section: Step_39_section1
+        tab: Step_39
+        disabled: false
+        visible: true
+        control_id: 'Account_Appointments:telephone1'
+        field: telephone1
+      -
+        section: Step_39_section1
+        tab: Step_39
+        disabled: false
+        visible: true
+        control_id: 'Account_Appointments:websiteurl'
+        field: websiteurl
+      -
+        section: Step_39_section1
+        tab: Step_39
+        disabled: false
+        visible: true
+        control_id: 'Account_Appointments:parentaccountid'
+        field: parentaccountid
+      -
+        section: Step_39_section2
+        tab: Step_39
+        disabled: false
+        visible: true
+        control_id: 'Account_Appointments:primarycontactid'
+        field: primarycontactid
+      -
+        section: Step_39_section3
+        tab: Step_39
+        disabled: false
+        visible: true
+        control_id: 'Account_Appointments:description'
+        field: description
+      -
+        section: ''
+        tab: Step_55
+        disabled: false
+        visible: true
+        control_id: '4287b58e-3ad0-a041-301b-1e16babd016a_back'
+        field: '4287b58e-3ad0-a041-301b-1e16babd016a_back'
+      -
+        section: ''
+        tab: Step_55
+        disabled: false
+        visible: true
+        control_id: '4287b58e-3ad0-a041-301b-1e16babd016a_next'
+        field: '4287b58e-3ad0-a041-301b-1e16babd016a_next'
+      -
+        section: Step_55_section1
+        tab: Step_55
+        disabled: false
+        visible: true
+        control_id: 'Contact_Appointments:firstname'
+        field: firstname
+      -
+        section: Step_55_section1
+        tab: Step_55
+        disabled: false
+        visible: true
+        control_id: 'Contact_Appointments:lastname'
+        field: lastname
+      -
+        section: Step_55_section1
+        tab: Step_55
+        disabled: false
+        visible: true
+        control_id: 'Contact_Appointments:parentcustomerid'
+        field: parentcustomerid
+      -
+        section: Step_55_section1
+        tab: Step_55
+        disabled: false
+        visible: true
+        control_id: 'Contact_Appointments:birthdate'
+        field: birthdate
+      -
+        section: Step_55_section1
+        tab: Step_55
+        disabled: false
+        visible: true
+        control_id: 'Contact_Appointments:familystatuscode'
+        field: familystatuscode
+      -
+        section: Step_55_section1
+        tab: Step_55
+        disabled: false
+        visible: true
+        control_id: 'Contact_Appointments:spousesname'
+        field: spousesname
+      -
+        section: Step_55_section2
+        tab: Step_55
+        disabled: false
+        visible: true
+        control_id: 'Contact_Appointments:emailaddress1'
+        field: emailaddress1
+      -
+        section: Step_55_section2
+        tab: Step_55
+        disabled: false
+        visible: true
+        control_id: 'Contact_Appointments:telephone1'
+        field: telephone1
+      -
+        section: Step_55_section2
+        tab: Step_55
+        disabled: false
+        visible: true
+        control_id: 'Contact_Appointments:mobilephone'
+        field: mobilephone
+      -
+        section: Step_55_section3
+        tab: Step_55
+        disabled: false
+        visible: true
+        control_id: 'Contact_Appointments:description'
+        field: description
+      -
+        section: ''
+        tab: Step_77
+        disabled: false
+        visible: true
+        control_id: 'e575e2e6-5c66-0528-1de1-968159bdc8a8_back'
+        field: 'e575e2e6-5c66-0528-1de1-968159bdc8a8_back'
+      -
+        section: ''
+        tab: Step_77
+        disabled: false
+        visible: true
+        control_id: 'e575e2e6-5c66-0528-1de1-968159bdc8a8_next'
+        field: 'e575e2e6-5c66-0528-1de1-968159bdc8a8_next'
+      -
+        section: Step_77_section1
+        tab: Step_77
+        disabled: false
+        visible: true
+        control_id: 'Lead_Appointments:subject'
+        field: subject
+      -
+        section: Step_77_section1
+        tab: Step_77
+        disabled: false
+        visible: true
+        control_id: 'Lead_Appointments:firstname'
+        field: firstname
+      -
+        section: Step_77_section1
+        tab: Step_77
+        disabled: false
+        visible: true
+        control_id: 'Lead_Appointments:lastname'
+        field: lastname
+      -
+        section: Step_77_section1
+        tab: Step_77
+        disabled: false
+        visible: true
+        control_id: 'Lead_Appointments:jobtitle'
+        field: jobtitle
+      -
+        section: Step_77_section1
+        tab: Step_77
+        disabled: false
+        visible: true
+        control_id: 'Lead_Appointments:companyname'
+        field: companyname
+      -
+        section: Step_77_section1
+        tab: Step_77
+        disabled: false
+        visible: true
+        control_id: 'Lead_Appointments:createdon'
+        field: createdon
+      -
+        section: Step_77_section2
+        tab: Step_77
+        disabled: false
+        visible: true
+        control_id: 'Lead_Appointments:emailaddress1'
+        field: emailaddress1
+      -
+        section: Step_77_section2
+        tab: Step_77
+        disabled: false
+        visible: true
+        control_id: 'Lead_Appointments:mobilephone1'
+        field: mobilephone
+      -
+        section: Step_77_section3
+        tab: Step_77
+        disabled: false
+        visible: true
+        control_id: 'Lead_Appointments:description'
+        field: description
+      -
+        section: Step_77_section3
+        tab: Step_77
+        disabled: false
+        visible: true
+        control_id: 'Lead_Appointments:purchasetimeframe'
+        field: purchasetimeframe
+      -
+        section: Step_77_section3
+        tab: Step_77
+        disabled: false
+        visible: true
+        control_id: 'Lead_Appointments:budgetamount'
+        field: budgetamount
+      -
+        section: Step_77_section3
+        tab: Step_77
+        disabled: false
+        visible: true
+        control_id: 'Lead_Appointments:purchaseprocess'
+        field: purchaseprocess
+      -
+        section: Step_77_section3
+        tab: Step_77
+        disabled: false
+        visible: true
+        control_id: 'Lead_Appointments:decisionmaker'
+        field: decisionmaker
+      -
+        section: ''
+        tab: Step_105
+        disabled: false
+        visible: true
+        control_id: '7d07e69e-2ccc-d0b3-8c99-6607691d1d08_back'
+        field: '7d07e69e-2ccc-d0b3-8c99-6607691d1d08_back'
+      -
+        section: ''
+        tab: Step_105
+        disabled: false
+        visible: true
+        control_id: '7d07e69e-2ccc-d0b3-8c99-6607691d1d08_next'
+        field: '7d07e69e-2ccc-d0b3-8c99-6607691d1d08_next'
+      -
+        section: Step_105_section1
+        tab: Step_105
+        disabled: false
+        visible: true
+        control_id: 'Opportunity_Appointments:name1'
+        field: name
+      -
+        section: Step_105_section1
+        tab: Step_105
+        disabled: false
+        visible: true
+        control_id: 'Opportunity_Appointments:parentcontactid'
+        field: parentcontactid
+      -
+        section: Step_105_section1
+        tab: Step_105
+        disabled: false
+        visible: true
+        control_id: 'Opportunity_Appointments:parentaccountid1'
+        field: parentaccountid
+      -
+        section: Step_105_section1
+        tab: Step_105
+        disabled: false
+        visible: true
+        control_id: 'Opportunity_Appointments:description4'
+        field: description
+      -
+        section: Step_105_section1
+        tab: Step_105
+        disabled: false
+        visible: true
+        control_id: 'Opportunity_Appointments:currentsituation'
+        field: currentsituation
+      -
+        section: Step_105_section1
+        tab: Step_105
+        disabled: false
+        visible: true
+        control_id: 'Opportunity_Appointments:customerneed'
+        field: customerneed
+      -
+        section: Step_105_section1
+        tab: Step_105
+        disabled: false
+        visible: true
+        control_id: 'Opportunity_Appointments:proposedsolution'
+        field: proposedsolution
+      -
+        section: Step_105_section2
+        tab: Step_105
+        disabled: false
+        visible: true
+        control_id: 'Opportunity_Appointments:estimatedclosedate'
+        field: estimatedclosedate
+      -
+        section: Step_105_section2
+        tab: Step_105
+        disabled: false
+        visible: true
+        control_id: 'Opportunity_Appointments:budgetamount'
+        field: budgetamount
+      -
+        section: Step_105_section2
+        tab: Step_105
+        disabled: false
+        visible: true
+        control_id: 'Opportunity_Appointments:estimatedvalue'
+        field: estimatedvalue
+      -
+        section: Step_105_section2
+        tab: Step_105
+        disabled: false
+        visible: true
+        control_id: 'Opportunity_Appointments:closeprobability'
+        field: closeprobability
+      -
+        section: Step_105_section2
+        tab: Step_105
+        disabled: false
+        visible: true
+        control_id: 'Opportunity_Appointments:opportunityratingcode'
+        field: opportunityratingcode
+    description: null
+    tabs:
+      -
+        label: Verify Meeting Details
+        name: step_2
+        visible: true
+        expanded: true
+      -
+        label: 'Update Regarding: Case'
+        name: Step_19
+        visible: true
+        expanded: true
+      -
+        label: 'Update Regarding: Account'
+        name: Step_39
+        visible: true
+        expanded: true
+      -
+        label: 'Update Regarding: Contact'
+        name: Step_55
+        visible: true
+        expanded: true
+      -
+        label: 'Update Regarding: Lead'
+        name: Step_77
+        visible: true
+        expanded: true
+      -
+        label: 'Update Regarding: Opportunity'
+        name: Step_105
+        visible: true
+        expanded: true
+    field_count: 68
+    type_name: Type 9
+  -
+    name: Appointment Reference Panel
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: APPOINTMENT DETAILS
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: DESCRIPTION
+        name: tab_1_section_2
+        tab: tab_1
+        visible: true
+      -
+        label: OTHER DETAILS
+        name: tab_1_section_4
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: requiredattendees
+        field: requiredattendees
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: scheduledstart
+        field: scheduledstart
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: statecode
+        field: statecode
+      -
+        section: tab_1_section_2
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: tab_1_section_4
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: tab_1_section_4
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: tab_1_section_4
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: scheduleddurationminutes
+        field: scheduleddurationminutes
+      -
+        section: tab_1_section_4
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: A form that displays Reference Panel of Appointment.
+    tabs:
+      -
+        label: ''
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 11
+    type_name: Quick View
+  -
+    name: Appointment
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ''
+        name: general information
+        tab: appointment
+        visible: true
+      -
+        label: Attachments
+        name: attachments
+        tab: appointment
+        visible: true
+      -
+        label: Scheduling Information
+        name: scheduling information
+        tab: appointment
+        visible: true
+      -
+        label: Description
+        name: appointment description
+        tab: appointment
+        visible: true
+      -
+        label: Section
+        name: tab_2_section_2
+        tab: appointment
+        visible: true
+      -
+        label: Call Summary
+        name: tab_ci_section_call_summary
+        tab: tab_ci_call_summary
+        visible: true
+      -
+        label: Notes
+        name: tab_ci_section_notes
+        tab: tab_ci_notes
+        visible: true
+      -
+        label: Timeline Section
+        name: timeline_section
+        tab: tab_notes
+        visible: true
+    fields:
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: requiredattendees
+        field: requiredattendees
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: optionalattendees
+        field: optionalattendees
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: location
+        field: location
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: isonlinemeeting
+        field: isonlinemeeting
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: msdyncrm_associatedcustomerjourneyiteration
+        field: msdyncrm_associatedcustomerjourneyiteration
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: onlinemeetingjoinurl
+        field: onlinemeetingjoinurl
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: scheduledstart
+        field: scheduledstart
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: isalldayevent
+        field: isalldayevent
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: scheduleddurationminutes
+        field: scheduleddurationminutes
+      -
+        section: appointment description
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: tab_2_section_2
+        tab: appointment
+        disabled: true
+        visible: true
+        control_id: revops_calendlyslug
+        field: revops_calendlyslug
+      -
+        section: tab_ci_section_call_summary
+        tab: tab_ci_call_summary
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: tab_ci_section_notes
+        tab: tab_ci_notes
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Updated default appointment form.
+    tabs:
+      -
+        label: Appointment
+        name: appointment
+        visible: true
+        expanded: true
+      -
+        label: Call Summary
+        name: tab_ci_call_summary
+        visible: false
+        expanded: true
+      -
+        label: Notes
+        name: tab_ci_notes
+        visible: false
+        expanded: true
+      -
+        label: Notes
+        name: tab_notes
+        visible: false
+        expanded: true
+    field_count: 19
+    type_name: Main
+  -
+    name: Appointment Card form
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: ''
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: ''
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: ''
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ColorStrip
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: location
+        field: location
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: scheduledstart
+        field: scheduledstart
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: scheduleddurationminutes
+        field: scheduleddurationminutes
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: CardFooter
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: CardFooter
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: Default Appointment card form.
+    tabs:
+      -
+        label: Appointment Card
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 10
+    type_name: Card
+  -
+    name: Information
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: General Information
+        name: general information
+        tab: appointment
+        visible: true
+      -
+        label: Scheduling Information
+        name: scheduling information
+        tab: appointment
+        visible: true
+      -
+        label: Appointment Description
+        name: appointment description
+        tab: appointment
+        visible: true
+      -
+        label: Attachments
+        name: attachments
+        tab: attachments
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: notes
+        visible: true
+      -
+        label: Appointment Details
+        name: '{6DAA79FB-7C18-428f-9219-7A146BAC5AE8}'
+        tab: '{A0A52124-8019-4a51-9DAE-D85CD6227FFF}'
+        visible: true
+    fields:
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: location
+        field: location
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: requiredattendees
+        field: requiredattendees
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: optionalattendees
+        field: optionalattendees
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: scheduledstart
+        field: scheduledstart
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: scheduleddurationminutes
+        field: scheduleddurationminutes
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: isalldayevent
+        field: isalldayevent
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: appointment description
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: '{6DAA79FB-7C18-428f-9219-7A146BAC5AE8}'
+        tab: '{A0A52124-8019-4a51-9DAE-D85CD6227FFF}'
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: '{6DAA79FB-7C18-428f-9219-7A146BAC5AE8}'
+        tab: '{A0A52124-8019-4a51-9DAE-D85CD6227FFF}'
+        disabled: false
+        visible: true
+        control_id: organizer
+        field: organizer
+      -
+        section: '{6DAA79FB-7C18-428f-9219-7A146BAC5AE8}'
+        tab: '{A0A52124-8019-4a51-9DAE-D85CD6227FFF}'
+        disabled: false
+        visible: true
+        control_id: category
+        field: category
+      -
+        section: '{6DAA79FB-7C18-428f-9219-7A146BAC5AE8}'
+        tab: '{A0A52124-8019-4a51-9DAE-D85CD6227FFF}'
+        disabled: false
+        visible: true
+        control_id: subcategory
+        field: subcategory
+    description: A form for this entity.
+    tabs:
+      -
+        label: Appointment
+        name: appointment
+        visible: true
+        expanded: true
+      -
+        label: Attachments
+        name: attachments
+        visible: true
+        expanded: true
+      -
+        label: Notes
+        name: notes
+        visible: true
+        expanded: false
+      -
+        label: Details
+        name: '{A0A52124-8019-4a51-9DAE-D85CD6227FFF}'
+        visible: true
+        expanded: true
+    field_count: 16
+    type_name: Main
+  -
+    name: Appointment quick create form.
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: ''
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: APPOINTMENT DETAILS
+        name: tab_1_column_2_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: ''
+        name: tab_1_column_3_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: requiredattendees
+        field: requiredattendees
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: optionalattendees
+        field: optionalattendees
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: location
+        field: location
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: isonlinemeeting
+        field: isonlinemeeting
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: scheduledstart
+        field: scheduledstart
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: isalldayevent
+        field: isalldayevent
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: scheduleddurationminutes
+        field: scheduleddurationminutes
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+    description: Appointment quick create form.
+    tabs:
+      -
+        label: ''
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 13
+    type_name: Quick Create
+  -
+    name: Wizard
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ''
+        name: Hidden Section
+        tab: appointment
+        visible: false
+      -
+        label: ''
+        name: general information
+        tab: appointment
+        visible: true
+      -
+        label: Attachments
+        name: attachments
+        tab: appointment
+        visible: true
+      -
+        label: ''
+        name: scheduling information
+        tab: appointment
+        visible: true
+      -
+        label: Description
+        name: appointment description
+        tab: appointment
+        visible: true
+    fields:
+      -
+        section: Hidden Section
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: requiredattendees
+        field: requiredattendees
+      -
+        section: Hidden Section
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: optionalattendees
+        field: optionalattendees
+      -
+        section: Hidden Section
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: Hidden Section
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: location
+        field: location
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: isonlinemeeting
+        field: isonlinemeeting
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: onlinemeetingjoinurl
+        field: onlinemeetingjoinurl
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: scheduledstart
+        field: scheduledstart
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: isalldayevent
+        field: isalldayevent
+      -
+        section: scheduling information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: scheduleddurationminutes
+        field: scheduleddurationminutes
+      -
+        section: appointment description
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Appointment form for use in the quick campaign dialog and distribute campaign activity dialog.
+    tabs:
+      -
+        label: ''
+        name: appointment
+        visible: true
+        expanded: true
+    field_count: 15
+    type_name: Main
+  -
+    name: Appointment for Interactive experience
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Regarding
+        name: tab_5_section_5
+        tab: tab_5
+        visible: true
+      -
+        label: DETAILS
+        name: tab_5_section_2
+        tab: tab_5
+        visible: true
+      -
+        label: Description
+        name: appointment description
+        tab: tab_5
+        visible: true
+      -
+        label: ATTACHMENTS
+        name: tab_5_section_3
+        tab: tab_5
+        visible: true
+    fields:
+      -
+        section: tab_5_section_5
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: tab_5_section_2
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: tab_5_section_2
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: requiredattendees
+        field: requiredattendees
+      -
+        section: tab_5_section_2
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: optionalattendees
+        field: optionalattendees
+      -
+        section: tab_5_section_2
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: location
+        field: location
+      -
+        section: tab_5_section_2
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: isonlinemeeting
+        field: isonlinemeeting
+      -
+        section: tab_5_section_2
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: onlinemeetingjoinurl
+        field: onlinemeetingjoinurl
+      -
+        section: tab_5_section_2
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: tab_5_section_2
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: scheduledstart
+        field: scheduledstart
+      -
+        section: tab_5_section_2
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: isalldayevent
+        field: isalldayevent
+      -
+        section: tab_5_section_2
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: tab_5_section_2
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: scheduleddurationminutes
+        field: scheduleddurationminutes
+      -
+        section: appointment description
+        tab: tab_5
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: scheduledend
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Default Interactive experience Appointment form.
+    tabs:
+      -
+        label: Appointment
+        name: tab_5
+        visible: true
+        expanded: true
+    field_count: 17
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 1
+    sections:
+      -
+        label: General Information
+        name: general information
+        tab: appointment
+        visible: true
+    fields:
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: requiredattendees
+        field: requiredattendees
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: optionalattendees
+        field: optionalattendees
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: location
+        field: location
+      -
+        section: general information
+        tab: appointment
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+    description: This form displays an appointment book for the Service Calendar.
+    tabs:
+      -
+        label: Appointment
+        name: appointment
+        visible: true
+        expanded: true
+    field_count: 5
+    type_name: Type 1
+

@@ -1,0 +1,662 @@
+relationships:
+  -
+    schemaname: Opportunity_ActivityPointers
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitypointer
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_adx_portalcomments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_portalcomment
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_adx_inviteredemptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_inviteredemption
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_chats
+    relationshiptype: OneToMany
+    referencingtablelogicalname: chat
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_SharepointDocumentLocation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointdocumentlocation
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_SharepointDocument
+    relationshiptype: OneToMany
+    referencingtablelogicalname: sharepointdocument
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_Teams
+    relationshiptype: OneToMany
+    referencingtablelogicalname: team
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_MailboxTrackingFolder
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: userentityinstancedata_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_Appointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: appointment
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_Emails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_Faxes
+    relationshiptype: OneToMany
+    referencingtablelogicalname: fax
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_Letters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: letter
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_Phonecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: phonecall
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_Tasks
+    relationshiptype: OneToMany
+    referencingtablelogicalname: task
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_RecurringAppointmentMasters
+    relationshiptype: OneToMany
+    referencingtablelogicalname: recurringappointmentmaster
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_SocialActivities
+    relationshiptype: OneToMany
+    referencingtablelogicalname: socialactivity
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_Annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_ServiceAppointments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: serviceappointment
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_OpportunityCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_OrderCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: orderclose
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_QuoteCloses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quoteclose
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_actioncard
+    relationshiptype: OneToMany
+    referencingtablelogicalname: actioncard
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: lk_leadtoopportunitysalesprocess_opportunityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: leadtoopportunitysalesprocess
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_customer_opportunity_roles
+    relationshiptype: OneToMany
+    referencingtablelogicalname: customeropportunityrole
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_PostFollows
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postfollow
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_invoices
+    relationshiptype: OneToMany
+    referencingtablelogicalname: invoice
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: Opportunity_OpportunityClose
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_PostRegardings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postregarding
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_PostRoles
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postrole
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_quotes
+    relationshiptype: OneToMany
+    referencingtablelogicalname: quote
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_sales_orders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: salesorder
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: slakpiinstance_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: slakpiinstance
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: lead_qualifying_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: lk_opportunitysalesprocess_opportunityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunitysalesprocess
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_playbookinstance_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_playbookinstance
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: CreatedOpportunity_BulkOperationLogs
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkoperationlog
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_opportunity_msdyn_mostcontacted_regardingObjectId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_mostcontacted
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_opportunity_msdyn_mostcontactedby_regardingObjectId
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_mostcontactedby
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_opportunity_msdyn_opportunitykpiitem_opportunityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_opportunitykpiitem
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_opportunity_dailyopportunitykpiitem_entityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_dailyopportunitykpiitem
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_opportunity_msdyn_timespent_opplookup
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_timespent
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_Posts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: post
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_msfp_alerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_alert
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_msfp_surveyinvites
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyinvite
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_msfp_surveyresponses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msfp_surveyresponse
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_msdyn_copilottranscripts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_copilottranscript
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_msdyn_ocliveworkitems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_msdyn_ocsessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocsession
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_sequencetarget_opportunity_msdyn_target
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_sequencetarget
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_salesroutingdiagnostic_opportunity_msdyn_target
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesroutingdiagnostic
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_sabackupdiagnostic_opportunity_msdyn_target
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_sabackupdiagnostic
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_opportunity_msdyn_salesroutingrun_targetobject
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesroutingrun
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_salessuggestion_opportunity_qualifiedrecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salessuggestion
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_msdyn_bookingalerts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_bookingalert
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyncrm_opportunity_msdyncrm_leadtoopportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyncrm_leadtoopportunity
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_msdyn_ocvoicemails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocvoicemail
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_li_inmails
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_inmail
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_li_messages
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_message
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_li_pointdrivepresentationvieweds
+    relationshiptype: OneToMany
+    referencingtablelogicalname: li_pointdrivepresentationviewed
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_msdyn_salescopilotinsight_opportunity_msdyn_targetentityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salescopilotinsight
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_revops_demos
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_demo
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_revops_onboardingcalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_onboardingcall
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: product_opportunities
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunityproduct
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_revops_cumulussignups
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cumulussignup
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_activitymapping_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_activitymapping
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_adx_alertsubscriptions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: adx_alertsubscription
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_summarysynthesizerinput_referenceobjectid_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_summarysynthesizerinput
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_summarysynthesizeroutput_ReferenceObjectId_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_summarysynthesizeroutput
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_salesagentrun_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesagentrun
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_msdyn_comments
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_comment
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_synthesizeroutput_ReferenceObjectId_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_synthesizeroutput
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_OpportunityResearchIndicator_Opportunity_Opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_opportunityresearchindicator
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_revops_businessreviews
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_businessreview
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_revops_cadencecalls
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_cadencecall
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_revops_inpersonmeetings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_inpersonmeeting
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_salesagentprocessingstate_regardingentity_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesagentprocessingstate
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: opportunity_msdyn_approvals
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_approval
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_opportunity_msdyn_opportunitypricelist_Opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_opportunitypricelist
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_OpportunityResearchUserInteractions_Opportunity_Opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_opportunityresearchuserinteractions
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: bpf_opportunity_revops_sherwebopportunitybpf
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_sherwebopportunitybpf
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: bpf_opportunity_revops_sherwebsalesbpf
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_sherwebsalesbpf
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: revops_accountpotentialtechstack_opportunity_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: revops_incident_opportunity_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: revops_opportunitysolution_opportunity_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: revops_smeengagement_opportunity_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_smeengagement
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: revops_msdyn_project_opportunity_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_project
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_dcaengageagentresult_regarding_opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_dcaengageagentresult
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: msdyn_OpportunityResearchResult_Opportunity_Opportunity
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_opportunityresearchresult
+    referencedtablelogicalname: opportunity
+  -
+    schemaname: lk_opportunitybase_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_opportunity_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_opportunitybase_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_opportunity_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: opportunity_owning_user
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_opportunities
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_opportunitys
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_opportunities
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: transactioncurrency_opportunity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: opportunity_originating_lead
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: lead
+  -
+    schemaname: opportunity_parent_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: account
+  -
+    schemaname: price_level_opportunties
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: pricelevel
+  -
+    schemaname: sla_opportunity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: sla
+  -
+    schemaname: opportunity_parent_contact
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: contact
+  -
+    schemaname: manualsla_opportunity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: sla
+  -
+    schemaname: opportunity_customer_accounts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: account
+  -
+    schemaname: opportunity_customer_contacts
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: contact
+  -
+    schemaname: campaign_opportunities
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: campaign
+  -
+    schemaname: msdyn_msdyn_opportunitykpiitem_opportunity_opportunitykpiid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: msdyn_opportunitykpiitem
+  -
+    schemaname: msdyn_msdyn_predictivescore_opportunity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: msdyn_predictivescore
+  -
+    schemaname: msdyn_msdyn_segment_opportunity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: msdyn_segment
+  -
+    schemaname: msdynmkt_opportunity_JourneyId_msdynmkt_journey
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: msdynmkt_journey
+  -
+    schemaname: processstage_opportunity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: processstage
+  -
+    schemaname: msa_contact_opportunity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: contact
+  -
+    schemaname: msa_partner_opportunity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: account
+  -
+    schemaname: msdyn_accountmanager_opportunity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: msdyn_organizationalunit_opportunity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: msdyn_organizationalunit
+  -
+    schemaname: revops_opportunity_demosme_systemuser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_opportunity_onboardinguser_systemuser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: revops_opportunity_solution_revops_solution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: revops_solution_proposedsolution_opportunity
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: revops_solution
+  -
+    schemaname: opportunitycompetitors_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: competitor
+

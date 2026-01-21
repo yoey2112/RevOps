@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 4
+    uniquename: msdyn_ResourceScheduling
+    appmoduleid: 'ccb6a49b-a622-ef11-840b-000d3a840a45'
+    name: Resource Scheduling
+

@@ -1,0 +1,147 @@
+relationships:
+  -
+    schemaname: msdynmkt_marketingform_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: msdynmkt_marketingform
+  -
+    schemaname: msdynmkt_marketingform_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: msdynmkt_marketingform
+  -
+    schemaname: msdynmkt_marketingform_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: msdynmkt_marketingform
+  -
+    schemaname: msdynmkt_marketingform_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: msdynmkt_marketingform
+  -
+    schemaname: msdynmkt_marketingform_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: msdynmkt_marketingform
+  -
+    schemaname: msdynmkt_marketingform_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: msdynmkt_marketingform
+  -
+    schemaname: msdynmkt_marketingform_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: msdynmkt_marketingform
+  -
+    schemaname: msdynmkt_msdynmkt_marketingform_lead_marketingformid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: msdynmkt_marketingform
+  -
+    schemaname: msdynmkt_marketingformsubmission_marketingform
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdynmkt_marketingformsubmission
+    referencedtablelogicalname: msdynmkt_marketingform
+  -
+    schemaname: msdynmkt_msdynmkt_marketingform_contact_marketingformid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: contact
+    referencedtablelogicalname: msdynmkt_marketingform
+  -
+    schemaname: msevtmgt_event_registrationcancelationform_msdynmkt_marketingform
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_event
+    referencedtablelogicalname: msdynmkt_marketingform
+  -
+    schemaname: msevtmgt_msdynmkt_marketingform_msevtmgt_event
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msevtmgt_event
+    referencedtablelogicalname: msdynmkt_marketingform
+  -
+    schemaname: lk_msdynmkt_marketingform_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_marketingform_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_marketingform_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_msdynmkt_marketingform_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_msdynmkt_marketingform
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_msdynmkt_marketingform
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_msdynmkt_marketingform
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_msdynmkt_marketingform
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: msdynmkt_compliancesettings4_marketingform
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: msdynmkt_compliancesettings4
+  -
+    schemaname: msdynmkt_marketingform_contactmatchingrule_msdynmkt_matchingstrategy
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: msdynmkt_matchingstrategy
+  -
+    schemaname: msdynmkt_marketingform_doubleoptintogglemodifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: msdynmkt_marketingform_leadmatchingrule_msdynmkt_matchingstrategy
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: msdynmkt_matchingstrategy
+  -
+    schemaname: msdynmkt_marketingform_targetaudience_msdynmkt_formtargetaudience
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: msdynmkt_formtargetaudience
+  -
+    schemaname: msdynmkt_marketingformtemplate_marketingform
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: msdynmkt_marketingformtemplate
+  -
+    schemaname: msdynmkt_matchingstrategy_marketingform
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: msdynmkt_matchingstrategy
+  -
+    schemaname: msdynmkt_parentcontactmatchingstrategy_marketingform
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: msdynmkt_matchingstrategy
+  -
+    schemaname: revops_msdynmkt_marketingform_parentcampaignid_c
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: msdynmkt_marketingform
+    referencedtablelogicalname: campaign
+

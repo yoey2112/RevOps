@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '16df325b-ce8f-f011-b4cc-6045bdfa0630'
+name: '[Global] PIT tier'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

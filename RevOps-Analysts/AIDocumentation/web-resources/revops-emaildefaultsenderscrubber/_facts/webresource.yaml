@@ -1,0 +1,5 @@
+displayname: Email Default Sender Scrubber
+description: Removes the default sending email of a Queue from the TO field
+webresourceid: '588f00b9-909f-f011-bbd2-7ced8d061ad0'
+name: revops_emaildefaultsenderscrubber
+

@@ -1,0 +1,43 @@
+views:
+  -
+    name: Solutions
+    description: All active Solutions
+    querytype: 8192
+    savedqueryid: 'bc08a2b5-971e-ef11-840b-000d3af430c4'
+  -
+    name: Active and OppReady
+    querytype: -1
+    savedqueryid: '0af8eede-1b27-ef11-840a-000d3af46ad3'
+  -
+    name: Solution Associated View
+    querytype: 2
+    savedqueryid: 'eba7c26d-c66f-4d9e-9450-0514993d30ff'
+  -
+    name: Solution Advanced Find View
+    querytype: 1
+    savedqueryid: 'b95139e1-98b8-4239-a0ca-1dfff272c343'
+  -
+    name: Inactive Solutions
+    querytype: -1
+    savedqueryid: '86bb3644-5784-4e6b-93fa-3e39d1bbaec3'
+  -
+    name: Solutions
+    querytype: -1
+    savedqueryid: '23db02cc-5319-43d4-b886-4bdd6ff66dcc'
+  -
+    name: All Solutions Lookup View
+    querytype: -1
+    savedqueryid: '257a7fc2-fb3a-ef11-a316-6045bdcd5dde'
+  -
+    name: 'Lookup View - Case Form'
+    querytype: -1
+    savedqueryid: '7fc777c9-84da-ef11-a730-7c1e52870606'
+  -
+    name: Quick Find Active Solutions
+    querytype: 4
+    savedqueryid: '4d95399e-8b88-4ddb-b0c3-a9b4f4123f45'
+  -
+    name: Solution Lookup View
+    querytype: 64
+    savedqueryid: '3455781b-ec14-45c2-916e-f53582d94a6d'
+

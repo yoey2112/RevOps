@@ -1,0 +1,245 @@
+// revops_/js/transfer-email.js
+// Command button on the Transfers subgrid (on Case form).
+// Opens a draft Email to the Case's Contact, with a formatted body and a table
+// (Organization Name, Microsoft ID, Request ID, Azure Transfer ID iff present).
+
+(function () {
+  // ====== CONFIG: confirm your transfer entity logical name (singular) ======
+  // Open your Transfers table > Table properties > "Name (Logical)".
+  var TRANSFER_ENTITY_LOGICAL = "revops_transfer";
+  // ==========================================================================
+
+  // -- helpers --
+  function stripGuid(id) { return (id || "").replace(/[{}]/g, ""); }
+  function alertErr(msg) { return Xrm.Navigation.openAlertDialog({ text: msg }); }
+
+  // --- Language selector (English vs. Français) ---
+  function askLanguage() {
+    var dlg = {
+      text: "Please choose the email language.\nVeuillez choisir la langue du courriel.",
+      title: "Select Language / Sélectionner la langue",
+      confirmButtonLabel: "English",
+      cancelButtonLabel: "Français"
+    };
+    // true => English, false (or close) => Français
+    return Xrm.Navigation.openConfirmDialog(dlg).then(function (res) {
+      return res.confirmed ? "en" : "fr";
+    });
+  }
+
+  // Pull a Transfer row (includes Org name through the lookup)
+  function getTransferRow(transferId) {
+    var select =
+      "?$select=revops_microsoftid,revops_requestid,revops_azuretransferid,_revops_cumulusorganization_value" +
+      "&$expand=revops_cumulusorganization($select=revops_name)";
+
+    return Xrm.WebApi.retrieveRecord(TRANSFER_ENTITY_LOGICAL, transferId, select).then(function (r) {
+      var orgName =
+        (r.revops_cumulusorganization && r.revops_cumulusorganization.revops_name) ||
+        r["_revops_cumulusorganization_value@OData.Community.Display.V1.FormattedValue"] ||
+        "";
+      return {
+        orgName: orgName || "",
+        microsoftId: r.revops_microsoftid || "",
+        requestId: r.revops_requestid || "",
+        azureTransferId: r.revops_azuretransferid || ""
+      };
+    });
+  }
+
+  // Get Case Contact (id + first name)
+  function getCaseContact(formContext, caseId) {
+    var attr = formContext.getAttribute && formContext.getAttribute("primarycontactid");
+    if (attr && Array.isArray(attr.getValue()) && attr.getValue().length) {
+      var ref = attr.getValue()[0];
+      var id = stripGuid(ref.id);
+      return Xrm.WebApi.retrieveRecord("contact", id, "?$select=firstname,fullname").then(function (c) {
+        var first = c.firstname || (c.fullname ? c.fullname.split(" ")[0] : "");
+        return { id: id, firstName: first || "" };
+      });
+    }
+    var expand = "?$select=_primarycontactid_value&$expand=primarycontactid($select=firstname,fullname)";
+    return Xrm.WebApi.retrieveRecord("incident", caseId, expand).then(function (r) {
+      var id = r._primarycontactid_value;
+      if (!id) return null;
+      id = stripGuid(id);
+      var first =
+        (r.primarycontactid && r.primarycontactid.firstname) ||
+        (r.primarycontactid && r.primarycontactid.fullname ? r.primarycontactid.fullname.split(" ")[0] : "");
+      return { id: id, firstName: first || "" };
+    });
+  }
+
+  // Current user (for From party and template token)
+  function getCurrentUser() {
+    var userId = stripGuid(Xrm.Utility.getGlobalContext().userSettings.userId);
+    return Xrm.WebApi.retrieveRecord("systemuser", userId, "?$select=firstname,fullname").then(function (u) {
+      var first = u.firstname || (u.fullname ? u.fullname.split(" ")[0] : "");
+      return { id: userId, firstName: first || "" };
+    });
+  }
+
+  // Build the table (Azure column only if any row has a value); localized headers
+  function buildTable(rows, lang) {
+    var anyAzure = rows.some(function (x) { return x.azureTransferId && x.azureTransferId.length; });
+
+    var H = (lang === "fr")
+      ? { org: "Nom de l'organisation", mid: "Identifiant Microsoft", rid: "Numéro de demande", az: "ID de transfert Azure" }
+      : { org: "Organization Name",     mid: "Microsoft ID",          rid: "Request ID",        az: "Azure Transfer ID" };
+
+    var th =
+      "<tr>" +
+        "<th style='text-align:left;padding:6px;border-bottom:1px solid #ddd;'>" + H.org + "</th>" +
+        "<th style='text-align:left;padding:6px;border-bottom:1px solid #ddd;'>" + H.mid + "</th>" +
+        "<th style='text-align:left;padding:6px;border-bottom:1px solid #ddd;'>" + H.rid + "</th>" +
+        (anyAzure ? "<th style='text-align:left;padding:6px;border-bottom:1px solid #ddd;'>" + H.az + "</th>" : "") +
+      "</tr>";
+
+    var trs = rows.map(function (r) {
+      return "<tr>" +
+        "<td style='padding:6px;border-bottom:1px solid #f0f0f0;'>" + (r.orgName || "") + "</td>" +
+        "<td style='padding:6px;border-bottom:1px solid #f0f0f0;'>" + (r.microsoftId || "") + "</td>" +
+        "<td style='padding:6px;border-bottom:1px solid #f0f0f0;'>" + (r.requestId || "") + "</td>" +
+        (anyAzure ? "<td style='padding:6px;border-bottom:1px solid #f0f0f0;'>" + (r.azureTransferId || "") + "</td>" : "") +
+      "</tr>";
+    }).join("");
+
+    return "<table style='border-collapse:collapse;font-family:Segoe UI,Arial,sans-serif;font-size:12.5px;width:100%;'>" +
+             th + trs +
+           "</table>";
+  }
+
+  // Build the final email body (EN or FR). Formatting is identical; only wording changes.
+  function buildEmailBody(rows, contactFirst, userFirst, lang) {
+    var tableHtml = buildTable(rows, lang);
+    var red = "#c00000";
+    var italicOpen = "<div style='font-style:italic;'>";
+    var italicClose = "</div>";
+
+    if (lang === "fr") {
+      var p1fr =
+        "<p>Bonjour " + (contactFirst || "") + ",</p>" +
+        "<p>Je m'appelle " + (userFirst || "") + " et je m'occuperai de la demande de transfert de licence.</p>" +
+        "<p>La demande a été soumise avec succès. Veuillez contacter l'ancien fournisseur pour partager les détails du transfert et nous informer lorsque la demande a été acceptée.</p>" +
+        "<p><strong><u>Remarque :</u></strong> Veuillez ne pas ajouter de licences dans Cumulus pendant ce processus tant que nous n'avons pas terminé le transfert de notre côté. Des exceptions peuvent être faites à condition d’en discuter au préalable.</p>" +
+        tableHtml +
+        "<p>La demande a 30 jours pour être acceptée avant son expiration. Veuillez donc contacter le fournisseur précédent pour qu'il l'accepte.</p>" +
+        "<p>Faites-moi savoir si vous avez des questions !</p>" +
+        "<br/>";
+
+      var bulletsFr =
+        "<p><strong>Détails supplémentaires :</strong></p>" +
+        "<ul>" +
+          "<li><strong>Abonnements, réservations et plans d'épargne</strong> - Sherweb n'a pas la possibilité de demander quels abonnements, réservations et plans d'épargne sont déplacés lors du transfert. Cela ne peut être sélectionné que par le CSP actuel lors de son acceptation de la demande de transfert. Tout abonnement qui n'a pas été sélectionné lors du transfert initial nécessitera une nouvelle demande de transfert. Les instances réservées qui n'ont pas été transférées avec leur abonnement ne peuvent pas être déplacées après coup. Vous devrez acheter de nouvelles réservations si nécessaire.</li>" +
+          "<li><strong>Réservations (RI)</strong> - Les RI transférées resteront actives dans l'environnement et continueront à avoir le même impact qu'avant le transfert ; cependant, elles peuvent mettre jusqu'à 6 semaines à apparaître sur votre portail Cumulus, en fonction de la date du transfert et de notre prochaine facture Microsoft. Veuillez vous assurer de continuer à facturer les clients de manière appropriée même si les RI n'apparaissent pas immédiatement dans Cumulus.</li>" +
+          "<li><strong>Accès/autorisations RBAC</strong> - Il incombe au client de mettre à jour les autorisations d'abonnement après le transfert. Cela implique de supprimer les anciennes autorisations des CSP et d'ajouter celles de Sherweb. La suppression des anciennes autorisations peut être effectuée via l'interface utilisateur du portail Azure : sélectionnez l'abonnement &gt; Contrôle d'accès (IAM) &gt; Attributions de rôles et supprimez l'ancien CSP. L'ajout des autorisations de Sherweb ne peut se faire que via les commandes Azure CLI ou PowerShell. Veuillez vous référer à <a href=\"https://helpdesk.sherweb.com/en-us/knowledge-base/articles/KA-04047\" target=\"_blank\">ce guide Sherweb</a> pour les instructions. Le fait de ne pas ajouter les autorisations de Sherweb limitera la capacité de Sherweb à prendre en charge l'abonnement et entraînera des pénalités financières (voir la section PEC du calendrier du service Azure de Sherweb pour plus de détails).</li>" +
+        "</ul>" +
+        "<p><span style='color:" + red + ";'><strong>***Si vous ne complétez pas les étapes ci-haut, Vous ne recevrez pas vos Crédits Azure***</strong></span></p>" +
+        "<p>Merci,</p>";
+
+      return p1fr + italicOpen + bulletsFr + italicClose;
+    }
+
+    // English (default)
+    var p1en =
+      "<p>Hello " + (contactFirst || "") + ",</p>" +
+      "<p>My name is " + (userFirst || "") + " and I'll be looking after the license transfer request.</p>" +
+      "<p>The request has been successfully submitted, please " +
+        "<strong><u>reach out to your previous provider</u></strong> with the transfer details and let us know when it's been accepted.</p>" +
+      "<p><strong><u>Note:</u></strong> Please do not add any licenses into Cumulus during this process until we have completed the transfer on our end unless you have discussed it with me.</p>" +
+      tableHtml +
+      "<p>The request has 30 days to be accepted before expiring so please reach out to the previous provider to have them accept it.</p>" +
+      "<p>Let me know if you have any questions!</p>" +
+      "<br/>";
+
+    var bulletsEn =
+      "<p><strong>Additional details:</strong></p>" +
+      "<ul>" +
+        "<li><strong>Subscriptions, reservations and savings plans</strong> - Sherweb does not have an option to request which subscription(s), reservations and savings plans are moved during the transfer. This can only be selected by the current CSP during their acceptance of the transfer request. Any subscriptions that were not selected in the initial transfer will require a new transfer request. Any RIs that did not transfer with their subscription cannot be moved after the fact. You will need to purchase new reservations as required.</li>" +
+        "<li><strong>Reservations (RIs)</strong> - Transferred RIs will remain active in the environment and continue having the same impact as prior to the transfer; however, they may take up to 6 weeks to appear in your Cumulus portal, depending on the date of transfer and our next Microsoft invoice. Please ensure to continue invoicing customers appropriately even if the RIs do not appear in Cumulus right away.</li>" +
+        "<li><strong>RBAC access/permissions</strong> - It's the customer's responsibility to update subscription permissions post-transfer. This involves removing the old CSP’s permissions and adding Sherweb's. Removing old permissions can be done via the Azure Portal UI: Select the subscription &gt; Access control (IAM) &gt; Role assignments and remove the old CSP. Adding Sherweb's permissions can only be done via the Azure CLI or PowerShell commands. Please refer to <a href=\"https://helpdesk.sherweb.com/en-us/knowledge-base/articles/KA-04047\" target=\"_blank\">this Sherweb guide</a>. Failure to add Sherweb's permissions will limit Sherweb's ability to support the subscription, and will have financial penalties (refer to the PEC section of Sherweb's Azure Service schedule for details).</li>" +
+      "</ul>" +
+      "<p><span style='color:" + red + ";'><strong>***FYI: If the step above is not completed for each tenant with Azure Services, you will not receive your Azure discounts.***</strong></span></p>" +
+      "<p>Thank you,</p>";
+
+    return p1en + italicOpen + bulletsEn + italicClose;
+  }
+
+  // MAIN: ribbon handler
+  function sendTransferEmail(primaryControl, selectedItemIds) {
+    try {
+      // Normalize selection
+      var ids = [];
+      if (Array.isArray(selectedItemIds)) ids = selectedItemIds.slice();
+      else if (typeof selectedItemIds === "string") ids = selectedItemIds.split(",").map(function (s) { return s.trim(); });
+      else if (selectedItemIds && selectedItemIds.forEach) selectedItemIds.forEach(function (x) { ids.push(String(x)); });
+      ids = ids.filter(Boolean).map(stripGuid);
+
+      if (!ids.length) return alertErr("Select one or more Transfers first.");
+
+      // Case context
+      var form = primaryControl;
+      if (!form || !form.data || !form.data.entity) return alertErr("Form context unavailable.");
+      var caseId = stripGuid(form.data.entity.getId());
+      if (!caseId) return alertErr("Save the Case before using this action.");
+
+      // Prompt for language
+      askLanguage().then(function (lang) {
+        Xrm.Utility.showProgressIndicator(lang === "fr" ? "Préparation du courriel..." : "Preparing email...");
+
+        // Load contact, current user, and transfer rows
+        var loaders = [ getCaseContact(form, caseId), getCurrentUser() ].concat(ids.map(getTransferRow));
+
+        Promise.all(loaders).then(function (all) {
+          var contact = all[0];
+          var me = all[1];
+          var rows = all.slice(2);
+
+          if (!contact || !contact.id) throw new Error(lang === "fr"
+            ? "Aucun contact sur ce dossier. Veuillez définir le contact du dossier et réessayer."
+            : "No Contact on this Case. Please set the Case contact and try again.");
+
+          if (!rows.length) throw new Error(lang === "fr"
+            ? "Aucun transfert à inclure."
+            : "No transfers to include.");
+
+          var html = buildEmailBody(rows, contact.firstName, me.firstName, lang);
+          var subject = (lang === "fr")
+            ? ("Détails de transfert pour " + rows.length + " organisation" + (rows.length > 1 ? "s" : ""))
+            : ("Transfer details for " + rows.length + " organization" + (rows.length > 1 ? "s" : ""));
+
+          var email = {
+            subject: subject,
+            description: html,                   // HTML body
+            directioncode: true,                 // outgoing
+            "regardingobjectid_incident@odata.bind": "/incidents(" + caseId + ")",
+            "email_activity_parties": [
+              { "participationtypemask": 1, "partyid_systemuser@odata.bind": "/systemusers(" + me.id + ")" }, // From
+              { "participationtypemask": 2, "partyid_contact@odata.bind": "/contacts(" + contact.id + ")" }     // To
+            ]
+          };
+
+          return Xrm.WebApi.createRecord("email", email).then(function (res) {
+            Xrm.Utility.closeProgressIndicator();
+            return Xrm.Navigation.openForm({
+              pageType: "entityrecord",
+              entityName: "email",
+              entityId: res.id
+            });
+          });
+        })
+        .catch(function (e) {
+          try { Xrm.Utility.closeProgressIndicator(); } catch (_) {}
+          alertErr(e.message || e);
+        });
+      });
+
+    } catch (e) {
+      try { Xrm.Utility.closeProgressIndicator(); } catch (_) {}
+      alertErr("Unexpected error: " + e.message);
+    }
+  }
+
+  // Expose for the ribbon command
+  window.revops_sendTransferEmail = sendTransferEmail;
+})();

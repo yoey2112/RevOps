@@ -1,0 +1,177 @@
+relationships:
+  -
+    schemaname: Competitor_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: competitor
+  -
+    schemaname: Competitor_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: competitor
+  -
+    schemaname: Competitor_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: competitor
+  -
+    schemaname: Competitor_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: competitor
+  -
+    schemaname: competitor_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: competitor
+  -
+    schemaname: userentityinstancedata_competitor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: competitor
+  -
+    schemaname: Competitor_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: competitor
+  -
+    schemaname: Competitor_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: competitor
+  -
+    schemaname: competitor_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: competitor
+  -
+    schemaname: competitor_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: competitor
+  -
+    schemaname: competitor_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: competitor
+  -
+    schemaname: Competitor_Annotation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: annotation
+    referencedtablelogicalname: competitor
+  -
+    schemaname: competitor_addresses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: competitoraddress
+    referencedtablelogicalname: competitor
+  -
+    schemaname: competitor_opportunity_activities
+    relationshiptype: OneToMany
+    referencingtablelogicalname: opportunityclose
+    referencedtablelogicalname: competitor
+  -
+    schemaname: competitor_PostRegardings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postregarding
+    referencedtablelogicalname: competitor
+  -
+    schemaname: competitor_PostFollows
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postfollow
+    referencedtablelogicalname: competitor
+  -
+    schemaname: competitor_PostRoles
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postrole
+    referencedtablelogicalname: competitor
+  -
+    schemaname: competitor_Posts
+    relationshiptype: OneToMany
+    referencingtablelogicalname: post
+    referencedtablelogicalname: competitor
+  -
+    schemaname: competitor_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: competitor
+  -
+    schemaname: revops_competitortransferid_competitor_competitor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_competitortransferid
+    referencedtablelogicalname: competitor
+  -
+    schemaname: revops_incident_losingcompetitor_competitor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: competitor
+  -
+    schemaname: revops_transfer_competitor_competitor
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_transfer
+    referencedtablelogicalname: competitor
+  -
+    schemaname: lk_competitorbase_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: competitor
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_competitor_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: competitor
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_competitorbase_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: competitor
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_competitor_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: competitor
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_competitors
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: competitor
+    referencedtablelogicalname: organization
+  -
+    schemaname: processstage_competitors
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: competitor
+    referencedtablelogicalname: processstage
+  -
+    schemaname: transactioncurrency_competitor
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: competitor
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: lk_competitor_entityimage
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: competitor
+    referencedtablelogicalname: imagedescriptor
+  -
+    schemaname: revops_account_competitor
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: competitor
+    referencedtablelogicalname: account
+  -
+    schemaname: opportunitycompetitors_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: opportunity
+    referencedtablelogicalname: competitor
+  -
+    schemaname: leadcompetitors_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: competitor
+  -
+    schemaname: competitorproduct_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: competitor
+    referencedtablelogicalname: product
+  -
+    schemaname: competitorsalesliterature_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: salesliterature
+    referencedtablelogicalname: competitor
+

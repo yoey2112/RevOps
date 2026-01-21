@@ -1,0 +1,978 @@
+forms:
+  -
+    name: Event information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Section
+        name: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        visible: true
+    fields:
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_event
+        field: msevtmgt_event
+    description: Displays the event lookup of the session
+    tabs:
+      -
+        label: Tab
+        name: GeneralTab
+        visible: true
+        expanded: true
+    field_count: 1
+    type_name: Quick View
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: SummaryTab_section_4
+        tab: SummaryTab
+        visible: true
+      -
+        label: Go To Webinar
+        name: SummaryTab_section_13
+        tab: SummaryTab
+        visible: true
+      -
+        label: Additional information
+        name: SummaryTab_section_3
+        tab: SummaryTab
+        visible: true
+      -
+        label: Capacity
+        name: SummaryTab_section_capacity
+        tab: SummaryTab
+        visible: true
+      -
+        label: Schedule
+        name: SummaryTab_section_Schedule
+        tab: SummaryTab
+        visible: true
+      -
+        label: Recurrent session
+        name: Recurrent Session
+        tab: SummaryTab
+        visible: false
+      -
+        label: Timeline
+        name: SummaryTab_section_2
+        tab: SummaryTab
+        visible: true
+      -
+        label: Stream This Session Online
+        name: TeamsIntegrationSection
+        tab: SummaryTab
+        visible: true
+      -
+        label: Location
+        name: VenueTab_section_location
+        tab: SummaryTab
+        visible: true
+      -
+        label: Venue constraints
+        name: SummaryTab_section_venueconstraints
+        tab: SummaryTab
+        visible: false
+      -
+        label: 'Webinar set-up'
+        name: VenueTab_section_webinarsetup
+        tab: SummaryTab
+        visible: true
+      -
+        label: Session equipment
+        name: VenueTab_section_2
+        tab: SummaryTab
+        visible: false
+      -
+        label: Session constraints
+        name: VenueTab_section_3
+        tab: SummaryTab
+        visible: true
+      -
+        label: Contents and requirements
+        name: AgendaTab_section_1
+        tab: AgendaTab
+        visible: true
+      -
+        label: Tracks
+        name: AgendaTab_section_2
+        tab: AgendaTab
+        visible: true
+      -
+        label: Speaker engagements
+        name: AgendaTab_section_3
+        tab: AgendaTab
+        visible: true
+      -
+        label: Session Team Members
+        name: SessionTeamMembers
+        tab: AgendaTab
+        visible: true
+      -
+        label: Sessions in the same event
+        name: RelatedSessionsTab_section_1
+        tab: RelatedSessionsTab
+        visible: true
+      -
+        label: Simultaneous sessions
+        name: RelatedSessionsTab_section_2
+        tab: RelatedSessionsTab
+        visible: true
+      -
+        label: Passes
+        name: RegistrationAndAttendanceTab_section_1
+        tab: RegistrationAndAttendanceTab
+        visible: false
+      -
+        label: Passes
+        name: RegistrationAndAttendanceTab_section_1_2
+        tab: RegistrationAndAttendanceTab
+        visible: true
+      -
+        label: Sessions registrations
+        name: RegistrationAndAttendanceTab_section_3
+        tab: RegistrationAndAttendanceTab
+        visible: true
+      -
+        label: Registration profiles
+        name: RegistrationAndAttendanceTab_section_2
+        tab: RegistrationAndAttendanceTab
+        visible: false
+      -
+        label: Session registrations by day
+        name: RegistrationAndAttendanceTab_section_5
+        tab: RegistrationAndAttendanceTab
+        visible: true
+      -
+        label: 'Session check-ins'
+        name: RegistrationAndAttendanceTab_section_4
+        tab: RegistrationAndAttendanceTab
+        visible: true
+      -
+        label: 'Check-in profiles'
+        name: RegistrationAndAttendanceTab_section_6
+        tab: RegistrationAndAttendanceTab
+        visible: false
+      -
+        label: Contacts who canceled
+        name: InteractionsTab_SessionRegistrationCanceledList
+        tab: RegistrationAndAttendanceTab
+        visible: true
+      -
+        label: Waitlist
+        name: RegistrationAndAttendanceTab_section_waitlist
+        tab: RegistrationAndAttendanceTab
+        visible: false
+      -
+        label: Calendar content
+        name: CalendarContentSection
+        tab: AdditionalInfoTab
+        visible: true
+    fields:
+      -
+        section: SummaryTab_section_4
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_name
+        field: msevtmgt_name
+      -
+        section: SummaryTab_section_4
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_sessionformat
+        field: msevtmgt_sessionformat
+      -
+        section: SummaryTab_section_4
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_event
+        field: msevtmgt_event
+      -
+        section: SummaryTab_section_4
+        tab: SummaryTab
+        disabled: true
+        visible: true
+        control_id: msevtmgt_registrationcount
+        field: msevtmgt_registrationcount
+      -
+        section: SummaryTab_section_4
+        tab: SummaryTab
+        disabled: true
+        visible: true
+        control_id: msevtmgt_checkincount
+        field: msevtmgt_checkincount
+      -
+        section: SummaryTab_section_4
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_externalurl
+        field: msevtmgt_externalurl
+      -
+        section: SummaryTab_section_4
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_publishstatus
+        field: msevtmgt_publishstatus
+      -
+        section: SummaryTab_section_4
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_descriptorsyncstatus
+        field: msevtmgt_descriptorsyncstatus
+      -
+        section: SummaryTab_section_13
+        tab: SummaryTab
+        disabled: true
+        visible: true
+        control_id: revops_sessionkey
+        field: revops_sessionkey
+      -
+        section: SummaryTab_section_3
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_sessiontype
+        field: msevtmgt_sessiontype
+      -
+        section: SummaryTab_section_3
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_audiencetype
+        field: msevtmgt_audiencetype
+      -
+        section: SummaryTab_section_3
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_industry
+        field: msevtmgt_industry
+      -
+        section: SummaryTab_section_3
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_totalnumberofquestionsasked
+        field: msevtmgt_totalnumberofquestionsasked
+      -
+        section: SummaryTab_section_3
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_keywords
+        field: msevtmgt_keywords
+      -
+        section: SummaryTab_section_3
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_waitlistthissession
+        field: msevtmgt_waitlistthissession
+      -
+        section: SummaryTab_section_capacity
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_sessionmaxcapacity
+        field: msevtmgt_sessionmaxcapacity
+      -
+        section: SummaryTab_section_capacity
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_waitlistthissession
+        field: msevtmgt_waitlistthissession
+      -
+        section: SummaryTab_section_Schedule
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_starttime
+        field: msevtmgt_starttime
+      -
+        section: SummaryTab_section_Schedule
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_endtime
+        field: msevtmgt_endtime
+      -
+        section: SummaryTab_section_Schedule
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_durationmins
+        field: msevtmgt_durationmins
+      -
+        section: Recurrent Session
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_recurrencepattern
+        field: msevtmgt_recurrencepattern
+      -
+        section: Recurrent Session
+        tab: SummaryTab
+        disabled: true
+        visible: true
+        control_id: msevtmgt_baserecurrentsessionid
+        field: msevtmgt_baserecurrentsessionid
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_streamingenabled
+        field: msevtmgt_streamingenabled
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_streamingenabledbanner
+        field: msevtmgt_streamingenabled
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_streamingprovider
+        field: msevtmgt_streamingprovider
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_changemeetingoptions
+        field: msevtmgt_changemeetingoptions
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_autoadmittedusers
+        field: msevtmgt_autoadmittedusers
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_allowpstnsserstobypasslobby
+        field: msevtmgt_allowpstnsserstobypasslobby
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_entryexitannouncementsenabled
+        field: msevtmgt_entryexitannouncementsenabled
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_allowattendeestounmute
+        field: msevtmgt_allowattendeestounmute
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_autorecordingenabled
+        field: msevtmgt_autorecordingenabled
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_allowmeetingchat
+        field: msevtmgt_allowmeetingchat
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_allowteamsmeetingreactions
+        field: msevtmgt_allowteamsmeetingreactions
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_allowcameraforattendees
+        field: msevtmgt_allowcameraforattendees
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_recordingforproducersandspeakers
+        field: msevtmgt_recordingforproducersandspeakers
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_recordingforattendees
+        field: msevtmgt_recordingforattendees
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: true
+        visible: true
+        control_id: msevtmgt_isoutofsync
+        field: msevtmgt_isoutofsync
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_attendeeengagementreport
+        field: msevtmgt_attendeeengagementreport
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_qna
+        field: msevtmgt_qna
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_allowexternalpresenters
+        field: msevtmgt_allowexternalpresenters
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: true
+        visible: true
+        control_id: msevtmgt_attendeeurl
+        field: msevtmgt_attendeeurl
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: true
+        visible: true
+        control_id: msevtmgt_teamsinvitationhtml
+        field: msevtmgt_teamsinvitationhtml
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: true
+        visible: true
+        control_id: msevtmgt_streamowner
+        field: msevtmgt_streamowner
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_eventteammember
+        field: msevtmgt_eventteammember
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: true
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+      -
+        section: TeamsIntegrationSection
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_checkininfo
+        field: msevtmgt_streamingenabled
+      -
+        section: VenueTab_section_location
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_building
+        field: msevtmgt_building
+      -
+        section: VenueTab_section_location
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_room
+        field: msevtmgt_room
+      -
+        section: VenueTab_section_location
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_layout
+        field: msevtmgt_layout
+      -
+        section: SummaryTab_section_venueconstraints
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_sessionmaxcapacity
+        field: msevtmgt_sessionmaxcapacity
+      -
+        section: VenueTab_section_webinarsetup
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_webinarconfigurationid
+        field: msevtmgt_webinarconfigurationid
+      -
+        section: VenueTab_section_webinarsetup
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_webinartype
+        field: msevtmgt_webinartype
+      -
+        section: VenueTab_section_webinarsetup
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_language
+        field: msevtmgt_language
+      -
+        section: VenueTab_section_webinarsetup
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_producer
+        field: msevtmgt_producer
+      -
+        section: VenueTab_section_webinarsetup
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_webinarurl
+        field: msevtmgt_webinarurl
+      -
+        section: VenueTab_section_webinarsetup
+        tab: SummaryTab
+        disabled: true
+        visible: true
+        control_id: msevtmgt_presentationmanagerurl
+        field: msevtmgt_presentationmanagerurl
+      -
+        section: VenueTab_section_2
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_avsupport
+        field: msevtmgt_avsupport
+      -
+        section: VenueTab_section_2
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_internetconnection
+        field: msevtmgt_internetconnection
+      -
+        section: VenueTab_section_2
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_videoconferencing
+        field: msevtmgt_videoconferencing
+      -
+        section: VenueTab_section_2
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_whiteboard
+        field: msevtmgt_whiteboard
+      -
+        section: VenueTab_section_2
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_flipchart
+        field: msevtmgt_flipchart
+      -
+        section: VenueTab_section_3
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_nda
+        field: msevtmgt_nda
+      -
+        section: VenueTab_section_3
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_recordingspermitted
+        field: msevtmgt_recordingspermitted
+      -
+        section: VenueTab_section_3
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_cameraspermitted
+        field: msevtmgt_cameraspermitted
+      -
+        section: VenueTab_section_3
+        tab: SummaryTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_byinvitationonly
+        field: msevtmgt_byinvitationonly
+      -
+        section: AgendaTab_section_1
+        tab: AgendaTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_sessionsummary
+        field: msevtmgt_sessionsummary
+      -
+        section: AgendaTab_section_1
+        tab: AgendaTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_sessionobjectives
+        field: msevtmgt_sessionobjectives
+      -
+        section: AgendaTab_section_1
+        tab: AgendaTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_detaileddescription
+        field: msevtmgt_detaileddescription
+      -
+        section: AgendaTab_section_1
+        tab: AgendaTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_sessionprerequisites
+        field: msevtmgt_sessionprerequisites
+      -
+        section: CalendarContentSection
+        tab: AdditionalInfoTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_calendarcontent
+        field: msevtmgt_calendarcontent
+      -
+        section: CalendarContentSection
+        tab: AdditionalInfoTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_calendarcontent_plaintext
+        field: msevtmgt_calendarcontent_plaintext
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msevtmgt_sessioncode
+        field: msevtmgt_sessioncode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msevtmgt_nda
+        field: msevtmgt_nda
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_msevtmgt_publishstatus
+        field: msevtmgt_publishstatus
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: A form for this entity
+    tabs:
+      -
+        label: Summary
+        name: SummaryTab
+        visible: true
+        expanded: true
+      -
+        label: Agenda
+        name: AgendaTab
+        visible: true
+        expanded: true
+      -
+        label: Related sessions
+        name: RelatedSessionsTab
+        visible: true
+        expanded: false
+      -
+        label: Registration and attendance
+        name: RegistrationAndAttendanceTab
+        visible: true
+        expanded: true
+      -
+        label: Additional information
+        name: AdditionalInfoTab
+        visible: true
+        expanded: true
+    field_count: 75
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: Section
+        name: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        visible: true
+      -
+        label: Section
+        name: TeamsIntegrationSection
+        tab: GeneralTab
+        visible: true
+      -
+        label: Section
+        name: section_location
+        tab: GeneralTab
+        visible: true
+      -
+        label: Section
+        name: section_webinarsetup
+        tab: GeneralTab
+        visible: true
+    fields:
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_name
+        field: msevtmgt_name
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_event
+        field: msevtmgt_event
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_starttime
+        field: msevtmgt_starttime
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_endtime
+        field: msevtmgt_endtime
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_sessionformat
+        field: msevtmgt_sessionformat
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_sessionmaxcapacity
+        field: msevtmgt_sessionmaxcapacity
+      -
+        section: GeneralTab_column_1_section_1
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_publishstatus
+        field: msevtmgt_publishstatus
+      -
+        section: TeamsIntegrationSection
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_streamingenabled
+        field: msevtmgt_streamingenabled
+      -
+        section: TeamsIntegrationSection
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_streamingenabledbanner
+        field: msevtmgt_streamingenabled
+      -
+        section: TeamsIntegrationSection
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_streamingprovider
+        field: msevtmgt_streamingprovider
+      -
+        section: TeamsIntegrationSection
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_recordingforproducersandspeakers
+        field: msevtmgt_recordingforproducersandspeakers
+      -
+        section: section_location
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_building
+        field: msevtmgt_building
+      -
+        section: section_location
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_room
+        field: msevtmgt_room
+      -
+        section: section_location
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_layout
+        field: msevtmgt_layout
+      -
+        section: section_webinarsetup
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_webinarconfigurationid
+        field: msevtmgt_webinarconfigurationid
+      -
+        section: section_webinarsetup
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_webinartype
+        field: msevtmgt_webinartype
+      -
+        section: section_webinarsetup
+        tab: GeneralTab
+        disabled: false
+        visible: true
+        control_id: msevtmgt_language
+        field: msevtmgt_language
+    description: A form for this entity
+    tabs:
+      -
+        label: Tab
+        name: GeneralTab
+        visible: true
+        expanded: true
+    field_count: 17
+    type_name: Quick Create
+  -
+    name: Quick view for calendar
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Session details
+        name: '{16b3f630-61c0-4be4-ae76-d0f90f100135}'
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: '{16b3f630-61c0-4be4-ae76-d0f90f100135}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msevtmgt_name
+        field: msevtmgt_name
+      -
+        section: '{16b3f630-61c0-4be4-ae76-d0f90f100135}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msevtmgt_sessionformat
+        field: msevtmgt_sessionformat
+      -
+        section: '{16b3f630-61c0-4be4-ae76-d0f90f100135}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msevtmgt_event
+        field: msevtmgt_event
+      -
+        section: '{16b3f630-61c0-4be4-ae76-d0f90f100135}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msevtmgt_starttime
+        field: msevtmgt_starttime
+      -
+        section: '{16b3f630-61c0-4be4-ae76-d0f90f100135}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msevtmgt_endtime
+        field: msevtmgt_endtime
+      -
+        section: '{16b3f630-61c0-4be4-ae76-d0f90f100135}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msevtmgt_building
+        field: msevtmgt_building
+      -
+        section: '{16b3f630-61c0-4be4-ae76-d0f90f100135}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msevtmgt_room
+        field: msevtmgt_room
+      -
+        section: '{16b3f630-61c0-4be4-ae76-d0f90f100135}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msevtmgt_webinarurl
+        field: msevtmgt_webinarurl
+      -
+        section: '{16b3f630-61c0-4be4-ae76-d0f90f100135}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: '{16b3f630-61c0-4be4-ae76-d0f90f100135}'
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msevtmgt_sessionmaxcapacity
+        field: msevtmgt_sessionmaxcapacity
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 10
+    type_name: Quick View
+

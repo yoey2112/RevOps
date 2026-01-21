@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '577e4e2b-453a-ef11-a316-6045bdcd5e88'
+name: 'Account Solutions Summary - Copy Account Key'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

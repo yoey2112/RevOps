@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 4
+    uniquename: Dynamics365Portals
+    appmoduleid: 'e47e35cb-9435-f011-8c4f-002248b0f955'
+    name: Portal Management
+

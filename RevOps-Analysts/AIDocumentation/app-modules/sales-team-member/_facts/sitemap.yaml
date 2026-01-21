@@ -1,0 +1,8 @@
+components:
+  -
+    formfactor: 1
+    clienttype: 4
+    uniquename: msdyn_TeamMember_Sales
+    appmoduleid: 'bc12b43c-1820-ef11-840b-6045bd5ea018'
+    name: Sales Team Member
+

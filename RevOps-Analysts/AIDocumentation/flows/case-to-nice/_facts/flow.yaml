@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: 'd96a7992-b69f-f011-bbd2-7ced8d058789'
+name: Case to NiCE
+category: 5
+type: 1
+statecode: 0
+statuscode: 1
+primaryentity: none
+

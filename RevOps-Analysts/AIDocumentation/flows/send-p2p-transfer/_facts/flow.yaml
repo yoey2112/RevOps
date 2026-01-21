@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '64e3c0bb-b194-f011-b4cc-6045bdfa0630'
+name: Send P2P Transfer
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

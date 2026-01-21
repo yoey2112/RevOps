@@ -1,0 +1,87 @@
+timestamp: '2025-12-29T19:08:45.4452136Z'
+critical_failed_count: 0
+run_id: '20251229-190843'
+probes:
+  critical:
+    -
+      endpoint: EntityDefinitions
+      readable: true
+      accessible: true
+      status: ok
+      http_status: 200
+      message: Accessible and readable
+    -
+      endpoint: solutions
+      readable: true
+      accessible: true
+      status: ok
+      http_status: 200
+      message: Accessible and readable
+    -
+      endpoint: workflows
+      readable: true
+      accessible: true
+      status: ok
+      http_status: 200
+      message: Accessible and readable
+    -
+      endpoint: solutioncomponents
+      readable: true
+      accessible: true
+      status: ok
+      http_status: 200
+      message: Accessible and readable
+  plugins:
+    -
+      endpoint: pluginassemblies
+      readable: true
+      accessible: true
+      status: ok
+      http_status: 200
+      message: Accessible and readable
+    -
+      endpoint: plugintypes
+      readable: true
+      accessible: true
+      status: ok
+      http_status: 200
+      message: Accessible and readable
+    -
+      endpoint: sdkmessageprocessingsteps
+      readable: true
+      accessible: true
+      status: ok
+      http_status: 200
+      message: Accessible and readable
+    -
+      endpoint: sdkmessagefilters
+      readable: true
+      accessible: true
+      status: ok
+      http_status: 200
+      message: Accessible and readable
+  queues:
+    -
+      endpoint: queues
+      readable: true
+      accessible: true
+      status: ok
+      http_status: 200
+      message: Accessible and readable
+  omnichannel:
+    -
+      endpoint: msdyn_liveworkstreams
+      readable: true
+      accessible: true
+      status: ok
+      http_status: 200
+      message: Accessible and readable
+    -
+      endpoint: slas
+      readable: true
+      accessible: true
+      status: ok
+      http_status: 200
+      message: Accessible and readable
+plugins_failed_count: 0
+

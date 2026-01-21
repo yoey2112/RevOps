@@ -1,0 +1,349 @@
+forms:
+  -
+    name: Operating hours
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: section
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: false
+      -
+        label: section
+        name: tab_1_column_1_section_2
+        tab: tab_1
+        visible: true
+      -
+        label: section
+        name: tab_1_column_2_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: section
+        name: tab_1_column_3_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_name
+        field: msdyn_name
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_enablealldays
+        field: msdyn_enablealldays
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_starttimestring
+        field: msdyn_starttimestring
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_endtimestring
+        field: msdyn_endtimestring
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_oc_daysofweek
+        field: msdyn_oc_daysofweek
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_timezone
+        field: msdyn_timezone
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_description
+        field: msdyn_description
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: true
+        visible: true
+        control_id: msdyn_totalworkhours
+        field: msdyn_totalworkhours
+      -
+        section: tab_1_column_1_section_2
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_name
+        field: msdyn_name
+      -
+        section: tab_1_column_1_section_2
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: tab_1_column_1_section_2
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdyn_description
+        field: msdyn_description
+    description: null
+    tabs:
+      -
+        label: Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 12
+    type_name: Quick Create
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: false
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: true
+      -
+        label: Section
+        name: WorkingHours_CalendarSection
+        tab: WorkingHoursTab
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdyn_name
+        field: msdyn_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdyn_enablealldays
+        field: msdyn_enablealldays
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdyn_starttimestring
+        field: msdyn_starttimestring
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdyn_endtimestring
+        field: msdyn_endtimestring
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdyn_oc_daysofweek
+        field: msdyn_oc_daysofweek
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdyn_timezone
+        field: msdyn_timezone
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdyn_description
+        field: msdyn_description
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: msdyn_totalworkhours
+        field: msdyn_totalworkhours
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdyn_name
+        field: msdyn_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdyn_description
+        field: msdyn_description
+      -
+        section: WorkingHours_CalendarSection
+        tab: WorkingHoursTab
+        disabled: false
+        visible: true
+        control_id: msdyn_calendarid
+        field: msdyn_calendarid
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: ''
+        visible: false
+        expanded: true
+      -
+        label: General
+        name: ''
+        visible: true
+        expanded: true
+      -
+        label: Working Hours
+        name: WorkingHoursTab
+        visible: true
+        expanded: true
+    field_count: 13
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdyn_name
+        field: msdyn_name
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: A card form for this entity.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 4
+    type_name: Card
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: GENERAL
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdyn_name
+        field: msdyn_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick View
+

@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '83b3c17e-2bca-f011-8544-6045bdf9f19e'
+name: Create Case from Migration Request
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

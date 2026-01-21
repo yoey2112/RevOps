@@ -1,0 +1,377 @@
+privileges:
+  -
+    privilege_name: prvDeleterevops_transfer
+    privilegeid: '7d4f021d-46f9-4e7c-ba6f-04c913daa070'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_changelog
+    privilegeid: '15b46b69-e741-4de3-a884-05e0422b1842'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriterevops_cumulusaccount
+    privilegeid: '16c575bb-cc42-44b7-9d30-0841d4f74b7c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_productsummary
+    privilegeid: '032c4ffc-cb06-4fe9-baef-0c00d6c74438'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadOrganization
+    privilegeid: 'dbd3ad17-b6bd-46c8-8db7-179fec82c937'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendrevops_transfer
+    privilegeid: '72bb1d09-fde2-409d-afdd-19ee66ce2750'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTorevops_Churn
+    privilegeid: 'd1544711-9f37-4d6a-8224-1bf4e79b9b9e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleterevops_Churn
+    privilegeid: '27eaa61a-a2c3-43e0-acf3-233afc2944c6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTorevops_transfer
+    privilegeid: 'ed94b6f6-b072-4c12-8594-23fc0ff69242'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_customerinsightsinfo
+    privilegeid: 'cf346843-ac2d-4dda-80be-24698cc02a4a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_leadscore_v2
+    privilegeid: '9449966c-c422-43f6-8089-278f594592b0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTorevops_accountproductsummary
+    privilegeid: '5223f751-f2ce-421e-978f-279d07d12f63'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_website
+    privilegeid: '30d14fdb-1ec3-45df-97bb-27ae8ceb56ee'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreaterevops_Churn
+    privilegeid: '3bcf63da-b92a-4161-9334-2acdbe13b7cc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriterevops_Churn
+    privilegeid: '1e2fe834-b1e8-4fd4-a3c0-2bc3b3637cc7'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriterevops_accountproductsummary
+    privilegeid: '6302c26a-c95e-451e-a5ce-2c9edd25cf1f'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdynmkt_pushnotification
+    privilegeid: '161ce553-9092-404b-ab47-30e492eabc59'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTorevops_competitortransferid
+    privilegeid: 'aca2ede6-ca46-413c-a3a5-310df7f85ebf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteGoal
+    privilegeid: '2297138d-4bfc-4e71-bdc1-351aa5698ddb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Basic
+  -
+    privilege_name: prvAppendTorevops_productsummary
+    privilegeid: 'cacf199f-8216-44c2-bb85-352a8f6c2a5e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToUser
+    privilegeid: '3399e6d2-dd3c-4a14-8433-39c1eca27aaa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToCompetitor
+    privilegeid: '5b0a8dab-0659-4ce1-8442-3e5d078242fd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendUser
+    privilegeid: '84d66926-87d4-4489-b21a-451b01ec0c41'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateCompetitor
+    privilegeid: '8cb63518-5632-4448-9da5-453c0e096170'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSharePointData
+    privilegeid: 'fecbd29c-df64-4ede-a611-47226b402c22'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriterevops_competitortransferid
+    privilegeid: 'e7aab231-c435-492d-b868-4754ff8a0499'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadTeam
+    privilegeid: '663d1920-56e1-4166-89f0-47f3330923a8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendmsdyncrm_leadscore_v2
+    privilegeid: '4d3dbb95-49d7-4a21-862c-48e67980ea34'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadBusinessUnit
+    privilegeid: '487cdbaf-59f9-4db3-b648-4eed351ff00b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_dealmanageraccess
+    privilegeid: '269dbd7a-3fec-42de-9776-52fb85954ef6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendGoal
+    privilegeid: '4e4f1e2b-660d-43c2-811d-5addbd6450fc'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateGoal
+    privilegeid: '04a912bb-a73a-49ef-b725-5b3d35b6024c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_marketingform
+    privilegeid: '1dd52dd6-e7ed-4a5e-bb7f-5beec74325a2'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendrevops_Churn
+    privilegeid: 'ad3adb55-2d7a-49ac-8723-5d19a8ced7e6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsevtmgt_Event
+    privilegeid: '8fc335ff-2e1e-469f-8c98-5fc89db020fb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreaterevops_transfer
+    privilegeid: '6fe385c2-2769-4937-a76a-61e6e47ecaae'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriterevops_productsummary
+    privilegeid: 'c72c0352-a3e3-4d87-a7e6-679d96205bb6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleterevops_competitortransferid
+    privilegeid: '5332ad90-e7ed-48ee-8aba-67cbf63d5ac6'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteCompetitor
+    privilegeid: '9797dcf9-f100-4598-b67a-72a061702626'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteSharePointData
+    privilegeid: 'cfdd12cf-090b-4599-8302-771962d2350a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_accountsolutionsummary
+    privilegeid: '2bf40303-8163-4d96-ad43-78ccff67363c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_platformsettings
+    privilegeid: '1b06f75e-2830-40db-8a45-86a46ca06615'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendrevops_productsummary
+    privilegeid: '3e401e85-ae31-4d95-9b11-87c90918d0fa'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvDeleteCompetitor
+    privilegeid: '7c6f6d68-70fa-480e-8d17-8d6c3140d191'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_competitortransferid
+    privilegeid: '4bc93bb3-370f-4ee3-bfb1-92a5dac1ce77'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteGoal
+    privilegeid: '97652230-b9bb-42fc-9323-92b6871e5f5d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTeam
+    privilegeid: '4e8a9d81-5a8b-4870-96c1-938ff19221b9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdynmkt_sms
+    privilegeid: '4da3e450-7b9a-47bc-9887-9390d0670b14'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignrevops_productsummary
+    privilegeid: 'f61bdeef-5583-4331-b851-967962d3afe8'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriteTeam
+    privilegeid: '5adfb065-b9a6-4481-91d1-9d91f78bb30a'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadGoal
+    privilegeid: '55295613-92ec-435e-bcc4-a265b031cfd4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendrevops_platformsettings
+    privilegeid: '2be0b761-a1cc-4a7a-bdfb-a7725db6206b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_transfer
+    privilegeid: 'dd37a270-dec9-4391-82b4-a814ab28cd6d'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignrevops_Churn
+    privilegeid: '582dde9f-45aa-4a02-bf8b-a945dcc3b520'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_accountproductsummary
+    privilegeid: 'aaf57932-d164-42bc-b69e-abe306956470'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyncrm_marketingemail
+    privilegeid: '2c04d45e-e0fc-4171-9b76-b39dd6bedacd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToTeam
+    privilegeid: '3ce923f7-8f8e-4288-a4bf-b96fd6a67436'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvShareGoal
+    privilegeid: '38a7b8e9-6934-413d-baa3-bbcb2837b8e4'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdyn_dealmanagersettings
+    privilegeid: '7008ea34-34eb-4342-943f-c0420676ef6b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendCompetitor
+    privilegeid: '055485b1-edac-4e48-a646-cb831562c9fd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreateSharePointData
+    privilegeid: '5eb85025-363b-46ea-a77e-ce24159cd231'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadCompetitor
+    privilegeid: '36abb6e0-e112-4e60-a5db-d550f9672176'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendrevops_competitortransferid
+    privilegeid: 'd74a506c-f340-44ca-9383-d5541de976da'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvCreaterevops_competitortransferid
+    privilegeid: '944f633f-5c2f-4e50-8b96-d7df3155d3f0'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadSharePointDocument
+    privilegeid: 'd71fc8d0-99bc-430e-abd7-d95c64f11e9c'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadUser
+    privilegeid: '76faad15-bc44-4f4d-84dc-dd1e1dda74d9'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvWriterevops_transfer
+    privilegeid: '4d9b3e94-0409-4680-9357-e1ad05c3db35'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadrevops_Churn
+    privilegeid: 'd5d7133a-8b60-476c-858e-e45e63cc80cf'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignGoal
+    privilegeid: 'd440fb1f-b019-46a4-9ece-e626e8282368'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAssignAccount
+    privilegeid: '0791ab31-e811-4fde-974b-e7c5102b09eb'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTomsdyncrm_leadscore_v2
+    privilegeid: '6d90a2bf-e018-4d68-853a-ecf206509ffd'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendTorevops_platformsettings
+    privilegeid: 'd0a8bebd-094e-466e-a896-eec0f8ebab47'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvReadmsdynmkt_email
+    privilegeid: '72ce5351-4599-44e0-a974-f1d469c8dd2e'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendrevops_accountproductsummary
+    privilegeid: 'ddb41bd4-a89a-4a9e-9320-fb4ff6249d0b'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+  -
+    privilege_name: prvAppendToGoal
+    privilegeid: 'aaf78c30-40f3-4fb7-b49f-fcc415980759'
+    business_unit_id: '72cc832d-d31f-ef11-840b-6045bd5ea018'
+    depth: Global
+

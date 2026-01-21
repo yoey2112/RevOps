@@ -1,0 +1,51 @@
+views:
+  -
+    name: Recent Email Messages in which I am a Participant
+    description: Recently changed email messages where I am a participant
+    querytype: 8192
+    savedqueryid: 'e11e397d-bf52-4734-a723-04106d34a99b'
+  -
+    name: My Received Emails with Unresolved Senders
+    querytype: -1
+    savedqueryid: 'fbb9eb64-31d8-4d03-b580-0f22d5a72482'
+  -
+    name: Email Associated View
+    querytype: 2
+    savedqueryid: 'f26e11d0-0ef8-4dff-a7e2-1f5e091fedb0'
+  -
+    name: All Followed Emails
+    querytype: -1
+    savedqueryid: '6fef1242-d3e2-4358-912d-27c268abd323'
+  -
+    name: All Emails
+    querytype: -1
+    savedqueryid: 'cc98cb1f-6552-4fd8-9e2f-39a1cad2f710'
+  -
+    name: Email Lookup View
+    querytype: 64
+    savedqueryid: 'f5645881-ded8-4078-bd03-3cadefa1a555'
+  -
+    name: Email Advanced Find View
+    querytype: 1
+    savedqueryid: 'fd1c0fa8-b84d-448d-a44d-5f504ebe7316'
+  -
+    name: My Pending Emails
+    querytype: -1
+    savedqueryid: '174153cb-cc83-4313-a725-6de91759819c'
+  -
+    name: My Received Emails
+    querytype: -1
+    savedqueryid: '7aff64b0-5b8c-4ad7-89f8-976777eee178'
+  -
+    name: Quick Find All Email
+    querytype: 4
+    savedqueryid: '5f3c0954-9208-4555-9145-9f36c02b2582'
+  -
+    name: My Draft Emails
+    querytype: -1
+    savedqueryid: '6e8b4b8c-30f7-44ef-a958-be72baabc349'
+  -
+    name: My Sent Emails
+    querytype: -1
+    savedqueryid: '34d4a34a-48e1-46fd-a1ef-d98565932981'
+

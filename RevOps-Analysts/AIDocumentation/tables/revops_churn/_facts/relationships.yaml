@@ -1,0 +1,107 @@
+relationships:
+  -
+    schemaname: revops_churn_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_churn
+  -
+    schemaname: revops_churn_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_churn
+  -
+    schemaname: revops_churn_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_churn
+  -
+    schemaname: revops_churn_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_churn
+  -
+    schemaname: revops_churn_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_churn
+  -
+    schemaname: revops_churn_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_churn
+  -
+    schemaname: revops_churn_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_churn
+  -
+    schemaname: revops_churn_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_churn
+  -
+    schemaname: revops_churn_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_churn
+  -
+    schemaname: revops_churn_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_churn
+  -
+    schemaname: revops_opportunitysolution_churn_revops_churn
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_opportunitysolution
+    referencedtablelogicalname: revops_churn
+  -
+    schemaname: lk_revops_churn_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_churn
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_churn_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_churn
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_churn_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_churn
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_churn_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_churn
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: user_revops_churn
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_churn
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: team_revops_churn
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_churn
+    referencedtablelogicalname: team
+  -
+    schemaname: owner_revops_churn
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_churn
+    referencedtablelogicalname: owner
+  -
+    schemaname: business_unit_revops_churn
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_churn
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: TransactionCurrency_revops_Churn
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_churn
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_churn_account_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_churn
+    referencedtablelogicalname: account
+

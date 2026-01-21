@@ -1,0 +1,97 @@
+relationships:
+  -
+    schemaname: revops_stateorprovince_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: revops_stateorprovince_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: revops_stateorprovince_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: revops_stateorprovince_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: revops_stateorprovince_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: revops_stateorprovince_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: revops_stateorprovince_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: revops_stateorprovince_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: revops_stateorprovince_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: revops_stateorprovince_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: revops_account_revops_stateorprovince_revops_stateorprovince
+    relationshiptype: OneToMany
+    referencingtablelogicalname: account
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: revops_lead_StateorProvince_revops_stateorprovince
+    relationshiptype: OneToMany
+    referencingtablelogicalname: lead
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: revops_territoryregion_stateorprovince_revops_stateorprovince
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_territoryregion
+    referencedtablelogicalname: revops_stateorprovince
+  -
+    schemaname: lk_revops_stateorprovince_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_stateorprovince
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_stateorprovince_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_stateorprovince
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_stateorprovince_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_stateorprovince
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_stateorprovince_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_stateorprovince
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_stateorprovince
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_stateorprovince
+    referencedtablelogicalname: organization
+  -
+    schemaname: revops_stateorprovince_country_revops_country
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_stateorprovince
+    referencedtablelogicalname: revops_country
+

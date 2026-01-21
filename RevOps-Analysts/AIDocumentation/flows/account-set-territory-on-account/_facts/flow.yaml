@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '8ff7c609-5fd4-ee11-904c-002248d5a27a'
+name: 'Account - Set Territory on Account'
+category: 5
+type: 1
+statecode: 1
+statuscode: 2
+primaryentity: none
+

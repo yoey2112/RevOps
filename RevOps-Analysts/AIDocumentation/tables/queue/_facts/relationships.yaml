@@ -1,0 +1,347 @@
+relationships:
+  -
+    schemaname: queue_system_user
+    relationshiptype: OneToMany
+    referencingtablelogicalname: systemuser
+    referencedtablelogicalname: queue
+  -
+    schemaname: userentityinstancedata_queue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: queue
+  -
+    schemaname: Queue_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: queue
+  -
+    schemaname: queue_PostRoles
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postrole
+    referencedtablelogicalname: queue
+  -
+    schemaname: queue_principalobjectattributeaccess
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: queue
+  -
+    schemaname: Queue_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: queue
+  -
+    schemaname: Queue_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: queue
+  -
+    schemaname: Queue_Email_EmailSender
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: queue
+  -
+    schemaname: Queue_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: queue
+  -
+    schemaname: queue_activity_parties
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activityparty
+    referencedtablelogicalname: queue
+  -
+    schemaname: queue_PostRegardings
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postregarding
+    referencedtablelogicalname: queue
+  -
+    schemaname: queue_team
+    relationshiptype: OneToMany
+    referencingtablelogicalname: team
+    referencedtablelogicalname: queue
+  -
+    schemaname: queue_entries
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queueitem
+    referencedtablelogicalname: queue
+  -
+    schemaname: queue_routingruleitem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: routingruleitem
+    referencedtablelogicalname: queue
+  -
+    schemaname: queue_convertruleitem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: convertruleitem
+    referencedtablelogicalname: queue
+  -
+    schemaname: Queue_ProcessSessions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: queue
+  -
+    schemaname: queue_PostFollows
+    relationshiptype: OneToMany
+    referencingtablelogicalname: postfollow
+    referencedtablelogicalname: queue
+  -
+    schemaname: convertrule_queue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: convertrule
+    referencedtablelogicalname: queue
+  -
+    schemaname: mailbox_regarding_queue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailbox
+    referencedtablelogicalname: queue
+  -
+    schemaname: Queue_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: queue
+  -
+    schemaname: email_acceptingentity_queue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: email
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_queue_msdyn_originatingqueue_queueid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_originatingqueue
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_queue_msdyn_unifiedroutingrun_queue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_unifiedroutingrun
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_rulesetdependencymapping_queue_msdyn_referencedpolymorphicentityid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_rulesetdependencymapping
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_queue_msdyn_liveconversation
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_liveconversation
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_queue_msdyn_liveworkstream_msdyn_bot_queue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_liveworkstream
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_queue_msdyn_ocliveworkitem_queueid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocliveworkitem
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_queue_msdyn_ocsession_queueid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocsession
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_queue_ocruleitem
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_ocruleitem
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_queue_msdyn_liveworkstream_queueid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_liveworkstream
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_queue_msdyn_assignmentconfiguration_queueid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_assignmentconfiguration
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_liveworkstream_defaultqueue_Queue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_liveworkstream
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_queue_msdyn_salesroutingrun_previousowner
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesroutingrun
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_queue_msdyn_salesroutingrun_ownerassigned
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_salesroutingrun
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_queue_msdyn_sessionparticipant_msdyn_cdsqueueid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_sessionparticipant
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_intentsolutionmap_queueid_queue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_intentsolutionmap
+    referencedtablelogicalname: queue
+  -
+    schemaname: queue_activitymonitor_queueid
+    relationshiptype: OneToMany
+    referencingtablelogicalname: activitymonitor
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_requirementqueue_queueid_queue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_requirementqueue
+    referencedtablelogicalname: queue
+  -
+    schemaname: queue_msdyn_entityId_msdyn_activeicdextension
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_activeicdextension
+    referencedtablelogicalname: queue
+  -
+    schemaname: queue_msdyn_entityId_msdyn_entityWorkstreamMap
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_entityworkstreammap
+    referencedtablelogicalname: queue
+  -
+    schemaname: queue_msdyn_entityId_msdyn_icdextension
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_icdextension
+    referencedtablelogicalname: queue
+  -
+    schemaname: revops_incident_queue_queue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: queue
+  -
+    schemaname: revops_queue_defaultsendingemail_queue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: queue
+  -
+    schemaname: revops_queue_parentadvancedqueue_queue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: queue
+  -
+    schemaname: msdyn_proactive_engagement_config_queue_queue
+    relationshiptype: OneToMany
+    referencingtablelogicalname: msdyn_proactive_engagement_config
+    referencedtablelogicalname: queue
+  -
+    schemaname: queue_defaultmailbox_mailbox
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: mailbox
+  -
+    schemaname: business_unit_queues
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: business_unit_queues2
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: businessunit
+  -
+    schemaname: lk_queue_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_queues
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: organization
+  -
+    schemaname: owner_queues
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: owner
+  -
+    schemaname: lk_queuebase_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_queuebase_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_queue_QueueMemberCount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: queuemembercount
+  -
+    schemaname: TransactionCurrency_Queue
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: lk_queue_QueueItemCount
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: queueitemcount
+  -
+    schemaname: queue_primary_user
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_queue_entityimage
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: imagedescriptor
+  -
+    schemaname: lk_queue_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: emailsignature_queue_EmailSignature
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: emailsignature
+  -
+    schemaname: msdyn_msdyn_operatinghour_queue
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: msdyn_operatinghour
+  -
+    schemaname: msdyn_queue_decisioncontractid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: msdyn_decisioncontract
+  -
+    schemaname: msdyn_queue_decisionrulesetId
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: msdyn_decisionruleset
+  -
+    schemaname: msdyn_decisionruleset_queue_msdyn_inqueueoverflowrulesetid
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: msdyn_decisionruleset
+  -
+    schemaname: Queue_intentfamilyid_msdyn_intentfamily
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: msdyn_intentfamily
+  -
+    schemaname: revops_queue_defaultsendingemail_queue
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: queue
+  -
+    schemaname: revops_queue_parentadvancedqueue_queue
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: queue
+  -
+    schemaname: queuemembership_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: queue
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: msdyn_convertrule_queue_association
+    relationshiptype: ManyToMany
+    referencingtablelogicalname: convertrule
+    referencedtablelogicalname: queue
+

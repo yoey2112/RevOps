@@ -1,0 +1,12 @@
+revops_dayssincecurrentsubmit: |-
+    =If(
+        IsBlank(revops_datesubmitted),
+        Blank(),
+        DateDiff(revops_datesubmitted, Now(), TimeUnit.Minutes) / 1440
+    )
+revops_dayssinceoriginalsubmitted: |-
+    =If(
+        IsBlank(revops_firstsubmitted),
+        Blank(),
+        DateDiff(revops_firstsubmitted, Now(), TimeUnit.Minutes) / 1440
+    )

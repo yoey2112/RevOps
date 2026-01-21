@@ -1,0 +1,9 @@
+schema_version: 1
+workflowid: '98f9cc2a-e108-f011-bae3-7ced8d04f24d'
+name: Case resolution survey
+category: 5
+type: 1
+statecode: 0
+statuscode: 1
+primaryentity: none
+

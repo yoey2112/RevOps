@@ -1,0 +1,42 @@
+TITLE
+=====
+RevOps - Security Roles Component Index
+
+PURPOSE
+-------
+Quick reference index of all Security Roles components in this folder.
+
+COMPONENTS
+----------
+- csr-manager : Security Role: CSR Manager
+- customer-service-representative : Security Role: Customer Service Representative
+- marketing-services-user-extensible-role : Security Role: Marketing Services User Extensible Role
+- sherweb-6sense-integration : Security Role: Sherweb - 6Sense Integration
+- sherweb-audience-import : Security Role: Sherweb - Audience Import
+- sherweb-business-development-rep : Security Role: Sherweb - Business Development Rep
+- sherweb-cs-agent : Security Role: Sherweb - CS Agent
+- sherweb-cs-enablement : Security Role: Sherweb - CS Enablement
+- sherweb-cs-kb-editor : Security Role: Sherweb - CS KB Editor
+- sherweb-cs-manager : Security Role: Sherweb - CS Manager
+- sherweb-cs-technical-onboarding : Security Role: Sherweb - CS Technical Onboarding
+- sherweb-cs-technical-onboarding-l3 : Security Role: Sherweb - CS Technical Onboarding L3
+- sherweb-event-administrator : Security Role: Sherweb - Event Administrator
+- sherweb-marketing : Security Role: Sherweb - Marketing
+- sherweb-omnichannel-queue-manager : Security Role: Sherweb - Omnichannel Queue Manager
+- sherweb-pre-sales : Security Role: Sherweb - Pre-Sales
+- sherweb-products : Security Role: Sherweb - Products
+- sherweb-project : Security Role: Sherweb - Project
+- sherweb-sales-admin : Security Role: Sherweb - Sales Admin
+- sherweb-sales-manager : Security Role: Sherweb - Sales Manager
+- sherweb-sales-person : Security Role: Sherweb - Sales Person
+- sherweb-salesops : Security Role: Sherweb - SalesOps
+- system-customizer-admin-add-on : Security Role: System Customizer Admin Add-On
+
+HOW TO USE
+----------
+Each component has its own subfolder containing:
+- README.md and README.txt for overview
+- _facts/*.yaml for structured metadata
+- Additional documentation files as needed
+
+For detailed information about a specific component, navigate to its subfolder.

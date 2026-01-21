@@ -1,0 +1,270 @@
+views:
+  -
+    name: Event registrations parent events
+    querytype: 2
+    savedqueryid: '07fd6735-b4a2-e711-811c-000d3a743413'
+  -
+    name: Event registration view
+    querytype: 2
+    savedqueryid: 'a0fae7b1-de18-e611-80d3-00155db077c3'
+  -
+    name: Registrations included view
+    querytype: 2
+    savedqueryid: '5b1903a5-321c-e611-80d6-00155ded2f1b'
+  -
+    name: msevtmgt_EventMainEventRegistration
+    description: The view used in the subgrid on the "Event registration" tab of main event form
+    querytype: 2
+    savedqueryid: '6d0e8aad-d33e-e611-80d6-00155df8bf02'
+  -
+    name: My event registrations
+    querytype: 8192
+    savedqueryid: '419bd627-3a06-e611-80d3-00155dfcea32'
+  -
+    name: Registration and attendance of Realtime events
+    querytype: -1
+    savedqueryid: 'a2c15598-60ce-ef11-a72e-00224805bcd2'
+  -
+    name: Active event registrations of Sherweb VIP Event
+    description: 'Active event registrations of Sherweb VIP Event (1979d489-6eb5-4293-ad5b-4140b1c36185)'
+    querytype: 2
+    savedqueryid: 'e2981151-c88a-f011-b4cc-0022483c285f'
+  -
+    name: 'Active event registrations of 25-04 CopilotRoadshow'
+    description: 'Active event registrations of 25-04 CopilotRoadshow (9ac48478-ad3d-40d8-a761-2f802b88e0f8)'
+    querytype: 2
+    savedqueryid: 'f2c129ee-7253-f011-877b-0022483d87a9'
+  -
+    name: Active event registrations of Thrive through Microsoft’s Partner Program changes
+    description: 'Active event registrations of Thrive through Microsoft’s Partner Program changes (8a317e0f-253b-447e-9392-3d42ee2e7471)'
+    querytype: 2
+    savedqueryid: 'f62b925d-a560-f011-bec2-0022483d87a9'
+  -
+    name: 'Active event registrations of 24-11 CopilotRoadshow'
+    description: 'Active event registrations of 24-11 CopilotRoadshow (63109576-2eab-43ec-aefb-9712ba85d8d0)'
+    querytype: 2
+    savedqueryid: 'b364ee6c-af56-f011-bec2-002248aefb36'
+  -
+    name: Active event registrations of Microsoft 365 Copilot Masterclass FY26
+    description: 'Active event registrations of Microsoft 365 Copilot Masterclass FY26 (10b8ebee-082e-4fd2-a929-505f75d077f7)'
+    querytype: 2
+    savedqueryid: '599336be-86aa-f011-bbd3-002248afda59'
+  -
+    name: 'Active event registrations of Performance Cloud: Stay secure through VMware changes'
+    description: 'Active event registrations of Performance Cloud: Stay secure through VMware changes (ccab73b3-72d1-428b-9ec8-24d2564cc8da)'
+    querytype: 2
+    savedqueryid: '8507dae7-ae52-f011-877b-002248b081f9'
+  -
+    name: 'Active event registrations of Sherweb VIP Event: Dynamics 365'
+    description: 'Active event registrations of Sherweb VIP Event: Dynamics 365 (fa46e3a9-d08b-4d39-86b3-b313e650d980)'
+    querytype: 2
+    savedqueryid: '2467a7f4-e155-f011-bec1-002248b081f9'
+  -
+    name: 'Active event registrations of Sherweb VIP event - Phoenix'
+    description: 'Active event registrations of Sherweb VIP event - Phoenix (9e0bfa8b-d87a-4467-b6c1-348927083ea2)'
+    querytype: 2
+    savedqueryid: '86fd0312-6366-f011-bec2-002248b081f9'
+  -
+    name: 'Active event registrations of 25-10 Security Roadshow'
+    description: 'Active event registrations of 25-10 Security Roadshow (e99c72fa-0bb2-4594-a23f-4dc99a0cc768)'
+    querytype: 2
+    savedqueryid: '65de9d3c-ca81-f011-b4cc-002248b271a8'
+  -
+    name: 'Active event registrations of NordPass unveiled: Centralized password control for MSP profit and protection'
+    description: 'Active event registrations of NordPass unveiled: Centralized password control for MSP profit and protection (c4998dc9-3145-f011-877a-002248b38dd1)'
+    querytype: 2
+    savedqueryid: '97a8067e-bb68-f011-bec3-002248b2c290'
+  -
+    name: Active event registrations of How to stay compliant with Microsoft’s new CSP security mandates
+    description: 'Active event registrations of How to stay compliant with Microsoft’s new CSP security mandates (2cfdeb2b-3f63-f011-bec2-002248b2c290)'
+    querytype: 2
+    savedqueryid: '6acd59b2-db6b-f011-b4cb-002248b37fa0'
+  -
+    name: Active event registrations of Unlock growth with Azure migration opportunities
+    description: 'Active event registrations of Unlock growth with Azure migration opportunities (7255cab6-d50a-4282-b9b9-f2804b84e3e2)'
+    querytype: 2
+    savedqueryid: '4703f122-ab52-f011-877b-002248b38dd1'
+  -
+    name: 'Active event registrations of Supercharge your support with Sherweb''s Helpdesk & NOC'
+    description: 'Active event registrations of Supercharge your support with Sherweb''s Helpdesk & NOC (0041744c-e197-4e4d-ac1c-61cdd50deb0b)'
+    querytype: 2
+    savedqueryid: '733c5a22-ae52-f011-877b-002248b38dd1'
+  -
+    name: 'Active event registrations of Copilot Agents & AI services: What MSPs need to know'
+    description: 'Active event registrations of Copilot Agents & AI services: What MSPs need to know (d5ca3a69-556b-43c6-921c-6c106358034d)'
+    querytype: 2
+    savedqueryid: 'df5c9f29-bb52-f011-877b-002248b38dd1'
+  -
+    name: Active event registrations of Classe de maître pour MSP sur le rôle de vCIO
+    description: 'Active event registrations of Classe de maître pour MSP sur le rôle de vCIO (fac12d13-7e3e-41c7-bc6f-01cdd3509a97)'
+    querytype: 2
+    savedqueryid: 'a904716b-3c5b-f011-877b-002248b38dd1'
+  -
+    name: Active event registrations of The easiest way to secure SaaS workloads (including Dynamics 365)
+    description: 'Active event registrations of The easiest way to secure SaaS workloads (including Dynamics 365) (9a907747-55ff-ef11-bae3-0022483cdaf8)'
+    querytype: 2
+    savedqueryid: 'b6899826-555b-f011-877b-002248b38dd1'
+  -
+    name: Active event registrations of How top MSPs turn vulnerability management into revenue with ConnectSecure
+    description: 'Active event registrations of How top MSPs turn vulnerability management into revenue with ConnectSecure (05ccc699-833d-f011-b4cc-6045bd605559)'
+    querytype: 2
+    savedqueryid: '3daa9db2-5e5e-f011-877b-002248b38dd1'
+  -
+    name: Event registration advanced find view
+    querytype: 1
+    savedqueryid: '4175c474-c01c-42a9-a991-0c74dae2cd61'
+  -
+    name: 'Active event registrations of Testing - Growth Marketing'
+    description: 'Active event registrations of Testing - Growth Marketing (99e7b29d-1197-4c08-b0e6-bb93058a825c)'
+    querytype: 2
+    savedqueryid: '10501115-7d57-f011-bec2-6045bd5c3f33'
+  -
+    name: Active event registrations of Introduction à Microsoft Copilot et aux agents de conversation
+    description: 'Active event registrations of Introduction à Microsoft Copilot et aux agents de conversation (25cd4e62-ef6f-499c-b65a-9cec82434a34)'
+    querytype: 2
+    savedqueryid: '4aa63964-3e92-f011-b4cc-6045bd5fa7ff'
+  -
+    name: 'Active event registrations of 25-10 Security Roadshow-French'
+    description: 'Active event registrations of 25-10 Security Roadshow-French (7d686d4e-4c11-4b9a-9964-df70e1379644)'
+    querytype: 2
+    savedqueryid: '80b57065-5883-f011-b4cc-6045bd618762'
+  -
+    name: 'Active event registrations of MSP Masterclass: vCIO'
+    description: 'Active event registrations of MSP Masterclass: vCIO (27ac5d53-a5da-4438-986f-57bad7d030c7)'
+    querytype: 2
+    savedqueryid: '72af5b8f-e658-f011-bec2-6045bd618762'
+  -
+    name: Active event registrations of Introduction to Microsoft Copilot and Chat Agents
+    description: 'Active event registrations of Introduction to Microsoft Copilot and Chat Agents (f25b09a5-07f3-40e4-bc11-544b1bbc5bfd)'
+    querytype: 2
+    savedqueryid: '7592bf78-4092-f011-b4cb-6045bd618e7e'
+  -
+    name: 'Active event registrations of MSP Masterclass: Security'
+    description: 'Active event registrations of MSP Masterclass: Security (d684b660-b467-4f54-8b9e-b035071f5e94)'
+    querytype: 2
+    savedqueryid: '32f297bb-917e-f011-b4cc-6045bd622821'
+  -
+    name: Active event registrations of How to secure Microsoft 365 Business Premium
+    description: 'Active event registrations of How to secure Microsoft 365 Business Premium (2a49e3b2-13b5-47fb-a4bf-b0883727b299)'
+    querytype: 2
+    savedqueryid: '6b034009-4f83-f011-b4cc-6045bd622821'
+  -
+    name: Active event registrations of Unlocking modern network security with NordLayer
+    description: 'Active event registrations of Unlocking modern network security with NordLayer (3f943f3e-a447-f011-877a-002248b271a8)'
+    querytype: 2
+    savedqueryid: '8dfc9643-5962-f011-bec2-6045bd622821'
+  -
+    name: 'Active event registrations of Monjur: Simplify your licensing agreements and contracts'
+    description: 'Active event registrations of Monjur: Simplify your licensing agreements and contracts (45af442c-87a3-f011-bbd3-7c1e5253f567)'
+    querytype: 2
+    savedqueryid: '8f7a3141-96a3-f011-bbd3-7c1e5253f567'
+  -
+    name: 'Active event registrations of Scale smarter: Automate your MSP stack'
+    description: 'Active event registrations of Scale smarter: Automate your MSP stack (98bbdf83-1b7f-4236-b50c-c657f7e3bf14)'
+    querytype: 2
+    savedqueryid: '0f5ef1af-79b6-f011-bbd3-7c1e5253f567'
+  -
+    name: Active event registrations of Building and customizing Copilot Chat agents
+    description: 'Active event registrations of Building and customizing Copilot Chat agents (9c5fa9cc-1df9-4b6a-8970-6e8b963963e7)'
+    querytype: 2
+    savedqueryid: '51630dfb-c0cb-f011-8544-7c1e5253fe94'
+  -
+    name: 'Active event registrations of Build a cybersecurity practice: The 4 pillars for MSPs'
+    description: 'Active event registrations of Build a cybersecurity practice: The 4 pillars for MSPs (e2f48b83-2fe3-ef11-9342-000d3af32d17)'
+    querytype: 2
+    savedqueryid: '699ea60f-86a3-f011-bbd2-7ced8d364132'
+  -
+    name: Active event registrations of Unlock revenue with Microsoft Teams voice solutions
+    description: 'Active event registrations of Unlock revenue with Microsoft Teams voice solutions (cbb4773f-e05c-4fb1-9023-990e77eb6ea1)'
+    querytype: 2
+    savedqueryid: 'bb0e0d7c-86a3-f011-bbd2-7ced8d364132'
+  -
+    name: 'Active event registrations of Additional AI revenue streams: Extending and customizing Copilot'
+    description: 'Active event registrations of Additional AI revenue streams: Extending and customizing Copilot (c1bf7461-eb46-4377-a09c-cea231ba4164)'
+    querytype: 2
+    savedqueryid: 'e1db4c9b-86a3-f011-bbd2-7ced8d364132'
+  -
+    name: Active event registrations of How to land your first Azure opportunity
+    description: 'Active event registrations of How to land your first Azure opportunity (27c388be-7e90-ef11-8a69-6045bd5ebc98)'
+    querytype: 2
+    savedqueryid: 'ed430bbd-86a3-f011-bbd2-7ced8d364132'
+  -
+    name: Active event registrations of Maximize AI opportunities with Microsoft Sales Advisor and incentives
+    description: 'Active event registrations of Maximize AI opportunities with Microsoft Sales Advisor and incentives (9c08937b-0e92-49d4-a065-d91a02fc3d05)'
+    querytype: 2
+    savedqueryid: 'dbfc57d5-86a3-f011-bbd2-7ced8d364132'
+  -
+    name: Active event registrations of Securing your workforce access with Microsoft Entra Suite
+    description: 'Active event registrations of Securing your workforce access with Microsoft Entra Suite (8e89c365-978c-ef11-8a6a-6045bd601722)'
+    querytype: 2
+    savedqueryid: '4243afe1-86a3-f011-bbd2-7ced8d364132'
+  -
+    name: Active event registrations of Why an MSP should build an Azure practice
+    description: 'Active event registrations of Why an MSP should build an Azure practice (26abaf28-d084-ef11-ac20-6045bd5cada7)'
+    querytype: 2
+    savedqueryid: '0c818bf4-86a3-f011-bbd2-7ced8d364132'
+  -
+    name: Active event registrations of How to grow your business with AI readiness services
+    description: 'Active event registrations of How to grow your business with AI readiness services (f4937bef-8e30-4c86-ab9f-faeb32a7e572)'
+    querytype: 2
+    savedqueryid: '9c50ce07-87a3-f011-bbd2-7ced8d364132'
+  -
+    name: Active event registrations of Guide to securing Microsoft 365
+    description: 'Active event registrations of Guide to securing Microsoft 365 (d35735b2-3f7b-ef11-ac20-6045bd601722)'
+    querytype: 2
+    savedqueryid: 'd173331a-87a3-f011-bbd2-7ced8d364132'
+  -
+    name: 'Active event registrations of Selling Copilot made easy: Programs and incentives (Session 2)'
+    description: 'Active event registrations of Selling Copilot made easy: Programs and incentives (Session 2) (26ac417c-2414-4d3d-a238-3cdfb8cb35bf)'
+    querytype: 2
+    savedqueryid: '10df2d2e-87a3-f011-bbd2-7ced8d364132'
+  -
+    name: 'Active event registrations of Selling Copilot made easy: Programs and incentives (Session 1)'
+    description: 'Active event registrations of Selling Copilot made easy: Programs and incentives (Session 1) (d517eb8d-e148-498d-b640-ee83b8285dfb)'
+    querytype: 2
+    savedqueryid: '8a21de41-87a3-f011-bbd2-7ced8d364132'
+  -
+    name: Active event registrations of Création et personnalisation des agents Copilot Chat
+    description: 'Active event registrations of Création et personnalisation des agents Copilot Chat (cdca1a9e-7af5-474a-a7f2-13e8bfe7c6ed)'
+    querytype: 2
+    savedqueryid: 'b0b0ef71-66d0-f011-8544-7ced8d3654cb'
+  -
+    name: Active event registrations of Sécuriser Microsoft 365 Business Premium
+    description: 'Active event registrations of Sécuriser Microsoft 365 Business Premium (07c49288-d203-4941-9391-7baebf126748)'
+    querytype: 2
+    savedqueryid: 'd25e087b-92a0-f011-bbd2-7ced8d3656aa'
+  -
+    name: Active event registrations of How to best prepare for secure AI adoption
+    description: 'Active event registrations of How to best prepare for secure AI adoption (83520542-0d82-4371-aa63-dde6d9c4efb6)'
+    querytype: 2
+    savedqueryid: '5c0bbb3d-93a0-f011-bbd2-7ced8d3656aa'
+  -
+    name: 'Active event registrations of Microsoft Immersion Briefing: Copilot and agents'
+    description: 'Active event registrations of Microsoft Immersion Briefing: Copilot and agents (b32ffd58-a5b1-413c-88f7-e54ab35ba0ce)'
+    querytype: 2
+    savedqueryid: 'e9196232-13c7-f011-bbd3-7ced8d3656aa'
+  -
+    name: Quick find active event registrations
+    querytype: 4
+    savedqueryid: '9692e78c-9818-4dc6-bba5-7fcdd1897c4b'
+  -
+    name: Active event registrations
+    querytype: -1
+    savedqueryid: '36989e15-d3f3-4065-84c1-9dd3b27210df'
+  -
+    name: Event registration lookup view
+    querytype: 64
+    savedqueryid: 'fa0e941c-7760-426d-abbf-a7a7a746905d'
+  -
+    name: Active event registrations for calendar
+    querytype: -1
+    savedqueryid: '245f2d1d-e37d-e811-8105-c9d2d16f1713'
+  -
+    name: Inactive event registrations
+    querytype: -1
+    savedqueryid: '94eade7f-f6ae-459e-ab10-e155146cdcf0'
+  -
+    name: Event registration associated view
+    querytype: 2
+    savedqueryid: '04495401-e55b-4d8e-869f-f8980a496ee9'
+

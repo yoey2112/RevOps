@@ -1,0 +1,31 @@
+views:
+  -
+    name: Countries
+    description: All active Countries
+    querytype: 8192
+    savedqueryid: '396ff35e-8d1e-ef11-840b-000d3af43a08'
+  -
+    name: Active Countries
+    querytype: -1
+    savedqueryid: 'e47212b5-d465-403f-b540-552fd2a1f15e'
+  -
+    name: Country Lookup View
+    querytype: 64
+    savedqueryid: '494b34ac-6297-4aa1-948d-55798d8ba824'
+  -
+    name: Country Advanced Find View
+    querytype: 1
+    savedqueryid: '930a2218-5412-4fa5-92e1-b168234c44ae'
+  -
+    name: Quick Find Active Countries
+    querytype: 4
+    savedqueryid: '74dbedf4-b8c2-4d1a-affc-b6672051cfa0'
+  -
+    name: Country Associated View
+    querytype: 2
+    savedqueryid: '0be6473c-e13d-478b-8b73-ba51de6c7ce0'
+  -
+    name: Inactive Countries
+    querytype: -1
+    savedqueryid: '3d4dd197-f833-4303-ba65-d4c37fa8f09f'
+

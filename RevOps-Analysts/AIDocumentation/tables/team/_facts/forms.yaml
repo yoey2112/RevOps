@@ -1,0 +1,292 @@
+forms:
+  -
+    name: New Form
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: GENERAL
+        name: General
+        tab: general
+        visible: true
+      -
+        label: DESCRIPTION
+        name: Description
+        tab: general
+        visible: true
+      -
+        label: TEAM MEMBERS
+        name: TeamMembers
+        tab: general
+        visible: true
+    fields:
+      -
+        section: General
+        tab: general
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: General
+        tab: general
+        disabled: false
+        visible: true
+        control_id: businessunitid
+        field: businessunitid
+      -
+        section: General
+        tab: general
+        disabled: false
+        visible: true
+        control_id: administratorid
+        field: administratorid
+      -
+        section: General
+        tab: general
+        disabled: false
+        visible: true
+        control_id: teamtype
+        field: teamtype
+      -
+        section: Description
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_queueid
+        field: queueid
+    description: null
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Main
+  -
+    name: Information
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: Section 1
+        name: section 1
+        tab: general
+        visible: true
+      -
+        label: Description
+        name: desc
+        tab: general
+        visible: true
+    fields:
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: businessunitid
+        field: businessunitid
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: administratorid
+        field: administratorid
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: queueid
+        field: queueid
+      -
+        section: section 1
+        tab: general
+        disabled: false
+        visible: true
+        control_id: teamtype
+        field: teamtype
+      -
+        section: desc
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Main
+  -
+    name: Team form – Business
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: GENERAL
+        name: General
+        tab: general
+        visible: true
+      -
+        label: DESCRIPTION
+        name: Description
+        tab: general
+        visible: true
+      -
+        label: TEAM MEMBERS
+        name: TeamMembers
+        tab: general
+        visible: true
+    fields:
+      -
+        section: General
+        tab: general
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: General
+        tab: general
+        disabled: false
+        visible: true
+        control_id: businessunitid
+        field: businessunitid
+      -
+        section: General
+        tab: general
+        disabled: false
+        visible: true
+        control_id: administratorid
+        field: administratorid
+      -
+        section: General
+        tab: general
+        disabled: false
+        visible: true
+        control_id: teamtype
+        field: teamtype
+      -
+        section: Description
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+    description: Default Team Form for BusinessEdition
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+    field_count: 5
+    type_name: Main
+  -
+    name: Team
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: GENERAL
+        name: General
+        tab: general
+        visible: true
+      -
+        label: DESCRIPTION
+        name: Description
+        tab: general
+        visible: true
+      -
+        label: TEAM MEMBERS
+        name: TeamMembers
+        tab: general
+        visible: true
+    fields:
+      -
+        section: General
+        tab: general
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: General
+        tab: general
+        disabled: false
+        visible: true
+        control_id: businessunitid
+        field: businessunitid
+      -
+        section: General
+        tab: general
+        disabled: false
+        visible: true
+        control_id: administratorid
+        field: administratorid
+      -
+        section: General
+        tab: general
+        disabled: false
+        visible: true
+        control_id: teamtype
+        field: teamtype
+      -
+        section: General
+        tab: general
+        disabled: true
+        visible: true
+        control_id: azureactivedirectoryobjectid
+        field: azureactivedirectoryobjectid
+      -
+        section: General
+        tab: general
+        disabled: false
+        visible: true
+        control_id: membershiptype
+        field: membershiptype
+      -
+        section: Description
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_queueid
+        field: queueid
+    description: Updated default Team form
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+    field_count: 8
+    type_name: Main
+

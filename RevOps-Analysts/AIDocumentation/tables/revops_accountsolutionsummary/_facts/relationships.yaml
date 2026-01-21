@@ -1,0 +1,92 @@
+relationships:
+  -
+    schemaname: revops_accountsolutionsummary_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_accountsolutionsummary
+  -
+    schemaname: revops_accountsolutionsummary_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_accountsolutionsummary
+  -
+    schemaname: revops_accountsolutionsummary_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_accountsolutionsummary
+  -
+    schemaname: revops_accountsolutionsummary_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_accountsolutionsummary
+  -
+    schemaname: revops_accountsolutionsummary_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_accountsolutionsummary
+  -
+    schemaname: revops_accountsolutionsummary_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_accountsolutionsummary
+  -
+    schemaname: revops_accountsolutionsummary_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_accountsolutionsummary
+  -
+    schemaname: revops_accountsolutionsummary_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_accountsolutionsummary
+  -
+    schemaname: revops_accountsolutionsummary_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_accountsolutionsummary
+  -
+    schemaname: revops_accountsolutionsummary_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_accountsolutionsummary
+  -
+    schemaname: lk_revops_accountsolutionsummary_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountsolutionsummary
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_accountsolutionsummary_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountsolutionsummary
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_accountsolutionsummary_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountsolutionsummary
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_accountsolutionsummary_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountsolutionsummary
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_accountsolutionsummary
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountsolutionsummary
+    referencedtablelogicalname: organization
+  -
+    schemaname: TransactionCurrency_revops_accountsolutionsummary
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountsolutionsummary
+    referencedtablelogicalname: transactioncurrency
+  -
+    schemaname: revops_accountsolutionsummary_account_account
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountsolutionsummary
+    referencedtablelogicalname: account
+  -
+    schemaname: revops_accountsolutionsummary_solution_revops_solution
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_accountsolutionsummary
+    referencedtablelogicalname: revops_solution
+

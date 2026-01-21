@@ -1,0 +1,181 @@
+forms:
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Details
+        name: Details
+        tab: '{474B8A52-CB22-4194-A5A6-F21FD40B7417}'
+        visible: true
+      -
+        label: Summary
+        name: Summary
+        tab: Summary
+        visible: true
+      -
+        label: Comments
+        name: Comments
+        tab: Comments
+        visible: true
+      -
+        label: Linked Sessions
+        name: Linked Sessions
+        tab: Linked Sessions
+        visible: true
+      -
+        label: Details
+        name: Details_2
+        tab: Details
+        visible: true
+    fields:
+      -
+        section: Details
+        tab: '{474B8A52-CB22-4194-A5A6-F21FD40B7417}'
+        disabled: true
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: Details
+        tab: '{474B8A52-CB22-4194-A5A6-F21FD40B7417}'
+        disabled: true
+        visible: true
+        control_id: processid
+        field: processid
+      -
+        section: Details
+        tab: '{474B8A52-CB22-4194-A5A6-F21FD40B7417}'
+        disabled: true
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: Details
+        tab: '{474B8A52-CB22-4194-A5A6-F21FD40B7417}'
+        disabled: true
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: Details
+        tab: '{474B8A52-CB22-4194-A5A6-F21FD40B7417}'
+        disabled: true
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: Details
+        tab: '{474B8A52-CB22-4194-A5A6-F21FD40B7417}'
+        disabled: true
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: Comments
+        tab: Comments
+        disabled: true
+        visible: true
+        control_id: comments
+        field: comments
+      -
+        section: Linked Sessions
+        tab: Linked Sessions
+        disabled: true
+        visible: true
+        control_id: originatingsessionid
+        field: originatingsessionid
+      -
+        section: Linked Sessions
+        tab: Linked Sessions
+        disabled: true
+        visible: true
+        control_id: previouslinkedsessionid
+        field: previouslinkedsessionid
+      -
+        section: Linked Sessions
+        tab: Linked Sessions
+        disabled: true
+        visible: true
+        control_id: nextlinkedsessionid
+        field: nextlinkedsessionid
+      -
+        section: Details_2
+        tab: Details
+        disabled: true
+        visible: true
+        control_id: startedon
+        field: startedon
+      -
+        section: Details_2
+        tab: Details
+        disabled: true
+        visible: true
+        control_id: startedby
+        field: startedby
+      -
+        section: Details_2
+        tab: Details
+        disabled: true
+        visible: true
+        control_id: completedon
+        field: completedon
+      -
+        section: Details_2
+        tab: Details
+        disabled: true
+        visible: true
+        control_id: completedby
+        field: completedby
+      -
+        section: Details_2
+        tab: Details
+        disabled: true
+        visible: true
+        control_id: canceledon
+        field: canceledon
+      -
+        section: Details_2
+        tab: Details
+        disabled: true
+        visible: true
+        control_id: canceledby
+        field: canceledby
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: footer_statecode
+        field: statecode
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: '{474B8A52-CB22-4194-A5A6-F21FD40B7417}'
+        visible: true
+        expanded: true
+      -
+        label: Summary
+        name: Summary
+        visible: true
+        expanded: true
+      -
+        label: Comments
+        name: Comments
+        visible: true
+        expanded: true
+      -
+        label: Linked Sessions
+        name: Linked Sessions
+        visible: true
+        expanded: true
+      -
+        label: Details
+        name: Details
+        visible: true
+        expanded: true
+    field_count: 17
+    type_name: Main
+

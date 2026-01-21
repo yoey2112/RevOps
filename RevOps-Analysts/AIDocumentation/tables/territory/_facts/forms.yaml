@@ -1,0 +1,155 @@
+forms:
+  -
+    name: Territory Hierarchy Tile Form
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Information
+        name: territory tile
+        tab: hierarchy
+        visible: true
+    fields:
+      -
+        section: territory tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: territory tile
+        tab: hierarchy
+        disabled: false
+        visible: true
+        control_id: managerid
+        field: managerid
+    description: null
+    tabs:
+      -
+        label: Hierarchy
+        name: hierarchy
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick View
+  -
+    name: New Form
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ''
+        name: Color Strip
+        tab: ''
+        visible: true
+      -
+        label: ''
+        name: CardHeader
+        tab: ''
+        visible: true
+      -
+        label: ''
+        name: CardDetails
+        tab: ''
+        visible: true
+      -
+        label: ''
+        name: CardFooter
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: managerid
+        field: managerid
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 3
+    type_name: Card
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Territory Information
+        name: territory information
+        tab: general
+        visible: true
+      -
+        label: Description
+        name: description
+        tab: general
+        visible: true
+      -
+        label: 'Sub-territories'
+        name: territory_tab1_section_1
+        tab: subterritories_tab
+        visible: true
+    fields:
+      -
+        section: territory information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: name
+        field: name
+      -
+        section: territory information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: managerid
+        field: managerid
+      -
+        section: territory information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: parentterritoryid
+        field: parentterritoryid
+      -
+        section: description
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+    description: A form for this entity.
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+      -
+        label: 'Sub-territories'
+        name: subterritories_tab
+        visible: false
+        expanded: true
+    field_count: 4
+    type_name: Main
+

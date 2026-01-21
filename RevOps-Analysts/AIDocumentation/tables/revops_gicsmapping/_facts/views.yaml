@@ -1,0 +1,31 @@
+views:
+  -
+    name: GICS Mappings
+    description: All active GICS Mappings
+    querytype: 8192
+    savedqueryid: '3d47faa9-7939-ef11-a317-000d3af43a08'
+  -
+    name: GICS Mapping Associated View
+    querytype: 2
+    savedqueryid: '127fed4d-baab-4b96-bc43-49a361b2dd63'
+  -
+    name: Inactive GICS Mappings
+    querytype: -1
+    savedqueryid: 'ef22d727-90d6-4065-b60f-4bf296fa16a3'
+  -
+    name: Quick Find Active GICS Mappings
+    querytype: 4
+    savedqueryid: '24df72a1-9fe7-4e08-9b3e-512d67ad05b8'
+  -
+    name: GICS Mapping Lookup View
+    querytype: 64
+    savedqueryid: '88a08ade-7bac-4dde-8096-b545972f1b46'
+  -
+    name: Active GICS Mappings
+    querytype: -1
+    savedqueryid: '37294963-ac71-4f81-a4f0-ddd503745436'
+  -
+    name: GICS Mapping Advanced Find View
+    querytype: 1
+    savedqueryid: '07b23201-574b-4237-b21a-f57d2c1a0379'
+

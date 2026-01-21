@@ -1,0 +1,2584 @@
+schema_version: 1
+generated_run_id: '20260118-020019'
+assets:
+  -
+    asset_id: 'registry:solutions'
+    type: registry
+    path: _registry/solutions.yaml
+    last_seen_run_id: '20260118-020019'
+    confidence: 1
+  -
+    asset_id: 'table:account'
+    type: table
+    path: tables/account
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:activitypointer'
+    type: table
+    path: tables/activitypointer
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:annotation'
+    type: table
+    path: tables/annotation
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:appointment'
+    type: table
+    path: tables/appointment
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:campaign'
+    type: table
+    path: tables/campaign
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:category'
+    type: table
+    path: tables/category
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:competitor'
+    type: table
+    path: tables/competitor
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:contact'
+    type: table
+    path: tables/contact
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:email'
+    type: table
+    path: tables/email
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:goal'
+    type: table
+    path: tables/goal
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:incident'
+    type: table
+    path: tables/incident
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:incidentresolution'
+    type: table
+    path: tables/incidentresolution
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:knowledgearticle'
+    type: table
+    path: tables/knowledgearticle
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:lead'
+    type: table
+    path: tables/lead
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:list'
+    type: table
+    path: tables/list
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msdyn_conversationsuggestionrequestpayload'
+    type: table
+    path: tables/msdyn_conversationsuggestionrequestpayload
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msdyn_customerfeedbacksurveyresponse'
+    type: table
+    path: tables/msdyn_customerfeedbacksurveyresponse
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msdyn_operatinghour'
+    type: table
+    path: tables/msdyn_operatinghour
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msdyn_project'
+    type: table
+    path: tables/msdyn_project
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msdynmkt_brandsender'
+    type: table
+    path: tables/msdynmkt_brandsender
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msdynmkt_email'
+    type: table
+    path: tables/msdynmkt_email
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msdynmkt_eventmetadata'
+    type: table
+    path: tables/msdynmkt_eventmetadata
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msdynmkt_fragment'
+    type: table
+    path: tables/msdynmkt_fragment
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msdynmkt_journey'
+    type: table
+    path: tables/msdynmkt_journey
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msdynmkt_marketingform'
+    type: table
+    path: tables/msdynmkt_marketingform
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msdynmkt_marketingformsubmission'
+    type: table
+    path: tables/msdynmkt_marketingformsubmission
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msdynmkt_segment'
+    type: table
+    path: tables/msdynmkt_segment
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msevtmgt_checkin'
+    type: table
+    path: tables/msevtmgt_checkin
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msevtmgt_event'
+    type: table
+    path: tables/msevtmgt_event
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msevtmgt_eventregistration'
+    type: table
+    path: tables/msevtmgt_eventregistration
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msevtmgt_session'
+    type: table
+    path: tables/msevtmgt_session
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msevtmgt_sessionregistration'
+    type: table
+    path: tables/msevtmgt_sessionregistration
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:msfp_surveyresponse'
+    type: table
+    path: tables/msfp_surveyresponse
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:opportunity'
+    type: table
+    path: tables/opportunity
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:opportunityclose'
+    type: table
+    path: tables/opportunityclose
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:phonecall'
+    type: table
+    path: tables/phonecall
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:processsession'
+    type: table
+    path: tables/processsession
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:product'
+    type: table
+    path: tables/product
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:queue'
+    type: table
+    path: tables/queue
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_accountpotentialtechstack'
+    type: table
+    path: tables/revops_accountpotentialtechstack
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_accountproductsummary'
+    type: table
+    path: tables/revops_accountproductsummary
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_accountreassignment'
+    type: table
+    path: tables/revops_accountreassignment
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_accountsoftwaretool'
+    type: table
+    path: tables/revops_accountsoftwaretool
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_accountsolutionsummary'
+    type: table
+    path: tables/revops_accountsolutionsummary
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_audienceimport'
+    type: table
+    path: tables/revops_audienceimport
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_businessreview'
+    type: table
+    path: tables/revops_businessreview
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_cadencecall'
+    type: table
+    path: tables/revops_cadencecall
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_changelog'
+    type: table
+    path: tables/revops_changelog
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_churn'
+    type: table
+    path: tables/revops_churn
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_competitortransferid'
+    type: table
+    path: tables/revops_competitortransferid
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_country'
+    type: table
+    path: tables/revops_country
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_cumulusaccount'
+    type: table
+    path: tables/revops_cumulusaccount
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_cumulusorganization'
+    type: table
+    path: tables/revops_cumulusorganization
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_cumulussignup'
+    type: table
+    path: tables/revops_cumulussignup
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_cumulususer'
+    type: table
+    path: tables/revops_cumulususer
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_demo'
+    type: table
+    path: tables/revops_demo
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_domain'
+    type: table
+    path: tables/revops_domain
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_gicsmapping'
+    type: table
+    path: tables/revops_gicsmapping
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_inpersonmeeting'
+    type: table
+    path: tables/revops_inpersonmeeting
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_lateralmove'
+    type: table
+    path: tables/revops_lateralmove
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_mwhaccount'
+    type: table
+    path: tables/revops_mwhaccount
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_onboardingcall'
+    type: table
+    path: tables/revops_onboardingcall
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_opportunitiessnapshots'
+    type: table
+    path: tables/revops_opportunitiessnapshots
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_opportunitysolution'
+    type: table
+    path: tables/revops_opportunitysolution
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_partnerinvestment'
+    type: table
+    path: tables/revops_partnerinvestment
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_platformsettings'
+    type: table
+    path: tables/revops_platformsettings
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_practice'
+    type: table
+    path: tables/revops_practice
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_pricingrequest'
+    type: table
+    path: tables/revops_pricingrequest
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_productsummary'
+    type: table
+    path: tables/revops_productsummary
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_psaintegration'
+    type: table
+    path: tables/revops_psaintegration
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_relatedsolutionssnapshots'
+    type: table
+    path: tables/revops_relatedsolutionssnapshots
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_service'
+    type: table
+    path: tables/revops_service
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_sherwebopportunitybpf'
+    type: table
+    path: tables/revops_sherwebopportunitybpf
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_sherwebsalesbpf'
+    type: table
+    path: tables/revops_sherwebsalesbpf
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_smeengagement'
+    type: table
+    path: tables/revops_smeengagement
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_solution'
+    type: table
+    path: tables/revops_solution
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_solutioncategory'
+    type: table
+    path: tables/revops_solutioncategory
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_solutiondetails'
+    type: table
+    path: tables/revops_solutiondetails
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_solutionprovider'
+    type: table
+    path: tables/revops_solutionprovider
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_solutionsummary'
+    type: table
+    path: tables/revops_solutionsummary
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_stateorprovince'
+    type: table
+    path: tables/revops_stateorprovince
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_subsolution'
+    type: table
+    path: tables/revops_subsolution
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_techstacksnapshots'
+    type: table
+    path: tables/revops_techstacksnapshots
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_territoryregion'
+    type: table
+    path: tables/revops_territoryregion
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_transfer'
+    type: table
+    path: tables/revops_transfer
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:revops_utmlink'
+    type: table
+    path: tables/revops_utmlink
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:syncerror'
+    type: table
+    path: tables/syncerror
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:systemuser'
+    type: table
+    path: tables/systemuser
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:task'
+    type: table
+    path: tables/task
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:team'
+    type: table
+    path: tables/team
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:template'
+    type: table
+    path: tables/template
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:territory'
+    type: table
+    path: tables/territory
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'table:transactioncurrency'
+    type: table
+    path: tables/transactioncurrency
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'queue:ad91fa0e-2027-f011-8c4d-002248afce9a'
+    type: queue
+    path: 'queues/-01fd31ba265e4d82a61829c93d5b4eca-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:bd166f0d-354b-f011-8779-0022483ce9a9'
+    type: queue
+    path: 'queues/-06b3487241954cda8393d3c970544f13-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:ff8f4ff9-f66c-f011-b4cb-002248ae1603'
+    type: queue
+    path: 'queues/-0b4b99ff67e845db99df046d028d32a4-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:e70b6eb4-5aa5-f011-bbd2-002248afda59'
+    type: queue
+    path: 'queues/-0bacc33ebe844b85a72e05b86f8fed21-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:0ea767fa-48bd-f011-bbd2-7c1e5254a8e1'
+    type: queue
+    path: 'queues/-167b4f324df242ddbfa32d04ba9355a9-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:bcc1f808-2027-f011-8c4d-002248afce9a'
+    type: queue
+    path: 'queues/-1e7960d3570d4105be9e9698908e57bf-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:4fbd8af5-b498-f011-b41c-000d3ae971d5'
+    type: queue
+    path: 'queues/-24ef7cf2b498f011b41c002248b081f9-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:db4292c2-f598-ef11-8a6b-002248b1d264'
+    type: queue
+    path: 'queues/-26e5dd400d074b4d987e67b8386c963c-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:21548866-f15e-f011-bec1-6045bd5e3bdc'
+    type: queue
+    path: 'queues/-28a698ab538140259f9f748ab25bd150-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:5b00c9f9-1b71-f011-bec1-000d3a84ef99'
+    type: queue
+    path: 'queues/-3eb6ce5fe12f4c6bbe4cd34789e2a7ad-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:173208fd-1f27-f011-8c4d-002248afce9a'
+    type: queue
+    path: 'queues/-3ebcb28158e840d594e78dabd4dab93b-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:75139d59-f1ed-f011-8406-7c1e5253bbc5'
+    type: queue
+    path: 'queues/-4cc6cbc791a3416a958b746c568ff794-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:da02b603-f9da-f011-8543-6045bd606a3e'
+    type: queue
+    path: 'queues/-4cfb7bca768542298b6586b9803c2c8f-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:4a3a26da-a123-ef11-840a-6045bd5d1869'
+    type: queue
+    path: 'queues/-51ccbc28b7bd4a6b94eae81b1541083d-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:b0ce6d28-f66c-f011-b4cb-002248ae1603'
+    type: queue
+    path: 'queues/-5dd00fa390f2402e87017894c508a9a7-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:3f1dd617-0fcb-f011-8544-7ced8d3656aa'
+    type: queue
+    path: 'queues/-6f87ac140fcbf01185447ced8d3654cb-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:6b11c449-4520-f011-998a-6045bd605559'
+    type: queue
+    path: 'queues/-712282464520f011998a002248b1d6cf-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:397ed701-0900-f011-bae3-0022483dedd6'
+    type: queue
+    path: 'queues/-8edaadf90800f011bae36045bd605559-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:441a544f-5a3f-f011-8779-6045bd603ebd'
+    type: queue
+    path: 'queues/-94a034358e86490eb5bfe1e7bdfb6ea2-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:ebabce5f-f1ed-f011-8406-7c1e5253bbc5'
+    type: queue
+    path: 'queues/-972b85112bf343319da681e806f24a5c-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:3f7b66ba-5aa5-f011-bbd2-002248afda59'
+    type: queue
+    path: 'queues/-995a90413eb6431e8067bd2a72ec7c77-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:f34215f1-1f27-f011-8c4d-002248afce9a'
+    type: queue
+    path: 'queues/-9c942d2eb2dd4e38a7d621a3b1503ac2-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:3eed8e2f-7ad2-f011-8543-0022483dc07f'
+    type: queue
+    path: 'queues/-9ce42f69bd484a62a630963d8e50221c-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:f39fd562-4439-f011-b4cc-6045bd61f90b'
+    type: queue
+    path: 'queues/-aab5ac628320410a90cbc5a55f6b3b8b-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:8286c868-0ced-ef11-be20-000d3a0c615d'
+    type: queue
+    path: 'queues/-ade72ef964e04307aaee678565a4a16b-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:2c8feac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-advisors-isv-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:fe117f94-59a5-f011-bbd2-002248afde81'
+    type: queue
+    path: 'queues/-afa11375edd44be79c7efba89217c9d7-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:cc8a63a4-b91f-f011-998a-002248add628'
+    type: queue
+    path: 'queues/-b3415a98b91ff01199890022483dedd6-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:b207a3da-f4ca-f011-8544-7c1e5253f8a5'
+    type: queue
+    path: 'queues/-b4c89ad2f4caf01185447ced8d3654cb-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:8cf7b10c-5862-f011-bec2-002248b2c290'
+    type: queue
+    path: 'queues/-ba-pod-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:298feac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-bizdev-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:89082a0b-1c71-f011-bec1-000d3a84ef99'
+    type: queue
+    path: 'queues/-c0c5d3a7e6b6456da40de5bb800a57c3-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:0c9579bb-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-c2-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:238feac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-canada-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:f7df5533-39b5-f011-bbd2-7ced8da605cb'
+    type: queue
+    path: 'queues/-cb34a52deb33456b9015e320f1302ff3-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:c9624e39-39b5-f011-bbd2-7ced8da605cb'
+    type: queue
+    path: 'queues/-ce1004038fca4d2da4d6d273fa8427f4-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:47c66fa4-f9b2-f011-bbd2-7ced8d667020'
+    type: queue
+    path: 'queues/-cfd2ff947e3a4383b78ba134ed93d386-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:089579bb-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-cloud-infrastructure-services-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:34e7ee09-5662-f011-bec2-002248b2c290'
+    type: queue
+    path: 'queues/-cloud-support-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:413ba956-5762-f011-bec2-002248b2c290'
+    type: queue
+    path: 'queues/-cloudpbx-pod-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:dc8eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-cst-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:a7ce88dc-3703-f011-bae3-6045bd605de1'
+    type: queue
+    path: 'queues/-d0505ed83703f011bae30022483cf35f-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:7549bc03-1920-ef11-840b-6045bd5ea018'
+    type: queue
+    path: 'queues/-d36c9d9bdfd9467dabbcbdbd8ba4cd63-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:02acce5f-f1ed-f011-8406-7c1e5253bbc5'
+    type: queue
+    path: 'queues/-d4adffea79cf48c6a89de931370b3c13-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:bd1b0058-2e20-ef11-840b-6045bd5ea018'
+    type: queue
+    path: 'queues/-d514df595ed3484b9d41572976dac638-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:f08c577c-1971-f011-bec1-000d3a84ef99'
+    type: queue
+    path: 'queues/-ddb58302677947668d9cd3a358d70d37-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:fc9479bb-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-development-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:d98eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-direct-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:ddebf873-f15e-f011-bec1-6045bd5e3bdc'
+    type: queue
+    path: 'queues/-f4e36f57cb5d4712a4da716563aff7c1-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:cc2d55fb-9771-ef11-a66f-0022483c5aa3'
+    type: queue
+    path: 'queues/-fb410c26d0804309a602d0d827a4fcec-1-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:049579bb-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-finance-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:009579bb-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-human-resources-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:64b30e84-5962-f011-bec2-002248b2c290'
+    type: queue
+    path: 'queues/-level-3s-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:436191cb-5362-f011-bec2-002248b2c290'
+    type: queue
+    path: 'queues/-m365-hex-pod-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:b8185b24-f7f2-f011-8407-7ced8de095ba'
+    type: queue
+    path: 'queues/-m365-hex-qm-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:fe8a7cb5-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-marketing-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:871a386c-0dca-f011-8544-7c1e5253f0d3'
+    type: queue
+    path: 'queues/-mwh-cloud-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:d2f56e17-74be-f011-bbd2-7c1e528ccd11'
+    type: queue
+    path: 'queues/-mwh-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:b68eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-online-backup-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:f49479bb-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-operations-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:138feac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-pod-chargers-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:ec9479bb-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-products-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:f68a7cb5-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sales-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:dd99fa1e-5862-f011-bec2-002248b2c290'
+    type: queue
+    path: 'queues/-sbc-pod-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:c5f87aa5-879b-ef11-8a6a-6045bd61f3dd'
+    type: queue
+    path: 'queues/-sdrs-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:b98eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-s-curit-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:71489c63-36b3-f011-bbd3-7ced8d36504f'
+    type: queue
+    path: 'queues/-sherweb-uk-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:74cc832d-d31f-ef11-840b-6045bd5ea018'
+    type: queue
+    path: 'queues/-sherweb-prod-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:ad8eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sherweb-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:2f8feac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sme-bdm-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:088feac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sw-assignaccount-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:df8eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sw-crmadministration-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:0b8feac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sw-export-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:e68eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sw-gdc-pa-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:cd8eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sw-marketingcreative-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:d08eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sw-marketingevents-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:d38eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sw-marketinggtm-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:bf8eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sw-partnersalesmanager-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:b08eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sw-presales-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:ea8eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sw-presalesmanager-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:d68eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sw-productspecialist-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:c58eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sw-rc-bd-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:e28eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sw-rc-p-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:b38eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-sw-salesoperations-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:159579bb-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-team-executives-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:129579bb-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-team-marketing-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:c28eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-team-product-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:bc8eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-team-sales-longueuil-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:c88eeac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-team-voip-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:f89479bb-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-technical-support-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:268feac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-us-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:058feac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-z-old-pod-council-s-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:028feac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-z-old-sw-gdc-ep-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:1a8feac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-z-old-pod-council-b-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:0e8feac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-z-old-pod-council-e-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:208feac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-z-old-pod-council-n-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:1d8feac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-z-old-pod-council-w-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'queue:178feac2-3f3e-ef11-a316-6045bd619d89'
+    type: queue
+    path: 'queues/-z-old-pod-council-o-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'pluginassembly:38bacd4b-61a6-4028-9d42-e19343472774'
+    type: pluginassembly
+    path: plugins/RevOps.EmailPlugins
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'pluginassembly:cbd5a8f0-9111-40b8-81b2-1f6f870ea8f3'
+    type: pluginassembly
+    path: plugins/RevOps.Plugins.CaseCustomerRespondedSetter
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'pluginassembly:f5a10995-357b-4b89-af82-ad395cd4357e'
+    type: pluginassembly
+    path: plugins/RevOps.Plugins.CaseInteractionStamper
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'pluginassembly:2b6e064b-56da-4614-9a02-9596ee147cf0'
+    type: pluginassembly
+    path: plugins/RevOps.Plugins.CaseOwnerStamper
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'pluginassembly:db443b24-e527-4701-9122-fe3e1e993779'
+    type: pluginassembly
+    path: plugins/RevOps.Plugins.EmailWorkflowMarker
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'pluginassembly:115c57ce-6551-47cf-8f60-262b00fb8eec'
+    type: pluginassembly
+    path: plugins/RevOps.SolutionPlugins
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'pluginassembly:a1da7847-b1bd-411d-ba0d-14fc3f831836'
+    type: pluginassembly
+    path: plugins/sherweb.plugin
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'flow:169b861b-fa16-f011-998a-7ced8d04f24d'
+    type: flow
+    path: 'flows/-activity-email-stamp-sql-date'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:1f4f7206-f616-f011-998a-7c1e5206727f'
+    type: flow
+    path: 'flows/-activity-phone-stamp-sql-date'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:08fd6ead-3a19-f011-998a-7ced8d063295'
+    type: flow
+    path: 'flows/-activity-tasks-stamp-sql-date'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:bf728815-6f4c-f011-877b-7c1e52409afe'
+    type: flow
+    path: 'flows/-audience-import-upsert-contact-and-associate'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:ea953a71-6ad6-ee11-904c-002248d5a789'
+    type: flow
+    path: 'flows/-calendly-create-and-update-a-lead-when-a-calendly-event-is-created'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:77b3076c-1200-f011-bae3-7c1e52409afe'
+    type: flow
+    path: 'flows/-events-scanned-import-connection-to-event-and-more'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:f665edbc-a4f3-ef11-be20-7c1e5206727f'
+    type: flow
+    path: 'flows/-form-submission-utm-shenanigans-enrichment-consent-processing'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:16df325b-ce8f-f011-b4cc-6045bdfa0630'
+    type: flow
+    path: 'flows/-global-pit-tier'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:530a3f91-b481-ef11-ac21-000d3af43697'
+    type: flow
+    path: 'flows/-journey-custom-trigger-for-lead'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:e5a057bf-fd48-ef11-accd-0022486df470'
+    type: flow
+    path: 'flows/-journey-dcij-website-contact-form-submitted'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:a4267844-d0bf-f011-bbd3-7c1e52067e9e'
+    type: flow
+    path: 'flows/-lead-check-parent-account-relationship-for-trade-show-lead'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:a622cb37-5595-ef11-8a69-000d3a0a3998'
+    type: flow
+    path: 'flows/-lead-disqualify-honeypot-field-contains-data'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:2c98e0f8-b81a-f011-998a-7ced8d04f24d'
+    type: flow
+    path: 'flows/-lead-mql-date'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:742ea0c4-d142-f011-877a-7ced8d063295'
+    type: flow
+    path: 'flows/-lead-notify-user-when-assigned'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:c4942a87-cdc0-f011-bbd3-7ced8d061554'
+    type: flow
+    path: 'flows/-lead-uk-cookie-fallback-territory'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:d0f6ec6a-023b-f011-b4cc-7ced8d063295'
+    type: flow
+    path: 'flows/-mwh-omit-accounts-and-contacts-from-consent'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:565632f5-0d85-f011-b4cc-7ced8d063295'
+    type: flow
+    path: 'flows/-phone-call-add-notes-to-description'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:5ba51fee-143a-ef11-a316-6045bdcd5dde'
+    type: flow
+    path: 'flows/account-backfill-channel-relationship'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:2002e152-9539-ef11-a316-6045bdcd5dde'
+    type: flow
+    path: 'flows/account-set-cumulus-account-created-on-opps'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:8ff7c609-5fd4-ee11-904c-002248d5a27a'
+    type: flow
+    path: 'flows/account-set-territory-on-account'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:4c3cce43-8ed5-ee11-904c-002248d5a732'
+    type: flow
+    path: 'flows/account-created-in-cumulus'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:df670963-ac82-f011-b4cb-7c1e5206727f'
+    type: flow
+    path: 'flows/account-ownership-change-notification'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:cfbc8f2d-646c-ef11-a670-6045bdf9e493'
+    type: flow
+    path: 'flows/account-product-summary-copy-account-key'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:577e4e2b-453a-ef11-a316-6045bdcd5e88'
+    type: flow
+    path: 'flows/account-solutions-summary-copy-account-key'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:0137957c-7de9-ef11-be20-7c1e52870606'
+    type: flow
+    path: 'flows/accounts-manual-fix-generic-domains-format'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:122313bc-9aa0-f011-bbd2-7ced8d061554'
+    type: flow
+    path: 'flows/assign-sme-engagement-to-object-owner'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:2710bbe6-7877-f011-b4cc-7c1e52409afe'
+    type: flow
+    path: 'flows/attach-file-to-asana'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:416659c3-51ba-f011-bbd3-7c1e52067e9e'
+    type: flow
+    path: 'flows/bulk-resolve-cases'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:eeb603b3-bc47-f011-877a-7c1e52409afe'
+    type: flow
+    path: 'flows/case-send-notification-to-owner-when-a-customer-replies'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:e9a9e743-e9d1-ef11-a72e-7c1e52063863'
+    type: flow
+    path: 'flows/case-queue-update-update-queue-item'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:98f9cc2a-e108-f011-bae3-7ced8d04f24d'
+    type: flow
+    path: 'flows/case-resolution-survey'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:d96a7992-b69f-f011-bbd2-7ced8d058789'
+    type: flow
+    path: 'flows/case-to-nice'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:4abab8df-5206-f011-bae2-7ced8d063295'
+    type: flow
+    path: 'flows/commitment-agreement-form'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:53f99fc6-82c4-ee11-9079-000d3a09cf8e'
+    type: flow
+    path: 'flows/competitor-create-current-provider-when-a-competitor-is-created'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:51c9db08-99e8-ef11-be21-000d3a09d51b'
+    type: flow
+    path: 'flows/contact-extract-domain-from-email'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:e67c203d-3b24-f011-8c4e-7c1e52409afe'
+    type: flow
+    path: 'flows/contact-extract-domain-from-email-selecting-rows-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:1d01247d-8de8-ef11-be21-000d3a09d51b'
+    type: flow
+    path: 'flows/contact-resolve-account-by-domain'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:5e0d76fd-ba26-f011-8c4e-7ced8d04f24d'
+    type: flow
+    path: 'flows/contact-resolve-account-by-domain-select-row-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:2649d858-4bd5-f011-8544-7ced8d061554'
+    type: flow
+    path: 'flows/conversations-to-nice'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:83b3c17e-2bca-f011-8544-6045bdf9f19e'
+    type: flow
+    path: 'flows/create-case-from-migration-request'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:227c7350-1a8f-f011-b4cb-7ced8d04e0f6'
+    type: flow
+    path: 'flows/create-case-from-zabbix-alert'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:a21628e1-353e-ef11-a316-6045bdcd5dde'
+    type: flow
+    path: 'flows/create-work-item-approve-enable-mailbox'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:c547a2b9-25bb-f011-bbd3-6045bdf9f19e'
+    type: flow
+    path: 'flows/cs-case-create-for-manual-account-creation-for-uk-partners'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:bcf520bb-d4ad-f011-bbd3-7c1e52067e9e'
+    type: flow
+    path: 'flows/cs-notify-manager-of-customer-escalation'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:ec3260dc-9343-ef11-a316-6045bdcd5ea7'
+    type: flow
+    path: 'flows/cumulus-account-manager-team-created-or-updated'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:c6ee8cbc-1919-ef11-840a-7c1e520637cd'
+    type: flow
+    path: 'flows/cumulus-account-manager-user-created-or-updated'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:3c9cd4b9-1919-ef11-840a-6045bdcd283e'
+    type: flow
+    path: 'flows/cumulus-account-manager-update'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:88c1fdd1-a46b-ef11-a670-000d3af47275'
+    type: flow
+    path: 'flows/cumulus-user-created'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:abcf0f94-f9b1-ef11-a72d-7c1e52063863'
+    type: flow
+    path: 'flows/daily-tier-update-per-mrr-'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:20e5e4f3-3f57-f011-bec2-7ced8d063295'
+    type: flow
+    path: 'flows/day-0-cumulus-ces'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:b3ce4fa1-dc75-ef11-ac20-7c1e520630e3'
+    type: flow
+    path: 'flows/enrich-account-manual'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:2d4ec9f4-5832-ef11-8e4e-6045bdcd5e2a'
+    type: flow
+    path: 'flows/enrich-account-oncreate'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:d6284b19-ef3e-ef11-a316-6045bdcd5ea7'
+    type: flow
+    path: 'flows/enrich-account-scheduled'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:1b9a722f-a343-ef11-a316-0022486df470'
+    type: flow
+    path: 'flows/enrich-contact-manual'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:885fa9a4-521f-ef11-840a-6045bdcd283e'
+    type: flow
+    path: 'flows/enrich-contact-oncreate'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:0b2432b9-e03e-ef11-a316-6045bdcd5ea7'
+    type: flow
+    path: 'flows/enrich-contact-scheduled'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:875fa9a4-521f-ef11-840a-6045bdcd283e'
+    type: flow
+    path: 'flows/enrich-lead-oncreate'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:1a73f488-e479-ef11-ac20-6045bdf9e493'
+    type: flow
+    path: 'flows/enrich-lead-scheduled'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:d50de08e-0f88-f011-b4cc-7ced8d06221f'
+    type: flow
+    path: 'flows/fill-parent-account-of-cumulus-account'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:9208db01-c38b-ef11-8a6a-7c1e524071bb'
+    type: flow
+    path: 'flows/fix-accounts-without-name'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:cb799a23-777b-ef11-ac20-6045bdf9e493'
+    type: flow
+    path: 'flows/fix-primary-contact-on-account'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:1a3834b4-abdd-ee11-904c-0022486dc4eb'
+    type: flow
+    path: 'flows/gtw-get-check-ins'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:1b21a4d6-5ada-ee11-904d-002248d5a732'
+    type: flow
+    path: 'flows/gtw-registrant-added'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:5376b140-5ada-ee11-904c-6045bdf9e7de'
+    type: flow
+    path: 'flows/gtw-webinar-is-created'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:76fd7f57-ba3c-f011-b4cc-7c1e52409afe'
+    type: flow
+    path: 'flows/incoming-email-set-customer-responded'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:98aad464-f360-f011-bec1-7c1e5206727f'
+    type: flow
+    path: 'flows/incoming-portal-comment-set-customer-responded'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:4312b647-622e-ef11-8e4f-6045bdcd5dde'
+    type: flow
+    path: 'flows/incomplete-cart'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:65ab024b-5c7f-f011-b4cc-7c1e52409afe'
+    type: flow
+    path: 'flows/iso-3166-cumulus-account-to-account-manual'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:0950b5ca-c089-f011-b4cc-6045bdcd501f'
+    type: flow
+    path: 'flows/iso-3166-cumulus-account-to-account-scheduled'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:4b2cd07d-1f9a-ee11-be37-000d3af4f266'
+    type: flow
+    path: 'flows/lead-extract-domain-from-email'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:0f2473c5-239a-ee11-be37-000d3af4f717'
+    type: flow
+    path: 'flows/lead-resolve-account-by-domain'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:c6c03138-6102-ef11-9f8a-002248d5a732'
+    type: flow
+    path: 'flows/lead-resolve-contact-by-email'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:26f2d8ab-5e99-ee11-be37-000d3af4f266'
+    type: flow
+    path: 'flows/lead-set-territory-on-lead'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:50c55434-3d1c-ef11-840b-002248d5a732'
+    type: flow
+    path: 'flows/link-cumulus-accounts-to-parent-accounts'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:05e173a0-6274-ef11-ac20-000d3af47275'
+    type: flow
+    path: 'flows/link-cumulus-user-contact-to-account'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:ff8ff78c-3d1c-ef11-840a-0022486d6c17'
+    type: flow
+    path: 'flows/link-cumulus-users-to-contact'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:91fb6fe3-6b78-f011-b4cc-7ced8d063295'
+    type: flow
+    path: 'flows/marketing-close-asset-from-campaign'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:b15a64db-b976-f011-b4cc-7ced8d063295'
+    type: flow
+    path: 'flows/marketing-report-inactive-campaign-owner'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:5378e547-9077-f011-b4cc-7c1e52409afe'
+    type: flow
+    path: 'flows/marketing-review-proposed-end-date'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:82f50409-87c4-ee11-9079-000d3a09cf8e'
+    type: flow
+    path: 'flows/opportunity-create-opportunities-from-account-potential'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:633172f5-c29e-f011-bbd2-7ced8d061554'
+    type: flow
+    path: 'flows/opportunity-set-current-bpf-stage-sherweb-opp-bpf'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:da34706c-cc9e-f011-bbd2-7ced8d061554'
+    type: flow
+    path: 'flows/opportunity-set-current-bpf-stage-sherweb-sales-bpf'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:de29be5c-030f-ef11-9f89-000d3a0a0668'
+    type: flow
+    path: 'flows/opportunity-update-solution-summary'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:5c484896-530e-ef11-9f89-000d3af4117b'
+    type: flow
+    path: 'flows/opportunity-solution-create-solution-summary'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:f3277816-22ed-ee11-a1fd-0022486dc4eb'
+    type: flow
+    path: 'flows/opportunity-update-probability-when-won'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:4426e14b-a0fa-ef11-bae1-7c1e5206727f'
+    type: flow
+    path: 'flows/organization-created-or-deleted-in-cumulus'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:7dac8344-11ac-ef11-a72d-6045bdf9b92b'
+    type: flow
+    path: 'flows/p2p-automation'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:dd389c85-6d9c-ef11-8a6a-000d3af4dd88'
+    type: flow
+    path: 'flows/p2p-transfer-notifications'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:12b018cd-fd93-f011-b4cc-6045bdfa0630'
+    type: flow
+    path: 'flows/p2p-transfer-population-from-case'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:80e8dada-3f3a-f011-b4cc-7c1e52409afe'
+    type: flow
+    path: 'flows/queue-item-ownership-change-based-on-case-ownership'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:6b0c257b-5941-f011-877a-7c1e52409afe'
+    type: flow
+    path: 'flows/queue-item-release-set-case-owner'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:ae8115af-54be-f011-bbd3-7c1e52067e9e'
+    type: flow
+    path: flows/resolvecase
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:0e903c77-505a-ef11-bfe3-6045bdf9a15c'
+    type: flow
+    path: 'flows/revops-change-log'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:eb2ba9c6-fa5d-ee11-8df0-000d3a09f3d2'
+    type: flow
+    path: 'flows/select-orgs-from-cumulus-where-clientuniquename'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:64e3c0bb-b194-f011-b4cc-6045bdfa0630'
+    type: flow
+    path: 'flows/send-p2p-transfer'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:2203afa2-feca-f011-8544-7ced8d061554'
+    type: flow
+    path: 'flows/set-case-lookup-value-on-customer-feedback-survey-response'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:3d01394b-a3cb-f011-8544-7c1e52067e9e'
+    type: flow
+    path: 'flows/set-customer-verified-resolution-value'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:bbd3e232-67e2-ef11-be20-7c1e52870606'
+    type: flow
+    path: 'flows/set-supported-service-column-email-channel'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:9b2cc09c-bcc4-f011-bbd3-7c1e52067e9e'
+    type: flow
+    path: 'flows/update-currency-exchange-rates'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:0cbf6af4-007d-f011-b4cc-7c1e52409afe'
+    type: flow
+    path: 'flows/update-last-interaction-email'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:ad8c22c4-107d-f011-b4cc-7c1e52409afe'
+    type: flow
+    path: 'flows/update-last-interaction-note'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:6a5560fe-157d-f011-b4cc-7ced8d04f24d'
+    type: flow
+    path: 'flows/update-last-interaction-portal-comment'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:0aa72c99-f571-f011-bec2-7ced8d063295'
+    type: flow
+    path: 'flows/veeam-contractrequest'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:214517ef-83c4-ee11-9079-000d3a09cde5'
+    type: flow
+    path: 'flows/vendor-account-create-solution-provider-from-vendor'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:d3fa82ea-5606-f011-bae2-7c1e5206727f'
+    type: flow
+    path: 'flows/vmware-contractrequest'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'flow:90a1ff34-7b95-f011-b4cc-6045bdfa0630'
+    type: flow
+    path: 'flows/zremove-journeymanual-dcij-website-contact-form-submitted'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'sla:88a8c0d4-7883-f011-b4cc-002248b2c290'
+    type: sla
+    path: 'slas/6-tier-slo-for-cases'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'sla:a8e517bd-a7e4-ef11-be21-0022486e1e61'
+    type: sla
+    path: slas/case
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'sla:195f628d-f25c-f011-877b-002248b2c290'
+    type: sla
+    path: 'slas/sla-for-cases'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:2cbe0c65-ee47-c529-d7e0-6c64cdafafe9'
+    type: workstream
+    path: 'workstreams/billing-outbound'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:b036f673-ed3a-9f81-93d7-570c2ca4695f'
+    type: workstream
+    path: 'workstreams/billing-voice-english'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:10e85d64-07f1-ec67-f584-1304c2a4b323'
+    type: workstream
+    path: 'workstreams/billing-voice-french'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:b544dc50-d2a0-cbd9-702d-fee019caeafc'
+    type: workstream
+    path: 'workstreams/c2-overflow'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:bbe15f45-1193-9770-93b3-880375a232da'
+    type: workstream
+    path: 'workstreams/default-group-voicemail-workstream'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:82fca120-9497-1c80-2cad-0feb6481ddab'
+    type: workstream
+    path: 'workstreams/default-individual-voicemail-workstream'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:bdbc5029-f12d-e911-8185-000d3a0704f0'
+    type: workstream
+    path: 'workstreams/live-chat-workstream'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:28fbb780-b4bb-4e52-bcdf-ffbcddd8fd13'
+    type: workstream
+    path: 'workstreams/microsoft-teams-workstream'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:8d385be4-9437-2d41-7c3e-c457c46b7863'
+    type: workstream
+    path: 'workstreams/mwh-cloud'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:8e67dffd-b4ad-5027-8c70-3ae1b944ec33'
+    type: workstream
+    path: 'workstreams/mwh-csp'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:dc70499f-3f84-7787-8bb3-93f21cd843d1'
+    type: workstream
+    path: 'workstreams/mwh-csp-outbound'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:6db6ad44-98fc-eb0c-86a2-a3bdf071dc3f'
+    type: workstream
+    path: 'workstreams/mwh-main-ivr'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:a9dd9fb3-d5e2-00fd-a99e-3e874a9a6646'
+    type: workstream
+    path: 'workstreams/mwh-security'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:d6f5d46f-32a8-4812-a669-a87030127965'
+    type: workstream
+    path: 'workstreams/phone-call-workstream'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:1b52be0f-4a6d-c4be-bc85-2e3399c3d89d'
+    type: workstream
+    path: 'workstreams/redirect-to-main-ivr'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:26eeabca-efbf-eeb3-bf59-6d9294af1965'
+    type: workstream
+    path: 'workstreams/sales-outbound'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:ae811f9f-7c92-3b06-8db3-806c7f65177b'
+    type: workstream
+    path: 'workstreams/sales-voice-english'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:f6d7544f-c397-8cc6-84b4-dc9d21248a09'
+    type: workstream
+    path: 'workstreams/sales-voice-french'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:7735e3fc-3111-77dd-255c-cc78255ccf66'
+    type: workstream
+    path: 'workstreams/support-and-sales-chat-eng'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:179dea07-66ff-2df0-b406-2a362f871288'
+    type: workstream
+    path: 'workstreams/support-and-sales-chat-fr'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:f1748714-69a6-6d2b-3a9e-11d20b9a6e9e'
+    type: workstream
+    path: 'workstreams/support-outbound'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:27152769-4b5d-b86d-94b3-684d1aefa913'
+    type: workstream
+    path: 'workstreams/support-outbound-2'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:fb47ee7f-841b-bc8a-659a-97835cc407c5'
+    type: workstream
+    path: 'workstreams/support-outbound-3'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:947a8722-de73-fea9-839f-53bb4bd81fc0'
+    type: workstream
+    path: 'workstreams/support-voice-eng'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:3e2c1259-1e4e-d7fd-9698-ab411c3cd504'
+    type: workstream
+    path: 'workstreams/support-voice-fr'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:91941281-6ca6-2636-4ab4-b2b39b911628'
+    type: workstream
+    path: 'workstreams/uk-to-m365'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'workstream:873fd243-9a97-288f-ae7f-4cb1d73dab28'
+    type: workstream
+    path: workstreams/voicemails
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+  -
+    asset_id: 'bpf:417d7142-611f-ef11-840b-002248d5a732'
+    type: bpf
+    path: 'business-process-flows/sherweb-sales-bpf'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:c2857b63-8fa7-473d-8e2f-112c232cebd8'
+    type: bpf
+    path: 'business-process-flows/change-password-for-portals-contact'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:247f7db4-2fc4-40b9-8722-1487bc8097b6'
+    type: bpf
+    path: 'business-process-flows/lead-to-opportunity-marketing-sales-process'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:d8f9dc7f-099f-44db-9d64-1dd81fbd470d'
+    type: bpf
+    path: 'business-process-flows/project-service-invoice-process'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:cab92af6-00b2-42d8-9cca-239a1d775b2a'
+    type: bpf
+    path: 'business-process-flows/project-service-subcontract-stages'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:58ff80f7-252c-4c1d-9d83-23e04ee66bca'
+    type: bpf
+    path: 'business-process-flows/project-service-vendor-invoice-business-process'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:9623d467-52ae-4979-89f6-2ac0d11dad99'
+    type: bpf
+    path: 'business-process-flows/eventmainbusinessprocessflow'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:ab81c1af-1a45-48d9-8133-3edc033dbeef'
+    type: bpf
+    path: 'business-process-flows/new-process'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:006c4c42-2abe-4b61-9149-56df5b9625f9'
+    type: bpf
+    path: 'business-process-flows/iot-alert-to-case-process'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:aa652cfa-571f-ef11-840a-6045bdcd283e'
+    type: bpf
+    path: 'business-process-flows/sherweb-opportunity-bpf'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:28920155-1862-4b42-8209-80bce3694773'
+    type: bpf
+    path: 'business-process-flows/update-contact'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:7129b58f-4963-4034-ac51-923cca1ebfe6'
+    type: bpf
+    path: 'business-process-flows/project-service-time-entry-edit'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:e58348c0-61ee-41a0-8120-9c4929e12fa3'
+    type: bpf
+    path: 'business-process-flows/project-service-time-entry-row-edit'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:0ffbcde4-61c1-4355-aa89-aa1d7b2b8792'
+    type: bpf
+    path: 'business-process-flows/phone-to-case-process'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:138acd55-4a5b-4fe8-9af7-abbe5b94745a'
+    type: bpf
+    path: 'business-process-flows/follow-up-with-opportunity'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:bd57803e-0408-44d6-b21d-ae7158ec6555'
+    type: bpf
+    path: 'business-process-flows/translation-process'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:bcd43793-5686-4fd4-b3b4-c0c26d6f7e40'
+    type: bpf
+    path: 'business-process-flows/expired-process'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:665e73aa-18c2-47d8-86bf-c50499c73b82'
+    type: bpf
+    path: 'business-process-flows/project-service-project-stages'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'bpf:6e9a821b-3cbc-4f04-9619-f2b723fe4880'
+    type: bpf
+    path: 'business-process-flows/after-meeting'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:38f7d26c-58cb-ee11-9079-000d3a09cde5'
+    type: security_role
+    path: 'security-roles/sherweb-sales-person'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:8abbfe18-9229-ef11-840a-000d3a0a0241'
+    type: security_role
+    path: 'security-roles/sherweb-sales-admin'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:90e19496-5dcb-ee11-9078-000d3af4c3b6'
+    type: security_role
+    path: 'security-roles/sherweb-sales-manager'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:4a537a4b-2e24-ef11-840a-0022486d6c17'
+    type: security_role
+    path: 'security-roles/sherweb-products'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:6b57e462-4d81-4fd7-84b7-0ca6b41b6673'
+    type: security_role
+    path: 'security-roles/marketing-services-user-extensible-role'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:11925f44-2b24-ef11-840a-6045bdcd283e'
+    type: security_role
+    path: 'security-roles/sherweb-marketing'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:182726f8-ba54-ef11-bfe3-6045bdcd4ce6'
+    type: security_role
+    path: 'security-roles/sherweb-salesops'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:0074cc46-ce3e-ef11-a316-6045bdcd5ea7'
+    type: security_role
+    path: 'security-roles/system-customizer-admin-add-on'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:4d5bb317-fae3-ef11-be21-6045bdf9b70e'
+    type: security_role
+    path: 'security-roles/sherweb-cs-agent'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:07f6dadb-8899-f011-b41c-6045bdfa0630'
+    type: security_role
+    path: 'security-roles/sherweb-cs-technical-onboarding-l3'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:6302bee9-f592-f011-b4cc-6045bdfa0630'
+    type: security_role
+    path: 'security-roles/sherweb-cs-technical-onboarding'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:a8bed6c3-c767-f011-bec2-7c1e5206727f'
+    type: security_role
+    path: 'security-roles/sherweb-cs-kb-editor'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:28959bfc-33e3-ef11-be21-7c1e52408517'
+    type: security_role
+    path: 'security-roles/sherweb-event-administrator'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:f42e46c5-9ae4-ef11-be21-7c1e52408517'
+    type: security_role
+    path: 'security-roles/sherweb-cs-enablement'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:20ebb653-87fe-ef11-bae3-7c1e52409afe'
+    type: security_role
+    path: 'security-roles/sherweb-business-development-rep'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:99ff4b8d-9ae4-ef11-be20-7c1e52870606'
+    type: security_role
+    path: 'security-roles/sherweb-cs-manager'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:59f40966-c8fd-ef11-bae3-7ced8d04f24d'
+    type: security_role
+    path: 'security-roles/sherweb-6sense-integration'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:42469575-0cb4-f011-bbd3-7ced8d061554'
+    type: security_role
+    path: 'security-roles/sherweb-project'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:7de17f00-78ba-f011-bbd3-7ced8d061554'
+    type: security_role
+    path: 'security-roles/sherweb-omnichannel-queue-manager'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:a281e7e7-c59f-f011-bbd2-7ced8d061ad0'
+    type: security_role
+    path: 'security-roles/sherweb-pre-sales'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:cc265053-8b6c-f011-b4cc-7ced8d063295'
+    type: security_role
+    path: 'security-roles/sherweb-audience-import'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:36e53d80-cf2d-4907-90a3-b14c1e0b09b8'
+    type: security_role
+    path: 'security-roles/customer-service-representative'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'role:f03f00d9-3b85-4aa8-94ff-c28c7b2ac683'
+    type: security_role
+    path: 'security-roles/csr-manager'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'config:environment-variables'
+    type: config
+    path: 'environment-variables'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.95
+  -
+    asset_id: 'config:connection-references'
+    type: config
+    path: 'connection-references'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:ccb6a49b-a622-ef11-840b-000d3a840a45'
+    type: app_module
+    path: 'app-modules/resource-scheduling'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:51dc05e6-7a23-ef11-840a-0022483e8dfe'
+    type: app_module
+    path: 'app-modules/customer-insights-journeys'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:c748a902-51a5-f011-bbd2-002248afda59'
+    type: app_module
+    path: 'app-modules/project-operations'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:bb70ee3e-51a5-f011-bbd2-002248afda59'
+    type: app_module
+    path: 'app-modules/project-operations-team-member'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:e47e35cb-9435-f011-8c4f-002248b0f955'
+    type: app_module
+    path: 'app-modules/portal-management'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:b80fe284-8a23-ef11-840b-002248b1d264'
+    type: app_module
+    path: 'app-modules/teams-virtual-events'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:d83ac8b0-9c23-ef11-840b-002248b1d264'
+    type: app_module
+    path: 'app-modules/omnichannel-for-customer-service'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:685a7b00-c660-f011-bec1-002248b26171'
+    type: app_module
+    path: 'app-modules/customer-service-team-member'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:aadf41f6-0020-ef11-840b-6045bd5ea018'
+    type: app_module
+    path: 'app-modules/solution-health-hub'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:f4a277dd-0220-ef11-840b-6045bd5ea018'
+    type: app_module
+    path: 'app-modules/dataverse-accelerator-app'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:91ae37a5-0420-ef11-840b-6045bd5ea018'
+    type: app_module
+    path: 'app-modules/power-pages-management'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:39e7c089-0f20-ef11-840b-6045bd5ea018'
+    type: app_module
+    path: 'app-modules/customer-service-hub'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:bc12b43c-1820-ef11-840b-6045bd5ea018'
+    type: app_module
+    path: 'app-modules/sales-team-member'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:da8a8afe-1b20-ef11-840b-6045bd5ea018'
+    type: app_module
+    path: 'app-modules/channel-integration-framework'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:3971005b-2620-ef11-840b-6045bd5ea018'
+    type: app_module
+    path: 'app-modules/sales-hub'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:41e055ac-2820-ef11-840b-6045bd5ea018'
+    type: app_module
+    path: 'app-modules/dynamics-365-app-for-outlook'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:69d3c088-2c20-ef11-840b-6045bd5ea018'
+    type: app_module
+    path: 'app-modules/copilot-service-admin-center'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:afc40e42-2d20-ef11-840b-6045bd5ea018'
+    type: app_module
+    path: 'app-modules/customer-service-workspace'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:019c1339-3420-ef11-840b-6045bd5ea018'
+    type: app_module
+    path: 'app-modules/omnichannel-admin-center'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:e78f7645-3420-ef11-840b-6045bd5ea018'
+    type: app_module
+    path: 'app-modules/omnichannel-administration'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:b8f58883-107b-ef11-ac20-6045bd5f37d7'
+    type: app_module
+    path: 'app-modules/power-platform-environment-settings'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'app:3470cace-39a5-f011-bbd3-7ced8d376572'
+    type: app_module
+    path: 'app-modules/project'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.9
+  -
+    asset_id: 'webresource:7fe25551-a268-f011-bec2-002248b159a4'
+    type: web_resource
+    path: 'web-resources/crfdb-hidedraftactivities'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:78e04b75-41cf-ee11-904d-000d3a09cd45'
+    type: web_resource
+    path: 'web-resources/crdd4-utmlink'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:718637a1-1367-ef11-a670-000d3af4b99b'
+    type: web_resource
+    path: 'web-resources/revops-churn'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:20467135-217f-ef11-ac21-000d3af4dd88'
+    type: web_resource
+    path: 'web-resources/revops-filtergainingprg'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:cd48e811-7d22-ef11-840a-0022486d6c17'
+    type: web_resource
+    path: 'web-resources/crdd4-pricingrequestfieldvisibility'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:58145ef3-702d-ef11-8e4f-6045bdcd5e2a'
+    type: web_resource
+    path: 'web-resources/crdd4-totalestrevenue-rollup'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:e2fec192-bead-ef11-a72d-6045bdf9b92b'
+    type: web_resource
+    path: 'web-resources/revops-probabilityoverride'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:7c24a700-c9b5-f011-bbd3-6045bdf9f19e'
+    type: web_resource
+    path: 'web-resources/revops-fillaccountandcumulusaccountprojectform'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:d6c0efe2-d89a-f011-b41c-6045bdfa0630'
+    type: web_resource
+    path: 'web-resources/revops-p2ptransferemail'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:b411b74f-dd88-f011-b4cc-6045bdfa0630'
+    type: web_resource
+    path: 'web-resources/crdd4-hide-other-accountprofile'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:c613f579-ca93-f011-b4cc-6045bdfa0630'
+    type: web_resource
+    path: 'web-resources/revops-p2ptransfercreate'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:a206631c-217f-ef11-ac21-7c1e520630e3'
+    type: web_resource
+    path: 'web-resources/revops-filterlosingorg'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:571c6b58-875e-f011-877a-7c1e5206727f'
+    type: web_resource
+    path: 'web-resources/revops-accounttieroverridesecurity'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:cee67920-1837-f011-8c4d-7c1e5206727f'
+    type: web_resource
+    path: 'web-resources/revops-email-case-subject.js'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:5db95db7-28a8-ef11-a72d-7c1e524085ab'
+    type: web_resource
+    path: 'web-resources/revops-openp2ptransfer'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:dd0a4cc6-f2ee-ef11-be20-7c1e52409afe'
+    type: web_resource
+    path: 'web-resources/revops-filterpartylisttocontacts'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:d05651e5-5cda-ef11-a730-7c1e52870606'
+    type: web_resource
+    path: 'web-resources/revops-filtercumulusorgs'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:5d488522-e6ca-f011-8544-7ced8d058789'
+    type: web_resource
+    path: 'web-resources/revops-emailhidefromfield'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:3c0ea5de-159e-f011-bbd2-7ced8d061554'
+    type: web_resource
+    path: 'web-resources/revops-p2p-competitor-filter'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:51902728-34a9-f011-bbd2-7ced8d061554'
+    type: web_resource
+    path: 'web-resources/revops-resolvecasesbutton'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:588f00b9-909f-f011-bbd2-7ced8d061ad0'
+    type: web_resource
+    path: 'web-resources/revops-emaildefaultsenderscrubber'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:9cab2243-93ef-ef11-be20-7ced8d063295'
+    type: web_resource
+    path: 'web-resources/revops-filterfromfield'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:ef59cf66-c4d1-ef11-a72e-0022486e1e61'
+    type: web_resource
+    path: 'web-resources/revops-servicestomigrate'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:4118828c-bed9-ef11-a731-6045bdf9b212'
+    type: web_resource
+    path: 'web-resources/revops-setcumulusaccount'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:89624da4-30c6-f011-bbd3-7c1e52067e9e'
+    type: web_resource
+    path: 'web-resources/revops-solutionfilter'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:c10229fb-3ef5-ef11-be20-7c1e52409afe'
+    type: web_resource
+    path: 'web-resources/revops-triggertransfercase'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:b0314744-3dbf-f011-bbd3-7ced8d061ad0'
+    type: web_resource
+    path: 'web-resources/revops-togglemwhtab'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'webresource:51902728-34a9-f011-bbd2-7ced8d061554'
+    type: web_resource
+    path: 'web-resources/revops-resolvecasesbutton'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.8
+  -
+    asset_id: 'graph:solution-dependencies'
+    type: graph
+    path: '_graph/solution-dependencies.yaml'
+    last_seen_run_id: '20260118-020019'
+    confidence: 0.85
+

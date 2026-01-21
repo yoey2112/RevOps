@@ -1,0 +1,679 @@
+forms:
+  -
+    name: Information
+    is_active: false
+    type: 2
+    sections:
+      -
+        label: Task Description
+        name: task description
+        tab: task
+        visible: true
+      -
+        label: Task Details
+        name: task details
+        tab: task
+        visible: true
+      -
+        label: Notes
+        name: notes
+        tab: notes
+        visible: true
+    fields:
+      -
+        section: task description
+        tab: task
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: task description
+        tab: task
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: task details
+        tab: task
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: task details
+        tab: task
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: task details
+        tab: task
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: task details
+        tab: task
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: task details
+        tab: task
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: task details
+        tab: task
+        disabled: false
+        visible: true
+        control_id: category
+        field: category
+      -
+        section: task details
+        tab: task
+        disabled: false
+        visible: true
+        control_id: subcategory
+        field: subcategory
+    description: A form for this entity.
+    tabs:
+      -
+        label: Task
+        name: task
+        visible: true
+        expanded: true
+      -
+        label: Notes
+        name: notes
+        visible: true
+        expanded: false
+    field_count: 9
+    type_name: Main
+  -
+    name: Task card
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: Color Strip
+        name: Color Strip
+        tab: ''
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: ''
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: ''
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: Color Strip
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: actualend
+        field: actualend
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+    description: null
+    tabs:
+      -
+        label: Card
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 6
+    type_name: Card
+  -
+    name: Task Reference Panel
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: TASK DETAILS
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: DESCRIPTION
+        name: tab_1_section_2
+        tab: tab_1
+        visible: true
+      -
+        label: OTHER DETAILS
+        name: tab_1_section_3
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: statecode
+        field: statecode
+      -
+        section: tab_1_section_2
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: tab_1_section_3
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: tab_1_section_3
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: A form that displays Reference Panel of Task.
+    tabs:
+      -
+        label: ''
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 8
+    type_name: Quick View
+  -
+    name: Task Card form
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: ''
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: ''
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: ''
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ColorStrip
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: scheduledstart
+        field: scheduledstart
+      -
+        section: CardHeader
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: CardDetails
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: CardFooter
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: CardFooter
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: Default Task card form.
+    tabs:
+      -
+        label: Task card
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 9
+    type_name: Card
+  -
+    name: Task quick create form.
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: ''
+        name: task
+        tab: createtask
+        visible: true
+      -
+        label: ''
+        name: task_2
+        tab: createtask
+        visible: true
+      -
+        label: ''
+        name: task_3
+        tab: createtask
+        visible: true
+    fields:
+      -
+        section: task
+        tab: createtask
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: task
+        tab: createtask
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: task
+        tab: createtask
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: task_2
+        tab: createtask
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: task_2
+        tab: createtask
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: task_3
+        tab: createtask
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: task_3
+        tab: createtask
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+    description: Task quick create form.
+    tabs:
+      -
+        label: Create Task
+        name: createtask
+        visible: true
+        expanded: true
+    field_count: 7
+    type_name: Quick Create
+  -
+    name: Quick Form
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: Information
+        name: information
+        tab: general
+        visible: true
+    fields:
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: scheduledend
+        field: scheduledend
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: prioritycode
+        field: prioritycode
+      -
+        section: information
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: This is the form that is displayed for the Dynamics 365 quick form.
+    tabs:
+      -
+        label: General
+        name: general
+        visible: true
+        expanded: true
+    field_count: 5
+    type_name: Quick View
+  -
+    name: Task for Interactive experience
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: Regarding
+        name: tab_4_section_4
+        tab: tab_4
+        visible: true
+      -
+        label: DETAILS
+        name: tab_4_section_2
+        tab: tab_4
+        visible: true
+      -
+        label: Description
+        name: tab_3_section_3
+        tab: tab_4
+        visible: true
+    fields:
+      -
+        section: tab_4_section_4
+        tab: tab_4
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: tab_4_section_2
+        tab: tab_4
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: tab_4_section_2
+        tab: tab_4
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: tab_4_section_2
+        tab: tab_4
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: tab_3_section_3
+        tab: tab_4
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_prioritycode
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: scheduledend
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Default Interactive experience Task form.
+    tabs:
+      -
+        label: TASK
+        name: tab_4
+        visible: true
+        expanded: true
+    field_count: 9
+    type_name: Main
+  -
+    name: Task
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: TASK
+        name: TASK
+        tab: TASK_TAB
+        visible: true
+      -
+        label: Description
+        name: Description
+        tab: TASK_TAB
+        visible: true
+      -
+        label: Task Details
+        name: task details
+        tab: TASK_TAB
+        visible: true
+      -
+        label: ''
+        name: tab_2_section_2
+        tab: TASK_TAB
+        visible: true
+    fields:
+      -
+        section: TASK
+        tab: TASK_TAB
+        disabled: false
+        visible: true
+        control_id: subject
+        field: subject
+      -
+        section: Description
+        tab: TASK_TAB
+        disabled: false
+        visible: true
+        control_id: description
+        field: description
+      -
+        section: task details
+        tab: TASK_TAB
+        disabled: false
+        visible: true
+        control_id: regardingobjectid
+        field: regardingobjectid
+      -
+        section: task details
+        tab: TASK_TAB
+        disabled: false
+        visible: true
+        control_id: actualdurationminutes
+        field: actualdurationminutes
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_priority
+        field: prioritycode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_scheduledend
+        field: scheduledend
+      -
+        section: ''
+        tab: ''
+        disabled: true
+        visible: true
+        control_id: header_statecode
+        field: statecode
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: header_ownerid
+        field: ownerid
+    description: Updated default Task form.
+    tabs:
+      -
+        label: TASK
+        name: TASK_TAB
+        visible: true
+        expanded: true
+    field_count: 8
+    type_name: Main
+

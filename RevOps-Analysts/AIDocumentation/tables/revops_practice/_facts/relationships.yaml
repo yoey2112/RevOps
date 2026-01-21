@@ -1,0 +1,127 @@
+relationships:
+  -
+    schemaname: revops_practice_SyncErrors
+    relationshiptype: OneToMany
+    referencingtablelogicalname: syncerror
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_practice_DuplicateMatchingRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_practice_DuplicateBaseRecord
+    relationshiptype: OneToMany
+    referencingtablelogicalname: duplicaterecord
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_practice_AsyncOperations
+    relationshiptype: OneToMany
+    referencingtablelogicalname: asyncoperation
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_practice_MailboxTrackingFolders
+    relationshiptype: OneToMany
+    referencingtablelogicalname: mailboxtrackingfolder
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_practice_UserEntityInstanceDatas
+    relationshiptype: OneToMany
+    referencingtablelogicalname: userentityinstancedata
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_practice_ProcessSession
+    relationshiptype: OneToMany
+    referencingtablelogicalname: processsession
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_practice_BulkDeleteFailures
+    relationshiptype: OneToMany
+    referencingtablelogicalname: bulkdeletefailure
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_practice_PrincipalObjectAttributeAccesses
+    relationshiptype: OneToMany
+    referencingtablelogicalname: principalobjectattributeaccess
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_practice_connections1
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_practice_connections2
+    relationshiptype: OneToMany
+    referencingtablelogicalname: connection
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_practice_QueueItems
+    relationshiptype: OneToMany
+    referencingtablelogicalname: queueitem
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_practice_Feedback
+    relationshiptype: OneToMany
+    referencingtablelogicalname: feedback
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_practice_DeletedItemReferences
+    relationshiptype: OneToMany
+    referencingtablelogicalname: deleteditemreference
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_practice_solutions
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_solution
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_goal_practice_revops_practice
+    relationshiptype: OneToMany
+    referencingtablelogicalname: goal
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_incident_practice_revops_practice
+    relationshiptype: OneToMany
+    referencingtablelogicalname: incident
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_accountpotentialtechstack_practice_revops_practice
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_accountpotentialtechstack
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: revops_solutioncategory_practice_revops_practice
+    relationshiptype: OneToMany
+    referencingtablelogicalname: revops_solutioncategory
+    referencedtablelogicalname: revops_practice
+  -
+    schemaname: lk_revops_practice_createdby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_practice
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_practice_createdonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_practice
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_practice_modifiedby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_practice
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: lk_revops_practice_modifiedonbehalfby
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_practice
+    referencedtablelogicalname: systemuser
+  -
+    schemaname: organization_revops_practice
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_practice
+    referencedtablelogicalname: organization
+  -
+    schemaname: revops_practice_practiceowner_systemuser
+    relationshiptype: ManyToOne
+    referencingtablelogicalname: revops_practice
+    referencedtablelogicalname: systemuser
+

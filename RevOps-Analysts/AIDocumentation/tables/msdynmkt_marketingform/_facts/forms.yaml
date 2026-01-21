@@ -1,0 +1,832 @@
+forms:
+  -
+    name: Submissions
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+    description: A form containing the submission grid.
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ''
+        name: ''
+        tab: ''
+        visible: true
+      -
+        label: ''
+        name: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        visible: false
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_formhtml
+        field: msdynmkt_formhtml
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_designerhtml
+        field: msdynmkt_designerhtml
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_placeholders
+        field: msdynmkt_placeholders
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdby
+        field: createdby
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: modifiedby
+        field: modifiedby
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: modifiedon
+        field: modifiedon
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_marketingformtemplateid
+        field: msdynmkt_marketingformtemplateid
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_targetentity
+        field: msdynmkt_targetentity
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_targetaudience
+        field: msdynmkt_targetaudience
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: owningbusinessunit
+        field: owningbusinessunit
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_successmessage
+        field: msdynmkt_successmessage
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_waitlistmessage
+        field: msdynmkt_waitlistmessage
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_notstartedmessage
+        field: msdynmkt_notstartedmessage
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_closedmessage
+        field: msdynmkt_closedmessage
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_errormessage
+        field: msdynmkt_errormessage
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_redirectenabled
+        field: msdynmkt_redirectenabled
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_redirecturl
+        field: msdynmkt_redirecturl
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_matchingstrategyid
+        field: msdynmkt_matchingstrategyid
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_marketingformtype
+        field: msdynmkt_marketingformtype
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_compliancesettings4id
+        field: msdynmkt_compliancesettings4id
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_isdoiforciblydisabled
+        field: msdynmkt_isdoiforciblydisabled
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_doubleoptintogglemodifiedby
+        field: msdynmkt_doubleoptintogglemodifiedby
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_doubleoptintogglemodifiedon
+        field: msdynmkt_doubleoptintogglemodifiedon
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_ignoreoptouts
+        field: msdynmkt_ignoreoptouts
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_prefillfields
+        field: msdynmkt_prefillfields
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_webtracking
+        field: msdynmkt_webtracking
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_ignoreemptyfields
+        field: msdynmkt_ignoreemptyfields
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_handlingduplicateleads
+        field: msdynmkt_handlingduplicateleads
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_leadmatchingrule
+        field: msdynmkt_leadmatchingrule
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_updatelead
+        field: msdynmkt_updatelead
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_createlead
+        field: msdynmkt_createlead
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_handlingduplicatecontacts
+        field: msdynmkt_handlingduplicatecontacts
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_contactmatchingrule
+        field: msdynmkt_contactmatchingrule
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_updatecontact
+        field: msdynmkt_updatecontact
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_createcontact
+        field: msdynmkt_createcontact
+      -
+        section: '{47a2ced7-a328-41d0-b3a5-c5714eaed6d7}_hidden_section'
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_postsubmissionactions
+        field: msdynmkt_postsubmissionactions
+    description: A form for this entity.
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 39
+    type_name: Main
+  -
+    name: Form settings
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: general
+        tab: tab_1
+        visible: true
+      -
+        label: Audience
+        name: audience_contact
+        tab: tab_1
+        visible: false
+      -
+        label: Audience
+        name: audience_lead
+        tab: tab_1
+        visible: false
+      -
+        label: Audience
+        name: audience_leadcontact
+        tab: tab_1
+        visible: false
+      -
+        label: Submission
+        name: submission
+        tab: tab_1
+        visible: true
+      -
+        label: Consent
+        name: consent
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: general
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_templateid
+        field: msdynmkt_templateid
+      -
+        section: general
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_targetentity
+        field: msdynmkt_targetentity
+      -
+        section: general
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_targetaudience
+        field: msdynmkt_targetaudience
+      -
+        section: general
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: owningbusinessunit
+        field: owningbusinessunit
+      -
+        section: general
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_prefillfields
+        field: msdynmkt_prefillfields
+      -
+        section: general
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_webtracking
+        field: msdynmkt_webtracking
+      -
+        section: audience_contact
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_handlingduplicatecontacts
+        field: msdynmkt_handlingduplicatecontacts
+      -
+        section: audience_contact
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_contactmatchingrule
+        field: msdynmkt_contactmatchingrule
+      -
+        section: audience_contact
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_updatecontact
+        field: msdynmkt_updatecontact
+      -
+        section: audience_contact
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_createcontact
+        field: msdynmkt_createcontact
+      -
+        section: audience_contact
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_ignoreemptyfields
+        field: msdynmkt_ignoreemptyfields
+      -
+        section: audience_lead
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_handlingduplicateleads
+        field: msdynmkt_handlingduplicateleads
+      -
+        section: audience_lead
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_leadmatchingrule
+        field: msdynmkt_leadmatchingrule
+      -
+        section: audience_lead
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_updatelead
+        field: msdynmkt_updatelead
+      -
+        section: audience_lead
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_createlead
+        field: msdynmkt_createlead
+      -
+        section: audience_lead
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_ignoreemptyfields
+        field: msdynmkt_ignoreemptyfields
+      -
+        section: audience_leadcontact
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_handlingduplicateleads
+        field: msdynmkt_handlingduplicateleads
+      -
+        section: audience_leadcontact
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_leadmatchingrule
+        field: msdynmkt_leadmatchingrule
+      -
+        section: audience_leadcontact
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_updatelead
+        field: msdynmkt_updatelead
+      -
+        section: audience_leadcontact
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_createlead
+        field: msdynmkt_createlead
+      -
+        section: audience_leadcontact
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_handlingduplicatecontacts
+        field: msdynmkt_handlingduplicatecontacts
+      -
+        section: audience_leadcontact
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_contactmatchingrule
+        field: msdynmkt_contactmatchingrule
+      -
+        section: audience_leadcontact
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_updatecontact
+        field: msdynmkt_updatecontact
+      -
+        section: audience_leadcontact
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_createcontact
+        field: msdynmkt_createcontact
+      -
+        section: audience_leadcontact
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_ignoreemptyfields
+        field: msdynmkt_ignoreemptyfields
+      -
+        section: submission
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_postsubmissionactions
+        field: msdynmkt_postsubmissionactions
+      -
+        section: submission
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_successmessage
+        field: msdynmkt_successmessage
+      -
+        section: submission
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_waitlistmessage
+        field: msdynmkt_waitlistmessage
+      -
+        section: submission
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_notstartedmessage
+        field: msdynmkt_notstartedmessage
+      -
+        section: submission
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_closedmessage
+        field: msdynmkt_closedmessage
+      -
+        section: submission
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_redirecturl
+        field: msdynmkt_redirecturl
+      -
+        section: submission
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_errormessage
+        field: msdynmkt_errormessage
+      -
+        section: submission
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_redirecturl
+        field: msdynmkt_redirecturl
+    description: null
+    tabs:
+      -
+        label: Form settings
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 33
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: GENERAL
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_marketingformid
+        field: msdynmkt_marketingformid
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick View
+  -
+    name: Failed Submissions
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: ''
+        name: ''
+        tab: Failed Submissions
+        visible: true
+    fields:
+    description: Failed Submissions
+    tabs:
+      -
+        label: Failed Submissions
+        name: Failed Submissions
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Main
+  -
+    name: Information
+    is_active: true
+    type: 11
+    sections:
+      -
+        label: ColorStrip
+        name: ColorStrip
+        tab: general
+        visible: true
+      -
+        label: Header
+        name: CardHeader
+        tab: general
+        visible: true
+      -
+        label: Details
+        name: CardDetails
+        tab: general
+        visible: true
+      -
+        label: Footer
+        name: CardFooter
+        tab: general
+        visible: true
+    fields:
+      -
+        section: CardHeader
+        tab: general
+        disabled: false
+        visible: true
+        control_id: statuscode
+        field: statuscode
+      -
+        section: CardDetails
+        tab: general
+        disabled: false
+        visible: true
+        control_id: msdynmkt_marketingformid
+        field: msdynmkt_marketingformid
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+      -
+        section: CardFooter
+        tab: general
+        disabled: false
+        visible: true
+        control_id: createdon
+        field: createdon
+    description: A card form for this entity.
+    tabs:
+      -
+        label: ''
+        name: general
+        visible: true
+        expanded: true
+    field_count: 4
+    type_name: Card
+  -
+    name: Information
+    is_active: true
+    type: 6
+    sections:
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: ''
+        tab: ''
+        disabled: false
+        visible: true
+        control_id: msdynmkt_targetentity
+        field: msdynmkt_targetentity
+    description: null
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 2
+    type_name: Quick View
+  -
+    name: Submissions
+    is_active: true
+    type: 2
+    sections:
+      -
+        label: General
+        name: ''
+        tab: ''
+        visible: true
+    fields:
+    description: A form containing the submission grid.
+    tabs:
+      -
+        label: ''
+        name: ''
+        visible: true
+        expanded: true
+    field_count: 0
+    type_name: Main
+  -
+    name: New Form
+    is_active: true
+    type: 7
+    sections:
+      -
+        label: section
+        name: tab_1_column_1_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: section
+        name: tab_1_column_2_section_1
+        tab: tab_1
+        visible: true
+      -
+        label: section
+        name: tab_1_column_3_section_1
+        tab: tab_1
+        visible: true
+    fields:
+      -
+        section: tab_1_column_1_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_name
+        field: msdynmkt_name
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_targetentity
+        field: msdynmkt_targetentity
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_targetaudience
+        field: msdynmkt_targetaudience
+      -
+        section: tab_1_column_2_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: msdynmkt_marketingformtype
+        field: msdynmkt_marketingformtype
+      -
+        section: tab_1_column_3_section_1
+        tab: tab_1
+        disabled: false
+        visible: true
+        control_id: ownerid
+        field: ownerid
+    description: null
+    tabs:
+      -
+        label: Tab
+        name: tab_1
+        visible: true
+        expanded: true
+    field_count: 5
+    type_name: Quick Create
+

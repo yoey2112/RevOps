@@ -1,0 +1,12 @@
+function filterPartyListToContacts(executionContext) {
+    var formContext = executionContext.getFormContext();
+
+    var fieldsToFilter = ["to", "cc", "bcc"];
+
+    fieldsToFilter.forEach(function (fieldName) {
+        var control = formContext.getControl(fieldName);
+        if (control) {
+            control.setEntityTypes(["contact"]);
+        }
+    });
+}
