@@ -1,0 +1,881 @@
+{% if user %}
+<!-- Fetch all needed queues -->
+{% fetchxml queue_lookup %}
+<fetch>
+  <entity name="queue">
+    <attribute name="name" />
+    <attribute name="queueid" />
+    <filter type="or">
+      <condition attribute="name" operator="eq" value="Level 2" />
+      <condition attribute="name" operator="eq" value="Cloud Solutions Team" />
+      <condition attribute="name" operator="eq" value="Billing" />
+      <condition attribute="name" operator="eq" value="TSS Management" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %} {% assign all_queues = queue_lookup.results.entities %}
+
+<!-- Extract individual queue IDs -->
+{% for q in all_queues %} {% if q.name == "Level 2" %} {% assign level2_id = q.queueid %} {% elsif q.name == "Cloud Solutions Team" %} {% assign cloudsolutions_id = q.queueid %} {% elsif q.name == "Billing" %} {% assign billing_id = q.queueid %} {% elsif q.name == "TSS Management" %} {% assign tss_management_id = q.queueid %} {% assign tss_management_name = q.name %} {% endif %} {% endfor %}
+
+<!-- Fetch subject lookups for Client Ops and Billing -->
+{% fetchxml subject_lookup %}
+<fetch>
+  <entity name="subject">
+    <attribute name="title" />
+    <attribute name="subjectid" />
+    <filter type="or">
+      <condition attribute="title" operator="eq" value="Client OPS" />
+      <condition attribute="title" operator="eq" value="Billing" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %} {% if s.title == "Client OPS" %} {% assign clientops_subject_id = s.subjectid %} {% if s.subjectid == null or s.subjectid == "" %} {% assign clientops_subject_id = s.id %} {% endif %} {% elsif s.title == "Billing" %} {% assign billing_subject_id = s.subjectid %} {% if s.subjectid == null or s.subjectid == "" %} {% assign billing_subject_id = s.id %} {% endif %} {% endif %}
+
+
+<!-- Fetch all cases without escalation reason for validation -->
+{% fetchxml valid_cases %}
+<fetch>
+  <entity name="incident">
+    <attribute name="incidentid" />
+    <filter type="and">
+      <condition attribute="statecode" operator="eq" value="0" />
+      <condition attribute="revops_customerescalationreason" operator="null" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+<script id="valid-cases-data" type="application/json">
+{
+  "validCaseIds": [
+    {% for case in valid_cases.results.entities -%}
+      {% assign clean_id = case.incidentid | replace: '{', '' | replace: '}', '' | downcase -%}
+      "{{ clean_id }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+<script id="escalate-queue-data" type="application/json">
+{
+  "queueId": "{{ tss_management_id | escape }}",
+  "queueName": "{{ tss_management_name | escape }}"
+}
+</script>
+
+<!-- Main content wrapper -->
+<div id="main-content-wrapper" style="min-height: calc(100vh - 200px);">
+  <!-- Button section -->
+  <div id="buttons-section" class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+    <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+      <div class="col-lg-12 columnBlockLayout mt-5 mb-0 pt-0 pb-0" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;">
+        <div class="row d-flex gap-4 align-items-center flex-wrap">
+          <h1>What do you need help with?</h1>
+          <button id="form1" type="button" data-target="form1" class="form-button btn text-left btn-secondary">Technical support</button>
+          <button id="form2" type="button" data-target="form2" class="form-button btn text-left btn-secondary">Products, licensing, pricing, or transfers</button>
+          <button id="form3" type="button" data-target="form3" class="form-button btn text-left btn-secondary">Invoices or billing</button>
+          <button id="form4" type="button" data-target="form4" class="form-button btn text-left btn-secondary">Something else</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form section - Always visible container -->
+  <div id="form-section" class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+    <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+      <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;">
+        <!-- Placeholder text (shown initially) -->
+        <div id="placeholder-text" style="text-align: center; padding: 60px 20px; color: #666;">
+          <h3>Please make a selection above</h3>
+          <p>Choose the option that best describes your needs to continue.</p>
+        </div>
+
+        <!-- Form wrapper (hidden initially) -->
+        <div id="form-wrapper" style="display: none;" tabindex="-1">{% entityform name: 'Create Case - CS' %}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Ensure main wrapper takes up full height */
+  #main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow-anchor: none;
+  }
+
+  /* Smooth transition for form appearance */
+  #form-wrapper {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  /* Hidden field styling for Power Pages td.clearfix structure */
+  td.clearfix.field-hidden {
+    display: none !important;
+  }
+  
+  /* Hidden field styling for escalate form queue field */
+  tr.queue-hidden, td.queue-hidden {
+    display: none !important;
+  }
+
+  /* Pre-hide queue field to prevent flash - will be overridden in debug mode */
+  #revops_queue {
+    opacity: 0;
+  }
+
+  /* Make queue visible when parent container doesn't have field-hidden class */
+  td.clearfix:not(.field-hidden) #revops_queue {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  /* Debug mode styles */
+  .debug-mode td.clearfix.field-hidden {
+    display: table-cell !important;
+    background-color: #fff3cd;
+    border: 2px dashed #ffc107;
+  }
+
+  .debug-mode td.clearfix.field-hidden::before {
+    content: "Hidden Field (Debug Mode)";
+    display: block;
+    color: #856404;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  /* Placeholder text styling */
+  #placeholder-text h3 {
+    color: #333;
+    font-weight: 400;
+  }
+
+  #placeholder-text p {
+    color: #666;
+    font-size: 0.95rem;
+  }
+
+  /* Prevent auto-focus scrolling on page load */
+  html {
+    scroll-behavior: auto;
+  }
+
+  /* Ensure page starts at top */
+  html, body {
+    scroll-padding-top: 0;
+  }
+
+  /* Enable smooth scrolling after page load */
+  html.smooth-scroll {
+    scroll-behavior: smooth;
+  }
+
+  /* Prevent focus outline on initial load */
+  *:focus {
+    outline: none;
+  }
+
+  /* Re-enable focus outline after interaction */
+  body.user-is-tabbing *:focus {
+    outline: 2px solid #0078d4;
+    outline-offset: 2px;
+  }
+</style>
+
+<script>
+  // Check for debug mode from URL parameter
+  function isDebugMode() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('debug') === 'true' || urlParams.get('debug') === '1';
+  }
+
+  // Initialize debug mode
+  const DEBUG_MODE = isDebugMode();
+
+  // Show debug indicator if in debug mode
+  if (DEBUG_MODE) {
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('debug-mode');
+      const debugIndicator = document.getElementById('debug-indicator');
+      if (debugIndicator) {
+        debugIndicator.style.display = 'block';
+      }
+      console.log('🔧 DEBUG MODE ACTIVE - All fields will be visible');
+    });
+  }
+
+  // Prevent initial scroll on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0, 0);
+  });
+
+  // Also handle the case where the script runs after DOM is loaded
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    window.scrollTo(0, 0);
+  }
+
+  $(document).ready(function () {
+    // Scroll to top on page load
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+
+    // Enable smooth scrolling after initial load
+    setTimeout(function() {
+      document.documentElement.classList.add('smooth-scroll');
+    }, 100);
+
+    // Prevent any form fields from auto-focusing on load
+    $('input, select, textarea').blur();
+
+    // Detect keyboard navigation for accessibility
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Tab') {
+        document.body.classList.add('user-is-tabbing');
+      }
+    });
+
+    document.addEventListener('mousedown', function() {
+      document.body.classList.remove('user-is-tabbing');
+    });
+
+    const buttons = document.querySelectorAll('.form-button');
+    const formSection = document.getElementById('form-section');
+    const formWrapper = document.getElementById('form-wrapper');
+    const placeholderText = document.getElementById('placeholder-text');
+    const formTitle = document.getElementById('form-title');
+
+    // Track current form configuration
+    let currentFormType = null;
+    let pendingQueueUpdate = null;
+
+    // FIELD VISIBILITY CONFIGURATION
+    const fieldConfigurations = {
+      form1: { // Technical Support
+        showFields: [
+          'casetypecode',
+          'revops_service',
+          'primarycontactid',
+          'title',
+          'description',
+          'revops_urgency'
+        ],
+        hideFields: [
+          'revops_queue',
+          'subjectid'
+        ],
+        requiredFields: [
+          'title',
+          'description',
+          'revops_urgency'
+        ]
+      },
+      form2: { // Products/Licensing
+        showFields: [
+          'revops_service',
+          'primarycontactid',
+          'title',
+          'description'
+        ],
+        hideFields: [
+          'revops_queue',
+          'subjectid',
+          'casetypecode',
+          'revops_urgency'
+        ],
+        requiredFields: [
+          'title',
+          'description'
+        ]
+      },
+      form3: { // Billing
+        showFields: [
+          'revops_service',
+          'primarycontactid',
+          'title',
+          'description'
+        ],
+        hideFields: [
+          'revops_queue',
+          'subjectid',
+          'casetypecode',
+          'revops_urgency'
+        ],
+        requiredFields: [
+          'title',
+          'description'
+        ]
+      },
+      form4: { // Other
+        showFields: [
+          'revops_service',
+          'primarycontactid',
+          'title',
+          'description'
+        ],
+        hideFields: [
+          'revops_queue',
+          'subjectid',
+          'casetypecode',
+          'revops_urgency'
+        ],
+        requiredFields: [
+          'title',
+          'description'
+        ]
+      }
+    };
+
+    // Dynamic queue mappings using Liquid variables
+    const queueMappings = {
+      form1: {
+        id: "{{ level2_id | escape }}",
+        name: "Level 2",
+        title: "Technical Support Request"
+      },
+      form2: {
+        id: "{{ cloudsolutions_id | escape }}",
+        name: "Cloud Solutions Team",
+        title: "Product/Licensing Question"
+      },
+      form3: {
+        id: "{{ billing_id | escape }}",
+        name: "Billing",
+        title: "Billing Support"
+      },
+      form4: {
+        id: "{{ level2_id | escape }}",
+        name: "Level 2",
+        title: "Other Request"
+      }
+    };
+
+    // Function to get subject ID from dropdown by text
+    function getSubjectIdByText(subjectText) {
+      const subjectDropdown = $('#subjectid');
+      if (subjectDropdown.length) {
+        const option = subjectDropdown.find('option').filter(function() {
+          return $(this).text().trim() === subjectText;
+        });
+        if (option.length) {
+          return option.val();
+        }
+      }
+      return null;
+    }
+
+    // Subject mappings
+    function getSubjectMappings() {
+      return {
+        form1: {
+          id: getSubjectIdByText('Default Subject') || '',
+          name: 'Default Subject'
+        },
+        form2: {
+          id: getSubjectIdByText('Client OPS') || '',
+          name: 'Client OPS'
+        },
+        form3: {
+          id: getSubjectIdByText('Billing') || '',
+          name: 'Billing'
+        },
+        form4: {
+          id: getSubjectIdByText('Default Subject') || '',
+          name: 'Default Subject'
+        }
+      };
+    }
+
+    // Case type code for "Other"
+    const CASE_TYPE_OTHER = "234570007";
+
+    // Function to set field value with validation
+    function setFieldValue(fieldId, value, fieldName = '') {
+      const field = $(`#${fieldId}`);
+      if (field.length && value) {
+        field.val(value);
+        field.trigger('change');
+        if (DEBUG_MODE) {
+          console.log(`✓ Set ${fieldName || fieldId} to:`, value);
+        }
+        return true;
+      }
+      if (DEBUG_MODE) {
+        console.warn(`✗ Failed to set ${fieldName || fieldId}:`, {
+          fieldExists: field.length > 0,
+          value: value
+        });
+      }
+      return false;
+    }
+
+    // Function to set lookup field value
+    function setLookupField(fieldId, entityName, recordId, recordName) {
+      if (DEBUG_MODE) {
+        console.log(`Setting ${fieldId} lookup:`, {
+          entityName: entityName,
+          recordId: recordId,
+          recordName: recordName
+        });
+      }
+
+      const field = $(`#${fieldId}`);
+
+      if (field.length && recordId) {
+        // Check if it's a SELECT dropdown
+        if (field.prop('tagName') === 'SELECT') {
+          // For dropdown, just set the value
+          field.val(recordId);
+          field.trigger('change');
+        } else {
+          // For other lookup types (entity reference)
+          field.val(recordId);
+          field.attr('value', recordId);
+
+          const entityNameField = $(`#${fieldId}_entityname`);
+          const nameField = $(`#${fieldId}_name`);
+
+          if (entityNameField.length) {
+            entityNameField.val(entityName);
+            entityNameField.attr('value', entityName);
+          }
+
+          if (nameField.length) {
+            nameField.val(recordName);
+            nameField.attr('value', recordName);
+          }
+
+          field.trigger('change');
+        }
+
+        if (DEBUG_MODE) {
+          console.log(`✓ ${fieldId} set successfully`);
+        }
+      }
+    }
+
+    // Function to find field container using td.clearfix structure
+    function findFieldContainer(fieldId) {
+      const field = $(`#${fieldId}`);
+      if (!field.length) return null;
+      return field.closest('td.clearfix');
+    }
+
+    // Function to show/hide fields based on configuration
+    function configureFormFields(formType) {
+      const config = fieldConfigurations[formType];
+      if (!config) {
+        console.log('No field configuration found for:', formType);
+        return;
+      }
+
+      // Store the queue update for this form type
+      const queueLookup = queueMappings[formType];
+      // Set queue update if there's a queue mapping, regardless of visibility
+      if (queueLookup && queueLookup.id) {
+        pendingQueueUpdate = {
+          id: queueLookup.id,
+          name: queueLookup.name
+        };
+      } else {
+        pendingQueueUpdate = null;
+      }
+
+      // In debug mode, show all fields but highlight which would be hidden
+      if (DEBUG_MODE) {
+        console.log('🔧 Debug Mode: Showing all fields for form type:', formType);
+        console.log('Configuration:', config);
+
+        // Remove all field-hidden classes
+        $('td.clearfix.field-hidden').removeClass('field-hidden');
+
+        // Just log what would be hidden
+        config.hideFields.forEach(fieldId => {
+          console.log(`🔧 Would hide field: ${fieldId}`);
+        });
+
+        // Set queue value immediately if we have one pending
+        if (pendingQueueUpdate) {
+          setTimeout(function() {
+            setFieldValue('revops_queue', pendingQueueUpdate.id, pendingQueueUpdate.name);
+          }, 100);
+        }
+
+        return;
+      }
+
+      // Normal mode - show/hide fields as configured
+      // First, show all fields (reset state)
+      $('[class*="field-hidden"]').removeClass('field-hidden');
+
+      // Show specified fields
+      config.showFields.forEach(fieldId => {
+        const container = findFieldContainer(fieldId);
+        if (container) {
+          container.removeClass('field-hidden');
+        }
+      });
+
+      // Hide specified fields
+      config.hideFields.forEach(fieldId => {
+        const container = findFieldContainer(fieldId);
+        if (container) {
+          container.addClass('field-hidden');
+        }
+      });
+
+      // Set required fields as needed
+      config.requiredFields.forEach(fieldId => {
+        const field = $(`#${fieldId}`);
+        if (field.length) {
+          field.prop('required', true);
+          field.attr('aria-required', 'true');
+          const container = findFieldContainer(fieldId);
+          if (container) {
+            const label = container.find('label').first();
+            if (label.length && !label.find('.required').length) {
+              label.append(' <span class="required">*</span>');
+            }
+          }
+        }
+      });
+
+      // Remove required from fields not in the required list
+      const allFieldIds = [...config.showFields, ...config.hideFields];
+      allFieldIds.forEach(fieldId => {
+        if (!config.requiredFields.includes(fieldId)) {
+          const field = $(`#${fieldId}`);
+          if (field.length) {
+            field.prop('required', false);
+            field.attr('aria-required', 'false');
+            const container = findFieldContainer(fieldId);
+            if (container) {
+              const label = container.find('label').first();
+              label.find('.required').remove();
+            }
+          }
+        }
+      });
+
+      // Set queue value after fields are configured (even if hidden)
+      if (pendingQueueUpdate) {
+        setTimeout(function() {
+          setFieldValue('revops_queue', pendingQueueUpdate.id, pendingQueueUpdate.name);
+        }, 50);
+      }
+    }
+
+    // Function to set all form values
+    function setFormValues(formType) {
+      if (DEBUG_MODE) {
+        console.log('🔧 Setting form values for:', formType);
+      }
+
+      // Get mappings
+      const queueLookup = queueMappings[formType];
+      const allSubjectMappings = getSubjectMappings();
+      const subjectLookup = allSubjectMappings[formType];
+
+      // Set queue if applicable (already done in configureFormFields)
+      // This is a backup in case the field wasn't ready yet
+      if (queueLookup && pendingQueueUpdate) {
+        setTimeout(function() {
+          setFieldValue('revops_queue', pendingQueueUpdate.id, pendingQueueUpdate.name);
+        }, 200);
+      }
+
+      // Handle subject field - always set or reset to Default Subject
+      setTimeout(function() {
+        if (subjectLookup && subjectLookup.id) {
+          setLookupField('subjectid', 'subject', subjectLookup.id, subjectLookup.name);
+        } else {
+          // Fallback to "Default Subject" if no mapping found
+          const defaultSubjectId = getSubjectIdByText('Default Subject');
+          if (defaultSubjectId) {
+            setLookupField('subjectid', 'subject', defaultSubjectId, 'Default Subject');
+            if (DEBUG_MODE) {
+              console.log('✓ Set subject to Default Subject for', formType);
+            }
+          } else {
+            // If Default Subject not found, reset to empty
+            const subjectField = $('#subjectid');
+            if (subjectField.length) {
+              subjectField.val('');
+              subjectField.trigger('change');
+              if (DEBUG_MODE) {
+                console.log('✓ Reset subject field for', formType);
+              }
+            }
+          }
+        }
+      }, 200);
+
+      // Handle case type field
+      setTimeout(function() {
+        if (formType === 'form4') {
+          setFieldValue('casetypecode', CASE_TYPE_OTHER, 'Case Type');
+        } else {
+          // Reset case type for other forms (clear the "Other" value)
+          const caseTypeField = $('#casetypecode');
+          if (caseTypeField.length) {
+            caseTypeField.val(''); // Reset to empty/default
+            caseTypeField.trigger('change');
+            if (DEBUG_MODE) {
+              console.log('✓ Reset case type field for', formType);
+            }
+          }
+        }
+      }, 200);
+    }
+
+    // Button click handlers
+    buttons.forEach(button => {
+      button.addEventListener('click', function () {
+        const targetId = this.getAttribute('data-target');
+        const queueLookup = queueMappings[targetId];
+
+        if (DEBUG_MODE) {
+          console.log('🔧 Button clicked:', targetId);
+          console.log('🔧 Queue mapping:', queueLookup);
+        }
+
+        // Update form title
+        if (formTitle && queueLookup) {
+          formTitle.textContent = queueLookup.title;
+        }
+
+        currentFormType = targetId;
+
+        // Hide placeholder
+        if (placeholderText) {
+          placeholderText.style.display = 'none';
+        }
+
+        // If form is hidden, configure it before showing
+        if (formWrapper && formWrapper.style.display === 'none') {
+          // Configure fields (this will also set queue value)
+          configureFormFields(targetId);
+
+          // Show the form after configuration
+          setTimeout(function() {
+            formWrapper.style.display = 'block';
+
+            // Set other form values after form is visible
+            setFormValues(targetId);
+
+            // Smooth scroll to show buttons at top
+            const buttonsSection = document.getElementById('buttons-section');
+            if (buttonsSection) {
+              const yOffset = -40;
+              const y = buttonsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+              window.scrollTo({
+                top: Math.max(0, y),
+                behavior: 'smooth'
+              });
+            }
+          }, 50);
+        } else {
+          // Form is already visible, reconfigure for new selection
+          formWrapper.style.opacity = '0';
+          formWrapper.style.transition = 'opacity 0.2s ease-in-out';
+
+          setTimeout(function() {
+            // Configure fields (this will also set queue value)
+            configureFormFields(targetId);
+
+            // Show form with fade-in effect
+            setTimeout(function() {
+              formWrapper.style.opacity = '1';
+
+              // Set other form values
+              setFormValues(targetId);
+
+              // Smooth scroll
+              const buttonsSection = document.getElementById('buttons-section');
+              if (buttonsSection) {
+                const yOffset = -40;
+                const y = buttonsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({
+                  top: Math.max(0, y),
+                  behavior: 'smooth'
+                });
+              }
+            }, 50);
+          }, 100);
+        }
+      });
+    });
+  });
+</script>
+
+<!-- Additional script to handle any delayed loading issues -->
+<script>
+  window.addEventListener('load', function() {
+    // Final check to ensure we're at top after everything loads
+    setTimeout(function() {
+      if (window.pageYOffset > 100) {
+        window.scrollTo(0, 0);
+      }
+    }, 500);
+  });
+</script>
+
+{% else %}
+<!-- Sign in page styles and content remain unchanged -->
+<style>
+  /* Reset and base styles */
+  html, body {
+      margin: 0;
+      padding: 0;
+      /* width: 100%;
+      height: 100%; */
+      /* background: linear-gradient(135deg, #e0eafc, #cfdef3); */
+      background: white;
+      /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+      box-sizing: border-box;
+      overflow-x: hidden;
+      height: 100%;
+  }
+
+  page-wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+  }
+
+  #content-container {
+      display: flex;
+      /* flex-direction: column; */
+      min-height: 100vh;
+  }
+
+  *, *::before, *::after {
+      box-sizing: inherit;
+  }
+
+  /* Page container */
+  .signinpage {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 4rem 1rem;
+      min-height: calc(100vh - 100px);
+  }
+
+  /* Sign-in box */
+  .signinpage .custom-signin-container {
+      width: 100%;
+      max-width: 400px;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-top: 5vh;
+  }
+
+  /* Title */
+  .signinpage .signin-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+  }
+
+  /* Subtitle */
+  .signinpage .signin-subtitle {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+  }
+
+  /* Input fields */
+  .signinpage .signin-form input {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+  }
+
+  /* Sign-in button */
+  .signinpage .signin-form button {
+      width: 100%;
+      padding: 0.75rem;
+      background: #ed573c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.3s ease;
+  }
+
+  .signinpage .signin-form button:hover {
+      background: #005a9e;
+  }
+
+  /* Forgot password */
+  .signinpage .signin-forgot {
+      margin-top: 1rem;
+  }
+
+  .signinpage .signin-forgot a {
+      color: #0078D4;
+      text-decoration: none;
+      font-weight: 500;
+  }
+
+  .signinpage .signin-forgot a:hover {
+      text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+      .signinpage .custom-signin-container {
+          padding: 1.5rem;
+      }
+  }
+
+  .external-login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #ed573c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block;
+  }
+
+  .external-login-button:hover {
+    background: #005a9e;
+  }
+</style>
+
+<div class="signinpage">
+  <div class="custom-signin-container">
+    <h1 class="b">Please sign in to open a ticket</h1>
+    <div class="signin-form">
+      <!-- External login form -->
+      <a href="/en-US/Account/Login/ExternalLogin?provider=https%3A%2F%2Fcumulus.sherweb.com%2Foidc%2F&returnUrl=%2Fen-US%2Ftickets%2F" class="external-login-button" title="Sign in to your account management portal (Cumulus)"> Sign in </a>
+      <!-- <form action="/en-US/Account/Login/ExternalLogin?ReturnUrl=%2Fen-US%2Ftickets%2F" method="post" style="margin-top: 1rem;">
+        <input name="__RequestVerificationToken" type="hidden" value="2Dtl8rTfR0-Hi8p4l5qCvprH4h6TMj4redJyDj19eE3SKE0I5tM2125PL6SGYvWKE9TDAfF6ay3PpVL3_CKxCK5bgFI3qtXMvAAluBjOyx01"> 
+        <button name="provider" type="submit" class="external-login-button" id="https://cumulus.sherweb.com/oidc/" title="Sign in to your account management portal (Cumulus)." value="https://cumulus.sherweb.com/oidc/">
+          Sign in
+        </button>
+      </form> -->
+    </div>
+  </div>
+</div>
+
+{%endif%}

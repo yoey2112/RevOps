@@ -1,0 +1,23 @@
+<style>
+  .logo-wrapper > .divisor {
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background: #000;
+    left: -.7rem;
+    opacity: .55;
+  }
+
+</style>
+
+<a href="~/" class="d-flex align-items-center gap-4">
+  {% if snippets['Logo URL'] %}
+    <img src="https://images.sherweb.com/logo-sherweb-freshdesk.png" alt="{{ snippets['Logo alt text'] }}" height="40px">
+  {% endif %}
+  {% if snippets['Site name'] %}
+  <div class="position-relative logo-wrapper">
+      <span class="divisor"></span>
+      <h1 class="siteTitle custom-sitetitle my-0" >Soutien technique<span class="d-none">{{ snippets['Site name'] }}</span></h1>
+    </div>
+  {% endif %}
+</a>

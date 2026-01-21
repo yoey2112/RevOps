@@ -1,0 +1,1285 @@
+{% if user %}
+<!-- Fetch all needed queues -->
+{% fetchxml queue_lookup %}
+<fetch>
+  <entity name="queue">
+    <attribute name="name" />
+    <attribute name="queueid" />
+    <filter type="or">
+      <condition attribute="name" operator="eq" value="Level 2" />
+      <condition attribute="name" operator="eq" value="Cloud Solutions Team" />
+      <condition attribute="name" operator="eq" value="Billing" />
+      <condition attribute="name" operator="eq" value="TSS Management" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %} {% assign all_queues = queue_lookup.results.entities %}
+
+<!-- Extract individual queue IDs -->
+{% for q in all_queues %} {% if q.name == "Level 2" %} {% assign level2_id = q.queueid %} {% elsif q.name == "Cloud Solutions Team" %} {% assign cloudsolutions_id = q.queueid %} {% elsif q.name == "Billing" %} {% assign billing_id = q.queueid %} {% elsif q.name == "TSS Management" %} {% assign tss_management_id = q.queueid %} {% assign tss_management_name = q.name %} {% endif %} {% endfor %}
+
+<!-- Fetch subject lookups for Client Ops and Billing -->
+{% fetchxml subject_lookup %}
+<fetch>
+  <entity name="subject">
+    <attribute name="title" />
+    <attribute name="subjectid" />
+    <filter type="or">
+      <condition attribute="title" operator="eq" value="Client OPS" />
+      <condition attribute="title" operator="eq" value="Billing" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %} {% if s.title == "Client OPS" %} {% assign clientops_subject_id = s.subjectid %} {% if s.subjectid == null or s.subjectid == "" %} {% assign clientops_subject_id = s.id %} {% endif %} {% elsif s.title == "Billing" %} {% assign billing_subject_id = s.subjectid %} {% if s.subjectid == null or s.subjectid == "" %} {% assign billing_subject_id = s.id %} {% endif %} {% endif %}
+
+<!-- Fetch all cases without escalation reason for validation -->
+{% fetchxml valid_cases %}
+<fetch>
+  <entity name="incident">
+    <attribute name="incidentid" />
+    <filter type="and">
+      <condition attribute="statecode" operator="eq" value="0" />
+      <condition attribute="revops_customerescalationreason" operator="null" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+<script id="valid-cases-data" type="application/json">
+  {
+    "validCaseIds": [
+      {% for case in valid_cases.results.entities -%}
+        {% assign clean_id = case.incidentid | replace: '{', '' | replace: '}', '' | downcase -%}
+        "{{ clean_id }}"{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+</script>
+
+<script id="escalate-queue-data" type="application/json">
+  {
+    "queueId": "{{ tss_management_id | escape }}",
+    "queueName": "{{ tss_management_name | escape }}"
+  }
+</script>
+
+<!-- Main content wrapper -->
+<div id="main-content-wrapper" style="min-height: calc(100vh - 200px);">
+  <!-- CASE HUB: Case Type Selection (shown first) -->
+  <div id="case-hub-selector" class="case-hub-section">
+    <div class="case-hub-container">
+      <h1>How can we help you today?</h1>
+      <p class="subtitle">Choose the option that best describes your request</p>
+
+      <div class="case-type-grid">
+        <!-- Technical Support - Shows tickets form -->
+        <div class="case-type-card" onclick="showTicketsForm('form1')">
+          <div class="icon"><i class="fa-light fa-life-ring"></i></div>
+          <h3>Technical Support</h3>
+          <p>Technical issues, troubleshooting, or service problems</p>
+          <!-- <span class="meta"><i class="fa-light fa-life-ring"></i> Urgent issues supported</span> -->
+        </div>
+
+        <!-- Products & Licensing - Shows submenu -->
+        <div class="case-type-card" onclick="showProductsMenu()">
+          <div class="icon"><i class="fa-light fa-box"></i></div>
+          <h3>Products, Licensing, Pricing, or Transfers</h3>
+          <p>Questions about products, pricing, licensing, or transfers</p>
+          <!-- <span class="meta"><i class="fa-light fa-box"></i> Cloud Solutions Team</span> -->
+        </div>
+
+        <!-- Billing - Shows tickets form -->
+        <div class="case-type-card" onclick="showTicketsForm('form3')">
+          <div class="icon"><i class="fa-light fa-file-invoice-dollar"></i></div>
+          <h3>Billing & Invoices</h3>
+          <p>Billing questions, invoice issues, or payment concerns</p>
+          <!-- <span class="meta"><i class="fa-light fa-file-invoice-dollar"></i> Billing team</span> -->
+        </div>
+
+        <!-- Other - Shows tickets form -->
+        <div class="case-type-card" onclick="showTicketsForm('form4')">
+          <div class="icon"><i class="fa-light fa-comment-dots"></i></div>
+          <h3>Something Else</h3>
+          <p>General inquiries or requests not listed above</p>
+          <!-- <span class="meta"><i class="fa-light fa-comment-dots"></i> We'll route it appropriately</span> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS SUBMENU: Shows when Products & Licensing is selected -->
+  <div id="products-submenu" class="case-hub-section" style="display: none;">
+    <div class="case-hub-container">
+      <!-- Breadcrumb -->
+      <div class="submenu-breadcrumb">
+        <button onclick="backToCaseHub()" class="breadcrumb-link">← Back to all case types</button>
+      </div>
+
+      <h1>Products, Licensing, Pricing, or Transfers</h1>
+      <p class="subtitle">What specific type of request do you need help with?</p>
+
+      <div class="case-type-grid">
+        <!-- General Sales Question -->
+        <div class="case-type-card" onclick="showTicketsForm('form2')">
+          <div class="icon"><i class="fa-light fa-circle-question"></i></div>
+          <h3>General Sales Question</h3>
+          <p>Product questions, pricing inquiries, or general information</p>
+          <!-- <span class="meta"><i class="fa-light fa-circle-question"></i> Cloud Solutions Team</span> -->
+        </div>
+
+        <!-- Google Transfer (Workspace) -->
+        <div class="case-type-card" onclick="navigateToPage('/Google-Transfer')">
+          <div class="icon"><i class="fa-light fa-right-left"></i></div>
+          <h3>Google Transfer</h3>
+          <p>Transfer Google Workspace services or domains</p>
+          <!-- <span class="meta"><i class="fa-light fa-right-left"></i> Google Workspace transfers</span> -->
+        </div>
+
+        <!-- P2P Transfer (Partner-to-Partner) -->
+        <div class="case-type-card" onclick="navigateToPage('/P2PTransfer')">
+          <div class="icon"><i class="fa-light fa-people-arrows"></i></div>
+          <h3>P2P Transfer</h3>
+          <p>Partner-to-partner transfer requests</p>
+          <!-- <span class="meta"><i class="fa-light fa-people-arrows"></i> Between Microsoft partners</span> -->
+        </div>
+
+        <!-- Migration Request -->
+        <div class="case-type-card" onclick="navigateToPage('/new-migration-request')">
+          <div class="icon"><i class="fa-light fa-rocket"></i></div>
+          <h3>Migration Request</h3>
+          <p>Migrate mailboxes, email data, or services between platforms</p>
+          <!-- <span class="meta"><i class="fa-light fa-rocket"></i> Estimated turnaround: 7 business days</span> -->
+        </div>
+
+        <!-- CSP Transfer (Cloud Solution Provider) -->
+        <div class="case-type-card" onclick="navigateToPage('/CSP-Transfer')">
+          <div class="icon"><i class="fa-light fa-cloud"></i></div>
+          <h3>CSP Transfer</h3>
+          <p>Cloud Solution Provider subscription transfers</p>
+          <!-- <span class="meta"><i class="fa-light fa-cloud"></i> Microsoft CSP transfers</span> -->
+        </div>
+
+        <!-- License Adjustment -->
+        <div class="case-type-card" onclick="navigateToPage('/new-license-adjustment')">
+          <div class="icon"><i class="fa-light fa-clipboard-list"></i></div>
+          <h3>License Adjustment</h3>
+          <p>Add, remove, or modify licenses and subscriptions</p>
+          <!-- <span class="meta"><i class="fa-light fa-clipboard-list"></i> Managed by Cloud Solutions Team</span> -->
+        </div>
+
+        <!-- GoDaddy Transfer -->
+        <div class="case-type-card" onclick="navigateToPage('/CSP-GoDaddy-Transfer')">
+          <div class="icon"><i class="fa-light fa-globe"></i></div>
+          <h3>GoDaddy Transfer</h3>
+          <p>Transfer GoDaddy Microsoft 365 services</p>
+          <!-- <span class="meta"><i class="fa-light fa-globe"></i> GoDaddy to Sherweb</span> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TICKETS FORM: Existing multi-purpose form (hidden initially) -->
+  <div id="tickets-form-section" style="display: none;">
+    <!-- Breadcrumb navigation -->
+    <div class="breadcrumb-nav">
+      <button onclick="backToCaseHub()" class="back-button">← Back to all case types</button>
+    </div>
+
+    <!-- Button section -->
+    <div id="buttons-section" class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+      <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+        <div class="col-lg-12 columnBlockLayout mt-5 mb-0 pt-0 pb-0" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;">
+          <div class="row d-flex gap-4 align-items-center flex-wrap">
+            <h1>What do you need help with?</h1>
+            <button id="form1" type="button" data-target="form1" class="form-button btn text-left btn-secondary">Technical support</button>
+            <button id="form2" type="button" data-target="form2" class="form-button btn text-left btn-secondary">Products, licensing, pricing, or transfers</button>
+            <button id="form3" type="button" data-target="form3" class="form-button btn text-left btn-secondary">Invoices or billing</button>
+            <button id="form4" type="button" data-target="form4" class="form-button btn text-left btn-secondary">Something else</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form section - Always visible container -->
+    <div id="form-section" class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+      <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+        <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;">
+          <!-- Placeholder text (shown initially) -->
+          <div id="placeholder-text" style="text-align: center; padding: 60px 20px; color: #666;">
+            <h3>Please make a selection above</h3>
+            <p>Choose the option that best describes your needs to continue.</p>
+          </div>
+
+          <!-- Form wrapper (hidden initially) -->
+          <div id="form-wrapper" style="display: none;" tabindex="-1">{% entityform name: 'Create Case - CS' %}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Ensure main wrapper takes up full height */
+  #main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow-anchor: none;
+  }
+
+  /* Smooth transition for form appearance */
+  #form-wrapper {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  /* Hidden field styling for Power Pages td.clearfix structure */
+  td.clearfix.field-hidden {
+    display: none !important;
+  }
+
+  /* Hidden field styling for escalate form queue field */
+  tr.queue-hidden, td.queue-hidden {
+    display: none !important;
+  }
+
+  /* Pre-hide queue field to prevent flash - will be overridden in debug mode */
+  #revops_queue {
+    opacity: 0;
+  }
+
+  /* Make queue visible when parent container doesn't have field-hidden class */
+  td.clearfix:not(.field-hidden) #revops_queue {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  /* Debug mode styles */
+  .debug-mode td.clearfix.field-hidden {
+    display: table-cell !important;
+    background-color: #fff3cd;
+    border: 2px dashed #ffc107;
+  }
+
+  .debug-mode td.clearfix.field-hidden::before {
+    content: "Hidden Field (Debug Mode)";
+    display: block;
+    color: #856404;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  /* Placeholder text styling */
+  #placeholder-text h3 {
+    color: #333;
+    font-weight: 400;
+  }
+
+  #placeholder-text p {
+    color: #666;
+    font-size: 0.95rem;
+  }
+
+  /* ==================================== */
+  /* CASE HUB STYLES */
+  /* ==================================== */
+
+  .case-hub-section {
+    padding: 60px 20px;
+    background: white;
+    min-height: 80vh;
+    font-family: 'Montserrat', 'Montserrat Fallback', 'Segoe UI', sans-serif;
+  }
+
+  .case-hub-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .case-hub-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    font-family: 'Montserrat', 'Montserrat Fallback', 'Segoe UI', sans-serif;
+  }
+
+  .case-hub-container .subtitle {
+    text-align: center;
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    font-weight: 400;
+  }
+
+  .case-type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+  }
+
+  .case-type-card {
+    background: #dff0ff;
+    border: none;
+    border-radius: 16px;
+    padding: 40px 32px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .case-type-card:hover {
+    background: #b9e1fe;
+  }
+
+  .case-type-card:active {
+    background: #b9e1fe;
+  }
+
+  .case-type-card .icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    color: #ed573c;
+  }
+
+  .case-type-card .icon i {
+    color: #ed573c;
+  }
+
+  .case-type-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #1a1a1a;
+    font-family: 'Montserrat', 'Montserrat Fallback', 'Segoe UI', sans-serif;
+    position: relative;
+    z-index: 1;
+  }
+
+  .case-type-card p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    min-height: 51px;
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .case-type-card .meta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4px;
+    font-size: 14px;
+    color: rgb(219, 66, 39);
+    font-weight: 500;
+    padding: 4px 16px;
+    background: rgb(254, 230, 226);
+    border-radius: 3.35544e+07px;
+    position: relative;
+    z-index: 1;
+    height: 28px;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke;
+    transition-duration: 0.15s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .case-type-card .meta i {
+    font-size: 14px;
+    color: rgb(219, 66, 39);
+  }
+
+  /* Breadcrumb navigation */
+  .breadcrumb-nav {
+    padding: 20px 30px;
+    background: #f8fbff;
+    border-bottom: 2px solid #dff0ff;
+  }
+
+  .back-button {
+    background: white;
+    border: 2px solid #0078d4;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0078d4;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', 'Montserrat Fallback', 'Segoe UI', sans-serif;
+  }
+
+  .back-button:hover {
+    background: #0078d4;
+    color: white;
+    transform: translateX(-4px);
+  }
+
+  /* Submenu breadcrumb */
+  .submenu-breadcrumb {
+    margin-bottom: 30px;
+  }
+
+  .breadcrumb-link {
+    background: transparent;
+    border: none;
+    padding: 8px 0;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0078d4;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', 'Montserrat Fallback', 'Segoe UI', sans-serif;
+  }
+
+  .breadcrumb-link:hover {
+    color: #005a9e;
+    transform: translateX(-4px);
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .case-type-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .case-hub-container h1 {
+      font-size: 2rem;
+    }
+
+    .case-hub-section {
+      padding: 20px 10px;
+    }
+  }
+
+  /* Prevent auto-focus scrolling on page load */
+  html {
+    scroll-behavior: auto;
+  }
+
+  /* Ensure page starts at top */
+  html, body {
+    scroll-padding-top: 0;
+  }
+
+  /* Enable smooth scrolling after page load */
+  html.smooth-scroll {
+    scroll-behavior: smooth;
+  }
+
+  /* Prevent focus outline on initial load */
+  *:focus {
+    outline: none;
+  }
+
+  /* Re-enable focus outline after interaction */
+  body.user-is-tabbing *:focus {
+    outline: 2px solid #0078d4;
+    outline-offset: 2px;
+  }
+</style>
+
+<script>
+  // Check for debug mode from URL parameter
+  function isDebugMode() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('debug') === 'true' || urlParams.get('debug') === '1';
+  }
+
+  // Initialize debug mode
+  const DEBUG_MODE = isDebugMode();
+
+  // Show debug indicator if in debug mode
+  if (DEBUG_MODE) {
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('debug-mode');
+      const debugIndicator = document.getElementById('debug-indicator');
+      if (debugIndicator) {
+        debugIndicator.style.display = 'block';
+      }
+      console.log('🔧 DEBUG MODE ACTIVE - All fields will be visible');
+    });
+  }
+
+  // Prevent initial scroll on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0, 0);
+  });
+
+  // Also handle the case where the script runs after DOM is loaded
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    window.scrollTo(0, 0);
+  }
+
+  // ==================================
+  // CASE HUB NAVIGATION FUNCTIONS (Global scope for onclick handlers)
+  // ==================================
+
+  function navigateToPage(url) {
+    // Smooth transition
+    document.body.style.opacity = '0.8';
+    setTimeout(() => {
+      window.location.href = url;
+    }, 150);
+  }
+
+  function showProductsMenu() {
+    // Hide case hub selector
+    document.getElementById('case-hub-selector').style.display = 'none';
+
+    // Show products submenu
+    document.getElementById('products-submenu').style.display = 'block';
+
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function showTicketsForm(formType) {
+    // Hide all menus
+    document.getElementById('case-hub-selector').style.display = 'none';
+    document.getElementById('products-submenu').style.display = 'none';
+
+    // Show tickets form section
+    document.getElementById('tickets-form-section').style.display = 'block';
+
+    // Auto-click the appropriate button after a brief delay
+    setTimeout(() => {
+      const button = document.getElementById(formType);
+      if (button) {
+        button.click();
+      }
+    }, 100);
+
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function backToCaseHub() {
+    // Hide all sections
+    document.getElementById('tickets-form-section').style.display = 'none';
+    document.getElementById('products-submenu').style.display = 'none';
+
+    // Show case hub selector
+    document.getElementById('case-hub-selector').style.display = 'block';
+
+    // Reset form state
+    const formWrapper = document.getElementById('form-wrapper');
+    const placeholderText = document.getElementById('placeholder-text');
+
+    if (formWrapper) formWrapper.style.display = 'none';
+    if (placeholderText) placeholderText.style.display = 'block';
+
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  $(document).ready(function () {
+    // Scroll to top on page load
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+
+    // Enable smooth scrolling after initial load
+    setTimeout(function() {
+      document.documentElement.classList.add('smooth-scroll');
+    }, 100);
+
+    // Prevent any form fields from auto-focusing on load
+    $('input, select, textarea').blur();
+
+    // ==================================
+    // HANDLE URL PARAMETERS & INITIAL STATE
+    // ==================================
+
+    // Check for URL parameter for backward compatibility
+    const urlParams = new URLSearchParams(window.location.search);
+    const directType = urlParams.get('type');
+
+    if (directType) {
+      // Direct link with ?type= parameter
+      const formMap = {
+        'technical': 'form1',
+        'products': 'form2',
+        'billing': 'form3',
+        'other': 'form4'
+      };
+
+      const formId = formMap[directType];
+      if (formId) {
+        // If products, show submenu; otherwise show form
+        if (directType === 'products') {
+          showProductsMenu();
+        } else {
+          showTicketsForm(formId);
+        }
+      } else {
+        // Invalid type, show case hub
+        document.getElementById('case-hub-selector').style.display = 'block';
+        document.getElementById('tickets-form-section').style.display = 'none';
+        document.getElementById('products-submenu').style.display = 'none';
+      }
+    } else {
+      // No parameter - show case hub selector
+      document.getElementById('case-hub-selector').style.display = 'block';
+      document.getElementById('tickets-form-section').style.display = 'none';
+      document.getElementById('products-submenu').style.display = 'none';
+    }
+
+    // Detect keyboard navigation for accessibility
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Tab') {
+        document.body.classList.add('user-is-tabbing');
+      }
+    });
+
+    document.addEventListener('mousedown', function() {
+      document.body.classList.remove('user-is-tabbing');
+    });
+
+    const buttons = document.querySelectorAll('.form-button');
+    const formSection = document.getElementById('form-section');
+    const formWrapper = document.getElementById('form-wrapper');
+    const placeholderText = document.getElementById('placeholder-text');
+    const formTitle = document.getElementById('form-title');
+
+    // Track current form configuration
+    let currentFormType = null;
+    let pendingQueueUpdate = null;
+
+    // FIELD VISIBILITY CONFIGURATION
+    const fieldConfigurations = {
+      form1: { // Technical Support
+        showFields: [
+          'casetypecode',
+          'revops_service',
+          'primarycontactid',
+          'title',
+          'description',
+          'revops_urgency'
+        ],
+        hideFields: [
+          'revops_queue',
+          'subjectid'
+        ],
+        requiredFields: [
+          'title',
+          'description',
+          'revops_urgency'
+        ]
+      },
+      form2: { // Products/Licensing
+        showFields: [
+          'revops_service',
+          'primarycontactid',
+          'title',
+          'description'
+        ],
+        hideFields: [
+          'revops_queue',
+          'subjectid',
+          'casetypecode',
+          'revops_urgency'
+        ],
+        requiredFields: [
+          'title',
+          'description'
+        ]
+      },
+      form3: { // Billing
+        showFields: [
+          'revops_service',
+          'primarycontactid',
+          'title',
+          'description'
+        ],
+        hideFields: [
+          'revops_queue',
+          'subjectid',
+          'casetypecode',
+          'revops_urgency'
+        ],
+        requiredFields: [
+          'title',
+          'description'
+        ]
+      },
+      form4: { // Other
+        showFields: [
+          'revops_service',
+          'primarycontactid',
+          'title',
+          'description'
+        ],
+        hideFields: [
+          'revops_queue',
+          'subjectid',
+          'casetypecode',
+          'revops_urgency'
+        ],
+        requiredFields: [
+          'title',
+          'description'
+        ]
+      }
+    };
+
+    // Dynamic queue mappings using Liquid variables
+    const queueMappings = {
+      form1: {
+        id: "{{ level2_id | escape }}",
+        name: "Level 2",
+        title: "Technical Support Request"
+      },
+      form2: {
+        id: "{{ cloudsolutions_id | escape }}",
+        name: "Cloud Solutions Team",
+        title: "Product/Licensing Question"
+      },
+      form3: {
+        id: "{{ billing_id | escape }}",
+        name: "Billing",
+        title: "Billing Support"
+      },
+      form4: {
+        id: "{{ level2_id | escape }}",
+        name: "Level 2",
+        title: "Other Request"
+      }
+    };
+
+    // Function to get subject ID from dropdown by text
+    function getSubjectIdByText(subjectText) {
+      const subjectDropdown = $('#subjectid');
+      if (subjectDropdown.length) {
+        const option = subjectDropdown.find('option').filter(function() {
+          return $(this).text().trim() === subjectText;
+        });
+        if (option.length) {
+          return option.val();
+        }
+      }
+      return null;
+    }
+
+    // Subject mappings
+    function getSubjectMappings() {
+      return {
+        form1: {
+          id: getSubjectIdByText('Default Subject') || '',
+          name: 'Default Subject'
+        },
+        form2: {
+          id: getSubjectIdByText('Client OPS') || '',
+          name: 'Client OPS'
+        },
+        form3: {
+          id: getSubjectIdByText('Billing') || '',
+          name: 'Billing'
+        },
+        form4: {
+          id: getSubjectIdByText('Default Subject') || '',
+          name: 'Default Subject'
+        }
+      };
+    }
+
+    // Case type code for "Other"
+    const CASE_TYPE_OTHER = "234570007";
+
+    // Function to set field value with validation
+    function setFieldValue(fieldId, value, fieldName = '') {
+      const field = $(`#${fieldId}`);
+      if (field.length && value) {
+        field.val(value);
+        field.trigger('change');
+        if (DEBUG_MODE) {
+          console.log(`✓ Set ${fieldName || fieldId} to:`, value);
+        }
+        return true;
+      }
+      if (DEBUG_MODE) {
+        console.warn(`✗ Failed to set ${fieldName || fieldId}:`, {
+          fieldExists: field.length > 0,
+          value: value
+        });
+      }
+      return false;
+    }
+
+    // Function to set lookup field value
+    function setLookupField(fieldId, entityName, recordId, recordName) {
+      if (DEBUG_MODE) {
+        console.log(`Setting ${fieldId} lookup:`, {
+          entityName: entityName,
+          recordId: recordId,
+          recordName: recordName
+        });
+      }
+
+      const field = $(`#${fieldId}`);
+
+      if (field.length && recordId) {
+        // Check if it's a SELECT dropdown
+        if (field.prop('tagName') === 'SELECT') {
+          // For dropdown, just set the value
+          field.val(recordId);
+          field.trigger('change');
+        } else {
+          // For other lookup types (entity reference)
+          field.val(recordId);
+          field.attr('value', recordId);
+
+          const entityNameField = $(`#${fieldId}_entityname`);
+          const nameField = $(`#${fieldId}_name`);
+
+          if (entityNameField.length) {
+            entityNameField.val(entityName);
+            entityNameField.attr('value', entityName);
+          }
+
+          if (nameField.length) {
+            nameField.val(recordName);
+            nameField.attr('value', recordName);
+          }
+
+          field.trigger('change');
+        }
+
+        if (DEBUG_MODE) {
+          console.log(`✓ ${fieldId} set successfully`);
+        }
+      }
+    }
+
+    // Function to find field container using td.clearfix structure
+    function findFieldContainer(fieldId) {
+      const field = $(`#${fieldId}`);
+      if (!field.length) return null;
+      return field.closest('td.clearfix');
+    }
+
+    // Function to show/hide fields based on configuration
+    function configureFormFields(formType) {
+      const config = fieldConfigurations[formType];
+      if (!config) {
+        console.log('No field configuration found for:', formType);
+        return;
+      }
+
+      // Store the queue update for this form type
+      const queueLookup = queueMappings[formType];
+      // Set queue update if there's a queue mapping, regardless of visibility
+      if (queueLookup && queueLookup.id) {
+        pendingQueueUpdate = {
+          id: queueLookup.id,
+          name: queueLookup.name
+        };
+      } else {
+        pendingQueueUpdate = null;
+      }
+
+      // In debug mode, show all fields but highlight which would be hidden
+      if (DEBUG_MODE) {
+        console.log('🔧 Debug Mode: Showing all fields for form type:', formType);
+        console.log('Configuration:', config);
+
+        // Remove all field-hidden classes
+        $('td.clearfix.field-hidden').removeClass('field-hidden');
+
+        // Just log what would be hidden
+        config.hideFields.forEach(fieldId => {
+          console.log(`🔧 Would hide field: ${fieldId}`);
+        });
+
+        // Set queue value immediately if we have one pending
+        if (pendingQueueUpdate) {
+          setTimeout(function() {
+            setFieldValue('revops_queue', pendingQueueUpdate.id, pendingQueueUpdate.name);
+          }, 100);
+        }
+
+        return;
+      }
+
+      // Normal mode - show/hide fields as configured
+      // First, show all fields (reset state)
+      $('[class*="field-hidden"]').removeClass('field-hidden');
+
+      // Show specified fields
+      config.showFields.forEach(fieldId => {
+        const container = findFieldContainer(fieldId);
+        if (container) {
+          container.removeClass('field-hidden');
+        }
+      });
+
+      // Hide specified fields
+      config.hideFields.forEach(fieldId => {
+        const container = findFieldContainer(fieldId);
+        if (container) {
+          container.addClass('field-hidden');
+        }
+      });
+
+      // Set required fields as needed
+      config.requiredFields.forEach(fieldId => {
+        const field = $(`#${fieldId}`);
+        if (field.length) {
+          field.prop('required', true);
+          field.attr('aria-required', 'true');
+          const container = findFieldContainer(fieldId);
+          if (container) {
+            const label = container.find('label').first();
+            if (label.length && !label.find('.required').length) {
+              label.append(' <span class="required">*</span>');
+            }
+          }
+        }
+      });
+
+      // Remove required from fields not in the required list
+      const allFieldIds = [...config.showFields, ...config.hideFields];
+      allFieldIds.forEach(fieldId => {
+        if (!config.requiredFields.includes(fieldId)) {
+          const field = $(`#${fieldId}`);
+          if (field.length) {
+            field.prop('required', false);
+            field.attr('aria-required', 'false');
+            const container = findFieldContainer(fieldId);
+            if (container) {
+              const label = container.find('label').first();
+              label.find('.required').remove();
+            }
+          }
+        }
+      });
+
+      // Set queue value after fields are configured (even if hidden)
+      if (pendingQueueUpdate) {
+        setTimeout(function() {
+          setFieldValue('revops_queue', pendingQueueUpdate.id, pendingQueueUpdate.name);
+        }, 50);
+      }
+    }
+
+    // Function to set all form values
+    function setFormValues(formType) {
+      if (DEBUG_MODE) {
+        console.log('🔧 Setting form values for:', formType);
+      }
+
+      // Get mappings
+      const queueLookup = queueMappings[formType];
+      const allSubjectMappings = getSubjectMappings();
+      const subjectLookup = allSubjectMappings[formType];
+
+      // Set queue if applicable (already done in configureFormFields)
+      // This is a backup in case the field wasn't ready yet
+      if (queueLookup && pendingQueueUpdate) {
+        setTimeout(function() {
+          setFieldValue('revops_queue', pendingQueueUpdate.id, pendingQueueUpdate.name);
+        }, 200);
+      }
+
+      // Handle subject field - always set or reset to Default Subject
+      setTimeout(function() {
+        if (subjectLookup && subjectLookup.id) {
+          setLookupField('subjectid', 'subject', subjectLookup.id, subjectLookup.name);
+        } else {
+          // Fallback to "Default Subject" if no mapping found
+          const defaultSubjectId = getSubjectIdByText('Default Subject');
+          if (defaultSubjectId) {
+            setLookupField('subjectid', 'subject', defaultSubjectId, 'Default Subject');
+            if (DEBUG_MODE) {
+              console.log('✓ Set subject to Default Subject for', formType);
+            }
+          } else {
+            // If Default Subject not found, reset to empty
+            const subjectField = $('#subjectid');
+            if (subjectField.length) {
+              subjectField.val('');
+              subjectField.trigger('change');
+              if (DEBUG_MODE) {
+                console.log('✓ Reset subject field for', formType);
+              }
+            }
+          }
+        }
+      }, 200);
+
+      // Handle case type field
+      setTimeout(function() {
+        if (formType === 'form4') {
+          setFieldValue('casetypecode', CASE_TYPE_OTHER, 'Case Type');
+        } else {
+          // Reset case type for other forms (clear the "Other" value)
+          const caseTypeField = $('#casetypecode');
+          if (caseTypeField.length) {
+            caseTypeField.val(''); // Reset to empty/default
+            caseTypeField.trigger('change');
+            if (DEBUG_MODE) {
+              console.log('✓ Reset case type field for', formType);
+            }
+          }
+        }
+      }, 200);
+    }
+
+    // Button click handlers
+    buttons.forEach(button => {
+      button.addEventListener('click', function () {
+        const targetId = this.getAttribute('data-target');
+        const queueLookup = queueMappings[targetId];
+
+        if (DEBUG_MODE) {
+          console.log('🔧 Button clicked:', targetId);
+          console.log('🔧 Queue mapping:', queueLookup);
+        }
+
+        // Update form title
+        if (formTitle && queueLookup) {
+          formTitle.textContent = queueLookup.title;
+        }
+
+        currentFormType = targetId;
+
+        // Hide placeholder
+        if (placeholderText) {
+          placeholderText.style.display = 'none';
+        }
+
+        // If form is hidden, configure it before showing
+        if (formWrapper && formWrapper.style.display === 'none') {
+          // Configure fields (this will also set queue value)
+          configureFormFields(targetId);
+
+          // Show the form after configuration
+          setTimeout(function() {
+            formWrapper.style.display = 'block';
+
+            // Set other form values after form is visible
+            setFormValues(targetId);
+
+            // Smooth scroll to show buttons at top
+            const buttonsSection = document.getElementById('buttons-section');
+            if (buttonsSection) {
+              const yOffset = -40;
+              const y = buttonsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+              window.scrollTo({
+                top: Math.max(0, y),
+                behavior: 'smooth'
+              });
+            }
+          }, 50);
+        } else {
+          // Form is already visible, reconfigure for new selection
+          formWrapper.style.opacity = '0';
+          formWrapper.style.transition = 'opacity 0.2s ease-in-out';
+
+          setTimeout(function() {
+            // Configure fields (this will also set queue value)
+            configureFormFields(targetId);
+
+            // Show form with fade-in effect
+            setTimeout(function() {
+              formWrapper.style.opacity = '1';
+
+              // Set other form values
+              setFormValues(targetId);
+
+              // Smooth scroll
+              const buttonsSection = document.getElementById('buttons-section');
+              if (buttonsSection) {
+                const yOffset = -40;
+                const y = buttonsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({
+                  top: Math.max(0, y),
+                  behavior: 'smooth'
+                });
+              }
+            }, 50);
+          }, 100);
+        }
+      });
+    });
+  });
+</script>
+
+<!-- Additional script to handle any delayed loading issues -->
+<script>
+  window.addEventListener('load', function() {
+    // Final check to ensure we're at top after everything loads
+    setTimeout(function() {
+      if (window.pageYOffset > 100) {
+        window.scrollTo(0, 0);
+      }
+    }, 500);
+  });
+</script>
+
+{% else %}
+<!-- Sign in page styles and content remain unchanged -->
+<style>
+  /* Reset and base styles */
+  html, body {
+      margin: 0;
+      padding: 0;
+      /* width: 100%;
+      height: 100%; */
+      /* background: linear-gradient(135deg, #e0eafc, #cfdef3); */
+      background: white;
+      /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+      box-sizing: border-box;
+      overflow-x: hidden;
+      height: 100%;
+  }
+
+  page-wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+  }
+
+  #content-container {
+      display: flex;
+      /* flex-direction: column; */
+      min-height: 100vh;
+  }
+
+  *, *::before, *::after {
+      box-sizing: inherit;
+  }
+
+  /* Page container */
+  .signinpage {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 4rem 1rem;
+      min-height: calc(100vh - 100px);
+  }
+
+  /* Sign-in box */
+  .signinpage .custom-signin-container {
+      width: 100%;
+      max-width: 400px;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-top: 5vh;
+  }
+
+  /* Title */
+  .signinpage .signin-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+  }
+
+  /* Subtitle */
+  .signinpage .signin-subtitle {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+  }
+
+  /* Input fields */
+  .signinpage .signin-form input {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+  }
+
+  /* Sign-in button */
+  .signinpage .signin-form button {
+      width: 100%;
+      padding: 0.75rem;
+      background: #ed573c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.3s ease;
+  }
+
+  .signinpage .signin-form button:hover {
+      background: #005a9e;
+  }
+
+  /* Forgot password */
+  .signinpage .signin-forgot {
+      margin-top: 1rem;
+  }
+
+  .signinpage .signin-forgot a {
+      color: #0078D4;
+      text-decoration: none;
+      font-weight: 500;
+  }
+
+  .signinpage .signin-forgot a:hover {
+      text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+      .signinpage .custom-signin-container {
+          padding: 1.5rem;
+      }
+  }
+
+  .external-login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #ed573c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block;
+  }
+
+  .external-login-button:hover {
+    background: #005a9e;
+  }
+</style>
+
+<div class="signinpage">
+  <div class="custom-signin-container">
+    <h1 class="b">Please sign in to open a ticket</h1>
+    <div class="signin-form">
+      <!-- External login form -->
+      <a href="/en-US/Account/Login/ExternalLogin?provider=https%3A%2F%2Fcumulus.sherweb.com%2Foidc%2F&returnUrl=%2Fen-US%2Ftickets%2F" class="external-login-button" title="Sign in to your account management portal (Cumulus)"> Sign in </a>
+      <!-- <form action="/en-US/Account/Login/ExternalLogin?ReturnUrl=%2Fen-US%2Ftickets%2F" method="post" style="margin-top: 1rem;">
+        <input name="__RequestVerificationToken" type="hidden" value="2Dtl8rTfR0-Hi8p4l5qCvprH4h6TMj4redJyDj19eE3SKE0I5tM2125PL6SGYvWKE9TDAfF6ay3PpVL3_CKxCK5bgFI3qtXMvAAluBjOyx01"> 
+        <button name="provider" type="submit" class="external-login-button" id="https://cumulus.sherweb.com/oidc/" title="Sign in to your account management portal (Cumulus)." value="https://cumulus.sherweb.com/oidc/">
+          Sign in
+        </button>
+      </form> -->
+    </div>
+  </div>
+</div>
+
+{%endif%}

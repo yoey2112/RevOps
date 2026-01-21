@@ -1,0 +1,1142 @@
+<!-- Last deployed: 2025-11-25 -->
+<style>
+  /* Hidden field styling for Power Pages td.clearfix structure */
+  td.clearfix.field-hidden {
+    display: none !important;
+  }
+  
+  /* Hidden submit button - hide button, container, and any labels */
+  .submit-btn-hidden {
+    display: none !important;
+  }
+  
+  /* Hide submit button's parent container */
+  td.submit-btn-hidden,
+  div.submit-btn-hidden,
+  .form-group.submit-btn-hidden,
+  .form-actions.submit-btn-hidden {
+    display: none !important;
+  }
+  
+  /* Hide submit labels */
+  label.submit-btn-hidden,
+  span.submit-btn-hidden {
+    display: none !important;
+  }
+  
+  /* Force helper text to appear at the top of field containers */
+  /* This handles cases where JavaScript can't insert in the perfect position */
+  td.clearfix {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  /* Move helper text to appear right after the label (order: 1) */
+  td.clearfix .field-helper-text {
+    order: 1 !important;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* Label should be first (order: 0) */
+  td.clearfix > label {
+    order: 0 !important;
+  }
+  
+  /* Field controls should be last (order: 2) */
+  td.clearfix > input,
+  td.clearfix > select,
+  td.clearfix > textarea,
+  td.clearfix > div:not(.field-helper-text) {
+    order: 2 !important;
+  }
+  
+  /* Multi-step wizard styling */
+  .wizard-step {
+    display: none;
+  }
+  
+  .wizard-step.active {
+    display: block;
+  }
+  
+  .wizard-navigation {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  
+  .wizard-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Previous button - white with orange border (Sherweb brand) */
+  .wizard-btn-previous {
+    background-color: transparent;
+    color: rgb(237, 87, 60);
+    border: 1px solid rgb(237, 87, 60);
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px 20px;
+    border-radius: 2px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .wizard-btn-previous:hover:not(:disabled) {
+    background-color: rgb(237, 87, 60);
+    color: white;
+  }
+  
+  /* Next button - orange with white text (Sherweb brand) */
+  .wizard-btn-next {
+    background-color: rgb(237, 87, 60);
+    color: white;
+    border: 1px solid rgb(237, 87, 60);
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px 20px;
+    border-radius: 2px;
+    height: 35px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .wizard-btn-next:hover:not(:disabled) {
+    background-color: rgb(220, 70, 45);
+    border-color: rgb(220, 70, 45);
+  }
+  
+  .wizard-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .wizard-btn-hidden {
+    display: none !important;
+  }
+  
+  /* Never hide submit buttons inside modals - these are for lookup selections */
+  .modal .submit-btn-hidden,
+  .ui-dialog .submit-btn-hidden,
+  [role="dialog"] .submit-btn-hidden,
+  .ms-Overlay .submit-btn-hidden,
+  .lookup-modal .submit-btn-hidden,
+  [data-role="dialog"] .submit-btn-hidden {
+    display: block !important;
+  }
+</style>
+
+<div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+  <div class="container" style="display: flex; flex-wrap: wrap;">
+    <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; padding: 16px; margin: 60px 0px;">
+      {% entityform name: 'Migration Details' %}
+      
+      <!-- Navigation buttons will be inserted here by JavaScript -->
+      <div id="wizard-navigation-container"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+    'use strict';
+    
+    // First, wait for jQuery to be available
+    function waitForJQuery(callback) {
+        if (typeof jQuery !== 'undefined') {
+            callback();
+        } else {
+            setTimeout(function() { waitForJQuery(callback); }, 100);
+        }
+    }
+    
+    // Wait for entity form container to exist
+    function waitForEntityForm(callback, maxAttempts = 100) {
+        let attempts = 0;
+        const interval = setInterval(function() {
+            attempts++;
+            
+            // Check if the entity form container exists
+            const $entityForm = $('.entity-form, form[data-entity-form], form.crmEntityFormView, #EntityFormControl');
+            
+            if ($entityForm.length > 0) {
+                clearInterval(interval);
+                callback();
+            } else if (attempts >= maxAttempts) {
+                clearInterval(interval);
+                callback(); // Proceed even if not found
+            }
+        }, 100);
+    }
+    
+    // Wait for form fields to be fully loaded
+    function waitForFormFields(callback, maxAttempts = 150) {
+        let attempts = 0;
+        const interval = setInterval(function() {
+            attempts++;
+            
+            // Check if destination field exists (key indicator that form is loaded)
+            const $destField = $('input[name*="revops_migrationreqdestinationenvlinkedtoorg"], input[id*="revops_migrationreqdestinationenvlinkedtoorg"]');
+            
+            // Also check if at least 5 form fields are present (indicates form is rendering)
+            const $formFields = $('input[id^="revops_"], select[id^="revops_"], textarea[id^="revops_"]');
+            
+            if ($destField.length > 0 && $formFields.length >= 5) {
+                clearInterval(interval);
+                callback();
+            } else if (attempts >= maxAttempts) {
+                clearInterval(interval);
+                // Don't call callback - exit gracefully without running validation
+                return;
+            }
+        }, 200);
+    }
+    
+    waitForJQuery(function() {
+        waitForEntityForm(function() {
+            waitForFormFields(function() {
+        
+        // ============================================
+        // MULTI-STEP WIZARD SETUP
+        // ============================================
+        
+        let currentStep = 1;
+        const stepHistory = []; // Track navigation history for Previous button
+        
+        // Step configuration: maps step number to field names
+        // Grouped logically to reduce number of Next button clicks
+        const stepConfig = {
+            // Step 1: Gate question
+            1: ['revops_migrationreqdestinationenvlinkedtoorg'],
+            
+            // Step 2: Client Information - grouped together
+            2: [
+                'revops_migrationprimarydomain',
+                'revops_migrationotherdomains',
+                'revops_cumulusorganization'
+            ],
+            
+            // Step 3: Migration Type & Source - grouped together
+            3: [
+                'revops_generalmigrationtype',
+                'revops_sourceprovider',
+                'revops_sourceproviderother',
+                'revops_sourceprotocol',
+                'revops_sourceprotocolother'
+            ],
+            
+            // Step 4a: Google-specific questions
+            4: [
+                'revops_googledrivedocumentmigration'
+            ],
+            
+            // Step 4b: IMAP-specific questions
+            5: [
+                'revops_imapmigrationlimitation'
+            ],
+            
+            // Step 4c: POP-specific questions
+            6: [
+                'revops_popmigrationlimitation'
+            ],
+            
+            // Step 4d: Hosted Exchange - Additional active services
+            7: [
+                'revops_migrationadditionalactiveservices',
+                'revops_additionalactiveservicesother'
+            ],
+            
+            // Step 4e: Office 365 - Additional O365 services
+            8: [
+                'revops_additionalo365servicestomigrate'
+            ],
+            
+            // Step 5: Destination & Licensing - grouped together
+            9: [
+                'revops_migrationdestinationenvironment',
+                'revops_migrationoffice365initialdomainprefix',
+                'revops_migrationnumberofmailboxes',
+                'revops_migrationlicensing'
+            ]
+        };
+        
+        // Function to wrap fields into step containers
+        function createStepContainers() {
+            // Find all field containers
+            const $form = $('.entity-form, form[data-entity-form], form.crmEntityFormView, #EntityFormControl').first();
+            
+            if ($form.length === 0) {
+                console.error('Form not found for step wrapping');
+                return;
+            }
+            
+            // Create step containers for each step
+            Object.keys(stepConfig).forEach(function(stepNum) {
+                const fields = stepConfig[stepNum];
+                const $stepDiv = $('<div class="wizard-step" data-step="' + stepNum + '"></div>');
+                
+                // Find and move each field's container into this step
+                fields.forEach(function(fieldName) {
+                    const $fieldContainer = findFieldContainer(fieldName);
+                    if ($fieldContainer && $fieldContainer.length > 0) {
+                        $stepDiv.append($fieldContainer);
+                    }
+                });
+                
+                // Insert step container into form (before the submit button's container)
+                const $submitContainer = $form.find('button[type="submit"], input[type="submit"]').closest('tr, .form-actions, div.control');
+                if ($submitContainer.length > 0) {
+                    $submitContainer.before($stepDiv);
+                } else {
+                    $form.append($stepDiv);
+                }
+            });
+        }
+        
+        // Function to create navigation buttons
+        function createNavigationButtons() {
+            const $navContainer = $('#wizard-navigation-container');
+            
+            if ($navContainer.length === 0) {
+                console.error('Navigation container not found');
+                return;
+            }
+            
+            const navHTML = 
+                '<div class="wizard-navigation">' +
+                '  <button type="button" id="wizard-btn-previous" class="wizard-btn wizard-btn-previous wizard-btn-hidden">Previous</button>' +
+                '  <button type="button" id="wizard-btn-next" class="wizard-btn wizard-btn-next">Next</button>' +
+                '</div>';
+            
+            $navContainer.html(navHTML);
+        }
+        
+        // ============================================
+        // HELPER FUNCTIONS
+        // ============================================
+        
+        // Function to find field container using td.clearfix structure (same as Tickets form)
+        function findFieldContainer(fieldId) {
+            const field = $(`#${fieldId}`);
+            if (!field.length) return null;
+            return field.closest('td.clearfix');
+        }
+        
+        // Show/Hide a field (including its label) using CSS class method
+        function toggleField(fieldName, show) {
+            // Try to find field by ID first (most reliable for Power Pages)
+            let $field = $(`#${fieldName}`);
+            
+            // If not found by ID, try data-attribute
+            if ($field.length === 0) {
+                $field = $(`[data-attribute="${fieldName}"]`);
+            }
+            
+            // If still not found, try name attribute
+            if ($field.length === 0) {
+                $field = $(`[name*="${fieldName}"]`);
+            }
+            
+            if ($field.length > 0) {
+                const $container = $field.closest('td.clearfix');
+                
+                if ($container && $container.length > 0) {
+                    if (show) {
+                        $container.removeClass('field-hidden');
+                    } else {
+                        $container.addClass('field-hidden');
+                    }
+                    // Removed verbose logging - only log errors
+                    return true;
+                } else {
+                    // Field found but no td.clearfix container - log for debugging
+                    console.warn(`⚠ Field found but no td.clearfix container for: ${fieldName}`);
+                    console.log('  Field element:', $field[0]);
+                    console.log('  Parents:', $field.parents().map(function() { return this.tagName + '.' + (this.className || 'no-class'); }).get().join(' > '));
+                    return false;
+                }
+            } else {
+                console.warn(`Field not found: ${fieldName}`);
+                return false;
+            }
+        }
+        
+        // Set field as required or optional
+        function setFieldRequired(fieldName, required) {
+            const selectors = [
+                `#${fieldName}`,
+                `[data-attribute="${fieldName}"]`,
+                `[name*="${fieldName}"]`
+            ];
+            
+            let $field = null;
+            
+            // Find the field using multiple selectors
+            for (let selector of selectors) {
+                $field = $(selector);
+                if ($field.length > 0) {
+                    break;
+                }
+            }
+            
+            if ($field && $field.length > 0) {
+                // Set/remove required attribute on the field itself
+                if (required) {
+                    $field.attr('required', 'required');
+                    $field.attr('aria-required', 'true');
+                } else {
+                    $field.removeAttr('required');
+                    $field.removeAttr('aria-required');
+                }
+                
+                // Now handle the visual asterisk on the label
+                const $container = $field.closest('td.clearfix');
+                let $label = $container.find('label').first();
+                
+                // If label not found in container, try finding by for attribute
+                if ($label.length === 0) {
+                    const fieldId = $field.attr('id');
+                    if (fieldId) {
+                        $label = $(`label[for="${fieldId}"]`);
+                    }
+                }
+                
+                // If still not found, try by fieldName
+                if ($label.length === 0) {
+                    $label = $(`label[for="${fieldName}"]`);
+                }
+                
+                // If still not found, try previous sibling
+                if ($label.length === 0) {
+                    $label = $field.prev('label');
+                }
+                
+                if ($label.length > 0) {
+                    if (required) {
+                        // Add red asterisk if not already present
+                        if ($label.find('.required').length === 0) {
+                            $label.append(' <span class="required" style="color: red; font-weight: bold;" aria-required="true">*</span>');
+                        }
+                    } else {
+                        $label.find('.required').remove();
+                    }
+                }
+                
+                return true;
+            } else {
+                console.error(`✗ Field NOT FOUND: ${fieldName}`);
+                return false;
+            }
+        }
+        
+        // Add helper text between label and field
+        function addHelperText(fieldName, helperText) {
+            const selectors = [
+                `[data-attribute="${fieldName}"]`,
+                `#${fieldName}`,
+                `[name*="${fieldName}"]`
+            ];
+            
+            for (let selector of selectors) {
+                const $field = $(selector);
+                if ($field.length > 0) {
+                    // Remove existing helper text if any
+                    $field.closest('td.clearfix').find('.field-helper-text').remove();
+                    
+                    // Add new helper text with unique ID for aria-describedby
+                    const helperId = `${fieldName}-helper`;
+                    const $helperDiv = $('<div class="field-helper-text" style="font-size: 0.875rem; color: #6c757d; margin-top: 0.25rem; margin-bottom: 0.5rem;"></div>');
+                    $helperDiv.attr('id', helperId);
+                    $helperDiv.html(helperText);
+                    
+                    // Insert BEFORE the field (after the label)
+                    $field.before($helperDiv);
+                    
+                    // Associate helper text with field for screen readers
+                    $field.attr('aria-describedby', helperId);
+                    
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+        // ============================================
+        // FIELD REFERENCES
+        // ============================================
+        
+        const $destLinkedToOrg = $('input[name*="revops_migrationreqdestinationenvlinkedtoorg"]');
+        
+        // Use ID selectors since data-attribute doesn't work for these fields
+        const $sourceProtocol = $('#revops_sourceprotocol');
+        const $sourceProtocolOther = $('#revops_sourceprotocolother');
+        const $sourceProvider = $('#revops_sourceprovider');
+        const $sourceProviderOther = $('#revops_sourceproviderother');
+        
+        // Multi-select picklist may have a different structure - try multiple selectors
+        let $additionalServices = $('#revops_migrationadditionalactiveservices');
+        if ($additionalServices.length === 0 || $additionalServices.find('option').length === 0) {
+            // Try name selector for multi-select
+            $additionalServices = $('[name*="revops_migrationadditionalactiveservices"]');
+        }
+        const $additionalServicesOther = $('#revops_additionalactiveservicesother');
+        
+        // List of all fields to hide when "Destination linked to Org" = No
+        // NOTE: The "Other" fields (revops_sourceprotocolother, revops_sourceproviderother, 
+        // revops_additionalactiveservicesother) are NOT included here because they have 
+        // their own conditional logic based on parent field selections
+        const fieldsToHideWhenNo = [
+            'revops_migrationprimarydomain',
+            'revops_migrationotherdomains',
+            'revops_generalmigrationtype',
+            'revops_sourceprovider',
+            'revops_sourceprotocol',
+            'revops_additionalo365servicestomigrate',
+            'revops_googledrivedocumentmigration',
+            'revops_imapmigrationlimitation',
+            'revops_popmigrationlimitation',
+            'revops_migrationadditionalactiveservices',
+            'revops_migrationdestinationenvironment',
+            'revops_migrationoffice365initialdomainprefix',
+            'revops_migrationnumberofmailboxes',
+            'revops_migrationlicensing',
+            'revops_cumulusaccount',
+            'revops_cumulusorganization'
+        ];
+        
+        // List of fields that should be mandatory when visible (all main fields)
+        const mandatoryFields = [
+            'revops_cumulusorganization',
+            'revops_migrationprimarydomain',
+            'revops_generalmigrationtype',
+            'revops_sourceprovider',
+            'revops_sourceprotocol',
+            'revops_additionalo365servicestomigrate',
+            'revops_googledrivedocumentmigration',
+            'revops_imapmigrationlimitation',
+            'revops_popmigrationlimitation',
+            'revops_migrationadditionalactiveservices',
+            'revops_migrationdestinationenvironment',
+            'revops_migrationoffice365initialdomainprefix',
+            'revops_migrationnumberofmailboxes',
+            'revops_migrationlicensing'
+        ];
+        
+        // ============================================
+        // CONDITION 2: Source Protocol - Other
+        // ============================================
+        // NOTE: These functions must be defined BEFORE handleDestinationLinked()
+        // because handleDestinationLinked() calls them
+        
+        function handleSourceProtocol() {
+            // Get the selected option's text (not the value, since option set values can differ across environments)
+            const $selectedOption = $sourceProtocol.find('option:selected');
+            const selectedText = $selectedOption.text();
+            const isOther = selectedText && selectedText.toLowerCase().includes('other');
+            
+            if (isOther) {
+                // Show and make required
+                toggleField('revops_sourceprotocolother', true);
+                setFieldRequired('revops_sourceprotocolother', true);
+            } else {
+                // Hide and make optional
+                toggleField('revops_sourceprotocolother', false);
+                setFieldRequired('revops_sourceprotocolother', false);
+                // Clear the value when hiding
+                $sourceProtocolOther.val('');
+            }
+        }
+        
+        if ($sourceProtocol.length > 0) {
+            handleSourceProtocol();
+            $sourceProtocol.on('change', handleSourceProtocol);
+        }
+        
+        // ============================================
+        // CONDITION 3: Source Provider - Other
+        // ============================================
+        
+        function handleSourceProvider() {
+            // Get the selected option's text (not the value, since option set values can differ across environments)
+            const $selectedOption = $sourceProvider.find('option:selected');
+            const selectedText = $selectedOption.text();
+            const isOther = selectedText && selectedText.toLowerCase().includes('other');
+            
+            if (isOther) {
+                // Show and make required
+                toggleField('revops_sourceproviderother', true);
+                setFieldRequired('revops_sourceproviderother', true);
+            } else {
+                // Hide and make optional
+                toggleField('revops_sourceproviderother', false);
+                setFieldRequired('revops_sourceproviderother', false);
+                // Clear the value when hiding
+                $sourceProviderOther.val('');
+            }
+        }
+        
+        if ($sourceProvider.length > 0) {
+            handleSourceProvider();
+            $sourceProvider.on('change', handleSourceProvider);
+        }
+        
+        // ============================================
+        // CONDITION 4: Additional Active Services - Other
+        // ============================================
+        // NOTE: The revops_additionalactiveservicesother field is always visible when
+        // Destination = Yes, and remains optional. Users fill it in when they select
+        // "Other" in the Additional Active Services multi-select field.
+        // This approach was chosen because Power Pages' custom multi-select picker
+        // control does not expose selected values in a way that can be reliably
+        // detected with standard DOM queries.
+        
+        // ============================================
+        // CONDITION 5: Destination Environment - O365 Domain Prefix
+        // ============================================
+        // Show/hide the O365 domain prefix field based on Destination Environment selection
+        
+        function handleDestinationEnvironment() {
+            const $destEnv = $('#revops_migrationdestinationenvironment');
+            const $selectedOption = $destEnv.find('option:selected');
+            const selectedText = $selectedOption.text().toLowerCase();
+            
+            // Only show O365 domain prefix if Office 365 is selected
+            if (selectedText.includes('office 365')) {
+                toggleField('revops_migrationoffice365initialdomainprefix', true);
+                setFieldRequired('revops_migrationoffice365initialdomainprefix', true);
+            } else {
+                toggleField('revops_migrationoffice365initialdomainprefix', false);
+                setFieldRequired('revops_migrationoffice365initialdomainprefix', false);
+                // Clear the value when hiding
+                $('#revops_migrationoffice365initialdomainprefix').val('');
+            }
+        }
+        
+        // Attach handler only if we're on step 9 (final step with destination environment)
+        $(document).ready(function() {
+            const $destEnv = $('#revops_migrationdestinationenvironment');
+            if ($destEnv.length > 0) {
+                handleDestinationEnvironment(); // Run on load
+                $destEnv.on('change', handleDestinationEnvironment); // Run on change
+            }
+        });
+        
+        // ============================================
+        // CONDITION 1: Destination Linked to Org
+        // ============================================
+        // NOTE: This function must be defined AFTER the above two functions
+        // because it calls handleSourceProtocol() and handleSourceProvider()
+        // NOTE: In multi-step wizard mode, we don't hide fields based on this anymore
+        // The wizard handles visibility. This function now only sets required status.
+        
+        function handleDestinationLinked() {
+            // Get the selected value (Yes = 1, No = 0 typically)
+            const selectedValue = $destLinkedToOrg.filter(':checked').val();
+            const isYes = selectedValue === '1' || selectedValue === 'true' || selectedValue === '100000000';
+            
+            // Set all main fields as mandatory when form is active
+            if (isYes) {
+                // Make all main fields mandatory
+                mandatoryFields.forEach(function(fieldName) {
+                    setFieldRequired(fieldName, true);
+                });
+                
+                // Handle conditional "Other" fields
+                handleSourceProtocol(); // Will make revops_sourceprotocolother mandatory if "Other" selected
+                handleSourceProvider(); // Will make revops_sourceproviderother mandatory if "Other" selected
+                
+                // NOTE: revops_additionalactiveservicesother is always visible when Destination = Yes
+                // It remains optional (no conditional required logic)
+                setFieldRequired('revops_additionalactiveservicesother', false); // Keep it optional
+            } else {
+                // If "No", make all fields optional
+                mandatoryFields.forEach(function(fieldName) {
+                    setFieldRequired(fieldName, false);
+                });
+                
+                setFieldRequired('revops_sourceprotocolother', false);
+                setFieldRequired('revops_sourceproviderother', false);
+                setFieldRequired('revops_additionalactiveservicesother', false);
+            }
+            
+            // Update navigation buttons to show/hide Next button on step 1
+            if (currentStep === 1) {
+                updateNavigationButtons();
+            }
+        }
+        
+        if ($destLinkedToOrg.length > 0) {
+            handleDestinationLinked(); // Run on load
+            $destLinkedToOrg.on('change', handleDestinationLinked); // Run on change
+        }
+        
+        // ============================================
+        // CUSTOM FORM VALIDATION
+        // ============================================
+        // Power Pages may strip the 'required' attribute from fields, so we need
+        // to validate manually on form submit
+        // NOTE: In multi-step wizard mode, most validation happens during step navigation
+        // This function validates the final step before actual form submission
+        
+        function validateForm(e) {
+            // Only validate the final step (step 9 - Destination & Licensing)
+            if (currentStep !== 9) {
+                return true; // Not on final step, allow form processing
+            }
+            
+            return validateCurrentStep();
+        }
+        
+        // Attach validation to form submit event using multiple methods for better compatibility
+        const $forms = $('form');
+        
+        $forms.each(function(index) {
+            const form = this;
+            
+            // Method 1: jQuery event handler
+            $(form).on('submit', function(e) {
+                return validateForm(e);
+            });
+            
+            // Method 2: Native addEventListener with capture phase (runs before other handlers)
+            form.addEventListener('submit', function(e) {
+                return validateForm(e);
+            }, true);
+            
+            // Method 3: Native addEventListener without capture (runs with normal handlers)
+            form.addEventListener('submit', function(e) {
+                return validateForm(e);
+            }, false);
+        });
+        
+        // ============================================
+        // INTERCEPT SUBMIT BUTTON CLICKS
+        // ============================================
+        // Power Pages may submit the form via button click handlers instead of 
+        // triggering the form submit event. We need to intercept button clicks.
+        
+        const $submitButtons = $('button[type="submit"], input[type="submit"], .submit-button, button.button-primary, .button-primary, #InsertButton, #UpdateButton, button.btn-primary');
+        
+        $submitButtons.each(function(index) {
+            const button = this;
+            
+            // Intercept button clicks with capture phase (runs BEFORE Power Pages handlers)
+            button.addEventListener('click', function(e) {
+                // Check if this button is inside a modal/dialog
+                const $button = $(button);
+                const isInModal = $button.closest('.modal, .ui-dialog, [role="dialog"], .ms-Overlay').length > 0;
+                
+                if (isInModal) {
+                    return; // Let modal submit proceed normally
+                }
+                
+                // Run validation only for main form submit button
+                const isValid = validateForm(e);
+                
+                if (!isValid) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    return false;
+                }
+            }, true);
+        });
+        
+        // ============================================
+        // HIDE/SHOW SUBMIT BUTTON
+        // ============================================
+        
+        function toggleSubmitButton(show) {
+            // Try multiple selectors for submit button
+            const $submitButton = $('button[type="submit"], input[type="submit"], .submit-button, button.button-primary, .button-primary, #InsertButton, #UpdateButton, button.btn-primary');
+            
+            if ($submitButton.length > 0) {
+                $submitButton.each(function() {
+                    const $btn = $(this);
+                    
+                    // IMPORTANT: Never hide submit buttons inside modals/dialogs
+                    // These are for lookup selections and other modal interactions
+                    const isInModal = $btn.closest('.modal, .ui-dialog, [role="dialog"], .ms-Overlay, .lookup-modal, [data-role="dialog"]').length > 0;
+                    if (isInModal) {
+                        return; // Skip this button - don't hide modal submit buttons
+                    }
+                    
+                    // Hide/show the button itself (use submit-btn-hidden, not field-hidden)
+                    if (show) {
+                        $btn.removeClass('submit-btn-hidden');
+                    } else {
+                        $btn.addClass('submit-btn-hidden');
+                    }
+                    
+                    // Find and hide/show ALL parent containers up the tree
+                    const $parentTd = $btn.closest('td');
+                    const $parentDiv = $btn.closest('div');
+                    const $parentFormGroup = $btn.closest('.form-group, .form-actions');
+                    
+                    // Hide all parent containers, but NOT ones with field-hidden class
+                    // (to avoid interfering with field visibility)
+                    [$parentTd, $parentDiv, $parentFormGroup].forEach(function($parent) {
+                        if ($parent.length > 0 && !$parent.hasClass('field-hidden')) {
+                            if (show) {
+                                $parent.removeClass('submit-btn-hidden');
+                            } else {
+                                $parent.addClass('submit-btn-hidden');
+                            }
+                        }
+                    });
+                    
+                    // Find and hide any sibling labels or text elements
+                    $btn.siblings('label, span').each(function() {
+                        const $sibling = $(this);
+                        if (show) {
+                            $sibling.removeClass('submit-btn-hidden');
+                        } else {
+                            $sibling.addClass('submit-btn-hidden');
+                        }
+                    });
+                    
+                    // Also check for labels/text in the parent container
+                    if ($parentTd.length > 0) {
+                        $parentTd.children('label, span').each(function() {
+                            const $label = $(this);
+                            if (show) {
+                                $label.removeClass('submit-btn-hidden');
+                            } else {
+                                $label.addClass('submit-btn-hidden');
+                            }
+                        });
+                    }
+                });
+            }
+        }
+        
+        // ============================================
+        // STEP NAVIGATION FUNCTIONS
+        // ============================================
+        
+        // Function to show a specific step
+        function showStep(stepNum) {
+            // Hide all steps
+            $('.wizard-step').removeClass('active');
+            
+            // Show the requested step
+            $(`.wizard-step[data-step="${stepNum}"]`).addClass('active');
+            
+            // Update current step
+            currentStep = stepNum;
+            
+            // Update button visibility
+            updateNavigationButtons();
+            
+            // Scroll to top of form
+            $('.entity-form, form[data-entity-form]').first()[0]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        // Function to update navigation button visibility
+        function updateNavigationButtons() {
+            const $prevBtn = $('#wizard-btn-previous');
+            const $nextBtn = $('#wizard-btn-next');
+            
+            // Previous button: hide on step 1, show on all other steps
+            if (currentStep === 1) {
+                $prevBtn.addClass('wizard-btn-hidden');
+            } else {
+                $prevBtn.removeClass('wizard-btn-hidden');
+            }
+            
+            // Next button: hide on step 9 (final step - Destination & Licensing), show on all other steps
+            if (currentStep === 9) {
+                $nextBtn.addClass('wizard-btn-hidden');
+                // Show submit button on final step
+                toggleSubmitButton(true);
+            } else {
+                $nextBtn.removeClass('wizard-btn-hidden');
+                // Hide submit button on non-final steps
+                toggleSubmitButton(false);
+            }
+            
+            // Special case for step 1: hide Next button if "Destination linked to org" is "No"
+            if (currentStep === 1) {
+                const selectedValue = $destLinkedToOrg.filter(':checked').val();
+                const isYes = selectedValue === '1' || selectedValue === 'true' || selectedValue === '100000000';
+                if (!isYes) {
+                    $nextBtn.addClass('wizard-btn-hidden');
+                }
+            }
+        }
+        
+        // Function to handle Next button click
+        function nextStep() {
+            // Validate current step before moving forward
+            if (!validateCurrentStep()) {
+                return false;
+            }
+            
+            // Add current step to history
+            stepHistory.push(currentStep);
+            
+            // Determine next step based on branching logic
+            let nextStepNum;
+            
+            if (currentStep === 1) {
+                // Step 1: Gate question - go to Step 2 (Client Information)
+                const selectedValue = $destLinkedToOrg.filter(':checked').val();
+                const isYes = selectedValue === '1' || selectedValue === 'true' || selectedValue === '100000000';
+                if (!isYes) {
+                    alert('Please select "Yes" to proceed with the migration request.');
+                    return false;
+                }
+                nextStepNum = 2;
+            } else if (currentStep === 2) {
+                // Step 2: Client Information - go to Step 3 (Migration Type & Source)
+                nextStepNum = 3;
+            } else if (currentStep === 3) {
+                // Step 3: Migration Type & Source - branch based on Source Protocol (Q15)
+                nextStepNum = getNextStepAfterSourceProtocol();
+            } else if (currentStep === 4 || currentStep === 5 || currentStep === 6 || currentStep === 7 || currentStep === 8) {
+                // Step 4-8: Protocol-specific questions - all go to Step 9 (Destination & Licensing)
+                nextStepNum = 9;
+            } else {
+                // Default: go to next sequential step
+                nextStepNum = currentStep + 1;
+            }
+            
+            showStep(nextStepNum);
+            return true;
+        }
+        
+        // Function to handle Previous button click
+        function previousStep() {
+            // Go back to previous step from history
+            if (stepHistory.length > 0) {
+                const prevStepNum = stepHistory.pop();
+                showStep(prevStepNum);
+            }
+        }
+        
+        // Function to get next step after Step 3 (Source Protocol branching)
+        function getNextStepAfterSourceProtocol() {
+            const $selectedOption = $sourceProtocol.find('option:selected');
+            const selectedText = $selectedOption.text().toLowerCase();
+            
+            if (selectedText.includes('google apps') || selectedText.includes('gmail') || selectedText.includes('google workspace')) {
+                return 4; // Step 4: Google Drive migration question
+            } else if (selectedText.includes('imap') || selectedText.includes('lotus notes') || selectedText.includes('zimbra')) {
+                return 5; // Step 5: IMAP limitation question
+            } else if (selectedText.includes('pop')) {
+                return 6; // Step 6: POP limitation question
+            } else if (selectedText.includes('hosted exchange')) {
+                return 7; // Step 7: Additional active services (Hosted Exchange)
+            } else if (selectedText.includes('office 365') || selectedText.includes('exchange online')) {
+                return 8; // Step 8: Additional O365 services
+            } else if (selectedText.includes('on-premises') || selectedText.includes('on premises')) {
+                return 9; // Step 9: Skip to Destination & Licensing (no additional questions)
+            } else {
+                // "Other" or anything else
+                return 9; // Step 9: Skip to Destination & Licensing
+            }
+        }
+        
+        // Function to validate current step
+        function validateCurrentStep() {
+            const fields = stepConfig[currentStep];
+            if (!fields) return true;
+            
+            let hasErrors = false;
+            const errors = [];
+            
+            fields.forEach(function(fieldName) {
+                const $field = $(`#${fieldName}`);
+                if ($field.length === 0) return;
+                
+                // Only validate visible fields
+                const $container = $field.closest('td.clearfix');
+                if ($container.hasClass('field-hidden')) return;
+                
+                // Check if field is required
+                const isRequired = $field.attr('required') === 'required' || $field.attr('aria-required') === 'true';
+                if (!isRequired) return;
+                
+                // Check if field has value
+                const value = $field.val();
+                const isEmpty = !value || value === '' || value === null || (Array.isArray(value) && value.length === 0);
+                
+                if (isEmpty) {
+                    hasErrors = true;
+                    const $label = $container.find('label').first();
+                    const labelText = $label.length > 0 ? $label.text().replace('*', '').trim() : fieldName;
+                    errors.push(labelText);
+                    
+                    // Add error styling
+                    $field.css('border', '2px solid red');
+                    $field.attr('aria-invalid', 'true');
+                } else {
+                    // Remove error styling
+                    $field.css('border', '');
+                    $field.removeAttr('aria-invalid');
+                }
+            });
+            
+            if (hasErrors) {
+                const errorMessage = `Please fill in the following required fields:\n\n${errors.join('\n')}`;
+                alert(errorMessage);
+                
+                // Focus first error field
+                const $firstErrorField = $('.wizard-step.active').find('input[style*="border: 2px solid red"], select[style*="border: 2px solid red"], textarea[style*="border: 2px solid red"]').first();
+                if ($firstErrorField.length > 0) {
+                    $firstErrorField.focus();
+                }
+                
+                return false;
+            }
+            
+            return true;
+        }
+        
+        // ============================================
+        // ADD CUSTOM HELPER TEXT
+        // ============================================
+        
+        // Add custom helper text for fields as needed
+        // Use addHelperText('fieldSchemaName', 'Your helper text here');
+        
+        addHelperText('revops_migrationreqdestinationenvlinkedtoorg',
+            'To complete this request, the destination environment must already be active and linked to the desired Cumulus organization. Please reach out to your account manager or team before submitting this request if you need assistance with this step.<br /><br />' +
+            'The destination environment represents the service where you want to migrate the end client mailboxes. You can create or link an environment by adding a single license and completing the platform settings steps as required. If the tenant already exists elsewhere, please contact your account manager or team to transfer or link this tenant to your Sherweb account. Please use only monthly commitment-term licenses to initiate the tenant linking/creation to ensure the license can be changed if required.'
+        );
+
+        addHelperText(
+            'revops_migrationprimarydomain',
+            'Client primary domain name (for this project), e.g., sherweb.com'
+        );
+
+        addHelperText(
+            'revops_migrationotherdomains',
+            '(If applicable)<br />' +
+            'Separate domains using a comma or a semicolon.'
+        );
+
+        addHelperText(
+            'revops_generalmigrationtype',
+            'Select the option that best represents your migration scenario. This will help us determine where to send your request. If you are uncertain or can\'t find your situation in this list, please reach out to your account manager or team.'
+        );
+
+        addHelperText(
+            'revops_sourceprovider',
+            'These are additional details we will be sending over to our migration team. If your provider is not a part of this list, please enter a custom value.'
+        );
+
+        // NOTE: Helper text for multi-select dropdown (revops_additionalo365servicestomigrate) 
+        // may appear BELOW the field instead of between label and field due to Power Pages 
+        // DOM structure. Multiple approaches were attempted to fix this:
+        // 1. JavaScript insertion with .before() on field wrapper
+        // 2. JavaScript insertion with .prepend() on control container
+        // 3. CSS flexbox ordering with order property
+        // None of these methods successfully positioned the helper text between the label 
+        // and the multi-select dropdown. This appears to be a Power Pages limitation.
+        // Also tried to convert the field to checkboxes but there doesn't seem to be the option for that.
+        addHelperText(
+            'revops_additionalo365servicestomigrate',
+            'Additional charges apply. Please select all that are applicable.<br />' +
+            '*SharePoint and Teams migrations currently not available from GoDaddy.<br />' +
+            '**SharePoint migration fees are variable. **Please reach out to your account manager or team for more information.<br /><br />' +
+            '**SharePoint, OneDrive, and Teams migrations are currently not available from GoDaddy.**<br /><br />' +
+            '***Workflows and other types of customizations will most likely not migrate, and need to be re-configured.<br /><br />' +
+            '***Microsoft Teams private chat messages are no longer supported. Visit the link below for details:<br />' +
+            'https://help.bittitan.com/hc/en-us/articles/360023869594-Microsoft-Teams-to-Microsoft-Teams-Migration-Guide-for-Version-and-Metadata-Migration#h_01GPC26YZFSXHW9PGFWCSRCSBA'
+
+        );
+        
+        addHelperText(
+            'revops_googledrivedocumentmigration',
+            'Do you require Google Drive document migration assistance? Additional charges apply. **Please reach out to your account manager or team for more information.'
+        );
+        
+        addHelperText(
+            'revops_imapmigrationlimitation',
+            'Important: For the IMAP mail protocol, our migration tools can migrate the mail folders and items, but do NOT migrate contacts and calendars.<br /><br />' +
+            'If you require these other items to be migrated, a manual migration will need to be performed, which is not handled by our team. We can provide you with a guide and assistance, but do not perform local tasks.'
+        );
+
+        addHelperText(
+            'revops_popmigrationlimitation',
+            'Important: For the POP mail protocol, our migration tools can only migrate the inbox, and do NOT migrate the other mail folders, contacts or calendars.<br /><br />' +
+            'If you require these other items to be migrated, a manual migration will need to be performed, which is not handled by our team. We can provide you with a guide and assistance, but do not perform local tasks.'
+        );
+
+        addHelperText(
+            'revops_migrationadditionalactiveservices',
+            'Please let us know if there are additional Sherweb services or add-ons already in place that you wish to migrate over with the email data.<br /><br />' +
+            'Some fees may apply. Contact your account manager or team for full details.</br /><br />' +
+            '**SharePoint: Workflows and other types of customizations will most likely not migrate, and need to be re-configured.'
+        );
+
+        addHelperText(
+            'revops_migrationdestinationenvironment',
+            'Important for Office 365: Please make sure to select the option that corresponds to the company address geographical location.<br /><br />' +
+            'For Hosted Exchange, you can select the option that corresponds to your preference.'
+        );
+
+        addHelperText(
+            'revops_migrationoffice365initialdomainprefix',
+            'Please enter the Office 365 domain prefix for the destination account (ending with "onmicrosoft.com"). This must already be linked to your customer organization in your Cumulus portal.<br /><br />' +
+            'Tip: Add a single Exchange Online Plan 1 license to trigger the "Platform Settings" option to create a new Office 365 account, or link it to an existing account.<br /><br />' +
+            'Contact your account manager or team if you need help with this.<br /><br />' +
+            'e.g.: sherweb.onmicrosoft.com'
+        );
+
+        addHelperText(
+            'revops_migrationnumberofmailboxes',
+            'This refers to the number of mailboxes to migrate. Please make sure to count functional mailboxes such as rooms, resources or shared mailboxes if they will be migrated.'
+        );
+
+        addHelperText(
+            'revops_migrationlicensing',
+            'Please list specific licensing and add-on details that we need to set up on the destination platform. Separate your specific plan details by a comma or a semicolon.<br /><br />' +
+            '(e.g. 243 Office 365 F1, 3 Office 365 Enterprise E3, 40 Exchange 2013 plus Collaboration, etc.)'
+        );
+        
+        // ============================================
+        // INITIALIZE MULTI-STEP WIZARD
+        // ============================================
+        
+        // Create step containers and navigation
+        createStepContainers();
+        createNavigationButtons();
+        
+        // Attach event handlers to navigation buttons
+        $('#wizard-btn-next').on('click', function(e) {
+            e.preventDefault();
+            nextStep();
+        });
+        
+        $('#wizard-btn-previous').on('click', function(e) {
+            e.preventDefault();
+            previousStep();
+        });
+        
+        // Initialize wizard: show step 1
+        showStep(1);
+        
+        // Hide submit button initially (will show on final step)
+        toggleSubmitButton(false);
+        
+            }); // End waitForFormFields
+        }); // End waitForEntityForm
+    }); // End waitForJQuery
+    
+})();
+</script>

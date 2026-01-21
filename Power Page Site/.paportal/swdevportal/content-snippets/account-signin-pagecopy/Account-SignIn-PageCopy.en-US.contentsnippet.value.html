@@ -1,0 +1,169 @@
+<script>
+  $("#content-container").addClass("signinpage");
+</script>
+
+<style>
+/* Reset and base styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    /* width: 100%;
+    height: 100%; */
+    /* background: linear-gradient(135deg, #e0eafc, #cfdef3); */
+    background: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content-container {
+    display: flex;
+    /* flex-direction: column; */
+    min-height: 100vh;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Page container */
+.signinpage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem 1rem;
+    min-height: auto;
+}
+
+/* Sign-in box */
+.signinpage .custom-signin-container {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 5vh;
+}
+
+/* Title */
+.signinpage .signin-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+/* Subtitle */
+.signinpage .signin-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* Input fields */
+.signinpage .signin-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Sign-in button */
+.signinpage .signin-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #ed573c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.signinpage .signin-form button:hover {
+    background: #005a9e;
+}
+
+/* Forgot password */
+.signinpage .signin-forgot {
+    margin-top: 1rem;
+}
+
+.signinpage .signin-forgot a {
+    color: #0078D4;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signinpage .signin-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .signinpage .custom-signin-container {
+        padding: 1.5rem;
+    }
+}
+
+.external-login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #444;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.external-login-button:hover {
+  background: #222;
+}
+
+/* Hides a sign in tab */
+.nav-tabs {
+    display: none !important;
+}
+
+/* Hide default login buttons and title*/
+.col-md-6 {
+    display: none !important;
+}
+
+/* Hide Redeem invitation */
+li[role="none"] a[aria-label="Redeem invitation"],
+li:has(a[aria-label="Redeem invitation"]) {
+    display: none;
+}
+</style>
+
+<div class="signinpage">
+  <div class="custom-signin-container">
+    <h1 class="b">Please sign in to open a ticket</h1>
+    <div class="signin-form">
+      <!-- External login form -->
+      <form action="/en-US/Account/Login/ExternalLogin?ReturnUrl=%2Fen-US%2Ftickets%2F" method="post" style="margin-top: 1rem;">
+        <input name="__RequestVerificationToken" type="hidden" value="2Dtl8rTfR0-Hi8p4l5qCvprH4h6TMj4redJyDj19eE3SKE0I5tM2125PL6SGYvWKE9TDAfF6ay3PpVL3_CKxCK5bgFI3qtXMvAAluBjOyx01">
+        <button name="provider" type="submit" class="external-login-button" id="https://cumulus.sherweb.com/oidc/" title="Sign in to your account management portal (Cumulus)." value="https://cumulus.sherweb.com/oidc/">
+          Sign in
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

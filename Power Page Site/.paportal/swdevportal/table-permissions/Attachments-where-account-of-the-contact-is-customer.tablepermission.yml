@@ -1,0 +1,16 @@
+adx_accountrelationship: 
+adx_append: true
+adx_appendto: true
+adx_contactrelationship: 
+adx_create: true
+adx_delete: false
+adx_entitylogicalname: annotation
+adx_entityname: Attachments where account of the contact is customer
+adx_entitypermission_webrole:
+- f787065a-aaea-4b96-abec-66af0e2f8a37
+adx_entitypermissionid: b572c1f7-37d1-420d-817e-897adbb4f146
+adx_parententitypermission: fb5f6ee6-3ff2-40cb-b3c4-4cb6604411f3
+adx_parentrelationship: adx_portalcomment_Annotations
+adx_read: true
+adx_scope: 756150003
+adx_write: true

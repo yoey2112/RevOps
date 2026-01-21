@@ -1,0 +1,443 @@
+{% fetchxml queueQuery %}
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+    <entity name="queue">
+        <attribute name="queueid" />
+        <attribute name="name" />
+        <filter type="and">
+            <condition attribute="name" operator="eq" value="Technical Onboarding" />
+            <condition attribute="statecode" operator="eq" value="0" />
+        </filter>
+    </entity>
+</fetch>
+{% endfetchxml %}
+
+{% assign queue = queueQuery.results.entities[0] %}
+{% if queue %}
+{% assign queueId = queue.queueid %}
+{% assign queueName = queue.name %}
+{% endif %}
+
+<!-- Now inject the queue ID into a hidden field or JavaScript variable -->
+<script>
+    // Store the queue ID for use when form loads
+    window.MIGRATION_QUEUE_ID = "{{ queueId }}";
+    window.MIGRATION_QUEUE_NAME = "{{ queueName }}";
+
+    console.log('Queue ID from Liquid:', window.MIGRATION_QUEUE_ID);
+</script>
+
+<div class="row sectionBlockLayout text-start"
+    style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+    <div class="container" style="display: flex; flex-wrap: wrap;">
+        <div>
+            <h2 class="sectionBlockLayout"
+                style="flex-basis: 100%; font-size: 32px; font-weight: 600; line-height: 1.2; margin: 16px 0px;">
+                New Migration Request</h2>
+            <p class="sectionBlockLayout"
+                style="flex-basis: 100%; font-size: 16px; font-weight: 400; line-height: 1.5; margin: 0px 0px 8px;">
+                Note: Migrations performed by the Sherweb team have a cost associated with them. You can refer to the charges in our partner price list: <a href="https://images.sherweb.com/pdf/sherwebresellerpricelistfull.pdf">https://images.sherweb.com/pdf/sherwebresellerpricelistfull.pdf</a></p>
+            <p class="sectionBlockLayout"
+                style="flex-basis: 100%; font-size: 16px; font-weight: 400; line-height: 1.5; margin: 0px 0px 16px;">
+                If you have any questions, please reach out to your account manager. Please be aware that migration requests are currently being picked up by a migration technician in approximately 7 business days.</p>
+        </div>
+        <div class="col-lg-12 columnBlockLayout"
+            style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; padding: 16px; margin: 20px 0px;">
+            {% entityform name: 'Create Case - Migration Request' %}</div>
+    </div>
+</div>
+
+<script>
+    (function () {
+        'use strict';
+
+        console.log('=== Queue Auto-Population (Liquid) ===');
+
+        const queueId = window.MIGRATION_QUEUE_ID;
+        const queueName = window.MIGRATION_QUEUE_NAME;
+
+        if (!queueId) {
+            console.error('Queue not found in Liquid query');
+            return;
+        }
+
+        console.log('Queue ID:', queueId);
+        console.log('Queue Name:', queueName);
+
+        // Function to set lookup field value (based on Tickets implementation)
+        function setLookupField(fieldId, entityName, recordId, recordName) {
+            console.log(`Setting ${fieldId} lookup:`, {
+                entityName: entityName,
+                recordId: recordId,
+                recordName: recordName
+            });
+
+            const field = $(`#${fieldId}`);
+
+            if (field.length && recordId) {
+                // Check if it's a SELECT dropdown
+                if (field.prop('tagName') === 'SELECT') {
+                    // For dropdown, just set the value
+                    field.val(recordId);
+                    field.trigger('change');
+                    console.log(`Set dropdown ${fieldId}`);
+                } else {
+                    // For lookup/entity reference fields
+                    field.val(recordId);
+                    field.attr('value', recordId);
+
+                    // Set related hidden fields for entity reference
+                    const entityNameField = $(`#${fieldId}_entityname`);
+                    const nameField = $(`#${fieldId}_name`);
+
+                    if (entityNameField.length) {
+                        entityNameField.val(entityName);
+                        entityNameField.attr('value', entityName);
+                        console.log(`Set ${fieldId}_entityname to:`, entityName);
+                    }
+
+                    if (nameField.length) {
+                        nameField.val(recordName);
+                        nameField.attr('value', recordName);
+                        console.log(`Set ${fieldId}_name to:`, recordName);
+                    }
+
+                    field.trigger('change');
+                    console.log(`Set entity reference ${fieldId}`);
+                }
+                return true;
+            } else {
+                console.warn(`Failed to set ${fieldId}:`, {
+                    fieldExists: field.length > 0,
+                    recordId: recordId
+                });
+                return false;
+            }
+        }
+
+        // Wait for the queue field to be available before setting it
+        function waitForField(selector, callback, maxAttempts = 50) {
+            let attempts = 0;
+            const interval = setInterval(function() {
+                attempts++;
+                const $field = $(selector);
+                
+                if ($field.length > 0) {
+                    clearInterval(interval);
+                    console.log(`Queue field found after ${attempts * 100}ms`);
+                    callback();
+                } else if (attempts >= maxAttempts) {
+                    clearInterval(interval);
+                    console.error('Queue field not found after maximum attempts');
+                    console.log('Debug: Listing all fields with "queue" in name/id:');
+                    $('[name*="queue"], [id*="queue"], [data-attribute*="queue"]').each(function () {
+                        console.log('- Found:', this.tagName, {
+                            name: $(this).attr('name'),
+                            id: $(this).attr('id'),
+                            type: $(this).attr('type'),
+                            dataAttribute: $(this).attr('data-attribute'),
+                            value: $(this).val()
+                        });
+                    });
+                }
+            }, 100); // Check every 100ms
+        }
+
+        function setQueueField() {
+            console.log('Setting queue field...');
+            const success = setLookupField('revops_queue', 'queue', queueId, queueName);
+            
+            if (!success) {
+                console.error('Could not set queue field');
+            }
+        }
+
+        // Wait for queue field to be available, then set it
+        waitForField('#revops_queue', setQueueField);
+
+    })();
+</script>
+
+<script>
+(function() {
+    'use strict';
+    
+    // Wait for jQuery to be available
+    function waitForJQuery(callback) {
+        if (typeof jQuery !== 'undefined') {
+            callback();
+        } else {
+            setTimeout(function() { waitForJQuery(callback); }, 100);
+        }
+    }
+    
+    // Wait for form fields to be fully loaded
+    function waitForFormFields(callback, maxAttempts = 150) {
+        let attempts = 0;
+        const interval = setInterval(function() {
+            attempts++;
+            
+            // Check if at least one of our key fields exists
+            const $emailField = $('#emailaddress, input[name*="emailaddress"]');
+            const $titleField = $('#title, input[name*="title"]');
+            
+            if ($emailField.length > 0 || $titleField.length > 0) {
+                clearInterval(interval);
+                callback();
+            } else if (attempts >= maxAttempts) {
+                clearInterval(interval);
+                return;
+            }
+        }, 200);
+    }
+    
+    waitForJQuery(function() {
+        waitForFormFields(function() {
+            
+            // ============================================
+            // HELPER FUNCTIONS
+            // ============================================
+            
+            // Set field as required or optional
+            function setFieldRequired(fieldName, required) {
+                const selectors = [
+                    `#${fieldName}`,
+                    `[data-attribute="${fieldName}"]`,
+                    `[name*="${fieldName}"]`
+                ];
+                
+                let $field = null;
+                let usedSelector = '';
+                
+                for (let selector of selectors) {
+                    $field = $(selector);
+                    if ($field.length > 0) {
+                        usedSelector = selector;
+                        break;
+                    }
+                }
+                
+                if ($field && $field.length > 0) {
+                    if (required) {
+                        $field.attr('required', 'required');
+                        $field.attr('aria-required', 'true');
+                    } else {
+                        $field.removeAttr('required');
+                        $field.removeAttr('aria-required');
+                    }
+                    
+                    // Handle visual asterisk on label
+                    const $container = $field.closest('td.clearfix');
+                    let $label = $container.find('label').first();
+                    
+                    if ($label.length === 0) {
+                        const fieldId = $field.attr('id');
+                        if (fieldId) {
+                            $label = $(`label[for="${fieldId}"]`);
+                        }
+                    }
+                    
+                    if ($label.length === 0) {
+                        $label = $(`label[for="${fieldName}"]`);
+                    }
+                    
+                    if ($label.length === 0) {
+                        $label = $field.prev('label');
+                    }
+                    
+                    if ($label.length > 0) {
+                        if (required) {
+                            if ($label.find('.required').length === 0) {
+                                $label.append(' <span class="required" style="color: red; font-weight: bold;" aria-required="true">*</span>');
+                            }
+                        } else {
+                            $label.find('.required').remove();
+                        }
+                    }
+                    
+                    return true;
+                } else {
+                    console.error(`✗ Field NOT FOUND: ${fieldName}`);
+                    return false;
+                }
+            }
+            
+            // Hide a field (including its label) using CSS class method
+            function hideField(fieldName) {
+                const selectors = [
+                    `#${fieldName}`,
+                    `[data-attribute="${fieldName}"]`,
+                    `[name*="${fieldName}"]`
+                ];
+                
+                for (let selector of selectors) {
+                    const $field = $(selector);
+                    if ($field.length > 0) {
+                        const $container = $field.closest('td.clearfix');
+                        if ($container && $container.length > 0) {
+                            $container.addClass('field-hidden');
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+            
+            // Add helper text between label and field (for accessibility)
+            function addHelperText(fieldName, helperText) {
+                const selectors = [
+                    `#${fieldName}`,
+                    `[data-attribute="${fieldName}"]`,
+                    `[name*="${fieldName}"]`
+                ];
+                
+                for (let selector of selectors) {
+                    const $field = $(selector);
+                    if ($field.length > 0) {
+                        // Remove existing helper text if any
+                        $field.closest('td.clearfix').find('.field-helper-text').remove();
+                        
+                        // Add new helper text with unique ID for aria-describedby
+                        const helperId = `${fieldName}-helper`;
+                        const $helperDiv = $('<div class="field-helper-text" style="font-size: 0.875rem; color: #6c757d; margin-top: 0.25rem; margin-bottom: 0.5rem;"></div>');
+                        $helperDiv.attr('id', helperId);
+                        $helperDiv.html(helperText);
+                        
+                        // Insert before the field
+                        $field.before($helperDiv);
+                        
+                        // Associate helper text with field for screen readers
+                        $field.attr('aria-describedby', helperId);
+                        
+                        return true;
+                    }
+                }
+                return false;
+            }
+            
+            // ============================================
+            // FIELD CONFIGURATION
+            // ============================================
+            
+            // List of fields that must be mandatory
+            const mandatoryFields = [
+                'emailaddress',
+                'title',
+                'revops_cumulusorganization'
+            ];
+            
+            // Set all mandatory fields as required
+            mandatoryFields.forEach(function(fieldName) {
+                setFieldRequired(fieldName, true);
+            });
+            
+            // ============================================
+            // HIDE FIELDS (COMMENTED OUT FOR FUTURE USE)
+            // ============================================
+            // Uncomment the line below to hide the queue field:
+            // hideField('revops_queue');
+            
+            // ============================================
+            // CUSTOM FORM VALIDATION
+            // ============================================
+            
+            function validateForm(e) {
+                let hasErrors = false;
+                const errors = [];
+                
+                // Check all mandatory fields
+                mandatoryFields.forEach(function(fieldName) {
+                    let $field = $(`#${fieldName}`);
+                    if ($field.length === 0) {
+                        $field = $(`[name*="${fieldName}"]`);
+                    }
+                    
+                    if ($field.length > 0) {
+                        const value = $field.val();
+                        const isEmpty = !value || value === '' || value === null;
+                        
+                        if (isEmpty) {
+                            hasErrors = true;
+                            const $container = $field.closest('td.clearfix');
+                            const $label = $container.find('label').first();
+                            const labelText = $label.length > 0 ? $label.text().replace('*', '').trim() : fieldName;
+                            errors.push(labelText);
+                            $field.css('border', '2px solid red');
+                        } else {
+                            $field.css('border', '');
+                        }
+                    }
+                });
+                
+                if (hasErrors) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const errorMessage = `Please fill in the following required fields:\n\n${errors.join('\n')}`;
+                    alert(errorMessage);
+                    
+                    const $firstErrorField = $('input[style*="border: 2px solid red"], select[style*="border: 2px solid red"], textarea[style*="border: 2px solid red"]').first();
+                    if ($firstErrorField.length > 0) {
+                        $firstErrorField[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        $firstErrorField.focus();
+                    }
+                    
+                    return false;
+                }
+                
+                return true;
+            }
+            
+            // ============================================
+            // ATTACH VALIDATION
+            // ============================================
+            
+            // Attach to form submit event
+            const $forms = $('form');
+            
+            $forms.each(function(index) {
+                const form = this;
+                
+                $(form).on('submit', function(e) {
+                    return validateForm(e);
+                });
+                
+                form.addEventListener('submit', function(e) {
+                    return validateForm(e);
+                }, true);
+            });
+            
+            // ============================================
+            // INTERCEPT SUBMIT BUTTON CLICKS
+            // ============================================
+            
+            const $submitButtons = $('button[type="submit"], input[type="submit"], .submit-button, button.button-primary, .button-primary, #InsertButton, #UpdateButton, button.btn-primary');
+            
+            $submitButtons.each(function(index) {
+                const button = this;
+                
+                button.addEventListener('click', function(e) {
+                    // Check if button is inside a modal
+                    const $button = $(button);
+                    const isInModal = $button.closest('.modal, .ui-dialog, [role="dialog"], .ms-Overlay').length > 0;
+                    
+                    if (isInModal) {
+                        return; // Skip validation for modal buttons
+                    }
+                    
+                    // Run validation for main form submit button
+                    const isValid = validateForm(e);
+                    
+                    if (!isValid) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        e.stopImmediatePropagation();
+                        return false;
+                    }
+                }, true);
+            });
+            
+        }); // End waitForFormFields
+    }); // End waitForJQuery
+    
+})();
+</script>

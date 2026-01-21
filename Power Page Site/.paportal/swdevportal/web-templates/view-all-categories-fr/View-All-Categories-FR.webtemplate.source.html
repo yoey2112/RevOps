@@ -1,0 +1,107 @@
+{% block breadcrumbs %}
+  {% assign categoryid = request.params['id'] %}
+  {% assign category = knowledge.categories | category_number: categoryid %}
+
+  {% if category %}
+    {% assign pagetitle = category.title %}
+    {% assign categoryguid = category.categoryid %}
+  {% else %}
+    {% assign pagetitle = resx["Knowledge_Article_Unavailable"] %}
+  {% endif %}
+
+  {% include 'Breadcrumbs' title: pagetitle %}
+{% endblock %}
+
+{% block main %}
+  {% if categoryguid %}
+        {% fetchxml categoryQuery %}
+    <fetch top="1">
+      <entity name="category">
+        <attribute name="title" alias="title" />
+        <attribute name="categoryid" alias="categoryid" />
+        <attribute name="categorynumber" alias="categorynumber" />
+        <filter type="and">
+          <condition attribute="categorynumber" operator="eq" value="{{ request.params['id'] }}" />
+        </filter>
+      </entity>
+    </fetch>
+    {% endfetchxml %}
+
+    {% fetchxml articlesQuery %}
+    <fetch>
+      <entity name="knowledgearticle">
+        <attribute name="knowledgearticleid" />
+        <attribute name="articlepublicnumber" />
+        <attribute name="title" />
+        <attribute name="content" />
+        <attribute name="modifiedon" />
+        <attribute name="revops_category" />
+        <attribute name="statecode" />
+        <attribute name="statuscode" />
+        <filter type="and">
+          <condition attribute="statecode" operator="eq" value="3" />
+          <condition attribute="isrootarticle" operator="eq" value="0" />
+          <condition attribute="isinternal" operator="eq" value="0" />
+          <condition attribute="islatestversion" operator="eq" value="1" />
+          <condition attribute="revops_category" operator="eq" value="{{ categoryguid }}" />
+          <condition attribute="languagelocaleid" operator="in">
+            <!-- French - Canada -->
+            <value uiname="French - Canada" uitype="languagelocale">{f2076351-7e6b-455e-9d4d-c672bbf46e0b}</value>
+            <!-- French - France -->
+            <value uiname="French - France" uitype="languagelocale">{bb2f2ae8-89e1-40bc-9d2e-b52d5985ca3d}</value>
+          </condition>
+        </filter>
+        <order attribute="modifiedon" descending="true" />
+      </entity>
+    </fetch>
+    {% endfetchxml %}
+  {% endif %}
+
+  {% assign currentCategory = categoryQuery.results.entities | first %}
+  <div>
+    <div class="container">
+      <div class="row py-5">
+        <div class="col-12">
+          <h1>{{ currentCategory.title }}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% assign articles = articlesQuery.results.entities %}
+
+  <style>
+    .category-container { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+    .category-header { margin-bottom: 35px; border-bottom: 1px solid #eaeaea; padding-bottom: 20px; }
+    .category-header h1 { font-size: 24px; font-weight: 700; color: #333; margin-bottom: 15px; }
+    .article-preview h4 { color:#ed573c; }
+    .article-row { transition: background .35s ease-in-out; }
+    .article-row:hover { background: #f9f9f9 }
+  </style>
+
+  {% if articles and articles.size > 0 %}
+    {% for article in articles %}
+      <div class="py-4 article-row">
+        <a href="{{ article.url | escape }}">
+          <div class="container">
+            <div class="d-flex gap-4 article-preview">
+              <div><i class="fa-light fa-file icon-article"></i></div>
+              <div>
+                <h4 class="mt-0 mb-1">{{ article.title }}</h4>
+                {% assign stripped_content = article.content | strip_html %}
+                <p class="mb-2">{{ stripped_content | truncate: 300, "..." }}</p>
+                <small class="d-inline-block">
+                  <span id="modified-date">{{ article.modifiedon }}</span>
+                </small>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  {% else %}
+    <div class="container py-5">
+      <p><em>Aucun article en français n’a été trouvé pour cette catégorie.</em></p>
+    </div>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,142 @@
+{% assign input_category = input_category | default: '' %}
+
+{% fetchxml articlesQuery %}
+<fetch aggregate="true" returntotalrecordcount="true">
+    <entity name="knowledgearticle">
+        <attribute name="knowledgearticleid" alias="knowledgearticleid" groupby="true" />
+        <attribute name="title" alias="title" groupby="true" />
+        <attribute name="statecode" alias="statecode" groupby="true" />
+        <attribute name="statuscode" alias="statuscode" groupby="true" />
+        <attribute name="revops_category" alias="categoryid" groupby="true" />
+        <attribute name="articlepublicnumber" alias="articlepublicnumber" groupby="true" />
+        <filter type="and">
+            <condition attribute="statecode" operator="eq" value="3" />
+            <condition attribute="isrootarticle" operator="eq" value="0" />
+            <condition attribute="isinternal" operator="eq" value="0" />
+            <condition attribute="languagelocaleid" operator="eq" value="{56940b3e-300f-4070-a559-5a6a4d11a8a3}" uiname="English - United States" uitype="languagelocale" />
+        </filter>
+        <order alias="title" />
+        <link-entity name="category" alias="aa" link-type="inner" from="categoryid" to="revops_category">
+            <attribute name="title" alias="category" groupby="true" />
+            <filter type="and">
+                <condition attribute="title" operator="not-null" />
+            </filter>
+        </link-entity>
+    </entity>
+</fetch>
+{% endfetchxml %}
+
+{% fetchxml categoriesQuery %}
+<fetch aggregate="true">
+    <entity name="category">
+        <attribute name="title" alias="title" groupby="true" />
+        <attribute name="categoryid" alias="categoryid" groupby="true" />
+        <attribute name="categorynumber" alias="categorynumber" groupby="true" />
+        <attribute name="parentcategoryid" alias="parentcategoryid" groupby="true" />
+        <attribute name="revops_istoplevelcategory" alias="istoplevelcategory" groupby="true" />
+        <attribute name="revops_isinternal" alias="isinternal" groupby="true" />
+        <filter type="and">
+            <condition attribute="title" operator="not-null" />
+        </filter>
+        <order alias="title" />
+        <link-entity name="category" alias="parent" link-type="outer" from="categoryid" to="parentcategoryid">
+            <attribute name="title" alias="parenttitle" groupby="true" />
+            <attribute name="categoryid" alias="parentcategoryid_value" groupby="true" />
+        </link-entity>
+    </entity>
+</fetch>
+{% endfetchxml %}
+
+{% assign categories = categoriesQuery.results.entities | where: "isinternal", false %}
+{% assign articles = articlesQuery.results.entities %}
+{% assign top_level_categories = categories | where: "istoplevelcategory", true %}
+
+<div class="category-container container">
+  {% if input_category != '' %}
+    {% assign subcategories = categories | where: "parenttitle", input_category %}
+    <div class="row pb-1">
+      <div class="col-lg-12">
+        <h2 class="mb-4">{{ input_category }}</h2>
+      </div>
+    </div>
+    {% if subcategories.size > 0 %}
+      <div class="row justify-content-between">
+        {% for category in subcategories %}
+          {% assign category_articles = articles | where: "category", category.title %}
+          {% if category_articles.size > 0 %}
+            <div class="col-12 col-md-6">
+              <div class="category-block">
+                <h4 class="fw-normal pb-0 d-flex align-items-center">
+                  {{ category.title }}
+                  <span class="badge rounded-pill bg-danger ms-2">{{ category_articles.size }}</span>
+                </h4>
+                <ul class="list-group list-group-flush">
+                  {% for article in category_articles limit:5 %}
+                    <li class="list-group-item">
+                      <a href="{{ article.url | escape }}" class="d-flex gap-3 align-items-center">
+                        <i class="fa-light fa-file"></i><span>{{ article.title }}</span>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+                <a href="{{ sitemarkers['Category'].url | add_query: 'id', category.categorynumber }}" class="btn btn-outline-secondary btn-sm">
+                  See all articles
+                </a>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="empty-message">No subcategories found for {{ input_category }}.</p>
+    {% endif %}
+  {% else %}
+    {% for top_category in top_level_categories %}
+      <div class="row pb-1 pt-4">
+        <h2 class="mb-3">{{ top_category.title }}</h2>
+      </div>
+      {% assign has_articles_in_subcategories = false %}
+      <div class="row justify-content-between">
+        {% assign processed_categories = "" | split: "," %}
+        {% for category in categories %}
+          {% assign category_id_str = category.categoryid | downcase %}
+          {% if processed_categories contains category_id_str %}
+            {% continue %}
+          {% endif %}
+          {% if category.parenttitle == top_category.title %}
+            {% assign processed_categories = processed_categories | push: category_id_str %}
+            {% assign category_url = sitemarkers['Category'].url %}
+            {% assign category_articles = articles | where: "category", category.title %}
+            {% if category_articles.size > 0 %}
+              {% assign has_articles_in_subcategories = true %}
+              <div class="col-12 col-md-5">
+                <div class="position-relative d-flex align-items-center gap-4">
+                  <a href="{{ category_url | add_query: 'id', category.categorynumber }}">
+                    <h3 class="fw-normal mt-0 pt-0 pb-0">{{ category.title }}</h3>
+                  </a>
+                  <span class="translate-middle badge rounded-pill bg-danger">
+                    {{ category_articles.size }}
+                    <span class="visually-hidden">articles</span>
+                  </span>
+                </div>
+                <ul class="list-group list-group-flush">
+                  {% for article in category_articles limit:5 %}
+                    <li class="list-group-item">
+                      <a href="{{ article.url | escape }}" class="d-flex gap-3 align-items-center">
+                        <i class="fa-light fa-file"></i><span>{{ article.title }}</span>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+                <a href="{{ category_url | add_query: 'id', category.categorynumber }}" role="button" class="btn btn-outline-secondary mb-5">See all articles</a>
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% unless has_articles_in_subcategories %}
+        <p class="empty-message">No articles found in subcategories</p>
+      {% endunless %}
+    {% endfor %}
+  {% endif %}
+</div>

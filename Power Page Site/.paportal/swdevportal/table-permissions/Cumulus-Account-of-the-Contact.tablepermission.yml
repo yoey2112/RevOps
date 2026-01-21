@@ -1,0 +1,16 @@
+adx_accountrelationship: 
+adx_append: true
+adx_appendto: true
+adx_contactrelationship: 
+adx_create: false
+adx_delete: false
+adx_entitylogicalname: revops_cumulusaccount
+adx_entityname: Cumulus Account of the Contact
+adx_entitypermission_webrole:
+- f787065a-aaea-4b96-abec-66af0e2f8a37
+adx_entitypermissionid: a2bead41-671d-4deb-96f1-7d75ed67c3bc
+adx_parententitypermission: 80754c33-a48b-4aca-a654-480eb239f832
+adx_parentrelationship: revops_cumulusaccount_account_account
+adx_read: true
+adx_scope: 756150003
+adx_write: false

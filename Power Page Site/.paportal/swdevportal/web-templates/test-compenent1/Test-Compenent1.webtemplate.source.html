@@ -1,0 +1,681 @@
+{% comment %}
+Fetch the data as before
+{% endcomment %}
+{% fetchxml articlesQuery %}
+<fetch aggregate="true" returntotalrecordcount="true">
+    <entity name="knowledgearticle">
+        <attribute name="knowledgearticleid" alias="knowledgearticleid" groupby="true" />
+        <attribute name="title" alias="title" groupby="true" />
+        <attribute name="statecode" alias="statecode" groupby="true" />
+        <attribute name="statuscode" alias="statuscode" groupby="true" />
+        <attribute name="revops_category" alias="categoryid" groupby="true" />
+        <attribute name="articlepublicnumber" alias="articlepublicnumber" groupby="true" />
+        <filter type="and">
+            <condition attribute="statecode" operator="eq" value="3" />
+            <condition attribute="isrootarticle" operator="eq" value="0" />
+            <!-- <condition attribute="isinternal" operator="eq" value="0" /> -->
+            <!-- <condition attribute="isprimary" operator="eq" value="1" /> -->
+        </filter>
+        <order alias="title" />
+        <link-entity name="category" alias="aa" link-type="inner" from="categoryid" to="revops_category">
+            <attribute name="title" alias="category" groupby="true" />
+            <filter type="and">
+                <condition attribute="title" operator="not-null" />
+            </filter>
+        </link-entity>
+    </entity>
+</fetch>
+{% endfetchxml %}
+
+{% fetchxml categoriesQuery %}
+<fetch aggregate="true">
+    <entity name="category">
+        <attribute name="title" alias="title" groupby="true" />
+        <attribute name="categoryid" alias="categoryid" groupby="true" />
+        <attribute name="parentcategoryid" alias="parentcategoryid" groupby="true" />
+        <attribute name="revops_istoplevelcategory" alias="istoplevelcategory" groupby="true" />
+        <attribute name="revops_isinternal" alias="isinternal" groupby="true" />
+        <filter type="and">
+            <condition attribute="title" operator="not-null" />
+        </filter>
+        <order alias="title" />
+        <link-entity name="category" alias="parent" link-type="outer" from="categoryid" to="parentcategoryid">
+            <attribute name="title" alias="parenttitle" groupby="true" />
+            <attribute name="categoryid" alias="parentcategoryid_value" groupby="true" />
+        </link-entity>
+    </entity>
+</fetch>
+{% endfetchxml %}
+
+{% comment %}
+Fetch ALL categories without any filtering to see what's in the system
+{% endcomment %}
+{% comment %}
+Let's try a different approach - use the same fetch as categoriesQuery but without filtering in the template
+{% endcomment %}
+
+{% fetchxml allCategoriesRawQuery %}
+<fetch aggregate="true">
+    <entity name="category">
+        <attribute name="title" alias="title" groupby="true" />
+        <attribute name="categoryid" alias="categoryid" groupby="true" />
+        <attribute name="parentcategoryid" alias="parentcategoryid" groupby="true" />
+        <attribute name="revops_istoplevelcategory" alias="istoplevelcategory" groupby="true" />
+        <attribute name="revops_isinternal" alias="isinternal" groupby="true" />
+        <attribute name="statecode" alias="statecode" groupby="true" />
+        <attribute name="statuscode" alias="statuscode" groupby="true" />
+        <filter type="and">
+            <condition attribute="title" operator="not-null" />
+        </filter>
+        <order alias="title" />
+    </entity>
+</fetch>
+{% endfetchxml %}
+
+{% assign categories = categoriesQuery.results.entities | where: "isinternal", false %}
+{% assign articles = articlesQuery.results.entities %}
+{% assign top_level_categories = categories | where: "istoplevelcategory", true %}
+
+{% comment %}Debug the allCategoriesQuery result{% endcomment %}
+{% assign all_categories_debug = allCategoriesRawQuery %}
+{% assign all_categories = allCategoriesRawQuery.results.entities %}
+{% if all_categories == null or all_categories.size == 0 %}
+    {% assign all_categories = categories %}
+    {% assign using_fallback = true %}
+{% else %}
+    {% assign using_fallback = false %}
+{% endif %}
+
+<style>
+    .diagnostic-container {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .diagnostic-section {
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+    }
+    .section-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #333;
+    }
+    .info-box {
+        background-color: #e9ecef;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+    .category-card {
+        background-color: white;
+        padding: 15px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    .category-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: #495057;
+        margin-bottom: 10px;
+    }
+    .category-detail {
+        font-size: 14px;
+        margin-bottom: 5px;
+        display: flex;
+    }
+    .detail-label {
+        width: 180px;
+        color: #6c757d;
+        font-weight: 500;
+    }
+    .detail-value {
+        flex-grow: 1;
+        word-break: break-all;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        padding: 8px 12px;
+        text-align: left;
+        border: 1px solid #dee2e6;
+    }
+    th {
+        background-color: #e9ecef;
+        font-weight: 500;
+    }
+    tr:nth-child(even) {
+        background-color: #f8f9fa;
+    }
+    .highlight {
+        background-color: #fff3cd;
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+    .badge {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 500;
+        color: white;
+        background-color: #6c757d;
+    }
+    .badge-primary { background-color: #0d6efd; }
+    .badge-success { background-color: #198754; }
+    .badge-warning { background-color: #ffc107; color: #212529; }
+    .badge-danger { background-color: #dc3545; }
+    .badge-info { background-color: #0dcaf0; color: #212529; }
+    .null-value {
+        color: #dc3545;
+        font-style: italic;
+    }
+    .search-container {
+        margin-bottom: 15px;
+    }
+    .search-input {
+        padding: 8px 12px;
+        width: 100%;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    .filters {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+    }
+    .filter-btn {
+        padding: 5px 10px;
+        background-color: #e9ecef;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .filter-btn.active {
+        background-color: #0d6efd;
+        color: white;
+        border-color: #0d6efd;
+    }
+    .accordion {
+        margin-bottom: 20px;
+    }
+    .accordion-header {
+        padding: 12px;
+        background-color: #e9ecef;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    .accordion-content {
+        padding: 15px;
+        border: 1px solid #dee2e6;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        display: none;
+    }
+    .show {
+        display: block;
+    }
+</style>
+
+<div class="diagnostic-container">
+    <h1>Category Relationship Diagnostic</h1>
+    
+    <div class="diagnostic-section">
+        <h2 class="section-title">Summary</h2>
+        <div class="info-box">
+            <p><strong>Total Filtered Categories:</strong> {{ categories.size }}</p>
+            <p><strong>Top-Level Categories:</strong> {{ top_level_categories.size }}</p>
+            <p><strong>Total Articles:</strong> {{ articles.size }}</p>
+            <p><strong>Total Categories in System:</strong> {{ all_categories.size }}</p>
+            <p><strong>Note:</strong> {% if using_fallback %}Using filtered categories as fallback since the all-categories query returned no results{% else %}Using results from all-categories query{% endif %}</p>
+        </div>
+    </div>
+    
+    <div class="diagnostic-section">
+        <h2 class="section-title">All Categories in System</h2>
+        
+        <p>This section lists all categories in the system without filtering, to help identify potential issues.</p>
+        
+        <div class="info-box">
+            <h3>Debug Information</h3>
+            <p><strong>allCategoriesQuery Type:</strong> {{ all_categories_debug | get_type }}</p>
+            <p><strong>allCategoriesQuery Keys:</strong> 
+            {% for key in all_categories_debug %}
+                {{ key[0] }}{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+            </p>
+            {% if all_categories_debug.results %}
+                <p><strong>results.entities Size:</strong> 
+                {% if all_categories_debug.results.entities %}
+                    {{ all_categories_debug.results.entities.size }}
+                {% else %}
+                    null/undefined
+                {% endif %}
+                </p>
+            {% else %}
+                <p><strong>results:</strong> null/undefined</p>
+            {% endif %}
+            <p><strong>Using fallback categories:</strong> {{ using_fallback }}</p>
+            
+            <h3>Raw Data Sample:</h3>
+            <pre style="background-color: #f5f5f5; padding: 10px; overflow-x: auto; font-size: 12px;">
+allCategoriesQuery: {{ all_categories_debug | json }}
+            </pre>
+            
+            <h3>Categories:</h3>
+            <pre style="background-color: #f5f5f5; padding: 10px; overflow-x: auto; font-size: 12px;">
+First 2 categories: {{ categories | slice: 0, 2 | json }}
+            </pre>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" id="categorySearch" class="search-input" placeholder="Search categories by title...">
+        </div>
+        
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All ({{ all_categories.size }})</button>
+            <button class="filter-btn" data-filter="toplevel">Top-level</button>
+            <button class="filter-btn" data-filter="internal">Internal</button>
+            <button class="filter-btn" data-filter="hasarticles">Has Articles</button>
+            <button class="filter-btn" data-filter="noarticles">No Articles</button>
+            <button class="filter-btn" data-filter="hasparent">Has Parent</button>
+            <button class="filter-btn" data-filter="noparent">No Parent</button>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-header">
+                <span>Category Counts by Status</span>
+            </div>
+            <div class="accordion-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% comment %}We can't use group_by if fields might be missing or null{% endcomment %}
+{% assign status_groups = "" | split: "," %}
+{% assign statecode_counts = "" | split: "," %}
+
+{% for category in all_categories %}
+  {% assign state = category.statecode | default: "Unknown" %}
+  {% assign found = false %}
+  
+  {% for group in status_groups %}
+    {% if group.name == state %}
+      {% assign group_size = group.size | plus: 1 %}
+      {% assign group_with_size = group.name | append: "|" | append: group_size %}
+      {% assign statecode_counts = statecode_counts | push: group_with_size %}
+      {% assign found = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  
+  {% unless found %}
+    {% assign new_group = state | append: "|1" %}
+    {% assign statecode_counts = statecode_counts | push: new_group %}
+    {% assign status_groups = status_groups | push: new_group %}
+  {% endunless %}
+{% endfor %}
+                        {% for group in statecode_counts %}
+                            {% assign group_parts = group | split: "|" %}
+                            <tr>
+                                <td>State Code: {{ group_parts[0] }}</td>
+                                <td>{{ group_parts[1] }}</td>
+                            </tr>
+                        {% endfor %}
+                        
+                        <tr>
+                            <td colspan="2"><strong>Status codes not shown - using simple approach for debugging</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <table id="categoriesTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Category ID</th>
+                    <th>Parent Category ID</th>
+                    <th>Top Level</th>
+                    <th>Internal</th>
+                    <th>State</th>
+                    <th>Status</th>
+                    <th>Articles</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for category in all_categories %}
+                    {% assign category_articles = articles | where: "category", category.title %}
+                    <tr 
+                        data-title="{{ category.title | downcase }}"
+                        data-toplevel="{{ category.istoplevelcategory }}"
+                        data-internal="{{ category.isinternal }}"
+                        data-articles="{{ category_articles.size }}"
+                        data-hasparent="{% if category.parentcategoryid %}true{% else %}false{% endif %}"
+                    >
+                        <td>{{ category.title }}</td>
+                        <td>{{ category.categoryid }}</td>
+                        <td>
+                            {% if category.parentcategoryid %}
+                                {{ category.parentcategoryid }}
+                            {% else %}
+                                <span class="null-value">null</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if category.istoplevelcategory == true %}
+                                <span class="badge badge-info">Yes</span>
+                            {% else %}
+                                <span class="badge badge-secondary">No</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if category.isinternal == true %}
+                                <span class="badge badge-warning">Internal</span>
+                            {% else %}
+                                <span class="badge badge-success">Public</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ category.statecode }}</td>
+                        <td>{{ category.statuscode }}</td>
+                        <td>
+                            {% assign category_articles = articles | where: "category", category.title %}
+                            {% if category_articles.size > 0 %}
+                                <span class="badge badge-primary">{{ category_articles.size }}</span>
+                            {% else %}
+                                <span class="badge badge-danger">0</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="diagnostic-section">
+        <h2 class="section-title">Category Field Analysis</h2>
+        
+        <p>This section shows the structure of random categories to help identify how relationships are stored.</p>
+        
+        {% comment %}Examine 3 top-level categories{% endcomment %}
+        <h3>Top-Level Categories (Sample)</h3>
+        {% for category in top_level_categories limit:3 %}
+            <div class="category-card">
+                <h4 class="category-title">{{ category.title }}</h4>
+                <div class="category-detail">
+                    <span class="detail-label">categoryid:</span>
+                    <span class="detail-value">{{ category.categoryid }}</span>
+                </div>
+                <div class="category-detail">
+                    <span class="detail-label">parentcategoryid:</span>
+                    <span class="detail-value">
+                        {% if category.parentcategoryid %}
+                            {{ category.parentcategoryid }}
+                        {% else %}
+                            <span class="null-value">null</span>
+                        {% endif %}
+                    </span>
+                </div>
+                <div class="category-detail">
+                    <span class="detail-label">parenttitle:</span>
+                    <span class="detail-value">
+                        {% if category.parenttitle %}
+                            {{ category.parenttitle }}
+                        {% else %}
+                            <span class="null-value">null</span>
+                        {% endif %}
+                    </span>
+                </div>
+                <div class="category-detail">
+                    <span class="detail-label">parentcategoryid_value:</span>
+                    <span class="detail-value">
+                        {% if category.parentcategoryid_value %}
+                            {{ category.parentcategoryid_value }}
+                        {% else %}
+                            <span class="null-value">null</span>
+                        {% endif %}
+                    </span>
+                </div>
+                <div class="category-detail">
+                    <span class="detail-label">istoplevelcategory:</span>
+                    <span class="detail-value">{{ category.istoplevelcategory }}</span>
+                </div>
+            </div>
+        {% endfor %}
+        
+        {% comment %}Examine 5 random non-top-level categories{% endcomment %}
+        <h3>Non-Top-Level Categories (Sample)</h3>
+        {% assign non_top_level = categories | where_exp: "item", "item.istoplevelcategory != true" %}
+        {% for category in non_top_level limit:5 %}
+            <div class="category-card">
+                <h4 class="category-title">{{ category.title }}</h4>
+                <div class="category-detail">
+                    <span class="detail-label">categoryid:</span>
+                    <span class="detail-value">{{ category.categoryid }}</span>
+                </div>
+                <div class="category-detail">
+                    <span class="detail-label">parentcategoryid:</span>
+                    <span class="detail-value">
+                        {% if category.parentcategoryid %}
+                            {{ category.parentcategoryid }}
+                        {% else %}
+                            <span class="null-value">null</span>
+                        {% endif %}
+                    </span>
+                </div>
+                <div class="category-detail">
+                    <span class="detail-label">parenttitle:</span>
+                    <span class="detail-value">
+                        {% if category.parenttitle %}
+                            {{ category.parenttitle }}
+                        {% else %}
+                            <span class="null-value">null</span>
+                        {% endif %}
+                    </span>
+                </div>
+                <div class="category-detail">
+                    <span class="detail-label">parentcategoryid_value:</span>
+                    <span class="detail-value">
+                        {% if category.parentcategoryid_value %}
+                            {{ category.parentcategoryid_value }}
+                        {% else %}
+                            <span class="null-value">null</span>
+                        {% endif %}
+                    </span>
+                </div>
+                <div class="category-detail">
+                    <span class="detail-label">istoplevelcategory:</span>
+                    <span class="detail-value">{{ category.istoplevelcategory }}</span>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+    <div class="diagnostic-section">
+        <h2 class="section-title">Parent-Child Relationship Check</h2>
+        
+        <p>This section checks different ways of determining parent-child relationships.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Parent Category</th>
+                    <th>Children by parentcategoryid</th>
+                    <th>Children by parenttitle</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for parent in top_level_categories limit:8 %}
+                    <tr>
+                        <td>
+                            <strong>{{ parent.title }}</strong>
+                            <br>
+                            <small>ID: {{ parent.categoryid }}</small>
+                        </td>
+                        <td>
+                            {% assign children_by_id = categories | where: "parentcategoryid", parent.categoryid %}
+                            {% if children_by_id.size > 0 %}
+                                <ul>
+                                    {% for child in children_by_id limit:5 %}
+                                        <li>{{ child.title }}</li>
+                                    {% endfor %}
+                                    {% if children_by_id.size > 5 %}
+                                        <li>...and {{ children_by_id.size | minus: 5 }} more</li>
+                                    {% endif %}
+                                </ul>
+                                <span class="badge badge-primary">{{ children_by_id.size }} subcategories</span>
+                            {% else %}
+                                <span class="badge badge-warning">No subcategories found</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% assign children_by_title = categories | where: "parenttitle", parent.title %}
+                            {% if children_by_title.size > 0 %}
+                                <ul>
+                                    {% for child in children_by_title limit:5 %}
+                                        <li>{{ child.title }}</li>
+                                    {% endfor %}
+                                    {% if children_by_title.size > 5 %}
+                                        <li>...and {{ children_by_title.size | minus: 5 }} more</li>
+                                    {% endif %}
+                                </ul>
+                                <span class="badge badge-primary">{{ children_by_title.size }} subcategories</span>
+                            {% else %}
+                                <span class="badge badge-warning">No subcategories found</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="diagnostic-section">
+        <h2 class="section-title">Article Association Check</h2>
+        
+        <p>This section shows how articles are associated with categories.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Category Title</th>
+                    <th>Articles Count</th>
+                    <th>Sample Articles</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for category in categories limit:10 %}
+                    {% assign category_articles = articles | where: "category", category.title %}
+                    <tr>
+                        <td>
+                            <strong>{{ category.title }}</strong>
+                            {% if category.istoplevelcategory %}
+                                <span class="badge badge-info">Top-level</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ category_articles.size }}</td>
+                        <td>
+                            {% if category_articles.size > 0 %}
+                                <ul>
+                                    {% for article in category_articles limit:3 %}
+                                        <li>{{ article.title }}</li>
+                                    {% endfor %}
+                                    {% if category_articles.size > 3 %}
+                                        <li>...and {{ category_articles.size | minus: 3 }} more</li>
+                                    {% endif %}
+                                </ul>
+                            {% else %}
+                                <span class="badge badge-warning">No articles</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    // Search functionality
+    document.getElementById('categorySearch').addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        filterCategories();
+    });
+    
+    // Filter buttons
+    document.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            this.classList.add('active');
+            filterCategories();
+        });
+    });
+    
+    // Accordion functionality
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            content.classList.toggle('show');
+        });
+    });
+    
+    function filterCategories() {
+        const searchTerm = document.getElementById('categorySearch').value.toLowerCase();
+        const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+        
+        document.querySelectorAll('#categoriesTable tbody tr').forEach(row => {
+            const title = row.getAttribute('data-title');
+            const isTopLevel = row.getAttribute('data-toplevel') === 'true';
+            const isInternal = row.getAttribute('data-internal') === 'true';
+            const articleCount = parseInt(row.getAttribute('data-articles'));
+            const hasParent = row.getAttribute('data-hasparent') === 'true';
+            
+            let showRow = title.includes(searchTerm);
+            
+            if (showRow) {
+                switch(activeFilter) {
+                    case 'toplevel':
+                        showRow = isTopLevel;
+                        break;
+                    case 'internal':
+                        showRow = isInternal;
+                        break;
+                    case 'hasarticles':
+                        showRow = articleCount > 0;
+                        break;
+                    case 'noarticles':
+                        showRow = articleCount === 0;
+                        break;
+                    case 'hasparent':
+                        showRow = hasParent;
+                        break;
+                    case 'noparent':
+                        showRow = !hasParent;
+                        break;
+                }
+            }
+            
+            row.style.display = showRow ? '' : 'none';
+        });
+    }
+</script>

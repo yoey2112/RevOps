@@ -1,0 +1,157 @@
+{% block breadcrumbs %}
+    {% assign categoryid = request.params['id'] %}
+
+    {% assign category = knowledge.categories | category_number: categoryid %}
+    {% if category %}
+        {% assign pagetitle = category.title %}
+        {% assign categoryguid = category.categoryid %}
+    {% else %}
+        {% assign pagetitle = resx["Knowledge_Article_Unavailable"] %}
+    {% endif %}
+
+    {% include 'Breadcrumbs' title: pagetitle %}
+
+{% endblock %}
+
+{% block main %}
+    {% assign category_url = sitemarkers['Category'].url %}
+    {% assign portallanguagecode = website.selected_language.code %}
+    
+    {% if categoryguid %}
+        {% fetchxml categoryQuery %}
+        <fetch top="1">
+            <entity name="category">
+                <attribute name="title" alias="title" />
+                <attribute name="categoryid" alias="categoryid" />
+                <attribute name="categorynumber" alias="categorynumber" />
+                <filter type="and">
+                    <condition attribute="categorynumber" operator="eq" value="{{ categoryid }}" />
+                </filter>
+            </entity>
+        </fetch>
+        {% endfetchxml %}
+
+        {% fetchxml articlesQuery %}
+        <fetch>
+            <entity name="knowledgearticle">
+            <attribute name="articlepublicnumber" />
+            <attribute name="title" />
+            <attribute name="content" />
+            <attribute name="modifiedon" />
+            <attribute name="knowledgearticleid" />
+            <attribute name="revops_category" />
+            <attribute name="statecode" />
+            <attribute name="statuscode" />
+            <filter>
+                <condition attribute="isinternal" operator="eq" value="0" />
+                <condition attribute="isprimary" operator="eq" value="1" />
+                <condition attribute="isrootarticle" operator="eq" value="0" />
+                <condition attribute="statecode" operator="eq" value="3" />
+                <condition attribute="revops_category" operator="eq" value="{{ categoryguid }}" />
+            </filter>
+            </entity>
+        </fetch>
+        {% endfetchxml %}
+
+    {% endif %}
+
+    {% assign category = categoryQuery.results.entities | first %}
+    <div>
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-12">
+                    <h1>{{ category.title }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {% assign articles = articlesQuery.results.entities %}
+
+<style>
+    .category-container {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .category-header {
+        margin-bottom: 35px;
+        border-bottom: 1px solid #eaeaea;
+        padding-bottom: 20px;
+    }
+    .category-header h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 15px;
+    }
+    .article-list {
+        margin-top: 20px;
+    }
+    .article-list li {
+        margin-bottom: 10px;
+        font-size: 16px;
+        list-style-type: none;
+    }
+    .article-list li a {
+        color: #0078d4;
+        text-decoration: none;
+    }
+    .article-list li a:hover {
+        text-decoration: underline;
+    }
+    .debug-section {
+        margin-top: 40px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        background: #f9f9f9;
+    }
+    .debug-section h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #d9534f;
+        margin-bottom: 10px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f0f0f0;
+    }
+    .article-preview  h4 {
+        color:#ed573c;
+    }
+    .article-row {
+        transition: background .35s ease-in-out;
+    }
+    .article-row:hover {
+        background: #f9f9f9
+    }
+</style>
+
+{% if articles.size > 0 %}
+    {% for article in articles %}
+<div class="py-4 article-row">
+    <a href="{{ article.url | escape }}">
+    <div class="container">
+        <div class="d-flex gap-4 article-preview">
+            <div><i class="fa-light fa-light fa-file icon-article"></i></div>
+            <div>
+                <h4 class="mt-0 mb-1">{{ article.title }}</h4>
+                {% assign stripped_content = article.content | strip_html %}
+                <p class="mb-2">{{ stripped_content | truncate: 300, "..." }}</p>
+                <small class="d-inline-block"><span id="modified-date">{{ article.modifiedon }}</span></small>
+            </div>
+        </div>
+    </div>
+</a>
+</div>
+{% endfor %}
+{% endif %}
+
+{% endblock %}

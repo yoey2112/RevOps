@@ -1,2 +1,0 @@
-revops_cumulusorgurl: |-
-    =Concatenate("https://cumulus.sherweb.com/organizations/",'revops_organizationuniquename')

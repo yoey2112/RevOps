@@ -1,0 +1,136 @@
+{% assign articleIdParts = request.params["id"] | split: '-' %}
+{% assign articleId = articleIdParts[0] | append: '-' | append: articleIdParts[1] %}
+
+{% fetchxml articleQuery %}
+<fetch top="1">
+  <entity name="knowledgearticle">
+    <attribute name="articlepublicnumber" />
+    <attribute name="title" />
+    <attribute name="content" />
+    <attribute name="modifiedon" />
+    <attribute name="createdon" />
+
+
+    <filter>
+      <condition attribute="articlepublicnumber" operator="eq" value="{{ articleId }}" />
+      <condition attribute="isinternal" operator="eq" value="0" />
+      <condition attribute="isprimary" operator="eq" value="1" />
+      <condition attribute="isrootarticle" operator="eq" value="0" />
+      <condition attribute="statecode" operator="eq" value="3" />
+      <!-- <condition attribute="knowledgearticleid" operator="eq" value="{{ articleId }}" /> -->
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+<div class="article-container">
+  {% for article in articleQuery.results.entities limit:1 %}
+  <h1 class="d-none">{{ article.title }}</h1>
+  
+  <div class="d-flex gap-4 small align-items-center pt-5">
+    <p class="meta mb-0">Created on: <span class="date-format" data-date="{{ article.createdon }}"></span></p>
+    <p class="meta mb-0">Modified on: <span class="date-format" data-date="{{ article.modifiedon }}"></span></p>
+  </div>
+
+  <div class="content">
+    {{ article.content }}
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+  /**
+   * IIFE to prevent global variable leaks
+   */
+  (function () {
+    /**
+     * Format dates throughout the document with flexible options
+     * @param {Object} config - Configuration options
+     * @param {Array|String} config.selectors - CSS selector(s) to find date elements
+     * @param {String} [config.locale="en-US"] - Locale for date formatting
+     * @param {Object} [config.options] - Date formatting options
+     * @param {String} [config.dateAttribute="data-date"] - Attribute containing the date value
+     */
+    function formatDates(config = {}) {
+      const settings = {
+        selectors: config.selectors || ".date-format",
+        locale: config.locale || "en-US",
+        options: config.options || {
+          year: "numeric",
+          month: "long",
+          day: "numeric"
+        },
+        dateAttribute: config.dateAttribute || "data-date",
+      };
+
+      const selectors = Array.isArray(settings.selectors)
+        ? settings.selectors
+        : [settings.selectors];
+
+
+      selectors.forEach(selector => {
+        const elements = document.querySelectorAll(selector);
+
+        if (!elements.length) {
+          console.warn(`No elements found for selector: ${selector}`);
+          return;
+        }
+
+        elements.forEach(element => {
+          try {
+
+            let dateValue = element.getAttribute(settings.dateAttribute);
+            const dateObj = new Date(dateValue)
+
+            if (!dateObj || isNaN(dateObj.getTime())) {
+              console.warn(`Invalid date for element: ${element.outerHTML}`);
+              return;
+            }
+
+            element.textContent = dateObj.toLocaleDateString(settings.locale, settings.options);
+          } catch (err) {
+            console.error(`Error formatting date: ${err.message}`);
+          }
+        });
+      });
+    }
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      formatDates({
+        selectors: ".date-format",
+        locale: "en-US",
+        options: {
+          year: "numeric",
+          month: "long",
+          day: "numeric"
+        }
+      });
+    });
+  })();
+</script>
+
+<style>
+  .article-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    max-width: 80%;
+    margin: auto;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  .meta {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .content {
+    margin-top: 15px;
+    line-height: 1.6;
+  }
+</style>

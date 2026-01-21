@@ -1,0 +1,166 @@
+{% if user %} {% fetchxml queue_lookup %}
+<fetch top="1">
+  <entity name="queue">
+    <attribute name="queueid" />
+    <attribute name="name" />
+    <filter>
+      <condition attribute="name" operator="eq" value="TSS Management" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %} {% assign queue_id = queue_lookup.results.entities[0].queueid %} {% assign queue_name = queue_lookup.results.entities[0].name %}
+
+{% comment %} Fetch all cases without escalation reason for validation {% endcomment %}
+{% fetchxml valid_cases %}
+<fetch>
+  <entity name="incident">
+    <attribute name="incidentid" />
+    <filter type="and">
+      <condition attribute="statecode" operator="eq" value="0" />
+      <condition attribute="revops_customerescalationreason" operator="null" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+<script id="valid-cases-data" type="application/json">
+{
+  "validCaseIds": [
+    {% for case in valid_cases.results.entities -%}
+      {% assign clean_id = case.incidentid | replace: '{', '' | replace: '}', '' | downcase -%}
+      "{{ clean_id }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+<style>
+  header, .navbar, .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    background: #fff !important;
+  }
+
+  main, .page-content {
+    padding-top: 90px !important;
+  }
+
+  body, html {
+    overflow-x: hidden;
+  }
+
+  tr.queue-hidden, td.queue-hidden {
+    display: none !important;
+  }
+
+  .form-card {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+  }
+
+  .form-card h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+    font-size: 28px;
+  }
+
+  @media (max-width: 768px) {
+    .form-card {
+      margin: 20px 15px;
+      padding: 25px;
+    }
+  }
+</style>
+
+<div class="form-card">
+  <h2>Escalate a Case</h2>
+  {% entityform name: 'Create Case - Complain about a Case' %}
+</div>
+
+<script>
+  $(function () {
+    var id   = "{{ queue_id   | escape }}";
+    var name = "{{ queue_name | escape }}";
+
+    if (!id) return;
+
+    // Queue prepopulation and hiding
+    function fillAndHideQueue() {
+      var $lookup = $("#revops_queue");
+      if (!$lookup.length) {
+        return setTimeout(fillAndHideQueue, 200);
+      }
+
+      $lookup.val(id).trigger("change");
+      $("#revops_queue_name").val(name);
+      $("#revops_queue_entityname").val("queue");
+
+      var $row = $lookup.closest("tr");
+      if ($row.length) {
+        $row.addClass("queue-hidden");
+      } else {
+        $lookup.closest("td, div.form-group, div.control").addClass("queue-hidden");
+      }
+    }
+
+    // Filter Parent Case lookup to only show cases with no escalation reason
+    function filterParentCaseLookup() {
+      var $parentCaseInput = $("#parentcaseid_name");
+      var $parentCaseId = $("#parentcaseid");
+      
+      if (!$parentCaseInput.length || !$parentCaseId.length) {
+        return setTimeout(filterParentCaseLookup, 200);
+      }
+
+      // Load valid case IDs from JSON
+      var validCaseIds = [];
+      try {
+        var dataScript = document.getElementById("valid-cases-data");
+        if (dataScript) {
+          var data = JSON.parse(dataScript.textContent);
+          validCaseIds = data.validCaseIds || [];
+        }
+      } catch (e) {
+        console.warn("Could not load valid case IDs", e);
+      }
+
+      // Validate on change
+      $parentCaseId.on("change", function() {
+        var selectedId = $(this).val();
+        if (selectedId) {
+          var cleanId = selectedId.replace(/[{}]/g, "").toLowerCase();
+          
+          if (validCaseIds.length > 0 && validCaseIds.indexOf(cleanId) === -1) {
+            alert("This case already has an escalation reason and cannot be escalated again. Please select a different case.");
+            $(this).val("");
+            $parentCaseInput.val("");
+            return false;
+          }
+        }
+      });
+    }
+
+    setTimeout(function() {
+      fillAndHideQueue();
+      filterParentCaseLookup();
+    }, 400);
+  });
+</script>
+
+{% else %}
+<div style="text-align:center; padding:80px 20px;">
+  <h3>Please sign in to escalate a case</h3>
+  <p>You need to be logged in to submit a complaint.</p>
+  <a href="/SignIn" class="btn btn-primary" style="padding:10px 30px; font-size:18px;">Sign In</a>
+</div>
+{% endif %}
+<div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"><div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;"></div></div>
+</div>

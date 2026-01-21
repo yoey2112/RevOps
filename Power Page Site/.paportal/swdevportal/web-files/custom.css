@@ -1,0 +1,22 @@
+/* Hide Redeem invitation and Register */
+li[role="none"] a[aria-label="Redeem invitation"],
+li:has(a[aria-label="Redeem invitation"]),
+li[role="none"] a[aria-label="Utiliser une invitation"],
+li:has(a[aria-label="Utiliser une invitation"]),
+li[role="none"] a[aria-label="Register"],
+li:has(a[aria-label="Register"]),
+li[role="none"] a[aria-label="S'inscrire"],
+li:has(a[aria-label="S'inscrire"]) {
+    display: none;
+}
+
+/* Hide Profile */
+a[aria-label="Profile"] {
+    display: none;
+  }
+  li:has(> a[aria-label="Profile"]),
+  li:has(> a[aria-label="Profil"]),
+  li:has(> a[aria-label="Profile"]) + li.dropdown-divider,
+  li:has(> a[aria-label="Profil"]) + li.dropdown-divider {
+    display: none;
+  }

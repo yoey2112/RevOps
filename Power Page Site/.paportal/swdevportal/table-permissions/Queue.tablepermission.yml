@@ -1,0 +1,17 @@
+adx_accountrelationship: 
+adx_append: true
+adx_appendto: true
+adx_contactrelationship: 
+adx_create: false
+adx_delete: false
+adx_entitylogicalname: queue
+adx_entityname: Queue
+adx_entitypermission_webrole:
+- 84ebb80b-2d71-49ea-9981-a179596c582d
+- f787065a-aaea-4b96-abec-66af0e2f8a37
+adx_entitypermissionid: de8b0206-165e-4063-837b-aa366b6c08d6
+adx_parententitypermission: 
+adx_parentrelationship: 
+adx_read: true
+adx_scope: 756150000
+adx_write: false

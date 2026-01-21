@@ -1,0 +1,16 @@
+adx_accountrelationship: 
+adx_append: true
+adx_appendto: false
+adx_contactrelationship: 
+adx_create: true
+adx_delete: true
+adx_entitylogicalname: annotation
+adx_entityname: Case Notes where contact is customer
+adx_entitypermission_webrole:
+- f787065a-aaea-4b96-abec-66af0e2f8a37
+adx_entitypermissionid: 9afcffd8-c961-4e48-b66a-1ae4d1e30f7b
+adx_parententitypermission: 09259fcd-59be-44ce-87b8-deba35a9b81a
+adx_parentrelationship: Incident_Annotation
+adx_read: true
+adx_scope: 756150003
+adx_write: true

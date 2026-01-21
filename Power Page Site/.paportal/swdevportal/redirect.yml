@@ -1,0 +1,31 @@
+- adx_inboundurl: /fr-fr/redirect-french
+  adx_name: Redirect FR
+  adx_redirectid: 1bd28f08-7053-f011-877a-002248b3648e
+  adx_redirecturl: https://swdevportal.powerappsportals.com/fr-fr/knowledge-base/articles/KA-01683
+  adx_statuscode: 302
+- adx_inboundurl: /redirect-test
+  adx_name: Redirect test 2
+  adx_redirectid: 691c54f9-6753-f011-877b-6045bd5e3f6b
+  adx_redirecturl: https://swdevportal.powerappsportals.com/en-us/knowledge-base/articles/KA-01683
+  adx_statuscode: 302
+  statecode: 1
+  statuscode: 2
+- adx_inboundurl: /redirect-french
+  adx_name: Redirect FR 2
+  adx_redirectid: 9f7abb26-7053-f011-877a-002248b3648e
+  adx_redirecturl: https://swdevportal.powerappsportals.com/fr-fr/knowledge-base/articles/KA-01683
+  adx_statuscode: 302
+  statecode: 1
+  statuscode: 2
+- adx_inboundurl: /redirect-test2
+  adx_name: Redirect test 3
+  adx_redirectid: ba805398-6d53-f011-877a-002248b3648e
+  adx_redirecturl: https://swdevportal.powerappsportals.com/en-us/knowledge-base/articles/KA-01683
+  adx_statuscode: 302
+  statecode: 1
+  statuscode: 2
+- adx_inboundurl: /en-US/redirect-test
+  adx_name: Redirect test
+  adx_redirectid: c0af033c-6853-f011-877a-002248b159a4
+  adx_redirecturl: https://swdevportal.powerappsportals.com/en-us/knowledge-base/articles/KA-01683
+  adx_statuscode: 302

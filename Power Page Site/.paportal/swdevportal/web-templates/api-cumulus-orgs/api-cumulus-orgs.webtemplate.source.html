@@ -1,0 +1,39 @@
+{% assign accountid = request.params.accountid | default: '' | downcase %}
+{% layout none %}
+{% response_type application/json %}
+
+{% comment %}
+- Returns the Cumulus Orgs under a given Cumulus Account as JSON.
+- Requires: Site Setting "Enable Table Permissions" = true and a Read Table Permission
+  on revops_cumulusorganization assigned to the user’s web role.
+{% endcomment %}
+
+{% assign guid_pattern = '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$' %}
+{% if accountid matches guid_pattern %}
+
+  {% fetchxml cumulus_orgs %}
+    <fetch no-lock='true' top='500'>
+      <entity name='revops_cumulusorganization'>
+        <attribute name='revops_cumulusorganizationid' />
+        <attribute name='revops_name' />
+        <filter>
+          <!-- lookup to Cumulus Account on the org table -->
+          <condition attribute='revops_cumulusaccount' operator='eq' value='{{ accountid }}' />
+        </filter>
+      </entity>
+    </fetch>
+  {% endfetchxml %}
+
+  {
+    "value": [
+      {% for r in cumulus_orgs.results %}
+      {
+        "revops_cumulusorganizationid": "{{ r.revops_cumulusorganizationid }}",
+        "revops_name": {{ r.revops_name | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+{% else %}
+  { "value": [], "error": "invalid_or_missing_accountid" }
+{% endif %}

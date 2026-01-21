@@ -1,0 +1,18 @@
+adx_accountrelationship: 
+adx_append: true
+adx_appendto: true
+adx_contactrelationship: 
+adx_create: false
+adx_delete: false
+adx_entitylogicalname: revops_solution
+adx_entityname: Solution
+adx_entitypermission_webrole:
+- 392c7e39-ce95-41ca-ae02-373ce3b7ddfa
+- 84ebb80b-2d71-49ea-9981-a179596c582d
+- f787065a-aaea-4b96-abec-66af0e2f8a37
+adx_entitypermissionid: b15343e0-0c0d-4d48-bf23-bf4317ee3b65
+adx_parententitypermission: 
+adx_parentrelationship: 
+adx_read: true
+adx_scope: 756150000
+adx_write: false

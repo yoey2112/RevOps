@@ -1,0 +1,192 @@
+<!-- =========== P2P Gateway & Form =========== -->
+<div class="row sectionBlockLayout text-start" style="display:flex;flex-wrap:wrap;margin:0;padding:8px;">
+  <div class="container" style="display:flex;flex-wrap:wrap;">
+    <div class="col-lg-12 columnBlockLayout" style="flex-grow:1;display:flex;flex-direction:column;min-width:250px;padding:16px;margin:60px 0;">
+      
+      <!-- Consent Panel -->
+      <div id="p2p-consent-panel" class="p2p-consent-panel" style="padding: 20px 40px; margin-bottom: 30px;">
+        <h2>Partner-to-Partner (P2P) Transfer Request</h2>
+        <p><strong>What is a Partner-to-Partner (P2P) Transfer?</strong></p>
+        <p>Bacon ipsum dolor amet brisket kevin pork chop shoulder, hamburger alcatra boudin strip steak. Landjaeger bresaola capicola chuck burgdoggen tri-tip spare ribs flank pastrami turducken venison prosciutto cupim pork belly.</p>
+        
+        <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-bottom: 20px;">
+          <p><strong>IMPORTANT NOTICE</strong></p>
+          <p>Pancetta kielbasa beef ribs pork loin ham hock salami fatback. Short ribs ribeye andouille, pig venison tongue doner sirloin jerky tail swine. Corned beef drumstick beef short loin boudin flank frankfurter pork chop strip steak bresaola.</p>
+        </div>
+
+        <h3>Before proceeding, please confirm the following:</h3>
+        <ul>
+          <li>Bacon strip steak tri-tip kevin porchetta bresaola meatball</li>
+          <li>Ground round boudin filet mignon chuck leberkas picanha</li>
+          <li>Landjaeger sausage chicken t-bone jerky ball tip</li>
+          <li>Pork belly biltong frankfurter tenderloin drumstick</li>
+        </ul>
+
+        <h3>Important notes:</h3>
+        <ul>
+          <li>Turducken ham hock short loin swine capicola shoulder burgdoggen bresaola</li>
+          <li>Prosciutto meatloaf ribeye beef sirloin spare ribs alcatra kielbasa</li>
+          <li>Venison pork loin jowl corned beef fatback tail pork chop</li>
+          <li>Salami pastrami cupim pig doner flank shankle tongue chuck</li>
+        </ul>
+
+        <div class="p2p-consent-actions" style="margin-top: 30px;">
+          <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 4px;">
+            <label style="display: block; font-size: 16px;">
+              <input type="checkbox" id="p2p-consent-checkbox" style="margin-right: 8px;" />
+              I have read and agree to the bacon ipsum above, and I understand that ham hock filet mignon brisket is required for this transfer request.
+            </label>
+          </div>
+          <button id="p2p-consent-continue" disabled="" style="background-color: #cccccc; color: white; border: none; padding: 12px 32px; font-size: 16px; font-weight: bold; border-radius: 4px; cursor: not-allowed; transition: background-color 0.3s; opacity: 0.6;">I Understand</button>
+        </div>
+      </div>
+
+      <!-- Form Panel (hidden by default) -->
+      <div id="p2p-form-panel" style="display: none;">
+        {% entityform name: 'Case - Create P2P from Portal' %}
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- P2P Organizations Data Loader -->
+{% fetchxml allOrgsQuery %}
+<fetch>
+  <entity name="revops_cumulusorganization">
+    <attribute name="revops_cumulusorganizationid" />
+    <attribute name="revops_name" />
+    <link-entity name="revops_cumulusaccount" from="revops_cumulusaccountid" to="revops_cumulusaccount" alias="account">
+      <attribute name="revops_cumulusaccountid" />
+      <link-entity name="account" from="accountid" to="revops_account" alias="parentaccount">
+        <attribute name="accountid" />
+        <attribute name="name" />
+      </link-entity>
+    </link-entity>
+    <link-entity name="revops_platformsettings" from="revops_organization" to="revops_cumulusorganizationid" alias="aa" link-type="inner">
+      <filter type="and">
+        <condition attribute="revops_organization" operator="not-null" />
+      </filter>
+    </link-entity>
+    <filter type="and">
+      <condition attribute="statecode" operator="eq" value="0" />
+    </filter>
+    <order attribute="revops_name" descending="false" />
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+{% fetchxml accountsQuery %}
+<fetch>
+  <entity name="revops_cumulusaccount">
+    <attribute name="revops_cumulusaccountid" />
+    <attribute name="revops_name" />
+    <attribute name="revops_iso3166alpha2countrycode" />
+    <filter type="and">
+      <condition attribute="statecode" operator="eq" value="0" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+{% fetchxml regionQuery %}
+<fetch>
+  <entity name="msdyn_region">
+    <attribute name="msdyn_regionid" />
+    <attribute name="msdyn_name" />
+    <attribute name="msdyn_regioncode" />
+    <filter type="and">
+      <condition attribute="statecode" operator="eq" value="0" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+{% fetchxml subjectQuery %}
+<fetch top="1">
+  <entity name="subject">
+    <attribute name="subjectid" />
+    <attribute name="title" />
+    <filter type="and">
+      <condition attribute="title" operator="eq" value="CSP - P2P" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+{% fetchxml serviceQuery %}
+<fetch top="1">
+  <entity name="revops_service">
+    <attribute name="revops_serviceid" />
+    <attribute name="revops_name" />
+    <filter type="and">
+      <condition attribute="revops_name" operator="eq" value="Microsoft 365" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+{% fetchxml queueQuery %}
+<fetch top="1">
+  <entity name="queue">
+    <attribute name="queueid" />
+    <attribute name="name" />
+    <filter type="and">
+      <condition attribute="name" operator="eq" value="Technical Onboarding" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+<script id="p2p-orgs-data" type="application/json">
+[
+  {% assign orgs = allOrgsQuery.results.entities %}
+  {% for org in orgs %}
+  {
+    "id": "{{ org.revops_cumulusorganizationid }}",
+    "name": "{{ org.revops_name | escape }}",
+    "accountGuid": "{{ org['account.revops_cumulusaccountid'] }}",
+    "parentAccountGuid": "{{ org['parentaccount.accountid'] }}",
+    "parentAccountName": "{{ org['parentaccount.name'] | escape }}"
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+</script>
+
+<script id="p2p-accounts-data" type="application/json">
+[
+  {% assign accounts = accountsQuery.results.entities %}
+  {% for account in accounts %}
+  {
+    "id": "{{ account.revops_cumulusaccountid }}",
+    "name": "{{ account.revops_name | escape }}",
+    "iso2Code": "{{ account.revops_iso3166alpha2countrycode }}"
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+</script>
+
+<script id="p2p-regions-data" type="application/json">
+[
+  {% assign regions = regionQuery.results.entities %}
+  {% for region in regions %}
+  {
+    "id": "{{ region.msdyn_regionid }}",
+    "name": "{{ region.msdyn_name | escape }}",
+    "code": "{{ region.msdyn_regioncode }}"
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+</script>
+
+<script id="p2p-config-data" type="application/json">
+{
+  "subjectId": "{% assign subject = subjectQuery.results.entities[0] %}{{ subject.subjectid }}",
+  "subjectName": "{{ subject.title | escape }}",
+  "serviceId": "{% assign service = serviceQuery.results.entities[0] %}{{ service.revops_serviceid }}",
+  "serviceName": "{{ service.revops_name | escape }}",
+  "queueId": "{% assign queue = queueQuery.results.entities[0] %}{{ queue.queueid }}",
+  "queueName": "{{ queue.name | escape }}"
+}
+</script>
+

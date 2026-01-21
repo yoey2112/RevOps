@@ -1,0 +1,32 @@
+adx_attachfilelabel: >-
+  [
+    {
+      "LCID": 1033,
+      "Value": ""
+    }
+  ]
+adx_attachfilemaxsize: 
+adx_attachfilestoragelocation: 756150000
+adx_captcharequired: false
+adx_entityformid: e8c77cbe-e5b2-44c6-aa2d-2353a16eeffc
+adx_entityname: incident
+adx_entitypermissionsenabled: true
+adx_entitysourcetype: 0
+adx_formname: Create Case - CS - Complain about a Case
+adx_geolocation_maptype: 756150000
+adx_hideformonsuccess: true
+adx_maximumnooffiles: 5
+adx_mode: 100000000
+adx_name: Create Case - Complain about a Case
+adx_onsuccess: 756150000
+adx_recordidquerystringparametername: 
+adx_redirecturl: 
+adx_redirectwebpage: fae4d40d-9790-4e7e-067e-9a875b38f32b
+adx_showcaptchaforauthenticatedusers: false
+adx_successmessage: >-
+  [
+    {
+      "LCID": 1033,
+      "Value": ""
+    }
+  ]

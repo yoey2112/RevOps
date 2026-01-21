@@ -1,0 +1,149 @@
+<div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+  <div class="container" style="display: flex; flex-wrap: wrap;">
+    <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; padding: 16px; margin: 60px 0px;">
+      <div id="google-consent-panel" class="google-consent-panel" style="padding: 20px 40px; margin-bottom: 30px;">
+        <h2>Google Workspace (formerly G Suite) Transfer Request</h2>
+        
+        <p>To transfer the management of your Google Workspace account to Sherweb, please follow these steps:</p>
+        
+        <ol style="line-height: 1.8; margin-bottom: 20px;">
+          <li>The super administrator must log in to the <a href="https://admin.google.com/ac/resellermanagement" target="_blank">Google Admin Console</a>.</li>
+          <li>Navigate to <strong>Subscriptions from resellers</strong> or <strong>Subscriptions from Google</strong>, locate the subscription you want to transfer, and click <strong>Transfer</strong>.</li>
+          <li>Enter Sherweb's Reseller Public Identifier:
+            <ul style="margin-top: 10px;">
+              <li><strong>Canada:</strong> <code>C02colqvw-C020ge076</code></li>
+              <li><strong>US/Worldwide:</strong> <code>C00t4gr7m-C020ge076</code></li>
+            </ul>
+          </li>
+          <li>Click <strong>Continue</strong>.</li>
+          <li>For each product group you want to transfer, select <strong>Transfer to Sherweb</strong>.</li>
+          <li>If multiple product groups appear and you don't want to transfer all of them, select <strong>Keep with [current reseller name]</strong> or <strong>Keep with Google</strong> for those you wish to retain.</li>
+          <li>Click <strong>Continue</strong>.</li>
+          <li>Check the box to agree to the terms and conditions, then click <strong>Generate Transfer Authorization</strong>.</li>
+          <li>A confirmation pop-up will appear stating: <em>"Transfer Authorization generated successfully."</em></li>
+        </ol>
+        
+        <p>For more details, refer to <a href="https://support.google.com/a/answer/7643791?hl=en#zippy=%2Creview-transfer-limitations" target="_blank">Google's official policy</a>.</p>
+        
+        <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0;">
+          <p><strong>DISCLAIMER:</strong> Please note that Google does not offer refunds or credits for annual-paid Google Workspace plans when transferring to a new reseller. To avoid financial loss, we recommend waiting until your subscription renewal date before initiating a transfer.</p>
+          <p style="margin-bottom: 0;">For more details, refer to <a href="https://support.google.com/a/answer/7643791?hl=en&sjid=10110189143766273595-NC#zippy=%2cunderstand-billing-impacts" target="_blank">Google's official policy</a>.</p>
+        </div>
+        
+        <div class="google-consent-actions" style="margin-top: 30px;">
+          <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 4px;">
+            <label style="display: block; font-size: 16px;">
+              <input type="checkbox" id="google-consent-checkbox" style="margin-right: 8px;" />
+              I have read and completed the steps above, and I am ready to submit a Google Workspace transfer request.
+            </label>
+          </div>
+          <button id="google-consent-continue" disabled="" style="background-color: #ff6600; color: white; border: none; padding: 12px 32px; font-size: 16px; font-weight: bold; border-radius: 4px; cursor: pointer; transition: background-color 0.3s;">Continue to request form</button>
+        </div>
+      </div>
+      
+      <div id="google-form-panel" style="display: none;">{% entityform name: 'Google Transfer' %}</div>
+    </div>
+  </div>
+</div>
+
+{% fetchxml orgsQuery %}
+<fetch>
+  <entity name="revops_cumulusorganization">
+    <attribute name="revops_cumulusorganizationid" />
+    <attribute name="revops_name" />
+    <link-entity name="revops_cumulusaccount" from="revops_cumulusaccountid" to="revops_cumulusaccount" link-type="outer" alias="account">
+      <attribute name="revops_cumulusaccountid" />
+      <attribute name="revops_name" />
+    </link-entity>
+    <filter type="and">
+      <condition attribute="statecode" operator="eq" value="0" />
+    </filter>
+    <order attribute="revops_name" descending="false" />
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+{% fetchxml accountsQuery %}
+<fetch top="5000">
+  <entity name="revops_cumulusaccount">
+    <attribute name="revops_cumulusaccountid"/>
+    <attribute name="revops_name"/>
+    <filter>
+      <condition attribute="statecode" operator="eq" value="0"/>
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+{% fetchxml subjectQuery %}
+<fetch top="1">
+  <entity name="subject">
+    <attribute name="subjectid"/>
+    <attribute name="title"/>
+    <filter>
+      <condition attribute="title" operator="eq" value="CSP Transfer"/>
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+{% fetchxml serviceQuery %}
+<fetch top="1">
+  <entity name="revops_service">
+    <attribute name="revops_serviceid"/>
+    <attribute name="revops_name"/>
+    <filter>
+      <condition attribute="revops_name" operator="eq" value="Google Workspace"/>
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+{% fetchxml queueQuery %}
+<fetch top="1">
+  <entity name="queue">
+    <attribute name="queueid"/>
+    <attribute name="name"/>
+    <filter>
+      <condition attribute="name" operator="eq" value="Client Ops"/>
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+<script id="google-orgs-data" type="application/json">
+[
+  {% assign orgs = orgsQuery.results.entities %}
+  {% for org in orgs %}
+  {
+    "id": "{{ org.revops_cumulusorganizationid }}",
+    "name": "{{ org.revops_name | escape }}",
+    "cumulusAccountId": "{{ org['account.revops_cumulusaccountid'] }}",
+    "cumulusAccountName": "{{ org['account.revops_name'] | escape }}"
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+</script>
+
+<script id="google-accounts-data" type="application/json">
+[
+  {% assign accounts = accountsQuery.results.entities %}
+  {% for account in accounts %}
+  {
+    "id": "{{ account.revops_cumulusaccountid }}",
+    "name": "{{ account.revops_name | escape }}"
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+</script>
+
+<script id="google-config-data" type="application/json">
+{
+  "subjectId": "{% if subjectQuery.results.entities.size > 0 %}{{ subjectQuery.results.entities[0].subjectid }}{% endif %}",
+  "subjectName": "{% if subjectQuery.results.entities.size > 0 %}{{ subjectQuery.results.entities[0].title }}{% endif %}",
+  "serviceId": "{% if serviceQuery.results.entities.size > 0 %}{{ serviceQuery.results.entities[0].revops_serviceid }}{% endif %}",
+  "serviceName": "{% if serviceQuery.results.entities.size > 0 %}{{ serviceQuery.results.entities[0].revops_name }}{% endif %}",
+  "queueId": "{% if queueQuery.results.entities.size > 0 %}{{ queueQuery.results.entities[0].queueid }}{% endif %}",
+  "queueName": "{% if queueQuery.results.entities.size > 0 %}{{ queueQuery.results.entities[0].name }}{% endif %}"
+}
+</script>

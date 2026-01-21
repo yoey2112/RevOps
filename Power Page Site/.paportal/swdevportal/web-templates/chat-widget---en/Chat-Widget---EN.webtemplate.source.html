@@ -1,0 +1,75 @@
+<script src="https://kit.fontawesome.com/824c7bc1b6.js"></script>
+<script>
+    function style() {
+        return{
+            chatButtonProps: {
+                controlProps: {
+                    hideChatTextContainer: true,
+                    id: "customChatButton"
+                },
+                styleProps: {
+                    generalStyleProps: {
+                        minWidth: "60px",
+                        width: "60px",
+                        height: "60px"
+                    }
+                },
+                iconStyleProps: {
+                width: "50px",
+                height: "50px",
+                cursor: "pointer",
+                backgroundColor: "transparent",
+                borderStyle: "none",
+                margin: "0px"
+                },
+                headerProps: {
+                    headerTitleProps: {
+                        text: "Chat with us"
+                    }
+                }
+            },
+           
+            loadingPaneProps: {
+                controlProps: {
+                    titleText: "",
+                    subtitleText: "",
+                    hideSpinnerText: true,
+                    spinnerSize: 3
+                },
+            }
+        };
+    }
+
+setTimeout(() => {
+    let chatButton = document.querySelector("#customChatButton");
+    if (chatButton) {
+        chatButton.innerHTML = '<i class="fas fa-comment" style="color: white; font-size: 40px;"></i>';
+    }
+}, 1000);
+
+</script>
+<script 
+    v2
+    id="Microsoft_Omnichannel_LCWidget"
+    src="https://oc-cdn-public.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js"
+    data-app-id="12495120-70a5-49bb-908d-3f9eb30f72f4" 
+    data-lcw-version="prod"
+    data-org-id="5bd79da4-af21-ef11-8407-0022486dacf1"
+    data-org-url="https://m-5bd79da4-af21-ef11-8407-0022486dacf1.ca.omnichannelengagementhub.com"
+    data-customization-callback="style"
+    data-color-override="#ed573c"
+    data-font-family-override="Montserrat, Arial">
+</script>
+
+<!-- <script 
+    v2 
+    id="Microsoft_Omnichannel_LCWidget" 
+    src="https://oc-cdn-public.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js" 
+    data-app-id="2b027e25-455d-4931-9819-901d480291d4" 
+    data-lcw-version="prod" 
+    data-org-id="536d3c28-6123-ef11-8406-6045bd5bd4f3" 
+    data-org-url="https://m-536d3c28-6123-ef11-8406-6045bd5bd4f3.ca.omnichannelengagementhub.com"
+    data-customization-callback="style"
+    data-color-override="#ed573c"
+    data-font-family-override="Montserrat, Arial">
+</script> -->

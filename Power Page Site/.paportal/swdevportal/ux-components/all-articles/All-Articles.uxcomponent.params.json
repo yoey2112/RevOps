@@ -1,0 +1,90 @@
+{
+  "layout": {
+    "id": "layout3",
+    "options": {
+      "rearrangeEnabled": {
+        "image": true,
+        "title": true,
+        "description": true,
+        "button": true,
+        "textHyperlink": true,
+        "customText1": true,
+        "customText2": true
+      },
+      "hidden": {
+        "image": true,
+        "title": false,
+        "description": false,
+        "button": false,
+        "textHyperlink": true,
+        "customText1": true,
+        "customText2": true
+      },
+      "index": {
+        "image": 0,
+        "title": 1,
+        "description": 2,
+        "button": 3,
+        "textHyperlink": 4,
+        "customText1": 5,
+        "customText2": 6
+      },
+      "searchEnabled": false,
+      "buttonLinkAdjacent": false
+    },
+    "configurations": {
+      "gallery": {
+        "type": "grid",
+        "overflow": "scroll",
+        "cards": {
+          "elements": {
+            "button": {
+              "openInNewTab": false,
+              "appearance": "primary"
+            },
+            "textHyperlink": {
+              "openInNewTab": false,
+              "linkStyle": "underline"
+            },
+            "customText1": "p",
+            "customText2": "p",
+            "image": {
+              "size": "scale_to_fill"
+            },
+            "title": "h2",
+            "description": "p"
+          }
+        }
+      }
+    }
+  },
+  "data": {
+    "entityLogicalName": "knowledgearticle",
+    "viewId": "14a1c51e-ce8a-47a2-8088-e004fa7ca953",
+    "elements": {
+      "image": "",
+      "title": "title",
+      "description": "articlepublicnumber",
+      "button": {
+        "label": "",
+        "labelType": "",
+        "linkType": "",
+        "hyperlink": ""
+      },
+      "textHyperlink": {
+        "label": "",
+        "labelType": "",
+        "linkType": "",
+        "hyperlink": ""
+      },
+      "customText1": "",
+      "customText2": ""
+    }
+  },
+  "name": "",
+  "style": {
+    "gallery": {
+      "overflow": "scroll"
+    }
+  }
+}

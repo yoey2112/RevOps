@@ -1,0 +1,128 @@
+- adx_name: Restrict Read on View Case
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole: []
+  adx_webpageaccesscontrolruleid: 05b23928-7e1e-b8c2-5b4c-d006b73187d4
+  adx_webpageid: 41173efe-f763-f4b9-63e3-076608339a76
+  statecode: 1
+  statuscode: 2
+- adx_name: Restrict Read on My Tickets
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - f787065a-aaea-4b96-abec-66af0e2f8a37
+  adx_webpageaccesscontrolruleid: 0c5a5db5-a75a-6471-286b-ba08c7533bbb
+  adx_webpageid: fae4d40d-9790-4e7e-067e-9a875b38f32b
+- adx_name: Restrict Read on Migration Confirmation
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - f787065a-aaea-4b96-abec-66af0e2f8a37
+  adx_webpageaccesscontrolruleid: 0d0e9b07-2111-2062-61df-d5c03e6655f8
+  adx_webpageid: 93eb8e48-3e83-e432-433a-ea2fb66069b4
+- adx_name: Restrict Read on CSP Transfer
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 84ebb80b-2d71-49ea-9981-a179596c582d
+  - f787065a-aaea-4b96-abec-66af0e2f8a37
+  adx_webpageaccesscontrolruleid: 0edd86ee-12c1-c1fa-79e2-b12e7e7d1eaa
+  adx_webpageid: 88922f3b-424c-70da-3a34-b7f45e44d2d4
+- adx_name: Restrict Read on CSP GoDaddy Transfer
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 84ebb80b-2d71-49ea-9981-a179596c582d
+  - f787065a-aaea-4b96-abec-66af0e2f8a37
+  adx_webpageaccesscontrolruleid: 369e32e0-b024-bd67-29a4-650a31b70130
+  adx_webpageid: eaf62c34-5e43-0cc1-a45e-201e0376a1f0
+- adx_name: Restrict Read on P2P Transfer
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - f787065a-aaea-4b96-abec-66af0e2f8a37
+  adx_webpageaccesscontrolruleid: 48272be4-dc2e-3bf1-600e-b688f3bdc90d
+  adx_webpageid: 49def57f-7f0a-e684-a583-66c65ed40af2
+- adx_name: Restrict Read on Migration Details
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - f787065a-aaea-4b96-abec-66af0e2f8a37
+  adx_webpageaccesscontrolruleid: 647c5e16-b683-3ec1-5ff3-57c96c51fe8a
+  adx_webpageid: 76a41bec-beab-0af0-7292-dc9293f013e3
+- adx_name: Restrict Read on debug
+  adx_right: 2
+  adx_scope: 2
+  adx_webpageaccesscontrolrule_webrole:
+  - 84ebb80b-2d71-49ea-9981-a179596c582d
+  adx_webpageaccesscontrolruleid: 6fa6d944-2150-7394-2f27-6b248fb4e085
+  adx_webpageid: 59384eda-a14e-cf5a-e3c2-800c3280862f
+- adx_name: Restrict Read on New Migration Request
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - f787065a-aaea-4b96-abec-66af0e2f8a37
+  adx_webpageaccesscontrolruleid: 76d544c8-e664-3ab1-0109-5d89b332bdfb
+  adx_webpageid: e248a65f-045f-4836-5511-6ba934fbaaaf
+- adx_name: Restrict Read on P2P Transfer
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 84ebb80b-2d71-49ea-9981-a179596c582d
+  - f787065a-aaea-4b96-abec-66af0e2f8a37
+  adx_webpageaccesscontrolruleid: 80f5878c-c33d-58a8-79ce-001bcd2b112a
+  adx_webpageid: 65eb99ba-a128-7f6e-9b2b-ee6f35a46c73
+- adx_name: Restrict Read on View Knowledge Article
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole: []
+  adx_webpageaccesscontrolruleid: 829b702f-ea09-9478-1b95-dec14332e6b2
+  adx_webpageid: 1de93212-c458-618a-858e-6bdcd876c31a
+  statecode: 1
+  statuscode: 2
+- adx_name: Restrict Read on New License Adjustment Request
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - f787065a-aaea-4b96-abec-66af0e2f8a37
+  adx_webpageaccesscontrolruleid: 8958a157-9a6a-b5b5-a42d-37b777cd5844
+  adx_webpageid: 2c4539ef-3c52-d96a-8f55-b99e2ce82240
+- adx_name: Restrict Read on Google Transfer
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 84ebb80b-2d71-49ea-9981-a179596c582d
+  - f787065a-aaea-4b96-abec-66af0e2f8a37
+  adx_webpageaccesscontrolruleid: 97a3a3fa-3539-92f2-0a6c-03e41dc06ce9
+  adx_webpageid: 061080d3-9ee6-272b-eb49-cb5c835f7f42
+- adx_name: Grant Change to Administrators
+  adx_right: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 84ebb80b-2d71-49ea-9981-a179596c582d
+  adx_webpageaccesscontrolruleid: abd7cc9c-cc7e-4266-9a7a-25b012699c8c
+  adx_webpageid: 60419c17-9d55-4eb3-b9d8-a0f182dc38e2
+- adx_name: Restrict Read on Escalate Case
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - f787065a-aaea-4b96-abec-66af0e2f8a37
+  adx_webpageaccesscontrolruleid: bf42b09d-30c6-094e-7d52-814406397c54
+  adx_webpageid: 0dfe949d-82a8-1efe-eb73-88ec9bc32855
+- adx_name: Restrict Read on License Adjustment Details
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - f787065a-aaea-4b96-abec-66af0e2f8a37
+  adx_webpageaccesscontrolruleid: cd9d1e56-804e-6f30-fb81-607591d66396
+  adx_webpageid: 41962b14-4da8-858a-c6b4-480ccfe0de69
+- adx_name: Grant Change to Content
+  adx_right: 1
+  adx_webpageaccesscontrolruleid: eaa8d3eb-7cc8-4291-a461-fcc743e4dfa1
+- adx_name: Restrict Read on CSP Transfer
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 84ebb80b-2d71-49ea-9981-a179596c582d
+  - f787065a-aaea-4b96-abec-66af0e2f8a37
+  adx_webpageaccesscontrolruleid: f0a6ff96-bec6-47d2-4f24-5ce9cec5198a
+  adx_webpageid: 62715298-745d-835e-9874-cefbd2da41d1

@@ -1,0 +1,15 @@
+adx_accountrelationship: 
+adx_append: true
+adx_appendto: true
+adx_contactrelationship: 
+adx_create: false
+adx_delete: false
+adx_entitylogicalname: activitypointer
+adx_entityname: Activity Pointer on Case where account of the contact is customer
+adx_entitypermission_webrole: []
+adx_entitypermissionid: a8f9f40d-1356-4a26-a10c-38dad719c051
+adx_parententitypermission: 8a5fe991-d5f7-4146-900d-5802cf24d72a
+adx_parentrelationship: Incident_ActivityPointers
+adx_read: true
+adx_scope: 756150003
+adx_write: false

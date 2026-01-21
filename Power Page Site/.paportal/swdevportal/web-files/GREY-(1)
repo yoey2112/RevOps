@@ -1,0 +1,110 @@
+
+$presetThemeId: f21551a1-7244-432f-ad88-220609e070d3;
+$isModified: true;
+
+$name: GREY;
+
+$color1: #1C1C45;
+$color2: #ED573C;
+$color3: #00b4ff;
+$color4: #ed573c;
+$color5: #0061AA;
+$color6: #5C5A58;
+$color7: #FFFFFF;
+$color8: #000000;
+$color9: #191817;
+$color10: #ffffff;
+$color11: #e3e3e3;
+$color12: #f8f8f8;
+
+$primaryColor: $color2;
+$headerColor: $color1;
+$headerMenuTextColor: $color7;
+$headerMenuHoverColor: $color4;
+$bodyBackground: $color7;
+$footerColor: $color9;
+$footerTextColor: $color7;
+$footerTextFont: Montserrat;
+$footerTextWeight: 400;
+$footerTextSize: 16;
+
+$headerMenuTextFont: Montserrat;
+$headerMenuTextWeight: 400;
+$headerMenuTextSize: 20;
+$headerMenuHoverStyle: Plain text;
+
+$siteTitlecolor: $color8;
+$siteTitlefont: Montserrat;
+$siteTitleweight: 400;
+$siteTitlesize: 30;
+
+$h1font: Montserrat;
+$h1weight: 400;
+$h1size: 40;
+$h1color: $color8;
+
+$h2font: Montserrat;
+$h2weight: 400;
+$h2size: 36;
+$h2color: $color8;
+
+$h3font: Montserrat;
+$h3weight: 400;
+$h3size: 24;
+$h3color: $color8;
+
+$h4font: Montserrat;
+$h4weight: 700;
+$h4size: 24;
+$h4color: $color8;
+
+$h5font: Montserrat;
+$h5weight: 700;
+$h5size: 14;
+$h5color: $color8;
+
+$p1font: Montserrat;
+$p1weight: 400;
+$p1size: 20;
+$p1color: $color8;
+
+$p2font: Arial;
+$p2weight: 400;
+$p2size: 16;
+$p2color: $color8;
+
+$afont: Montserrat;
+$aweight: 400;
+$asize: 14;
+$atextcolor: $color4;
+$astyle: Plain text;
+$aonhoverstyle: Underline;
+$aonhovertextcolor: $color9;
+
+$button1style: Filled;
+$button1radius: 2;
+$button1font: Montserrat;
+$button1weight: 600;
+$button1size: 14;
+$button1fillcolor: $color4;
+$button1textcolor: $color7;
+$button1onhoverstyle: Filled;
+$button1onhoverfillcolor: $color9;
+$button1onhovertextcolor: $color7;
+
+$button2style: Outline;
+$button2radius: 2;
+$button2font: Montserrat;
+$button2weight: 600;
+$button2size: 14;
+$button2fillcolor: $color4;
+$button2textcolor: $color4;
+$button2onhoverstyle: Filled;
+$button2onhoverfillcolor: $color4;
+$button2onhovertextcolor: $color7;
+
+$sectioncolumnmargintopbottom: ;
+$sectioncolumnmarginunit: inherit;
+$sectioncolumnpaddingunit: px;
+$sectioncolumncontentpadding: 16;
+
