@@ -1,5 +1,52 @@
 (function() {
   'use strict';
+  // Translation object for user-facing strings
+  const STRINGS = {
+    "en-us": {
+      selectOrgs: "Select Cumulus Organizations",
+      orgIndicatorNone: "Please Select at least 1 Organization",
+      orgIndicatorSome: "✓ {count} org(s) selected",
+      sourceCspNameDef: "The ‘Source CSP Name’ refers to the name of your current Cloud Solution Provider for your Microsoft 365 NCE services.",
+      sourceCspIdDef: "The Source CSP ID is the unique identifier assigned to your current Cloud Solution Provider. Please contact your current CSP to obtain their exact ID.",
+      transferTypeDef: "The Transfer Type indicates which services you want to move as part of this request. You can choose Microsoft NCE Licensing, Microsoft Azure Licensing, or both.",
+      attachmentDef: "Please attach an Excel file listing the expected licenses included in this transfer. The file should specify the license type and quantity for each item. This information helps us process your request accurately.",
+      attachmentRequired: "Attachment is required.",
+      loading: "Loading organizations...",
+      searchPlaceholder: "Search organizations...",
+      selectAll: "Select All",
+      noOrgs: "No organizations available for transfer for this account.",
+      cancel: "Cancel",
+      confirm: "Confirm Selection",
+      selectedCount: "{count} selected"
+    },
+    "fr-fr": {
+      selectOrgs: "Sélectionner les organisations Cumulus",
+      orgIndicatorNone: "Veuillez sélectionner au moins 1 organisation",
+      orgIndicatorSome: "✓ {count} organisation(s) sélectionnée(s)",
+      sourceCspNameDef: "Le « nom du CSP source » correspond au nom de votre fournisseur de solutions cloud actuel pour vos services Microsoft 365 NCE.",
+      sourceCspIdDef: "L’ID du CSP source est l’identifiant unique attribué à votre fournisseur de solutions cloud actuel. Veuillez contacter votre CSP actuel pour obtenir son ID exact.",
+      transferTypeDef: "Le type de transfert indique les services que vous souhaitez déplacer dans le cadre de cette demande. Vous pouvez choisir la licence Microsoft NCE, la licence Microsoft Azure ou les deux.",
+      attachmentDef: "Veuillez joindre un fichier Excel répertoriant les licences prévues dans ce transfert. Le fichier doit préciser le type de licence et la quantité pour chaque élément. Ces informations nous aident à traiter votre demande avec précision.",
+      attachmentRequired: "La pièce jointe est requise.",
+      loading: "Chargement des organisations...",
+      searchPlaceholder: "Rechercher des organisations...",
+      selectAll: "Tout sélectionner",
+      noOrgs: "Aucune organisation disponible pour le transfert pour ce compte.",
+      cancel: "Annuler",
+      confirm: "Confirmer la sélection",
+      selectedCount: "{count} sélectionné(s)"
+    }
+  };
+
+  // Robust language detection for translation
+  function getLangKey() {
+    let raw = (document.documentElement.lang || "en-US").toLowerCase();
+    raw = raw.replace('_', '-');
+    if (raw.startsWith('fr')) return 'fr-fr';
+    if (raw.startsWith('en')) return 'en-us';
+    return 'en-us';
+  }
+  const T = STRINGS[getLangKey()] || STRINGS["en-us"];
   
   const CONFIG = {
     fields: {
@@ -269,7 +316,7 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" style="margin: 3rem auto; max-height: calc(100vh - 6rem);">
           <div class="modal-content" style="max-height: calc(100vh - 6rem); display: flex; flex-direction: column;">
             <div class="modal-header" style="flex-shrink: 0;">
-              <h5 class="modal-title" id="p2pModalLabel">Select Cumulus Organizations</h5>
+              <h5 class="modal-title" id="p2pModalLabel">${T.selectOrgs}</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" style="padding: 0; display: flex; flex-direction: column; flex: 1; min-height: 0; overflow: hidden;">
@@ -278,26 +325,26 @@
                 <div class="spinner-border text-primary" role="status">
                   <span class="visually-hidden">Loading...</span>
                 </div>
-                <p class="mt-2 text-muted">Loading organizations...</p>
+                <p class="mt-2 text-muted">${T.loading}</p>
               </div>
               <div id="p2p-org-list" class="d-none" style="display: flex; flex-direction: column; flex: 1; overflow: hidden;">
                 <div class="p-3 pb-2 border-bottom" style="flex-shrink: 0;">
-                  <input type="text" class="form-control" id="p2p-org-search" placeholder="Search organizations..." aria-label="Search organizations">
+                  <input type="text" class="form-control" id="p2p-org-search" placeholder="${T.searchPlaceholder}" aria-label="${T.searchPlaceholder}">
                 </div>
                 <div class="d-flex align-items-center px-3 py-2 border-bottom" style="flex-shrink: 0;">
-                  <input class="form-check-input me-2" type="checkbox" id="p2p-select-all" aria-label="Select all organizations">
-                  <label class="form-check-label fw-bold mb-0" for="p2p-select-all">Select All</label>
+                  <input class="form-check-input me-2" type="checkbox" id="p2p-select-all" aria-label="${T.selectAll}">
+                  <label class="form-check-label fw-bold mb-0" for="p2p-select-all">${T.selectAll}</label>
                 </div>
                 <div id="p2p-org-checkboxes" style="flex: 1; overflow-y: auto; padding: 0.5rem 1rem;"></div>
               </div>
               <div id="p2p-org-empty" class="d-none alert alert-info m-3">
-                No organizations available for transfer for this account.
+                ${T.noOrgs}
               </div>
             </div>
             <div class="modal-footer">
-              <span id="p2p-org-count" class="me-auto text-muted" role="status" aria-live="polite">0 selected</span>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-primary" id="p2p-org-confirm">Confirm Selection</button>
+              <span id="p2p-org-count" class="me-auto text-muted" role="status" aria-live="polite">0 ${T.selectedCount.replace('{count}','')}</span>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">${T.cancel}</button>
+              <button type="button" class="btn btn-primary" id="p2p-org-confirm">${T.confirm}</button>
             </div>
           </div>
         </div>
@@ -544,10 +591,10 @@
     if (!indicator) return;
     
     if (selectedOrgGuids.length > 0) {
-      indicator.textContent = `✓ ${selectedOrgGuids.length} org(s) selected`;
+      indicator.textContent = T.orgIndicatorSome.replace('{count}', selectedOrgGuids.length);
       indicator.className = 'text-success fw-bold';
     } else {
-      indicator.textContent = 'Please Select at least 1 Organization';
+      indicator.textContent = T.orgIndicatorNone;
       indicator.className = 'text-danger fw-bold';
     }
   }
@@ -666,7 +713,7 @@
       button.id = 'p2p-select-orgs-btn';
       button.type = 'button';
       button.className = 'btn btn-sm btn-primary';
-      button.textContent = 'Select Organizations to Transfer';
+      button.textContent = T.selectOrgs;
       button.disabled = true;
       
       button.onclick = function(e) {
@@ -687,7 +734,7 @@
       const indicator = document.createElement('small');
       indicator.id = 'p2p-org-indicator';
       indicator.className = 'text-danger fw-bold';
-      indicator.textContent = 'Please Select at least 1 Organization';
+      indicator.textContent = T.orgIndicatorNone;
       
       buttonWrapper.appendChild(button);
       buttonWrapper.appendChild(indicator);
@@ -886,155 +933,87 @@
       setTimeout(attachFormSubmitValidation, 300);
       return;
     }
-    
-    console.log('[P2P VALIDATION] Form found, attaching validation');
-    
+
+    // Make attachment field required
+    setTimeout(function() {
+      const fileInput = form.querySelector('input[type="file"]');
+      if (fileInput) {
+        fileInput.setAttribute('required', 'required');
+        fileInput.setAttribute('aria-required', 'true');
+        // Add red asterisk to label
+        let label = fileInput.closest('.form-group, .field-wrapper, td, tr, section, div[class*="field"]');
+        if (label) {
+          label = label.querySelector('label');
+          if (label && !label.querySelector('.required-asterisk')) {
+            const asterisk = document.createElement('span');
+            asterisk.className = 'required-asterisk';
+            asterisk.style.cssText = 'color: red; margin-left: 4px;';
+            asterisk.textContent = '*';
+            label.appendChild(asterisk);
+          }
+        }
+      }
+    }, 1000);
+
     // Add validation to form submit
     form.addEventListener('submit', function(e) {
-      console.log('[P2P VALIDATION] Form submit event fired');
-      
+      let isValid = true;
+      let errorMessage = '';
+
+      // Validate attachment
+      const fileInput = form.querySelector('input[type="file"]');
+      if (fileInput && fileInput.required && fileInput.files.length === 0) {
+        isValid = false;
+        errorMessage += '• ' + T.attachmentRequired + '\n';
+        fileInput.style.borderColor = 'red';
+        fileInput.style.borderWidth = '2px';
+      }
+
+      // Existing validation for "Other" logic
       const losingCompetitorName = getLookupName(CONFIG.fields.losingCompetitor);
       const nameValue = losingCompetitorName ? losingCompetitorName.value.toLowerCase().trim() : '';
-      
-      console.log('[P2P VALIDATION] Losing Competitor value:', nameValue);
-      
       if (nameValue === 'other' || nameValue.includes('other')) {
-        console.log('[P2P VALIDATION] "Other" detected, checking required fields');
-        
         const cspField = getAttribute(CONFIG.fields.cspTransferId);
         const providerField = getAttribute(CONFIG.fields.losingProvider);
-        
-        console.log('[P2P VALIDATION] CSP Field:', cspField);
-        console.log('[P2P VALIDATION] CSP Field value:', cspField ? cspField.value : 'FIELD NOT FOUND');
-        console.log('[P2P VALIDATION] Provider Field:', providerField);
-        console.log('[P2P VALIDATION] Provider Field value:', providerField ? providerField.value : 'FIELD NOT FOUND');
-        
-        let isValid = true;
-        let errorMessage = 'The following fields are required when "Other" is selected:\n\n';
-        
         if (!cspField || !cspField.value || cspField.value.trim() === '') {
           isValid = false;
-          errorMessage += '• CSP Transfer ID\n';
-          console.log('[P2P VALIDATION] CSP Transfer ID is EMPTY');
+          errorMessage += '• Source CSP ID is required.\n';
           if (cspField) {
             cspField.style.borderColor = 'red';
             cspField.style.borderWidth = '2px';
           }
         }
-        
         if (!providerField || !providerField.value || providerField.value.trim() === '') {
           isValid = false;
-          errorMessage += '• Losing Provider\n';
-          console.log('[P2P VALIDATION] Losing Provider is EMPTY');
+          errorMessage += '• Losing Provider is required.\n';
           if (providerField) {
             providerField.style.borderColor = 'red';
             providerField.style.borderWidth = '2px';
           }
         }
-        
-        if (!isValid) {
-          console.log('[P2P VALIDATION] VALIDATION FAILED - Preventing submission');
-          e.preventDefault();
-          e.stopPropagation();
-          e.stopImmediatePropagation();
-          alert(errorMessage);
-          return false;
-        } else {
-          console.log('[P2P VALIDATION] Validation passed');
-        }
-      } else {
-        console.log('[P2P VALIDATION] "Other" not selected, skipping validation');
       }
-    }, true); // Use capture phase to catch submit early
-    
-    console.log('[P2P VALIDATION] Looking for submit buttons');
-    
-    // Also intercept button clicks
-    const submitButtons = form.querySelectorAll('button[type="submit"], input[type="submit"]');
-    console.log('[P2P VALIDATION] Found submit buttons:', submitButtons.length);
-    
-    submitButtons.forEach((button, index) => {
-      console.log('[P2P VALIDATION] Attaching to submit button', index, ':', button);
-      
-      button.addEventListener('click', function(e) {
-        console.log('[P2P VALIDATION] Submit button clicked:', index);
-        
-        const losingCompetitorName = getLookupName(CONFIG.fields.losingCompetitor);
-        const nameValue = losingCompetitorName ? losingCompetitorName.value.toLowerCase().trim() : '';
-        
-        console.log('[P2P VALIDATION] [BUTTON CLICK] Losing Competitor value:', nameValue);
-        
-        if (nameValue === 'other' || nameValue.includes('other')) {
-          console.log('[P2P VALIDATION] [BUTTON CLICK] "Other" detected, checking required fields');
-          
-          const cspField = getAttribute(CONFIG.fields.cspTransferId);
-          const providerField = getAttribute(CONFIG.fields.losingProvider);
-          
-          console.log('[P2P VALIDATION] [BUTTON CLICK] CSP Field value:', cspField ? cspField.value : 'FIELD NOT FOUND');
-          console.log('[P2P VALIDATION] [BUTTON CLICK] Provider Field value:', providerField ? providerField.value : 'FIELD NOT FOUND');
-          
-          let isValid = true;
-          let errorMessage = 'The following fields are required when "Other" is selected:\n\n';
-          
-          if (!cspField || !cspField.value || cspField.value.trim() === '') {
-            isValid = false;
-            errorMessage += '• CSP Transfer ID\n';
-            console.log('[P2P VALIDATION] [BUTTON CLICK] CSP Transfer ID is EMPTY');
-            if (cspField) {
-              cspField.style.borderColor = 'red';
-              cspField.style.borderWidth = '2px';
-            }
+
+      if (!isValid) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        alert(errorMessage);
+        return false;
+      }
+    }, true);
+
+    // Clear red border on file input
+    setTimeout(function() {
+      const fileInput = form.querySelector('input[type="file"]');
+      if (fileInput) {
+        fileInput.addEventListener('input', function() {
+          if (this.files.length > 0) {
+            this.style.borderColor = '';
+            this.style.borderWidth = '';
           }
-          
-          if (!providerField || !providerField.value || providerField.value.trim() === '') {
-            isValid = false;
-            errorMessage += '• Losing Provider\n';
-            console.log('[P2P VALIDATION] [BUTTON CLICK] Losing Provider is EMPTY');
-            if (providerField) {
-              providerField.style.borderColor = 'red';
-              providerField.style.borderWidth = '2px';
-            }
-          }
-          
-          if (!isValid) {
-            console.log('[P2P VALIDATION] [BUTTON CLICK] VALIDATION FAILED - Preventing submission');
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-            alert(errorMessage);
-            return false;
-          } else {
-            console.log('[P2P VALIDATION] [BUTTON CLICK] Validation passed');
-          }
-        } else {
-          console.log('[P2P VALIDATION] [BUTTON CLICK] "Other" not selected, skipping validation');
-        }
-      }, true);
-    });
-    
-    // Clear red borders on input
-    const cspField = getAttribute(CONFIG.fields.cspTransferId);
-    const providerField = getAttribute(CONFIG.fields.losingProvider);
-    
-    if (cspField) {
-      cspField.addEventListener('input', function() {
-        if (this.value && this.value.trim() !== '') {
-          this.style.borderColor = '';
-          this.style.borderWidth = '';
-        }
-      });
-    }
-    
-    if (providerField) {
-      providerField.addEventListener('input', function() {
-        if (this.value && this.value.trim() !== '') {
-          this.style.borderColor = '';
-          this.style.borderWidth = '';
-        }
-      });
-    }
-    
-    console.log('[P2P VALIDATION] Validation setup complete');
+        });
+      }
+    }, 1200);
   }
   
   function injectModalStyles() {
@@ -1211,20 +1190,82 @@
     }, true);
   }
   
+  function injectFieldDefinitions() {
+    // Helper to inject a definition under a field
+    function addDefinition(logicalName, text) {
+      const field = getAttribute(logicalName);
+      if (!field) return;
+      let container = field.closest('.form-group, .field-wrapper, td, tr, section, div[class*="field"]');
+      if (!container) container = field.parentElement;
+      if (!container) return;
+      if (container.querySelector('.p2p-field-definition')) return; // Prevent duplicate
+      const def = document.createElement('div');
+      def.className = 'p2p-field-definition';
+      def.style.cssText = 'font-size: 0.92em; color: #555; margin-top: 2px; margin-bottom: 6px;';
+      def.textContent = text;
+      // Insert after label if possible
+      const label = container.querySelector('label');
+      if (label && label.nextSibling) {
+        label.parentNode.insertBefore(def, label.nextSibling);
+      } else {
+        container.appendChild(def);
+      }
+    }
+
+    // Source CSP (modal label)
+    setTimeout(function() {
+      // Try to find modal label and update if present
+      var modalLabel = document.getElementById('p2pModalLabel');
+      if (modalLabel && modalLabel.textContent.includes('Source CSP')) {
+        modalLabel.textContent = (getLangKey() === 'fr-fr') ? 'CSP Source' : 'Source CSP';
+      }
+    }, 1000);
+
+    // Source CSP Name
+    addDefinition('revops_losingprovider', T.sourceCspNameDef);
+    // Source CSP ID
+    addDefinition('revops_csptransferid', T.sourceCspIdDef);
+    // Transfer Type (assuming field logical name is revops_transferworkload)
+    addDefinition('revops_transferworkload', T.transferTypeDef);
+    // Description (assuming field logical name is 'description')
+    addDefinition('description', (getLangKey() === 'fr-fr') ? "Description de la demande de transfert" : "Transfer Request Description");
+    // Attachment (file input)
+    const form = document.querySelector('form');
+    if (form) {
+      const fileInput = form.querySelector('input[type="file"]');
+      if (fileInput) {
+        let container = fileInput.closest('.form-group, .field-wrapper, td, tr, section, div[class*="field"]');
+        if (!container) container = fileInput.parentElement;
+        if (container && !container.querySelector('.p2p-field-definition-attachment')) {
+          const def = document.createElement('div');
+          def.className = 'p2p-field-definition p2p-field-definition-attachment';
+          def.style.cssText = 'font-size: 0.92em; color: #555; margin-top: 2px; margin-bottom: 6px;';
+          def.textContent = T.attachmentDef;
+          // Insert after label if possible
+          const label = container.querySelector('label');
+          if (label && label.nextSibling) {
+            label.parentNode.insertBefore(def, label.nextSibling);
+          } else {
+            container.appendChild(def);
+          }
+        }
+      }
+    }
+  }
+
   function initialize() {
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', initialize);
       return;
     }
-    
     // Inject modal centering styles first
     injectModalStyles();
-    
     setTimeout(() => {
       prepopulateFields();
       attachAccountChangeHandler();
       attachLosingCompetitorHandler();
       attachFormSubmitValidation();
+      setTimeout(injectFieldDefinitions, 1200);
     }, 500);
   }
   
