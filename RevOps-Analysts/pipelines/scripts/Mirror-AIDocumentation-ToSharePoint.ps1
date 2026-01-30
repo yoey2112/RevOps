@@ -1,3 +1,6 @@
+# Mirror-AIDocumentation-ToSharePoint.ps1
+# (Obsolete: SharePoint sync replaced by Azure Blob sync)
+# This script is no longer used and can be safely deleted.
 param(
   [Parameter(Mandatory=$true)][string]$TenantId,
   [Parameter(Mandatory=$true)][string]$ClientId,
