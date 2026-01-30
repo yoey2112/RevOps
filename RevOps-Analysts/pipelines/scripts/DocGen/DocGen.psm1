@@ -2,6 +2,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
 Import-Module (Join-Path $PSScriptRoot "DocGen.Schemas.psm1") -Force
+Import-Module (Join-Path $PSScriptRoot "AISearchGraphDocs.psm1") -Force
 
 function Initialize-AIDocsScaffold {
   param([Parameter(Mandatory=$true)][string]$AIDocsRoot)
@@ -613,6 +614,9 @@ function Invoke-DocGenRun {
   $extraction.results.queues_total_count = $queuesAll.Count
   $extraction.results.queues_included_count = $queuesFiltered.Count
   $extraction.results.queues_excluded_user_count = ($queuesAll.Count - $queuesFiltered.Count)
+
+  # === AI Search Graph Export ===
+  Export-AISearchGraphDocs -Context $extraction
 
   # Get plugins from revopsplugins BASE solution AND all its patches
   Write-Host "Extracting plugins from solution..." -ForegroundColor Cyan

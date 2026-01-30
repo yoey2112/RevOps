@@ -171,14 +171,14 @@ namespace RevOps.Plugins.CaseInteractionStamper
                     }
                 }
 
-                // Reset unresponsive counter to 0 when customer responds (Customer or Both)
-                if (interaction.Actor == InteractionActor.Customer || interaction.Actor == InteractionActor.Both)
+                // Reset unresponsive counter to 0 when agent, customer, or both respond (not automated)
+                if (interaction.Actor == InteractionActor.Customer || interaction.Actor == InteractionActor.Agent || interaction.Actor == InteractionActor.Both)
                 {
                     if (!curCounter.HasValue || curCounter.Value != 0)
                     {
                         update[Case_UnresponsiveCounter] = 0;
                         anyChanges = true;
-                        tracing.Trace("Customer response detected; set revops_unresponsivecounter = 0.");
+                        tracing.Trace($"[UnresponsiveCounterReset] Actor={interaction.Actor}, CaseId={caseId}, PreviousCounter={curCounter ?? -1}, NewCounter=0, Timestamp={ts:u}");
                     }
                 }
 
